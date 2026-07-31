@@ -1,0 +1,75 @@
+[agents]
+max_threads = 4
+max_depth = 2
+
+[agents.managing-partner]
+description = "Coordinates scope, requirements, handoffs, and release readiness."
+config_file = "agents/managing-partner.toml"
+
+[agents.product-strategy]
+description = "Owns product requirements, personas, KPIs, and market assumptions."
+config_file = "agents/product-strategy.toml"
+
+[agents.site-architect]
+description = "Reviews architecture, data flow, caching, and deployment boundaries."
+config_file = "agents/site-architect.toml"
+
+[agents.data-licensing]
+description = "Audits provider rights, provenance, freshness, and source policy."
+config_file = "agents/data-licensing.toml"
+
+[agents.sports-data-scientist]
+description = "Designs transparent, deterministic football models and tests."
+config_file = "agents/sports-data-scientist.toml"
+
+[agents.backend-data-engineering]
+description = "Builds typed domain, provider, API, persistence, and health layers."
+config_file = "agents/backend-data-engineering.toml"
+
+[agents.frontend-design-system]
+description = "Builds the responsive visual system and interactive product routes."
+config_file = "agents/frontend-design-system.toml"
+
+[agents.editorial-content]
+description = "Owns source-aware editorial language, glossary, and corrections."
+config_file = "agents/editorial-content.toml"
+
+[agents.seo-growth]
+description = "Owns crawlability, metadata, structured data, sitemaps, and route quality."
+config_file = "agents/seo-growth.toml"
+
+[agents.revenue-ads-crm]
+description = "Designs ethical ad, consent, newsletter, and CRM infrastructure."
+config_file = "agents/revenue-ads-crm.toml"
+
+[agents.affiliate-partnerships]
+description = "Owns audited partner links, disclosures, restrictions, and media kit."
+config_file = "agents/affiliate-partnerships.toml"
+
+[agents.social-engagement]
+description = "Builds fact-checked sharing assets, copy systems, and community policy."
+config_file = "agents/social-engagement.toml"
+
+[agents.security-privacy-compliance]
+description = "Audits threat, privacy, legal, and responsible-gaming controls."
+config_file = "agents/security-privacy-compliance.toml"
+
+[agents.accessibility-ux]
+description = "Audits WCAG 2.2 AA, keyboard, mobile, and resilient states."
+config_file = "agents/accessibility-ux.toml"
+
+[agents.qa-test-automation]
+description = "Owns layered tests and critical end-to-end journeys."
+config_file = "agents/qa-test-automation.toml"
+
+[agents.debugging-performance]
+description = "Runs the product and audits behavior, performance, and reliability."
+config_file = "agents/debugging-performance.toml"
+
+[agents.devops-sre]
+description = "Owns reproducible setup, CI, health, operations, rollback, and cost controls."
+config_file = "agents/devops-sre.toml"
+
+[agents.red-team-release]
+description = "Performs independent adversarial release review and final decision."
+config_file = "agents/red-team-release.toml"

@@ -1,0 +1,61 @@
+{
+  "name": "site-creator-vinext-starter",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "start": "vinext start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/domain.test.ts",
+    "test:integration": "node --test tests/rendered-html.test.mjs",
+    "test:e2e": "node --test tests/rendered-html.test.mjs",
+    "test:a11y": "node --test tests/a11y.test.mjs",
+    "test:visual": "node scripts/verify-visual-artifacts.mjs",
+    "test:links": "node --test tests/links.test.mjs",
+    "test:seo": "node --test tests/seo.test.mjs",
+    "lint": "biome lint app components lib worker scripts tests db",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node scripts/check-migrations.mjs",
+    "db:seed": "node --experimental-strip-types scripts/seed-fixtures.ts",
+    "sync:data": "node --experimental-strip-types scripts/sync-data.ts",
+    "generate:social": "node scripts/generate-social-content.mjs",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build && npm run test:integration && npm run test:a11y && npm run test:seo && npm run test:links && npm run test:visual && npm run db:migrate && npm run db:seed"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.2",
+    "next": "16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.50.0",
+    "@biomejs/biome": "2.5.6",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "drizzle-kit": "0.31.10",
+    "react-server-dom-webpack": "19.2.8",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.2.0",
+    "wrangler": "4.118.0"
+  },
+  "overrides": {
+    "@esbuild-kit/core-utils": {
+      "esbuild": "0.25.12"
+    },
+    "postcss": "8.5.25",
+    "next": {
+      "sharp": "0.35.2"
+    }
+  },
+  "type": "module"
+}

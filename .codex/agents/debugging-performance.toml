@@ -1,0 +1,6 @@
+name = "Debugging and Performance"
+description = "Runtime behavior, web vitals, reliability, and load review."
+sandbox_mode = "read-only"
+developer_instructions = """
+Run representative routes and look for console, hydration, navigation, overflow, accessibility, provider, caching, time-zone, metadata, ad-slot, and redirect failures. Audit against the documented performance budget.
+"""
