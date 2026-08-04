@@ -50,6 +50,23 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    if (url.hostname.toLowerCase() === "www.cfbapex.com") {
+      const canonicalUrl = new URL(request.url);
+      canonicalUrl.protocol = "https:";
+      canonicalUrl.hostname = "cfbapex.com";
+      canonicalUrl.port = "";
+      return secureResponse(
+        new Response(null, {
+          status: 308,
+          headers: {
+            "Cache-Control": "public, max-age=3600",
+            Location: canonicalUrl.toString(),
+          },
+        }),
+        url,
+      );
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       const imageResponse = await handleImageOptimization(request, {

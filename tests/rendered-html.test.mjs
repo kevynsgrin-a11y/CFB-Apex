@@ -36,6 +36,18 @@ test("server-renders the finished home utility", async () => {
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 
+test("www canonicalizes to the apex domain without losing the request target", async () => {
+  const response = await worker.fetch(
+    new Request("https://www.cfbapex.com/scores?week=1"),
+    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+
+  assert.equal(response.status, 308);
+  assert.equal(response.headers.get("location"), "https://cfbapex.com/scores?week=1");
+  assert.match(response.headers.get("strict-transport-security") ?? "", /includeSubDomains/);
+});
+
 test("critical product routes render fixture-backed content", async () => {
   const routes = [
     ["/scores", /The slate, without the scavenger hunt/],
@@ -63,6 +75,9 @@ test("health and readiness endpoints disclose fixture state", async () => {
   const data = await readiness.json();
   assert.equal(data.readyForPreview, true);
   assert.equal(data.readyForProductionLiveData, false);
+  assert.match(readiness.headers.get("cache-control") ?? "", /no-store/i);
+  assert.ok(data.productionGates.length >= 10);
+  assert.ok(data.productionGates.some((gate) => gate.id === "LIVE_MODE" && gate.status === "blocked"));
 });
 
 test("simulation API rejects invalid scenario participants and caps work", async () => {

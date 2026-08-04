@@ -101,7 +101,7 @@ function Header({
           <div className="header-actions">
             <a className="icon-button" href="/search">
               <span aria-hidden="true">⌕</span>
-              <span className="sr-only">Search College Football Hub</span>
+              <span className="sr-only">Search {brand.name}</span>
             </a>
             {mode === "clean" ? (
               <button className="mode-button" type="button" onClick={onModeRequest}>
@@ -464,7 +464,7 @@ function HomePage({ mode, favorites, onFavorite }: HomeProps) {
           </div>
           <div className="probability">
             <div>
-              <span>CFB Hub model estimate</span>
+              <span>{brand.shortName} model estimate</span>
               <strong>{percent(featured.modelHomeWinProbability)} {home.abbreviation}</strong>
             </div>
             <div
@@ -1559,7 +1559,7 @@ function PolicyPage({ kind }: { kind: string }) {
     about: {
       eyebrow: "INDEPENDENCE STATEMENT",
       title: "Built for the Saturday task, not the scroll.",
-      intro: "College Football Hub is a conference-neutral product concept for transparent utility, accessible models, and maintained gameday information.",
+      intro: `${brand.name} is a conference-neutral product concept for transparent utility, accessible models, and maintained gameday information.`,
       sections: [["What we value", "Speed, source visibility, corrections, calm monetization, and understandable uncertainty."], ["What we do not do", "No paywall bypasses, fabricated live states, unlicensed marks, guaranteed picks, autoplay, or commercial ranking disguised as editorial judgment."]],
     },
     privacy: {

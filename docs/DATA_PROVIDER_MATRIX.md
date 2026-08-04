@@ -20,3 +20,17 @@ Rights classes: `R0_FIXTURE`, `R1_PUBLIC_DOMAIN`, `R2_LINK_ONLY`, `R3_CITED_FACT
 | Marks/photos/headshots | School/conference/CLC/photographer license | Enterprise, R4 | Per license | Text monogram/no image | Blocked |
 
 Each future provider row must record quota, permitted public/SEO/social/export/model uses, caching/history, territory, attribution, contract version, stale threshold, hard expiry, secret location, owner, reviewer, kill switch, and next legal review.
+
+## 2026 procurement shortlist
+
+| Candidate | Documented capability | Material limitation | Decision |
+|---|---|---|---|
+| Sportradar NCAAFB v7 | Division I scores; FBS PBP; schedules, rosters, rankings, transfers; Realtime Push add-on | Push is non-stateful, does not carry all status updates, and requires REST recovery; coverage/latency and all downstream rights remain contract-specific | Primary RFP candidate, not selected |
+| SportsDataIO NCAA Football | FBS scores, schedules, stats, polls, rosters, injuries, odds, Replay | Published game-state delay is about 30–60s, live stats about 15–20s, and college depth charts are unavailable | Reconciliation RFP candidate, not a promised low-second failover |
+| Genius Sports / NCAA LiveStats | Official NCAA collection/distribution relationships | Exact regular-season FBS media coverage and usable downstream rights are not published | Official-channel diligence candidate |
+| Stats Perform / Opta | Enterprise live, historical, advanced, and editorial data products | Derivative, AI, archive, data-mixing, and AP rights require careful order-form review | Premium comparison candidate |
+| CollegeFootballData | Accessible historical/live development APIs | Public commercial display, redistribution, retention, and derivative rights are not established for this product | Evaluation only pending written permission |
+| AP | AP Top 25 and sports content licensing | Direct or expressly sublicensed commercial rights required | Preferred named poll-rights path |
+| NWS | U.S. forecasts, observations, and alerts | User-Agent, cache, issuance/valid-time, and rate guidance apply; observations are not instantaneous | Preferred weather source |
+
+No pricing estimate from the supplied research report is approved. Quote-based products remain `QUOTE REQUIRED` until a written proposal is attached to the procurement record.

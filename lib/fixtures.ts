@@ -14,7 +14,7 @@ const asOf = "2026-07-31T08:00:00.000Z";
 
 function fixtureProvenance(id: string, modelVersion?: string) {
   return {
-    provider: "CFB Hub deterministic fixture provider",
+    provider: "CFB Apex deterministic fixture provider",
     providerRecordId: `fixture:${id}`,
     sourceDocumentId: "fixture-pack-2026.07.31",
     sourceAsOf: asOf,

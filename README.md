@@ -1,6 +1,8 @@
-# College Football Hub
+# CFB Apex
 
 A premium, conference-neutral college football utility preview built with Vinext, Next.js App Router, React, strict TypeScript, and Cloudflare-compatible ESM.
+
+The canonical public fixture beta is `https://cfbapex.com`. It remains globally noindexed and visibly synthetic until the live-data gates are supported by contracts, credentials, verification evidence, staffing, and legal approval.
 
 The product includes fixture-backed scores/schedule, advanced game previews, transfer portal and roster volatility, a seeded playoff simulator, coaching/buyout economics, gated DFS distributions, team/player/conference/stadium routes, source/correction workflows, newsletter development flow, provider health, commercial-policy surfaces, and protected admin access.
 

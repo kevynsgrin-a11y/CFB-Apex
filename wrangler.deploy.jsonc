@@ -1,0 +1,56 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cfb-apex",
+  "main": "./dist/server/index.js",
+  "compatibility_date": "2026-08-03",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": ["**/*.js", "**/*.mjs"]
+    }
+  ],
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "routes": [
+    {
+      "pattern": "cfbapex.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.cfbapex.com",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "SITE_URL": "https://cfbapex.com",
+    "DEMO_MODE": "true",
+    "CORE_DATA_RIGHTS_APPROVED": "false",
+    "POLL_RIGHTS_APPROVED": "false",
+    "MARKS_POLICY_APPROVED": "false",
+    "PROVIDER_CREDENTIALS_CONFIGURED": "false",
+    "ENTITY_CROSSWALK_VERIFIED": "false",
+    "SHADOW_PILOT_PASSED": "false",
+    "INGESTION_RECOVERY_DRILL_PASSED": "false",
+    "KILL_SWITCH_DRILL_PASSED": "false",
+    "ON_CALL_OWNER_ASSIGNED": "false",
+    "LEGAL_LAUNCH_APPROVED": "false",
+    "PUBLIC_LAUNCH_APPROVED": "false",
+    "DISABLE_LIVE_PROVIDERS": "true",
+    "DISABLE_OFFICIAL_POLLS": "true",
+    "DISABLE_ODDS": "true",
+    "DISABLE_ADS": "true",
+    "DISABLE_AFFILIATES": "true",
+    "DISABLE_EMAIL_SEND": "true"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

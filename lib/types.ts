@@ -19,7 +19,15 @@ export interface Provenance {
   fetchedAt: string;
   verifiedAt: string;
   verificationStatus: VerificationStatus;
-  licenseClass: "R0_FIXTURE" | "R1_PUBLIC_DOMAIN" | "R2_LINK_ONLY" | "R3_CITED_FACTS";
+  licenseClass:
+    | "R0_FIXTURE"
+    | "R1_PUBLIC_DOMAIN"
+    | "R2_LINK_ONLY"
+    | "R3_CITED_FACTS"
+    | "R4_LICENSED_DISPLAY"
+    | "R5_LICENSED_DERIVATIVE"
+    | "R6_PARTNER"
+    | "R7_RESTRICTED";
   confidence: number;
   dataEnvironment: "fixture" | "sandbox" | "production";
   recordOrigin: "fixture" | "provider" | "official_document" | "editorial" | "model";

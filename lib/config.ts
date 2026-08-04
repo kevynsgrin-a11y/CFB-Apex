@@ -1,6 +1,6 @@
 export const brand = {
-  name: "College Football Hub",
-  shortName: "CFB Hub",
+  name: "CFB Apex",
+  shortName: "CFB Apex",
   eyebrow: "Independent college football intelligence",
   tagline: "Every Saturday. One command center.",
   description:
@@ -41,7 +41,7 @@ export const environment = {
   dataMode: "fixture",
   isDemo: true,
   season: 2026,
-  siteUrl: process.env.SITE_URL ?? "http://localhost:3000",
+  siteUrl: process.env.SITE_URL ?? "https://cfbapex.com",
 } as const;
 
 export const disclosureVersion = "2026-07-31";
