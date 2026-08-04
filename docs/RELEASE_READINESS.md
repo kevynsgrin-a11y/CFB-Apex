@@ -2,6 +2,8 @@
 
 Current decision: `PUBLIC FIXTURE BETA READY WITH CONDITIONS`.
 
+The fixture beta is deployed at `https://cfbapex.com`; `docs/DEPLOYMENT_EVIDENCE.md` records the immutable release inputs and public smoke evidence. This does not advance the separate production live-data decision.
+
 The release candidate has a passing build, type check, lint gate, deterministic domain and API tests, fixture-backed critical journeys, responsive desktop/mobile evidence, SEO/security assertions, working controls, visible synthetic provenance, and a zero-high dependency audit. Private hosting is a release condition because the simulation endpoint is intentionally lightweight and not a public multi-tenant compute service.
 
 External dependencies that may remain documented after the fixture-beta deployment include licensed sports/odds/roster data, weather, maps, email, analytics, consent, authentication, ticketing, streaming, advertising, affiliate, licensed image/logo, legal-counsel, and partnership configuration.
