@@ -225,29 +225,49 @@ pushed to an empty repo first.
 
 Do this before merging PR #1, or the merge target will be wrong.
 
-### 2. Add a DMARC record (audit Issue 5)
-SPF and DKIM are correctly published; DMARC is missing.
+### 2. ~~Add a DMARC record (audit Issue 5)~~ — ✅ DONE 28 Aug 2026
 
-**Cloudflare → DNS → Records → Add record:**
+Applied directly to the live zone and confirmed resolving on both `1.1.1.1` and
+`8.8.8.8`:
+
 ```
-Type:  TXT
-Name:  _dmarc
-Value: v=DMARC1; p=none; rua=mailto:dmarc-reports@cfbapex.com; fo=1
+_dmarc.cfbapex.com  TXT  "v=DMARC1; p=none; rua=mailto:dmarc-reports@cfbapex.com; fo=1"
 ```
 
-Start at `p=none` (monitoring only, zero deliverability risk), review reports for a
-couple of weeks, then move to `p=quarantine` and eventually `p=reject`. The original
-audit suggested starting at `p=quarantine` — `p=none` first is the safer rollout, and
-worth the extra step.
+Email Routing rules were also created for `dmarc-reports@cfbapex.com` and
+`corrections@cfbapex.com`, both pointing at the `congruent-mail-ingest` Worker to match
+the five existing role addresses. SPF, DKIM, and all three MX records were verified
+unchanged afterwards.
 
-Also create the Email Routing rule for `corrections@cfbapex.com` (Issue 6) and verify
-the destination address via Cloudflare's confirmation email — the code change alone
-does nothing until the rule exists.
+**Still to do, and it does not expire on its own:**
+
+1. **Confirm reports actually arrive.** In ~48–72 hours, check that DMARC aggregate XML
+   is reaching whatever `congruent-mail-ingest` forwards to. That Worker has both a
+   `FORWARD_TO` and an `INGEST_URL` binding, so mail is not dropped — but nobody has
+   verified it handles gzipped XML report attachments. If reports are not landing,
+   repoint the rule at a plain forward instead.
+2. **Escalate the policy.** `p=none` is monitoring only — it enforces nothing. After
+   two weeks of clean reports, move to `p=quarantine`, then `p=reject`. Editing the
+   record's `p=` value is the whole change.
+
+> The original audit recommended starting at `p=quarantine`. `p=none` first is the
+> safer rollout and is what was applied.
+
+Note the code half of Issue 6 is still open — `lib/config.ts` still ships
+`corrections@example.invalid`. The mailbox now exists; the app does not yet reference
+it. See Task 5.
 
 ### 3. Enable Logpush (audit Issue 12)
 **Workers & Pages → `cfb-apex` → Settings → Observability → Logpush.** Enabling the flag
 alone changes nothing — also create a Logpush **job** with a destination (R2 is
 cheapest) or logs still won't be retained.
+
+> **Deliberately not applied via the API.** The Workers script-settings endpoint carries
+> the full bindings payload, and a partial `PATCH` was not worth the risk of clobbering
+> the 21 live bindings on the production Worker — to set a flag that is inert until a
+> Logpush job exists anyway. Two clicks in the dashboard is the safer path. (A
+> read-modify-write resending all current settings plus `logpush: true` would also be
+> safe here, since `cfb-apex` has no secret bindings.)
 
 ### 4. Protect `/admin` with Cloudflare Access
 Recommended regardless of how Task 3 resolves. The account already runs Access on five

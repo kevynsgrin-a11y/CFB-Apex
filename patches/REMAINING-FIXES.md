@@ -38,9 +38,11 @@ var brand = {
 };
 ```
 
-Then add the routing rule: **Cloudflare → Email Routing → Routing rules**, forward
-`corrections@cfbapex.com` to a monitored inbox. The destination address must be
-verified by clicking the confirmation email Cloudflare sends before the rule goes live.
+**The mailbox side is already done** — an Email Routing rule for
+`corrections@cfbapex.com` was created on 28 Aug 2026, pointing at the
+`congruent-mail-ingest` Worker to match the five existing role addresses
+(`hello@`, `security@`, `admin@`, `ads@`, `affiliates@`). No further routing setup is
+needed; only the `lib/config.ts` change above remains.
 
 ---
 
@@ -251,7 +253,7 @@ CSP header when one is already set.
 
 | Issue | Why | Owner |
 |---|---|---|
-| 5 — DMARC | DNS change on the live zone | See `COPILOT-PROMPT.md` |
+| ~~5 — DMARC~~ | ✅ **Applied 28 Aug 2026** at `p=none`; verified resolving on 1.1.1.1 and 8.8.8.8. Escalate to `p=quarantine` after reviewing reports | — |
 | 9 — No CI/CD | Requires pushing the real source | Local machine |
 | 15 — No on-call owner | Staffing decision | Human |
 | 21 — Policy review | Legal sign-off | Counsel |
