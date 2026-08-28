@@ -1,11 +1,15 @@
-# CFB Apex — Critical Fix Bundle (Indexing Triad)
+# CFB Apex — Audit Remediation Bundle
 
-Remediation bundle for the 28 August 2026 audit of `cfbapex.com`. Originally scoped to the three **Critical** issues from the 28 August 2026 audit of
-`cfbapex.com`. Each bug was confirmed against the live production Worker before a
-fix was written — see [`VERIFICATION.md`](./VERIFICATION.md).
+Fixes for the 28 August 2026 audit of `cfbapex.com`, plus three findings the audit
+missed. Every issue was confirmed against the live production Worker before a fix was
+written — see [`VERIFICATION.md`](./VERIFICATION.md) for the Critical triad and
+[`FINDINGS-NEW.md`](./FINDINGS-NEW.md) for the new findings.
 
 > The audit uses Critical / High / Medium / Low severities. "Urgent" maps to the
 > three Critical issues, which are all one root problem.
+
+**Start here:** [`COPILOT-PROMPT.md`](./COPILOT-PROMPT.md) is the handoff for everything
+that needs the local source tree, the Cloudflare dashboard, or a human decision.
 
 ---
 
@@ -124,12 +128,14 @@ environment only and re-run the first two commands — `X-Robots-Tag` should dis
 
 ---
 
-## Not included
+## Beyond the Critical triad
 
-The remaining audit findings (High: CSP `'unsafe-inline'`, missing DMARC, placeholder
-support email, no PWA manifest, missing helpline copy, no CI/CD, no cache layer; plus
-all Medium/Low items) are out of scope for this change, which covers only the Critical
-triad. They are specified with verbatim fixes in audit Document 2.
+The remaining audit points are covered by the second pass below — see
+[`patches/REMAINING-FIXES.md`](./patches/REMAINING-FIXES.md).
+
+A few items cannot be fixed in code at all (DMARC, CI/CD, on-call ownership, legal
+review, Core Web Vitals re-measurement). Those are handed off in
+[`COPILOT-PROMPT.md`](./COPILOT-PROMPT.md).
 
 The single highest-value follow-up is **Issue 9** — getting the real source into this
 repository. Until that happens, every fix has to be hand-carried to one laptop, and
