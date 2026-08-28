@@ -1,0 +1,103 @@
+/*
+ * Print styles — audit Issue 14.
+ *
+ * Append to the project's global stylesheet (the one carrying the "Night Game
+ * Ledger" tokens). Scoped entirely inside @media print, so it cannot affect
+ * screen rendering.
+ *
+ * Class names are taken from the deployed bundle: .app-shell, .demo-banner,
+ * .mode-button, .skip-link, .score-ribbon, .responsible-notice, .gate-card,
+ * .content-section, .token-grid. Verify against the real stylesheet and drop
+ * any selector that does not exist.
+ */
+
+@media print {
+	/* Force a light, ink-efficient surface — the screen theme is near-black. */
+	:root {
+		--color-night: #ffffff;
+		--color-press-box: #ffffff;
+		--color-chalk: #000000;
+		--color-fog: #333333;
+	}
+
+	html,
+	body,
+	.app-shell {
+		background: #ffffff !important;
+		color: #000000 !important;
+	}
+
+	/* Chrome that carries no meaning on paper. */
+	.skip-link,
+	.demo-banner,
+	.score-ribbon,
+	.mode-button,
+	.app-shell > header nav,
+	.app-shell > footer,
+	.gate-card,
+	button {
+		display: none !important;
+	}
+
+	/* Keep the demonstration-data disclosure visible — printouts outlive the
+	   session they were printed from, and this content is fictional. */
+	.responsible-notice {
+		display: block !important;
+		border: 1pt solid #000;
+		padding: 6pt;
+		font-size: 9pt;
+	}
+
+	main,
+	.content-section {
+		display: block !important;
+		width: 100% !important;
+		max-width: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	/* Expose link targets, but not for in-page or javascript: hrefs. */
+	a[href^="http"]::after,
+	a[href^="/"]::after {
+		content: " (" attr(href) ")";
+		font-size: 8pt;
+		color: #444;
+		word-break: break-all;
+	}
+
+	/* Avoid orphaned headings and split rows. */
+	h1, h2, h3, h4 {
+		break-after: avoid;
+		page-break-after: avoid;
+		color: #000 !important;
+	}
+
+	table, figure, article, .token-grid > * {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th, td {
+		border-bottom: 0.5pt solid #999;
+		padding: 3pt 4pt;
+		color: #000 !important;
+	}
+
+	thead {
+		display: table-header-group; /* repeat headers across pages */
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 15mm;
+	}
+}

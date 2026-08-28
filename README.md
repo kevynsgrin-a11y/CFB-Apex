@@ -1,6 +1,6 @@
 # CFB Apex — Critical Fix Bundle (Indexing Triad)
 
-Fixes for the three **Critical** issues from the 28 August 2026 audit of
+Remediation bundle for the 28 August 2026 audit of `cfbapex.com`. Originally scoped to the three **Critical** issues from the 28 August 2026 audit of
 `cfbapex.com`. Each bug was confirmed against the live production Worker before a
 fix was written — see [`VERIFICATION.md`](./VERIFICATION.md).
 
@@ -134,3 +134,39 @@ triad. They are specified with verbatim fixes in audit Document 2.
 The single highest-value follow-up is **Issue 9** — getting the real source into this
 repository. Until that happens, every fix has to be hand-carried to one laptop, and
 this bundle is the workaround rather than the workflow.
+
+---
+
+## Second pass — remaining audit points + new findings
+
+Added after the initial Critical fix. See [`FINDINGS-NEW.md`](./FINDINGS-NEW.md) and
+[`patches/REMAINING-FIXES.md`](./patches/REMAINING-FIXES.md).
+
+### New findings (not in the original audit)
+
+| ID | Severity | Summary |
+|---|---|---|
+| NF-1 | **Critical (latent)** | `/admin` auth trusts the spoofable `oai-authenticated-user-email` header; no Access/WAF/Transform rule covers the zone. Not exploitable only because `ADMIN_EMAILS` is unset — **do not set it until fixed** |
+| NF-2 | **High** | Self-hosted `@font-face` CSS ships `C:/Users/...` paths: Geist/Geist Mono never load, and the developer's local path is exposed on every page |
+| NF-3 | Medium | `/admin` permanently inaccessible (`ADMIN_EMAILS` absent) — fail-closed, but blocks the on-call gate |
+
+### Added files
+
+| Path | Covers |
+|---|---|
+| `FINDINGS-NEW.md` | NF-1, NF-2, NF-3 with verification evidence |
+| `patches/worker/index.ts.hardening.diff` | NF-1, Issue 13 (HSTS preload), Issue 19 |
+| `patches/public/manifest.webmanifest` | Issue 7 |
+| `patches/styles/print.css` | Issue 14 |
+| `patches/REMAINING-FIXES.md` | Issues 4, 6, 7b, 8, 11, 12, 14b, 16, 18, 20 |
+| `COPILOT-PROMPT.md` | Everything requiring the local source, the Cloudflare dashboard, or a human |
+
+### Apply order
+
+`patches/worker/index.ts.diff` (Critical) **before**
+`patches/worker/index.ts.hardening.diff` — the latter assumes `secureResponse()` has
+already been changed to accept `env`.
+
+Two items are deliberately held back pending a decision, both documented inline:
+Hunk 1 of the hardening diff (confirm the ChatGPT proxy path first) and Hunk 3
+(HSTS `preload` is hard to reverse).

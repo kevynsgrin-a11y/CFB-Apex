@@ -1,0 +1,23 @@
+{
+  "name": "CFB Apex",
+  "short_name": "CFB Apex",
+  "description": "Scores, roster movement, playoff paths, coaching economics, and gameday intelligence in one fast, source-aware workspace.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07100D",
+  "theme_color": "#07100D",
+  "categories": ["sports", "news"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Scores", "url": "/scores" },
+    { "name": "Transfer Portal", "url": "/transfer-portal" },
+    { "name": "Playoff Predictor", "url": "/playoff-predictor" }
+  ]
+}
