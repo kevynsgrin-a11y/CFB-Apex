@@ -1,0 +1,119 @@
+# Second change set for worker/index.ts — security + header hardening
+#
+# Covers: NF-1 (spoofable auth header), audit Issue 13 (HSTS preload),
+#         audit Issue 19 (upgrade-insecure-requests).
+#
+# APPLY AFTER patches/worker/index.ts.diff (the Critical indexing-triad change).
+# That patch already changes secureResponse's signature to accept `env`; the
+# hunks below assume it has been applied.
+#
+# NOT a full-file replacement — the file's import block is not visible in the
+# deployed bundle. Whitespace is tabs, matching the emitted bundle.
+
+--- a/worker/index.ts
++++ b/worker/index.ts
+
+# ===========================================================================
+# HUNK 1 — NF-1: stop trusting the ChatGPT identity header on public requests
+#
+# READ THE CAVEAT BELOW BEFORE APPLYING THIS HUNK.
+#
+# app/chatgpt-auth.ts derives user identity from `oai-authenticated-user-email`
+# with no signature or session check. vinext's filterInternalHeaders() does not
+# strip it, and no Cloudflare Access / WAF / Transform rule covers this zone, so
+# the value is attacker-controlled on any direct request.
+# ===========================================================================
+
+@@ module scope — add near the top, after imports @@
++/**
++ * Identity headers injected by a trusted upstream (the ChatGPT app proxy).
++ * They carry no signature, so they must never be accepted from the open
++ * internet — see app/chatgpt-auth.ts / getChatGPTUser().
++ */
++const UPSTREAM_IDENTITY_HEADERS = [
++	"oai-authenticated-user-email",
++	"oai-authenticated-user-full-name",
++	"oai-authenticated-user-full-name-encoding",
++];
++
++/**
++ * Returns a Request with upstream identity headers removed unless the caller
++ * proved it is the trusted proxy by presenting the shared secret.
++ *
++ * Set TRUSTED_PROXY_SECRET as a Worker *secret* (not plain_text) and have the
++ * proxy send it as `x-trusted-proxy-secret`. With the secret unset, identity
++ * headers are ALWAYS stripped — fail-closed.
++ */
++function stripSpoofableIdentityHeaders(request, env) {
++	const expected = env?.TRUSTED_PROXY_SECRET;
++	const presented = request.headers.get("x-trusted-proxy-secret");
++	if (expected && presented && presented === expected) return request;
++
++	let hasAny = false;
++	for (const name of UPSTREAM_IDENTITY_HEADERS) {
++		if (request.headers.has(name)) { hasAny = true; break; }
++	}
++	if (!hasAny) return request;
++
++	const headers = new Headers(request.headers);
++	for (const name of UPSTREAM_IDENTITY_HEADERS) headers.delete(name);
++	headers.delete("x-trusted-proxy-secret");
++	return new Request(request, { headers });
++}
+
+
+@@ worker_entry_default.fetch — first statement in the handler @@
+ var worker_entry_default = { async fetch(request, env, ctx) {
++	request = stripSpoofableIdentityHeaders(request, env);
+ 	const url = new URL(request.url);
+
+
+# ===========================================================================
+# HUNK 2 — Issue 19: upgrade-insecure-requests
+# HUNK 3 — Issue 13: HSTS preload
+#
+# Both inside secureResponse(). Shown together as they touch adjacent lines.
+# ===========================================================================
+
+@@ secureResponse @@
+-	secured.headers.set("Content-Security-Policy", "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; media-src 'none'; worker-src 'self';");
++	secured.headers.set("Content-Security-Policy", "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; media-src 'none'; worker-src 'self'; upgrade-insecure-requests;");
+
+-	if (url.protocol === "https:") secured.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
++	if (url.protocol === "https:") secured.headers.set("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
+
+
+# ---------------------------------------------------------------------------
+# NOTES AND CAVEATS
+#
+# HUNK 1 — confirm the ChatGPT integration path BEFORE applying.
+#   `oai-authenticated-user-*` is the OpenAI Apps convention: the header is
+#   injected by OpenAI's proxy. If this app is genuinely reached through that
+#   proxy, stripping the header unconditionally BREAKS that sign-in flow.
+#
+#   Decide which case applies:
+#     (a) The app is never served through the ChatGPT proxy -> apply as written;
+#         /admin should move to Cloudflare Access instead (see FINDINGS-NEW.md).
+#     (b) The app IS served through the proxy -> keep the hunk, and configure
+#         TRUSTED_PROXY_SECRET plus the matching header on the proxy side. If the
+#         proxy cannot send a custom header, use Cloudflare mTLS or an Access
+#         service token instead and gate on that rather than a shared secret.
+#
+#   Either way, do NOT set ADMIN_EMAILS until one of these is in place — that
+#   binding is currently the only thing keeping the bypass closed (NF-3).
+#
+#   The `new Request(request, { headers })` clone matches the pattern vinext
+#   already uses at this entry point (cloneRequestWithHeaders), so it is safe in
+#   the Workers runtime.
+#
+# HUNK 3 — `preload` is a commitment, not just a header.
+#   Do NOT ship this until every subdomain of cfbapex.com is confirmed
+#   HTTPS-only, because includeSubDomains + preload will break any plaintext
+#   subdomain. Removal from the preload list takes months. Ship hunks 1-2 first
+#   and treat hunk 3 as a separate, deliberate step, then submit the domain at
+#   https://hstspreload.org.
+#
+# Not addressed here — audit Issue 4 (CSP still allows 'unsafe-inline' for
+# script-src and style-src). That needs the render pipeline to emit a nonce on
+# every inline tag, which is not safely patchable from the compiled bundle.
+# See patches/REMAINING-FIXES.md.

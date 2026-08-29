@@ -1,0 +1,92 @@
+# Surgical change to worker/index.ts
+#
+# NOT a full-file replacement. The deployed bundle does not expose this file's
+# import block, so only the hunks below are specified — leave imports, and
+# everything else in the file, untouched.
+#
+# Four edits: one new import, one function signature + body change, three call
+# sites updated to pass `env`.
+#
+# Whitespace below is tabs, matching the emitted bundle.
+
+--- a/worker/index.ts
++++ b/worker/index.ts
+@@ imports @@
++import { isProductionLaunchReady } from "../lib/release-readiness";
+
+
+@@ secureResponse @@
+ /** Cloudflare Worker entry point for the vinext-starter template. */
+-function secureResponse(response, url) {
++function secureResponse(response, url, env) {
+ 	const secured = new Response(response.body, response);
+ 	secured.headers.set("Content-Security-Policy", "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; media-src 'none'; worker-src 'self';");
+ 	secured.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+ 	secured.headers.set("X-Content-Type-Options", "nosniff");
+ 	secured.headers.set("X-Frame-Options", "DENY");
+ 	secured.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), browsing-topics=()");
+ 	secured.headers.set("Cross-Origin-Opener-Policy", "same-origin");
+-	secured.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
++	// Suppress indexing until every production launch gate passes. The LIVE_MODE
++	// gate keeps this active while DEMO_MODE/DISABLE_LIVE_PROVIDERS are set, so
++	// fixture data can never be indexed.
++	if (!isProductionLaunchReady(env ?? {})) {
++		secured.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
++	}
+ 	if (url.protocol === "https:") secured.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+ 	return secured;
+ }
+
+
+@@ call site 1 — www -> apex canonical redirect @@
+ 		return secureResponse(new Response(null, {
+ 			status: 308,
+ 			headers: {
+ 				"Cache-Control": "public, max-age=3600",
+ 				Location: canonicalUrl.toString()
+ 			}
+-		}), url);
++		}), url, env);
+
+
+@@ call site 2 — image optimization route @@
+ 	}, [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES]), url);
++	                                                        ^^^ becomes: , url, env);
+#
+# Written out in full, the line becomes:
+#
+# 	if (url.pathname === "/_vinext/image") return secureResponse(await handleImageOptimization(request, {
+# 		fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
+# 		transformImage: async (body, { width, format, quality }) => {
+# 			return (await env.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({
+# 				format,
+# 				quality
+# 			})).response();
+# 		}
+# 	}, [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES]), url, env);
+
+
+@@ call site 3 — all application routes @@
+-	return secureResponse(await app_router_entry_default.fetch(request, env, ctx), url);
++	return secureResponse(await app_router_entry_default.fetch(request, env, ctx), url, env);
+
+
+# ---------------------------------------------------------------------------
+# Notes
+#
+# * `env` is already in scope at all three call sites — each sits inside
+#   `fetch(request, env, ctx)`. No plumbing beyond passing the argument.
+#
+# * `env ?? {}` guards the signature change: if any call site is missed, the
+#   gate evaluates every flag as undefined, `isApproved` returns false, and the
+#   noindex header is still applied. The failure mode is "stays private", never
+#   "accidentally indexed".
+#
+# * If this file is TypeScript with a typed Env, widen the parameter to
+#   `env: Partial<Env> | undefined` (or the project's existing Env type) rather
+#   than leaving it implicit.
+#
+# * The image route also has a stricter route-local CSP helper elsewhere in the
+#   codebase (`setImageSecurityHeaders`). Because `.set()` overwrites rather than
+#   merges, whichever runs last wins — worth confirming separately. Tracked as
+#   audit Issue 20; out of scope for this change.
