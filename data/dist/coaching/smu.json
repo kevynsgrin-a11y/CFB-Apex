@@ -1,0 +1,111 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Rhett Lashlee",
+    "title_raw": "Rhett Lashlee"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Crum play-caller after Scott Symons departure; Texas Football preview notes personnel-fit approach without an exclusive base-front tag)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single official brand on 2026 Wikipedia staff block; Lashlee continuity historically Air Raid–influenced / tempo spread — treat formal 2026 athletics brand as Not listed pending an official playbook label",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 SMU Mustangs football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_SMU_Mustangs_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Rhett Lashlee",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Rhett Lashlee"
+    },
+    {
+      "name": "Rob Likens",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinators",
+      "source_note": null,
+      "title_raw": "Rob Likens (Associate Head Coach / Chief of Staff / Co-OC / Wide Receivers)"
+    },
+    {
+      "name": "Garin Justice",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinators",
+      "source_note": null,
+      "title_raw": "Garin Justice (Assistant Head Coach / Co-OC / Offensive Line)"
+    },
+    {
+      "name": "D’Eriq King",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinators",
+      "source_note": null,
+      "title_raw": "D’Eriq King (Co-OC / Quarterbacks)"
+    },
+    {
+      "name": "Maurice Crum Jr.",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinators",
+      "source_note": null,
+      "title_raw": "Maurice Crum Jr. (Co-DC / Play Caller)"
+    },
+    {
+      "name": "Rickey Hunley Jr.",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinators",
+      "source_note": null,
+      "title_raw": "Rickey Hunley Jr. (Co-DC / Secondary)"
+    },
+    {
+      "name": "Casey Horny",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Casey Horny"
+    },
+    {
+      "name": "D’Eriq King",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "D’Eriq King"
+    },
+    {
+      "name": "Kyle Cooper",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Kyle Cooper (Running Backs / Run Game Coordinator)"
+    },
+    {
+      "name": "Rob Likens",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Rob Likens (also Ryan Jenkins, Inside Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "SMU",
+    "slug": "smu"
+  }
+}

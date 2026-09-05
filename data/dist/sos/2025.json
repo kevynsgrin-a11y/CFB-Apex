@@ -1,0 +1,1621 @@
+{
+  "meta": {
+    "as_of": "2026-01-20",
+    "dataset": "strength-of-schedule",
+    "notes": [
+      "2025 final strength of schedule, for season-over-season comparison."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "04-sos/00-sos-power-conferences-2026.md",
+      "04-sos/espn-fpi-sos-2025.json"
+    ]
+  },
+  "metric_definitions": [
+    {
+      "definition": "ESPN's rank of schedule strength among FBS teams from the perspective of an average FBS team. Rank 1 is the toughest schedule.",
+      "direction": "rank_asc",
+      "key": "espn_fpi_sos_rank",
+      "label": "ESPN FPI SOS",
+      "source": "04-sos/espn-fpi-sos-2026-09-04.json",
+      "timing": "2026 rows last updated 2026-09-04; 2025 final from 2026-01-20."
+    },
+    {
+      "definition": "The same metric restricted to a team's remaining games.",
+      "direction": "rank_asc",
+      "key": "espn_fpi_rem_sos_rank",
+      "label": "ESPN FPI remaining SOS",
+      "source": "04-sos/espn-fpi-sos-2026-09-04.json",
+      "timing": "2026-09-04"
+    },
+    {
+      "definition": "TeamRankings' predictive Season SOS power rating; a higher rating is tougher.",
+      "direction": "rank_asc",
+      "key": "teamrankings_rank",
+      "label": "TeamRankings Season SOS",
+      "source": "04-sos/00-sos-power-conferences-2026.md",
+      "timing": "2026 current-season page; 2025 final dated 2026-01-20."
+    }
+  ],
+  "teams": [
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 130,
+      "slug": "akron",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Akron",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 10,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 2,
+      "slug": "alabama",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Alabama",
+      "teamrankings_rank": 4,
+      "teamrankings_rating": 16.7
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 29,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 63,
+      "slug": "arizona",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Arizona",
+      "teamrankings_rank": 46,
+      "teamrankings_rating": 6.1
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 44,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 43,
+      "slug": "arizona-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Arizona St",
+      "teamrankings_rank": 37,
+      "teamrankings_rating": 7.0
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 42,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 8,
+      "slug": "arkansas",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Arkansas",
+      "teamrankings_rank": 23,
+      "teamrankings_rating": 10.7
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 85,
+      "slug": "army",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Army",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 24,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 15,
+      "slug": "auburn",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Auburn",
+      "teamrankings_rank": 21,
+      "teamrankings_rating": 11.0
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 106,
+      "slug": "ball-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Ball State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 59,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 49,
+      "slug": "baylor",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Baylor",
+      "teamrankings_rank": 41,
+      "teamrankings_rating": 6.6
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 88,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 54,
+      "slug": "boston-college",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Boston College",
+      "teamrankings_rank": 63,
+      "teamrankings_rating": 2.4
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 113,
+      "slug": "bowling-green",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Bowling Green",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 136,
+      "slug": "buffalo",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Buffalo",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 17,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 29,
+      "slug": "byu",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "BYU",
+      "teamrankings_rank": 20,
+      "teamrankings_rating": 11.1
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 81,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 79,
+      "slug": "california",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "California",
+      "teamrankings_rank": 69,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 100,
+      "slug": "central-michigan",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Central Michigan",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 71,
+      "slug": "charlotte",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Charlotte",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 53,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 58,
+      "slug": "cincinnati",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Cincinnati",
+      "teamrankings_rank": 54,
+      "teamrankings_rating": 5.0
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 31,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 57,
+      "slug": "clemson",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Clemson",
+      "teamrankings_rank": 35,
+      "teamrankings_rating": 7.1
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 77,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 44,
+      "slug": "colorado",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Colorado",
+      "teamrankings_rank": 55,
+      "teamrankings_rating": 4.6
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 131,
+      "slug": "delaware",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Delaware",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 43,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 72,
+      "slug": "duke",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Duke",
+      "teamrankings_rank": 56,
+      "teamrankings_rating": 4.4
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 83,
+      "slug": "east-carolina",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "East Carolina",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 129,
+      "slug": "eastern-michigan",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Eastern Michigan",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 108,
+      "slug": "fiu",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "FIU",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 37,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 3,
+      "slug": "florida",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Florida",
+      "teamrankings_rank": 10,
+      "teamrankings_rating": 13.5
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 97,
+      "slug": "florida-atlantic",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "FAU",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 33,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 45,
+      "slug": "florida-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Florida St",
+      "teamrankings_rank": 32,
+      "teamrankings_rating": 8.5
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 7,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 17,
+      "slug": "georgia",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Georgia",
+      "teamrankings_rank": 6,
+      "teamrankings_rating": 14.0
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 40,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 59,
+      "slug": "georgia-tech",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Georgia Tech",
+      "teamrankings_rank": 52,
+      "teamrankings_rating": 5.5
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 50,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 70,
+      "slug": "houston",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Houston",
+      "teamrankings_rank": 60,
+      "teamrankings_rating": 3.0
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 30,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 23,
+      "slug": "illinois",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Illinois",
+      "teamrankings_rank": 25,
+      "teamrankings_rating": 10.3
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 1,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 10,
+      "slug": "indiana",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Indiana",
+      "teamrankings_rank": 1,
+      "teamrankings_rating": 20.6
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 18,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 16,
+      "slug": "iowa",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Iowa",
+      "teamrankings_rank": 8,
+      "teamrankings_rating": 13.7
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 35,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 62,
+      "slug": "iowa-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Iowa State",
+      "teamrankings_rank": 48,
+      "teamrankings_rating": 6.0
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 135,
+      "slug": "jacksonville-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Jacksonville State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 51,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 39,
+      "slug": "kansas",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Kansas",
+      "teamrankings_rank": 47,
+      "teamrankings_rating": 6.1
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 38,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 48,
+      "slug": "kansas-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Kansas St",
+      "teamrankings_rank": 40,
+      "teamrankings_rating": 6.8
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 96,
+      "slug": "kennesaw-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Kennesaw State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 66,
+      "slug": "kent-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Kent State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 47,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 11,
+      "slug": "kentucky",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Kentucky",
+      "teamrankings_rank": 29,
+      "teamrankings_rating": 9.5
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 126,
+      "slug": "liberty",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Liberty",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 28,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 53,
+      "slug": "louisville",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Louisville",
+      "teamrankings_rank": 44,
+      "teamrankings_rating": 6.3
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 26,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 12,
+      "slug": "lsu",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "LSU",
+      "teamrankings_rank": 19,
+      "teamrankings_rating": 11.4
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 73,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 52,
+      "slug": "maryland",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Maryland",
+      "teamrankings_rank": 62,
+      "teamrankings_rating": 3.0
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 102,
+      "slug": "memphis",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Memphis",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 5,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 7,
+      "slug": "miami-fl",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Miami",
+      "teamrankings_rank": 5,
+      "teamrankings_rating": 16.7
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 120,
+      "slug": "miami-oh",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Miami (OH)",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 20,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 24,
+      "slug": "michigan",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Michigan",
+      "teamrankings_rank": 18,
+      "teamrankings_rating": 11.4
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 66,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 25,
+      "slug": "michigan-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Michigan St",
+      "teamrankings_rank": 43,
+      "teamrankings_rating": 6.3
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 134,
+      "slug": "middle-tennessee",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Middle Tennessee",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 65,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 40,
+      "slug": "minnesota",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Minnesota",
+      "teamrankings_rank": 57,
+      "teamrankings_rating": 3.9
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 58,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 21,
+      "slug": "mississippi-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Mississippi St",
+      "teamrankings_rank": 33,
+      "teamrankings_rating": 8.1
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 22,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 32,
+      "slug": "missouri",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Missouri",
+      "teamrankings_rank": 26,
+      "teamrankings_rating": 10.1
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 101,
+      "slug": "missouri-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Missouri State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 75,
+      "slug": "navy",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Navy",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 46,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 34,
+      "slug": "nc-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "NC State",
+      "teamrankings_rank": 38,
+      "teamrankings_rating": 7.0
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 45,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 42,
+      "slug": "nebraska",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Nebraska",
+      "teamrankings_rank": 34,
+      "teamrankings_rating": 7.8
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 115,
+      "slug": "new-mexico-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "New Mexico State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 91,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 80,
+      "slug": "north-carolina",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "North Carolina",
+      "teamrankings_rank": 71,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 109,
+      "slug": "north-texas",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "North Texas",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 56,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 38,
+      "slug": "northwestern",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Northwestern",
+      "teamrankings_rank": 51,
+      "teamrankings_rating": 5.5
+    },
+    {
+      "conference": "Independent",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 47,
+      "slug": "notre-dame",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Notre Dame",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 88,
+      "slug": "ohio",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Ohio",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 2,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 20,
+      "slug": "ohio-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Ohio State",
+      "teamrankings_rank": 3,
+      "teamrankings_rating": 17.3
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 15,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 14,
+      "slug": "oklahoma",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Oklahoma",
+      "teamrankings_rank": 11,
+      "teamrankings_rating": 13.3
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 113,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 35,
+      "slug": "oklahoma-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Oklahoma St",
+      "teamrankings_rank": 70,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 9,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 31,
+      "slug": "ole-miss",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Ole Miss",
+      "teamrankings_rank": 16,
+      "teamrankings_rating": 12.2
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 4,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 6,
+      "slug": "oregon",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Oregon",
+      "teamrankings_rank": 2,
+      "teamrankings_rating": 18.3
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 16,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 22,
+      "slug": "penn-state",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Penn State",
+      "teamrankings_rank": 12,
+      "teamrankings_rating": 13.2
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 39,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 51,
+      "slug": "pittsburgh",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Pitt",
+      "teamrankings_rank": 42,
+      "teamrankings_rating": 6.4
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 86,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 4,
+      "slug": "purdue",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Purdue",
+      "teamrankings_rank": 50,
+      "teamrankings_rating": 5.6
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 94,
+      "slug": "rice",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Rice",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 63,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 26,
+      "slug": "rutgers",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Rutgers",
+      "teamrankings_rank": 39,
+      "teamrankings_rating": 6.8
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 2025,
+      "slug": "sacramento-state",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Sacramento State",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 107,
+      "slug": "sam-houston",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Sam Houston",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 23,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 61,
+      "slug": "smu",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "SMU",
+      "teamrankings_rank": 45,
+      "teamrankings_rating": 6.2
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 34,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 13,
+      "slug": "south-carolina",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "South Carolina",
+      "teamrankings_rank": 22,
+      "teamrankings_rating": 10.8
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 67,
+      "slug": "south-florida",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "South Florida",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 83,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 27,
+      "slug": "stanford",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Stanford",
+      "teamrankings_rank": 58,
+      "teamrankings_rating": 3.8
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 99,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 19,
+      "slug": "syracuse",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Syracuse",
+      "teamrankings_rank": 64,
+      "teamrankings_rating": 2.4
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 32,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 50,
+      "slug": "tcu",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "TCU",
+      "teamrankings_rank": 36,
+      "teamrankings_rating": 7.0
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 81,
+      "slug": "temple",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Temple",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 19,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 36,
+      "slug": "tennessee",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Tennessee",
+      "teamrankings_rank": 27,
+      "teamrankings_rating": 9.8
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 11,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 9,
+      "slug": "texas",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Texas",
+      "teamrankings_rank": 7,
+      "teamrankings_rating": 13.8
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 12,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 18,
+      "slug": "texas-am",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Texas A&M",
+      "teamrankings_rank": 9,
+      "teamrankings_rating": 13.6
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 6,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 46,
+      "slug": "texas-tech",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Texas Tech",
+      "teamrankings_rank": 13,
+      "teamrankings_rating": 13.1
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 114,
+      "slug": "toledo",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Toledo",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 65,
+      "slug": "tulane",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Tulane",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 118,
+      "slug": "tulsa",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Tulsa",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 84,
+      "slug": "uab",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "UAB",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 70,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 55,
+      "slug": "ucf",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "UCF",
+      "teamrankings_rank": 65,
+      "teamrankings_rating": 1.8
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 75,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 5,
+      "slug": "ucla",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "UCLA",
+      "teamrankings_rank": 31,
+      "teamrankings_rating": 8.8
+    },
+    {
+      "conference": "Independent",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 132,
+      "slug": "uconn",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "UConn",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 95,
+      "slug": "umass",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "UMass",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 13,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 30,
+      "slug": "usc",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "USC",
+      "teamrankings_rank": 15,
+      "teamrankings_rating": 12.3
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 8,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 60,
+      "slug": "utah",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Utah",
+      "teamrankings_rank": 28,
+      "teamrankings_rating": 9.7
+    },
+    {
+      "conference": "AAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 78,
+      "slug": "utsa",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "UTSA",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "sec",
+      "espn_fpi_rank": 14,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 28,
+      "slug": "vanderbilt",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Vanderbilt",
+      "teamrankings_rank": 17,
+      "teamrankings_rating": 11.7
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 36,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 76,
+      "slug": "virginia",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Virginia",
+      "teamrankings_rank": 59,
+      "teamrankings_rating": 3.8
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 71,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 37,
+      "slug": "virginia-tech",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Virginia Tech",
+      "teamrankings_rank": 49,
+      "teamrankings_rating": 5.7
+    },
+    {
+      "conference": "acc",
+      "espn_fpi_rank": 61,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 77,
+      "slug": "wake-forest",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Wake Forest",
+      "teamrankings_rank": 66,
+      "teamrankings_rating": 1.7
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 21,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 41,
+      "slug": "washington",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Washington",
+      "teamrankings_rank": 30,
+      "teamrankings_rating": 9.5
+    },
+    {
+      "conference": "big12",
+      "espn_fpi_rank": 84,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 33,
+      "slug": "west-virginia",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "West Virginia",
+      "teamrankings_rank": 53,
+      "teamrankings_rating": 5.1
+    },
+    {
+      "conference": "CUSA",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 121,
+      "slug": "western-kentucky",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Western Kentucky",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "MAC",
+      "espn_fpi_rank": null,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 111,
+      "slug": "western-michigan",
+      "sources": {
+        "espn_fpi_sos_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Western Michigan",
+      "teamrankings_rank": null,
+      "teamrankings_rating": null
+    },
+    {
+      "conference": "big10",
+      "espn_fpi_rank": 60,
+      "espn_fpi_rem_sos_rank": null,
+      "espn_fpi_sos_rank": 1,
+      "slug": "wisconsin",
+      "sources": {
+        "espn_fpi_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_rem_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "espn_fpi_sos_rank": "04-sos/espn-fpi-sos-2025.json",
+        "teamrankings_rank": "04-sos/00-sos-power-conferences-2026.md"
+      },
+      "team_raw": "Wisconsin",
+      "teamrankings_rank": 24,
+      "teamrankings_rating": 10.6
+    }
+  ]
+}

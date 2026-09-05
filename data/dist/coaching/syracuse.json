@@ -1,0 +1,104 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Fran Brown",
+    "title_raw": "Fran Brown"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Kehres hire from Toledo; conceptually sound / gap-disciplined language in previews — no exclusive official base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single official brand",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Syracuse Orange football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Syracuse_Orange_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Fran Brown",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Fran Brown"
+    },
+    {
+      "name": "Jeff Nixon",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jeff Nixon (Offensive Coordinator / Running Backs)"
+    },
+    {
+      "name": "Mike Johnson",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Mike Johnson (Co-OC / Tight Ends)"
+    },
+    {
+      "name": "Vince Kehres",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Vince Kehres"
+    },
+    {
+      "name": "John Scott Jr.",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "John Scott Jr. (Assistant Head Coach / Co-DC / Defensive Line)"
+    },
+    {
+      "name": "Alex Bayer",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Alex Bayer"
+    },
+    {
+      "name": "Sean Ryan",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Sean Ryan (Quarterbacks / Passing Game Coordinator)"
+    },
+    {
+      "name": "Jeff Nixon",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Jeff Nixon (also Dennis Thomas, Running Backs)"
+    },
+    {
+      "name": "Josh Gattis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Josh Gattis"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Syracuse",
+    "slug": "syracuse"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Tyson Helton",
+    "title_raw": "Tyson Helton"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/cusa.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Base 3–3–5 (Wikipedia 2026 team page); Merritt continuity from prior co-DC/ILB role. (Wikipedia; The Grueling Truth defensive breakdown.)",
+      "label": "3-3-5"
+    },
+    "offense": {
+      "description": "Air raid (Wikipedia 2026 team page)—high-tempo vertical/spacing concepts under Helton–Reeder. (Wikipedia; BG Daily News; The Grueling Truth previews.)",
+      "label": "Air raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "wkusports.com/sports/football/coaches",
+      "url": "https://wkusports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tyson Helton",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official WKU athletics; Wikipedia 2026 team page (8th season)",
+      "title_raw": "Tyson Helton"
+    },
+    {
+      "name": "Bodie Reeder",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official WKU athletics; BG Daily News staff updates (March 8, 2026)",
+      "title_raw": "Bodie Reeder (OC / Quarterbacks)"
+    },
+    {
+      "name": "Joe Bernardi",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official WKU athletics; BG Daily News staff updates (March 8, 2026)",
+      "title_raw": "Joe Bernardi (Co-OC / Offensive Line)"
+    },
+    {
+      "name": "Davis Merritt",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official WKU athletics (promoted for 2026)",
+      "title_raw": "Davis Merritt (DC / Inside Linebackers)"
+    },
+    {
+      "name": "Andy LaRussa",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official WKU athletics",
+      "title_raw": "Andy LaRussa (Assistant Head Coach / Special Teams Coordinator)"
+    },
+    {
+      "name": "Bodie Reeder",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title pairs OC / Quarterbacks",
+      "title_raw": "Bodie Reeder"
+    },
+    {
+      "name": "Bryan Applewhite",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official WKU athletics",
+      "title_raw": "Bryan Applewhite"
+    },
+    {
+      "name": "Jason Barnes",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official WKU athletics / staff directory; Wikipedia 2026 roster coaches list",
+      "title_raw": "Jason Barnes"
+    }
+  ],
+  "team": {
+    "conference_slug": "cusa",
+    "school": "Western Kentucky",
+    "slug": "western-kentucky"
+  }
+}

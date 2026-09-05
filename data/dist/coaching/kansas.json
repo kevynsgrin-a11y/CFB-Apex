@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Lance Leipold",
+    "title_raw": "Lance Leipold"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "McDonald year-two multiple fronts/packages (simpler install, coverage mixes); historically KU used heavy 4-2-5/nickel looks under prior staff — McDonald emphasizes multiplicity rather than one static base. (247Sports McDonald scheme feature.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Kotelnicki multiple/versatile, explosive-play offense (returned from Penn State; resumes play-calling). (Capital-Journal; KC Star.)",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "kuathletics.com/sports/football/coaches",
+      "url": "https://kuathletics.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Lance Leipold",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official KU coaches page",
+      "title_raw": "Lance Leipold"
+    },
+    {
+      "name": "Andy Kotelnicki",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official KU coaches page + Topeka Capital-Journal / KC Star",
+      "title_raw": "Andy Kotelnicki (Associate Head Coach; play-caller / OC duties per beat)"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official KU coaches page + Topeka Capital-Journal / KC Star",
+      "title_raw": "Matt Lubick listed as Co-Offensive Coordinator / Tight Ends on official directory"
+    },
+    {
+      "name": "D.K. McDonald",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official KU coaches page",
+      "title_raw": "D.K. McDonald"
+    },
+    {
+      "name": "Taiwo Onatolu",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official KU coaches page",
+      "title_raw": "Taiwo Onatolu"
+    },
+    {
+      "name": "Jim Zebrowski",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official KU coaches page",
+      "title_raw": "Jim Zebrowski (Passing Game Coordinator – Quarterbacks)"
+    },
+    {
+      "name": "Jonathan Wallace",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official KU coaches page",
+      "title_raw": "Jonathan Wallace (Assistant Head Coach – Running Backs)"
+    },
+    {
+      "name": "Terrence Samuel",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official KU coaches page",
+      "title_raw": "Terrence Samuel"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Kansas",
+    "slug": "kansas"
+  }
+}

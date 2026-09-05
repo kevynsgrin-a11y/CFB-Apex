@@ -1,0 +1,93 @@
+{
+  "conflicts": 0,
+  "coverage": {
+    "cfn_spring_rank": {
+      "teams_missing": 67,
+      "teams_with_value": 39
+    },
+    "espn_fpi_rem_sos_rank": {
+      "teams_missing": 39,
+      "teams_with_value": 67
+    },
+    "espn_fpi_sos_rank": {
+      "teams_missing": 0,
+      "teams_with_value": 106
+    },
+    "opponent_win_pct_rank": {
+      "teams_missing": 40,
+      "teams_with_value": 66
+    },
+    "phil_steele_rank": {
+      "teams_missing": 0,
+      "teams_with_value": 106
+    },
+    "teamrankings_rank": {
+      "teams_missing": 39,
+      "teams_with_value": 67
+    }
+  },
+  "headline_findings": [
+    "Definition: Rank among all FBS teams of schedule strength from the perspective of an average FBS team (ESPN FPI Resume SOS / Rem SOS column).",
+    "Scale: Rank 1 = toughest … higher = easier (2026 FBS field size 138; 2025 final field 136).",
+    "Primary 2026 snapshot: ESPN FPI Resume API/page last updated 2026-09-04 (Week 1 / early-season).",
+    "2025 final snapshot: ESPN FPI season file last updated 2026-01-20."
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "sos-index",
+    "schema_version": "1.0.0",
+    "sources": [
+      "04-sos/00-executive-overview.md",
+      "04-sos/00-sos-power-conferences-2026.md",
+      "04-sos/01-sos-aac-indy-mac-cusa-2026.md",
+      "04-sos/espn-fpi-sos-2025.json",
+      "04-sos/espn-fpi-sos-2026-09-04.json"
+    ]
+  },
+  "seasons": [
+    {
+      "artifact": "sos/2026.json",
+      "season": 2026,
+      "teams": 106
+    },
+    {
+      "artifact": "sos/2025.json",
+      "season": 2025,
+      "teams": 106
+    }
+  ],
+  "teams_without_sos": [
+    "air-force",
+    "appalachian-state",
+    "arkansas-state",
+    "boise-state",
+    "coastal-carolina",
+    "colorado-state",
+    "fresno-state",
+    "georgia-southern",
+    "georgia-state",
+    "hawaii",
+    "james-madison",
+    "louisiana",
+    "louisiana-tech",
+    "marshall",
+    "nevada",
+    "new-mexico",
+    "north-dakota-state",
+    "northern-illinois",
+    "old-dominion",
+    "oregon-state",
+    "san-diego-state",
+    "san-jose-state",
+    "south-alabama",
+    "southern-miss",
+    "texas-state",
+    "troy",
+    "ulm",
+    "unlv",
+    "utah-state",
+    "utep",
+    "washington-state",
+    "wyoming"
+  ]
+}

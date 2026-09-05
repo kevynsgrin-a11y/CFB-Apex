@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Scott Satterfield",
+    "title_raw": "Scott Satterfield"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Woody installing a blitzing 3-4 alignment (ESPN future power rankings / UC reporting on Woody hire from Army). UC quick facts also list “Basic Defense: Multiple.” (ESPN; gobearcats.com.)",
+      "label": "3-4"
+    },
+    "offense": {
+      "description": "Satterfield multiple offense (UC quick facts: “Basic Offense: Multiple”); co-OC structure after Cardwell/Thomas promotions (Jan. 2026). (gobearcats.com.)",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "gobearcats.com/2026-football-quick-facts",
+      "url": "https://gobearcats.com/2026-football-quick-facts"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Scott Satterfield",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UC quick facts / coaches updates",
+      "title_raw": "Scott Satterfield"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UC; Cardwell OL, Thomas QBs",
+      "title_raw": "Nic Cardwell & Pete Thomas (Co-Offensive Coordinators)"
+    },
+    {
+      "name": "Nate Woody",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UC; Co-DC Cortney Braswell (ILBs)",
+      "title_raw": "Nate Woody"
+    },
+    {
+      "name": "Luke Paschall",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UC quick facts",
+      "title_raw": "Luke Paschall"
+    },
+    {
+      "name": "Pete Thomas",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official UC",
+      "title_raw": "Pete Thomas (Co-OC / Quarterbacks)"
+    },
+    {
+      "name": "Sean Dawkins",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UC staff updates",
+      "title_raw": "Sean Dawkins"
+    },
+    {
+      "name": "Vijay Stingley",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UC staff updates",
+      "title_raw": "Vijay Stingley"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Cincinnati",
+    "slug": "cincinnati"
+  }
+}

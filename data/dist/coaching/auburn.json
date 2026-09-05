@@ -1,0 +1,108 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Alex Golesh",
+    "title_raw": "Alex Golesh (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Durkin historically multiple; no official 2026 base-front label located on athletics pages consulted)",
+      "label": null
+    },
+    "offense": {
+      "description": "High-tempo, full-field spacing offense from the Heupel–Golesh tree (media often labels Veer & Shoot; Golesh has publicly rejected rigid compartmentalization while affirming tempo and width as core DNA)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "auburntigers.com Football roster / coaching staff",
+      "url": "https://auburntigers.com/sports/football/roster"
+    },
+    {
+      "title": "2026 Auburn Tigers football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Auburn_Tigers_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Alex Golesh",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Alex Golesh (1st season)"
+    },
+    {
+      "name": "Joel Gordon",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Joel Gordon (OC / Quarterbacks)"
+    },
+    {
+      "name": "Kodi Burns",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kodi Burns (Associate Head Coach / Co-OC / Wide Receivers)"
+    },
+    {
+      "name": "D. J. Durkin",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "D. J. Durkin (DC / Linebackers)"
+    },
+    {
+      "name": "Tim Banks",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tim Banks (Co-DC / Safeties)"
+    },
+    {
+      "name": "Jacob Bronowski",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Jacob Bronowski"
+    },
+    {
+      "name": "Joel Gordon",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Joel Gordon"
+    },
+    {
+      "name": "Larry Porter",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Larry Porter"
+    },
+    {
+      "name": "Kodi Burns",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Kodi Burns"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Auburn",
+    "slug": "auburn"
+  }
+}

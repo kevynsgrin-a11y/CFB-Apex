@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Pete Lembo",
+    "title_raw": "Pete Lembo"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "First season for Dougherty as UB DC after internal promotion; exact published base front Not listed on materials reviewed. (ubbulls.com Dougherty promotion; UBNow.)",
+      "label": null
+    },
+    "offense": {
+      "description": "First season for Tokarz (ex-Florida State QBs) as OC; fine-grained named scheme label for 2026 Not listed on official materials reviewed. (UBNow Sept. 2026; ubbulls.com.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "ubbulls.com/sports/football/coaches",
+      "url": "https://ubbulls.com/sports/football/coaches"
+    },
+    {
+      "title": "ubbulls.com/sports/football/roster",
+      "url": "https://ubbulls.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Pete Lembo",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UB athletics coaches / roster (2026)",
+      "title_raw": "Pete Lembo"
+    },
+    {
+      "name": "Tony Tokarz",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UB athletics; UBNow season-opener feature",
+      "title_raw": "Tony Tokarz (also Quarterbacks)"
+    },
+    {
+      "name": "Brian Dougherty",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UB athletics; UB DC promotion release",
+      "title_raw": "Brian Dougherty (also Safeties; promoted Jan. 2026)"
+    },
+    {
+      "name": "Garrett McLaughlin",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UB athletics",
+      "title_raw": "Garrett McLaughlin"
+    },
+    {
+      "name": "Tony Tokarz",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Tony Tokarz"
+    },
+    {
+      "name": "Jordan Johnson",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UB athletics roster coaches",
+      "title_raw": "Jordan Johnson"
+    },
+    {
+      "name": "Caleb Haynes",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UB athletics roster coaches",
+      "title_raw": "Caleb Haynes"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Buffalo",
+    "slug": "buffalo"
+  }
+}

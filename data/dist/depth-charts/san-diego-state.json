@@ -1,0 +1,1475 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/pac12-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/pac12-2026/san-diego-state.md"
+    ]
+  },
+  "schemes": {
+    "defense": "4-2-5 / multiple; SI preseason",
+    "offense": null,
+    "special_teams": null
+  },
+  "status": null,
+  "status_caveat": "Synthesized from SI preseason two-deep (Aug 2026) and SI season-opener update (Sep 1, 2026). Ourlads (Aug 20) secondary check for offense. Not an official athletics PDF.",
+  "status_raw": "MEDIA / OPENER",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "San Diego State",
+    "slug": "san-diego-state"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Apple Valley",
+                  "class": null,
+                  "class_raw": "2022 (HS); Michigan transfer",
+                  "high_school": "Apple Valley HS",
+                  "hometown": "Apple Valley, CA",
+                  "jersey": 4,
+                  "name": "Jayden Denegal",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 12,
+                  "name": "Stone Saunders",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 16,
+                  "name": "Draiden Trudeau",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 41,
+                  "name": "Brady Campbell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Diego",
+                  "class": null,
+                  "class_raw": "2022",
+                  "high_school": "Cathedral Catholic",
+                  "hometown": "San Diego, CA",
+                  "jersey": 7,
+                  "name": "Lucky Sutton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 20,
+                  "name": "Christian Washington",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 21,
+                  "name": "Javion Kinnard",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 29,
+                  "name": "Jordin Thomas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 23,
+                  "name": "Josiah Lucas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Montgomery Village",
+                  "class": null,
+                  "class_raw": "returning starter; SI opener",
+                  "high_school": "Quince Orchard",
+                  "hometown": "Montgomery Village, MD",
+                  "jersey": 14,
+                  "name": "Donovan Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "MD"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 30,
+                  "name": "Aldrich Doe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 16,
+                  "name": "Will Cianfrini",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 93,
+                  "name": "Ayo Shotomide-King",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WR-X"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Houston",
+                  "class": null,
+                  "class_raw": "SI opener; moved from QB",
+                  "high_school": "Ridge Point HS",
+                  "hometown": "Houston, TX",
+                  "jersey": 5,
+                  "name": "Bert Emanuel Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 85,
+                  "name": "Justius Lowe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "returning starter, easing back from knee",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 17,
+                  "name": "Jacob Bostick",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WR-Z"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Diego",
+                  "class": null,
+                  "class_raw": "SI opener; jersey official / on some charts",
+                  "high_school": "Lincoln HS",
+                  "hometown": "San Diego, CA",
+                  "jersey": 3,
+                  "name": "Nathan Acevedo",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "returning starter, knee",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 2,
+                  "name": "Jordan Napier",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 12,
+                  "name": "Jaylon Hawkins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 18,
+                  "name": "Daishaun Davis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WR-Slot"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Melissa",
+                  "class": null,
+                  "class_raw": "Transfer (Tulsa)",
+                  "high_school": "Melissa HS",
+                  "hometown": "Melissa, TX",
+                  "jersey": 15,
+                  "name": "Jackson Ford",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 88,
+                  "name": "Ryan Wolfer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 47,
+                  "name": "Kime Fangupo",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "La Puente",
+                  "class": null,
+                  "class_raw": "Transfer (Arizona)",
+                  "high_school": "Nogales HS",
+                  "hometown": "La Puente, CA",
+                  "jersey": 78,
+                  "name": "Joseph Borjon",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 70,
+                  "name": "Mercer Luniewski",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 77,
+                  "name": "Cam May",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 75,
+                  "name": "Delon Craft Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Waimanalo",
+                  "class": null,
+                  "class_raw": "Transfer (Syracuse)",
+                  "high_school": "St. Louis School",
+                  "hometown": "Waimanalo, HI",
+                  "jersey": 76,
+                  "name": "Kalan Ellis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "HI"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 71,
+                  "name": "Evan Lawrence",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 79,
+                  "name": "Harlem Nellum",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Youngstown",
+                  "class": null,
+                  "class_raw": "Transfer (Ball State)",
+                  "high_school": "Ursuline HS",
+                  "hometown": "Youngstown, OH",
+                  "jersey": 56,
+                  "name": "Isaac Lucas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "OH"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 66,
+                  "name": "Justice Turner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 58,
+                  "name": "Ikbahl Kassim",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Glendale",
+                  "class": null,
+                  "class_raw": "Transfer (Washington)",
+                  "high_school": "Apollo HS",
+                  "hometown": "Glendale, AZ",
+                  "jersey": 55,
+                  "name": "Michael Leville Watkins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "AZ"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 58,
+                  "name": "Ikbahl Kassim",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 67,
+                  "name": "Charlton Luniewski",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 79,
+                  "name": "Harlem Nellum",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dallas",
+                  "class": null,
+                  "class_raw": "Transfer (Texas Southern)",
+                  "high_school": "South Oak Cliff",
+                  "hometown": "Dallas, TX",
+                  "jersey": 72,
+                  "name": "Dennis Jones",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 74,
+                  "name": "Ashdon Wnetrzak",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 62,
+                  "name": "Jarvis Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pleasanton",
+                  "class": null,
+                  "class_raw": "2022/23",
+                  "high_school": "Amador Valley",
+                  "hometown": "Pleasanton, CA",
+                  "jersey": 33,
+                  "name": "Brady Nassar",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 44,
+                  "name": "Nate Henrich",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Lucan Amituanai",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "Field EDGE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Moreno Valley",
+                  "class": null,
+                  "class_raw": "Transfer (Colorado)",
+                  "high_school": "Centennial HS",
+                  "hometown": "Moreno Valley, CA",
+                  "jersey": 95,
+                  "name": "Gavriel Lightfoot",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 91,
+                  "name": "Amari Comier",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 94,
+                  "name": "Tuaoa Tauili'ili",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "Nose"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Los Angeles",
+                  "class": null,
+                  "class_raw": "Transfer (Hawai'i)",
+                  "high_school": "St. John Bosco",
+                  "hometown": "Los Angeles, CA",
+                  "jersey": 6,
+                  "name": "Malachi Finau",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 11,
+                  "name": "Krishna Clay",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 88,
+                  "name": "Kainoa Davis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "3-Tech"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Montréal",
+                  "class": null,
+                  "class_raw": "jersey / listed variously",
+                  "high_school": "Cégep du Vieux",
+                  "hometown": "Montréal, Québec",
+                  "jersey": 45,
+                  "name": "Djibril Rahman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Québec"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 18,
+                  "name": "Kai Wallin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 97,
+                  "name": "Dominic Coelho",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "Rush EDGE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Los Angeles",
+                  "class": null,
+                  "class_raw": "Transfer (Weber State)",
+                  "high_school": "St. John Bosco",
+                  "hometown": "Los Angeles, CA",
+                  "jersey": 0,
+                  "name": "Sione Hala",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 42,
+                  "name": "Cameron Cooper",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 15,
+                  "name": "Oberhiri Eyafe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WILL LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Diego",
+                  "class": null,
+                  "class_raw": "Transfer (Army)",
+                  "high_school": "Cathedral Catholic",
+                  "hometown": "San Diego, CA",
+                  "jersey": 21,
+                  "name": "Tano Letuli",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 31,
+                  "name": "Jeramiah Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 34,
+                  "name": "Dean Harrington",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "MIKE LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Diego",
+                  "class": null,
+                  "class_raw": "Transfer (New Mexico State)",
+                  "high_school": "Lincoln HS",
+                  "hometown": "San Diego, CA",
+                  "jersey": 24,
+                  "name": "Josiah Cox",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 30,
+                  "name": "Jalen Thomeson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 13,
+                  "name": "Prince Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "SAM (S)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mountain House",
+                  "class": null,
+                  "class_raw": "Transfer (Foothill College)",
+                  "high_school": "Mountain House HS",
+                  "hometown": "Mountain House, CA",
+                  "jersey": 49,
+                  "name": "Jamison Starks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 37,
+                  "name": "Jason Oliver",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 16,
+                  "name": "Jelani Whitmore",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Jacinto",
+                  "class": null,
+                  "class_raw": "2023/24",
+                  "high_school": "Citrus Valley",
+                  "hometown": "San Jacinto, CA",
+                  "jersey": 20,
+                  "name": "Jelani McLaughlin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 29,
+                  "name": "Josh Hunter",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 22,
+                  "name": "Max Garrison",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "SS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Oxnard",
+                  "class": null,
+                  "class_raw": "Transfer (Portland State)",
+                  "high_school": "Oaks Christian",
+                  "hometown": "Oxnard, CA",
+                  "jersey": 14,
+                  "name": "Isaiah Green",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 26,
+                  "name": "Solomon Davis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 17,
+                  "name": "Kaimana Tufaga",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "FS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Los Angeles",
+                  "class": null,
+                  "class_raw": "Transfer (Idaho State)",
+                  "high_school": "Bishop Alemany",
+                  "hometown": "Los Angeles, CA",
+                  "jersey": 27,
+                  "name": "Mike Lindsay",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 32,
+                  "name": "Caleb Ricks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RCB"
+        }
+      ],
+      "scheme": "4-2-5 / multiple; SI preseason",
+      "unit": "defense"
+    }
+  ]
+}

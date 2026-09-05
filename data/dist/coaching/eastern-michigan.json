@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Chris Creighton",
+    "title_raw": "Chris Creighton"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Post-Needham overhaul under co-DCs Omli & Teegardin; staff/player messaging centers on TTE (tackling / takeaways / effort) and a more aggressive style; Ourlads and beat notes reference 4-2-5 installation. (emueagles.com defensive evolution feature; ByTheBelt; Mitten Football.)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Multiple offense emphasizing high-percentage passing around returning QB Noah Kim; Creighton staff continuity on offense. Exact exclusive named playbook label beyond “multiple / pass-leaning” partially listed via Ourlads “Multiple” and beat previews. (ByTheBelt EMU 2026; Ourlads; roadtocfb Substack MAC preview.)",
+      "label": "Multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "emueagles.com/sports/football/coaches",
+      "url": "https://emueagles.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Chris Creighton",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official EMU athletics coaches page (2026)",
+      "title_raw": "Chris Creighton"
+    },
+    {
+      "name": "Mike Piatkowski",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official EMU athletics",
+      "title_raw": "Mike Piatkowski (also Quarterbacks)"
+    },
+    {
+      "name": null,
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official EMU athletics; ByTheBelt EMU preview",
+      "title_raw": "Kasey Teegardin (Assistant HC / Co-DC / Defensive Ends) & Tate Omli (Co-DC / Safeties)"
+    },
+    {
+      "name": "Grant Kurzner",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official EMU athletics (Teegardin moved from STC role into co-DC)",
+      "title_raw": "Grant Kurzner"
+    },
+    {
+      "name": "Mike Piatkowski",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Mike Piatkowski"
+    },
+    {
+      "name": "Donnell Kirkwood Jr.",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official EMU athletics",
+      "title_raw": "Donnell Kirkwood Jr."
+    },
+    {
+      "name": "Erik Campbell",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official EMU athletics",
+      "title_raw": "Erik Campbell"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Eastern Michigan",
+    "slug": "eastern-michigan"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "G.J. Kinne",
+    "title_raw": "G.J. Kinne"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Reporting describes Windham’s base as a 4-2-5 with Cover-3 shell concepts (film/preview coverage). Official athletics page lists titles only (no printed “base defense” line fetched).",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Veer-and-Shoot continuity under Keopple (promoted after Mack Leftwich’s departure)—vertical choice routes, wide splits, up-tempo pace, heavy pre-snap motion; system adapted to personnel rather than discarded.",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "txst.com 2026 coaches",
+      "url": "https://txst.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "G.J. Kinne",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "G.J. Kinne"
+    },
+    {
+      "name": "Landon Keopple",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Landon Keopple"
+    },
+    {
+      "name": "Jordan Shoemaker",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator / Offensive Line",
+      "source_note": null,
+      "title_raw": "Jordan Shoemaker"
+    },
+    {
+      "name": "Will Windham",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Will Windham"
+    },
+    {
+      "name": "Matthew Gregg",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Matthew Gregg"
+    },
+    {
+      "name": "Tanner Burns",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Tanner Burns (Associate Head Coach / Safeties)"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Not listed as a primary titled role"
+    },
+    {
+      "name": "Chastin Evans",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Chastin Evans (Pass Game Specialist / Quarterbacks Assistant)"
+    },
+    {
+      "name": "Joe Jon Finley",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Joe Jon Finley (Assistant Quarterbacks Coach)"
+    },
+    {
+      "name": "Kiel McDonald",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Kiel McDonald"
+    },
+    {
+      "name": "Randy Martinez",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Randy Martinez"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Texas State",
+    "slug": "texas-state"
+  }
+}

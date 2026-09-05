@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Michael Desormeaux",
+    "title_raw": "Michael Desormeaux"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Salgado returns experienced secondary; no exclusive official base-front tag on athletics directory)",
+      "label": null
+    },
+    "offense": {
+      "description": "Run-game identity / balanced attack emphasis under Leger (Advocate / beat camp coverage); no single official brand label — Not listed as a branded system",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "ragincajuns.com 2026 Football Coaches",
+      "url": "https://ragincajuns.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Michael Desormeaux",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Michael Desormeaux"
+    },
+    {
+      "name": "Tim Leger",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tim Leger (OC / Wide Receivers / Recruiting Coordinator)"
+    },
+    {
+      "name": "Jim Salgado",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jim Salgado (DC / Safeties)"
+    },
+    {
+      "name": "Mike Giuliani",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Mike Giuliani (OLB / Special Teams Coordinator)"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Not listed (no titled QB position coach on ragincajuns.com; Rob Christophel listed as Senior Offensive Analyst (QB); Desormeaux also works QBs per beat reporting)"
+    },
+    {
+      "name": "Marquase Lovings",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Marquase Lovings"
+    },
+    {
+      "name": "Tim Leger",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Tim Leger"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Louisiana",
+    "slug": "louisiana"
+  }
+}

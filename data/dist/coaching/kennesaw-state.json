@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jerry Mack",
+    "title_raw": "Jerry Mack"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/cusa.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, safety-forward unit branded “Hit Everything That Moves” (CUSA Insider / Mack kickoff). Commonly described as a base 4–2–5 in beat coverage; exclusive official athletics “base” field Not listed on the Wikipedia 2026 infobox. (CUSA Insider 2026 Owls preview; Hoot State defense preview.)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Veer and Shoot–style spread (Heupel / Briles tree) under Militello—high tempo, wide splits, RPO-heavy isolation concepts. Wikipedia 2026 infobox does not list a scheme field; label comes from beat/scheme analysis. (Hoot State “Veer and Shoot” series; AJC Mack quotes on spread transition.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "ksuowls.com/sports/football/coaches",
+      "url": "https://ksuowls.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jerry Mack",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official KSU athletics; Wikipedia 2026 team page (2nd season)",
+      "title_raw": "Jerry Mack"
+    },
+    {
+      "name": "Mitch Militello",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official KSU athletics",
+      "title_raw": "Mitch Militello (OC / Quarterbacks)"
+    },
+    {
+      "name": "Marc Mattioli",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official KSU athletics",
+      "title_raw": "Marc Mattioli (DC / Safeties)"
+    },
+    {
+      "name": "Kyle Blocker",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official KSU athletics",
+      "title_raw": "Kyle Blocker (Special Teams Coordinator / Tight Ends)"
+    },
+    {
+      "name": "Mitch Militello",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title pairs OC / Quarterbacks",
+      "title_raw": "Mitch Militello"
+    },
+    {
+      "name": "Aston Walter",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official KSU athletics",
+      "title_raw": "Aston Walter"
+    },
+    {
+      "name": "Dan Ellington",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official KSU athletics / 2026 roster staff block",
+      "title_raw": "Dan Ellington"
+    }
+  ],
+  "team": {
+    "conference_slug": "cusa",
+    "school": "Kennesaw State",
+    "slug": "kennesaw-state"
+  }
+}

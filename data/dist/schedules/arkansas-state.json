@@ -1,0 +1,184 @@
+{
+  "counts": {
+    "byes": 0,
+    "conference_games": 8,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-05",
+      "date_raw": "Sep 5 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Memphis",
+      "opponent_slug": "memphis",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sep 12 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "West Georgia (FCS)",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-19",
+      "date_raw": "Sep 19 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "TCU",
+      "opponent_slug": "tcu",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Sep 26 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "Kennesaw State",
+      "opponent_slug": "kennesaw-state",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-03",
+      "date_raw": "Oct 3 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Louisiana",
+      "opponent_slug": "louisiana",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-08",
+      "date_raw": "Oct 8 2026",
+      "location": "home",
+      "notes": "Thu",
+      "opponent": "South Alabama",
+      "opponent_slug": "south-alabama",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Oct 17 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Southern Miss",
+      "opponent_slug": "southern-miss",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-24",
+      "date_raw": "Oct 24 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "Georgia State",
+      "opponent_slug": "georgia-state",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Nov 7 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "ULM",
+      "opponent_slug": "ulm",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-14",
+      "date_raw": "Nov 14 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Coastal Carolina",
+      "opponent_slug": "coastal-carolina",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-19",
+      "date_raw": "Nov 19/20/21 2026",
+      "location": "away",
+      "notes": "Thu/Fri/Sat TBA",
+      "opponent": "Louisiana Tech",
+      "opponent_slug": "louisiana-tech",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-28",
+      "date_raw": "Nov 28 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "Troy",
+      "opponent_slug": "troy",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02b-g5-schedules-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Arkansas State",
+    "slug": "arkansas-state"
+  }
+}

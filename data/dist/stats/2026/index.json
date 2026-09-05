@@ -1,0 +1,37 @@
+{
+  "coverage_note": "Only 16 of 138 FBS teams had played by 2026-09-05. Every other team has no 2026 games yet — render that as 'no games played', not as zeroes.",
+  "games": 8,
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "season-stats-index",
+    "notes": [
+      "Sample sizes are a single game for nearly every team. These are Week 0 / early Week 1 snapshots, not season rates, and must not be presented as season averages."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/03-season-2026-week0-early-stats.md"
+    ]
+  },
+  "results": 8,
+  "season": 2026,
+  "teams_with_games": [
+    "eastern-michigan",
+    "florida-state",
+    "hawaii",
+    "jacksonville-state",
+    "memphis",
+    "nc-state",
+    "new-mexico-state",
+    "north-carolina",
+    "north-dakota-state",
+    "sacramento-state",
+    "san-jose-state",
+    "stanford",
+    "tcu",
+    "unlv",
+    "usc",
+    "virginia"
+  ],
+  "teams_without_games": 122
+}

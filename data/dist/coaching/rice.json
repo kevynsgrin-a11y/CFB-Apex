@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Scott Abell",
+    "title_raw": "Scott Abell"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Kay continues as DC; exclusive published 2026 base-front label Not listed on Rice athletics materials reviewed. (Rice athletics.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Abell gun-option / dual-threat oriented attack designed around athletic QBs (e.g., Jacurri Brown transfer framing in season previews). (NFL Draft Buzz Rice 2026 preview; NGSC coach rankings context.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "riceowls.com/sports/football/coaches",
+      "url": "https://riceowls.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Scott Abell",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Rice athletics 2026 coaches page",
+      "title_raw": "Scott Abell"
+    },
+    {
+      "name": "Vince Munch",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Vince Munch (OC / Offensive Line)"
+    },
+    {
+      "name": "Jon Kay",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Jon Kay"
+    },
+    {
+      "name": "Mark Hogan",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Mark Hogan (Linebackers / Special Teams Coordinator)"
+    },
+    {
+      "name": "Porter Abell",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Porter Abell (Pass Game Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "Johnathan Wilson",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Johnathan Wilson"
+    },
+    {
+      "name": "Brian Brown",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Brian Brown (Outside Receivers)"
+    },
+    {
+      "name": "Austin Eisenhofer",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Rice athletics",
+      "title_raw": "Austin Eisenhofer (Run Game Coordinator / Inside Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Rice",
+    "slug": "rice"
+  }
+}

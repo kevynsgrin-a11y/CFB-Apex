@@ -1,0 +1,142 @@
+{
+  "away_slug": "san-jose-state",
+  "date": "2026-08-29",
+  "game_id": "2026-08-29-san-jose-state-at-usc",
+  "home_slug": "usc",
+  "leaders": {},
+  "line_score": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "game",
+    "notes": [
+      "Sample sizes are a single game for nearly every team. These are Week 0 / early Week 1 snapshots, not season rates, and must not be presented as season averages."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/03-season-2026-week0-early-stats.md"
+    ]
+  },
+  "narrative": "Leaders: Jayden Maiava (USC) 25/29, 286 yds, 2 TD, 0 INT; 1 rush TD. Trent Mosley (USC) 7 rec, 118 yds, 1 TD. King Miller (USC) 15 rush, 63 yds, 1 TD. Luke Weaver (SJSU) 21/32, 234 yds, 2 TD; 8 rush, 42 yds, 1 TD. Carson Clark (SJSU) 6 rec, 74 yds.",
+  "neutral_site": false,
+  "note": null,
+  "scoring_plays": [],
+  "season": 2026,
+  "site": "Los Angeles Memorial Coliseum",
+  "sources": [
+    {
+      "title": "USC Athletics box score",
+      "url": "https://usctrojans.com/sports/football/stats/2026/san-jos-state/boxscore/35264"
+    },
+    {
+      "title": "ESPN",
+      "url": "https://www.espn.com/college-football/game/_/gameId/401864494/san-jose-st-usc"
+    }
+  ],
+  "team_stats": {
+    "columns": [
+      {
+        "label": "SJSU",
+        "team_slug": "san-jose-state"
+      },
+      {
+        "label": "USC",
+        "team_slug": "usc"
+      }
+    ],
+    "normalized": {
+      "SJSU": {
+        "first_downs": "19",
+        "passing": "21–32–0, 234 yds, 2 TD",
+        "possession": "22:45",
+        "rushing": "24–102–1",
+        "third_down": "5 of 11",
+        "total_offense": "56–336",
+        "turnovers": "0",
+        "yards_per_play": "6.0"
+      },
+      "USC": {
+        "first_downs": "29",
+        "passing": "30–36–1, 341 yds, 2 TD",
+        "possession": "37:15",
+        "rushing": "40–164–4",
+        "third_down": "9 of 13",
+        "total_offense": "76–505",
+        "turnovers": "1",
+        "yards_per_play": "6.6"
+      }
+    },
+    "rows": [
+      {
+        "statistic": "First downs",
+        "values": {
+          "SJSU": "19",
+          "USC": "29"
+        }
+      },
+      {
+        "statistic": "Rushing",
+        "values": {
+          "SJSU": "24–102–1",
+          "USC": "40–164–4"
+        }
+      },
+      {
+        "statistic": "Passing",
+        "values": {
+          "SJSU": "21–32–0, 234 yds, 2 TD",
+          "USC": "30–36–1, 341 yds, 2 TD"
+        }
+      },
+      {
+        "statistic": "Total offense",
+        "values": {
+          "SJSU": "56–336",
+          "USC": "76–505"
+        }
+      },
+      {
+        "statistic": "Yards/play",
+        "values": {
+          "SJSU": "6.0",
+          "USC": "6.6"
+        }
+      },
+      {
+        "statistic": "Possession",
+        "values": {
+          "SJSU": "22:45",
+          "USC": "37:15"
+        }
+      },
+      {
+        "statistic": "3rd down",
+        "values": {
+          "SJSU": "5 of 11",
+          "USC": "9 of 13"
+        }
+      },
+      {
+        "statistic": "Turnovers",
+        "values": {
+          "SJSU": "0",
+          "USC": "1"
+        }
+      }
+    ]
+  },
+  "teams": [
+    {
+      "name": "USC",
+      "points": 42,
+      "slug": "usc"
+    },
+    {
+      "name": "San José State",
+      "points": 26,
+      "slug": "san-jose-state"
+    }
+  ],
+  "title": "No. 14 USC 42, San José State 26",
+  "tv": "NBC / Peacock"
+}

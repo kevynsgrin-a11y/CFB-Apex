@@ -1,0 +1,108 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "JaMarcus Shephard",
+    "title_raw": "JaMarcus Shephard"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, communication-driven, multiple-look defense under MacIntyre. Beat reporting describes a shift toward a base 4-3 look that also features 4-2-5 nickel concepts; MacIntyre stresses varying fronts to create havoc and limit explosives.",
+      "label": "4-3"
+    },
+    "offense": {
+      "description": "Explosive, aggressive, efficiency-driven attack built around player strengths (Dahlen); physical run game paired with big-play passing; scheme adaptable rather than a rigid named system.",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "osubeavers.com coaches / staff directory",
+      "url": "https://osubeavers.com/sports/football/coaches"
+    },
+    {
+      "title": "osubeavers.com fall camp notes",
+      "url": "https://osubeavers.com/news/2026/8/7/football-oregon-state-fall-camp-dahlen-macintyre-on-qb-competition-defensive-identity"
+    }
+  ],
+  "staff": [
+    {
+      "name": "JaMarcus Shephard",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "JaMarcus Shephard"
+    },
+    {
+      "name": "Mitch Dahlen",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Mitch Dahlen"
+    },
+    {
+      "name": "Ryan Wallace",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator / Tight Ends",
+      "source_note": null,
+      "title_raw": "Ryan Wallace"
+    },
+    {
+      "name": "Mike MacIntyre",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator / Safeties",
+      "source_note": null,
+      "title_raw": "Mike MacIntyre"
+    },
+    {
+      "name": "Cort Dennison",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Cort Dennison"
+    },
+    {
+      "name": "Ricky Brumfield",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator / Cornerbacks",
+      "source_note": null,
+      "title_raw": "Ricky Brumfield"
+    },
+    {
+      "name": "Mitch Dahlen",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Mitch Dahlen"
+    },
+    {
+      "name": "Lee Marks",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Lee Marks (Associate Head Coach / Running Backs)"
+    },
+    {
+      "name": "James Finley",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "James Finley"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Oregon State",
+    "slug": "oregon-state"
+  }
+}

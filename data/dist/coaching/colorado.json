@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": null,
+    "title_raw": "Deion “Coach Prime” Sanders"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Marve-led defense after late elevation from LB coach; prior résumé includes Virginia Tech LB/run-game work. Exact published base front for 2026 Colorado Not listed. (cubuffs.com Marve announcement; SI.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Marion’s Go-Go offense — up-tempo, downhill run emphasis, sidecar/duo backfield looks, option and play-action tethered to the run; adapted to Buffs personnel. (SI/Colorado Marion install; ESPN coordinator-change tracking.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "cubuffs.com/sports/football/coaches",
+      "url": "https://cubuffs.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": null,
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official CU coaches page",
+      "title_raw": "Deion “Coach Prime” Sanders"
+    },
+    {
+      "name": "Brennan Marion",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official CU coaches page",
+      "title_raw": "Brennan Marion (also Quarterbacks)"
+    },
+    {
+      "name": "Chris Marve",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official CU coaches page; Feb. 28, 2026 elevation",
+      "title_raw": "Chris Marve (also Linebackers)"
+    },
+    {
+      "name": null,
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official CU coaches page",
+      "title_raw": "Not listed as a dedicated STC title on official 2026 coaches directory (Jacob Heavers listed as Graduate Assistant / Special Teams)"
+    },
+    {
+      "name": "Brennan Marion",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Brennan Marion"
+    },
+    {
+      "name": "Johnnie Mack",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official CU coaches page",
+      "title_raw": "Johnnie Mack"
+    },
+    {
+      "name": "Rashad Davis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official CU coaches page",
+      "title_raw": "Rashad Davis"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Colorado",
+    "slug": "colorado"
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "package": "cfb-2026-master",
+  "generated": "2026-09-05",
+  "timezone_note": "Package dated September 5, 2026 PT",
+  "conferences": {
+    "pac12": {
+      "name": "Pac-12",
+      "roster_dir": "01-rosters/pac12-2026",
+      "complete": "01-rosters/pac12-2026/Pac-12-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/pac12-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/pac12-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "boise-state",
+          "name": "Boise State",
+          "roster": "01-rosters/pac12-2026/boise-state.md"
+        },
+        {
+          "slug": "colorado-state",
+          "name": "Colorado State",
+          "roster": "01-rosters/pac12-2026/colorado-state.md"
+        },
+        {
+          "slug": "fresno-state",
+          "name": "Fresno State",
+          "roster": "01-rosters/pac12-2026/fresno-state.md"
+        },
+        {
+          "slug": "oregon-state",
+          "name": "Oregon State",
+          "roster": "01-rosters/pac12-2026/oregon-state.md"
+        },
+        {
+          "slug": "san-diego-state",
+          "name": "San Diego State",
+          "roster": "01-rosters/pac12-2026/san-diego-state.md"
+        },
+        {
+          "slug": "texas-state",
+          "name": "Texas State",
+          "roster": "01-rosters/pac12-2026/texas-state.md"
+        },
+        {
+          "slug": "utah-state",
+          "name": "Utah State",
+          "roster": "01-rosters/pac12-2026/utah-state.md"
+        },
+        {
+          "slug": "washington-state",
+          "name": "Washington State",
+          "roster": "01-rosters/pac12-2026/washington-state.md"
+        }
+      ]
+    },
+    "mw": {
+      "name": "Mountain West",
+      "roster_dir": "01-rosters/mw-2026",
+      "complete": "01-rosters/mw-2026/Mountain-West-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/mw-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/mw-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "air-force",
+          "name": "Air Force",
+          "roster": "01-rosters/mw-2026/air-force.md"
+        },
+        {
+          "slug": "hawaii",
+          "name": "Hawai'i",
+          "roster": "01-rosters/mw-2026/hawaii.md"
+        },
+        {
+          "slug": "nevada",
+          "name": "Nevada",
+          "roster": "01-rosters/mw-2026/nevada.md"
+        },
+        {
+          "slug": "new-mexico",
+          "name": "New Mexico",
+          "roster": "01-rosters/mw-2026/new-mexico.md"
+        },
+        {
+          "slug": "north-dakota-state",
+          "name": "North Dakota State",
+          "roster": "01-rosters/mw-2026/north-dakota-state.md"
+        },
+        {
+          "slug": "northern-illinois",
+          "name": "Northern Illinois",
+          "roster": "01-rosters/mw-2026/northern-illinois.md"
+        },
+        {
+          "slug": "san-jose-state",
+          "name": "San Jos\u00e9 State",
+          "roster": "01-rosters/mw-2026/san-jose-state.md"
+        },
+        {
+          "slug": "unlv",
+          "name": "UNLV",
+          "roster": "01-rosters/mw-2026/unlv.md"
+        },
+        {
+          "slug": "utep",
+          "name": "UTEP",
+          "roster": "01-rosters/mw-2026/utep.md"
+        },
+        {
+          "slug": "wyoming",
+          "name": "Wyoming",
+          "roster": "01-rosters/mw-2026/wyoming.md"
+        }
+      ]
+    },
+    "mac": {
+      "name": "MAC",
+      "roster_dir": "01-rosters/mac-2026",
+      "complete": "01-rosters/mac-2026/MAC-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/mac-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/mac-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "akron",
+          "name": "Akron",
+          "roster": "01-rosters/mac-2026/akron.md"
+        },
+        {
+          "slug": "ball-state",
+          "name": "Ball State",
+          "roster": "01-rosters/mac-2026/ball-state.md"
+        },
+        {
+          "slug": "bowling-green",
+          "name": "Bowling Green",
+          "roster": "01-rosters/mac-2026/bowling-green.md"
+        },
+        {
+          "slug": "buffalo",
+          "name": "Buffalo",
+          "roster": "01-rosters/mac-2026/buffalo.md"
+        },
+        {
+          "slug": "central-michigan",
+          "name": "Central Michigan",
+          "roster": "01-rosters/mac-2026/central-michigan.md"
+        },
+        {
+          "slug": "eastern-michigan",
+          "name": "Eastern Michigan",
+          "roster": "01-rosters/mac-2026/eastern-michigan.md"
+        },
+        {
+          "slug": "kent-state",
+          "name": "Kent State",
+          "roster": "01-rosters/mac-2026/kent-state.md"
+        },
+        {
+          "slug": "miami-oh",
+          "name": "Miami (OH)",
+          "roster": "01-rosters/mac-2026/miami-oh.md"
+        },
+        {
+          "slug": "ohio",
+          "name": "Ohio",
+          "roster": "01-rosters/mac-2026/ohio.md"
+        },
+        {
+          "slug": "sacramento-state",
+          "name": "Sacramento State",
+          "roster": "01-rosters/mac-2026/sacramento-state.md"
+        },
+        {
+          "slug": "toledo",
+          "name": "Toledo",
+          "roster": "01-rosters/mac-2026/toledo.md"
+        },
+        {
+          "slug": "umass",
+          "name": "UMass",
+          "roster": "01-rosters/mac-2026/umass.md"
+        },
+        {
+          "slug": "western-michigan",
+          "name": "Western Michigan",
+          "roster": "01-rosters/mac-2026/western-michigan.md"
+        }
+      ]
+    },
+    "acc": {
+      "name": "ACC",
+      "roster_dir": "01-rosters/acc-2026",
+      "complete": "01-rosters/acc-2026/ACC-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/acc-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/acc-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "boston-college",
+          "name": "Boston College",
+          "roster": "01-rosters/acc-2026/boston-college.md"
+        },
+        {
+          "slug": "california",
+          "name": "California",
+          "roster": "01-rosters/acc-2026/california.md"
+        },
+        {
+          "slug": "clemson",
+          "name": "Clemson",
+          "roster": "01-rosters/acc-2026/clemson.md"
+        },
+        {
+          "slug": "duke",
+          "name": "Duke",
+          "roster": "01-rosters/acc-2026/duke.md"
+        },
+        {
+          "slug": "florida-state",
+          "name": "Florida State",
+          "roster": "01-rosters/acc-2026/florida-state.md"
+        },
+        {
+          "slug": "georgia-tech",
+          "name": "Georgia Tech",
+          "roster": "01-rosters/acc-2026/georgia-tech.md"
+        },
+        {
+          "slug": "louisville",
+          "name": "Louisville",
+          "roster": "01-rosters/acc-2026/louisville.md"
+        },
+        {
+          "slug": "miami-fl",
+          "name": "Miami (FL)",
+          "roster": "01-rosters/acc-2026/miami-fl.md"
+        },
+        {
+          "slug": "nc-state",
+          "name": "NC State",
+          "roster": "01-rosters/acc-2026/nc-state.md"
+        },
+        {
+          "slug": "north-carolina",
+          "name": "North Carolina",
+          "roster": "01-rosters/acc-2026/north-carolina.md"
+        },
+        {
+          "slug": "pittsburgh",
+          "name": "Pittsburgh",
+          "roster": "01-rosters/acc-2026/pittsburgh.md"
+        },
+        {
+          "slug": "smu",
+          "name": "SMU",
+          "roster": "01-rosters/acc-2026/smu.md"
+        },
+        {
+          "slug": "stanford",
+          "name": "Stanford",
+          "roster": "01-rosters/acc-2026/stanford.md"
+        },
+        {
+          "slug": "syracuse",
+          "name": "Syracuse",
+          "roster": "01-rosters/acc-2026/syracuse.md"
+        },
+        {
+          "slug": "virginia-tech",
+          "name": "Virginia Tech",
+          "roster": "01-rosters/acc-2026/virginia-tech.md"
+        },
+        {
+          "slug": "virginia",
+          "name": "Virginia",
+          "roster": "01-rosters/acc-2026/virginia.md"
+        },
+        {
+          "slug": "wake-forest",
+          "name": "Wake Forest",
+          "roster": "01-rosters/acc-2026/wake-forest.md"
+        }
+      ]
+    },
+    "aac": {
+      "name": "AAC",
+      "roster_dir": "01-rosters/aac-2026",
+      "complete": "01-rosters/aac-2026/AAC-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/aac-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/aac-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "army",
+          "name": "Army",
+          "roster": "01-rosters/aac-2026/army.md"
+        },
+        {
+          "slug": "charlotte",
+          "name": "Charlotte",
+          "roster": "01-rosters/aac-2026/charlotte.md"
+        },
+        {
+          "slug": "east-carolina",
+          "name": "East Carolina",
+          "roster": "01-rosters/aac-2026/east-carolina.md"
+        },
+        {
+          "slug": "florida-atlantic",
+          "name": "Florida Atlantic",
+          "roster": "01-rosters/aac-2026/florida-atlantic.md"
+        },
+        {
+          "slug": "memphis",
+          "name": "Memphis",
+          "roster": "01-rosters/aac-2026/memphis.md"
+        },
+        {
+          "slug": "navy",
+          "name": "Navy",
+          "roster": "01-rosters/aac-2026/navy.md"
+        },
+        {
+          "slug": "north-texas",
+          "name": "North Texas",
+          "roster": "01-rosters/aac-2026/north-texas.md"
+        },
+        {
+          "slug": "rice",
+          "name": "Rice",
+          "roster": "01-rosters/aac-2026/rice.md"
+        },
+        {
+          "slug": "south-florida",
+          "name": "South Florida",
+          "roster": "01-rosters/aac-2026/south-florida.md"
+        },
+        {
+          "slug": "temple",
+          "name": "Temple",
+          "roster": "01-rosters/aac-2026/temple.md"
+        },
+        {
+          "slug": "tulane",
+          "name": "Tulane",
+          "roster": "01-rosters/aac-2026/tulane.md"
+        },
+        {
+          "slug": "tulsa",
+          "name": "Tulsa",
+          "roster": "01-rosters/aac-2026/tulsa.md"
+        },
+        {
+          "slug": "uab",
+          "name": "UAB",
+          "roster": "01-rosters/aac-2026/uab.md"
+        },
+        {
+          "slug": "utsa",
+          "name": "UTSA",
+          "roster": "01-rosters/aac-2026/utsa.md"
+        }
+      ]
+    },
+    "big12": {
+      "name": "Big 12",
+      "roster_dir": "01-rosters/big12-2026",
+      "complete": "01-rosters/big12-2026/Big12-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/big12-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/big12-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "arizona-state",
+          "name": "Arizona State",
+          "roster": "01-rosters/big12-2026/arizona-state.md"
+        },
+        {
+          "slug": "arizona",
+          "name": "Arizona",
+          "roster": "01-rosters/big12-2026/arizona.md"
+        },
+        {
+          "slug": "baylor",
+          "name": "Baylor",
+          "roster": "01-rosters/big12-2026/baylor.md"
+        },
+        {
+          "slug": "byu",
+          "name": "BYU",
+          "roster": "01-rosters/big12-2026/byu.md"
+        },
+        {
+          "slug": "cincinnati",
+          "name": "Cincinnati",
+          "roster": "01-rosters/big12-2026/cincinnati.md"
+        },
+        {
+          "slug": "colorado",
+          "name": "Colorado",
+          "roster": "01-rosters/big12-2026/colorado.md"
+        },
+        {
+          "slug": "houston",
+          "name": "Houston",
+          "roster": "01-rosters/big12-2026/houston.md",
+          "raw": "01-rosters/big12-2026/raw/houston_raw.json"
+        },
+        {
+          "slug": "iowa-state",
+          "name": "Iowa State",
+          "roster": "01-rosters/big12-2026/iowa-state.md",
+          "raw": "01-rosters/big12-2026/raw/iowa-state_raw.json"
+        },
+        {
+          "slug": "kansas-state",
+          "name": "Kansas State",
+          "roster": "01-rosters/big12-2026/kansas-state.md"
+        },
+        {
+          "slug": "kansas",
+          "name": "Kansas",
+          "roster": "01-rosters/big12-2026/kansas.md",
+          "raw": "01-rosters/big12-2026/raw/kansas_raw.json"
+        },
+        {
+          "slug": "oklahoma-state",
+          "name": "Oklahoma State",
+          "roster": "01-rosters/big12-2026/oklahoma-state.md"
+        },
+        {
+          "slug": "tcu",
+          "name": "TCU",
+          "roster": "01-rosters/big12-2026/tcu.md"
+        },
+        {
+          "slug": "texas-tech",
+          "name": "Texas Tech",
+          "roster": "01-rosters/big12-2026/texas-tech.md"
+        },
+        {
+          "slug": "ucf",
+          "name": "UCF",
+          "roster": "01-rosters/big12-2026/ucf.md"
+        },
+        {
+          "slug": "utah",
+          "name": "Utah",
+          "roster": "01-rosters/big12-2026/utah.md"
+        },
+        {
+          "slug": "west-virginia",
+          "name": "West Virginia",
+          "roster": "01-rosters/big12-2026/west-virginia.md"
+        }
+      ]
+    },
+    "sbc": {
+      "name": "Sun Belt",
+      "roster_dir": "01-rosters/sbc-2026",
+      "complete": "01-rosters/sbc-2026/SunBelt-2026-Football-Rosters-Complete.md",
+      "overview": "01-rosters/sbc-2026/00-executive-overview.md",
+      "depth_charts": "01-rosters/sbc-2026/01-starter-depth-charts-summary.md",
+      "teams": [
+        {
+          "slug": "appalachian-state",
+          "name": "Appalachian State",
+          "roster": "01-rosters/sbc-2026/appalachian-state.md"
+        },
+        {
+          "slug": "arkansas-state",
+          "name": "Arkansas State",
+          "roster": "01-rosters/sbc-2026/arkansas-state.md"
+        },
+        {
+          "slug": "coastal-carolina",
+          "name": "Coastal Carolina",
+          "roster": "01-rosters/sbc-2026/coastal-carolina.md"
+        },
+        {
+          "slug": "georgia-southern",
+          "name": "Georgia Southern",
+          "roster": "01-rosters/sbc-2026/georgia-southern.md"
+        },
+        {
+          "slug": "georgia-state",
+          "name": "Georgia State",
+          "roster": "01-rosters/sbc-2026/georgia-state.md"
+        },
+        {
+          "slug": "james-madison",
+          "name": "James Madison",
+          "roster": "01-rosters/sbc-2026/james-madison.md"
+        },
+        {
+          "slug": "louisiana-tech",
+          "name": "Louisiana Tech",
+          "roster": "01-rosters/sbc-2026/louisiana-tech.md"
+        },
+        {
+          "slug": "louisiana",
+          "name": "Louisiana",
+          "roster": "01-rosters/sbc-2026/louisiana.md"
+        },
+        {
+          "slug": "marshall",
+          "name": "Marshall",
+          "roster": "01-rosters/sbc-2026/marshall.md"
+        },
+        {
+          "slug": "old-dominion",
+          "name": "Old Dominion",
+          "roster": "01-rosters/sbc-2026/old-dominion.md"
+        },
+        {
+          "slug": "south-alabama",
+          "name": "South Alabama",
+          "roster": "01-rosters/sbc-2026/south-alabama.md"
+        },
+        {
+          "slug": "southern-miss",
+          "name": "Southern Miss",
+          "roster": "01-rosters/sbc-2026/southern-miss.md"
+        },
+        {
+          "slug": "troy",
+          "name": "Troy",
+          "roster": "01-rosters/sbc-2026/troy.md"
+        },
+        {
+          "slug": "ulm",
+          "name": "ULM",
+          "roster": "01-rosters/sbc-2026/ulm.md"
+        }
+      ]
+    }
+  },
+  "datasets": {
+    "polls": "02-stats/00-top25-ap-coaches-2026-09-05.md",
+    "injuries": "02-stats/01-injury-report-2026-09-05.md",
+    "schedules": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/02b-g5-schedules-2026.md"
+    ],
+    "week0_stats": "02-stats/03-season-2026-week0-early-stats.md",
+    "sos": {
+      "dir": "04-sos",
+      "also_under_stats": "02-stats/sos",
+      "overview": "04-sos/00-executive-overview.md",
+      "combined": "04-sos/SOS-2026-Combined.md",
+      "power_conferences": "04-sos/00-sos-power-conferences-2026.md",
+      "aac_indy_mac_cusa": "04-sos/01-sos-aac-indy-mac-cusa-2026.md",
+      "json": [
+        "04-sos/espn-fpi-sos-2025.json",
+        "04-sos/espn-fpi-sos-2026-09-04.json"
+      ]
+    },
+    "coaching_power": "03-coaching/Coaching-Staffs-Schemes-2026-Combined.md",
+    "coaching_acc_g5": "03-coaching/Coaching-Staffs-Schemes-2026-ACC-G5-Combined.md",
+    "coaching_overviews": {
+      "power": "03-coaching/00-executive-overview.md",
+      "acc_g5": "03-coaching/01-executive-overview-acc-g5.md"
+    },
+    "coaching_by_conference": {
+      "aac": "03-coaching/aac.md",
+      "acc": "03-coaching/acc.md",
+      "big-ten": "03-coaching/big-ten.md",
+      "big12": "03-coaching/big12.md",
+      "cusa": "03-coaching/cusa.md",
+      "mac": "03-coaching/mac.md",
+      "mountain-west": "03-coaching/mountain-west.md",
+      "pac12": "03-coaching/pac12.md",
+      "sec": "03-coaching/sec.md",
+      "sun-belt": "03-coaching/sun-belt.md"
+    },
+    "historical": {
+      "dir": "02-stats/historical",
+      "readme": "02-stats/historical/README.md",
+      "advanced_stats_md": "02-stats/historical/advanced-stats.md",
+      "individual_leaders_md": "02-stats/historical/individual-leaders-by-season.md",
+      "team_offense_defense": [
+        "02-stats/historical/team-offense-defense-2010-2014.md",
+        "02-stats/historical/team-offense-defense-2015-2019.md",
+        "02-stats/historical/team-offense-defense-2020-2025.md",
+        "02-stats/historical/team-offense-defense-by-season.md"
+      ],
+      "csv_dir": "02-stats/historical/csv",
+      "csv_counts": {
+        "team": 84,
+        "individual": 140,
+        "advanced": 17
+      },
+      "raw_dir": "02-stats/historical/raw"
+    },
+    "scripts": "02-stats/scripts"
+  }
+}

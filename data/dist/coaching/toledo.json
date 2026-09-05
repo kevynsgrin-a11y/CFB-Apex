@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Mike Jacobs",
+    "title_raw": "Mike Jacobs"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Continuity of Jacobs–Brown aggressive, turnover-oriented defense from Mercer/Lenoir-Rhyne/Notre Dame (Ohio) stops; exact exclusive published FBS base front for 2026 Toledo Not listed on materials reviewed. (Jahmal Brown bio; ByTheBelt; Yahoo staff construction piece.)",
+      "label": null
+    },
+    "offense": {
+      "description": "New Jacobs/Reisert system emphasizing a physical, multi-back run game and communication-heavy OL protection; exact exclusive named playbook label Not listed beyond physical/balanced identity in UT athletics features. (utrockets.com July 2026 OL/RB features; ByTheBelt Toledo 2026; UT vs. Michigan State game notes.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "utrockets.com/sports/football/coaches",
+      "url": "https://utrockets.com/sports/football/coaches"
+    },
+    {
+      "title": "UT vs. Michigan State game notes PDF (Aug. 31, 2026)",
+      "url": "https://utrockets.com/documents/download/2026/8/31/Sept._4_-_Michigan_State.pdf"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Mike Jacobs",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UT athletics; Sept. 4, 2026 Michigan State game notes PDF",
+      "title_raw": "Mike Jacobs"
+    },
+    {
+      "name": "Cris Reisert",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "UT game notes; utrockets.com coaches",
+      "title_raw": "Cris Reisert (also Quarterbacks)"
+    },
+    {
+      "name": "Jahmal Brown",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "UT game notes; utrockets.com",
+      "title_raw": "Jahmal Brown (also Safeties)"
+    },
+    {
+      "name": "Matt Ulrich",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "UT game notes; Wikipedia FBS coaches list",
+      "title_raw": "Matt Ulrich"
+    },
+    {
+      "name": "Cris Reisert",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "UT game notes",
+      "title_raw": "Cris Reisert"
+    },
+    {
+      "name": "Kyle Ohradzansky",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "UT game notes",
+      "title_raw": "Kyle Ohradzansky (Assistant Quarterbacks)"
+    },
+    {
+      "name": "Fred Jones",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "UT game notes; ByTheBelt Toledo 2026",
+      "title_raw": "Fred Jones"
+    },
+    {
+      "name": "Devin Figaro",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "UT game notes; ByTheBelt Toledo 2026",
+      "title_raw": "Devin Figaro"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Toledo",
+    "slug": "toledo"
+  }
+}

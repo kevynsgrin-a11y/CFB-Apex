@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Dave Doeren",
+    "title_raw": "Dave Doeren"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Eliot/Warren co-structure; no exclusive official base-front tag on coaches page)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single official brand on gopack.com",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "gopack.com 2026 Football Coaches",
+      "url": "https://gopack.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 NC State Wolfpack football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_NC_State_Wolfpack_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Dave Doeren",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Dave Doeren"
+    },
+    {
+      "name": "Kurt Roper",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kurt Roper (Offensive Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "D. J. Eliot",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "D. J. Eliot (Defensive Coordinator / Outside Linebackers)"
+    },
+    {
+      "name": "Charlton Warren",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Charlton Warren (Co-DC and Safeties / Nickels)"
+    },
+    {
+      "name": "Todd Goebbel",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Todd Goebbel (Running Backs / Special Teams Coordinator)"
+    },
+    {
+      "name": "Kurt Roper",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Kurt Roper"
+    },
+    {
+      "name": "Todd Goebbel",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Todd Goebbel"
+    },
+    {
+      "name": "Joker Phillips",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Joker Phillips (Assistant Head Coach / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "NC State",
+    "slug": "nc-state"
+  }
+}

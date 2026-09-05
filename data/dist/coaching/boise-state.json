@@ -1,0 +1,116 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Spencer Danielson",
+    "title_raw": "Spencer Danielson"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Primarily a 4-2-5 nickel with four down linemen, two off-ball linebackers, and match coverage / disguised zone-man looks under Chinander (Week 1 beat previews, Sept. 2026).",
+      "label": "4-2-5 nickel"
+    },
+    "offense": {
+      "description": "Pro-style, run-first identity with under-center and heavy (e.g., 12) personnel groupings; play-action and boot concepts off the run. Staff and beat coverage describe balance built on rushing production and play-action (Potter / Danielson).",
+      "label": "Pro-style"
+    }
+  },
+  "sources": [
+    {
+      "title": "broncosports.com 2026 roster/coaches",
+      "url": "https://broncosports.com/sports/football/roster"
+    },
+    {
+      "title": "SI staff breakdown",
+      "url": "https://www.si.com/college/boise-state/football/boise-state-assistant-receives-promotion-to-co-offensive-coordinator"
+    },
+    {
+      "title": "USA Today Duckswire defensive preview",
+      "url": "https://duckswire.usatoday.com/story/sports/college/ducks/football/2026/09/02/oregon-football-previewing-boise-states-broncos-defensive-preview/91554011007/"
+    },
+    {
+      "title": "Duckswire offensive preview",
+      "url": "https://duckswire.usatoday.com/story/sports/college/ducks/football/2026/09/02/oregon-football-offensive-preview-boise-state-broncos-rushing-attack/91571131007/"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Spencer Danielson",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Spencer Danielson"
+    },
+    {
+      "name": "Nate Potter",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Nate Potter"
+    },
+    {
+      "name": "Zak Hill",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Zak Hill"
+    },
+    {
+      "name": "Erik Chinander",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Erik Chinander"
+    },
+    {
+      "name": "Terrence Brown",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator / Defensive Backs",
+      "source_note": null,
+      "title_raw": "Terrence Brown"
+    },
+    {
+      "name": "Stacy Collins",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Stacy Collins (also Assistant Head Coach / Linebackers)"
+    },
+    {
+      "name": "Zak Hill",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Zak Hill"
+    },
+    {
+      "name": "James Montgomery",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "James Montgomery"
+    },
+    {
+      "name": "Alvis Whitted",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Alvis Whitted (Pass Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Boise State",
+    "slug": "boise-state"
+  }
+}

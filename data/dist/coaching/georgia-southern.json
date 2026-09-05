@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Clay Helton",
+    "title_raw": "Clay Helton"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Ultra-aggressive 3-4 base, nickel-heavy / pressure-oriented (Helton and Mutz descriptions — Statesboro Herald / Georgia Southern athletics coordinator feature)",
+      "label": "3-4"
+    },
+    "offense": {
+      "description": "Not listed as a single branded system on gseagles.com; continuity under Helton / Aplin with personnel-flexible attack (coordinator Q&A / Media Day coverage). Treat formal brand as Not listed.",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "gseagles.com 2026 Football Coaches",
+      "url": "https://gseagles.com/sports/football/coaches/2026"
+    },
+    {
+      "title": "Catching Up With the Coordinators: Mike Mutz",
+      "url": "https://gseagles.com/news/2026/4/29/football-catching-up-with-the-coordinators-mike-mutz"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Clay Helton",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Clay Helton"
+    },
+    {
+      "name": "Ryan Aplin",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ryan Aplin (OC / Quarterbacks)"
+    },
+    {
+      "name": "Mike Mutz",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Mike Mutz"
+    },
+    {
+      "name": "Blake Wilson",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Blake Wilson"
+    },
+    {
+      "name": "Ryan Aplin",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Ryan Aplin"
+    },
+    {
+      "name": "Andre Crenshaw",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Andre Crenshaw"
+    },
+    {
+      "name": "Zak Mizell",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Zak Mizell (Outside Receivers)"
+    },
+    {
+      "name": "Damion Willis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Damion Willis (Inside Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Georgia Southern",
+    "slug": "georgia-southern"
+  }
+}

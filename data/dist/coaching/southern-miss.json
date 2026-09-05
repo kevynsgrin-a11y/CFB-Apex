@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Blake Anderson",
+    "title_raw": "Blake Anderson (1st season as HC after serving as OC in 2025)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "4-2-5 continuity under Bolden (Sun Herald; SI Bolden feature)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Up-tempo, RPO-heavy attack with run-game foundation and QB checks (SI / Cefalo scheme features)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "southernmiss.com 2026 Football Coaches",
+      "url": "https://southernmiss.com/sports/football/coaches/2026"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Blake Anderson",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Blake Anderson (1st season as HC after serving as OC in 2025)"
+    },
+    {
+      "name": "Kyle Cefalo",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kyle Cefalo (Assistant Head Coach / OC / Quarterbacks)"
+    },
+    {
+      "name": "Joe Bolden",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Joe Bolden (DC / Linebackers)"
+    },
+    {
+      "name": "Bobby Dodd",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Bobby Dodd"
+    },
+    {
+      "name": "Kyle Cefalo",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Kyle Cefalo"
+    },
+    {
+      "name": "Isaac Reed",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Isaac Reed"
+    },
+    {
+      "name": "Quinshad Davis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Quinshad Davis (Outside Receivers)"
+    },
+    {
+      "name": "Brandon Bowling",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Brandon Bowling (Inside Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Southern Miss",
+    "slug": "southern-miss"
+  }
+}

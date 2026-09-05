@@ -1,0 +1,1486 @@
+{
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/mac-2026/01-starter-depth-charts-summary.md": "Gabe Funk",
+        "01-rosters/mac-2026/bowling-green.md": "Gabe Funk, Ethan Kraatz"
+      },
+      "position": "LT",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/mac-2026/01-starter-depth-charts-summary.md": "Austyn Dendy",
+        "01-rosters/mac-2026/bowling-green.md": "Austyn Dendy, Nakai Amachree"
+      },
+      "position": "HB",
+      "unit": "offense"
+    }
+  ],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/mac-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/mac-2026/bowling-green.md"
+    ]
+  },
+  "schemes": {
+    "defense": "Multiple",
+    "offense": "Multiple",
+    "special_teams": null
+  },
+  "status": "OFFICIAL",
+  "status_caveat": "OFFICIAL Week-1 two-deep vs. Tarleton State (PDF ~Aug 31, 2026); multiple OR competitions",
+  "status_raw": "OFFICIAL",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Bowling Green",
+    "slug": "bowling-green"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Whitehouse",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Anthony Wayne HS",
+                  "hometown": "Whitehouse, Ohio",
+                  "jersey": 18,
+                  "name": "Winn Sharp",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 9,
+                  "name": "Nick Sowell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Xenia",
+                  "class": null,
+                  "class_raw": "So.; prev. App State",
+                  "high_school": "Xenia HS",
+                  "hometown": "Xenia, Ohio",
+                  "jersey": 65,
+                  "name": "Gabe Funk",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                },
+                {
+                  "city": "Saginaw",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Heritage HS",
+                  "hometown": "Saginaw, Mich.",
+                  "jersey": 58,
+                  "name": "Ethan Kraatz",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 71,
+                  "name": "Travis Robertson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Uniondale",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Norwell HS",
+                  "hometown": "Uniondale, Ind.",
+                  "jersey": 54,
+                  "name": "Brody Bolyn",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ind."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 53,
+                  "name": "Masyn Zahursky",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 66,
+                  "name": "Zane Panchula",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Glendale",
+                  "class": null,
+                  "class_raw": "Sr.; prev. Tennessee State",
+                  "high_school": "Mountain Ridge HS",
+                  "hometown": "Glendale, Ariz.",
+                  "jersey": 78,
+                  "name": "Alexis Sanchez",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 73,
+                  "name": "Caden Campbell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Cleveland",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Rhodes HS",
+                  "hometown": "Cleveland, Ohio",
+                  "jersey": 70,
+                  "name": "Alex Harris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 76,
+                  "name": "Theo Andall",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Fairfield",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Fairfield HS",
+                  "hometown": "Fairfield, Ohio",
+                  "jersey": 77,
+                  "name": "James Thomas Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 50,
+                  "name": "Vincent Giordano",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 75,
+                  "name": "Maddux Murphy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Berwick",
+                  "class": null,
+                  "class_raw": "Gr.; prev. Army",
+                  "high_school": "Berwick Area HS",
+                  "hometown": "Berwick, Pa.",
+                  "jersey": 89,
+                  "name": "Blane Cleaver",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Pa."
+                },
+                {
+                  "city": "Pleasant Plain",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Archbishop Moeller",
+                  "hometown": "Pleasant Plain, Ohio",
+                  "jersey": 8,
+                  "name": "Eli Jacon-Duffy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 84,
+                  "name": "Trent Taylor",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dickinson",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Dickinson HS",
+                  "hometown": "Dickinson, Texas",
+                  "jersey": 0,
+                  "name": "Jeremiah Scoby",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 88,
+                  "name": "Carsen Melvin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 47,
+                  "name": "Kentrell White",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Frankfort",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Lincoln-Way East HS",
+                  "hometown": "Frankfort, Ill.",
+                  "jersey": 3,
+                  "name": "Trey Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ill."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 19,
+                  "name": "Joseph Saffold",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Richmond",
+                  "class": null,
+                  "class_raw": "Jr.; prev. Hampton",
+                  "high_school": "Trinity Episcopal HS",
+                  "hometown": "Richmond, Va.",
+                  "jersey": 5,
+                  "name": "Brennan Ridley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 11,
+                  "name": "Austin Clay",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 14,
+                  "name": "Pauly Sadler",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Pine Bluff",
+                  "class": null,
+                  "class_raw": "So.; prev. Missouri",
+                  "high_school": "Pine Bluff HS",
+                  "hometown": "Pine Bluff, Ark.",
+                  "jersey": 1,
+                  "name": "Austyn Dendy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ark."
+                },
+                {
+                  "city": "Haslett",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Haslett HS",
+                  "hometown": "Haslett, Mich.",
+                  "jersey": 2,
+                  "name": "Nakai Amachree",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 4,
+                  "name": "Ke'Marion Baldwin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "HB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Needham",
+                  "class": null,
+                  "class_raw": "Jr.; prev. Assumption",
+                  "high_school": "East Coast Prep",
+                  "hometown": "Needham, Mass.",
+                  "jersey": 17,
+                  "name": "Jay Kastantin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mass."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 16,
+                  "name": "Austin Novosad",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Hunter Najm",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "QB"
+        }
+      ],
+      "scheme": "Multiple",
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Rockford",
+                  "class": null,
+                  "class_raw": "R-Sr.; prev. Central Michigan",
+                  "high_school": "Rockford",
+                  "hometown": "Rockford, Mich.",
+                  "jersey": 4,
+                  "name": "Kade Kostus",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 52,
+                  "name": "Elijah Durham-Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Nashville",
+                  "class": null,
+                  "class_raw": "Sr.; prev. Tennessee State",
+                  "high_school": "Montgomery Bell Academy",
+                  "hometown": "Nashville, Tenn.",
+                  "jersey": 5,
+                  "name": "Eriq George",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Tenn."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 55,
+                  "name": "Timothy Taylor Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Louisville",
+                  "class": null,
+                  "class_raw": "Gr.; prev. Louisville",
+                  "high_school": "Male HS",
+                  "hometown": "Louisville, Ky.",
+                  "jersey": 88,
+                  "name": "Selah Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ky."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 95,
+                  "name": "Jonathan Hendrix",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mansfield",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Mansfield HS",
+                  "hometown": "Mansfield, Ohio",
+                  "jersey": 23,
+                  "name": "Myles Bradley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 48,
+                  "name": "Quentin Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "BUCK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Nashville",
+                  "class": null,
+                  "class_raw": "Jr.; prev. Purdue / Tennessee State",
+                  "high_school": "Station Camp HS",
+                  "hometown": "Nashville, Tenn.",
+                  "jersey": 6,
+                  "name": "Sanders Ellis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Tenn."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 8,
+                  "name": "Cashmire Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Akron",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Massillon Washington HS",
+                  "hometown": "Akron, Ohio",
+                  "jersey": 3,
+                  "name": "Dorian Pringle",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Andrew Hines III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "MLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Brooklyn",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Erasmus Hall HS",
+                  "hometown": "Brooklyn, N.Y.",
+                  "jersey": 26,
+                  "name": "Josira Andrews",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.Y."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 14,
+                  "name": "JayT Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NICKEL"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Merrillville",
+                  "class": null,
+                  "class_raw": "Gr.; prev. Indiana / Iowa Western / Notre Dame",
+                  "high_school": "Merrillville HS",
+                  "hometown": "Merrillville, Ind.",
+                  "jersey": 2,
+                  "name": "JoJo Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ind."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 18,
+                  "name": "Nick Sawyer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LC"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Highland Springs",
+                  "class": null,
+                  "class_raw": "Jr.; prev. North Carolina Central",
+                  "high_school": "Highland Springs HS",
+                  "hometown": "Highland Springs, Va.",
+                  "jersey": 1,
+                  "name": "Drey Braxton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 24,
+                  "name": "DeVenchi Arnold II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RC"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Long Beach",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Mason HS (Ohio)",
+                  "hometown": "Long Beach, Calif.",
+                  "jersey": 9,
+                  "name": "Preston EstoEsta",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 15,
+                  "name": "D'kyah Banks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Miami",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Dr. Michael Krop Senior HS",
+                  "hometown": "Miami, Fla.",
+                  "jersey": 0,
+                  "name": "Kal-El Pascal",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 19,
+                  "name": "Jahai Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "FS"
+        }
+      ],
+      "scheme": "Multiple",
+      "unit": "defense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "South Bend",
+                  "class": null,
+                  "class_raw": "Sr.; prev. SEMO / Eastern Michigan",
+                  "high_school": "Riley HS",
+                  "hometown": "South Bend, Ind.",
+                  "jersey": 30,
+                  "name": "Ryan Kingston",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ind."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 91,
+                  "name": "Alex Jenkins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "P"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Temperance",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "St. Francis de Sales (Ohio)",
+                  "hometown": "Temperance, Mich.",
+                  "jersey": 12,
+                  "name": "Travis Kenner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Lancaster",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Bloom-Carroll HS",
+                  "hometown": "Lancaster, Ohio",
+                  "jersey": 27,
+                  "name": "Treyton McKee",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 40,
+                  "name": "Ethan Warner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "PK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lancaster",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Bloom-Carroll HS",
+                  "hometown": "Lancaster, Ohio",
+                  "jersey": 27,
+                  "name": "Treyton McKee",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 40,
+                  "name": "Ethan Warner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "KO"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "South Bend",
+                  "class": null,
+                  "class_raw": "Sr.; prev. SEMO / Eastern Michigan",
+                  "high_school": "Riley HS",
+                  "hometown": "South Bend, Ind.",
+                  "jersey": 30,
+                  "name": "Ryan Kingston",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ind."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "Hold"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Tampa",
+                  "class": null,
+                  "class_raw": "Jr.; prev. Houston",
+                  "high_school": "Sickles HS",
+                  "hometown": "Tampa, Fla.",
+                  "jersey": 56,
+                  "name": "Quillan Jimenez",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 52,
+                  "name": "Quinn Forsythe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Richmond",
+                  "class": null,
+                  "class_raw": "Jr.; prev. Hampton",
+                  "high_school": "Trinity Episcopal HS",
+                  "hometown": "Richmond, Va.",
+                  "jersey": 5,
+                  "name": "Brennan Ridley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 19,
+                  "name": "Jahai Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "PR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Haslett",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Haslett HS",
+                  "hometown": "Haslett, Mich.",
+                  "jersey": 2,
+                  "name": "Nakai Amachree",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 19,
+                  "name": "Jahai Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "KOR"
+        }
+      ],
+      "scheme": null,
+      "unit": "special_teams"
+    }
+  ]
+}

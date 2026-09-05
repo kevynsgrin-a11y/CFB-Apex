@@ -1,0 +1,4756 @@
+{
+  "categories": {
+    "interceptions": {
+      "columns": [
+        "Int",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD",
+        "Solo",
+        "Ast",
+        "Tot",
+        "Sack",
+        "YdsL"
+      ],
+      "leaders": [
+        {
+          "player": "Shawun Lurry",
+          "player_raw": "Shawun Lurry NIU",
+          "rank": 1,
+          "team_code": "NIU",
+          "team_slug": "northern-illinois",
+          "values": {
+            "Ast": 7,
+            "Avg": 30.33,
+            "Int": 9,
+            "Lg": 79,
+            "Sack": 0.0,
+            "Solo": 35,
+            "TD": 1,
+            "Tot": 42,
+            "Yds": 273,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Damontae Kazee",
+          "player_raw": "Damontae Kazee SDSU",
+          "rank": 2,
+          "team_code": "SDSU",
+          "team_slug": "san-diego-state",
+          "values": {
+            "Ast": 17,
+            "Avg": 7.25,
+            "Int": 8,
+            "Lg": "55t",
+            "Sack": 0.0,
+            "Solo": 58,
+            "TD": 1,
+            "Tot": 75,
+            "Yds": 58,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Jamar Summers",
+          "player_raw": "Jamar Summers CONN",
+          "rank": 3,
+          "team_code": "CONN",
+          "team_slug": "uconn",
+          "values": {
+            "Ast": 14,
+            "Avg": 12.75,
+            "Int": 8,
+            "Lg": "67t",
+            "Sack": 0.0,
+            "Solo": 25,
+            "TD": 1,
+            "Tot": 39,
+            "Yds": 102,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Desmond King",
+          "player_raw": "Desmond King IOWA",
+          "rank": 4,
+          "team_code": "IOWA",
+          "team_slug": "iowa",
+          "values": {
+            "Ast": 26,
+            "Avg": 14.75,
+            "Int": 8,
+            "Lg": "88t",
+            "Sack": 0.0,
+            "Solo": 46,
+            "TD": 1,
+            "Tot": 72,
+            "Yds": 118,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Zack Sanchez",
+          "player_raw": "Zack Sanchez OKLA",
+          "rank": 5,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Ast": 9,
+            "Avg": 8.57,
+            "Int": 7,
+            "Lg": "38t",
+            "Sack": 0.5,
+            "Solo": 36,
+            "TD": 1,
+            "Tot": 45,
+            "Yds": 60,
+            "YdsL": 4.0
+          }
+        },
+        {
+          "player": "Latrell Gibbs",
+          "player_raw": "Latrell Gibbs APST",
+          "rank": 6,
+          "team_code": "APST",
+          "team_slug": "appalachian-state",
+          "values": {
+            "Ast": 11,
+            "Avg": 22.14,
+            "Int": 7,
+            "Lg": "91t",
+            "Sack": 0.0,
+            "Solo": 34,
+            "TD": 2,
+            "Tot": 45,
+            "Yds": 155,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Dameon Baber",
+          "player_raw": "Dameon Baber NEV",
+          "rank": 7,
+          "team_code": "NEV",
+          "team_slug": "nevada",
+          "values": {
+            "Ast": 20,
+            "Avg": 0.0,
+            "Int": 6,
+            "Lg": 0,
+            "Sack": 0.0,
+            "Solo": 45,
+            "TD": 0,
+            "Tot": 65,
+            "Yds": 0,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Daryl Worley",
+          "player_raw": "Daryl Worley WVU",
+          "rank": 8,
+          "team_code": "WVU",
+          "team_slug": "west-virginia",
+          "values": {
+            "Ast": 3,
+            "Avg": 0.0,
+            "Int": 6,
+            "Lg": 0,
+            "Sack": 0.0,
+            "Solo": 46,
+            "TD": 0,
+            "Tot": 49,
+            "Yds": 0,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "DeAndre Scott",
+          "player_raw": "DeAndre Scott AKR",
+          "rank": 9,
+          "team_code": "AKR",
+          "team_slug": "akron",
+          "values": {
+            "Ast": 6,
+            "Avg": 2.33,
+            "Int": 6,
+            "Lg": 13,
+            "Sack": 0.0,
+            "Solo": 26,
+            "TD": 0,
+            "Tot": 32,
+            "Yds": 14,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Artie Burns",
+          "player_raw": "Artie Burns MIA",
+          "rank": 10,
+          "team_code": "MIA",
+          "team_slug": "miami-fl",
+          "values": {
+            "Ast": 10,
+            "Avg": 5.67,
+            "Int": 6,
+            "Lg": 19,
+            "Sack": 0.0,
+            "Solo": 26,
+            "TD": 0,
+            "Tot": 36,
+            "Yds": 34,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Antonio Glover",
+          "player_raw": "Antonio Glover GSU",
+          "rank": 11,
+          "team_code": "GSU",
+          "team_slug": "georgia-state",
+          "values": {
+            "Ast": 24,
+            "Avg": 8.5,
+            "Int": 6,
+            "Lg": 36,
+            "Sack": 0.0,
+            "Solo": 32,
+            "TD": 0,
+            "Tot": 56,
+            "Yds": 51,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Alfonso Mack",
+          "player_raw": "Alfonso Mack BGSU",
+          "rank": 12,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Ast": 14,
+            "Avg": 11.83,
+            "Int": 6,
+            "Lg": 39,
+            "Sack": 0.0,
+            "Solo": 42,
+            "TD": 0,
+            "Tot": 56,
+            "Yds": 71,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Tanner McEvoy",
+          "player_raw": "Tanner McEvoy WISC",
+          "rank": 13,
+          "team_code": "WISC",
+          "team_slug": "wisconsin",
+          "values": {
+            "Ast": 15,
+            "Avg": 16.33,
+            "Int": 6,
+            "Lg": 41,
+            "Sack": 1.0,
+            "Solo": 27,
+            "TD": 0,
+            "Tot": 42,
+            "Yds": 98,
+            "YdsL": 10.0
+          }
+        },
+        {
+          "player": "Kareem Orr",
+          "player_raw": "Kareem Orr AZST",
+          "rank": 14,
+          "team_code": "AZST",
+          "team_slug": "arizona-state",
+          "values": {
+            "Ast": 7,
+            "Avg": 16.33,
+            "Int": 6,
+            "Lg": 30,
+            "Sack": 0.0,
+            "Solo": 31,
+            "TD": 1,
+            "Tot": 38,
+            "Yds": 98,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Demetrius Monday",
+          "player_raw": "Demetrius Monday KENT",
+          "rank": 15,
+          "team_code": "KENT",
+          "team_slug": "kent-state",
+          "values": {
+            "Ast": 12,
+            "Avg": 18.0,
+            "Int": 6,
+            "Lg": "69t",
+            "Sack": 0.0,
+            "Solo": 23,
+            "TD": 1,
+            "Tot": 35,
+            "Yds": 108,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Kai Nacua",
+          "player_raw": "Kai Nacua BYU",
+          "rank": 16,
+          "team_code": "BYU",
+          "team_slug": "byu",
+          "values": {
+            "Ast": 27,
+            "Avg": 22.83,
+            "Int": 6,
+            "Lg": "50t",
+            "Sack": 0.0,
+            "Solo": 39,
+            "TD": 2,
+            "Tot": 66,
+            "Yds": 137,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Dominick Sanders",
+          "player_raw": "Dominick Sanders UGA",
+          "rank": 17,
+          "team_code": "UGA",
+          "team_slug": "georgia",
+          "values": {
+            "Ast": 23,
+            "Avg": 34.17,
+            "Int": 6,
+            "Lg": "88t",
+            "Sack": 1.0,
+            "Solo": 25,
+            "TD": 1,
+            "Tot": 48,
+            "Yds": 205,
+            "YdsL": 7.0
+          }
+        },
+        {
+          "player": "Eddie Jackson",
+          "player_raw": "Eddie Jackson ALA",
+          "rank": 18,
+          "team_code": "ALA",
+          "team_slug": "alabama",
+          "values": {
+            "Ast": 12,
+            "Avg": 38.33,
+            "Int": 6,
+            "Lg": "93t",
+            "Sack": 0.0,
+            "Solo": 34,
+            "TD": 2,
+            "Tot": 46,
+            "Yds": 230,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Rocky Hayes",
+          "player_raw": "Rocky Hayes ARST",
+          "rank": 19,
+          "team_code": "ARST",
+          "team_slug": "arkansas-state",
+          "values": {
+            "Ast": 21,
+            "Avg": 0.2,
+            "Int": 5,
+            "Lg": 4,
+            "Sack": 0.0,
+            "Solo": 31,
+            "TD": 0,
+            "Tot": 52,
+            "Yds": 1,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Karl Joseph",
+          "player_raw": "Karl Joseph WVU",
+          "rank": 20,
+          "team_code": "WVU",
+          "team_slug": "west-virginia",
+          "values": {
+            "Ast": 5,
+            "Avg": 1.4,
+            "Int": 5,
+            "Lg": 7,
+            "Sack": 1.0,
+            "Solo": 15,
+            "TD": 0,
+            "Tot": 20,
+            "Yds": 7,
+            "YdsL": 8.0
+          }
+        },
+        {
+          "player": "Malik Smith",
+          "player_raw": "Malik Smith SDSU",
+          "rank": 21,
+          "team_code": "SDSU",
+          "team_slug": "san-diego-state",
+          "values": {
+            "Ast": 33,
+            "Avg": 4.4,
+            "Int": 5,
+            "Lg": 10,
+            "Sack": 0.0,
+            "Solo": 44,
+            "TD": 0,
+            "Tot": 77,
+            "Yds": 22,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Justin Simmons",
+          "player_raw": "Justin Simmons BC",
+          "rank": 22,
+          "team_code": "BC",
+          "team_slug": "boston-college",
+          "values": {
+            "Ast": 18,
+            "Avg": 5.6,
+            "Int": 5,
+            "Lg": 28,
+            "Sack": 0.0,
+            "Solo": 49,
+            "TD": 0,
+            "Tot": 67,
+            "Yds": 28,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Darian Thompson",
+          "player_raw": "Darian Thompson BSU",
+          "rank": 23,
+          "team_code": "BSU",
+          "team_slug": "boise-state",
+          "values": {
+            "Ast": 28,
+            "Avg": 9.2,
+            "Int": 5,
+            "Lg": 20,
+            "Sack": 1.0,
+            "Solo": 37,
+            "TD": 0,
+            "Tot": 65,
+            "Yds": 46,
+            "YdsL": 6.0
+          }
+        },
+        {
+          "player": "Tyler Matakevich",
+          "player_raw": "Tyler Matakevich TEM",
+          "rank": 24,
+          "team_code": "TEM",
+          "team_slug": "temple",
+          "values": {
+            "Ast": 61,
+            "Avg": 9.4,
+            "Int": 5,
+            "Lg": 26,
+            "Sack": 4.5,
+            "Solo": 77,
+            "TD": 0,
+            "Tot": 138,
+            "Yds": 47,
+            "YdsL": 28.0
+          }
+        },
+        {
+          "player": "Darius Phillips",
+          "player_raw": "Darius Phillips WMU",
+          "rank": 25,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Ast": 12,
+            "Avg": 10.0,
+            "Int": 5,
+            "Lg": 34,
+            "Sack": 0.0,
+            "Solo": 36,
+            "TD": 1,
+            "Tot": 48,
+            "Yds": 50,
+            "YdsL": 0.0
+          }
+        }
+      ]
+    },
+    "passing_rating": {
+      "columns": [
+        "Att",
+        "Cmp",
+        "Pct",
+        "Yds",
+        "YPA",
+        "TD",
+        "TD%",
+        "Int",
+        "Int%",
+        "Lg",
+        "Sack",
+        "Loss",
+        "Rate"
+      ],
+      "leaders": [
+        {
+          "player": "Seth Russell",
+          "player_raw": "Seth Russell BAY",
+          "rank": 1,
+          "team_code": "BAY",
+          "team_slug": "baylor",
+          "values": {
+            "Att": 200,
+            "Cmp": 119,
+            "Int": 6,
+            "Int%": 3.0,
+            "Lg": 87,
+            "Loss": 14,
+            "Pct": 59.5,
+            "Rate": 189.7,
+            "Sack": 3,
+            "TD": 29,
+            "TD%": 14.5,
+            "YPA": 10.5,
+            "Yds": 2104
+          }
+        },
+        {
+          "player": "Vernon Adams",
+          "player_raw": "Vernon Adams ORE",
+          "rank": 2,
+          "team_code": "ORE",
+          "team_slug": "oregon",
+          "values": {
+            "Att": 259,
+            "Cmp": 168,
+            "Int": 6,
+            "Int%": 2.3,
+            "Lg": "52t",
+            "Loss": 157,
+            "Pct": 64.9,
+            "Rate": 179.1,
+            "Sack": 26,
+            "TD": 26,
+            "TD%": 10.0,
+            "YPA": 10.2,
+            "Yds": 2643
+          }
+        },
+        {
+          "player": "Brandon Doughty",
+          "player_raw": "Brandon Doughty WKU",
+          "rank": 3,
+          "team_code": "WKU",
+          "team_slug": "western-kentucky",
+          "values": {
+            "Att": 540,
+            "Cmp": 388,
+            "Int": 9,
+            "Int%": 1.7,
+            "Lg": "78t",
+            "Loss": 123,
+            "Pct": 71.9,
+            "Rate": 176.4,
+            "Sack": 15,
+            "TD": 48,
+            "TD%": 8.9,
+            "YPA": 9.3,
+            "Yds": 5048
+          }
+        },
+        {
+          "player": "Baker Mayfield",
+          "player_raw": "Baker Mayfield OKLA",
+          "rank": 4,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Att": 395,
+            "Cmp": 269,
+            "Int": 7,
+            "Int%": 1.8,
+            "Lg": "76t",
+            "Loss": 204,
+            "Pct": 68.1,
+            "Rate": 173.3,
+            "Sack": 39,
+            "TD": 36,
+            "TD%": 9.1,
+            "YPA": 9.4,
+            "Yds": 3700
+          }
+        },
+        {
+          "player": "Kevin Hogan",
+          "player_raw": "Kevin Hogan STAN",
+          "rank": 5,
+          "team_code": "STAN",
+          "team_slug": "stanford",
+          "values": {
+            "Att": 304,
+            "Cmp": 206,
+            "Int": 8,
+            "Int%": 2.6,
+            "Lg": "93t",
+            "Loss": 95,
+            "Pct": 67.8,
+            "Rate": 171.0,
+            "Sack": 19,
+            "TD": 27,
+            "TD%": 8.9,
+            "YPA": 9.4,
+            "Yds": 2867
+          }
+        },
+        {
+          "player": "Brandon Allen",
+          "player_raw": "Brandon Allen ARK",
+          "rank": 6,
+          "team_code": "ARK",
+          "team_slug": "arkansas",
+          "values": {
+            "Att": 370,
+            "Cmp": 244,
+            "Int": 8,
+            "Int%": 2.2,
+            "Lg": "71t",
+            "Loss": 92,
+            "Pct": 65.9,
+            "Rate": 166.5,
+            "Sack": 14,
+            "TD": 30,
+            "TD%": 8.1,
+            "YPA": 9.3,
+            "Yds": 3440
+          }
+        },
+        {
+          "player": "Matt Johnson",
+          "player_raw": "Matt Johnson BGSU",
+          "rank": 7,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Att": 570,
+            "Cmp": 384,
+            "Int": 8,
+            "Int%": 1.4,
+            "Lg": "94t",
+            "Loss": 224,
+            "Pct": 67.4,
+            "Rate": 164.1,
+            "Sack": 36,
+            "TD": 46,
+            "TD%": 8.1,
+            "YPA": 8.7,
+            "Yds": 4946
+          }
+        },
+        {
+          "player": "Zach Terrell",
+          "player_raw": "Zach Terrell WMU",
+          "rank": 8,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Att": 391,
+            "Cmp": 262,
+            "Int": 9,
+            "Int%": 2.3,
+            "Lg": "80t",
+            "Loss": 163,
+            "Pct": 67.0,
+            "Rate": 162.6,
+            "Sack": 31,
+            "TD": 29,
+            "TD%": 7.4,
+            "YPA": 9.0,
+            "Yds": 3526
+          }
+        },
+        {
+          "player": "Taylor Lamb",
+          "player_raw": "Taylor Lamb APST",
+          "rank": 9,
+          "team_code": "APST",
+          "team_slug": "appalachian-state",
+          "values": {
+            "Att": 281,
+            "Cmp": 168,
+            "Int": 9,
+            "Int%": 3.2,
+            "Lg": "58t",
+            "Loss": 71,
+            "Pct": 59.8,
+            "Rate": 162.1,
+            "Sack": 11,
+            "TD": 32,
+            "TD%": 11.4,
+            "YPA": 8.5,
+            "Yds": 2381
+          }
+        },
+        {
+          "player": "Trevone Boykin",
+          "player_raw": "Trevone Boykin TCU",
+          "rank": 10,
+          "team_code": "TCU",
+          "team_slug": "tcu",
+          "values": {
+            "Att": 395,
+            "Cmp": 256,
+            "Int": 10,
+            "Int%": 2.5,
+            "Lg": 70,
+            "Loss": 56,
+            "Pct": 64.8,
+            "Rate": 161.7,
+            "Sack": 11,
+            "TD": 31,
+            "TD%": 7.8,
+            "YPA": 9.0,
+            "Yds": 3574
+          }
+        },
+        {
+          "player": "Jared Goff",
+          "player_raw": "Jared Goff CAL",
+          "rank": 11,
+          "team_code": "CAL",
+          "team_slug": "california",
+          "values": {
+            "Att": 529,
+            "Cmp": 341,
+            "Int": 13,
+            "Int%": 2.5,
+            "Lg": "80t",
+            "Loss": 200,
+            "Pct": 64.5,
+            "Rate": 161.2,
+            "Sack": 26,
+            "TD": 43,
+            "TD%": 8.1,
+            "YPA": 8.9,
+            "Yds": 4714
+          }
+        },
+        {
+          "player": "Paxton Lynch",
+          "player_raw": "Paxton Lynch MEM",
+          "rank": 12,
+          "team_code": "MEM",
+          "team_slug": "memphis",
+          "values": {
+            "Att": 443,
+            "Cmp": 296,
+            "Int": 4,
+            "Int%": 0.9,
+            "Lg": "82t",
+            "Loss": 115,
+            "Pct": 66.8,
+            "Rate": 157.5,
+            "Sack": 16,
+            "TD": 28,
+            "TD%": 6.3,
+            "YPA": 8.5,
+            "Yds": 3778
+          }
+        },
+        {
+          "player": "Deshaun Watson",
+          "player_raw": "Deshaun Watson CLEM",
+          "rank": 13,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Att": 491,
+            "Cmp": 333,
+            "Int": 13,
+            "Int%": 2.6,
+            "Lg": 67,
+            "Loss": 82,
+            "Pct": 67.8,
+            "Rate": 156.3,
+            "Sack": 15,
+            "TD": 35,
+            "TD%": 7.1,
+            "YPA": 8.4,
+            "Yds": 4109
+          }
+        },
+        {
+          "player": "Chad Kelly",
+          "player_raw": "Chad Kelly MISS",
+          "rank": 14,
+          "team_code": "MISS",
+          "team_slug": "ole-miss",
+          "values": {
+            "Att": 458,
+            "Cmp": 298,
+            "Int": 13,
+            "Int%": 2.8,
+            "Lg": "73t",
+            "Loss": 130,
+            "Pct": 65.1,
+            "Rate": 155.9,
+            "Sack": 17,
+            "TD": 31,
+            "TD%": 6.8,
+            "YPA": 8.8,
+            "Yds": 4042
+          }
+        },
+        {
+          "player": "Nick Mullens",
+          "player_raw": "Nick Mullens USM",
+          "rank": 15,
+          "team_code": "USM",
+          "team_slug": "southern-miss",
+          "values": {
+            "Att": 521,
+            "Cmp": 331,
+            "Int": 12,
+            "Int%": 2.3,
+            "Lg": "69t",
+            "Loss": 186,
+            "Pct": 63.5,
+            "Rate": 155.2,
+            "Sack": 24,
+            "TD": 38,
+            "TD%": 7.3,
+            "YPA": 8.6,
+            "Yds": 4476
+          }
+        },
+        {
+          "player": "Jeff Driskel",
+          "player_raw": "Jeff Driskel LT",
+          "rank": 16,
+          "team_code": "LT",
+          "team_slug": "louisiana-tech",
+          "values": {
+            "Att": 448,
+            "Cmp": 279,
+            "Int": 8,
+            "Int%": 1.8,
+            "Lg": "72t",
+            "Loss": 104,
+            "Pct": 62.3,
+            "Rate": 154.1,
+            "Sack": 18,
+            "TD": 27,
+            "TD%": 6.0,
+            "YPA": 9.0,
+            "Yds": 4026
+          }
+        },
+        {
+          "player": "Nick Arbuckle",
+          "player_raw": "Nick Arbuckle GAST",
+          "rank": 17,
+          "team_code": "GAST",
+          "team_slug": "georgia-state",
+          "values": {
+            "Att": 486,
+            "Cmp": 307,
+            "Int": 12,
+            "Int%": 2.5,
+            "Lg": "76t",
+            "Loss": 201,
+            "Pct": 63.2,
+            "Rate": 152.7,
+            "Sack": 32,
+            "TD": 28,
+            "TD%": 5.8,
+            "YPA": 9.0,
+            "Yds": 4368
+          }
+        },
+        {
+          "player": "Gunner Kiel",
+          "player_raw": "Gunner Kiel CINN",
+          "rank": 18,
+          "team_code": "CINN",
+          "team_slug": "cincinnati",
+          "values": {
+            "Att": 316,
+            "Cmp": 206,
+            "Int": 11,
+            "Int%": 3.5,
+            "Lg": "88t",
+            "Loss": 50,
+            "Pct": 65.2,
+            "Rate": 151.9,
+            "Sack": 8,
+            "TD": 19,
+            "TD%": 6.0,
+            "YPA": 8.8,
+            "Yds": 2777
+          }
+        },
+        {
+          "player": "Brent Stockstill",
+          "player_raw": "Brent Stockstill MTSU",
+          "rank": 19,
+          "team_code": "MTSU",
+          "team_slug": "middle-tennessee",
+          "values": {
+            "Att": 489,
+            "Cmp": 326,
+            "Int": 9,
+            "Int%": 1.8,
+            "Lg": "76t",
+            "Loss": 163,
+            "Pct": 66.7,
+            "Rate": 151.8,
+            "Sack": 17,
+            "TD": 30,
+            "TD%": 6.1,
+            "YPA": 8.2,
+            "Yds": 3993
+          }
+        },
+        {
+          "player": "Cody Kessler",
+          "player_raw": "Cody Kessler USC",
+          "rank": 20,
+          "team_code": "USC",
+          "team_slug": "usc",
+          "values": {
+            "Att": 446,
+            "Cmp": 298,
+            "Int": 7,
+            "Int%": 1.6,
+            "Lg": "83t",
+            "Loss": 256,
+            "Pct": 66.8,
+            "Rate": 151.7,
+            "Sack": 38,
+            "TD": 29,
+            "TD%": 6.5,
+            "YPA": 7.9,
+            "Yds": 3532
+          }
+        },
+        {
+          "player": "Dane Evans",
+          "player_raw": "Dane Evans TULS",
+          "rank": 21,
+          "team_code": "TULS",
+          "team_slug": "tulsa",
+          "values": {
+            "Att": 485,
+            "Cmp": 305,
+            "Int": 8,
+            "Int%": 1.6,
+            "Lg": "80t",
+            "Loss": 261,
+            "Pct": 62.9,
+            "Rate": 151.6,
+            "Sack": 40,
+            "TD": 25,
+            "TD%": 5.2,
+            "YPA": 8.9,
+            "Yds": 4332
+          }
+        },
+        {
+          "player": "Kent Myers",
+          "player_raw": "Kent Myers USU",
+          "rank": 22,
+          "team_code": "USU",
+          "team_slug": "utah-state",
+          "values": {
+            "Att": 199,
+            "Cmp": 121,
+            "Int": 3,
+            "Int%": 1.5,
+            "Lg": 63,
+            "Loss": 87,
+            "Pct": 60.8,
+            "Rate": 151.6,
+            "Sack": 14,
+            "TD": 16,
+            "TD%": 8.0,
+            "YPA": 8.0,
+            "Yds": 1593
+          }
+        },
+        {
+          "player": "Nate Sudfeld",
+          "player_raw": "Nate Sudfeld IND",
+          "rank": 23,
+          "team_code": "IND",
+          "team_slug": "indiana",
+          "values": {
+            "Att": 412,
+            "Cmp": 247,
+            "Int": 7,
+            "Int%": 1.7,
+            "Lg": "72t",
+            "Loss": 64,
+            "Pct": 60.0,
+            "Rate": 151.0,
+            "Sack": 9,
+            "TD": 27,
+            "TD%": 6.6,
+            "YPA": 8.7,
+            "Yds": 3573
+          }
+        },
+        {
+          "player": "Dak Prescott",
+          "player_raw": "Dak Prescott MSST",
+          "rank": 24,
+          "team_code": "MSST",
+          "team_slug": "mississippi-state",
+          "values": {
+            "Att": 477,
+            "Cmp": 316,
+            "Int": 5,
+            "Int%": 1.0,
+            "Lg": 63,
+            "Loss": 193,
+            "Pct": 66.2,
+            "Rate": 151.0,
+            "Sack": 32,
+            "TD": 29,
+            "TD%": 6.1,
+            "YPA": 8.0,
+            "Yds": 3793
+          }
+        },
+        {
+          "player": "Marquise Williams",
+          "player_raw": "Marquise Williams UNC",
+          "rank": 25,
+          "team_code": "UNC",
+          "team_slug": "north-carolina",
+          "values": {
+            "Att": 356,
+            "Cmp": 218,
+            "Int": 10,
+            "Int%": 2.8,
+            "Lg": "89t",
+            "Loss": 105,
+            "Pct": 61.2,
+            "Rate": 150.3,
+            "Sack": 16,
+            "TD": 24,
+            "TD%": 6.7,
+            "YPA": 8.6,
+            "Yds": 3068
+          }
+        }
+      ]
+    },
+    "passing_td": {
+      "columns": [
+        "Att",
+        "Cmp",
+        "Pct",
+        "Yds",
+        "YPA",
+        "TD",
+        "TD%",
+        "Int",
+        "Int%",
+        "Lg",
+        "Sack",
+        "Loss",
+        "Rate"
+      ],
+      "leaders": [
+        {
+          "player": "Brandon Doughty",
+          "player_raw": "Brandon Doughty WKU",
+          "rank": 1,
+          "team_code": "WKU",
+          "team_slug": "western-kentucky",
+          "values": {
+            "Att": 540,
+            "Cmp": 388,
+            "Int": 9,
+            "Int%": 1.7,
+            "Lg": "78t",
+            "Loss": 123,
+            "Pct": 71.9,
+            "Rate": 176.4,
+            "Sack": 15,
+            "TD": 48,
+            "TD%": 8.9,
+            "YPA": 9.3,
+            "Yds": 5048
+          }
+        },
+        {
+          "player": "Matt Johnson",
+          "player_raw": "Matt Johnson BGSU",
+          "rank": 2,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Att": 570,
+            "Cmp": 384,
+            "Int": 8,
+            "Int%": 1.4,
+            "Lg": "94t",
+            "Loss": 224,
+            "Pct": 67.4,
+            "Rate": 164.1,
+            "Sack": 36,
+            "TD": 46,
+            "TD%": 8.1,
+            "YPA": 8.7,
+            "Yds": 4946
+          }
+        },
+        {
+          "player": "Jared Goff",
+          "player_raw": "Jared Goff CAL",
+          "rank": 3,
+          "team_code": "CAL",
+          "team_slug": "california",
+          "values": {
+            "Att": 529,
+            "Cmp": 341,
+            "Int": 13,
+            "Int%": 2.5,
+            "Lg": "80t",
+            "Loss": 200,
+            "Pct": 64.5,
+            "Rate": 161.2,
+            "Sack": 26,
+            "TD": 43,
+            "TD%": 8.1,
+            "YPA": 8.9,
+            "Yds": 4714
+          }
+        },
+        {
+          "player": "Patrick Mahomes",
+          "player_raw": "Patrick Mahomes TTU",
+          "rank": 4,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Att": 574,
+            "Cmp": 365,
+            "Int": 15,
+            "Int%": 2.6,
+            "Lg": 90,
+            "Loss": 157,
+            "Pct": 63.6,
+            "Rate": 147.2,
+            "Sack": 27,
+            "TD": 36,
+            "TD%": 6.3,
+            "YPA": 8.1,
+            "Yds": 4658
+          }
+        },
+        {
+          "player": "Luke Falk",
+          "player_raw": "Luke Falk WSU",
+          "rank": 5,
+          "team_code": "WSU",
+          "team_slug": "washington-state",
+          "values": {
+            "Att": 645,
+            "Cmp": 448,
+            "Int": 8,
+            "Int%": 1.2,
+            "Lg": "75t",
+            "Loss": 282,
+            "Pct": 69.5,
+            "Rate": 145.9,
+            "Sack": 38,
+            "TD": 38,
+            "TD%": 5.9,
+            "YPA": 7.1,
+            "Yds": 4566
+          }
+        },
+        {
+          "player": "Nick Mullens",
+          "player_raw": "Nick Mullens USM",
+          "rank": 6,
+          "team_code": "USM",
+          "team_slug": "southern-miss",
+          "values": {
+            "Att": 521,
+            "Cmp": 331,
+            "Int": 12,
+            "Int%": 2.3,
+            "Lg": "69t",
+            "Loss": 186,
+            "Pct": 63.5,
+            "Rate": 155.2,
+            "Sack": 24,
+            "TD": 38,
+            "TD%": 7.3,
+            "YPA": 8.6,
+            "Yds": 4476
+          }
+        },
+        {
+          "player": "Nick Arbuckle",
+          "player_raw": "Nick Arbuckle GAST",
+          "rank": 7,
+          "team_code": "GAST",
+          "team_slug": "georgia-state",
+          "values": {
+            "Att": 486,
+            "Cmp": 307,
+            "Int": 12,
+            "Int%": 2.5,
+            "Lg": "76t",
+            "Loss": 201,
+            "Pct": 63.2,
+            "Rate": 152.7,
+            "Sack": 32,
+            "TD": 28,
+            "TD%": 5.8,
+            "YPA": 9.0,
+            "Yds": 4368
+          }
+        },
+        {
+          "player": "Dane Evans",
+          "player_raw": "Dane Evans TULS",
+          "rank": 8,
+          "team_code": "TULS",
+          "team_slug": "tulsa",
+          "values": {
+            "Att": 485,
+            "Cmp": 305,
+            "Int": 8,
+            "Int%": 1.6,
+            "Lg": "80t",
+            "Loss": 261,
+            "Pct": 62.9,
+            "Rate": 151.6,
+            "Sack": 40,
+            "TD": 25,
+            "TD%": 5.2,
+            "YPA": 8.9,
+            "Yds": 4332
+          }
+        },
+        {
+          "player": "Deshaun Watson",
+          "player_raw": "Deshaun Watson CLEM",
+          "rank": 9,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Att": 491,
+            "Cmp": 333,
+            "Int": 13,
+            "Int%": 2.6,
+            "Lg": 67,
+            "Loss": 82,
+            "Pct": 67.8,
+            "Rate": 156.3,
+            "Sack": 15,
+            "TD": 35,
+            "TD%": 7.1,
+            "YPA": 8.4,
+            "Yds": 4109
+          }
+        },
+        {
+          "player": "Chad Kelly",
+          "player_raw": "Chad Kelly MISS",
+          "rank": 10,
+          "team_code": "MISS",
+          "team_slug": "ole-miss",
+          "values": {
+            "Att": 458,
+            "Cmp": 298,
+            "Int": 13,
+            "Int%": 2.8,
+            "Lg": "73t",
+            "Loss": 130,
+            "Pct": 65.1,
+            "Rate": 155.9,
+            "Sack": 17,
+            "TD": 31,
+            "TD%": 6.8,
+            "YPA": 8.8,
+            "Yds": 4042
+          }
+        },
+        {
+          "player": "Jeff Driskel",
+          "player_raw": "Jeff Driskel LT",
+          "rank": 11,
+          "team_code": "LT",
+          "team_slug": "louisiana-tech",
+          "values": {
+            "Att": 448,
+            "Cmp": 279,
+            "Int": 8,
+            "Int%": 1.8,
+            "Lg": "72t",
+            "Loss": 104,
+            "Pct": 62.3,
+            "Rate": 154.1,
+            "Sack": 18,
+            "TD": 27,
+            "TD%": 6.0,
+            "YPA": 9.0,
+            "Yds": 4026
+          }
+        },
+        {
+          "player": "Brent Stockstill",
+          "player_raw": "Brent Stockstill MTSU",
+          "rank": 12,
+          "team_code": "MTSU",
+          "team_slug": "middle-tennessee",
+          "values": {
+            "Att": 489,
+            "Cmp": 326,
+            "Int": 9,
+            "Int%": 1.8,
+            "Lg": "76t",
+            "Loss": 163,
+            "Pct": 66.7,
+            "Rate": 151.8,
+            "Sack": 17,
+            "TD": 30,
+            "TD%": 6.1,
+            "YPA": 8.2,
+            "Yds": 3993
+          }
+        },
+        {
+          "player": "Mike Bercovici",
+          "player_raw": "Mike Bercovici AZST",
+          "rank": 13,
+          "team_code": "AZST",
+          "team_slug": "arizona-state",
+          "values": {
+            "Att": 531,
+            "Cmp": 318,
+            "Int": 9,
+            "Int%": 1.7,
+            "Lg": "93t",
+            "Loss": 225,
+            "Pct": 59.9,
+            "Rate": 136.1,
+            "Sack": 37,
+            "TD": 30,
+            "TD%": 5.6,
+            "YPA": 7.3,
+            "Yds": 3854
+          }
+        },
+        {
+          "player": "Cooper Rush",
+          "player_raw": "Cooper Rush CMU",
+          "rank": 14,
+          "team_code": "CMU",
+          "team_slug": "central-michigan",
+          "values": {
+            "Att": 489,
+            "Cmp": 324,
+            "Int": 11,
+            "Int%": 2.2,
+            "Lg": "83t",
+            "Loss": 215,
+            "Pct": 66.3,
+            "Rate": 144.8,
+            "Sack": 27,
+            "TD": 25,
+            "TD%": 5.1,
+            "YPA": 7.9,
+            "Yds": 3853
+          }
+        },
+        {
+          "player": "Dak Prescott",
+          "player_raw": "Dak Prescott MSST",
+          "rank": 15,
+          "team_code": "MSST",
+          "team_slug": "mississippi-state",
+          "values": {
+            "Att": 477,
+            "Cmp": 316,
+            "Int": 5,
+            "Int%": 1.0,
+            "Lg": 63,
+            "Loss": 193,
+            "Pct": 66.2,
+            "Rate": 151.0,
+            "Sack": 32,
+            "TD": 29,
+            "TD%": 6.1,
+            "YPA": 8.0,
+            "Yds": 3793
+          }
+        },
+        {
+          "player": "Paxton Lynch",
+          "player_raw": "Paxton Lynch MEM",
+          "rank": 16,
+          "team_code": "MEM",
+          "team_slug": "memphis",
+          "values": {
+            "Att": 443,
+            "Cmp": 296,
+            "Int": 4,
+            "Int%": 0.9,
+            "Lg": "82t",
+            "Loss": 115,
+            "Pct": 66.8,
+            "Rate": 157.5,
+            "Sack": 16,
+            "TD": 28,
+            "TD%": 6.3,
+            "YPA": 8.5,
+            "Yds": 3778
+          }
+        },
+        {
+          "player": "Mason Rudolph",
+          "player_raw": "Mason Rudolph OKST",
+          "rank": 17,
+          "team_code": "OKST",
+          "team_slug": "oklahoma-state",
+          "values": {
+            "Att": 424,
+            "Cmp": 264,
+            "Int": 9,
+            "Int%": 2.1,
+            "Lg": "82t",
+            "Loss": 175,
+            "Pct": 62.3,
+            "Rate": 149.1,
+            "Sack": 30,
+            "TD": 21,
+            "TD%": 5.0,
+            "YPA": 8.9,
+            "Yds": 3770
+          }
+        },
+        {
+          "player": "Baker Mayfield",
+          "player_raw": "Baker Mayfield OKLA",
+          "rank": 18,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Att": 395,
+            "Cmp": 269,
+            "Int": 7,
+            "Int%": 1.8,
+            "Lg": "76t",
+            "Loss": 204,
+            "Pct": 68.1,
+            "Rate": 173.3,
+            "Sack": 39,
+            "TD": 36,
+            "TD%": 9.1,
+            "YPA": 9.4,
+            "Yds": 3700
+          }
+        },
+        {
+          "player": "Josh Rosen",
+          "player_raw": "Josh Rosen UCLA",
+          "rank": 19,
+          "team_code": "UCLA",
+          "team_slug": "ucla",
+          "values": {
+            "Att": 487,
+            "Cmp": 292,
+            "Int": 11,
+            "Int%": 2.3,
+            "Lg": "70t",
+            "Loss": 119,
+            "Pct": 60.0,
+            "Rate": 134.3,
+            "Sack": 15,
+            "TD": 23,
+            "TD%": 4.7,
+            "YPA": 7.5,
+            "Yds": 3669
+          }
+        },
+        {
+          "player": "Trevone Boykin",
+          "player_raw": "Trevone Boykin TCU",
+          "rank": 20,
+          "team_code": "TCU",
+          "team_slug": "tcu",
+          "values": {
+            "Att": 395,
+            "Cmp": 256,
+            "Int": 10,
+            "Int%": 2.5,
+            "Lg": 70,
+            "Loss": 56,
+            "Pct": 64.8,
+            "Rate": 161.7,
+            "Sack": 11,
+            "TD": 31,
+            "TD%": 7.8,
+            "YPA": 9.0,
+            "Yds": 3574
+          }
+        },
+        {
+          "player": "Nate Sudfeld",
+          "player_raw": "Nate Sudfeld IND",
+          "rank": 21,
+          "team_code": "IND",
+          "team_slug": "indiana",
+          "values": {
+            "Att": 412,
+            "Cmp": 247,
+            "Int": 7,
+            "Int%": 1.7,
+            "Lg": "72t",
+            "Loss": 64,
+            "Pct": 60.0,
+            "Rate": 151.0,
+            "Sack": 9,
+            "TD": 27,
+            "TD%": 6.6,
+            "YPA": 8.7,
+            "Yds": 3573
+          }
+        },
+        {
+          "player": "Cody Kessler",
+          "player_raw": "Cody Kessler USC",
+          "rank": 22,
+          "team_code": "USC",
+          "team_slug": "usc",
+          "values": {
+            "Att": 446,
+            "Cmp": 298,
+            "Int": 7,
+            "Int%": 1.6,
+            "Lg": "83t",
+            "Loss": 256,
+            "Pct": 66.8,
+            "Rate": 151.7,
+            "Sack": 38,
+            "TD": 29,
+            "TD%": 6.5,
+            "YPA": 7.9,
+            "Yds": 3532
+          }
+        },
+        {
+          "player": "Zach Terrell",
+          "player_raw": "Zach Terrell WMU",
+          "rank": 23,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Att": 391,
+            "Cmp": 262,
+            "Int": 9,
+            "Int%": 2.3,
+            "Lg": "80t",
+            "Loss": 163,
+            "Pct": 67.0,
+            "Rate": 162.6,
+            "Sack": 31,
+            "TD": 29,
+            "TD%": 7.4,
+            "YPA": 9.0,
+            "Yds": 3526
+          }
+        },
+        {
+          "player": "Brandon Allen",
+          "player_raw": "Brandon Allen ARK",
+          "rank": 24,
+          "team_code": "ARK",
+          "team_slug": "arkansas",
+          "values": {
+            "Att": 370,
+            "Cmp": 244,
+            "Int": 8,
+            "Int%": 2.2,
+            "Lg": "71t",
+            "Loss": 92,
+            "Pct": 65.9,
+            "Rate": 166.5,
+            "Sack": 14,
+            "TD": 30,
+            "TD%": 8.1,
+            "YPA": 9.3,
+            "Yds": 3440
+          }
+        },
+        {
+          "player": "Tanner Mangum",
+          "player_raw": "Tanner Mangum BYU",
+          "rank": 25,
+          "team_code": "BYU",
+          "team_slug": "byu",
+          "values": {
+            "Att": 446,
+            "Cmp": 267,
+            "Int": 10,
+            "Int%": 2.2,
+            "Lg": "84t",
+            "Loss": 180,
+            "Pct": 59.9,
+            "Rate": 136.0,
+            "Sack": 28,
+            "TD": 23,
+            "TD%": 5.2,
+            "YPA": 7.6,
+            "Yds": 3377
+          }
+        }
+      ]
+    },
+    "passing_yards": {
+      "columns": [
+        "Att",
+        "Cmp",
+        "Pct",
+        "Yds",
+        "YPA",
+        "TD",
+        "TD%",
+        "Int",
+        "Int%",
+        "Lg",
+        "Sack",
+        "Loss",
+        "Rate"
+      ],
+      "leaders": [
+        {
+          "player": "Brandon Doughty",
+          "player_raw": "Brandon Doughty WKU",
+          "rank": 1,
+          "team_code": "WKU",
+          "team_slug": "western-kentucky",
+          "values": {
+            "Att": 540,
+            "Cmp": 388,
+            "Int": 9,
+            "Int%": 1.7,
+            "Lg": "78t",
+            "Loss": 123,
+            "Pct": 71.9,
+            "Rate": 176.4,
+            "Sack": 15,
+            "TD": 48,
+            "TD%": 8.9,
+            "YPA": 9.3,
+            "Yds": 5048
+          }
+        },
+        {
+          "player": "Matt Johnson",
+          "player_raw": "Matt Johnson BGSU",
+          "rank": 2,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Att": 570,
+            "Cmp": 384,
+            "Int": 8,
+            "Int%": 1.4,
+            "Lg": "94t",
+            "Loss": 224,
+            "Pct": 67.4,
+            "Rate": 164.1,
+            "Sack": 36,
+            "TD": 46,
+            "TD%": 8.1,
+            "YPA": 8.7,
+            "Yds": 4946
+          }
+        },
+        {
+          "player": "Jared Goff",
+          "player_raw": "Jared Goff CAL",
+          "rank": 3,
+          "team_code": "CAL",
+          "team_slug": "california",
+          "values": {
+            "Att": 529,
+            "Cmp": 341,
+            "Int": 13,
+            "Int%": 2.5,
+            "Lg": "80t",
+            "Loss": 200,
+            "Pct": 64.5,
+            "Rate": 161.2,
+            "Sack": 26,
+            "TD": 43,
+            "TD%": 8.1,
+            "YPA": 8.9,
+            "Yds": 4714
+          }
+        },
+        {
+          "player": "Patrick Mahomes",
+          "player_raw": "Patrick Mahomes TTU",
+          "rank": 4,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Att": 574,
+            "Cmp": 365,
+            "Int": 15,
+            "Int%": 2.6,
+            "Lg": 90,
+            "Loss": 157,
+            "Pct": 63.6,
+            "Rate": 147.2,
+            "Sack": 27,
+            "TD": 36,
+            "TD%": 6.3,
+            "YPA": 8.1,
+            "Yds": 4658
+          }
+        },
+        {
+          "player": "Luke Falk",
+          "player_raw": "Luke Falk WSU",
+          "rank": 5,
+          "team_code": "WSU",
+          "team_slug": "washington-state",
+          "values": {
+            "Att": 645,
+            "Cmp": 448,
+            "Int": 8,
+            "Int%": 1.2,
+            "Lg": "75t",
+            "Loss": 282,
+            "Pct": 69.5,
+            "Rate": 145.9,
+            "Sack": 38,
+            "TD": 38,
+            "TD%": 5.9,
+            "YPA": 7.1,
+            "Yds": 4566
+          }
+        },
+        {
+          "player": "Nick Mullens",
+          "player_raw": "Nick Mullens USM",
+          "rank": 6,
+          "team_code": "USM",
+          "team_slug": "southern-miss",
+          "values": {
+            "Att": 521,
+            "Cmp": 331,
+            "Int": 12,
+            "Int%": 2.3,
+            "Lg": "69t",
+            "Loss": 186,
+            "Pct": 63.5,
+            "Rate": 155.2,
+            "Sack": 24,
+            "TD": 38,
+            "TD%": 7.3,
+            "YPA": 8.6,
+            "Yds": 4476
+          }
+        },
+        {
+          "player": "Nick Arbuckle",
+          "player_raw": "Nick Arbuckle GAST",
+          "rank": 7,
+          "team_code": "GAST",
+          "team_slug": "georgia-state",
+          "values": {
+            "Att": 486,
+            "Cmp": 307,
+            "Int": 12,
+            "Int%": 2.5,
+            "Lg": "76t",
+            "Loss": 201,
+            "Pct": 63.2,
+            "Rate": 152.7,
+            "Sack": 32,
+            "TD": 28,
+            "TD%": 5.8,
+            "YPA": 9.0,
+            "Yds": 4368
+          }
+        },
+        {
+          "player": "Dane Evans",
+          "player_raw": "Dane Evans TULS",
+          "rank": 8,
+          "team_code": "TULS",
+          "team_slug": "tulsa",
+          "values": {
+            "Att": 485,
+            "Cmp": 305,
+            "Int": 8,
+            "Int%": 1.6,
+            "Lg": "80t",
+            "Loss": 261,
+            "Pct": 62.9,
+            "Rate": 151.6,
+            "Sack": 40,
+            "TD": 25,
+            "TD%": 5.2,
+            "YPA": 8.9,
+            "Yds": 4332
+          }
+        },
+        {
+          "player": "Deshaun Watson",
+          "player_raw": "Deshaun Watson CLEM",
+          "rank": 9,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Att": 491,
+            "Cmp": 333,
+            "Int": 13,
+            "Int%": 2.6,
+            "Lg": 67,
+            "Loss": 82,
+            "Pct": 67.8,
+            "Rate": 156.3,
+            "Sack": 15,
+            "TD": 35,
+            "TD%": 7.1,
+            "YPA": 8.4,
+            "Yds": 4109
+          }
+        },
+        {
+          "player": "Chad Kelly",
+          "player_raw": "Chad Kelly MISS",
+          "rank": 10,
+          "team_code": "MISS",
+          "team_slug": "ole-miss",
+          "values": {
+            "Att": 458,
+            "Cmp": 298,
+            "Int": 13,
+            "Int%": 2.8,
+            "Lg": "73t",
+            "Loss": 130,
+            "Pct": 65.1,
+            "Rate": 155.9,
+            "Sack": 17,
+            "TD": 31,
+            "TD%": 6.8,
+            "YPA": 8.8,
+            "Yds": 4042
+          }
+        },
+        {
+          "player": "Jeff Driskel",
+          "player_raw": "Jeff Driskel LT",
+          "rank": 11,
+          "team_code": "LT",
+          "team_slug": "louisiana-tech",
+          "values": {
+            "Att": 448,
+            "Cmp": 279,
+            "Int": 8,
+            "Int%": 1.8,
+            "Lg": "72t",
+            "Loss": 104,
+            "Pct": 62.3,
+            "Rate": 154.1,
+            "Sack": 18,
+            "TD": 27,
+            "TD%": 6.0,
+            "YPA": 9.0,
+            "Yds": 4026
+          }
+        },
+        {
+          "player": "Brent Stockstill",
+          "player_raw": "Brent Stockstill MTSU",
+          "rank": 12,
+          "team_code": "MTSU",
+          "team_slug": "middle-tennessee",
+          "values": {
+            "Att": 489,
+            "Cmp": 326,
+            "Int": 9,
+            "Int%": 1.8,
+            "Lg": "76t",
+            "Loss": 163,
+            "Pct": 66.7,
+            "Rate": 151.8,
+            "Sack": 17,
+            "TD": 30,
+            "TD%": 6.1,
+            "YPA": 8.2,
+            "Yds": 3993
+          }
+        },
+        {
+          "player": "Mike Bercovici",
+          "player_raw": "Mike Bercovici AZST",
+          "rank": 13,
+          "team_code": "AZST",
+          "team_slug": "arizona-state",
+          "values": {
+            "Att": 531,
+            "Cmp": 318,
+            "Int": 9,
+            "Int%": 1.7,
+            "Lg": "93t",
+            "Loss": 225,
+            "Pct": 59.9,
+            "Rate": 136.1,
+            "Sack": 37,
+            "TD": 30,
+            "TD%": 5.6,
+            "YPA": 7.3,
+            "Yds": 3854
+          }
+        },
+        {
+          "player": "Cooper Rush",
+          "player_raw": "Cooper Rush CMU",
+          "rank": 14,
+          "team_code": "CMU",
+          "team_slug": "central-michigan",
+          "values": {
+            "Att": 489,
+            "Cmp": 324,
+            "Int": 11,
+            "Int%": 2.2,
+            "Lg": "83t",
+            "Loss": 215,
+            "Pct": 66.3,
+            "Rate": 144.8,
+            "Sack": 27,
+            "TD": 25,
+            "TD%": 5.1,
+            "YPA": 7.9,
+            "Yds": 3853
+          }
+        },
+        {
+          "player": "Dak Prescott",
+          "player_raw": "Dak Prescott MSST",
+          "rank": 15,
+          "team_code": "MSST",
+          "team_slug": "mississippi-state",
+          "values": {
+            "Att": 477,
+            "Cmp": 316,
+            "Int": 5,
+            "Int%": 1.0,
+            "Lg": 63,
+            "Loss": 193,
+            "Pct": 66.2,
+            "Rate": 151.0,
+            "Sack": 32,
+            "TD": 29,
+            "TD%": 6.1,
+            "YPA": 8.0,
+            "Yds": 3793
+          }
+        },
+        {
+          "player": "Paxton Lynch",
+          "player_raw": "Paxton Lynch MEM",
+          "rank": 16,
+          "team_code": "MEM",
+          "team_slug": "memphis",
+          "values": {
+            "Att": 443,
+            "Cmp": 296,
+            "Int": 4,
+            "Int%": 0.9,
+            "Lg": "82t",
+            "Loss": 115,
+            "Pct": 66.8,
+            "Rate": 157.5,
+            "Sack": 16,
+            "TD": 28,
+            "TD%": 6.3,
+            "YPA": 8.5,
+            "Yds": 3778
+          }
+        },
+        {
+          "player": "Mason Rudolph",
+          "player_raw": "Mason Rudolph OKST",
+          "rank": 17,
+          "team_code": "OKST",
+          "team_slug": "oklahoma-state",
+          "values": {
+            "Att": 424,
+            "Cmp": 264,
+            "Int": 9,
+            "Int%": 2.1,
+            "Lg": "82t",
+            "Loss": 175,
+            "Pct": 62.3,
+            "Rate": 149.1,
+            "Sack": 30,
+            "TD": 21,
+            "TD%": 5.0,
+            "YPA": 8.9,
+            "Yds": 3770
+          }
+        },
+        {
+          "player": "Baker Mayfield",
+          "player_raw": "Baker Mayfield OKLA",
+          "rank": 18,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Att": 395,
+            "Cmp": 269,
+            "Int": 7,
+            "Int%": 1.8,
+            "Lg": "76t",
+            "Loss": 204,
+            "Pct": 68.1,
+            "Rate": 173.3,
+            "Sack": 39,
+            "TD": 36,
+            "TD%": 9.1,
+            "YPA": 9.4,
+            "Yds": 3700
+          }
+        },
+        {
+          "player": "Josh Rosen",
+          "player_raw": "Josh Rosen UCLA",
+          "rank": 19,
+          "team_code": "UCLA",
+          "team_slug": "ucla",
+          "values": {
+            "Att": 487,
+            "Cmp": 292,
+            "Int": 11,
+            "Int%": 2.3,
+            "Lg": "70t",
+            "Loss": 119,
+            "Pct": 60.0,
+            "Rate": 134.3,
+            "Sack": 15,
+            "TD": 23,
+            "TD%": 4.7,
+            "YPA": 7.5,
+            "Yds": 3669
+          }
+        },
+        {
+          "player": "Trevone Boykin",
+          "player_raw": "Trevone Boykin TCU",
+          "rank": 20,
+          "team_code": "TCU",
+          "team_slug": "tcu",
+          "values": {
+            "Att": 395,
+            "Cmp": 256,
+            "Int": 10,
+            "Int%": 2.5,
+            "Lg": 70,
+            "Loss": 56,
+            "Pct": 64.8,
+            "Rate": 161.7,
+            "Sack": 11,
+            "TD": 31,
+            "TD%": 7.8,
+            "YPA": 9.0,
+            "Yds": 3574
+          }
+        },
+        {
+          "player": "Nate Sudfeld",
+          "player_raw": "Nate Sudfeld IND",
+          "rank": 21,
+          "team_code": "IND",
+          "team_slug": "indiana",
+          "values": {
+            "Att": 412,
+            "Cmp": 247,
+            "Int": 7,
+            "Int%": 1.7,
+            "Lg": "72t",
+            "Loss": 64,
+            "Pct": 60.0,
+            "Rate": 151.0,
+            "Sack": 9,
+            "TD": 27,
+            "TD%": 6.6,
+            "YPA": 8.7,
+            "Yds": 3573
+          }
+        },
+        {
+          "player": "Cody Kessler",
+          "player_raw": "Cody Kessler USC",
+          "rank": 22,
+          "team_code": "USC",
+          "team_slug": "usc",
+          "values": {
+            "Att": 446,
+            "Cmp": 298,
+            "Int": 7,
+            "Int%": 1.6,
+            "Lg": "83t",
+            "Loss": 256,
+            "Pct": 66.8,
+            "Rate": 151.7,
+            "Sack": 38,
+            "TD": 29,
+            "TD%": 6.5,
+            "YPA": 7.9,
+            "Yds": 3532
+          }
+        },
+        {
+          "player": "Zach Terrell",
+          "player_raw": "Zach Terrell WMU",
+          "rank": 23,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Att": 391,
+            "Cmp": 262,
+            "Int": 9,
+            "Int%": 2.3,
+            "Lg": "80t",
+            "Loss": 163,
+            "Pct": 67.0,
+            "Rate": 162.6,
+            "Sack": 31,
+            "TD": 29,
+            "TD%": 7.4,
+            "YPA": 9.0,
+            "Yds": 3526
+          }
+        },
+        {
+          "player": "Brandon Allen",
+          "player_raw": "Brandon Allen ARK",
+          "rank": 24,
+          "team_code": "ARK",
+          "team_slug": "arkansas",
+          "values": {
+            "Att": 370,
+            "Cmp": 244,
+            "Int": 8,
+            "Int%": 2.2,
+            "Lg": "71t",
+            "Loss": 92,
+            "Pct": 65.9,
+            "Rate": 166.5,
+            "Sack": 14,
+            "TD": 30,
+            "TD%": 8.1,
+            "YPA": 9.3,
+            "Yds": 3440
+          }
+        },
+        {
+          "player": "Tanner Mangum",
+          "player_raw": "Tanner Mangum BYU",
+          "rank": 25,
+          "team_code": "BYU",
+          "team_slug": "byu",
+          "values": {
+            "Att": 446,
+            "Cmp": 267,
+            "Int": 10,
+            "Int%": 2.2,
+            "Lg": "84t",
+            "Loss": 180,
+            "Pct": 59.9,
+            "Rate": 136.0,
+            "Sack": 28,
+            "TD": 23,
+            "TD%": 5.2,
+            "YPA": 7.6,
+            "Yds": 3377
+          }
+        }
+      ]
+    },
+    "receiving_td": {
+      "columns": [
+        "Rec",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD"
+      ],
+      "leaders": [
+        {
+          "player": "Tajae Sharpe",
+          "player_raw": "Tajae Sharpe MASS",
+          "rank": 1,
+          "team_code": "MASS",
+          "team_slug": "umass",
+          "values": {
+            "Avg": 11.88,
+            "Lg": 49,
+            "Rec": 111,
+            "TD": 5,
+            "Yds": 1319
+          }
+        },
+        {
+          "player": "Daniel Braverman",
+          "player_raw": "Daniel Braverman WMU",
+          "rank": 2,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Avg": 12.69,
+            "Lg": "68t",
+            "Rec": 108,
+            "TD": 13,
+            "Yds": 1371
+          }
+        },
+        {
+          "player": "Richie James",
+          "player_raw": "Richie James MTSU",
+          "rank": 3,
+          "team_code": "MTSU",
+          "team_slug": "middle-tennessee",
+          "values": {
+            "Avg": 12.47,
+            "Lg": "69t",
+            "Rec": 107,
+            "TD": 8,
+            "Yds": 1334
+          }
+        },
+        {
+          "player": "Gabe Marks",
+          "player_raw": "Gabe Marks WSU",
+          "rank": 4,
+          "team_code": "WSU",
+          "team_slug": "washington-state",
+          "values": {
+            "Avg": 11.46,
+            "Lg": "43t",
+            "Rec": 104,
+            "TD": 15,
+            "Yds": 1192
+          }
+        },
+        {
+          "player": "Trent Taylor",
+          "player_raw": "Trent Taylor LT",
+          "rank": 5,
+          "team_code": "LT",
+          "team_slug": "louisiana-tech",
+          "values": {
+            "Avg": 12.95,
+            "Lg": 63,
+            "Rec": 99,
+            "TD": 9,
+            "Yds": 1282
+          }
+        },
+        {
+          "player": "Isaiah Jones",
+          "player_raw": "Isaiah Jones ECU",
+          "rank": 6,
+          "team_code": "ECU",
+          "team_slug": "east-carolina",
+          "values": {
+            "Avg": 11.15,
+            "Lg": 36,
+            "Rec": 97,
+            "TD": 5,
+            "Yds": 1082
+          }
+        },
+        {
+          "player": "Demarcus Ayers",
+          "player_raw": "Demarcus Ayers HOU",
+          "rank": 7,
+          "team_code": "HOU",
+          "team_slug": "houston",
+          "values": {
+            "Avg": 12.59,
+            "Lg": "67t",
+            "Rec": 97,
+            "TD": 6,
+            "Yds": 1221
+          }
+        },
+        {
+          "player": "Keyarris Garrett",
+          "player_raw": "Keyarris Garrett TULS",
+          "rank": 8,
+          "team_code": "TULS",
+          "team_slug": "tulsa",
+          "values": {
+            "Avg": 16.54,
+            "Lg": 50,
+            "Rec": 96,
+            "TD": 8,
+            "Yds": 1588
+          }
+        },
+        {
+          "player": "Gehrig Dieter",
+          "player_raw": "Gehrig Dieter BGSU",
+          "rank": 9,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Avg": 10.99,
+            "Lg": "75t",
+            "Rec": 94,
+            "TD": 10,
+            "Yds": 1033
+          }
+        },
+        {
+          "player": "Artavis Scott",
+          "player_raw": "Artavis Scott CLEM",
+          "rank": 10,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Avg": 9.69,
+            "Lg": "51t",
+            "Rec": 93,
+            "TD": 6,
+            "Yds": 901
+          }
+        },
+        {
+          "player": "Tyler Boyd",
+          "player_raw": "Tyler Boyd PITT",
+          "rank": 11,
+          "team_code": "PITT",
+          "team_slug": "pittsburgh",
+          "values": {
+            "Avg": 10.18,
+            "Lg": "51t",
+            "Rec": 91,
+            "TD": 6,
+            "Yds": 926
+          }
+        },
+        {
+          "player": "Jakeem Grant",
+          "player_raw": "Jakeem Grant TTU",
+          "rank": 12,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Avg": 13.99,
+            "Lg": 90,
+            "Rec": 91,
+            "TD": 10,
+            "Yds": 1273
+          }
+        },
+        {
+          "player": "Shaq Washington",
+          "player_raw": "Shaq Washington CINN",
+          "rank": 13,
+          "team_code": "CINN",
+          "team_slug": "cincinnati",
+          "values": {
+            "Avg": 10.91,
+            "Lg": 46,
+            "Rec": 90,
+            "TD": 6,
+            "Yds": 982
+          }
+        },
+        {
+          "player": "Corey Davis",
+          "player_raw": "Corey Davis WMU",
+          "rank": 14,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Avg": 15.96,
+            "Lg": "80t",
+            "Rec": 90,
+            "TD": 12,
+            "Yds": 1436
+          }
+        },
+        {
+          "player": "Nelson Spruce",
+          "player_raw": "Nelson Spruce COL",
+          "rank": 15,
+          "team_code": "COL",
+          "team_slug": "colorado",
+          "values": {
+            "Avg": 11.83,
+            "Lg": 50,
+            "Rec": 89,
+            "TD": 4,
+            "Yds": 1053
+          }
+        },
+        {
+          "player": "JuJu Smith-Schuster",
+          "player_raw": "JuJu Smith-Schuster USC",
+          "rank": 16,
+          "team_code": "USC",
+          "team_slug": "usc",
+          "values": {
+            "Avg": 16.34,
+            "Lg": "75t",
+            "Rec": 89,
+            "TD": 10,
+            "Yds": 1454
+          }
+        },
+        {
+          "player": "Fred Ross",
+          "player_raw": "Fred Ross MSST",
+          "rank": 17,
+          "team_code": "MSST",
+          "team_slug": "mississippi-state",
+          "values": {
+            "Avg": 11.44,
+            "Lg": "59t",
+            "Rec": 88,
+            "TD": 5,
+            "Yds": 1007
+          }
+        },
+        {
+          "player": "Calvin Ridley",
+          "player_raw": "Calvin Ridley ALA",
+          "rank": 18,
+          "team_code": "ALA",
+          "team_slug": "alabama",
+          "values": {
+            "Avg": 11.58,
+            "Lg": "81t",
+            "Rec": 88,
+            "TD": 7,
+            "Yds": 1019
+          }
+        },
+        {
+          "player": "Thomas Sperbeck",
+          "player_raw": "Thomas Sperbeck BSU",
+          "rank": 19,
+          "team_code": "BSU",
+          "team_slug": "boise-state",
+          "values": {
+            "Avg": 16.05,
+            "Lg": "85t",
+            "Rec": 88,
+            "TD": 8,
+            "Yds": 1412
+          }
+        },
+        {
+          "player": "Sterling Shepard",
+          "player_raw": "Sterling Shepard OKLA",
+          "rank": 20,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Avg": 14.98,
+            "Lg": "74t",
+            "Rec": 86,
+            "TD": 11,
+            "Yds": 1288
+          }
+        },
+        {
+          "player": "Taywan Taylor",
+          "player_raw": "Taywan Taylor WKU",
+          "rank": 21,
+          "team_code": "WKU",
+          "team_slug": "western-kentucky",
+          "values": {
+            "Avg": 16.98,
+            "Lg": "78t",
+            "Rec": 86,
+            "TD": 17,
+            "Yds": 1460
+          }
+        },
+        {
+          "player": "Roger Lewis",
+          "player_raw": "Roger Lewis BGSU",
+          "rank": 22,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Avg": 18.16,
+            "Lg": "94t",
+            "Rec": 85,
+            "TD": 16,
+            "Yds": 1544
+          }
+        },
+        {
+          "player": "Aaron Burbridge",
+          "player_raw": "Aaron Burbridge MSU",
+          "rank": 23,
+          "team_code": "MSU",
+          "team_slug": "michigan-state",
+          "values": {
+            "Avg": 14.86,
+            "Lg": 56,
+            "Rec": 84,
+            "TD": 7,
+            "Yds": 1248
+          }
+        },
+        {
+          "player": "Jared Dangerfield",
+          "player_raw": "Jared Dangerfield WKU",
+          "rank": 24,
+          "team_code": "WKU",
+          "team_slug": "western-kentucky",
+          "values": {
+            "Avg": 10.29,
+            "Lg": "39t",
+            "Rec": 82,
+            "TD": 8,
+            "Yds": 844
+          }
+        },
+        {
+          "player": "Ed'Marques Batties",
+          "player_raw": "Ed'Marques Batties MTSU",
+          "rank": 25,
+          "team_code": "MTSU",
+          "team_slug": "middle-tennessee",
+          "values": {
+            "Avg": 12.78,
+            "Lg": "59t",
+            "Rec": 82,
+            "TD": 13,
+            "Yds": 1048
+          }
+        }
+      ]
+    },
+    "receiving_yards": {
+      "columns": [
+        "Rec",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD"
+      ],
+      "leaders": [
+        {
+          "player": "Keyarris Garrett",
+          "player_raw": "Keyarris Garrett TULS",
+          "rank": 1,
+          "team_code": "TULS",
+          "team_slug": "tulsa",
+          "values": {
+            "Avg": 16.54,
+            "Lg": 50,
+            "Rec": 96,
+            "TD": 8,
+            "Yds": 1588
+          }
+        },
+        {
+          "player": "Roger Lewis",
+          "player_raw": "Roger Lewis BGSU",
+          "rank": 2,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Avg": 18.16,
+            "Lg": "94t",
+            "Rec": 85,
+            "TD": 16,
+            "Yds": 1544
+          }
+        },
+        {
+          "player": "Taywan Taylor",
+          "player_raw": "Taywan Taylor WKU",
+          "rank": 3,
+          "team_code": "WKU",
+          "team_slug": "western-kentucky",
+          "values": {
+            "Avg": 16.98,
+            "Lg": "78t",
+            "Rec": 86,
+            "TD": 17,
+            "Yds": 1460
+          }
+        },
+        {
+          "player": "JuJu Smith-Schuster",
+          "player_raw": "JuJu Smith-Schuster USC",
+          "rank": 4,
+          "team_code": "USC",
+          "team_slug": "usc",
+          "values": {
+            "Avg": 16.34,
+            "Lg": "75t",
+            "Rec": 89,
+            "TD": 10,
+            "Yds": 1454
+          }
+        },
+        {
+          "player": "Corey Davis",
+          "player_raw": "Corey Davis WMU",
+          "rank": 5,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Avg": 15.96,
+            "Lg": "80t",
+            "Rec": 90,
+            "TD": 12,
+            "Yds": 1436
+          }
+        },
+        {
+          "player": "Thomas Sperbeck",
+          "player_raw": "Thomas Sperbeck BSU",
+          "rank": 6,
+          "team_code": "BSU",
+          "team_slug": "boise-state",
+          "values": {
+            "Avg": 16.05,
+            "Lg": "85t",
+            "Rec": 88,
+            "TD": 8,
+            "Yds": 1412
+          }
+        },
+        {
+          "player": "Michael Thomas",
+          "player_raw": "Michael Thomas USM",
+          "rank": 7,
+          "team_code": "USM",
+          "team_slug": "southern-miss",
+          "values": {
+            "Avg": 19.59,
+            "Lg": "69t",
+            "Rec": 71,
+            "TD": 14,
+            "Yds": 1391
+          }
+        },
+        {
+          "player": "Daniel Braverman",
+          "player_raw": "Daniel Braverman WMU",
+          "rank": 8,
+          "team_code": "WMU",
+          "team_slug": "western-michigan",
+          "values": {
+            "Avg": 12.69,
+            "Lg": "68t",
+            "Rec": 108,
+            "TD": 13,
+            "Yds": 1371
+          }
+        },
+        {
+          "player": "Corey Coleman",
+          "player_raw": "Corey Coleman BAY",
+          "rank": 9,
+          "team_code": "BAY",
+          "team_slug": "baylor",
+          "values": {
+            "Avg": 18.42,
+            "Lg": "81t",
+            "Rec": 74,
+            "TD": 20,
+            "Yds": 1363
+          }
+        },
+        {
+          "player": "Richie James",
+          "player_raw": "Richie James MTSU",
+          "rank": 10,
+          "team_code": "MTSU",
+          "team_slug": "middle-tennessee",
+          "values": {
+            "Avg": 12.47,
+            "Lg": "69t",
+            "Rec": 107,
+            "TD": 8,
+            "Yds": 1334
+          }
+        },
+        {
+          "player": "Josh Doctson",
+          "player_raw": "Josh Doctson TCU",
+          "rank": 11,
+          "team_code": "TCU",
+          "team_slug": "tcu",
+          "values": {
+            "Avg": 17.0,
+            "Lg": "55t",
+            "Rec": 78,
+            "TD": 14,
+            "Yds": 1326
+          }
+        },
+        {
+          "player": "Tajae Sharpe",
+          "player_raw": "Tajae Sharpe MASS",
+          "rank": 12,
+          "team_code": "MASS",
+          "team_slug": "umass",
+          "values": {
+            "Avg": 11.88,
+            "Lg": 49,
+            "Rec": 111,
+            "TD": 5,
+            "Yds": 1319
+          }
+        },
+        {
+          "player": "Sterling Shepard",
+          "player_raw": "Sterling Shepard OKLA",
+          "rank": 13,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Avg": 14.98,
+            "Lg": "74t",
+            "Rec": 86,
+            "TD": 11,
+            "Yds": 1288
+          }
+        },
+        {
+          "player": "Trent Taylor",
+          "player_raw": "Trent Taylor LT",
+          "rank": 14,
+          "team_code": "LT",
+          "team_slug": "louisiana-tech",
+          "values": {
+            "Avg": 12.95,
+            "Lg": 63,
+            "Rec": 99,
+            "TD": 9,
+            "Yds": 1282
+          }
+        },
+        {
+          "player": "Jakeem Grant",
+          "player_raw": "Jakeem Grant TTU",
+          "rank": 15,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Avg": 13.99,
+            "Lg": 90,
+            "Rec": 91,
+            "TD": 10,
+            "Yds": 1273
+          }
+        },
+        {
+          "player": "William Fuller",
+          "player_raw": "William Fuller ND",
+          "rank": 16,
+          "team_code": "ND",
+          "team_slug": "notre-dame",
+          "values": {
+            "Avg": 20.29,
+            "Lg": "81t",
+            "Rec": 62,
+            "TD": 14,
+            "Yds": 1258
+          }
+        },
+        {
+          "player": "Aaron Burbridge",
+          "player_raw": "Aaron Burbridge MSU",
+          "rank": 17,
+          "team_code": "MSU",
+          "team_slug": "michigan-state",
+          "values": {
+            "Avg": 14.86,
+            "Lg": 56,
+            "Rec": 84,
+            "TD": 7,
+            "Yds": 1248
+          }
+        },
+        {
+          "player": "Demarcus Ayers",
+          "player_raw": "Demarcus Ayers HOU",
+          "rank": 18,
+          "team_code": "HOU",
+          "team_slug": "houston",
+          "values": {
+            "Avg": 12.59,
+            "Lg": "67t",
+            "Rec": 97,
+            "TD": 6,
+            "Yds": 1221
+          }
+        },
+        {
+          "player": "Gabe Marks",
+          "player_raw": "Gabe Marks WSU",
+          "rank": 19,
+          "team_code": "WSU",
+          "team_slug": "washington-state",
+          "values": {
+            "Avg": 11.46,
+            "Lg": "43t",
+            "Rec": 104,
+            "TD": 15,
+            "Yds": 1192
+          }
+        },
+        {
+          "player": "Isaiah Ford",
+          "player_raw": "Isaiah Ford VT",
+          "rank": 20,
+          "team_code": "VT",
+          "team_slug": "virginia-tech",
+          "values": {
+            "Avg": 15.52,
+            "Lg": "75t",
+            "Rec": 75,
+            "TD": 11,
+            "Yds": 1164
+          }
+        },
+        {
+          "player": "Laquon Treadwell",
+          "player_raw": "Laquon Treadwell MISS",
+          "rank": 21,
+          "team_code": "MISS",
+          "team_slug": "ole-miss",
+          "values": {
+            "Avg": 14.06,
+            "Lg": "58t",
+            "Rec": 82,
+            "TD": 11,
+            "Yds": 1153
+          }
+        },
+        {
+          "player": "Kenny Golladay",
+          "player_raw": "Kenny Golladay NIU",
+          "rank": 22,
+          "team_code": "NIU",
+          "team_slug": "northern-illinois",
+          "values": {
+            "Avg": 15.47,
+            "Lg": "68t",
+            "Rec": 73,
+            "TD": 10,
+            "Yds": 1129
+          }
+        },
+        {
+          "player": "Penny Hart",
+          "player_raw": "Penny Hart GAST",
+          "rank": 23,
+          "team_code": "GAST",
+          "team_slug": "georgia-state",
+          "values": {
+            "Avg": 15.4,
+            "Lg": "63t",
+            "Rec": 72,
+            "TD": 8,
+            "Yds": 1109
+          }
+        },
+        {
+          "player": "Jordan Payton",
+          "player_raw": "Jordan Payton UCLA",
+          "rank": 24,
+          "team_code": "UCLA",
+          "team_slug": "ucla",
+          "values": {
+            "Avg": 14.17,
+            "Lg": 59,
+            "Rec": 78,
+            "TD": 5,
+            "Yds": 1105
+          }
+        },
+        {
+          "player": "Chris Godwin",
+          "player_raw": "Chris Godwin PSU",
+          "rank": 25,
+          "team_code": "PSU",
+          "team_slug": "penn-state",
+          "values": {
+            "Avg": 15.96,
+            "Lg": 56,
+            "Rec": 69,
+            "TD": 5,
+            "Yds": 1101
+          }
+        }
+      ]
+    },
+    "rushing_td": {
+      "columns": [
+        "Att",
+        "Gain",
+        "Loss",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD"
+      ],
+      "leaders": [
+        {
+          "player": "Derrick Henry",
+          "player_raw": "Derrick Henry ALA",
+          "rank": 1,
+          "team_code": "ALA",
+          "team_slug": "alabama",
+          "values": {
+            "Att": 395,
+            "Avg": 5.62,
+            "Gain": 2282,
+            "Lg": "74t",
+            "Loss": 63,
+            "TD": 28,
+            "Yds": 2219
+          }
+        },
+        {
+          "player": "Christian McCaffrey",
+          "player_raw": "Christian McCaffrey STAN",
+          "rank": 2,
+          "team_code": "STAN",
+          "team_slug": "stanford",
+          "values": {
+            "Att": 337,
+            "Avg": 5.99,
+            "Gain": 2065,
+            "Lg": "70t",
+            "Loss": 46,
+            "TD": 8,
+            "Yds": 2019
+          }
+        },
+        {
+          "player": "Leonard Fournette",
+          "player_raw": "Leonard Fournette LSU",
+          "rank": 3,
+          "team_code": "LSU",
+          "team_slug": "lsu",
+          "values": {
+            "Att": 300,
+            "Avg": 6.51,
+            "Gain": 2045,
+            "Lg": "87t",
+            "Loss": 92,
+            "TD": 22,
+            "Yds": 1953
+          }
+        },
+        {
+          "player": "Royce Freeman",
+          "player_raw": "Royce Freeman ORE",
+          "rank": 4,
+          "team_code": "ORE",
+          "team_slug": "oregon",
+          "values": {
+            "Att": 283,
+            "Avg": 6.49,
+            "Gain": 1889,
+            "Lg": "64t",
+            "Loss": 51,
+            "TD": 17,
+            "Yds": 1838
+          }
+        },
+        {
+          "player": "Ezekiel Elliott",
+          "player_raw": "Ezekiel Elliott OSU",
+          "rank": 5,
+          "team_code": "OSU",
+          "team_slug": "ohio-state",
+          "values": {
+            "Att": 289,
+            "Avg": 6.3,
+            "Gain": 1874,
+            "Lg": "80t",
+            "Loss": 53,
+            "TD": 23,
+            "Yds": 1821
+          }
+        },
+        {
+          "player": "Dalvin Cook",
+          "player_raw": "Dalvin Cook FSU",
+          "rank": 6,
+          "team_code": "FSU",
+          "team_slug": "florida-state",
+          "values": {
+            "Att": 229,
+            "Avg": 7.38,
+            "Gain": 1749,
+            "Lg": "94t",
+            "Loss": 58,
+            "TD": 19,
+            "Yds": 1691
+          }
+        },
+        {
+          "player": "Larry Rose III",
+          "player_raw": "Larry Rose III NMST",
+          "rank": 7,
+          "team_code": "NMST",
+          "team_slug": "new-mexico-state",
+          "values": {
+            "Att": 239,
+            "Avg": 6.93,
+            "Gain": 1719,
+            "Lg": 82,
+            "Loss": 62,
+            "TD": 14,
+            "Yds": 1657
+          }
+        },
+        {
+          "player": "Donnel Pumphrey",
+          "player_raw": "Donnel Pumphrey SDSU",
+          "rank": 8,
+          "team_code": "SDSU",
+          "team_slug": "san-diego-state",
+          "values": {
+            "Att": 310,
+            "Avg": 5.34,
+            "Gain": 1741,
+            "Lg": "72t",
+            "Loss": 85,
+            "TD": 17,
+            "Yds": 1656
+          }
+        },
+        {
+          "player": "Brian Hill",
+          "player_raw": "Brian Hill WYO",
+          "rank": 9,
+          "team_code": "WYO",
+          "team_slug": "wyoming",
+          "values": {
+            "Att": 281,
+            "Avg": 5.8,
+            "Gain": 1681,
+            "Lg": "72t",
+            "Loss": 50,
+            "TD": 6,
+            "Yds": 1631
+          }
+        },
+        {
+          "player": "Matt Breida",
+          "player_raw": "Matt Breida GSU",
+          "rank": 10,
+          "team_code": "GSU",
+          "team_slug": "georgia-state",
+          "values": {
+            "Att": 203,
+            "Avg": 7.9,
+            "Gain": 1653,
+            "Lg": "87t",
+            "Loss": 50,
+            "TD": 17,
+            "Yds": 1603
+          }
+        },
+        {
+          "player": "Tyler Ervin",
+          "player_raw": "Tyler Ervin SJSU",
+          "rank": 11,
+          "team_code": "SJSU",
+          "team_slug": "san-jose-state",
+          "values": {
+            "Att": 294,
+            "Avg": 5.45,
+            "Gain": 1661,
+            "Lg": "71t",
+            "Loss": 60,
+            "TD": 13,
+            "Yds": 1601
+          }
+        },
+        {
+          "player": "Alex Collins",
+          "player_raw": "Alex Collins ARK",
+          "rank": 12,
+          "team_code": "ARK",
+          "team_slug": "arkansas",
+          "values": {
+            "Att": 271,
+            "Avg": 5.82,
+            "Gain": 1643,
+            "Lg": "80t",
+            "Loss": 66,
+            "TD": 20,
+            "Yds": 1577
+          }
+        },
+        {
+          "player": "Wendell Smallwood",
+          "player_raw": "Wendell Smallwood WVU",
+          "rank": 13,
+          "team_code": "WVU",
+          "team_slug": "west-virginia",
+          "values": {
+            "Att": 238,
+            "Avg": 6.38,
+            "Gain": 1549,
+            "Lg": 52,
+            "Loss": 30,
+            "TD": 9,
+            "Yds": 1519
+          }
+        },
+        {
+          "player": "Wayne Gallman",
+          "player_raw": "Wayne Gallman CLEM",
+          "rank": 14,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Att": 282,
+            "Avg": 5.37,
+            "Gain": 1552,
+            "Lg": "66t",
+            "Loss": 38,
+            "TD": 13,
+            "Yds": 1514
+          }
+        },
+        {
+          "player": "DeAndre Washington",
+          "player_raw": "DeAndre Washington TTU",
+          "rank": 15,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Att": 232,
+            "Avg": 6.44,
+            "Gain": 1516,
+            "Lg": "80t",
+            "Loss": 21,
+            "TD": 14,
+            "Yds": 1495
+          }
+        },
+        {
+          "player": "Elijah Hood",
+          "player_raw": "Elijah Hood UNC",
+          "rank": 16,
+          "team_code": "UNC",
+          "team_slug": "north-carolina",
+          "values": {
+            "Att": 218,
+            "Avg": 6.71,
+            "Gain": 1488,
+            "Lg": 67,
+            "Loss": 25,
+            "TD": 17,
+            "Yds": 1463
+          }
+        },
+        {
+          "player": "Marcus Cox",
+          "player_raw": "Marcus Cox APST",
+          "rank": 17,
+          "team_code": "APST",
+          "team_slug": "appalachian-state",
+          "values": {
+            "Att": 243,
+            "Avg": 5.88,
+            "Gain": 1481,
+            "Lg": 74,
+            "Loss": 53,
+            "TD": 9,
+            "Yds": 1428
+          }
+        },
+        {
+          "player": "Justin Jackson",
+          "player_raw": "Justin Jackson NW",
+          "rank": 18,
+          "team_code": "NW",
+          "team_slug": "northwestern",
+          "values": {
+            "Att": 312,
+            "Avg": 4.54,
+            "Gain": 1468,
+            "Lg": 62,
+            "Loss": 50,
+            "TD": 5,
+            "Yds": 1418
+          }
+        },
+        {
+          "player": "Marlon Mack",
+          "player_raw": "Marlon Mack USF",
+          "rank": 19,
+          "team_code": "USF",
+          "team_slug": "south-florida",
+          "values": {
+            "Att": 210,
+            "Avg": 6.58,
+            "Gain": 1418,
+            "Lg": 59,
+            "Loss": 37,
+            "TD": 8,
+            "Yds": 1381
+          }
+        },
+        {
+          "player": "Keenan Reynolds",
+          "player_raw": "Keenan Reynolds NAVY",
+          "rank": 20,
+          "team_code": "NAVY",
+          "team_slug": "navy",
+          "values": {
+            "Att": 265,
+            "Avg": 5.18,
+            "Gain": 1537,
+            "Lg": 67,
+            "Loss": 164,
+            "TD": 24,
+            "Yds": 1373
+          }
+        },
+        {
+          "player": "Samaje Perine",
+          "player_raw": "Samaje Perine OKLA",
+          "rank": 21,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Att": 226,
+            "Avg": 5.97,
+            "Gain": 1375,
+            "Lg": "72t",
+            "Loss": 26,
+            "TD": 16,
+            "Yds": 1349
+          }
+        },
+        {
+          "player": "James Butler",
+          "player_raw": "James Butler NEV",
+          "rank": 22,
+          "team_code": "NEV",
+          "team_slug": "nevada",
+          "values": {
+            "Att": 208,
+            "Avg": 6.47,
+            "Gain": 1379,
+            "Lg": 91,
+            "Loss": 34,
+            "TD": 10,
+            "Yds": 1345
+          }
+        },
+        {
+          "player": "Paul Perkins",
+          "player_raw": "Paul Perkins UCLA",
+          "rank": 23,
+          "team_code": "UCLA",
+          "team_slug": "ucla",
+          "values": {
+            "Att": 237,
+            "Avg": 5.67,
+            "Gain": 1394,
+            "Lg": "82t",
+            "Loss": 51,
+            "TD": 14,
+            "Yds": 1343
+          }
+        },
+        {
+          "player": "Mike Warren",
+          "player_raw": "Mike Warren IAST",
+          "rank": 24,
+          "team_code": "IAST",
+          "team_slug": "iowa-state",
+          "values": {
+            "Att": 227,
+            "Avg": 5.9,
+            "Gain": 1366,
+            "Lg": "76t",
+            "Loss": 27,
+            "TD": 5,
+            "Yds": 1339
+          }
+        },
+        {
+          "player": "Jeremy McNichols",
+          "player_raw": "Jeremy McNichols BSU",
+          "rank": 25,
+          "team_code": "BSU",
+          "team_slug": "boise-state",
+          "values": {
+            "Att": 240,
+            "Avg": 5.57,
+            "Gain": 1427,
+            "Lg": "88t",
+            "Loss": 90,
+            "TD": 20,
+            "Yds": 1337
+          }
+        }
+      ]
+    },
+    "rushing_yards": {
+      "columns": [
+        "Att",
+        "Gain",
+        "Loss",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD"
+      ],
+      "leaders": [
+        {
+          "player": "Derrick Henry",
+          "player_raw": "Derrick Henry ALA",
+          "rank": 1,
+          "team_code": "ALA",
+          "team_slug": "alabama",
+          "values": {
+            "Att": 395,
+            "Avg": 5.62,
+            "Gain": 2282,
+            "Lg": "74t",
+            "Loss": 63,
+            "TD": 28,
+            "Yds": 2219
+          }
+        },
+        {
+          "player": "Christian McCaffrey",
+          "player_raw": "Christian McCaffrey STAN",
+          "rank": 2,
+          "team_code": "STAN",
+          "team_slug": "stanford",
+          "values": {
+            "Att": 337,
+            "Avg": 5.99,
+            "Gain": 2065,
+            "Lg": "70t",
+            "Loss": 46,
+            "TD": 8,
+            "Yds": 2019
+          }
+        },
+        {
+          "player": "Leonard Fournette",
+          "player_raw": "Leonard Fournette LSU",
+          "rank": 3,
+          "team_code": "LSU",
+          "team_slug": "lsu",
+          "values": {
+            "Att": 300,
+            "Avg": 6.51,
+            "Gain": 2045,
+            "Lg": "87t",
+            "Loss": 92,
+            "TD": 22,
+            "Yds": 1953
+          }
+        },
+        {
+          "player": "Royce Freeman",
+          "player_raw": "Royce Freeman ORE",
+          "rank": 4,
+          "team_code": "ORE",
+          "team_slug": "oregon",
+          "values": {
+            "Att": 283,
+            "Avg": 6.49,
+            "Gain": 1889,
+            "Lg": "64t",
+            "Loss": 51,
+            "TD": 17,
+            "Yds": 1838
+          }
+        },
+        {
+          "player": "Ezekiel Elliott",
+          "player_raw": "Ezekiel Elliott OSU",
+          "rank": 5,
+          "team_code": "OSU",
+          "team_slug": "ohio-state",
+          "values": {
+            "Att": 289,
+            "Avg": 6.3,
+            "Gain": 1874,
+            "Lg": "80t",
+            "Loss": 53,
+            "TD": 23,
+            "Yds": 1821
+          }
+        },
+        {
+          "player": "Dalvin Cook",
+          "player_raw": "Dalvin Cook FSU",
+          "rank": 6,
+          "team_code": "FSU",
+          "team_slug": "florida-state",
+          "values": {
+            "Att": 229,
+            "Avg": 7.38,
+            "Gain": 1749,
+            "Lg": "94t",
+            "Loss": 58,
+            "TD": 19,
+            "Yds": 1691
+          }
+        },
+        {
+          "player": "Larry Rose III",
+          "player_raw": "Larry Rose III NMST",
+          "rank": 7,
+          "team_code": "NMST",
+          "team_slug": "new-mexico-state",
+          "values": {
+            "Att": 239,
+            "Avg": 6.93,
+            "Gain": 1719,
+            "Lg": 82,
+            "Loss": 62,
+            "TD": 14,
+            "Yds": 1657
+          }
+        },
+        {
+          "player": "Donnel Pumphrey",
+          "player_raw": "Donnel Pumphrey SDSU",
+          "rank": 8,
+          "team_code": "SDSU",
+          "team_slug": "san-diego-state",
+          "values": {
+            "Att": 310,
+            "Avg": 5.34,
+            "Gain": 1741,
+            "Lg": "72t",
+            "Loss": 85,
+            "TD": 17,
+            "Yds": 1656
+          }
+        },
+        {
+          "player": "Brian Hill",
+          "player_raw": "Brian Hill WYO",
+          "rank": 9,
+          "team_code": "WYO",
+          "team_slug": "wyoming",
+          "values": {
+            "Att": 281,
+            "Avg": 5.8,
+            "Gain": 1681,
+            "Lg": "72t",
+            "Loss": 50,
+            "TD": 6,
+            "Yds": 1631
+          }
+        },
+        {
+          "player": "Matt Breida",
+          "player_raw": "Matt Breida GSU",
+          "rank": 10,
+          "team_code": "GSU",
+          "team_slug": "georgia-state",
+          "values": {
+            "Att": 203,
+            "Avg": 7.9,
+            "Gain": 1653,
+            "Lg": "87t",
+            "Loss": 50,
+            "TD": 17,
+            "Yds": 1603
+          }
+        },
+        {
+          "player": "Tyler Ervin",
+          "player_raw": "Tyler Ervin SJSU",
+          "rank": 11,
+          "team_code": "SJSU",
+          "team_slug": "san-jose-state",
+          "values": {
+            "Att": 294,
+            "Avg": 5.45,
+            "Gain": 1661,
+            "Lg": "71t",
+            "Loss": 60,
+            "TD": 13,
+            "Yds": 1601
+          }
+        },
+        {
+          "player": "Alex Collins",
+          "player_raw": "Alex Collins ARK",
+          "rank": 12,
+          "team_code": "ARK",
+          "team_slug": "arkansas",
+          "values": {
+            "Att": 271,
+            "Avg": 5.82,
+            "Gain": 1643,
+            "Lg": "80t",
+            "Loss": 66,
+            "TD": 20,
+            "Yds": 1577
+          }
+        },
+        {
+          "player": "Wendell Smallwood",
+          "player_raw": "Wendell Smallwood WVU",
+          "rank": 13,
+          "team_code": "WVU",
+          "team_slug": "west-virginia",
+          "values": {
+            "Att": 238,
+            "Avg": 6.38,
+            "Gain": 1549,
+            "Lg": 52,
+            "Loss": 30,
+            "TD": 9,
+            "Yds": 1519
+          }
+        },
+        {
+          "player": "Wayne Gallman",
+          "player_raw": "Wayne Gallman CLEM",
+          "rank": 14,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Att": 282,
+            "Avg": 5.37,
+            "Gain": 1552,
+            "Lg": "66t",
+            "Loss": 38,
+            "TD": 13,
+            "Yds": 1514
+          }
+        },
+        {
+          "player": "DeAndre Washington",
+          "player_raw": "DeAndre Washington TTU",
+          "rank": 15,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Att": 232,
+            "Avg": 6.44,
+            "Gain": 1516,
+            "Lg": "80t",
+            "Loss": 21,
+            "TD": 14,
+            "Yds": 1495
+          }
+        },
+        {
+          "player": "Elijah Hood",
+          "player_raw": "Elijah Hood UNC",
+          "rank": 16,
+          "team_code": "UNC",
+          "team_slug": "north-carolina",
+          "values": {
+            "Att": 218,
+            "Avg": 6.71,
+            "Gain": 1488,
+            "Lg": 67,
+            "Loss": 25,
+            "TD": 17,
+            "Yds": 1463
+          }
+        },
+        {
+          "player": "Marcus Cox",
+          "player_raw": "Marcus Cox APST",
+          "rank": 17,
+          "team_code": "APST",
+          "team_slug": "appalachian-state",
+          "values": {
+            "Att": 243,
+            "Avg": 5.88,
+            "Gain": 1481,
+            "Lg": 74,
+            "Loss": 53,
+            "TD": 9,
+            "Yds": 1428
+          }
+        },
+        {
+          "player": "Justin Jackson",
+          "player_raw": "Justin Jackson NW",
+          "rank": 18,
+          "team_code": "NW",
+          "team_slug": "northwestern",
+          "values": {
+            "Att": 312,
+            "Avg": 4.54,
+            "Gain": 1468,
+            "Lg": 62,
+            "Loss": 50,
+            "TD": 5,
+            "Yds": 1418
+          }
+        },
+        {
+          "player": "Marlon Mack",
+          "player_raw": "Marlon Mack USF",
+          "rank": 19,
+          "team_code": "USF",
+          "team_slug": "south-florida",
+          "values": {
+            "Att": 210,
+            "Avg": 6.58,
+            "Gain": 1418,
+            "Lg": 59,
+            "Loss": 37,
+            "TD": 8,
+            "Yds": 1381
+          }
+        },
+        {
+          "player": "Keenan Reynolds",
+          "player_raw": "Keenan Reynolds NAVY",
+          "rank": 20,
+          "team_code": "NAVY",
+          "team_slug": "navy",
+          "values": {
+            "Att": 265,
+            "Avg": 5.18,
+            "Gain": 1537,
+            "Lg": 67,
+            "Loss": 164,
+            "TD": 24,
+            "Yds": 1373
+          }
+        },
+        {
+          "player": "Samaje Perine",
+          "player_raw": "Samaje Perine OKLA",
+          "rank": 21,
+          "team_code": "OKLA",
+          "team_slug": "oklahoma",
+          "values": {
+            "Att": 226,
+            "Avg": 5.97,
+            "Gain": 1375,
+            "Lg": "72t",
+            "Loss": 26,
+            "TD": 16,
+            "Yds": 1349
+          }
+        },
+        {
+          "player": "James Butler",
+          "player_raw": "James Butler NEV",
+          "rank": 22,
+          "team_code": "NEV",
+          "team_slug": "nevada",
+          "values": {
+            "Att": 208,
+            "Avg": 6.47,
+            "Gain": 1379,
+            "Lg": 91,
+            "Loss": 34,
+            "TD": 10,
+            "Yds": 1345
+          }
+        },
+        {
+          "player": "Paul Perkins",
+          "player_raw": "Paul Perkins UCLA",
+          "rank": 23,
+          "team_code": "UCLA",
+          "team_slug": "ucla",
+          "values": {
+            "Att": 237,
+            "Avg": 5.67,
+            "Gain": 1394,
+            "Lg": "82t",
+            "Loss": 51,
+            "TD": 14,
+            "Yds": 1343
+          }
+        },
+        {
+          "player": "Mike Warren",
+          "player_raw": "Mike Warren IAST",
+          "rank": 24,
+          "team_code": "IAST",
+          "team_slug": "iowa-state",
+          "values": {
+            "Att": 227,
+            "Avg": 5.9,
+            "Gain": 1366,
+            "Lg": "76t",
+            "Loss": 27,
+            "TD": 5,
+            "Yds": 1339
+          }
+        },
+        {
+          "player": "Jeremy McNichols",
+          "player_raw": "Jeremy McNichols BSU",
+          "rank": 25,
+          "team_code": "BSU",
+          "team_slug": "boise-state",
+          "values": {
+            "Att": 240,
+            "Avg": 5.57,
+            "Gain": 1427,
+            "Lg": "88t",
+            "Loss": 90,
+            "TD": 20,
+            "Yds": 1337
+          }
+        }
+      ]
+    },
+    "sacks": {
+      "columns": [
+        "Int",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD",
+        "Solo",
+        "Ast",
+        "Tot",
+        "Sack",
+        "YdsL"
+      ],
+      "leaders": [
+        {
+          "player": "Carl Nassib",
+          "player_raw": "Carl Nassib PSU",
+          "rank": 1,
+          "team_code": "PSU",
+          "team_slug": "penn-state",
+          "values": {
+            "Ast": 15,
+            "Avg": 10.0,
+            "Int": 1,
+            "Lg": 10,
+            "Sack": 14.5,
+            "Solo": 31,
+            "TD": 0,
+            "Tot": 46,
+            "Yds": 10,
+            "YdsL": 105.0
+          }
+        },
+        {
+          "player": "Trey Hendrickson",
+          "player_raw": "Trey Hendrickson FAU",
+          "rank": 2,
+          "team_code": "FAU",
+          "team_slug": "florida-atlantic",
+          "values": {
+            "Ast": 17,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 13.0,
+            "Solo": 22,
+            "TD": 0,
+            "Tot": 39,
+            "Yds": 0,
+            "YdsL": 82.0
+          }
+        },
+        {
+          "player": "Yannick Ngakoue",
+          "player_raw": "Yannick Ngakoue MD",
+          "rank": 3,
+          "team_code": "MD",
+          "team_slug": "maryland",
+          "values": {
+            "Ast": 11,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 13.0,
+            "Solo": 26,
+            "TD": 0,
+            "Tot": 37,
+            "Yds": 0,
+            "YdsL": 75.0
+          }
+        },
+        {
+          "player": "Shaq Lawson",
+          "player_raw": "Shaq Lawson CLEM",
+          "rank": 4,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Ast": 24,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 12.5,
+            "Solo": 35,
+            "TD": 0,
+            "Tot": 59,
+            "Yds": 0,
+            "YdsL": 90.0
+          }
+        },
+        {
+          "player": "Kevin Dodd",
+          "player_raw": "Kevin Dodd CLEM",
+          "rank": 5,
+          "team_code": "CLEM",
+          "team_slug": "clemson",
+          "values": {
+            "Ast": 16,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 12.5,
+            "Solo": 46,
+            "TD": 0,
+            "Tot": 62,
+            "Yds": 0,
+            "YdsL": 76.0
+          }
+        },
+        {
+          "player": "Emmanuel Ogbah",
+          "player_raw": "Emmanuel Ogbah OKST",
+          "rank": 6,
+          "team_code": "OKST",
+          "team_slug": "oklahoma-state",
+          "values": {
+            "Ast": 21,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 12.5,
+            "Solo": 42,
+            "TD": 0,
+            "Tot": 63,
+            "Yds": 0,
+            "YdsL": 62.0
+          }
+        },
+        {
+          "player": "Jonathan Allen",
+          "player_raw": "Jonathan Allen ALA",
+          "rank": 7,
+          "team_code": "ALA",
+          "team_slug": "alabama",
+          "values": {
+            "Ast": 17,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 12.0,
+            "Solo": 19,
+            "TD": 0,
+            "Tot": 36,
+            "Yds": 0,
+            "YdsL": 88.0
+          }
+        },
+        {
+          "player": "Ejuan Price",
+          "player_raw": "Ejuan Price PITT",
+          "rank": 8,
+          "team_code": "PITT",
+          "team_slug": "pittsburgh",
+          "values": {
+            "Ast": 18,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 11.5,
+            "Solo": 30,
+            "TD": 0,
+            "Tot": 48,
+            "Yds": 0,
+            "YdsL": 89.0
+          }
+        },
+        {
+          "player": "Jatavis Brown",
+          "player_raw": "Jatavis Brown AKR",
+          "rank": 9,
+          "team_code": "AKR",
+          "team_slug": "akron",
+          "values": {
+            "Ast": 55,
+            "Avg": 0.0,
+            "Int": 1,
+            "Lg": 0,
+            "Sack": 11.5,
+            "Solo": 61,
+            "TD": 0,
+            "Tot": 116,
+            "Yds": 0,
+            "YdsL": 83.0
+          }
+        },
+        {
+          "player": "Myles Garrett",
+          "player_raw": "Myles Garrett TAMU",
+          "rank": 10,
+          "team_code": "TAMU",
+          "team_slug": "texas-am",
+          "values": {
+            "Ast": 22,
+            "Avg": 4.0,
+            "Int": 1,
+            "Lg": 4,
+            "Sack": 11.5,
+            "Solo": 37,
+            "TD": 0,
+            "Tot": 59,
+            "Yds": 4,
+            "YdsL": 67.0
+          }
+        },
+        {
+          "player": "Calvin Munson",
+          "player_raw": "Calvin Munson SDSU",
+          "rank": 11,
+          "team_code": "SDSU",
+          "team_slug": "san-diego-state",
+          "values": {
+            "Ast": 53,
+            "Avg": 43.0,
+            "Int": 2,
+            "Lg": "67t",
+            "Sack": 10.5,
+            "Solo": 45,
+            "TD": 2,
+            "Tot": 98,
+            "Yds": 86,
+            "YdsL": 76.0
+          }
+        },
+        {
+          "player": "DeForest Buckner",
+          "player_raw": "DeForest Buckner ORE",
+          "rank": 12,
+          "team_code": "ORE",
+          "team_slug": "oregon",
+          "values": {
+            "Ast": 38,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.5,
+            "Solo": 45,
+            "TD": 0,
+            "Tot": 83,
+            "Yds": 0,
+            "YdsL": 74.0
+          }
+        },
+        {
+          "player": "Shilique Calhoun",
+          "player_raw": "Shilique Calhoun MSU",
+          "rank": 13,
+          "team_code": "MSU",
+          "team_slug": "michigan-state",
+          "values": {
+            "Ast": 27,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.5,
+            "Solo": 22,
+            "TD": 0,
+            "Tot": 49,
+            "Yds": 0,
+            "YdsL": 74.0
+          }
+        },
+        {
+          "player": "Devonte Fields",
+          "player_raw": "Devonte Fields LOU",
+          "rank": 14,
+          "team_code": "LOU",
+          "team_slug": "louisville",
+          "values": {
+            "Ast": 18,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.5,
+            "Solo": 45,
+            "TD": 0,
+            "Tot": 63,
+            "Yds": 0,
+            "YdsL": 70.0
+          }
+        },
+        {
+          "player": "Ian Seau",
+          "player_raw": "Ian Seau NEV",
+          "rank": 15,
+          "team_code": "NEV",
+          "team_slug": "nevada",
+          "values": {
+            "Ast": 16,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.0,
+            "Solo": 27,
+            "TD": 0,
+            "Tot": 43,
+            "Yds": 0,
+            "YdsL": 82.0
+          }
+        },
+        {
+          "player": "Steven Taylor",
+          "player_raw": "Steven Taylor HOU",
+          "rank": 16,
+          "team_code": "HOU",
+          "team_slug": "houston",
+          "values": {
+            "Ast": 31,
+            "Avg": 15.0,
+            "Int": 2,
+            "Lg": 25,
+            "Sack": 10.0,
+            "Solo": 61,
+            "TD": 0,
+            "Tot": 92,
+            "Yds": 30,
+            "YdsL": 77.0
+          }
+        },
+        {
+          "player": "Marquis Haynes",
+          "player_raw": "Marquis Haynes MISS",
+          "rank": 17,
+          "team_code": "MISS",
+          "team_slug": "ole-miss",
+          "values": {
+            "Ast": 14,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.0,
+            "Solo": 29,
+            "TD": 0,
+            "Tot": 43,
+            "Yds": 0,
+            "YdsL": 76.0
+          }
+        },
+        {
+          "player": "Bronson Kaufusi",
+          "player_raw": "Bronson Kaufusi BYU",
+          "rank": 18,
+          "team_code": "BYU",
+          "team_slug": "byu",
+          "values": {
+            "Ast": 18,
+            "Avg": 10.0,
+            "Int": 1,
+            "Lg": 10,
+            "Sack": 10.0,
+            "Solo": 45,
+            "TD": 0,
+            "Tot": 63,
+            "Yds": 10,
+            "YdsL": 69.0
+          }
+        },
+        {
+          "player": "JT Jones",
+          "player_raw": "JT Jones MIOH",
+          "rank": 19,
+          "team_code": "MIOH",
+          "team_slug": "miami-oh",
+          "values": {
+            "Ast": 25,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.0,
+            "Solo": 27,
+            "TD": 0,
+            "Tot": 52,
+            "Yds": 0,
+            "YdsL": 59.0
+          }
+        },
+        {
+          "player": "Derek Barnett",
+          "player_raw": "Derek Barnett TENN",
+          "rank": 20,
+          "team_code": "TENN",
+          "team_slug": "tennessee",
+          "values": {
+            "Ast": 25,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 10.0,
+            "Solo": 44,
+            "TD": 0,
+            "Tot": 69,
+            "Yds": 0,
+            "YdsL": 51.0
+          }
+        },
+        {
+          "player": "Joe Schobert",
+          "player_raw": "Joe Schobert WISC",
+          "rank": 21,
+          "team_code": "WISC",
+          "team_slug": "wisconsin",
+          "values": {
+            "Ast": 40,
+            "Avg": 14.0,
+            "Int": 1,
+            "Lg": 14,
+            "Sack": 9.5,
+            "Solo": 39,
+            "TD": 0,
+            "Tot": 79,
+            "Yds": 14,
+            "YdsL": 78.0
+          }
+        },
+        {
+          "player": "Tim Williams",
+          "player_raw": "Tim Williams ALA",
+          "rank": 22,
+          "team_code": "ALA",
+          "team_slug": "alabama",
+          "values": {
+            "Ast": 6,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 9.5,
+            "Solo": 12,
+            "TD": 0,
+            "Tot": 18,
+            "Yds": 0,
+            "YdsL": 64.0
+          }
+        },
+        {
+          "player": "Nick Mangieri",
+          "player_raw": "Nick Mangieri IND",
+          "rank": 23,
+          "team_code": "IND",
+          "team_slug": "indiana",
+          "values": {
+            "Ast": 20,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 9.5,
+            "Solo": 32,
+            "TD": 0,
+            "Tot": 52,
+            "Yds": 0,
+            "YdsL": 38.0
+          }
+        },
+        {
+          "player": "Romeo Okwara",
+          "player_raw": "Romeo Okwara ND",
+          "rank": 24,
+          "team_code": "ND",
+          "team_slug": "notre-dame",
+          "values": {
+            "Ast": 17,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 9.0,
+            "Solo": 32,
+            "TD": 0,
+            "Tot": 49,
+            "Yds": 0,
+            "YdsL": 65.0
+          }
+        },
+        {
+          "player": "Gary Thompson",
+          "player_raw": "Gary Thompson MRSH",
+          "rank": 25,
+          "team_code": "MRSH",
+          "team_slug": "marshall",
+          "values": {
+            "Ast": 30,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 9.0,
+            "Solo": 29,
+            "TD": 0,
+            "Tot": 59,
+            "Yds": 0,
+            "YdsL": 64.0
+          }
+        }
+      ]
+    },
+    "tackles": {
+      "columns": [
+        "Int",
+        "Yds",
+        "Avg",
+        "Lg",
+        "TD",
+        "Solo",
+        "Ast",
+        "Tot",
+        "Sack",
+        "YdsL"
+      ],
+      "leaders": [
+        {
+          "player": "Kentrell Brothers",
+          "player_raw": "Kentrell Brothers MIZZ",
+          "rank": 1,
+          "team_code": "MIZZ",
+          "team_slug": "missouri",
+          "values": {
+            "Ast": 79,
+            "Avg": 4.5,
+            "Int": 2,
+            "Lg": 9,
+            "Sack": 2.5,
+            "Solo": 73,
+            "TD": 0,
+            "Tot": 152,
+            "Yds": 9,
+            "YdsL": 12.0
+          }
+        },
+        {
+          "player": "Nick Vigil",
+          "player_raw": "Nick Vigil USU",
+          "rank": 2,
+          "team_code": "USU",
+          "team_slug": "utah-state",
+          "values": {
+            "Ast": 76,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 3.0,
+            "Solo": 68,
+            "TD": 0,
+            "Tot": 144,
+            "Yds": 0,
+            "YdsL": 28.0
+          }
+        },
+        {
+          "player": "Austin Valdez",
+          "player_raw": "Austin Valdez BGSU",
+          "rank": 3,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Ast": 86,
+            "Avg": 3.5,
+            "Int": 2,
+            "Lg": 7,
+            "Sack": 1.0,
+            "Solo": 58,
+            "TD": 0,
+            "Tot": 144,
+            "Yds": 7,
+            "YdsL": 5.0
+          }
+        },
+        {
+          "player": "Elandon Roberts",
+          "player_raw": "Elandon Roberts HOU",
+          "rank": 4,
+          "team_code": "HOU",
+          "team_slug": "houston",
+          "values": {
+            "Ast": 54,
+            "Avg": 7.0,
+            "Int": 1,
+            "Lg": 7,
+            "Sack": 6.0,
+            "Solo": 88,
+            "TD": 0,
+            "Tot": 142,
+            "Yds": 7,
+            "YdsL": 45.0
+          }
+        },
+        {
+          "player": "Clayton Fejedelem",
+          "player_raw": "Clayton Fejedelem ILL",
+          "rank": 5,
+          "team_code": "ILL",
+          "team_slug": "illinois",
+          "values": {
+            "Ast": 66,
+            "Avg": 9.0,
+            "Int": 2,
+            "Lg": 18,
+            "Sack": 0.0,
+            "Solo": 74,
+            "TD": 0,
+            "Tot": 140,
+            "Yds": 18,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Nate Holley",
+          "player_raw": "Nate Holley KENT",
+          "rank": 6,
+          "team_code": "KENT",
+          "team_slug": "kent-state",
+          "values": {
+            "Ast": 60,
+            "Avg": 10.0,
+            "Int": 1,
+            "Lg": 10,
+            "Sack": 2.0,
+            "Solo": 79,
+            "TD": 0,
+            "Tot": 139,
+            "Yds": 10,
+            "YdsL": 14.0
+          }
+        },
+        {
+          "player": "Tyler Matakevich",
+          "player_raw": "Tyler Matakevich TEM",
+          "rank": 7,
+          "team_code": "TEM",
+          "team_slug": "temple",
+          "values": {
+            "Ast": 61,
+            "Avg": 9.4,
+            "Int": 5,
+            "Lg": 26,
+            "Sack": 4.5,
+            "Solo": 77,
+            "TD": 0,
+            "Tot": 138,
+            "Yds": 47,
+            "YdsL": 28.0
+          }
+        },
+        {
+          "player": "Blake Martinez",
+          "player_raw": "Blake Martinez STAN",
+          "rank": 8,
+          "team_code": "STAN",
+          "team_slug": "stanford",
+          "values": {
+            "Ast": 63,
+            "Avg": 10.0,
+            "Int": 1,
+            "Lg": 10,
+            "Sack": 1.5,
+            "Solo": 75,
+            "TD": 0,
+            "Tot": 138,
+            "Yds": 10,
+            "YdsL": 11.0
+          }
+        },
+        {
+          "player": "Michael Mudoh",
+          "player_raw": "Michael Mudoh TULS",
+          "rank": 9,
+          "team_code": "TULS",
+          "team_slug": "tulsa",
+          "values": {
+            "Ast": 59,
+            "Avg": 86.0,
+            "Int": 1,
+            "Lg": "86t",
+            "Sack": 0.0,
+            "Solo": 76,
+            "TD": 1,
+            "Tot": 135,
+            "Yds": 86,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Hunter Kissinger",
+          "player_raw": "Hunter Kissinger ULM",
+          "rank": 10,
+          "team_code": "ULM",
+          "team_slug": "ulm",
+          "values": {
+            "Ast": 52,
+            "Avg": 4.0,
+            "Int": 1,
+            "Lg": 4,
+            "Sack": 2.0,
+            "Solo": 81,
+            "TD": 0,
+            "Tot": 133,
+            "Yds": 4,
+            "YdsL": 9.0
+          }
+        },
+        {
+          "player": "Jovan Santos-Knox",
+          "player_raw": "Jovan Santos-Knox MASS",
+          "rank": 11,
+          "team_code": "MASS",
+          "team_slug": "umass",
+          "values": {
+            "Ast": 87,
+            "Avg": 0.0,
+            "Int": 1,
+            "Lg": 0,
+            "Sack": 3.5,
+            "Solo": 44,
+            "TD": 0,
+            "Tot": 131,
+            "Yds": 0,
+            "YdsL": 21.0
+          }
+        },
+        {
+          "player": "Great Ibe",
+          "player_raw": "Great Ibe EMU",
+          "rank": 12,
+          "team_code": "EMU",
+          "team_slug": "eastern-michigan",
+          "values": {
+            "Ast": 66,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 1.5,
+            "Solo": 63,
+            "TD": 0,
+            "Tot": 129,
+            "Yds": 0,
+            "YdsL": 11.0
+          }
+        },
+        {
+          "player": "Donnie Miles",
+          "player_raw": "Donnie Miles UNC",
+          "rank": 13,
+          "team_code": "UNC",
+          "team_slug": "north-carolina",
+          "values": {
+            "Ast": 52,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 0.0,
+            "Solo": 76,
+            "TD": 0,
+            "Tot": 128,
+            "Yds": 0,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Armani Watts",
+          "player_raw": "Armani Watts TAMU",
+          "rank": 14,
+          "team_code": "TAMU",
+          "team_slug": "texas-am",
+          "values": {
+            "Ast": 43,
+            "Avg": 10.0,
+            "Int": 1,
+            "Lg": 10,
+            "Sack": 0.0,
+            "Solo": 83,
+            "TD": 0,
+            "Tot": 126,
+            "Yds": 10,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Shakeel Rashad",
+          "player_raw": "Shakeel Rashad UNC",
+          "rank": 15,
+          "team_code": "UNC",
+          "team_slug": "north-carolina",
+          "values": {
+            "Ast": 44,
+            "Avg": 2.5,
+            "Int": 2,
+            "Lg": 5,
+            "Sack": 1.5,
+            "Solo": 82,
+            "TD": 0,
+            "Tot": 126,
+            "Yds": 5,
+            "YdsL": 8.0
+          }
+        },
+        {
+          "player": "Micah Awe",
+          "player_raw": "Micah Awe TTU",
+          "rank": 16,
+          "team_code": "TTU",
+          "team_slug": "texas-tech",
+          "values": {
+            "Ast": 49,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 0.0,
+            "Solo": 77,
+            "TD": 0,
+            "Tot": 126,
+            "Yds": 0,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Trenton Greene",
+          "player_raw": "Trenton Greene BGSU",
+          "rank": 17,
+          "team_code": "BGSU",
+          "team_slug": "bowling-green",
+          "values": {
+            "Ast": 60,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 1.0,
+            "Solo": 66,
+            "TD": 0,
+            "Tot": 126,
+            "Yds": 0,
+            "YdsL": 9.0
+          }
+        },
+        {
+          "player": "Josey Jewell",
+          "player_raw": "Josey Jewell IOWA",
+          "rank": 18,
+          "team_code": "IOWA",
+          "team_slug": "iowa",
+          "values": {
+            "Ast": 64,
+            "Avg": 15.75,
+            "Int": 4,
+            "Lg": "34t",
+            "Sack": 2.5,
+            "Solo": 62,
+            "TD": 1,
+            "Tot": 126,
+            "Yds": 63,
+            "YdsL": 29.0
+          }
+        },
+        {
+          "player": "Christian Tago",
+          "player_raw": "Christian Tago SJSU",
+          "rank": 19,
+          "team_code": "SJSU",
+          "team_slug": "san-jose-state",
+          "values": {
+            "Ast": 57,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 1.0,
+            "Solo": 67,
+            "TD": 0,
+            "Tot": 124,
+            "Yds": 0,
+            "YdsL": 10.0
+          }
+        },
+        {
+          "player": "T.J. Ricks",
+          "player_raw": "T.J. Ricks ODU",
+          "rank": 20,
+          "team_code": "ODU",
+          "team_slug": "old-dominion",
+          "values": {
+            "Ast": 76,
+            "Avg": 17.0,
+            "Int": 1,
+            "Lg": 17,
+            "Sack": 2.5,
+            "Solo": 47,
+            "TD": 0,
+            "Tot": 123,
+            "Yds": 17,
+            "YdsL": 11.0
+          }
+        },
+        {
+          "player": "Andrew Wingard",
+          "player_raw": "Andrew Wingard WYO",
+          "rank": 21,
+          "team_code": "WYO",
+          "team_slug": "wyoming",
+          "values": {
+            "Ast": 39,
+            "Avg": 0.0,
+            "Int": 1,
+            "Lg": 0,
+            "Sack": 0.0,
+            "Solo": 83,
+            "TD": 0,
+            "Tot": 122,
+            "Yds": 0,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Evan McKelvey",
+          "player_raw": "Evan McKelvey MRSH",
+          "rank": 22,
+          "team_code": "MRSH",
+          "team_slug": "marshall",
+          "values": {
+            "Ast": 71,
+            "Avg": 18.0,
+            "Int": 1,
+            "Lg": 18,
+            "Sack": 0.0,
+            "Solo": 50,
+            "TD": 0,
+            "Tot": 121,
+            "Yds": 18,
+            "YdsL": 0.0
+          }
+        },
+        {
+          "player": "Anthony Walker Jr.",
+          "player_raw": "Anthony Walker Jr. NW",
+          "rank": 23,
+          "team_code": "NW",
+          "team_slug": "northwestern",
+          "values": {
+            "Ast": 57,
+            "Avg": 3.0,
+            "Int": 1,
+            "Lg": 3,
+            "Sack": 4.0,
+            "Solo": 63,
+            "TD": 0,
+            "Tot": 120,
+            "Yds": 3,
+            "YdsL": 21.0
+          }
+        },
+        {
+          "player": "Raekwon McMillan",
+          "player_raw": "Raekwon McMillan OSU",
+          "rank": 24,
+          "team_code": "OSU",
+          "team_slug": "ohio-state",
+          "values": {
+            "Ast": 62,
+            "Avg": 0.0,
+            "Int": 0,
+            "Lg": 0,
+            "Sack": 1.5,
+            "Solo": 57,
+            "TD": 0,
+            "Tot": 119,
+            "Yds": 0,
+            "YdsL": 5.0
+          }
+        },
+        {
+          "player": "Johnathan Ford",
+          "player_raw": "Johnathan Ford AUB",
+          "rank": 25,
+          "team_code": "AUB",
+          "team_slug": "auburn",
+          "values": {
+            "Ast": 50,
+            "Avg": 24.0,
+            "Int": 2,
+            "Lg": "48t",
+            "Sack": 1.0,
+            "Solo": 68,
+            "TD": 1,
+            "Tot": 118,
+            "Yds": 48,
+            "YdsL": 7.0
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "historical-individual-leaders",
+    "notes": [
+      "Compiled: 2026-09-05 (PT)",
+      "Principle: Prefer public primary sources; do not invent missing figures. Gaps are labeled explicitly.",
+      "Each category is the published top-25 extract, not a full leaderboard.",
+      "A team_slug of null means the source's team code is not an FBS program in the 2026 registry (an FCS school, or a program that has since moved); the raw player string is preserved."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/historical/csv/individual/2015_interceptions.csv",
+      "02-stats/historical/csv/individual/2015_passing_rating.csv",
+      "02-stats/historical/csv/individual/2015_passing_td.csv",
+      "02-stats/historical/csv/individual/2015_passing_yards.csv",
+      "02-stats/historical/csv/individual/2015_receiving_td.csv",
+      "02-stats/historical/csv/individual/2015_receiving_yards.csv",
+      "02-stats/historical/csv/individual/2015_rushing_td.csv",
+      "02-stats/historical/csv/individual/2015_rushing_yards.csv",
+      "02-stats/historical/csv/individual/2015_sacks.csv",
+      "02-stats/historical/csv/individual/2015_tackles.csv"
+    ]
+  },
+  "season": 2015
+}

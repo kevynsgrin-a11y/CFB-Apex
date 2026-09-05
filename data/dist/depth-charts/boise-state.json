@@ -1,0 +1,1017 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/pac12-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/pac12-2026/boise-state.md"
+    ]
+  },
+  "schemes": {
+    "defense": "4-2-5",
+    "offense": "Spread",
+    "special_teams": null
+  },
+  "status": "PROJECTED",
+  "status_caveat": "Boise State declined to release an official public two-deep ahead of the Sep 5, 2026 opener at Oregon. Chart combines coach-confirmed Week 1 notes (Spencer Danielson) and Ourlads two-deep (updated Aug 30, 2026).",
+  "status_raw": "PROJECTED",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Boise State",
+    "slug": "boise-state"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lehi",
+                  "class": null,
+                  "class_raw": "2022",
+                  "high_school": "American Fork HS",
+                  "hometown": "Lehi, Utah",
+                  "jersey": 4,
+                  "name": "Maddux Madsen",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Utah"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 14,
+                  "name": "Max Cutforth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Moreno Valley",
+                  "class": null,
+                  "class_raw": "or rotates with Gaines",
+                  "high_school": "Rancho Verde HS",
+                  "hometown": "Moreno Valley, Calif.",
+                  "jersey": 0,
+                  "name": "Dylan Riley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 26,
+                  "name": "Sire Gaines",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Baker City, Ore. / Meridian",
+                  "class": null,
+                  "class_raw": "coach: true freshman starter",
+                  "high_school": "Rocky Mountain HS",
+                  "hometown": "Baker City, Ore. / Meridian, Idaho area",
+                  "jersey": 19,
+                  "name": "Rasean Jones",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Idaho area"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 13,
+                  "name": "Darren Morris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-X"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mansfield",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Mansfield Timberview HS",
+                  "hometown": "Mansfield, Texas",
+                  "jersey": 3,
+                  "name": "Cam Bates",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 5,
+                  "name": "Akeem Wright",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-Z"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Eagle",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Eagle HS",
+                  "hometown": "Eagle, Idaho",
+                  "jersey": 82,
+                  "name": "Ben Ford",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Idaho"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 25,
+                  "name": "Quinton Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-F / Slot"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Prosper",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Rock Hill HS",
+                  "hometown": "Prosper, Texas",
+                  "jersey": 88,
+                  "name": "Matt Wagner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 86,
+                  "name": "Austin Terry",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Midlothian",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Midlothian HS",
+                  "hometown": "Midlothian, Texas",
+                  "jersey": 78,
+                  "name": "Tyler Ethridge",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 70,
+                  "name": "Kyle Cox",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Meridian",
+                  "class": null,
+                  "class_raw": "coach-confirmed",
+                  "high_school": "Owyhee HS",
+                  "hometown": "Meridian, Idaho",
+                  "jersey": 64,
+                  "name": "Carson Rasmussen",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Idaho"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 69,
+                  "name": "Zander Esty",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "St. George",
+                  "class": null,
+                  "class_raw": "coach-confirmed over Steele",
+                  "high_school": "Bishop Gorman HS",
+                  "hometown": "St. George, Utah",
+                  "jersey": 52,
+                  "name": "Stewart Taufa",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Utah"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 67,
+                  "name": "Jason Steele",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Jal",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Jal HS",
+                  "hometown": "Jal, N.M.",
+                  "jersey": 62,
+                  "name": "Roger Carreon",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.M."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 69,
+                  "name": "Zander Esty",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Hesperia",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Oak Hills HS",
+                  "hometown": "Hesperia, Calif.",
+                  "jersey": 75,
+                  "name": "Daylon Metoyer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 66,
+                  "name": "Jacob Tracy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": "Spread",
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Cologne",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Cologne (Germany)",
+                  "hometown": "Cologne, Germany",
+                  "jersey": 95,
+                  "name": "Max Stege",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Germany"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 51,
+                  "name": "Roman Caywood",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Rosepark",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Brigham HS",
+                  "hometown": "Rosepark, Utah",
+                  "jersey": 92,
+                  "name": "David Latu",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Utah"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 96,
+                  "name": "Lopez Sanusi",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Argyle",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Argyle HS",
+                  "hometown": "Argyle, Texas",
+                  "jersey": 99,
+                  "name": "Michael Madrie",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                },
+                {
+                  "city": "Kent",
+                  "class": null,
+                  "class_raw": "coach: both start DT spots",
+                  "high_school": "Federal Way HS",
+                  "hometown": "Kent, Wash.",
+                  "jersey": 97,
+                  "name": "Mikaio Edward",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Wash."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 90,
+                  "name": "Andrew Rheubottom Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Diego",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Mt. Carmel HS",
+                  "hometown": "San Diego, Calif.",
+                  "jersey": 5,
+                  "name": "Jayden Virgin-Morgan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 13,
+                  "name": "Sterling Lane II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "EDGE / STUD"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Spokane",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Freeman HS",
+                  "hometown": "Spokane, Wash.",
+                  "jersey": 1,
+                  "name": "Boen Phelps",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Wash."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 44,
+                  "name": "Syncere Brackett-Lambey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Los Gatos",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Los Gatos HS",
+                  "hometown": "Los Gatos, Calif.",
+                  "jersey": 43,
+                  "name": "Jake Ripp",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                },
+                {
+                  "city": "Denver",
+                  "class": null,
+                  "class_raw": "coach: either-or; both banged up in camp",
+                  "high_school": "Cherry Creek HS",
+                  "hometown": "Denver, Colo.",
+                  "jersey": 17,
+                  "name": "Logan Brantley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Colo."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 18,
+                  "name": "Sam Brooks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "MLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Eastvale",
+                  "class": null,
+                  "class_raw": "rotation",
+                  "high_school": "Centennial HS",
+                  "hometown": "Eastvale, Calif.",
+                  "jersey": 7,
+                  "name": "Jaden Mickey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 8,
+                  "name": "Sherrod Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Atlanta",
+                  "class": null,
+                  "class_raw": "rotation with Mickey/Smith",
+                  "high_school": "Westlake HS",
+                  "hometown": "Atlanta, Ga.",
+                  "jersey": 6,
+                  "name": "JeRico Washington Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ga."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 14,
+                  "name": "Demetrius Freeney Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Independence",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Fort Osage HS",
+                  "hometown": "Independence, Mo.",
+                  "jersey": 22,
+                  "name": "Roman Tillmon",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mo."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Madden Soliai",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pasadena",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Arcadia HS",
+                  "hometown": "Pasadena, Calif.",
+                  "jersey": 9,
+                  "name": "Derek Ganter Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 20,
+                  "name": "Kyle Hall",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mission Viejo",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Mission Viejo HS",
+                  "hometown": "Mission Viejo, Calif.",
+                  "jersey": 4,
+                  "name": "Travis Anderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 33,
+                  "name": "Josiah Alanis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "FS"
+        }
+      ],
+      "scheme": "4-2-5",
+      "unit": "defense"
+    }
+  ]
+}

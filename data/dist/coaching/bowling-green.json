@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Eddie George",
+    "title_raw": "Eddie George"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Exact exclusive base front label Not listed as a single published “base” on materials reviewed; Joe Bowden (first season as DC) with LB duties. (Wikipedia 2026; BGSU.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Physical, run-first identity aimed at “owning the A-gaps,” with balanced pass/run usage sought after a low-efficiency 2025 attack; Nosal directs structure from the OL chair. (BG Falcon Media Eddie George philosophy piece; SI Nebraska opponent preview; BGSU Nosal elevation release.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "bgsufalcons.com",
+      "url": "https://bgsufalcons.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Eddie George",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official BGSU coaches / roster staff; Wikipedia 2026 team page",
+      "title_raw": "Eddie George"
+    },
+    {
+      "name": "Greg Nosal",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "BGSU athletics announcement; Wikipedia 2026 roster coaches block",
+      "title_raw": "Greg Nosal (also Offensive Line; sole OC as of Dec. 2025)"
+    },
+    {
+      "name": "Joe Bowden",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Wikipedia 2026 coaches block; BGSU roster",
+      "title_raw": "Joe Bowden (also Linebackers)"
+    },
+    {
+      "name": "Greg Froelich",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Wikipedia 2026 coaches block; BGSU roster",
+      "title_raw": "Greg Froelich"
+    },
+    {
+      "name": "Spencer McCourt",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "BGSU Dec. 31, 2025 announcement naming McCourt QBs coach",
+      "title_raw": "Spencer McCourt"
+    },
+    {
+      "name": "Josh Crawford",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Wikipedia 2026 coaches block",
+      "title_raw": "Josh Crawford"
+    },
+    {
+      "name": "Bruce Johnson",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Wikipedia 2026 coaches block / NCSA staff listing",
+      "title_raw": "Bruce Johnson"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Bowling Green",
+    "slug": "bowling-green"
+  }
+}
