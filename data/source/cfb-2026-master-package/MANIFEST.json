@@ -1,0 +1,4056 @@
+{
+  "package": "cfb-2026-master",
+  "generated": "2026-09-05",
+  "generated_note": "September 5, 2026 PT",
+  "root": "cfb-2026-master-package",
+  "file_count": 671,
+  "total_bytes": 35615583,
+  "category_counts": {
+    "coaching_combined": 2,
+    "coaching_conference": 10,
+    "coaching_overview": 2,
+    "package_meta": 5,
+    "roster_complete": 7,
+    "roster_depth": 7,
+    "roster_overview": 7,
+    "roster_raw": 3,
+    "roster_team": 92,
+    "sos": 12,
+    "stats_historical_csv": 241,
+    "stats_historical_md": 7,
+    "stats_historical_raw": 265,
+    "stats_injuries": 1,
+    "stats_polls": 1,
+    "stats_schedules": 2,
+    "stats_scripts": 6,
+    "stats_week0": 1
+  },
+  "files": [
+    {
+      "path": "01-rosters/aac-2026/00-executive-overview.md",
+      "size": 13334,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T07:03:30Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/01-starter-depth-charts-summary.md",
+      "size": 67873,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T07:03:30Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/AAC-2026-Football-Rosters-Complete.md",
+      "size": 316952,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T07:03:30Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/army.md",
+      "size": 20710,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:58:07Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/charlotte.md",
+      "size": 15582,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:59:03Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/east-carolina.md",
+      "size": 16618,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:59:57Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/florida-atlantic.md",
+      "size": 16491,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:58:09Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/memphis.md",
+      "size": 16281,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:59:01Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/navy.md",
+      "size": 21572,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:59:50Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/north-texas.md",
+      "size": 13975,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:58:06Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/rice.md",
+      "size": 13280,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:58:50Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/south-florida.md",
+      "size": 15525,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:59:37Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/temple.md",
+      "size": 15859,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:58:04Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/tulane.md",
+      "size": 15925,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:58:41Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/tulsa.md",
+      "size": 15296,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:59:16Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/uab.md",
+      "size": 17105,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:00:04Z"
+    },
+    {
+      "path": "01-rosters/aac-2026/utsa.md",
+      "size": 20109,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:00:32Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/00-executive-overview.md",
+      "size": 13827,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T06:51:48Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/01-starter-depth-charts-summary.md",
+      "size": 88787,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T06:52:17Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/ACC-2026-Football-Rosters-Complete.md",
+      "size": 361140,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T06:52:17Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/boston-college.md",
+      "size": 15880,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:44:58Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/california.md",
+      "size": 15127,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:41Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/clemson.md",
+      "size": 16427,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:46:16Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/duke.md",
+      "size": 11694,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:44:41Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/florida-state.md",
+      "size": 12450,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:12Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/georgia-tech.md",
+      "size": 14504,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:49Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/louisville.md",
+      "size": 14610,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:44:42Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/miami-fl.md",
+      "size": 14720,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:20Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/nc-state.md",
+      "size": 15454,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:46:01Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/north-carolina.md",
+      "size": 15396,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:44:34Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/pittsburgh.md",
+      "size": 13941,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:08Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/smu.md",
+      "size": 14998,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:52Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/stanford.md",
+      "size": 16113,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:44:36Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/syracuse.md",
+      "size": 13944,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:09Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/virginia-tech.md",
+      "size": 18253,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:46Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/virginia.md",
+      "size": 17126,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:45Z"
+    },
+    {
+      "path": "01-rosters/acc-2026/wake-forest.md",
+      "size": 15705,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:45:46Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/00-executive-overview.md",
+      "size": 14238,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T07:48:53Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/01-starter-depth-charts-summary.md",
+      "size": 77996,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T07:49:44Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/Big12-2026-Football-Rosters-Complete.md",
+      "size": 346003,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T07:49:44Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/arizona-state.md",
+      "size": 13516,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:41:59Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/arizona.md",
+      "size": 15163,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:41:28Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/baylor.md",
+      "size": 16107,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:42:34Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/byu.md",
+      "size": 14996,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:42:02Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/cincinnati.md",
+      "size": 15402,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:42:35Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/colorado.md",
+      "size": 15752,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:43:11Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/houston.md",
+      "size": 15101,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:44:54Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/iowa-state.md",
+      "size": 15687,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:44:03Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/kansas-state.md",
+      "size": 14936,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:44:18Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/kansas.md",
+      "size": 14251,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:44:03Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/oklahoma-state.md",
+      "size": 15517,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:44:18Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/raw/houston_raw.json",
+      "size": 37434,
+      "category": "roster_raw",
+      "mtime_utc": "2026-09-05T07:41:58Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/raw/iowa-state_raw.json",
+      "size": 42302,
+      "category": "roster_raw",
+      "mtime_utc": "2026-09-05T07:41:58Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/raw/kansas_raw.json",
+      "size": 38566,
+      "category": "roster_raw",
+      "mtime_utc": "2026-09-05T07:41:58Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/tcu.md",
+      "size": 14895,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:44:18Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/texas-tech.md",
+      "size": 15119,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:42:20Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/ucf.md",
+      "size": 15950,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:42:58Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/utah.md",
+      "size": 15292,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:43:36Z"
+    },
+    {
+      "path": "01-rosters/big12-2026/west-virginia.md",
+      "size": 23356,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T07:42:30Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/00-executive-overview.md",
+      "size": 13782,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T06:41:30Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/01-starter-depth-charts-summary.md",
+      "size": 69835,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T06:41:19Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/MAC-2026-Football-Rosters-Complete.md",
+      "size": 304096,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T06:41:30Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/akron.md",
+      "size": 16294,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:37:26Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/ball-state.md",
+      "size": 16804,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:04Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/bowling-green.md",
+      "size": 15273,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:39Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/buffalo.md",
+      "size": 18046,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:37:18Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/central-michigan.md",
+      "size": 17997,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:37:58Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/eastern-michigan.md",
+      "size": 18407,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:39Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/kent-state.md",
+      "size": 15387,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:37:34Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/miami-oh.md",
+      "size": 16122,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:07Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/ohio.md",
+      "size": 15656,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:43Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/sacramento-state.md",
+      "size": 19427,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:37:30Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/toledo.md",
+      "size": 17390,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:08Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/umass.md",
+      "size": 16229,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:41Z"
+    },
+    {
+      "path": "01-rosters/mac-2026/western-michigan.md",
+      "size": 15819,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:38:41Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/00-executive-overview.md",
+      "size": 11515,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T06:18:38Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/01-starter-depth-charts-summary.md",
+      "size": 58291,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T06:18:38Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/Mountain-West-2026-Football-Rosters-Complete.md",
+      "size": 242789,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T06:18:38Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/air-force.md",
+      "size": 18598,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:07Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/hawaii.md",
+      "size": 18308,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:53Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/nevada.md",
+      "size": 14858,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:03Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/new-mexico.md",
+      "size": 18404,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:48Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/north-dakota-state.md",
+      "size": 17641,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:53Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/northern-illinois.md",
+      "size": 16970,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:53Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/san-jose-state.md",
+      "size": 18141,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:16:03Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/unlv.md",
+      "size": 17430,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:16:03Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/utep.md",
+      "size": 14731,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:15:40Z"
+    },
+    {
+      "path": "01-rosters/mw-2026/wyoming.md",
+      "size": 15978,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T06:16:28Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/00-executive-overview.md",
+      "size": 9782,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T05:42:32Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/01-starter-depth-charts-summary.md",
+      "size": 33029,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T05:43:42Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/Pac-12-2026-Football-Rosters-Complete.md",
+      "size": 213749,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T05:43:53Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/boise-state.md",
+      "size": 24668,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:40:28Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/colorado-state.md",
+      "size": 27709,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:41:12Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/fresno-state.md",
+      "size": 17774,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:40:14Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/oregon-state.md",
+      "size": 17885,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:40:56Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/san-diego-state.md",
+      "size": 18362,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:40:52Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/texas-state.md",
+      "size": 17686,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:40:52Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/utah-state.md",
+      "size": 23725,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:40:17Z"
+    },
+    {
+      "path": "01-rosters/pac12-2026/washington-state.md",
+      "size": 21026,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T05:41:09Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/00-executive-overview.md",
+      "size": 13887,
+      "category": "roster_overview",
+      "mtime_utc": "2026-09-05T08:17:22Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/01-starter-depth-charts-summary.md",
+      "size": 69589,
+      "category": "roster_depth",
+      "mtime_utc": "2026-09-05T08:17:22Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/SunBelt-2026-Football-Rosters-Complete.md",
+      "size": 282153,
+      "category": "roster_complete",
+      "mtime_utc": "2026-09-05T08:17:22Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/appalachian-state.md",
+      "size": 14524,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:11:32Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/arkansas-state.md",
+      "size": 13470,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:07Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/coastal-carolina.md",
+      "size": 14832,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:12Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/georgia-southern.md",
+      "size": 15204,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:51Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/georgia-state.md",
+      "size": 14390,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:11:04Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/james-madison.md",
+      "size": 13729,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:05Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/louisiana-tech.md",
+      "size": 13751,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:07Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/louisiana.md",
+      "size": 12478,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:07Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/marshall.md",
+      "size": 12778,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:05Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/old-dominion.md",
+      "size": 14044,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:45Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/south-alabama.md",
+      "size": 14783,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:11:18Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/southern-miss.md",
+      "size": 14695,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:11:54Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/troy.md",
+      "size": 13219,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:12:33Z"
+    },
+    {
+      "path": "01-rosters/sbc-2026/ulm.md",
+      "size": 14260,
+      "category": "roster_team",
+      "mtime_utc": "2026-09-05T08:13:09Z"
+    },
+    {
+      "path": "02-stats/00-top25-ap-coaches-2026-09-05.md",
+      "size": 7197,
+      "category": "stats_polls",
+      "mtime_utc": "2026-09-05T08:22:39Z"
+    },
+    {
+      "path": "02-stats/01-injury-report-2026-09-05.md",
+      "size": 18032,
+      "category": "stats_injuries",
+      "mtime_utc": "2026-09-05T08:23:50Z"
+    },
+    {
+      "path": "02-stats/02-full-schedule-2026.md",
+      "size": 40102,
+      "category": "stats_schedules",
+      "mtime_utc": "2026-09-05T08:27:48Z"
+    },
+    {
+      "path": "02-stats/02b-g5-schedules-2026.md",
+      "size": 48739,
+      "category": "stats_schedules",
+      "mtime_utc": "2026-09-05T08:28:02Z"
+    },
+    {
+      "path": "02-stats/03-season-2026-week0-early-stats.md",
+      "size": 19686,
+      "category": "stats_week0",
+      "mtime_utc": "2026-09-05T08:23:39Z"
+    },
+    {
+      "path": "02-stats/historical/README.md",
+      "size": 7588,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:34:02Z"
+    },
+    {
+      "path": "02-stats/historical/advanced-stats.md",
+      "size": 14813,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:34:02Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2010.csv",
+      "size": 3903,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:14Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2011.csv",
+      "size": 3913,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:15Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2012.csv",
+      "size": 4039,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:16Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2013.csv",
+      "size": 4081,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:17Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2014.csv",
+      "size": 4189,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:18Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2015.csv",
+      "size": 4191,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:20Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2016.csv",
+      "size": 4184,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:21Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2017.csv",
+      "size": 4277,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:22Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2018.csv",
+      "size": 4260,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:23Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2019.csv",
+      "size": 4273,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:24Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2020.csv",
+      "size": 4124,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:25Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2021.csv",
+      "size": 4253,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:26Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2022.csv",
+      "size": 4295,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:27Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2023.csv",
+      "size": 4388,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:28Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2024.csv",
+      "size": 4417,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:29Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/fei_2025.csv",
+      "size": 4498,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:31:30Z"
+    },
+    {
+      "path": "02-stats/historical/csv/advanced/spplus_2025.csv",
+      "size": 7087,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:32:34Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_interceptions.csv",
+      "size": 1360,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:57Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_passing_rating.csv",
+      "size": 1855,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:51Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_passing_td.csv",
+      "size": 1859,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:50Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_passing_yards.csv",
+      "size": 1859,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:49Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_receiving_td.csv",
+      "size": 1073,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:55Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_receiving_yards.csv",
+      "size": 1077,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:54Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_rushing_td.csv",
+      "size": 1377,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:53Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_rushing_yards.csv",
+      "size": 1377,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:52Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_sacks.csv",
+      "size": 1415,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:56Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2012_tackles.csv",
+      "size": 1369,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:56Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_interceptions.csv",
+      "size": 1351,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:10Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_passing_rating.csv",
+      "size": 1917,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:04Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_passing_td.csv",
+      "size": 1921,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:03Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_passing_yards.csv",
+      "size": 1921,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:02Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_receiving_td.csv",
+      "size": 1068,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:08Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_receiving_yards.csv",
+      "size": 1105,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:07Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_rushing_td.csv",
+      "size": 1372,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:06Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_rushing_yards.csv",
+      "size": 1372,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:05Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_sacks.csv",
+      "size": 1348,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:09Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2013_tackles.csv",
+      "size": 1325,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:08Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_interceptions.csv",
+      "size": 1375,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:23Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_passing_rating.csv",
+      "size": 1903,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:17Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_passing_td.csv",
+      "size": 1931,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:16Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_passing_yards.csv",
+      "size": 1931,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:15Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_receiving_td.csv",
+      "size": 1061,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:21Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_receiving_yards.csv",
+      "size": 1088,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:20Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_rushing_td.csv",
+      "size": 1383,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:19Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_rushing_yards.csv",
+      "size": 1383,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:18Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_sacks.csv",
+      "size": 1334,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:22Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2014_tackles.csv",
+      "size": 1361,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:21Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_interceptions.csv",
+      "size": 1347,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:36Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_passing_rating.csv",
+      "size": 1902,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:30Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_passing_td.csv",
+      "size": 1908,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:29Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_passing_yards.csv",
+      "size": 1908,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:28Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_receiving_td.csv",
+      "size": 1087,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:34Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_receiving_yards.csv",
+      "size": 1101,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:33Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_rushing_td.csv",
+      "size": 1390,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:32Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_rushing_yards.csv",
+      "size": 1390,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:31Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_sacks.csv",
+      "size": 1340,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:35Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2015_tackles.csv",
+      "size": 1367,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:34Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_interceptions.csv",
+      "size": 1375,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:49Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_passing_rating.csv",
+      "size": 1920,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:43Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_passing_td.csv",
+      "size": 1909,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:42Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_passing_yards.csv",
+      "size": 1909,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:41Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_receiving_td.csv",
+      "size": 1059,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:46Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_receiving_yards.csv",
+      "size": 1104,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:45Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_rushing_td.csv",
+      "size": 1412,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:45Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_rushing_yards.csv",
+      "size": 1412,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:44Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_sacks.csv",
+      "size": 1359,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:48Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2016_tackles.csv",
+      "size": 1354,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:47Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_interceptions.csv",
+      "size": 1357,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:02Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_passing_rating.csv",
+      "size": 1914,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:56Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_passing_td.csv",
+      "size": 1901,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:55Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_passing_yards.csv",
+      "size": 1901,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:54Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_receiving_td.csv",
+      "size": 1035,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:59Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_receiving_yards.csv",
+      "size": 1090,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:58Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_rushing_td.csv",
+      "size": 1406,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:57Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_rushing_yards.csv",
+      "size": 1406,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:57Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_sacks.csv",
+      "size": 1330,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:01Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2017_tackles.csv",
+      "size": 1390,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:00Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_interceptions.csv",
+      "size": 1331,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:15Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_passing_rating.csv",
+      "size": 1890,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:08Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_passing_td.csv",
+      "size": 1919,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:08Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_passing_yards.csv",
+      "size": 1919,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:07Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_receiving_td.csv",
+      "size": 1087,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:12Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_receiving_yards.csv",
+      "size": 1092,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:11Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_rushing_td.csv",
+      "size": 1424,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:10Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_rushing_yards.csv",
+      "size": 1424,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:09Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_sacks.csv",
+      "size": 1338,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:14Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2018_tackles.csv",
+      "size": 1365,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:13Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_interceptions.csv",
+      "size": 1370,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:28Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_passing_rating.csv",
+      "size": 1901,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:22Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_passing_td.csv",
+      "size": 1914,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:21Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_passing_yards.csv",
+      "size": 1914,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:20Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_receiving_td.csv",
+      "size": 1087,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:25Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_receiving_yards.csv",
+      "size": 1104,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:24Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_rushing_td.csv",
+      "size": 1398,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:23Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_rushing_yards.csv",
+      "size": 1398,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:23Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_sacks.csv",
+      "size": 1356,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:27Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2019_tackles.csv",
+      "size": 1348,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:26Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_interceptions.csv",
+      "size": 1360,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:41Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_passing_rating.csv",
+      "size": 1886,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:35Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_passing_td.csv",
+      "size": 1893,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:34Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_passing_yards.csv",
+      "size": 1893,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:33Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_receiving_td.csv",
+      "size": 1027,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:38Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_receiving_yards.csv",
+      "size": 1037,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:37Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_rushing_td.csv",
+      "size": 1318,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:36Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_rushing_yards.csv",
+      "size": 1318,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:35Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_sacks.csv",
+      "size": 1332,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:40Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2020_tackles.csv",
+      "size": 1323,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:39Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_interceptions.csv",
+      "size": 1338,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:54Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_passing_rating.csv",
+      "size": 1943,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:48Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_passing_td.csv",
+      "size": 1922,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:47Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_passing_yards.csv",
+      "size": 1922,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:46Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_receiving_td.csv",
+      "size": 1086,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:51Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_receiving_yards.csv",
+      "size": 1103,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:50Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_rushing_td.csv",
+      "size": 1398,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:49Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_rushing_yards.csv",
+      "size": 1398,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:48Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_sacks.csv",
+      "size": 1348,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:53Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2021_tackles.csv",
+      "size": 1359,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:52Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_interceptions.csv",
+      "size": 1385,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:07Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_passing_rating.csv",
+      "size": 1891,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:01Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_passing_td.csv",
+      "size": 1917,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:00Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_passing_yards.csv",
+      "size": 1917,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:59Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_receiving_td.csv",
+      "size": 1073,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:04Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_receiving_yards.csv",
+      "size": 1095,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:04Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_rushing_td.csv",
+      "size": 1392,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:03Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_rushing_yards.csv",
+      "size": 1392,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:02Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_sacks.csv",
+      "size": 1332,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:06Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2022_tackles.csv",
+      "size": 1362,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:05Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_interceptions.csv",
+      "size": 1358,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:21Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_passing_rating.csv",
+      "size": 1879,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:14Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_passing_td.csv",
+      "size": 1908,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:13Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_passing_yards.csv",
+      "size": 1908,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:12Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_receiving_td.csv",
+      "size": 1051,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:18Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_receiving_yards.csv",
+      "size": 1099,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:17Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_rushing_td.csv",
+      "size": 1367,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:16Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_rushing_yards.csv",
+      "size": 1367,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:15Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_sacks.csv",
+      "size": 1373,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:20Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2023_tackles.csv",
+      "size": 1365,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:19Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_interceptions.csv",
+      "size": 1352,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:34Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_passing_rating.csv",
+      "size": 1897,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:28Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_passing_td.csv",
+      "size": 1914,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:27Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_passing_yards.csv",
+      "size": 1914,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:26Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_receiving_td.csv",
+      "size": 1042,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:31Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_receiving_yards.csv",
+      "size": 1080,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:30Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_rushing_td.csv",
+      "size": 1375,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:29Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_rushing_yards.csv",
+      "size": 1375,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:29Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_sacks.csv",
+      "size": 1362,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:33Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2024_tackles.csv",
+      "size": 1374,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:32Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_interceptions.csv",
+      "size": 1353,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:47Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_passing_rating.csv",
+      "size": 1937,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:41Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_passing_td.csv",
+      "size": 1937,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:40Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_passing_yards.csv",
+      "size": 1937,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:39Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_receiving_td.csv",
+      "size": 1066,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:44Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_receiving_yards.csv",
+      "size": 1102,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:43Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_rushing_td.csv",
+      "size": 1363,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:42Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_rushing_yards.csv",
+      "size": 1363,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:42Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_sacks.csv",
+      "size": 1353,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:46Z"
+    },
+    {
+      "path": "02-stats/historical/csv/individual/2025_tackles.csv",
+      "size": 1347,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:45Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2012_defense_passing.csv",
+      "size": 8924,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:47Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2012_defense_rushing.csv",
+      "size": 6300,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:49Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2012_defense_total.csv",
+      "size": 8240,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:46Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2012_offense_passing.csv",
+      "size": 8887,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:47Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2012_offense_rushing.csv",
+      "size": 6290,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:48Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2012_offense_total.csv",
+      "size": 8232,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:45Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2013_defense_passing.csv",
+      "size": 9005,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:00Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2013_defense_rushing.csv",
+      "size": 6365,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:02Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2013_defense_total.csv",
+      "size": 8317,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:59Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2013_offense_passing.csv",
+      "size": 8975,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:59Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2013_offense_rushing.csv",
+      "size": 6355,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:01Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2013_offense_total.csv",
+      "size": 8299,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:26:58Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2014_defense_passing.csv",
+      "size": 9255,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:13Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2014_defense_rushing.csv",
+      "size": 6552,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:14Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2014_defense_total.csv",
+      "size": 8544,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:12Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2014_offense_passing.csv",
+      "size": 9224,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:12Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2014_offense_rushing.csv",
+      "size": 6534,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:14Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2014_offense_total.csv",
+      "size": 8530,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:11Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2015_defense_passing.csv",
+      "size": 9259,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:26Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2015_defense_rushing.csv",
+      "size": 6552,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:27Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2015_defense_total.csv",
+      "size": 8554,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:25Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2015_offense_passing.csv",
+      "size": 9226,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:25Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2015_offense_rushing.csv",
+      "size": 6555,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:27Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2015_offense_total.csv",
+      "size": 8549,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:24Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2016_defense_passing.csv",
+      "size": 9235,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:39Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2016_defense_rushing.csv",
+      "size": 6543,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:40Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2016_defense_total.csv",
+      "size": 8540,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:38Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2016_offense_passing.csv",
+      "size": 9214,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:38Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2016_offense_rushing.csv",
+      "size": 6546,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:40Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2016_offense_total.csv",
+      "size": 8536,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:37Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2017_defense_passing.csv",
+      "size": 9380,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:52Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2017_defense_rushing.csv",
+      "size": 6637,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:53Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2017_defense_total.csv",
+      "size": 8675,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:50Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2017_offense_passing.csv",
+      "size": 9344,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:51Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2017_offense_rushing.csv",
+      "size": 6634,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:53Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2017_offense_total.csv",
+      "size": 8663,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:27:50Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2018_defense_passing.csv",
+      "size": 9391,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:05Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2018_defense_rushing.csv",
+      "size": 6653,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:06Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2018_defense_total.csv",
+      "size": 8678,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:03Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2018_offense_passing.csv",
+      "size": 9362,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:04Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2018_offense_rushing.csv",
+      "size": 6651,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:05Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2018_offense_total.csv",
+      "size": 8669,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:03Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2019_defense_passing.csv",
+      "size": 9385,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:18Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2019_defense_rushing.csv",
+      "size": 6638,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:19Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2019_defense_total.csv",
+      "size": 8675,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:16Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2019_offense_passing.csv",
+      "size": 9364,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:17Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2019_offense_rushing.csv",
+      "size": 6636,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:18Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2019_offense_total.csv",
+      "size": 8665,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:16Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2020_defense_passing.csv",
+      "size": 8998,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:31Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2020_defense_rushing.csv",
+      "size": 6355,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:32Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2020_defense_total.csv",
+      "size": 8417,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:29Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2020_offense_passing.csv",
+      "size": 8954,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:30Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2020_offense_rushing.csv",
+      "size": 6336,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:31Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2020_offense_total.csv",
+      "size": 8392,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:28Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2021_defense_passing.csv",
+      "size": 9393,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:44Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2021_defense_rushing.csv",
+      "size": 6636,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:45Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2021_defense_total.csv",
+      "size": 8673,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:42Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2021_offense_passing.csv",
+      "size": 9372,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:43Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2021_offense_rushing.csv",
+      "size": 6633,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:44Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2021_offense_total.csv",
+      "size": 8667,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:42Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2022_defense_passing.csv",
+      "size": 9474,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:57Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2022_defense_rushing.csv",
+      "size": 6687,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:58Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2022_defense_total.csv",
+      "size": 8745,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:55Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2022_offense_passing.csv",
+      "size": 9420,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:56Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2022_offense_rushing.csv",
+      "size": 6689,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:57Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2022_offense_total.csv",
+      "size": 8736,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:28:55Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2023_defense_passing.csv",
+      "size": 9603,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:10Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2023_defense_rushing.csv",
+      "size": 6772,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:11Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2023_defense_total.csv",
+      "size": 8862,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:09Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2023_offense_passing.csv",
+      "size": 9574,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:09Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2023_offense_rushing.csv",
+      "size": 6770,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:11Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2023_offense_total.csv",
+      "size": 8856,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:08Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2024_defense_passing.csv",
+      "size": 9675,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:24Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2024_defense_rushing.csv",
+      "size": 6843,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:25Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2024_defense_total.csv",
+      "size": 8941,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:22Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2024_offense_passing.csv",
+      "size": 9654,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:23Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2024_offense_rushing.csv",
+      "size": 6835,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:24Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2024_offense_total.csv",
+      "size": 8930,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:22Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2025_defense_passing.csv",
+      "size": 9807,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:37Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2025_defense_rushing.csv",
+      "size": 6929,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:38Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2025_defense_total.csv",
+      "size": 9072,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:35Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2025_offense_passing.csv",
+      "size": 9793,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:36Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2025_offense_rushing.csv",
+      "size": 6936,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:38Z"
+    },
+    {
+      "path": "02-stats/historical/csv/team/2025_offense_total.csv",
+      "size": 9072,
+      "category": "stats_historical_csv",
+      "mtime_utc": "2026-09-05T08:29:35Z"
+    },
+    {
+      "path": "02-stats/historical/individual-leaders-by-season.md",
+      "size": 227751,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:33:17Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2010.html",
+      "size": 147021,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:14Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2011.html",
+      "size": 147036,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:15Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2012.html",
+      "size": 151024,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:16Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2013.html",
+      "size": 151706,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:17Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2014.html",
+      "size": 153677,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:18Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2015.html",
+      "size": 153673,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:20Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2016.html",
+      "size": 153679,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:20Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2017.html",
+      "size": 155035,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:22Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2018.html",
+      "size": 155012,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:23Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2019.html",
+      "size": 155043,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:24Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2020.html",
+      "size": 152904,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:25Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2021.html",
+      "size": 155002,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:26Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2022.html",
+      "size": 155676,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:27Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2023.html",
+      "size": 157007,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:28Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2024.html",
+      "size": 157704,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:29Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_2025.html",
+      "size": 160373,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/bcftoys/fei_summary.json",
+      "size": 19243,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/coverage_probe.json",
+      "size": 4658,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:49Z"
+    },
+    {
+      "path": "02-stats/historical/raw/espn_2010_passing.json",
+      "size": 6247,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:32:08Z"
+    },
+    {
+      "path": "02-stats/historical/raw/espn_2010_team.json",
+      "size": 1758,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:30:09Z"
+    },
+    {
+      "path": "02-stats/historical/raw/espn_fpi.html",
+      "size": 750011,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:31Z"
+    },
+    {
+      "path": "02-stats/historical/raw/espn_sp_2025.html",
+      "size": 147756,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:31:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/fei_top10.json",
+      "size": 22459,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:32:34Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2012.html",
+      "size": 100562,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:55Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2013.html",
+      "size": 100894,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:08Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2014.html",
+      "size": 100898,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:21Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2015.html",
+      "size": 101152,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:34Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2016.html",
+      "size": 100877,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:46Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2017.html",
+      "size": 100804,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:59Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2018.html",
+      "size": 100918,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:12Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2019.html",
+      "size": 101027,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:25Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2020.html",
+      "size": 100888,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:38Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2021.html",
+      "size": 101135,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:51Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2022.html",
+      "size": 101028,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:04Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2023.html",
+      "size": 101078,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:18Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2024.html",
+      "size": 100903,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:31Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_rectd_2025.html",
+      "size": 100924,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:44Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2012.html",
+      "size": 100727,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:54Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2013.html",
+      "size": 101039,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:07Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2014.html",
+      "size": 101106,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:20Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2015.html",
+      "size": 101178,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:33Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2016.html",
+      "size": 100956,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2017.html",
+      "size": 101024,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:58Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2018.html",
+      "size": 101051,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:11Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2019.html",
+      "size": 101182,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:24Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2020.html",
+      "size": 100819,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:37Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2021.html",
+      "size": 101136,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:50Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2022.html",
+      "size": 100993,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:04Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2023.html",
+      "size": 101090,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:17Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2024.html",
+      "size": 100887,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_C_recyds_2025.html",
+      "size": 101009,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:43Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2012.html",
+      "size": 107136,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:57Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2013.html",
+      "size": 107340,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:10Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2014.html",
+      "size": 107166,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:23Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2015.html",
+      "size": 107339,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:36Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2016.html",
+      "size": 107442,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:49Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2017.html",
+      "size": 107154,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:02Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2018.html",
+      "size": 107157,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:15Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2019.html",
+      "size": 107510,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:28Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2020.html",
+      "size": 107012,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:41Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2021.html",
+      "size": 107208,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:54Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2022.html",
+      "size": 107505,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:07Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2023.html",
+      "size": 107364,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:21Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2024.html",
+      "size": 107289,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:34Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defint_2025.html",
+      "size": 107107,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2012.html",
+      "size": 107124,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:56Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2013.html",
+      "size": 107046,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:09Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2014.html",
+      "size": 107154,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:22Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2015.html",
+      "size": 107208,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:35Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2016.html",
+      "size": 107288,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:48Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2017.html",
+      "size": 107218,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:01Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2018.html",
+      "size": 107086,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:14Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2019.html",
+      "size": 107235,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:27Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2020.html",
+      "size": 107293,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:40Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2021.html",
+      "size": 107098,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:53Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2022.html",
+      "size": 107230,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:06Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2023.html",
+      "size": 107223,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:20Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2024.html",
+      "size": 107255,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:33Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_defsack_2025.html",
+      "size": 107272,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:46Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2012.html",
+      "size": 107011,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:56Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2013.html",
+      "size": 107148,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:08Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2014.html",
+      "size": 107061,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:21Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2015.html",
+      "size": 107222,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:34Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2016.html",
+      "size": 107197,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2017.html",
+      "size": 107163,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:00Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2018.html",
+      "size": 107142,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:13Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2019.html",
+      "size": 107406,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:26Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2020.html",
+      "size": 107136,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:39Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2021.html",
+      "size": 107013,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:52Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2022.html",
+      "size": 107311,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:05Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2023.html",
+      "size": 107137,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:19Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2024.html",
+      "size": 107288,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:32Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_D_deftot_2025.html",
+      "size": 107208,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2012.html",
+      "size": 111559,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:51Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2013.html",
+      "size": 111938,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:04Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2014.html",
+      "size": 111846,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:17Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2015.html",
+      "size": 111783,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2016.html",
+      "size": 111792,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:43Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2017.html",
+      "size": 111770,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:56Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2018.html",
+      "size": 111818,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:08Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2019.html",
+      "size": 111807,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:22Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2020.html",
+      "size": 111751,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:35Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2021.html",
+      "size": 112061,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:48Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2022.html",
+      "size": 111960,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:01Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2023.html",
+      "size": 111867,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:14Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2024.html",
+      "size": 112028,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:28Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passrate_2025.html",
+      "size": 112070,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:41Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2012.html",
+      "size": 111517,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:50Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2013.html",
+      "size": 111736,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:03Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2014.html",
+      "size": 111802,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:16Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2015.html",
+      "size": 111671,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:29Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2016.html",
+      "size": 111751,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:42Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2017.html",
+      "size": 111721,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:55Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2018.html",
+      "size": 111670,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:08Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2019.html",
+      "size": 111751,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:21Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2020.html",
+      "size": 111568,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:34Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2021.html",
+      "size": 111959,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2022.html",
+      "size": 111919,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:00Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2023.html",
+      "size": 111833,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:13Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2024.html",
+      "size": 111908,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:27Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passtd_2025.html",
+      "size": 112034,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:40Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2012.html",
+      "size": 111547,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:49Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2013.html",
+      "size": 111766,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:02Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2014.html",
+      "size": 111828,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:15Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2015.html",
+      "size": 111697,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:28Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2016.html",
+      "size": 111779,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:41Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2017.html",
+      "size": 111747,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:54Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2018.html",
+      "size": 111698,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:07Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2019.html",
+      "size": 111779,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:20Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2020.html",
+      "size": 111596,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:33Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2021.html",
+      "size": 111985,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:46Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2022.html",
+      "size": 111947,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:59Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2023.html",
+      "size": 111863,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:12Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2024.html",
+      "size": 111938,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:26Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_P_passyds_2025.html",
+      "size": 112060,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:39Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2012.html",
+      "size": 103414,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:53Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2013.html",
+      "size": 103483,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:06Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2014.html",
+      "size": 103491,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:19Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2015.html",
+      "size": 103679,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:32Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2016.html",
+      "size": 103716,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2017.html",
+      "size": 103628,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:57Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2018.html",
+      "size": 103892,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:10Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2019.html",
+      "size": 103572,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:23Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2020.html",
+      "size": 103575,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:36Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2021.html",
+      "size": 103698,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:49Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2022.html",
+      "size": 103757,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:03Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2023.html",
+      "size": 103593,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:16Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2024.html",
+      "size": 103643,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:29Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushtd_2025.html",
+      "size": 103653,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:42Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2012.html",
+      "size": 103442,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:52Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2013.html",
+      "size": 103509,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:05Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2014.html",
+      "size": 103517,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:18Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2015.html",
+      "size": 103705,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:31Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2016.html",
+      "size": 103746,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:44Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2017.html",
+      "size": 103654,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:57Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2018.html",
+      "size": 103918,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:09Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2019.html",
+      "size": 103600,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:22Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2020.html",
+      "size": 103605,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:35Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2021.html",
+      "size": 103726,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:48Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2022.html",
+      "size": 103787,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:02Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2023.html",
+      "size": 103623,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:15Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2024.html",
+      "size": 103671,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:29Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/ind_R_rushyds_2025.html",
+      "size": 103681,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:42Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2012.html",
+      "size": 108783,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2013.html",
+      "size": 109084,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:00Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2014.html",
+      "size": 110420,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:13Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2015.html",
+      "size": 110444,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:26Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2016.html",
+      "size": 110420,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:39Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2017.html",
+      "size": 111267,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:52Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2018.html",
+      "size": 111282,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:05Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2019.html",
+      "size": 111276,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:18Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2020.html",
+      "size": 110179,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2021.html",
+      "size": 111284,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:44Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2022.html",
+      "size": 111723,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:57Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2023.html",
+      "size": 112586,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:10Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2024.html",
+      "size": 113016,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:24Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_P_2025.html",
+      "size": 113856,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:37Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2012.html",
+      "size": 100258,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:49Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2013.html",
+      "size": 100501,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:02Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2014.html",
+      "size": 101654,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:14Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2015.html",
+      "size": 101674,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:27Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2016.html",
+      "size": 101665,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:40Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2017.html",
+      "size": 102381,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:53Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2018.html",
+      "size": 102399,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:06Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2019.html",
+      "size": 102386,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:19Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2020.html",
+      "size": 101471,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:32Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2021.html",
+      "size": 102384,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2022.html",
+      "size": 102751,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:58Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2023.html",
+      "size": 103492,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:11Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2024.html",
+      "size": 103883,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:25Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_R_2025.html",
+      "size": 104597,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:38Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2012.html",
+      "size": 104643,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:46Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2013.html",
+      "size": 104914,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:59Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2014.html",
+      "size": 106155,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:12Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2015.html",
+      "size": 106185,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:25Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2016.html",
+      "size": 106169,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:38Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2017.html",
+      "size": 106960,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:50Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2018.html",
+      "size": 106967,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:03Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2019.html",
+      "size": 106964,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:16Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2020.html",
+      "size": 106042,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:29Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2021.html",
+      "size": 106960,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:42Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2022.html",
+      "size": 107368,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:55Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2023.html",
+      "size": 108171,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:09Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2024.html",
+      "size": 108584,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:22Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_D_T_2025.html",
+      "size": 109377,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:35Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2012.html",
+      "size": 108654,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2013.html",
+      "size": 108958,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:59Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2014.html",
+      "size": 110295,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:12Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2015.html",
+      "size": 110315,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:25Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2016.html",
+      "size": 110305,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:38Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2017.html",
+      "size": 111135,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:51Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2018.html",
+      "size": 111159,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:04Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2019.html",
+      "size": 111159,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:17Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2020.html",
+      "size": 110041,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:30Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2021.html",
+      "size": 111169,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:43Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2022.html",
+      "size": 111575,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:56Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2023.html",
+      "size": 112463,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:09Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2024.html",
+      "size": 112903,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:23Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_P_2025.html",
+      "size": 113750,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:36Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2012.html",
+      "size": 100154,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:48Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2013.html",
+      "size": 100397,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:01Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2014.html",
+      "size": 101542,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:14Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2015.html",
+      "size": 101583,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:27Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2016.html",
+      "size": 101574,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:40Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2017.html",
+      "size": 102282,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:52Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2018.html",
+      "size": 102303,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:05Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2019.html",
+      "size": 102288,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:18Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2020.html",
+      "size": 101360,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:31Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2021.html",
+      "size": 102287,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:44Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2022.html",
+      "size": 102661,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:57Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2023.html",
+      "size": 103396,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:11Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2024.html",
+      "size": 103779,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:24Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_R_2025.html",
+      "size": 104510,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:38Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2012.html",
+      "size": 104567,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2013.html",
+      "size": 104830,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:26:58Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2014.html",
+      "size": 106073,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:11Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2015.html",
+      "size": 106114,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:24Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2016.html",
+      "size": 106101,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:37Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2017.html",
+      "size": 106882,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:27:50Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2018.html",
+      "size": 106890,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:02Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2019.html",
+      "size": 106886,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:16Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2020.html",
+      "size": 105953,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:28Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2021.html",
+      "size": 106890,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:42Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2022.html",
+      "size": 107291,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:28:55Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2023.html",
+      "size": 108099,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:08Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2024.html",
+      "size": 108509,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:22Z"
+    },
+    {
+      "path": "02-stats/historical/raw/footballdb/team_O_T_2025.html",
+      "size": 109311,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:35Z"
+    },
+    {
+      "path": "02-stats/historical/raw/scrape_manifest.json",
+      "size": 68245,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:29:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2010.html",
+      "size": 51150,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:38Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2011.html",
+      "size": 51150,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:39Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2012.html",
+      "size": 104567,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:39Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2013.html",
+      "size": 104830,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:40Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2014.html",
+      "size": 106075,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:41Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2015.html",
+      "size": 106114,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:41Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2016.html",
+      "size": 106099,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:42Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2017.html",
+      "size": 106882,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:43Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2018.html",
+      "size": 106892,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:43Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2019.html",
+      "size": 106886,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:44Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2020.html",
+      "size": 105951,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2021.html",
+      "size": 106888,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:45Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2022.html",
+      "size": 107293,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:46Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2023.html",
+      "size": 108099,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2024.html",
+      "size": 108507,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:47Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2025.html",
+      "size": 109311,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:48Z"
+    },
+    {
+      "path": "02-stats/historical/raw/team_off_2026.html",
+      "size": 67847,
+      "category": "stats_historical_raw",
+      "mtime_utc": "2026-09-05T08:25:49Z"
+    },
+    {
+      "path": "02-stats/historical/team-offense-defense-2010-2014.md",
+      "size": 27192,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:33:17Z"
+    },
+    {
+      "path": "02-stats/historical/team-offense-defense-2015-2019.md",
+      "size": 42377,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:33:17Z"
+    },
+    {
+      "path": "02-stats/historical/team-offense-defense-2020-2025.md",
+      "size": 49859,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:33:17Z"
+    },
+    {
+      "path": "02-stats/historical/team-offense-defense-by-season.md",
+      "size": 724,
+      "category": "stats_historical_md",
+      "mtime_utc": "2026-09-05T08:33:17Z"
+    },
+    {
+      "path": "02-stats/scripts/build_advanced_readme.py",
+      "size": 13388,
+      "category": "stats_scripts",
+      "mtime_utc": "2026-09-05T08:34:02Z"
+    },
+    {
+      "path": "02-stats/scripts/build_markdown.py",
+      "size": 11915,
+      "category": "stats_scripts",
+      "mtime_utc": "2026-09-05T08:33:17Z"
+    },
+    {
+      "path": "02-stats/scripts/parse_sp_fei.py",
+      "size": 1460,
+      "category": "stats_scripts",
+      "mtime_utc": "2026-09-05T08:32:34Z"
+    },
+    {
+      "path": "02-stats/scripts/probe_fdb.py",
+      "size": 1743,
+      "category": "stats_scripts",
+      "mtime_utc": "2026-09-05T08:25:37Z"
+    },
+    {
+      "path": "02-stats/scripts/scrape_fdb_historical.py",
+      "size": 7674,
+      "category": "stats_scripts",
+      "mtime_utc": "2026-09-05T08:26:44Z"
+    },
+    {
+      "path": "02-stats/scripts/scrape_fei.py",
+      "size": 2354,
+      "category": "stats_scripts",
+      "mtime_utc": "2026-09-05T08:31:12Z"
+    },
+    {
+      "path": "02-stats/sos/00-executive-overview.md",
+      "size": 4771,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:12:22Z"
+    },
+    {
+      "path": "02-stats/sos/00-sos-power-conferences-2026.md",
+      "size": 17957,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:11:44Z"
+    },
+    {
+      "path": "02-stats/sos/01-sos-aac-indy-mac-cusa-2026.md",
+      "size": 18012,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:11:09Z"
+    },
+    {
+      "path": "02-stats/sos/SOS-2026-Combined.md",
+      "size": 41481,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:12:36Z"
+    },
+    {
+      "path": "02-stats/sos/espn-fpi-sos-2025.json",
+      "size": 10252,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:10:09Z"
+    },
+    {
+      "path": "02-stats/sos/espn-fpi-sos-2026-09-04.json",
+      "size": 9818,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:09:49Z"
+    },
+    {
+      "path": "03-coaching/00-executive-overview.md",
+      "size": 7250,
+      "category": "coaching_overview",
+      "mtime_utc": "2026-09-05T09:26:26Z"
+    },
+    {
+      "path": "03-coaching/01-executive-overview-acc-g5.md",
+      "size": 9945,
+      "category": "coaching_overview",
+      "mtime_utc": "2026-09-05T09:32:27Z"
+    },
+    {
+      "path": "03-coaching/Coaching-Staffs-Schemes-2026-ACC-G5-Combined.md",
+      "size": 146176,
+      "category": "coaching_combined",
+      "mtime_utc": "2026-09-05T09:32:27Z"
+    },
+    {
+      "path": "03-coaching/Coaching-Staffs-Schemes-2026-Combined.md",
+      "size": 88312,
+      "category": "coaching_combined",
+      "mtime_utc": "2026-09-05T09:26:41Z"
+    },
+    {
+      "path": "03-coaching/aac.md",
+      "size": 25359,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:31:23Z"
+    },
+    {
+      "path": "03-coaching/acc.md",
+      "size": 23068,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:31:39Z"
+    },
+    {
+      "path": "03-coaching/big-ten.md",
+      "size": 18765,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:25:15Z"
+    },
+    {
+      "path": "03-coaching/big12.md",
+      "size": 24351,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:25:09Z"
+    },
+    {
+      "path": "03-coaching/cusa.md",
+      "size": 21053,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:31:16Z"
+    },
+    {
+      "path": "03-coaching/mac.md",
+      "size": 24099,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:31:30Z"
+    },
+    {
+      "path": "03-coaching/mountain-west.md",
+      "size": 21806,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:31:15Z"
+    },
+    {
+      "path": "03-coaching/pac12.md",
+      "size": 14413,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:24:33Z"
+    },
+    {
+      "path": "03-coaching/sec.md",
+      "size": 22844,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:25:17Z"
+    },
+    {
+      "path": "03-coaching/sun-belt.md",
+      "size": 19745,
+      "category": "coaching_conference",
+      "mtime_utc": "2026-09-05T09:30:57Z"
+    },
+    {
+      "path": "04-sos/00-executive-overview.md",
+      "size": 4771,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:12:22Z"
+    },
+    {
+      "path": "04-sos/00-sos-power-conferences-2026.md",
+      "size": 17957,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:11:44Z"
+    },
+    {
+      "path": "04-sos/01-sos-aac-indy-mac-cusa-2026.md",
+      "size": 18012,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:11:09Z"
+    },
+    {
+      "path": "04-sos/SOS-2026-Combined.md",
+      "size": 41481,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:12:36Z"
+    },
+    {
+      "path": "04-sos/espn-fpi-sos-2025.json",
+      "size": 10252,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:10:09Z"
+    },
+    {
+      "path": "04-sos/espn-fpi-sos-2026-09-04.json",
+      "size": 9818,
+      "category": "sos",
+      "mtime_utc": "2026-09-05T09:09:49Z"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 3781,
+      "category": "package_meta",
+      "mtime_utc": "2026-09-05T09:35:55Z"
+    },
+    {
+      "path": "INDEX.md",
+      "size": 9087,
+      "category": "package_meta",
+      "mtime_utc": "2026-09-05T09:35:55Z"
+    },
+    {
+      "path": "MANIFEST.json",
+      "size": 123526,
+      "category": "package_meta",
+      "mtime_utc": "2026-09-05T09:36:11Z"
+    },
+    {
+      "path": "README.md",
+      "size": 5462,
+      "category": "package_meta",
+      "mtime_utc": "2026-09-05T09:35:55Z"
+    },
+    {
+      "path": "catalog.json",
+      "size": 17940,
+      "category": "package_meta",
+      "mtime_utc": "2026-09-05T09:35:24Z"
+    }
+  ]
+}
