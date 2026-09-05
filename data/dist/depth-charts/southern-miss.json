@@ -1,0 +1,1751 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/sbc-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/sbc-2026/southern-miss.md"
+    ]
+  },
+  "schemes": {
+    "defense": null,
+    "offense": null,
+    "special_teams": null
+  },
+  "status": "OFFICIAL",
+  "status_caveat": "Status: OFFICIAL — Week 1 vs Alcorn State (released Aug 31, 2026). Multiple \"OR\" competitions.",
+  "status_raw": "OFFICIAL",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Southern Miss",
+    "slug": "southern-miss"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Elburn",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Aurora Christian HS",
+                  "hometown": "Elburn, Ill. (Illinois)",
+                  "jersey": null,
+                  "name": "Ethan Hampton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ill. (Illinois)"
+                },
+                {
+                  "city": "Stonewall",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Calvary Baptist",
+                  "hometown": "Stonewall, La. (UAB)",
+                  "jersey": null,
+                  "name": "Landry Lyddy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (UAB)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "John White",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): John White; OFFICIAL",
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "New Orleans",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Bellville HS",
+                  "hometown": "New Orleans, La. (Utah State)",
+                  "jersey": null,
+                  "name": "Robert Briggs",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (Utah State)"
+                },
+                {
+                  "city": "Baltimore",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Joppatowne HS",
+                  "hometown": "Baltimore, Md. (Coffeyville CC)",
+                  "jersey": null,
+                  "name": "Steven Robinson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Md. (Coffeyville CC)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jamarice Wilder, Jaylen Foster",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Jamarice Wilder, Jaylen Foster; OFFICIAL",
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Statesville",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Providence Day",
+                  "hometown": "Statesville, N.C. (Wingate)",
+                  "jersey": null,
+                  "name": "Jaylen Himes",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C. (Wingate)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Davis Dalton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Eelijah Singleton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Davis Dalton OR Eelijah Singleton; OFFICIAL",
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Macon",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Noxubee County HS",
+                  "hometown": "Macon, Miss. (Chattanooga)",
+                  "jersey": null,
+                  "name": "AJ Little",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Chattanooga)"
+                },
+                {
+                  "city": "Boulder",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Fairview HS",
+                  "hometown": "Boulder, Colo. (Utah State)",
+                  "jersey": null,
+                  "name": "Grant Page",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Colo. (Utah State)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kaden Saunders",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Kaden Saunders; OFFICIAL",
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Minneapolis",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Minneapolis North HS",
+                  "hometown": "Minneapolis, Minn. (Illinois)",
+                  "jersey": null,
+                  "name": "Mario Sanders",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Minn. (Illinois)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "MJ Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): MJ Johnson; OFFICIAL",
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Terrell",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Terrell HS",
+                  "hometown": "Terrell, Texas (East Texas A&M)",
+                  "jersey": null,
+                  "name": "Preston Kilgore",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas (East Texas A&M)"
+                },
+                {
+                  "city": "Fontana",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Rancho Cucamonga HS",
+                  "hometown": "Fontana, Calif. (Arkansas)",
+                  "jersey": null,
+                  "name": "Jeremiah Beck Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif. (Arkansas)"
+                },
+                {
+                  "city": "Hammond",
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": "McComb HS",
+                  "hometown": "Hammond, La.",
+                  "jersey": null,
+                  "name": "Broderick Peters",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Houston",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "George Ranch HS",
+                  "hometown": "Houston, Texas (Texas Southern)",
+                  "jersey": null,
+                  "name": "Braden Cain",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas (Texas Southern)"
+                },
+                {
+                  "city": "Belzoni",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Humphreys County HS",
+                  "hometown": "Belzoni, Miss.",
+                  "jersey": null,
+                  "name": "Larry Edwards",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Brookhaven",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Brookhaven HS",
+                  "hometown": "Brookhaven, Miss. (Troy)",
+                  "jersey": null,
+                  "name": "Zerian Hudson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Troy)"
+                },
+                {
+                  "city": "McComb",
+                  "class": "GR",
+                  "class_raw": "Gr.",
+                  "high_school": "McComb HS",
+                  "hometown": "McComb, Miss. (MGCCC)",
+                  "jersey": null,
+                  "name": "Greg Nunnery",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (MGCCC)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Toby Mealer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Toby Mealer; OFFICIAL",
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Suffolk",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "King's Fork HS",
+                  "hometown": "Suffolk, Va. (Virginia Union)",
+                  "jersey": null,
+                  "name": "Joe Rounds",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va. (Virginia Union)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Luke Rogers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Luke Rogers; OFFICIAL",
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pago Pago",
+                  "class": "GR",
+                  "class_raw": "Gr.",
+                  "high_school": "Tafuna HS",
+                  "hometown": "Pago Pago, American Samoa (Utah State)",
+                  "jersey": null,
+                  "name": "Aloali'i Maui",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "American Samoa (Utah State)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Brayden Warner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Brayden Warner; OFFICIAL",
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Orlando",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Olympia HS",
+                  "hometown": "Orlando, Fla. (Coffeyville CC)",
+                  "jersey": null,
+                  "name": "Dante Devine",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla. (Coffeyville CC)"
+                },
+                {
+                  "city": "Fredericksburg",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "James Monroe HS",
+                  "hometown": "Fredericksburg, Va. (Emory & Henry)",
+                  "jersey": null,
+                  "name": "Christian Young",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va. (Emory & Henry)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "RT"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Atlanta",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Douglas County HS",
+                  "hometown": "Atlanta, Ga. (West Virginia)",
+                  "jersey": null,
+                  "name": "Zachariah Keith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ga. (West Virginia)"
+                },
+                {
+                  "city": "Tomball",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Tomball HS",
+                  "hometown": "Tomball, Texas (Navarro)",
+                  "jersey": null,
+                  "name": "Ramon Pernas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas (Navarro)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jeffery Rush Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Jeffery Rush Jr.; OFFICIAL",
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Madison",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Germantown HS",
+                  "hometown": "Madison, Miss. (EMCC)",
+                  "jersey": null,
+                  "name": "Darrell Gross",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (EMCC)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Josh Johnson, Xavier McIver",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Josh Johnson, Xavier McIver; OFFICIAL",
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Edwardsville",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Edwardsville HS",
+                  "hometown": "Edwardsville, Ill. (SEMO)",
+                  "jersey": null,
+                  "name": "Nasim Cairo",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ill. (SEMO)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "JR Stegall, Cam'ron Hoyte",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): JR Stegall, Cam'ron Hoyte; OFFICIAL",
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Lafayette",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Carencro HS",
+                  "hometown": "Lafayette, La. (Coffeyville CC)",
+                  "jersey": null,
+                  "name": "Kameron Cyprien",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (Coffeyville CC)"
+                },
+                {
+                  "city": "McComb",
+                  "class": "GR",
+                  "class_raw": "Gr.",
+                  "high_school": "McComb HS",
+                  "hometown": "McComb, Miss. (SW Mississippi CC)",
+                  "jersey": null,
+                  "name": "Jameer Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (SW Mississippi CC)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Will Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Will Smith; OFFICIAL",
+          "position": "JACK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Fayetteville",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Sandy Creek HS",
+                  "hometown": "Fayetteville, Ga. (Marshall)",
+                  "jersey": null,
+                  "name": "Mathis Haygood",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ga. (Marshall)"
+                },
+                {
+                  "city": "Raleigh",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Leesville Road HS",
+                  "hometown": "Raleigh, N.C. (Hutchinson CC)",
+                  "jersey": null,
+                  "name": "Tyler Lassiter",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C. (Hutchinson CC)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Lawrence",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Free State HS",
+                  "hometown": "Lawrence, Kan. (Coffeyville CC)",
+                  "jersey": null,
+                  "name": "Wesley Edison",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Kan. (Coffeyville CC)"
+                },
+                {
+                  "city": "Hattiesburg",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Forrest County Ag HS",
+                  "hometown": "Hattiesburg, Miss. (Miss State)",
+                  "jersey": null,
+                  "name": "Avery Sledge",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Miss State)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "New Orleans",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Lakota West HS",
+                  "hometown": "New Orleans, La. (UCF)",
+                  "jersey": null,
+                  "name": "Jyaire Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (UCF)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kolby Peavy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Kolby Peavy; OFFICIAL",
+          "position": "NKL"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Birmingham",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Fairfield Prep",
+                  "hometown": "Birmingham, Ala. (UConn)",
+                  "jersey": null,
+                  "name": "Kobi Albert",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala. (UConn)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Malakai Murphy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jonah Martinez",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Malakai Murphy OR Jonah Martinez; OFFICIAL",
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "New Orleans",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Warren Easton HS",
+                  "hometown": "New Orleans, La. (Tulsa)",
+                  "jersey": null,
+                  "name": "Champ Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (Tulsa)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Ishmael Ibraheem",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Ishmael Ibraheem; OFFICIAL",
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Shreveport",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Calvary Baptist",
+                  "hometown": "Shreveport, La. (SEMO)",
+                  "jersey": null,
+                  "name": "Landon Sylvie",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (SEMO)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kelby Hampton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Kelby Hampton; OFFICIAL",
+          "position": "FLD S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Greenville",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Greenville HS",
+                  "hometown": "Greenville, Ala. (Kansas)",
+                  "jersey": null,
+                  "name": "Laquan Robinson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala. (Kansas)"
+                },
+                {
+                  "city": "Columbus",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Groveport Madison HS",
+                  "hometown": "Columbus, Ohio (UConn)",
+                  "jersey": null,
+                  "name": "Michael Robinson III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ohio (UConn)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "BDRY S"
+        }
+      ],
+      "scheme": null,
+      "unit": "defense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mandeville",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Mandeville HS",
+                  "hometown": "Mandeville, La.",
+                  "jersey": null,
+                  "name": "Creighton Wilbanks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Birmingham",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Mountain Brook HS",
+                  "hometown": "Birmingham, Ala. (Grambling)",
+                  "jersey": null,
+                  "name": "Reed Harradine",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala. (Grambling)"
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Reed Harradine; OFFICIAL",
+          "position": "PK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Birmingham",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Mountain Brook HS",
+                  "hometown": "Birmingham, Ala. (Grambling)",
+                  "jersey": null,
+                  "name": "Reed Harradine",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala. (Grambling)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mandeville",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Mandeville HS",
+                  "hometown": "Mandeville, La.",
+                  "jersey": null,
+                  "name": "Creighton Wilbanks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Creighton Wilbanks; OFFICIAL",
+          "position": "KO"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Gold Coast",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Griffith",
+                  "hometown": "Gold Coast, Australia (Washington)",
+                  "jersey": null,
+                  "name": "Dusty Zimmer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Australia (Washington)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Birmingham",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Mountain Brook HS",
+                  "hometown": "Birmingham, Ala. (Grambling)",
+                  "jersey": null,
+                  "name": "Reed Harradine",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala. (Grambling)"
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Reed Harradine; OFFICIAL",
+          "position": "P"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Ackerman",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Choctaw County HS",
+                  "hometown": "Ackerman, Miss. (Miss State)",
+                  "jersey": null,
+                  "name": "Luke Beard",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Miss State)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Colin Kapilovic",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Colin Kapilovic; OFFICIAL",
+          "position": "LS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "MJ Johnson, Robert Briggs",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): —; OFFICIAL",
+          "position": "KR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Macon",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Noxubee County HS",
+                  "hometown": "Macon, Miss. (Chattanooga)",
+                  "jersey": null,
+                  "name": "AJ Little",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Chattanooga)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kaden Saunders",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Kaden Saunders; OFFICIAL",
+          "position": "PR"
+        }
+      ],
+      "scheme": null,
+      "unit": "special_teams"
+    }
+  ]
+}

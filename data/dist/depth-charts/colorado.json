@@ -1,0 +1,606 @@
+{
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Fisher Clements, Charlie Williams",
+        "01-rosters/big12-2026/colorado.md": "Fisher Clements / Charlie Williams"
+      },
+      "position": "TE",
+      "unit": "offense"
+    }
+  ],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/big12-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/big12-2026/colorado.md"
+    ]
+  },
+  "schemes": {
+    "defense": null,
+    "offense": null,
+    "special_teams": null
+  },
+  "status": "OFFICIAL",
+  "status_caveat": "Week 1 starters vs Georgia Tech (game-day chart Sept 3, 2026; DNVR) + official athletics roster",
+  "status_raw": "OFFICIAL",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Colorado",
+    "slug": "colorado"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Carrollton",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "Carrollton",
+                  "hometown": "Carrollton, GA",
+                  "jersey": null,
+                  "name": "Julian Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 4,
+                  "state": "GA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Milledgeville",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Baldwin",
+                  "hometown": "Milledgeville, GA",
+                  "jersey": null,
+                  "name": "Micah Welch",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "GA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Longview",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Longview",
+                  "hometown": "Longview, TX",
+                  "jersey": null,
+                  "name": "DeKalon Taylor",
+                  "note": null,
+                  "previous_schools": "Incarnate Word",
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Bellflower",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "St. John Bosco",
+                  "hometown": "Bellflower, CA",
+                  "jersey": null,
+                  "name": "DeAndre Moore Jr.",
+                  "note": null,
+                  "previous_schools": "Texas",
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR (X)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Jose",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Archbishop Mitty",
+                  "hometown": "San Jose, CA",
+                  "jersey": null,
+                  "name": "Danny Scudero",
+                  "note": null,
+                  "previous_schools": "Sacramento State/San Jose State",
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR (Z)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Fisher Clements / Charlie Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Fairburn",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Langston Hughes",
+                  "hometown": "Fairburn, GA",
+                  "jersey": null,
+                  "name": "Bo Hughley",
+                  "note": null,
+                  "previous_schools": "Georgia",
+                  "stars": null,
+                  "state": "GA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Nashville",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "Lipscomb Academy",
+                  "hometown": "Nashville, TN",
+                  "jersey": null,
+                  "name": "Chauncey Gooden",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "TN"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Nazareth",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Nazareth",
+                  "hometown": "Nazareth, PA",
+                  "jersey": null,
+                  "name": "Sean Kinney",
+                  "note": null,
+                  "previous_schools": "Lafayette",
+                  "stars": null,
+                  "state": "PA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Upper Marlboro",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "Riverdale Baptist",
+                  "hometown": "Upper Marlboro, MD",
+                  "jersey": null,
+                  "name": "Jayvon McFadden",
+                  "note": null,
+                  "previous_schools": "Ohio State",
+                  "stars": null,
+                  "state": "MD"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dickinson",
+                  "class": "6TH",
+                  "class_raw": "6th",
+                  "high_school": "Dickinson",
+                  "hometown": "Dickinson, TX",
+                  "jersey": null,
+                  "name": "Leon Bell",
+                  "note": null,
+                  "previous_schools": "Kilgore CC/Mississippi State/California",
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Ramsey",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Don Bosco Prep",
+                  "hometown": "Ramsey, NJ",
+                  "jersey": null,
+                  "name": "Lamont Lester Jr.",
+                  "note": null,
+                  "previous_schools": "Monmouth",
+                  "stars": null,
+                  "state": "NJ"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "EDGE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Shelby",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Shelby",
+                  "hometown": "Shelby, NC",
+                  "jersey": null,
+                  "name": "Santana Hopper",
+                  "note": null,
+                  "previous_schools": "Appalachian State/Tulane",
+                  "stars": null,
+                  "state": "NC"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Stockbridge",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Stockbridge",
+                  "hometown": "Stockbridge, GA",
+                  "jersey": null,
+                  "name": "Dylan Manuel",
+                  "note": null,
+                  "previous_schools": "Appalachian State",
+                  "stars": null,
+                  "state": "GA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "St. Paul",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "East Ridge",
+                  "hometown": "St. Paul, MN",
+                  "jersey": null,
+                  "name": "Toby Anene",
+                  "note": null,
+                  "previous_schools": "North Dakota State",
+                  "stars": null,
+                  "state": "MN"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "EDGE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "LaGrange",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Keystone",
+                  "hometown": "LaGrange, OH",
+                  "jersey": null,
+                  "name": "Gideon ESPN Lampron",
+                  "note": null,
+                  "previous_schools": "Dayton/Bowling Green",
+                  "stars": null,
+                  "state": "OH"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Albuquerque",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Volcano Vista",
+                  "hometown": "Albuquerque, NM",
+                  "jersey": null,
+                  "name": "Tyler Martinez",
+                  "note": null,
+                  "previous_schools": "NMMI/New Mexico State",
+                  "stars": null,
+                  "state": "NM"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kahuku",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Kahuku",
+                  "hometown": "Kahuku, HI",
+                  "jersey": null,
+                  "name": "Liona Lefau",
+                  "note": null,
+                  "previous_schools": "Texas",
+                  "stars": null,
+                  "state": "HI"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Phoenix",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "Brophy Prep",
+                  "hometown": "Phoenix, AZ",
+                  "jersey": null,
+                  "name": "Cree Thomas",
+                  "note": null,
+                  "previous_schools": "Notre Dame",
+                  "stars": null,
+                  "state": "AZ"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Chattanooga",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Bradley Central",
+                  "hometown": "Chattanooga, TN",
+                  "jersey": null,
+                  "name": "Boo Carter",
+                  "note": null,
+                  "previous_schools": "Tennessee",
+                  "stars": null,
+                  "state": "TN"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Freeport",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Brazosport",
+                  "hometown": "Freeport, TX",
+                  "jersey": null,
+                  "name": "Randon Fontenette",
+                  "note": null,
+                  "previous_schools": "TCU/Vanderbilt",
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Temple",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Temple",
+                  "hometown": "Temple, TX",
+                  "jersey": null,
+                  "name": "Naeten Mitchell",
+                  "note": null,
+                  "previous_schools": "New Mexico State",
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Tallahassee",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Robert F. Munroe",
+                  "hometown": "Tallahassee, FL",
+                  "jersey": null,
+                  "name": "Makari Vickers",
+                  "note": null,
+                  "previous_schools": "Oklahoma",
+                  "stars": null,
+                  "state": "FL"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "Nickel"
+        }
+      ],
+      "scheme": null,
+      "unit": "defense"
+    }
+  ]
+}

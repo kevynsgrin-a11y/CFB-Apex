@@ -16,6 +16,16 @@
         "teams": 138
       }
     },
+    "depth_charts": {
+      "artifacts": 93,
+      "counts": {
+        "conflicts": 191,
+        "official": 35,
+        "projected": 34,
+        "starters": 2665,
+        "teams": 92
+      }
+    },
     "injuries": {
       "artifacts": 3,
       "counts": {
@@ -47,7 +57,7 @@
     "schedules": {
       "artifacts": 140,
       "counts": {
-        "distinct_games": 925,
+        "distinct_games": 917,
         "neutral_games": 8,
         "team_games": 1665,
         "teams": 138,
@@ -63,6 +73,25 @@
         "teams_2026": 106,
         "teams_missing": 32
       }
+    },
+    "stats_current": {
+      "artifacts": 10,
+      "counts": {
+        "early_leader_sections": 2,
+        "games_with_detail": 8,
+        "teams_with_games": 16,
+        "week0_results": 8
+      }
+    },
+    "stats_historical": {
+      "artifacts": 45,
+      "counts": {
+        "advanced_seasons": 16,
+        "individual_seasons": 14,
+        "leader_rows": 3500,
+        "team_rows": 1815,
+        "team_seasons": 14
+      }
     }
   },
   "meta": {
@@ -76,11 +105,7 @@
       "catalog.json"
     ]
   },
-  "missing_parsers": [
-    "depth_charts",
-    "stats_current",
-    "stats_historical"
-  ],
+  "missing_parsers": [],
   "team_count": 138,
-  "warning_count": 9
+  "warning_count": 12
 }

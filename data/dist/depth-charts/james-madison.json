@@ -1,0 +1,1034 @@
+{
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "JC Evans, Camden Coleman",
+        "01-rosters/sbc-2026/james-madison.md": "JC Evans (#1) beat / Camden Coleman (#7) Ourlads"
+      },
+      "position": "QB",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "Evan Bushong, Tyler Brown",
+        "01-rosters/sbc-2026/james-madison.md": "Evan Bushong (#73) beat / Tyler Brown (#56) Ourlads LG"
+      },
+      "position": "LG",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "Tyler Brown, Evan Bushong",
+        "01-rosters/sbc-2026/james-madison.md": "Tyler Brown (#56) beat / Evan Bushong (#73) Ourlads"
+      },
+      "position": "RG",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "DJ Kelly, Damier Minkah",
+        "01-rosters/sbc-2026/james-madison.md": "DJ Kelly (#6) beat / Damier Minkah (#1) Ourlads RCB"
+      },
+      "position": "CB",
+      "unit": "defense"
+    },
+    {
+      "per_source": {
+        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "TJ McGill, Seth Gathers",
+        "01-rosters/sbc-2026/james-madison.md": "TJ McGill (#16) beat / Seth Gathers (#31) Ourlads"
+      },
+      "position": "SS",
+      "unit": "defense"
+    },
+    {
+      "per_source": {
+        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "Seth Gathers, Jayon Harvey, Javis Mynatt",
+        "01-rosters/sbc-2026/james-madison.md": "Seth Gathers / Jayon Harvey beat / Javis Mynatt (#7) Ourlads"
+      },
+      "position": "FS",
+      "unit": "defense"
+    }
+  ],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/sbc-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/sbc-2026/james-madison.md"
+    ]
+  },
+  "schemes": {
+    "defense": "3-3-5 / multiple",
+    "offense": "JMU Sports News",
+    "special_teams": null
+  },
+  "status": "PROJECTED",
+  "status_caveat": "Depth chart status: JMU does not release an official depth chart (per JMU Sports News). Charts below are PROJECTED. Roster is OFFICIAL.",
+  "status_raw": "PROJECTED",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "James Madison",
+    "slug": "james-madison"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "JC Evans (#1) beat / Camden Coleman (#7) Ourlads",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Other of Evans/Coleman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Suffolk",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Nansemond-Suffolk Academy",
+                  "hometown": "Suffolk, Va. (North Carolina)",
+                  "jersey": 6,
+                  "name": "George Pettaway",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va. (North Carolina)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 34,
+                  "name": "Seth Cromwell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 23,
+                  "name": "Nick Herman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Jacksonville",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Episcopal",
+                  "hometown": "Jacksonville, Fla. (West Florida)",
+                  "jersey": 3,
+                  "name": "Corey Scott",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla. (West Florida)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Za'Ron Collins (#12) / Smoke Collins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Charlotte",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "Julius L. Chambers",
+                  "hometown": "Charlotte, N.C. (ETSU)",
+                  "jersey": 8,
+                  "name": "Jeremiah Harrison",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C. (ETSU)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 11,
+                  "name": "Noah Grevious",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Elysburg",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Southern Columbia Area",
+                  "hometown": "Elysburg, Pa. (Maryland)",
+                  "jersey": 10,
+                  "name": "Braeden Wisloski",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Pa. (Maryland)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 17,
+                  "name": "Michael Scott",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Grain Valley",
+                  "class": "6TH",
+                  "class_raw": "6th",
+                  "high_school": "Grain Valley",
+                  "hometown": "Grain Valley, Mo. (ETSU)",
+                  "jersey": 0,
+                  "name": "Cole Keller",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mo. (ETSU)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 13,
+                  "name": "KD Mosley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Union Grove",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Union Grove",
+                  "hometown": "Union Grove, Wis. (Wisconsin-River Falls)",
+                  "jersey": 77,
+                  "name": "DJ Fox",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Wis. (Wisconsin-River Falls)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 53,
+                  "name": "Daniel Michel",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Evan Bushong (#73) beat / Tyler Brown (#56) Ourlads LG",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 75,
+                  "name": "Wyatt Maines",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Livingston",
+                  "class": null,
+                  "class_raw": "7th",
+                  "high_school": "Livingston",
+                  "hometown": "Livingston, N.J. (North Carolina)",
+                  "jersey": 60,
+                  "name": "Zach Greenberg",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.J. (North Carolina)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Jackson",
+                  "class": null,
+                  "class_raw": "8th",
+                  "high_school": "St. Joseph Catholic",
+                  "hometown": "Jackson, Miss. (Colorado)",
+                  "jersey": 56,
+                  "name": "Tyler Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Colorado)"
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Tyler Brown (#56) beat / Evan Bushong (#73) Ourlads",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 76,
+                  "name": "Frankie Tinilau",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Elizabeth City",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Kempsville [VA]",
+                  "hometown": "Elizabeth City, N.C.",
+                  "jersey": 71,
+                  "name": "Deacon Rawls",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 53,
+                  "name": "Daniel Michel",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": "JMU Sports News",
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dallas",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Duncanville",
+                  "hometown": "Dallas, Texas (Lamar)",
+                  "jersey": 9,
+                  "name": "Kei'Trone Simpson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas (Lamar)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 98,
+                  "name": "Danny Royster (#17) / Turner Schmidt",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pensacola",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Pine Forest",
+                  "hometown": "Pensacola, Fla. (Nicholls)",
+                  "jersey": 55,
+                  "name": "Rasheed Lovelace",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla. (Nicholls)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 91,
+                  "name": "Kevin Roberts (#5) / Jakolbi Wilson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "New Orleans",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Edna Karr",
+                  "hometown": "New Orleans, La. (Louisiana Tech)",
+                  "jersey": 88,
+                  "name": "Kells Bush",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La. (Louisiana Tech)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Mychal McMullin (#93) / Chukwunedu Okeke",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Upper Marlboro",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Wise",
+                  "hometown": "Upper Marlboro, Md.",
+                  "jersey": 8,
+                  "name": "Amar Thomas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Md."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 0,
+                  "name": "Mason Purham",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "JACK/EDGE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Stockton",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Edison",
+                  "hometown": "Stockton, Calif. (Nevada)",
+                  "jersey": 2,
+                  "name": "Nakian Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif. (Nevada)"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 15,
+                  "name": "JT Hooten",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Atlanta",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Langston Hughes",
+                  "hometown": "Atlanta, Ga.",
+                  "jersey": 3,
+                  "name": "Gannon Weathersby",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ga."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 26,
+                  "name": "Jayden Studio",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Charlotte",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Julius L. Chambers",
+                  "hometown": "Charlotte, N.C.",
+                  "jersey": 14,
+                  "name": "KJ Flowe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 25,
+                  "name": "Terrence Jones",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "Nickel"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Ken Willis (#23) beat / DJ Kelly (#6) Ourlads LCB",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 11,
+                  "name": "Damier Minkah (#1) / LaRon Dues",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "DJ Kelly (#6) beat / Damier Minkah (#1) Ourlads RCB",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "TJ McGill (#16) beat / Seth Gathers (#31) Ourlads",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 22,
+                  "name": "Chase Regan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Seth Gathers / Jayon Harvey beat / Javis Mynatt (#7) Ourlads",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Charlotte",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Julius L. Chambers",
+                  "hometown": "Charlotte, N.C. (William & Mary)",
+                  "jersey": null,
+                  "name": "TJ McGill",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C. (William & Mary)"
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "FS"
+        }
+      ],
+      "scheme": "3-3-5 / multiple",
+      "unit": "defense"
+    }
+  ]
+}

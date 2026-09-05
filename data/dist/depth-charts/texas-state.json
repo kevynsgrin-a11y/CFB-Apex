@@ -1,0 +1,730 @@
+{
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/pac12-2026/01-starter-depth-charts-summary.md": "Greg Burrell (spring featured) / rotation",
+        "01-rosters/pac12-2026/texas-state.md": "Greg Burrell (not on Sep 2026 official roster fetch — verify) / rotation"
+      },
+      "position": "RB",
+      "unit": "offense"
+    }
+  ],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/pac12-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/pac12-2026/texas-state.md"
+    ]
+  },
+  "schemes": {
+    "defense": "projected 4-2-5",
+    "offense": null,
+    "special_teams": null
+  },
+  "status": "PROJECTED",
+  "status_caveat": "Official weekly two-deep not fully published in fetched pages. Projected from Dave Campbell’s Texas Football (Mar 31, 2026) spring notes + Ourlads offense snapshot (May 2026) + Wikipedia portal notes.",
+  "status_raw": "PROJECTED (WEAKER CONFIDENCE)",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Texas State",
+    "slug": "texas-state"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Antonio",
+                  "class": null,
+                  "class_raw": "2024",
+                  "high_school": "Reagan HS",
+                  "hometown": "San Antonio, TX",
+                  "jersey": 8,
+                  "name": "Brad Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Shaker Reisig (BC transfer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kinne: QB2)",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Greg Burrell (not on Sep 2026 official roster fetch — verify) / rotation",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 4,
+                  "name": "Torrance Burgess Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "El Paso",
+                  "class": null,
+                  "class_raw": "Transfer (Utah Tech)",
+                  "high_school": "Franklin HS",
+                  "hometown": "El Paso, TX",
+                  "jersey": 11,
+                  "name": "Beau Sparks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "depth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR1"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dallas",
+                  "class": null,
+                  "class_raw": "2023",
+                  "high_school": "Mesquite Horn",
+                  "hometown": "Dallas, TX",
+                  "jersey": 1,
+                  "name": "Chris Dawn Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "depth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR2"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Pickens",
+                  "class": null,
+                  "class_raw": "Transfer (Arizona State)",
+                  "high_school": "Katy Jordan",
+                  "hometown": "Pickens, MS",
+                  "jersey": 3,
+                  "name": "Zechariah Sample",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "MS"
+                },
+                {
+                  "city": "McKinney",
+                  "class": null,
+                  "class_raw": "2024",
+                  "high_school": "Frisco Emerson",
+                  "hometown": "McKinney, TX",
+                  "jersey": 2,
+                  "name": "Kylen Evans",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 13,
+                  "name": "Tucker Cusano",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR3"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kilgore",
+                  "class": null,
+                  "class_raw": "2026",
+                  "high_school": "Kilgore HS",
+                  "hometown": "Kilgore, TX",
+                  "jersey": 12,
+                  "name": "La'Keyleon Graves",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 4,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR/ATH"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Southlake",
+                  "class": null,
+                  "class_raw": "Transfer (Oklahoma)",
+                  "high_school": "Southlake Carroll",
+                  "hometown": "Southlake, TX",
+                  "jersey": 16,
+                  "name": "Blake Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 18,
+                  "name": "Ty Stamey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Plano",
+                  "class": null,
+                  "class_raw": "Transfer (Tulane)",
+                  "high_school": "Plano HS",
+                  "hometown": "Plano, TX",
+                  "jersey": 68,
+                  "name": "Sully Burns",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 71,
+                  "name": "William Boone / #75 Rasheed Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "OT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kingsville",
+                  "class": null,
+                  "class_raw": "C projected",
+                  "high_school": "H.M. King",
+                  "hometown": "Kingsville, TX",
+                  "jersey": 66,
+                  "name": "Justin DeLeon",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 50,
+                  "name": "Jaylen Early, #53 Cameron Schultz",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "IOL"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 78,
+                  "name": "Amari Smith, #79 Alan Grimme, #74 Jayden Luckett, #70 Ameer Ross",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "OL depth"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Welch",
+                  "class": null,
+                  "class_raw": "Transfer (ULM/UAB/FSU)",
+                  "high_school": "LaFayette",
+                  "hometown": "Welch, AL",
+                  "jersey": 4,
+                  "name": "Tae Woody",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "AL"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 96,
+                  "name": "Bryce Carter, #91 J.P. Deeter, #90 Chancellor Owens, #99 Kaleb James, #44 Phillip Bradford",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Jackson",
+                  "class": null,
+                  "class_raw": "Transfer (Mississippi State)",
+                  "high_school": "Provine",
+                  "hometown": "Jackson, MS",
+                  "jersey": 5,
+                  "name": "DonTerry Russell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "MS"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 6,
+                  "name": "Jo'Laison Landry (ACL recovery), #13 Ta'Derius Collins, #38 Mekhi Buchanan, #33 Blake Isbell, #31 Cullen Thompson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "EDGE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pearland",
+                  "class": null,
+                  "class_raw": "Transfer (TCU/Texas)",
+                  "high_school": "Shadow Creek",
+                  "hometown": "Pearland, TX",
+                  "jersey": 16,
+                  "name": "Terrence Cooks II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 12,
+                  "name": "Javante Mackey, #21 Jordan Sample",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "St. Louis",
+                  "class": null,
+                  "class_raw": "Transfer (UTEP / Iowa Western)",
+                  "high_school": "Cardinal Ritter",
+                  "hometown": "St. Louis, MO",
+                  "jersey": 2,
+                  "name": "Trez Moore",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "MO"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 24,
+                  "name": "Dexter Ricks Jr., #3 Craig Royal Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Gainesville",
+                  "class": null,
+                  "class_raw": "Transfer (Hutchinson CC)",
+                  "high_school": "Gainesville",
+                  "hometown": "Gainesville, FL",
+                  "jersey": 7,
+                  "name": "Ryan Nolan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "FL"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 0,
+                  "name": "Jayden Lawton (CB→S), #26 Chase Davis, #19 Michael Patterson III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "Boundary S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dallas",
+                  "class": null,
+                  "class_raw": "2023",
+                  "high_school": "Mesquite Horn",
+                  "hometown": "Dallas, TX",
+                  "jersey": 1,
+                  "name": "Amarion Atwood",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 22,
+                  "name": "Will Mitchell II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "Nickel"
+        }
+      ],
+      "scheme": "projected 4-2-5",
+      "unit": "defense"
+    }
+  ]
+}

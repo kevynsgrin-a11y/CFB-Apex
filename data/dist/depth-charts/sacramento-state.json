@@ -1,0 +1,991 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/mac-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/mac-2026/sacramento-state.md"
+    ]
+  },
+  "schemes": {
+    "defense": "3-4 / nickel",
+    "offense": "Multiple / Spread",
+    "special_teams": null
+  },
+  "status": "MIXED",
+  "status_caveat": "MIXED — Ourlads projected (08/25/2026) base; Conklin named season starter (Aug 23) then hand injury → Sharman starts Week 2 vs MVSU (State Hornet); FCS→FBS football-only MAC member",
+  "status_raw": "MIXED",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Sacramento State",
+    "slug": "sacramento-state"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Folsom HS; Sacramento",
+                  "class": "JR",
+                  "class_raw": "Jr. (2V)",
+                  "high_school": null,
+                  "hometown": "Folsom HS; Sacramento, Calif.",
+                  "jersey": 12,
+                  "name": "Onterrio Smith Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 4,
+                  "name": "Kenyon Shabazz",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-X"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Long Beach Poly HS; Long Beach",
+                  "class": "SO",
+                  "class_raw": "So. (TR); via Idaho State",
+                  "high_school": null,
+                  "hometown": "Long Beach Poly HS; Long Beach, Calif.",
+                  "jersey": 5,
+                  "name": "Raiden Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Jace Wilson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-Z"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Serra HS; Carson",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via San Jose State",
+                  "high_school": null,
+                  "hometown": "Serra HS; Carson, Calif.",
+                  "jersey": 2,
+                  "name": "Matt Coleman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 7,
+                  "name": "Khai Taylor",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-H"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Morgan Park HS; Chicago",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via Incarnate Word",
+                  "high_school": null,
+                  "hometown": "Morgan Park HS; Chicago, Ill.",
+                  "jersey": 54,
+                  "name": "Shontrail Key",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ill."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 63,
+                  "name": "Jamin Guilbert",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Foothill HS; Pleasanton",
+                  "class": "SR",
+                  "class_raw": "Sr. (3V)",
+                  "high_school": null,
+                  "hometown": "Foothill HS; Pleasanton, Calif.",
+                  "jersey": 64,
+                  "name": "Brandon Sousa",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 70,
+                  "name": "Jaxon Moore",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Oak Ridge HS; El Dorado Hills",
+                  "class": "SR",
+                  "class_raw": "Sr. (2V); via Coastal Carolina",
+                  "high_school": null,
+                  "hometown": "Oak Ridge HS; El Dorado Hills, Calif.",
+                  "jersey": 71,
+                  "name": "Bryson Summers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 56,
+                  "name": "Jeremiah Ponce",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Orem HS; Orem",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via Weber State",
+                  "high_school": null,
+                  "hometown": "Orem HS; Orem, Utah",
+                  "jersey": 74,
+                  "name": "Vae Soifua",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Utah"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 76,
+                  "name": "Alex Kenward",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Palo Alto HS; Palo Alto",
+                  "class": "SO",
+                  "class_raw": "So. (1V)",
+                  "high_school": null,
+                  "hometown": "Palo Alto HS; Palo Alto, Calif.",
+                  "jersey": 77,
+                  "name": "Jeremiah Stallworth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 55,
+                  "name": "Garrison Blank",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "St. Paul HS; Riverside",
+                  "class": "SR",
+                  "class_raw": "Sr. (1V); via Colorado State",
+                  "high_school": null,
+                  "hometown": "St. Paul HS; Riverside, Calif.",
+                  "jersey": 16,
+                  "name": "Jordan Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 88,
+                  "name": "Cedric Anton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Centennial HS; Yorba Linda",
+                  "class": "JR",
+                  "class_raw": "Jr. (TR); via Fresno State",
+                  "high_school": null,
+                  "hometown": "Centennial HS; Yorba Linda, Calif.",
+                  "jersey": 17,
+                  "name": "Carson Conklin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 8,
+                  "name": "Jackson Sharman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "St. John's College HS; Waldorf",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS); via Lafayette",
+                  "high_school": null,
+                  "hometown": "St. John's College HS; Waldorf, Md.",
+                  "jersey": 1,
+                  "name": "Jamar Curtis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Md."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 23,
+                  "name": "Elias Brown / #22 Isaiah Ene†",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RB"
+        }
+      ],
+      "scheme": "Multiple / Spread",
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Atwater HS; Gustine",
+                  "class": "SR",
+                  "class_raw": "Sr. (3V)",
+                  "high_school": null,
+                  "hometown": "Atwater HS; Gustine, Calif.",
+                  "jersey": 45,
+                  "name": "Xavier Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 90,
+                  "name": "Austin Chambers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Marist HS; Chicago",
+                  "class": "JR",
+                  "class_raw": "Jr. (TR); via Wisconsin",
+                  "high_school": null,
+                  "hometown": "Marist HS; Chicago, Ill.",
+                  "jersey": 58,
+                  "name": "Jamel Howard Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Ill."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 9,
+                  "name": "Malik Tullis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Sierra Vista HS; Watts",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via Florida A&M",
+                  "high_school": null,
+                  "hometown": "Sierra Vista HS; Watts, Calif.",
+                  "jersey": 5,
+                  "name": "Nick Dimitris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 55,
+                  "name": "Miles Bailey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lincoln HS; Tracy",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via Fresno State",
+                  "high_school": null,
+                  "hometown": "Lincoln HS; Tracy, Calif.",
+                  "jersey": 26,
+                  "name": "Tim Thomas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 11,
+                  "name": "Ivan Moore Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Rocklin HS; Rocklin",
+                  "class": "JR",
+                  "class_raw": "Jr. (2V)",
+                  "high_school": null,
+                  "hometown": "Rocklin HS; Rocklin, Calif.",
+                  "jersey": 10,
+                  "name": "Derek Houston",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 16,
+                  "name": "Leki Holani",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "MLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Hillside HS; Hillside",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via Lafayette",
+                  "high_school": null,
+                  "hometown": "Hillside HS; Hillside, N.J.",
+                  "jersey": 8,
+                  "name": "Darson Jeanty",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.J."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 28,
+                  "name": "Jiah Walls",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lawndale HS; Carson",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via Portland State",
+                  "high_school": null,
+                  "hometown": "Lawndale HS; Carson, Calif.",
+                  "jersey": 2,
+                  "name": "Dionte Thornton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 12,
+                  "name": "Malikai Nichols",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "El Cerrito HS; Richmond",
+                  "class": "JR",
+                  "class_raw": "Jr. (1V); via Washington State",
+                  "high_school": null,
+                  "hometown": "El Cerrito HS; Richmond, Calif.",
+                  "jersey": 6,
+                  "name": "Warren Smith Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 13,
+                  "name": "Diesel Gordon",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "American Heritage HS; Pembroke Pines",
+                  "class": "SR",
+                  "class_raw": "Sr. (TR); via USF",
+                  "high_school": null,
+                  "hometown": "American Heritage HS; Pembroke Pines, Fla.",
+                  "jersey": 1,
+                  "name": "Boogsie Silvera",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 0,
+                  "name": "Donovan Turner",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "FS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Rocklin HS; Rocklin",
+                  "class": "SR",
+                  "class_raw": "Sr. (3V)",
+                  "high_school": null,
+                  "hometown": "Rocklin HS; Rocklin, Calif.",
+                  "jersey": 22,
+                  "name": "Elias Mullican",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 29,
+                  "name": "Caleb Reese",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Miami Central HS; Miami",
+                  "class": "RFR",
+                  "class_raw": "R-Fr. (TR); via Miami",
+                  "high_school": null,
+                  "hometown": "Miami Central HS; Miami, Fla.",
+                  "jersey": 3,
+                  "name": "Amari Wallace",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 4,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 25,
+                  "name": "Naytel Mitchell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NB"
+        }
+      ],
+      "scheme": "3-4 / nickel",
+      "unit": "defense"
+    }
+  ]
+}

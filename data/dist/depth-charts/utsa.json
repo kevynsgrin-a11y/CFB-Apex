@@ -1,0 +1,1567 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/aac-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/aac-2026/utsa.md"
+    ]
+  },
+  "schemes": {
+    "defense": "3-4 / odd front",
+    "offense": null,
+    "special_teams": null
+  },
+  "status": "OFFICIAL",
+  "status_caveat": "Primary depth chart = OFFICIAL Week 1 vs UTRGV game notes.",
+  "status_raw": "OFFICIAL",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "aac",
+    "school": "UTSA",
+    "slug": "utsa"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Salpointe Catholic HS (Santa Rosa JC)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Tucson, Ariz.",
+                  "hometown": "Salpointe Catholic HS (Santa Rosa JC)",
+                  "jersey": null,
+                  "name": "Jonah Miller",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Hattiesburg HS",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Hattiesburg, Miss.",
+                  "hometown": "Hattiesburg HS",
+                  "jersey": null,
+                  "name": "A'marion Breland",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "MJ Senegal",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): MJ Senegal; OFFICIAL",
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Central Catholic HS",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "San Antonio, Texas",
+                  "hometown": "Central Catholic HS",
+                  "jersey": null,
+                  "name": "Ben Rios",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Summer Creek HS",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Humble, Texas",
+                  "hometown": "Summer Creek HS",
+                  "jersey": null,
+                  "name": "Luke Lapeze",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Forest Park HS (Bowie State)",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Baltimore, Md.",
+                  "hometown": "Forest Park HS (Bowie State)",
+                  "jersey": null,
+                  "name": "Darrell Jones",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Port Neches-Groves HS (Houston)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Port Neches, Texas",
+                  "hometown": "Port Neches-Groves HS (Houston)",
+                  "jersey": null,
+                  "name": "Jaylen Garth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Central Catholic HS",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "San Antonio, Texas",
+                  "hometown": "Central Catholic HS",
+                  "jersey": null,
+                  "name": "Deandre Marshall",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "RT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Legacy HS (North Texas)",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Mansfield, Texas",
+                  "hometown": "Legacy HS (North Texas)",
+                  "jersey": null,
+                  "name": "Brandon Young Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                },
+                {
+                  "city": "Grand Oaks HS",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Spring, Texas",
+                  "hometown": "Grand Oaks HS",
+                  "jersey": null,
+                  "name": "Ty Rupe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "TE (Y)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Huntsville HS (Houston Christian)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Huntsville, Texas",
+                  "hometown": "Huntsville HS (Houston Christian)",
+                  "jersey": null,
+                  "name": "AJ Wilson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Lincoln HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Dallas, Texas",
+                  "hometown": "Lincoln HS",
+                  "jersey": null,
+                  "name": "Jamel Hardy Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "WR (X)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "North Shore HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Houston, Texas",
+                  "hometown": "North Shore HS",
+                  "jersey": null,
+                  "name": "David Amador II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "WR (H)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Armwood HS",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Tampa, Fla.",
+                  "hometown": "Armwood HS",
+                  "jersey": null,
+                  "name": "Mekhi Anderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "WR (Z)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Rusk HS (Colorado)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Rusk, Texas",
+                  "hometown": "Rusk HS (Colorado)",
+                  "jersey": null,
+                  "name": "Owen McCown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Gilmer HS",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Gilmer, Texas",
+                  "hometown": "Gilmer HS",
+                  "jersey": null,
+                  "name": "Will Henderson III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "RB"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "North Shore HS",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Houston, Texas",
+                  "hometown": "North Shore HS",
+                  "jersey": null,
+                  "name": "Tai Leonard",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Drenon Fite III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jacob Lopez-Veasey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Drenon Fite III; Jacob Lopez-Veasey; OFFICIAL",
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Warren Easton HS",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "New Orleans, La.",
+                  "hometown": "Warren Easton HS",
+                  "jersey": null,
+                  "name": "Jameian Buxton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jusiah Sampleton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Donald Quaite Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Jusiah Sampleton; Donald Quaite Jr.; OFFICIAL",
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Smyrna HS (Eastern Kentucky)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Smyrna, Tenn.",
+                  "hometown": "Smyrna HS (Eastern Kentucky)",
+                  "jersey": null,
+                  "name": "Jeremiah Bailey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Eddy Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Collins Acheampong",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Eddy Smith; Collins Acheampong; OFFICIAL",
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dayton HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Dayton, Texas",
+                  "hometown": "Dayton HS",
+                  "jersey": null,
+                  "name": "Camron Cooper",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Elijah Baldwin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Dylan Spencer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Elijah Baldwin OR Dylan Spencer; OFFICIAL",
+          "position": "WLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "DeSoto HS (East Texas A&M)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "DeSoto, Texas",
+                  "hometown": "DeSoto HS (East Texas A&M)",
+                  "jersey": null,
+                  "name": "Brandon Tucker",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "James Walley Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Eze Osondu",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): James Walley Jr.; Eze Osondu; OFFICIAL",
+          "position": "MIKE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Cypress Park HS",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Cypress, Texas",
+                  "hometown": "Cypress Park HS",
+                  "jersey": null,
+                  "name": "Owen Pewee",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "La Vega HS (Tyler JC)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Waco, Texas",
+                  "hometown": "La Vega HS (Tyler JC)",
+                  "jersey": null,
+                  "name": "Darion White",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Braeden Lott",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Amare Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Braeden Lott; Amare Johnson; OFFICIAL",
+          "position": "JACK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Brandeis HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "San Antonio, Texas",
+                  "hometown": "Brandeis HS",
+                  "jersey": null,
+                  "name": "Chris Bryson II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Fort Bend Christian Academy (Washington State)",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Houston, Texas",
+                  "hometown": "Fort Bend Christian Academy (Washington State)",
+                  "jersey": null,
+                  "name": "Bryce Grays",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Willie Nelson III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Willie Nelson III; OFFICIAL",
+          "position": "$B (Money)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Cajon HS (San Bernardino Valley JC)",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "San Bernardino, Calif.",
+                  "hometown": "Cajon HS (San Bernardino Valley JC)",
+                  "jersey": null,
+                  "name": "Asaad Chapman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 4,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Ahamad Chapman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jakevian Rodgers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Ahamad Chapman OR Jakevian Rodgers; OFFICIAL",
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Maumelle HS",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Maumelle, Ark.",
+                  "hometown": "Maumelle HS",
+                  "jersey": null,
+                  "name": "Elijah Newell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Nate Robinson Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jarvse Dickerson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Nate Robinson Jr. OR Jarvse Dickerson; OFFICIAL",
+          "position": "S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Taylor County HS (Memphis)",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Perry, Fla.",
+                  "hometown": "Taylor County HS (Memphis)",
+                  "jersey": null,
+                  "name": "Cameron Upshaw Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Xavier Walton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Joel Rogers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Xavier Walton OR Joel Rogers; OFFICIAL",
+          "position": "S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Northside HS (Oklahoma State)",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Fort Smith, Ark.",
+                  "hometown": "Northside HS (Oklahoma State)",
+                  "jersey": null,
+                  "name": "RJ Lester Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Zach Morris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Lawrence Brown Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Zach Morris OR Lawrence Brown Jr.; OFFICIAL",
+          "position": "CB"
+        }
+      ],
+      "scheme": "3-4 / odd front",
+      "unit": "defense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lake Travis HS",
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": "Austin, Texas",
+                  "hometown": "Lake Travis HS",
+                  "jersey": null,
+                  "name": "Braydon Doane",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Marcus HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Flower Mound, Texas",
+                  "hometown": "Marcus HS",
+                  "jersey": null,
+                  "name": "Michael Petro",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Michael Petro; OFFICIAL",
+          "position": "KO"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Marcus HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Flower Mound, Texas",
+                  "hometown": "Marcus HS",
+                  "jersey": null,
+                  "name": "Michael Petro",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lake Travis HS",
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": "Austin, Texas",
+                  "hometown": "Lake Travis HS",
+                  "jersey": null,
+                  "name": "Braydon Doane",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Braydon Doane; OFFICIAL",
+          "position": "PK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Marcellin College",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Melbourne, Australia",
+                  "hometown": "Marcellin College",
+                  "jersey": null,
+                  "name": "Caile Hogan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jason Cardenas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Jason Cardenas; OFFICIAL",
+          "position": "H"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Katy HS",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Katy, Texas",
+                  "hometown": "Katy HS",
+                  "jersey": null,
+                  "name": "Jon Stephens III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Sumrall HS (Jones College)",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Sumrall, Miss.",
+                  "hometown": "Sumrall HS (Jones College)",
+                  "jersey": null,
+                  "name": "William Hodges",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "LS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Marcellin College",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Melbourne, Australia",
+                  "hometown": "Marcellin College",
+                  "jersey": null,
+                  "name": "Caile Hogan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jason Cardenas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Jason Cardenas; OFFICIAL",
+          "position": "P"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "North Shore HS",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Houston, Texas",
+                  "hometown": "North Shore HS",
+                  "jersey": null,
+                  "name": "David Amador II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Armwood HS",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Tampa, Fla.",
+                  "hometown": "Armwood HS",
+                  "jersey": null,
+                  "name": "Mekhi Anderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "OFFICIAL",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "note": "Backup(s): Mekhi Anderson; OFFICIAL",
+          "position": "PR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Armwood HS",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Tampa, Fla.",
+                  "hometown": "Armwood HS",
+                  "jersey": null,
+                  "name": "Mekhi Anderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Grand Oaks HS (California)",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Spring, Texas",
+                  "hometown": "Grand Oaks HS (California)",
+                  "jersey": null,
+                  "name": "Brandon High Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                },
+                {
+                  "city": "Humble HS (Texas Tech)",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Houston, Texas",
+                  "hometown": "Humble HS (Texas Tech)",
+                  "jersey": null,
+                  "name": "TJ West",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "note": "OFFICIAL",
+          "position": "KR"
+        }
+      ],
+      "scheme": null,
+      "unit": "special_teams"
+    }
+  ]
+}

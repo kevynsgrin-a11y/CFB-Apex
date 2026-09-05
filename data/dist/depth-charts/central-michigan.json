@@ -1,0 +1,1262 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/mac-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/mac-2026/central-michigan.md"
+    ]
+  },
+  "schemes": {
+    "defense": "unofficial",
+    "offense": "unofficial; updated 08/12/2026",
+    "special_teams": "unofficial"
+  },
+  "status": "PROJECTED",
+  "status_caveat": "PROJECTED — Ourlads (08/12/2026); By The Belt injury notes (McIntosh ACL; Joey VanWetzinga season); no official CMU Week-1 chart",
+  "status_raw": "PROJECTED",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Central Michigan",
+    "slug": "central-michigan"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Islands H.S.",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Savannah, Ga.",
+                  "hometown": "Islands H.S.",
+                  "jersey": 20,
+                  "name": "Langston Lewis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 6,
+                  "name": "Collin Payne",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 81,
+                  "name": "Tayte Vanderleest",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WR-X"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Gadsden County H.S.",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Tallahassee, Fla.",
+                  "hometown": "Gadsden County H.S.",
+                  "jersey": 3,
+                  "name": "Nasir Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Sr., TR Sac State",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 84,
+                  "name": "Dontae Robinson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WR-Z"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Christian Academy of Louisville/Oldham H.S.",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Buckner, Ky.",
+                  "hometown": "Christian Academy of Louisville/Oldham H.S.",
+                  "jersey": 9,
+                  "name": "Justin Ruffin, Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Sr., TR MSU/Hope",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 16,
+                  "name": "Shawn Foster II",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 12,
+                  "name": "Camden Kruisenga",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "WR-SL"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Glen Ridge H.S.",
+                  "class": null,
+                  "class_raw": "Sr., TR Valparaiso",
+                  "high_school": "Glen Ridge, N.J.",
+                  "hometown": "Glen Ridge H.S.",
+                  "jersey": 70,
+                  "name": "Jacob Russell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 69,
+                  "name": "Jacob Booth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "5th, TR Georgetown",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 72,
+                  "name": "Trevor Swan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Divine Child H.S.",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Allen Park, Mich.",
+                  "hometown": "Divine Child H.S.",
+                  "jersey": 59,
+                  "name": "Brady Ploucha",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "5th, TR Columbia",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 60,
+                  "name": "John Iannuzzi",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kahuku H.S.",
+                  "class": null,
+                  "class_raw": "5th, TR Georgetown",
+                  "high_school": "Ewa, Hawaii",
+                  "hometown": "Kahuku H.S.",
+                  "jersey": 55,
+                  "name": "Losini Maka",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "DeWitt H.S.",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "DeWitt, Mich.",
+                  "hometown": "DeWitt H.S.",
+                  "jersey": 66,
+                  "name": "Matthew Nehf",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 73,
+                  "name": "Dasan Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 78,
+                  "name": "Talon Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Shakopee H.S.",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Shakopee, Minn.",
+                  "hometown": "Shakopee H.S.",
+                  "jersey": 76,
+                  "name": "Martin Koivisto",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Sr., TR EIU",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 56,
+                  "name": "Nic DiSanto",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 58,
+                  "name": "John Williams (Sr.) / #54 Triston Pierre",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Washington Township H.S.",
+                  "class": null,
+                  "class_raw": "5th, TR Fordham",
+                  "high_school": "Sewell, N.J.",
+                  "hometown": "Washington Township H.S.",
+                  "jersey": 88,
+                  "name": "Jaden Allen",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "So., TR Snow",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 85,
+                  "name": "Myles Peters",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 87,
+                  "name": "Gavin Spillers (Jr.) / #42 Landon Swanson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Casa Grande H.S.",
+                  "class": null,
+                  "class_raw": "Sr., TR NAU",
+                  "high_school": "Casa Grande, Ariz.",
+                  "hometown": "Casa Grande H.S.",
+                  "jersey": 7,
+                  "name": "Angel Flores",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Sr., TR Butte",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 10,
+                  "name": "Marcus Beamon",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 5,
+                  "name": "Jadyn Glasser",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Caledonia H.S.",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Caledonia, Mich.",
+                  "hometown": "Caledonia H.S.",
+                  "jersey": 2,
+                  "name": "Brock Townsend",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Sr., TR Liberty",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 24,
+                  "name": "Vaughn Blue",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 31,
+                  "name": "Jayden Clerveaux (Sr., TR Holy Cross) / #22 Trav Moore",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pleasant Valley H.S.",
+                  "class": null,
+                  "class_raw": "Sr., TR Iowa",
+                  "high_school": "Pleasant Valley, Iowa",
+                  "hometown": "Pleasant Valley H.S.",
+                  "jersey": 8,
+                  "name": "Rusty VanWetzinga IV",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "FB"
+        }
+      ],
+      "scheme": "unofficial; updated 08/12/2026",
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Gretna H.S.",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Gretna, Neb.",
+                  "hometown": "Gretna H.S.",
+                  "jersey": 5,
+                  "name": "Korver Demma",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 48,
+                  "name": "Nathan VanTimmeren",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Jr., TR Cumberlands",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 6,
+                  "name": "Hunter Zirkle",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LDE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Bartow Senior H.S.",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Lake Wales, Fla.",
+                  "hometown": "Bartow Senior H.S.",
+                  "jersey": 96,
+                  "name": "Quavion Bird",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "5th, TR Laney",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 52,
+                  "name": "Dominique Maiava",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Columbia H.S.",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "White Springs, Fla.",
+                  "hometown": "Columbia H.S.",
+                  "jersey": 0,
+                  "name": "D.J. Bennett",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "5th, TR Cornell",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 97,
+                  "name": "Max Van Fleet",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "So., TR Iowa",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 95,
+                  "name": "Joey VanWetzinga",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Parker H.S.",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Janesville, Wis.",
+                  "hometown": "Parker H.S.",
+                  "jersey": 1,
+                  "name": "JJ Douglas",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "So., TR Chaffey",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 50,
+                  "name": "Donovan Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RDE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Romeo H.S.",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Romeo, Mich.",
+                  "hometown": "Romeo H.S.",
+                  "jersey": 8,
+                  "name": "Victor Earl",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "5th, TR Central Washington",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 40,
+                  "name": "Brett McCalla",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Sierra Canyon School",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Los Angeles, Calif.",
+                  "hometown": "Sierra Canyon School",
+                  "jersey": 11,
+                  "name": "Xavier White",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Sr., TR Weber St.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 35,
+                  "name": "Mayson Hitchens",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 30,
+                  "name": "Antonio Cherry, Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "MLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Norland H.S.",
+                  "class": null,
+                  "class_raw": "Jr., TR Campbell",
+                  "high_school": "Miramar, Fla.",
+                  "hometown": "Norland H.S.",
+                  "jersey": 12,
+                  "name": "Donavan Philord",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "5th, TR Butte",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 24,
+                  "name": "Ty Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 21,
+                  "name": "Jamari Allen",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "LCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Phoebus H.S.",
+                  "class": null,
+                  "class_raw": "5th, TR N. Colorado",
+                  "high_school": "Hampton, Va.",
+                  "hometown": "Phoebus H.S.",
+                  "jersey": 19,
+                  "name": "Darrell Bryant, Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 7,
+                  "name": "Ed Conoran",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 22,
+                  "name": "Nolan Anderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "SS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Nazareth Academy",
+                  "class": null,
+                  "class_raw": "Sr., TR Wyoming/Wisconsin",
+                  "high_school": "Chicago, Ill.",
+                  "hometown": "Nazareth Academy",
+                  "jersey": 14,
+                  "name": "Justin Taylor",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "So., TR Saddleback",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 17,
+                  "name": "Coen Ali",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "FS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "The Benjamin School",
+                  "class": null,
+                  "class_raw": "Jr., TR Bethune-Cookman",
+                  "high_school": "West Palm Beach, Fla.",
+                  "hometown": "The Benjamin School",
+                  "jersey": 26,
+                  "name": "Matthew McKenzie",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 23,
+                  "name": "Kyle Krebs",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 25,
+                  "name": "Trey Liebhardt",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 3
+            }
+          ],
+          "position": "RCB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "East St. Louis H.S.",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "East St. Louis, Ill.",
+                  "hometown": "East St. Louis H.S.",
+                  "jersey": 4,
+                  "name": "Jaion Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 41,
+                  "name": "Keyton Jones",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NB"
+        }
+      ],
+      "scheme": "unofficial",
+      "unit": "defense"
+    }
+  ]
+}

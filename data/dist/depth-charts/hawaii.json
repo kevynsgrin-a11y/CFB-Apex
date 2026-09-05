@@ -1,0 +1,1517 @@
+{
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/mw-2026/01-starter-depth-charts-summary.md": "Tre' Griffiths",
+        "01-rosters/mw-2026/hawaii.md": "Tre' Griffiths (So./TR) (SA) / Carson Brown (Sr./TR)"
+      },
+      "position": "RWO (Z)",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/mw-2026/01-starter-depth-charts-summary.md": "Blaze Kamoku",
+        "01-rosters/mw-2026/hawaii.md": "Blaze Kamoku (Sr.) (SA) / Audric Harris (Jr./TR)"
+      },
+      "position": "SB (Y)",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/mw-2026/01-starter-depth-charts-summary.md": "Luther McCoy",
+        "01-rosters/mw-2026/hawaii.md": "Luther McCoy (Gr.) (SA) / Ozzy Pollard (So./TR)"
+      },
+      "position": "NT",
+      "unit": "defense"
+    },
+    {
+      "per_source": {
+        "01-rosters/mw-2026/01-starter-depth-charts-summary.md": "Haʻaheo Dela Cruz",
+        "01-rosters/mw-2026/hawaii.md": "Haʻaheo Dela Cruz (So.) (SA) / Kaʻeo Akana (Sr./TR)"
+      },
+      "position": "DE / RDE",
+      "unit": "defense"
+    }
+  ],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/mw-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/mw-2026/hawaii.md"
+    ]
+  },
+  "schemes": {
+    "defense": "4-2-5",
+    "offense": "Run-and-Shoot",
+    "special_teams": null
+  },
+  "status": "PROJECTED",
+  "status_caveat": "Honolulu Star-Advertiser Stanford opener projection (Aug 28) aligned with Ourlads (Sep 3). No single official UH public PDF in sources.",
+  "status_raw": "PROJECTED",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "Hawai'i",
+    "slug": "hawaii"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Las Vegas",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Bishop Gorman",
+                  "hometown": "Las Vegas, Nev.",
+                  "jersey": null,
+                  "name": "Micah Alejado",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Nev."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Bjorn Jurgensen",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Isaac Jaramilla-Phe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Hazyn Botelho",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Las Vegas",
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": "Bishop Gorman",
+                  "hometown": "Las Vegas, Nev.",
+                  "jersey": null,
+                  "name": "Cam Barfield",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Nev."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "DeVon Rice",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Sitani Mikaele",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "TJ Fo'ilefutu",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Melbourne",
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": "Melbourne Senior",
+                  "hometown": "Melbourne, Fla.",
+                  "jersey": null,
+                  "name": "Devin Alves",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Nick Delgadillo",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LWO (X)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Ourlads WR-Z1",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Tre' Griffiths (So./TR) (SA) / Carson Brown (Sr./TR)",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Keller",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Keller HS",
+                  "hometown": "Keller, Texas",
+                  "jersey": null,
+                  "name": "Tre' Griffiths",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 4,
+                  "state": "Texas"
+                },
+                {
+                  "city": "Des Moines",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Dowling Catholic",
+                  "hometown": "Des Moines, Iowa",
+                  "jersey": null,
+                  "name": "Carson Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Iowa"
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RWO (Z)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Ourlads WR-Y1",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Blaze Kamoku (Sr.) (SA) / Audric Harris (Jr./TR)",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Bellflower",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Bishop Gorman",
+                  "hometown": "Bellflower, Calif.",
+                  "jersey": null,
+                  "name": "Audric Harris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                },
+                {
+                  "city": "Kapolei",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Kamehameha Schools",
+                  "hometown": "Kapolei, Oʻahu",
+                  "jersey": null,
+                  "name": "Blaze Kamoku",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Oʻahu"
+                },
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Koa Eldredge",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Josiah Fetui",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SB (Y)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Waipahu",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Waipahu HS",
+                  "hometown": "Waipahu, Oʻahu",
+                  "jersey": null,
+                  "name": "Tama Uiliata",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 2,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "RFR",
+                  "class_raw": "RFr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kainoa \"Kaikai\" Carvalho",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "RFR",
+                  "class_raw": "RFr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Titan Lacaden",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "SB (H)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Honolulu",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Saint Louis School",
+                  "hometown": "Honolulu, Oʻahu",
+                  "jersey": null,
+                  "name": "Devon Tauaefa",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "RFR",
+                  "class_raw": "RFr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Frank Abreu",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Oakie Salave'a",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Los Angeles",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Junipero Serra",
+                  "hometown": "Los Angeles, Calif.",
+                  "jersey": null,
+                  "name": "Boogie Henderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "RFR",
+                  "class_raw": "RFr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Uluaki Taukiuvea",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Eric McFall",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Riverside",
+                  "class": "JR",
+                  "class_raw": "Jr./TR",
+                  "high_school": "Mater Dei HS",
+                  "hometown": "Riverside, Calif.",
+                  "jersey": null,
+                  "name": "Lipe Moala",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Denaris DeRosa Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kailua",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Saint Louis School",
+                  "hometown": "Kailua, Oʻahu",
+                  "jersey": null,
+                  "name": "Ethan Spencer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Tuʻi Muti",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kāneʻohe",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Kahuku HS",
+                  "hometown": "Kāneʻohe, Oʻahu",
+                  "jersey": null,
+                  "name": "Judah Kaio",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Lautaimi Manuma",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Khalil Walker",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Pago Pago",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Samoana HS",
+                  "hometown": "Pago Pago, American Samoa",
+                  "jersey": null,
+                  "name": "Dean Briski",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "American Samoa"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jay Tauala-Harris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Vake Hehea",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": "Run-and-Shoot",
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Nuʻuuli",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Tafuna HS",
+                  "hometown": "Nuʻuuli, American Samoa",
+                  "jersey": null,
+                  "name": "Lesterlaisene Lagafuaina",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "American Samoa"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Josh Sagapolutele",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Honolulu",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "ʻIolani School",
+                  "hometown": "Honolulu, Oʻahu",
+                  "jersey": null,
+                  "name": "Haʻaheo Dela Cruz",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Oʻahu"
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Noah Wily",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "Rush / LDE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "McDonough",
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": "Union Grove HS",
+                  "hometown": "McDonough, Ga.",
+                  "jersey": null,
+                  "name": "Geoffrey Speight Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ga."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "St. John's",
+                  "class": "GR",
+                  "class_raw": "Gr./TR",
+                  "high_school": "Creekside HS",
+                  "hometown": "St. John's, Fla.",
+                  "jersey": null,
+                  "name": "Luther McCoy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Fla."
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Zoram Petelo",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Iosefa Letuli",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Ourlads NT1",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Luther McCoy (Gr.) (SA) / Ozzy Pollard (So./TR)",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Elijah Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jordan Lynch",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "NT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "Ourlads RDE1",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Haʻaheo Dela Cruz (So.) (SA) / Kaʻeo Akana (Sr./TR)",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Spencer Elliott",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Adam Tomczyk",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "DE / RDE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kapolei",
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": "Mililani HS",
+                  "hometown": "Kapolei, Oʻahu",
+                  "jersey": null,
+                  "name": "Wynden Hoʻohuli",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 4,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Matteus Ioane",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "RFR",
+                  "class_raw": "RFr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Aisiah \"Scoob\" Paogofie",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "MLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Las Vegas",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Bishop Gorman",
+                  "hometown": "Las Vegas, Nev.",
+                  "jersey": null,
+                  "name": "Jamih Otis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Nev."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "RFR",
+                  "class_raw": "RFr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Zaden Mariteragi",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Julian \"JuJu\" Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "WLB / DLB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Las Vegas",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Bishop Gorman",
+                  "hometown": "Las Vegas, Nev.",
+                  "jersey": null,
+                  "name": "Elijah Palmer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Nev."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "NB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Long Beach",
+                  "class": "SO",
+                  "class_raw": "So./TR",
+                  "high_school": "Western HS",
+                  "hometown": "Long Beach, Calif.",
+                  "jersey": null,
+                  "name": "Jaylon Edmond",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jeremiah Hughes",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Los Angeles",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Oaks Christian",
+                  "hometown": "Los Angeles, Calif.",
+                  "jersey": null,
+                  "name": "Elijah Gipson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Zion Allen",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Honolulu",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Punahou School",
+                  "hometown": "Honolulu, Oʻahu",
+                  "jersey": null,
+                  "name": "Matagi Thompson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "JR",
+                  "class_raw": "Jr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Kodi DeCambra",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Kapolei",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Saint Louis School",
+                  "hometown": "Kapolei, Oʻahu",
+                  "jersey": null,
+                  "name": "Kona Moore",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr./TR",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Joenel Figueroa",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "S"
+        }
+      ],
+      "scheme": "4-2-5",
+      "unit": "defense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Juan Capistrano",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "St. Margaret’s Episcopal",
+                  "hometown": "San Juan Capistrano, Calif.",
+                  "jersey": null,
+                  "name": "Sean Olvera-Harle",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Phoenix",
+                  "class": "FR",
+                  "class_raw": "Fr./TR",
+                  "high_school": "Arcadia HS",
+                  "hometown": "Phoenix, Ariz.",
+                  "jersey": null,
+                  "name": "Gehrig Heil",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                },
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Hudson Borsari",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "PK/KO"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Phoenix",
+                  "class": "FR",
+                  "class_raw": "Fr./TR",
+                  "high_school": "Arcadia HS",
+                  "hometown": "Phoenix, Ariz.",
+                  "jersey": null,
+                  "name": "Gehrig Heil",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Gannon Miller",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "P/H"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Charlotte",
+                  "class": "JR",
+                  "class_raw": "Jr./TR",
+                  "high_school": "Ardrey Kell",
+                  "hometown": "Charlotte, N.C.",
+                  "jersey": null,
+                  "name": "Jack Mowrey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Nick Pang",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "LS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Las Vegas",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Bishop Gorman",
+                  "hometown": "Las Vegas, Nev.",
+                  "jersey": null,
+                  "name": "Cam Barfield",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 3,
+                  "state": "Nev."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "KR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Waipahu",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Waipahu HS",
+                  "hometown": "Waipahu, Oʻahu",
+                  "jersey": null,
+                  "name": "Tama Uiliata",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": 2,
+                  "state": "Oʻahu"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "PR"
+        }
+      ],
+      "scheme": null,
+      "unit": "special_teams"
+    }
+  ]
+}
