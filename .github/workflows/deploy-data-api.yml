@@ -1,0 +1,99 @@
+name: Deploy data API
+
+# Merging to main publishes the dataset to Cloudflare. This is the piece that
+# makes "merge the PR, refresh the site" true: the API is deployed straight from
+# this repository, so what is on main is what is being served.
+#
+# Requires two repository secrets. Until they are set the job reports what is
+# missing and exits successfully, so the absence of credentials never shows up as
+# a spurious red build:
+#   CLOUDFLARE_API_TOKEN   - token with "Edit Cloudflare Workers" on the account
+#   CLOUDFLARE_ACCOUNT_ID  - the account the cfb-apex Worker already lives in
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/dist/**"
+      - "apps/data-api/**"
+      - "packages/cfb-data/**"
+      - ".github/workflows/deploy-data-api.yml"
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Wrangler environment to deploy"
+        required: false
+        default: "production"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-data-api
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publish cfb-apex-data to Cloudflare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check for deploy credentials
+        id: creds
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$TOKEN" ] && [ -n "$ACCOUNT" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### Data API not deployed"
+              echo
+              echo "Set these repository secrets to enable automatic deploys on merge:"
+              echo
+              [ -z "$TOKEN" ] && echo "- \`CLOUDFLARE_API_TOKEN\`"
+              [ -z "$ACCOUNT" ] && echo "- \`CLOUDFLARE_ACCOUNT_ID\`"
+              echo
+              echo "See \`docs/DEPLOYMENT.md\`. The dataset itself is still committed and valid."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Install dependencies
+        if: steps.creds.outputs.ready == 'true'
+        run: npm ci --workspaces --include-workspace-root
+
+      - name: Verify the dataset before publishing it
+        if: steps.creds.outputs.ready == 'true'
+        run: |
+          python3 tools/etl/build.py --check
+          python3 tools/etl/validate.py
+
+      - name: Stage dataset into the worker's asset directory
+        if: steps.creds.outputs.ready == 'true'
+        run: npm run -w @cfb-apex/data-api build
+
+      - name: Deploy
+        if: steps.creds.outputs.ready == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: apps/data-api
+          command: deploy --env ${{ inputs.environment || 'production' }}
+
+      - name: Smoke-test the deployment
+        if: steps.creds.outputs.ready == 'true'
+        run: node apps/data-api/scripts/smoke.mjs
+        env:
+          SMOKE_BASE_URL: ${{ vars.DATA_API_BASE_URL }}

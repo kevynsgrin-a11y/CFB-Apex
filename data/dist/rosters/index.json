@@ -1,0 +1,1001 @@
+{
+  "conferences_without_rosters": [
+    "big-ten",
+    "cusa",
+    "independents",
+    "sec"
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "roster-index",
+    "notes": [
+      "The research package publishes rosters for seven conferences only (aac, acc, big12, mac, mountain-west, pac12, sun-belt). No roster file exists for big-ten, cusa, independents, sec -- that is a gap in the source package, not a build failure, and nothing has been filled in for them."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/aac-2026/army.md",
+      "01-rosters/aac-2026/charlotte.md",
+      "01-rosters/aac-2026/east-carolina.md",
+      "01-rosters/aac-2026/florida-atlantic.md",
+      "01-rosters/aac-2026/memphis.md",
+      "01-rosters/aac-2026/navy.md",
+      "01-rosters/aac-2026/north-texas.md",
+      "01-rosters/aac-2026/rice.md",
+      "01-rosters/aac-2026/south-florida.md",
+      "01-rosters/aac-2026/temple.md",
+      "01-rosters/aac-2026/tulane.md",
+      "01-rosters/aac-2026/tulsa.md",
+      "01-rosters/aac-2026/uab.md",
+      "01-rosters/aac-2026/utsa.md",
+      "01-rosters/acc-2026/boston-college.md",
+      "01-rosters/acc-2026/california.md",
+      "01-rosters/acc-2026/clemson.md",
+      "01-rosters/acc-2026/duke.md",
+      "01-rosters/acc-2026/florida-state.md",
+      "01-rosters/acc-2026/georgia-tech.md",
+      "01-rosters/acc-2026/louisville.md",
+      "01-rosters/acc-2026/miami-fl.md",
+      "01-rosters/acc-2026/nc-state.md",
+      "01-rosters/acc-2026/north-carolina.md",
+      "01-rosters/acc-2026/pittsburgh.md",
+      "01-rosters/acc-2026/smu.md",
+      "01-rosters/acc-2026/stanford.md",
+      "01-rosters/acc-2026/syracuse.md",
+      "01-rosters/acc-2026/virginia-tech.md",
+      "01-rosters/acc-2026/virginia.md",
+      "01-rosters/acc-2026/wake-forest.md",
+      "01-rosters/big12-2026/arizona-state.md",
+      "01-rosters/big12-2026/arizona.md",
+      "01-rosters/big12-2026/baylor.md",
+      "01-rosters/big12-2026/byu.md",
+      "01-rosters/big12-2026/cincinnati.md",
+      "01-rosters/big12-2026/colorado.md",
+      "01-rosters/big12-2026/houston.md",
+      "01-rosters/big12-2026/iowa-state.md",
+      "01-rosters/big12-2026/kansas-state.md",
+      "01-rosters/big12-2026/kansas.md",
+      "01-rosters/big12-2026/oklahoma-state.md",
+      "01-rosters/big12-2026/tcu.md",
+      "01-rosters/big12-2026/texas-tech.md",
+      "01-rosters/big12-2026/ucf.md",
+      "01-rosters/big12-2026/utah.md",
+      "01-rosters/big12-2026/west-virginia.md",
+      "01-rosters/mac-2026/akron.md",
+      "01-rosters/mac-2026/ball-state.md",
+      "01-rosters/mac-2026/bowling-green.md",
+      "01-rosters/mac-2026/buffalo.md",
+      "01-rosters/mac-2026/central-michigan.md",
+      "01-rosters/mac-2026/eastern-michigan.md",
+      "01-rosters/mac-2026/kent-state.md",
+      "01-rosters/mac-2026/miami-oh.md",
+      "01-rosters/mac-2026/ohio.md",
+      "01-rosters/mac-2026/sacramento-state.md",
+      "01-rosters/mac-2026/toledo.md",
+      "01-rosters/mac-2026/umass.md",
+      "01-rosters/mac-2026/western-michigan.md",
+      "01-rosters/mw-2026/air-force.md",
+      "01-rosters/mw-2026/hawaii.md",
+      "01-rosters/mw-2026/nevada.md",
+      "01-rosters/mw-2026/new-mexico.md",
+      "01-rosters/mw-2026/north-dakota-state.md",
+      "01-rosters/mw-2026/northern-illinois.md",
+      "01-rosters/mw-2026/san-jose-state.md",
+      "01-rosters/mw-2026/unlv.md",
+      "01-rosters/mw-2026/utep.md",
+      "01-rosters/mw-2026/wyoming.md",
+      "01-rosters/pac12-2026/boise-state.md",
+      "01-rosters/pac12-2026/colorado-state.md",
+      "01-rosters/pac12-2026/fresno-state.md",
+      "01-rosters/pac12-2026/oregon-state.md",
+      "01-rosters/pac12-2026/san-diego-state.md",
+      "01-rosters/pac12-2026/texas-state.md",
+      "01-rosters/pac12-2026/utah-state.md",
+      "01-rosters/pac12-2026/washington-state.md",
+      "01-rosters/sbc-2026/appalachian-state.md",
+      "01-rosters/sbc-2026/arkansas-state.md",
+      "01-rosters/sbc-2026/coastal-carolina.md",
+      "01-rosters/sbc-2026/georgia-southern.md",
+      "01-rosters/sbc-2026/georgia-state.md",
+      "01-rosters/sbc-2026/james-madison.md",
+      "01-rosters/sbc-2026/louisiana-tech.md",
+      "01-rosters/sbc-2026/louisiana.md",
+      "01-rosters/sbc-2026/marshall.md",
+      "01-rosters/sbc-2026/old-dominion.md",
+      "01-rosters/sbc-2026/south-alabama.md",
+      "01-rosters/sbc-2026/southern-miss.md",
+      "01-rosters/sbc-2026/troy.md",
+      "01-rosters/sbc-2026/ulm.md",
+      "catalog.json"
+    ]
+  },
+  "teams": [
+    {
+      "conference_slug": "mountain-west",
+      "players": 122,
+      "school": "Air Force",
+      "slug": "air-force",
+      "source": "01-rosters/mw-2026/air-force.md",
+      "with_high_school": 117,
+      "with_stars": 8
+    },
+    {
+      "conference_slug": "mac",
+      "players": 105,
+      "school": "Akron",
+      "slug": "akron",
+      "source": "01-rosters/mac-2026/akron.md",
+      "with_high_school": 105,
+      "with_stars": 14
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 109,
+      "school": "Appalachian State",
+      "slug": "appalachian-state",
+      "source": "01-rosters/sbc-2026/appalachian-state.md",
+      "with_high_school": 109,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "big12",
+      "players": 109,
+      "school": "Arizona",
+      "slug": "arizona",
+      "source": "01-rosters/big12-2026/arizona.md",
+      "with_high_school": 109,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "big12",
+      "players": 107,
+      "school": "Arizona State",
+      "slug": "arizona-state",
+      "source": "01-rosters/big12-2026/arizona-state.md",
+      "with_high_school": 107,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 112,
+      "school": "Arkansas State",
+      "slug": "arkansas-state",
+      "source": "01-rosters/sbc-2026/arkansas-state.md",
+      "with_high_school": 0,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 190,
+      "school": "Army",
+      "slug": "army",
+      "source": "01-rosters/aac-2026/army.md",
+      "with_high_school": 190,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mac",
+      "players": 116,
+      "school": "Ball State",
+      "slug": "ball-state",
+      "source": "01-rosters/mac-2026/ball-state.md",
+      "with_high_school": 59,
+      "with_stars": 10
+    },
+    {
+      "conference_slug": "big12",
+      "players": 112,
+      "school": "Baylor",
+      "slug": "baylor",
+      "source": "01-rosters/big12-2026/baylor.md",
+      "with_high_school": 112,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 113,
+      "school": "Boise State",
+      "slug": "boise-state",
+      "source": "01-rosters/pac12-2026/boise-state.md",
+      "with_high_school": 113,
+      "with_stars": 29
+    },
+    {
+      "conference_slug": "acc",
+      "players": 122,
+      "school": "Boston College",
+      "slug": "boston-college",
+      "source": "01-rosters/acc-2026/boston-college.md",
+      "with_high_school": 122,
+      "with_stars": 16
+    },
+    {
+      "conference_slug": "mac",
+      "players": 106,
+      "school": "Bowling Green",
+      "slug": "bowling-green",
+      "source": "01-rosters/mac-2026/bowling-green.md",
+      "with_high_school": 106,
+      "with_stars": 22
+    },
+    {
+      "conference_slug": "mac",
+      "players": 118,
+      "school": "Buffalo",
+      "slug": "buffalo",
+      "source": "01-rosters/mac-2026/buffalo.md",
+      "with_high_school": 118,
+      "with_stars": 21
+    },
+    {
+      "conference_slug": "big12",
+      "players": 118,
+      "school": "BYU",
+      "slug": "byu",
+      "source": "01-rosters/big12-2026/byu.md",
+      "with_high_school": 96,
+      "with_stars": 1
+    },
+    {
+      "conference_slug": "acc",
+      "players": 112,
+      "school": "California",
+      "slug": "california",
+      "source": "01-rosters/acc-2026/california.md",
+      "with_high_school": 112,
+      "with_stars": 16
+    },
+    {
+      "conference_slug": "mac",
+      "players": 109,
+      "school": "Central Michigan",
+      "slug": "central-michigan",
+      "source": "01-rosters/mac-2026/central-michigan.md",
+      "with_high_school": 109,
+      "with_stars": 74
+    },
+    {
+      "conference_slug": "aac",
+      "players": 112,
+      "school": "Charlotte",
+      "slug": "charlotte",
+      "source": "01-rosters/aac-2026/charlotte.md",
+      "with_high_school": 112,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "big12",
+      "players": 110,
+      "school": "Cincinnati",
+      "slug": "cincinnati",
+      "source": "01-rosters/big12-2026/cincinnati.md",
+      "with_high_school": 110,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "acc",
+      "players": 121,
+      "school": "Clemson",
+      "slug": "clemson",
+      "source": "01-rosters/acc-2026/clemson.md",
+      "with_high_school": 121,
+      "with_stars": 18
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 104,
+      "school": "Coastal Carolina",
+      "slug": "coastal-carolina",
+      "source": "01-rosters/sbc-2026/coastal-carolina.md",
+      "with_high_school": 104,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "big12",
+      "players": 105,
+      "school": "Colorado",
+      "slug": "colorado",
+      "source": "01-rosters/big12-2026/colorado.md",
+      "with_high_school": 105,
+      "with_stars": 1
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 115,
+      "school": "Colorado State",
+      "slug": "colorado-state",
+      "source": "01-rosters/pac12-2026/colorado-state.md",
+      "with_high_school": 115,
+      "with_stars": 4
+    },
+    {
+      "conference_slug": "acc",
+      "players": 101,
+      "school": "Duke",
+      "slug": "duke",
+      "source": "01-rosters/acc-2026/duke.md",
+      "with_high_school": 101,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 119,
+      "school": "East Carolina",
+      "slug": "east-carolina",
+      "source": "01-rosters/aac-2026/east-carolina.md",
+      "with_high_school": 119,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mac",
+      "players": 113,
+      "school": "Eastern Michigan",
+      "slug": "eastern-michigan",
+      "source": "01-rosters/mac-2026/eastern-michigan.md",
+      "with_high_school": 113,
+      "with_stars": 12
+    },
+    {
+      "conference_slug": "aac",
+      "players": 114,
+      "school": "Florida Atlantic",
+      "slug": "florida-atlantic",
+      "source": "01-rosters/aac-2026/florida-atlantic.md",
+      "with_high_school": 114,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "acc",
+      "players": 109,
+      "school": "Florida State",
+      "slug": "florida-state",
+      "source": "01-rosters/acc-2026/florida-state.md",
+      "with_high_school": 109,
+      "with_stars": 13
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 118,
+      "school": "Fresno State",
+      "slug": "fresno-state",
+      "source": "01-rosters/pac12-2026/fresno-state.md",
+      "with_high_school": 118,
+      "with_stars": 4
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 121,
+      "school": "Georgia Southern",
+      "slug": "georgia-southern",
+      "source": "01-rosters/sbc-2026/georgia-southern.md",
+      "with_high_school": 121,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 112,
+      "school": "Georgia State",
+      "slug": "georgia-state",
+      "source": "01-rosters/sbc-2026/georgia-state.md",
+      "with_high_school": 112,
+      "with_stars": 11
+    },
+    {
+      "conference_slug": "acc",
+      "players": 108,
+      "school": "Georgia Tech",
+      "slug": "georgia-tech",
+      "source": "01-rosters/acc-2026/georgia-tech.md",
+      "with_high_school": 108,
+      "with_stars": 24
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 109,
+      "school": "Hawai'i",
+      "slug": "hawaii",
+      "source": "01-rosters/mw-2026/hawaii.md",
+      "with_high_school": 109,
+      "with_stars": 71
+    },
+    {
+      "conference_slug": "big12",
+      "players": 116,
+      "school": "Houston",
+      "slug": "houston",
+      "source": "01-rosters/big12-2026/houston.md",
+      "with_high_school": 116,
+      "with_stars": 18
+    },
+    {
+      "conference_slug": "big12",
+      "players": 126,
+      "school": "Iowa State",
+      "slug": "iowa-state",
+      "source": "01-rosters/big12-2026/iowa-state.md",
+      "with_high_school": 126,
+      "with_stars": 18
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 109,
+      "school": "James Madison",
+      "slug": "james-madison",
+      "source": "01-rosters/sbc-2026/james-madison.md",
+      "with_high_school": 109,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "big12",
+      "players": 114,
+      "school": "Kansas",
+      "slug": "kansas",
+      "source": "01-rosters/big12-2026/kansas.md",
+      "with_high_school": 113,
+      "with_stars": 17
+    },
+    {
+      "conference_slug": "big12",
+      "players": 111,
+      "school": "Kansas State",
+      "slug": "kansas-state",
+      "source": "01-rosters/big12-2026/kansas-state.md",
+      "with_high_school": 111,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mac",
+      "players": 110,
+      "school": "Kent State",
+      "slug": "kent-state",
+      "source": "01-rosters/mac-2026/kent-state.md",
+      "with_high_school": 110,
+      "with_stars": 50
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 104,
+      "school": "Louisiana",
+      "slug": "louisiana",
+      "source": "01-rosters/sbc-2026/louisiana.md",
+      "with_high_school": 0,
+      "with_stars": 4
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 107,
+      "school": "Louisiana Tech",
+      "slug": "louisiana-tech",
+      "source": "01-rosters/sbc-2026/louisiana-tech.md",
+      "with_high_school": 0,
+      "with_stars": 3
+    },
+    {
+      "conference_slug": "acc",
+      "players": 106,
+      "school": "Louisville",
+      "slug": "louisville",
+      "source": "01-rosters/acc-2026/louisville.md",
+      "with_high_school": 106,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 105,
+      "school": "Marshall",
+      "slug": "marshall",
+      "source": "01-rosters/sbc-2026/marshall.md",
+      "with_high_school": 105,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 108,
+      "school": "Memphis",
+      "slug": "memphis",
+      "source": "01-rosters/aac-2026/memphis.md",
+      "with_high_school": 108,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "acc",
+      "players": 116,
+      "school": "Miami (FL)",
+      "slug": "miami-fl",
+      "source": "01-rosters/acc-2026/miami-fl.md",
+      "with_high_school": 108,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mac",
+      "players": 119,
+      "school": "Miami (OH)",
+      "slug": "miami-oh",
+      "source": "01-rosters/mac-2026/miami-oh.md",
+      "with_high_school": 119,
+      "with_stars": 18
+    },
+    {
+      "conference_slug": "aac",
+      "players": 193,
+      "school": "Navy",
+      "slug": "navy",
+      "source": "01-rosters/aac-2026/navy.md",
+      "with_high_school": 193,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "acc",
+      "players": 126,
+      "school": "NC State",
+      "slug": "nc-state",
+      "source": "01-rosters/acc-2026/nc-state.md",
+      "with_high_school": 126,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 102,
+      "school": "Nevada",
+      "slug": "nevada",
+      "source": "01-rosters/mw-2026/nevada.md",
+      "with_high_school": 102,
+      "with_stars": 66
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 114,
+      "school": "New Mexico",
+      "slug": "new-mexico",
+      "source": "01-rosters/mw-2026/new-mexico.md",
+      "with_high_school": 112,
+      "with_stars": 20
+    },
+    {
+      "conference_slug": "acc",
+      "players": 111,
+      "school": "North Carolina",
+      "slug": "north-carolina",
+      "source": "01-rosters/acc-2026/north-carolina.md",
+      "with_high_school": 111,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 129,
+      "school": "North Dakota State",
+      "slug": "north-dakota-state",
+      "source": "01-rosters/mw-2026/north-dakota-state.md",
+      "with_high_school": 129,
+      "with_stars": 11
+    },
+    {
+      "conference_slug": "aac",
+      "players": 104,
+      "school": "North Texas",
+      "slug": "north-texas",
+      "source": "01-rosters/aac-2026/north-texas.md",
+      "with_high_school": 104,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 112,
+      "school": "Northern Illinois",
+      "slug": "northern-illinois",
+      "source": "01-rosters/mw-2026/northern-illinois.md",
+      "with_high_school": 112,
+      "with_stars": 29
+    },
+    {
+      "conference_slug": "mac",
+      "players": 106,
+      "school": "Ohio",
+      "slug": "ohio",
+      "source": "01-rosters/mac-2026/ohio.md",
+      "with_high_school": 106,
+      "with_stars": 5
+    },
+    {
+      "conference_slug": "big12",
+      "players": 115,
+      "school": "Oklahoma State",
+      "slug": "oklahoma-state",
+      "source": "01-rosters/big12-2026/oklahoma-state.md",
+      "with_high_school": 115,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 110,
+      "school": "Old Dominion",
+      "slug": "old-dominion",
+      "source": "01-rosters/sbc-2026/old-dominion.md",
+      "with_high_school": 110,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 108,
+      "school": "Oregon State",
+      "slug": "oregon-state",
+      "source": "01-rosters/pac12-2026/oregon-state.md",
+      "with_high_school": 108,
+      "with_stars": 3
+    },
+    {
+      "conference_slug": "acc",
+      "players": 113,
+      "school": "Pittsburgh",
+      "slug": "pittsburgh",
+      "source": "01-rosters/acc-2026/pittsburgh.md",
+      "with_high_school": 113,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 102,
+      "school": "Rice",
+      "slug": "rice",
+      "source": "01-rosters/aac-2026/rice.md",
+      "with_high_school": 102,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mac",
+      "players": 117,
+      "school": "Sacramento State",
+      "slug": "sacramento-state",
+      "source": "01-rosters/mac-2026/sacramento-state.md",
+      "with_high_school": 117,
+      "with_stars": 23
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 109,
+      "school": "San Diego State",
+      "slug": "san-diego-state",
+      "source": "01-rosters/pac12-2026/san-diego-state.md",
+      "with_high_school": 109,
+      "with_stars": 24
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 106,
+      "school": "San José State",
+      "slug": "san-jose-state",
+      "source": "01-rosters/mw-2026/san-jose-state.md",
+      "with_high_school": 104,
+      "with_stars": 29
+    },
+    {
+      "conference_slug": "acc",
+      "players": 105,
+      "school": "SMU",
+      "slug": "smu",
+      "source": "01-rosters/acc-2026/smu.md",
+      "with_high_school": 105,
+      "with_stars": 21
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 115,
+      "school": "South Alabama",
+      "slug": "south-alabama",
+      "source": "01-rosters/sbc-2026/south-alabama.md",
+      "with_high_school": 115,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 112,
+      "school": "South Florida",
+      "slug": "south-florida",
+      "source": "01-rosters/aac-2026/south-florida.md",
+      "with_high_school": 112,
+      "with_stars": 3
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 113,
+      "school": "Southern Miss",
+      "slug": "southern-miss",
+      "source": "01-rosters/sbc-2026/southern-miss.md",
+      "with_high_school": 113,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "acc",
+      "players": 112,
+      "school": "Stanford",
+      "slug": "stanford",
+      "source": "01-rosters/acc-2026/stanford.md",
+      "with_high_school": 112,
+      "with_stars": 21
+    },
+    {
+      "conference_slug": "acc",
+      "players": 111,
+      "school": "Syracuse",
+      "slug": "syracuse",
+      "source": "01-rosters/acc-2026/syracuse.md",
+      "with_high_school": 111,
+      "with_stars": 19
+    },
+    {
+      "conference_slug": "big12",
+      "players": 115,
+      "school": "TCU",
+      "slug": "tcu",
+      "source": "01-rosters/big12-2026/tcu.md",
+      "with_high_school": 115,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 116,
+      "school": "Temple",
+      "slug": "temple",
+      "source": "01-rosters/aac-2026/temple.md",
+      "with_high_school": 116,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 110,
+      "school": "Texas State",
+      "slug": "texas-state",
+      "source": "01-rosters/pac12-2026/texas-state.md",
+      "with_high_school": 110,
+      "with_stars": 76
+    },
+    {
+      "conference_slug": "big12",
+      "players": 110,
+      "school": "Texas Tech",
+      "slug": "texas-tech",
+      "source": "01-rosters/big12-2026/texas-tech.md",
+      "with_high_school": 110,
+      "with_stars": 2
+    },
+    {
+      "conference_slug": "mac",
+      "players": 106,
+      "school": "Toledo",
+      "slug": "toledo",
+      "source": "01-rosters/mac-2026/toledo.md",
+      "with_high_school": 106,
+      "with_stars": 7
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 105,
+      "school": "Troy",
+      "slug": "troy",
+      "source": "01-rosters/sbc-2026/troy.md",
+      "with_high_school": 105,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 115,
+      "school": "Tulane",
+      "slug": "tulane",
+      "source": "01-rosters/aac-2026/tulane.md",
+      "with_high_school": 115,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 111,
+      "school": "Tulsa",
+      "slug": "tulsa",
+      "source": "01-rosters/aac-2026/tulsa.md",
+      "with_high_school": 111,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "aac",
+      "players": 106,
+      "school": "UAB",
+      "slug": "uab",
+      "source": "01-rosters/aac-2026/uab.md",
+      "with_high_school": 106,
+      "with_stars": 4
+    },
+    {
+      "conference_slug": "big12",
+      "players": 110,
+      "school": "UCF",
+      "slug": "ucf",
+      "source": "01-rosters/big12-2026/ucf.md",
+      "with_high_school": 110,
+      "with_stars": 1
+    },
+    {
+      "conference_slug": "sun-belt",
+      "players": 105,
+      "school": "ULM",
+      "slug": "ulm",
+      "source": "01-rosters/sbc-2026/ulm.md",
+      "with_high_school": 105,
+      "with_stars": 0
+    },
+    {
+      "conference_slug": "mac",
+      "players": 102,
+      "school": "UMass",
+      "slug": "umass",
+      "source": "01-rosters/mac-2026/umass.md",
+      "with_high_school": 101,
+      "with_stars": 32
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 109,
+      "school": "UNLV",
+      "slug": "unlv",
+      "source": "01-rosters/mw-2026/unlv.md",
+      "with_high_school": 109,
+      "with_stars": 17
+    },
+    {
+      "conference_slug": "big12",
+      "players": 111,
+      "school": "Utah",
+      "slug": "utah",
+      "source": "01-rosters/big12-2026/utah.md",
+      "with_high_school": 111,
+      "with_stars": 1
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 124,
+      "school": "Utah State",
+      "slug": "utah-state",
+      "source": "01-rosters/pac12-2026/utah-state.md",
+      "with_high_school": 123,
+      "with_stars": 74
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 110,
+      "school": "UTEP",
+      "slug": "utep",
+      "source": "01-rosters/mw-2026/utep.md",
+      "with_high_school": 110,
+      "with_stars": 24
+    },
+    {
+      "conference_slug": "aac",
+      "players": 117,
+      "school": "UTSA",
+      "slug": "utsa",
+      "source": "01-rosters/aac-2026/utsa.md",
+      "with_high_school": 117,
+      "with_stars": 25
+    },
+    {
+      "conference_slug": "acc",
+      "players": 120,
+      "school": "Virginia",
+      "slug": "virginia",
+      "source": "01-rosters/acc-2026/virginia.md",
+      "with_high_school": 120,
+      "with_stars": 13
+    },
+    {
+      "conference_slug": "acc",
+      "players": 120,
+      "school": "Virginia Tech",
+      "slug": "virginia-tech",
+      "source": "01-rosters/acc-2026/virginia-tech.md",
+      "with_high_school": 120,
+      "with_stars": 15
+    },
+    {
+      "conference_slug": "acc",
+      "players": 118,
+      "school": "Wake Forest",
+      "slug": "wake-forest",
+      "source": "01-rosters/acc-2026/wake-forest.md",
+      "with_high_school": 118,
+      "with_stars": 30
+    },
+    {
+      "conference_slug": "pac12",
+      "players": 109,
+      "school": "Washington State",
+      "slug": "washington-state",
+      "source": "01-rosters/pac12-2026/washington-state.md",
+      "with_high_school": 109,
+      "with_stars": 7
+    },
+    {
+      "conference_slug": "big12",
+      "players": 122,
+      "school": "West Virginia",
+      "slug": "west-virginia",
+      "source": "01-rosters/big12-2026/west-virginia.md",
+      "with_high_school": 122,
+      "with_stars": 89
+    },
+    {
+      "conference_slug": "mac",
+      "players": 104,
+      "school": "Western Michigan",
+      "slug": "western-michigan",
+      "source": "01-rosters/mac-2026/western-michigan.md",
+      "with_high_school": 104,
+      "with_stars": 21
+    },
+    {
+      "conference_slug": "mountain-west",
+      "players": 113,
+      "school": "Wyoming",
+      "slug": "wyoming",
+      "source": "01-rosters/mw-2026/wyoming.md",
+      "with_high_school": 111,
+      "with_stars": 49
+    }
+  ],
+  "teams_without_rosters": [
+    "alabama",
+    "arkansas",
+    "auburn",
+    "delaware",
+    "fiu",
+    "florida",
+    "georgia",
+    "illinois",
+    "indiana",
+    "iowa",
+    "jacksonville-state",
+    "kennesaw-state",
+    "kentucky",
+    "liberty",
+    "lsu",
+    "maryland",
+    "michigan",
+    "michigan-state",
+    "middle-tennessee",
+    "minnesota",
+    "mississippi-state",
+    "missouri",
+    "missouri-state",
+    "nebraska",
+    "new-mexico-state",
+    "northwestern",
+    "notre-dame",
+    "ohio-state",
+    "oklahoma",
+    "ole-miss",
+    "oregon",
+    "penn-state",
+    "purdue",
+    "rutgers",
+    "sam-houston",
+    "south-carolina",
+    "tennessee",
+    "texas",
+    "texas-am",
+    "ucla",
+    "uconn",
+    "usc",
+    "vanderbilt",
+    "washington",
+    "western-kentucky",
+    "wisconsin"
+  ],
+  "totals": {
+    "off_official_roster": 10,
+    "on_official_roster": 10445,
+    "players": 10455,
+    "teams": 92,
+    "teams_in_registry": 138,
+    "with_class": 10054,
+    "with_high_school": 10031,
+    "with_hometown": 10440,
+    "with_jersey": 6513,
+    "with_stars": 1258
+  }
+}

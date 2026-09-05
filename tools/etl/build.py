@@ -145,7 +145,7 @@ def _write_index(out_dir: Path, report: dict, registry: teams.TeamRegistry) -> N
         out_dir / "index.json",
         jsonio.envelope(
             dataset="index",
-            generated_from="data/source/cfb-2026-master-package",
+            generated_from="catalog.json",
             as_of="2026-09-05",
             notes=[
                 "Real 2026 FBS data compiled from published sources. No fixtures, "

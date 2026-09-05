@@ -1,0 +1,34 @@
+{
+  "datasets": {
+    "core": {
+      "artifacts": 2,
+      "counts": {
+        "teams": 138
+      }
+    }
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "index",
+    "notes": [
+      "Real 2026 FBS data compiled from published sources. No fixtures, no placeholder teams, no invented values."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "catalog.json"
+    ]
+  },
+  "missing_parsers": [
+    "rosters",
+    "depth_charts",
+    "schedules",
+    "polls",
+    "sos",
+    "coaching",
+    "stats_current",
+    "stats_historical",
+    "injuries"
+  ],
+  "team_count": 138,
+  "warning_count": 0
+}

@@ -1,7 +1,15 @@
 node_modules/
 .wrangler/
-dist/
-*.tsbuildinfo
 __pycache__/
 *.pyc
+*.tsbuildinfo
 .DS_Store
+
+# Build output of the TypeScript reader package.
+packages/*/dist/
+
+# Generated: `npm run -w @cfb-apex/data-api build` copies data/dist here.
+apps/data-api/public/
+
+# data/dist is deliberately NOT ignored. The generated dataset is committed so
+# that what is reviewed in a PR is exactly what gets deployed.

@@ -1,0 +1,27 @@
+{
+  "datasets": {
+    "core": {
+      "artifacts": [
+        "teams.json",
+        "conferences.json"
+      ],
+      "counts": {
+        "teams": 138
+      },
+      "warnings": []
+    }
+  },
+  "missing_parsers": [
+    "rosters",
+    "depth_charts",
+    "schedules",
+    "polls",
+    "sos",
+    "coaching",
+    "stats_current",
+    "stats_historical",
+    "injuries"
+  ],
+  "package": "data/source/cfb-2026-master-package",
+  "warnings": []
+}
