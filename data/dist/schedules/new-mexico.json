@@ -2,7 +2,7 @@
   "counts": {
     "byes": 0,
     "conference_games": 8,
-    "games": 13,
+    "games": 12,
     "non_fbs_opponents": 1
   },
   "games": [
@@ -24,8 +24,8 @@
       "date": "2026-09-12",
       "date_raw": "Sep 12 2026",
       "location": "home",
-      "notes": "FCS",
-      "opponent": "Mercyhurst",
+      "notes": null,
+      "opponent": "Mercyhurst (FCS)",
       "opponent_slug": null,
       "site": null,
       "source": "02-stats/02b-g5-schedules-2026.md",
@@ -161,19 +161,6 @@
       "source": "02-stats/02b-g5-schedules-2026.md",
       "type": "conference",
       "week": null
-    },
-    {
-      "conference_game_marker": null,
-      "date": null,
-      "date_raw": "Week 3",
-      "location": "away",
-      "notes": null,
-      "opponent": "Oklahoma",
-      "opponent_slug": "oklahoma",
-      "site": null,
-      "source": "02-stats/02-full-schedule-2026.md",
-      "type": null,
-      "week": 3
     }
   ],
   "meta": {
@@ -185,7 +172,6 @@
     ],
     "schema_version": "1.0.0",
     "sources": [
-      "02-stats/02-full-schedule-2026.md",
       "02-stats/02b-g5-schedules-2026.md"
     ]
   },

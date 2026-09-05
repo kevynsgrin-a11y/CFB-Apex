@@ -2,7 +2,7 @@
   "counts": {
     "byes": 2,
     "conference_games": 8,
-    "games": 13,
+    "games": 12,
     "non_fbs_opponents": 1
   },
   "games": [
@@ -24,8 +24,8 @@
       "date": "2026-09-05",
       "date_raw": "Sep 5 2026",
       "location": "home",
-      "notes": "FCS",
-      "opponent": "UTRGV",
+      "notes": null,
+      "opponent": "UTRGV (FCS)",
       "opponent_slug": null,
       "site": null,
       "source": "02-stats/02b-g5-schedules-2026.md",
@@ -187,19 +187,6 @@
       "source": "02-stats/02b-g5-schedules-2026.md",
       "type": "conference",
       "week": null
-    },
-    {
-      "conference_game_marker": null,
-      "date": null,
-      "date_raw": "Week 3",
-      "location": "away",
-      "notes": null,
-      "opponent": "Texas",
-      "opponent_slug": "texas",
-      "site": null,
-      "source": "02-stats/02-full-schedule-2026.md",
-      "type": null,
-      "week": 3
     }
   ],
   "meta": {
@@ -211,7 +198,6 @@
     ],
     "schema_version": "1.0.0",
     "sources": [
-      "02-stats/02-full-schedule-2026.md",
       "02-stats/02b-g5-schedules-2026.md"
     ]
   },

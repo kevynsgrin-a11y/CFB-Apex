@@ -95,19 +95,75 @@ def _iso_date(text: str | None, *, season: int = SEASON) -> str | None:
     return f"{calendar_year:04d}-{month:02d}-{day_number:02d}"
 
 
+#: "(OH)", "(FL)", "(FCS)" qualify the opponent's name; "(Shamrock Series)" is
+#: a note about the game.
+_QUALIFIER_RE = re.compile(r"^[A-Za-z]{2,4}$")
+
+
 def _strip_notes(text: str) -> tuple[str, list[str]]:
-    """Pull parenthetical and bracketed notes off an opponent string."""
+    """Pull parenthetical and bracketed notes off an opponent string.
+
+    A short alphabetic parenthetical is kept inline: it disambiguates the team
+    ("Miami (OH)") rather than annotating the fixture, and dropping it merges
+    two different programs.
+    """
     notes: list[str] = []
-    for pattern in (_PAREN_RE, _BRACKET_RE):
-        for match in pattern.finditer(text):
-            note = match.group(1).strip()
-            if note:
-                notes.append(note)
-        text = pattern.sub(" ", text)
+
+    def replace_paren(match: re.Match[str]) -> str:
+        inner = match.group(1).strip()
+        if _QUALIFIER_RE.match(inner):
+            return f" ({inner})"
+        if inner:
+            notes.append(inner)
+        return " "
+
+    text = _PAREN_RE.sub(replace_paren, text)
+    for match in _BRACKET_RE.finditer(text):
+        note = match.group(1).strip()
+        if note:
+            notes.append(note)
+    text = _BRACKET_RE.sub(" ", text)
     return re.sub(r"\s+", " ", text).strip(" .,;"), notes
 
 
-def _parse_opponent(raw: str, registry) -> dict:
+#: The one genuinely ambiguous name in FBS. A MAC team's grid writing a bare
+#: "Miami" for a conference game means Miami (OH); everyone else means Miami (FL).
+_HOMONYMS: dict[str, dict[str, str]] = {
+    "miami": {"mac": "miami-oh", "acc": "miami-fl"},
+}
+
+
+def _disambiguate(
+    name: str, slug: str | None, team_slug: str | None, registry
+) -> str | None:
+    """Resolve a bare homonym using the grid it appears in."""
+    if slug is None or team_slug is None:
+        return slug
+    key = re.sub(r"[^a-z ]+", "", mdtable.strip_markdown(name).lower()).strip()
+    options = _HOMONYMS.get(key)
+    if not options:
+        return slug
+    team = registry.get(team_slug)
+    if team is None:
+        return slug
+    return options.get(team.conference_slug, slug)
+
+
+def _resolve_opponent(text: str, registry) -> tuple[str, str | None]:
+    """Opponent name and slug, resolving before parentheticals are stripped.
+
+    "(OH)" in "vs. Miami (OH)" is a disambiguator, not a note: dropping it first
+    and then resolving turns Pittsburgh's Miami (OH) game into a Miami (FL) one.
+    """
+    stripped = re.sub(r"^\s*(?:at|vs\.?)\s+", "", text, flags=re.IGNORECASE).strip()
+    slug = registry.resolve(stripped)
+    if slug:
+        return stripped, slug
+    body, _ = _strip_notes(stripped)
+    return body, registry.resolve(body)
+
+
+def _parse_opponent(raw: str, registry, team_slug: str | None = None) -> dict:
     """One opponent cell / bullet tail into location, opponent and notes."""
     text = mdtable.strip_markdown(raw).strip()
     conference_marker = bool(_TRAILING_STAR_RE.search(text))
@@ -145,9 +201,11 @@ def _parse_opponent(raw: str, registry) -> dict:
         if registry.resolve(candidate) is None:
             body, site, location = at_split[0].strip(), candidate, "neutral"
 
+    resolved_slug = registry.resolve(body) or _resolve_opponent(text, registry)[1]
+    resolved_slug = _disambiguate(body, resolved_slug, team_slug, registry)
     return {
         "opponent": body or None,
-        "opponent_slug": registry.resolve(body),
+        "opponent_slug": resolved_slug,
         "location": location,
         "type": None,
         "notes": "; ".join(notes) or None,
@@ -165,8 +223,9 @@ def _game(
     week: int | None = None,
     site: str | None = None,
     game_type: str | None = None,
+    team_slug: str | None = None,
 ) -> dict:
-    parsed = _parse_opponent(opponent_raw, registry)
+    parsed = _parse_opponent(opponent_raw, registry, team_slug)
     resolved_type = game_type
     if resolved_type is None and parsed["type"] == "bye":
         resolved_type = "bye"
@@ -214,6 +273,7 @@ def _per_team_bullets(section: mdtable.Section, registry, source: str, warnings:
                     opponent_raw=opponent_raw,
                     registry=registry,
                     source=source,
+                    team_slug=slug,
                 )
             )
         if games:
@@ -245,6 +305,7 @@ def _per_team_table(section: mdtable.Section, registry, source: str, warnings: l
                             registry=registry,
                             source=source,
                             game_type="bye",
+                            team_slug=slug,
                         )
                     )
                     continue
@@ -262,6 +323,7 @@ def _per_team_table(section: mdtable.Section, registry, source: str, warnings: l
                         source=source,
                         site=record.get("Site"),
                         game_type=game_type,
+                        team_slug=slug,
                     )
                 )
         if games:
@@ -528,6 +590,7 @@ def build(package_root: Path, out_dir: Path, registry) -> dict:
                                 registry=registry,
                                 source=G5,
                                 game_type="bye" if not opponent_raw else game_type,
+                                team_slug=slug,
                             )
                         )
                 if games:
@@ -584,14 +647,25 @@ def build(package_root: Path, out_dir: Path, registry) -> dict:
 
     for slug in sorted(by_team):
         games = by_team[slug]
-        seen: set[tuple] = set()
-        unique: list[dict] = []
+        # The SEC slate is published week-by-week and some weeks state no date,
+        # so the same fixture can arrive twice — once dated from the opponent's
+        # own grid, once undated. Keep the dated record.
+        by_pairing: dict[tuple, dict] = {}
+        order: list[tuple] = []
         for game in games:
-            key = _dedupe_key(slug, game)
-            if key in seen:
+            pairing = (
+                game.get("opponent_slug") or (game.get("opponent") or "").lower(),
+                game.get("type") == "bye",
+                game.get("date_raw") if game.get("type") == "bye" else "",
+            )
+            existing = by_pairing.get(pairing)
+            if existing is None:
+                by_pairing[pairing] = game
+                order.append(pairing)
                 continue
-            seen.add(key)
-            unique.append(game)
+            if existing.get("date") is None and game.get("date") is not None:
+                by_pairing[pairing] = game
+        unique = [by_pairing[pairing] for pairing in order]
         unique.sort(key=lambda game: (game["date"] or "9999", game["date_raw"]))
 
         team = registry.get(slug)
