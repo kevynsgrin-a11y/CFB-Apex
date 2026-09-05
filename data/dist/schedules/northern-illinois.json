@@ -1,0 +1,184 @@
+{
+  "counts": {
+    "byes": 0,
+    "conference_games": 8,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-05",
+      "date_raw": "Sep 5 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Iowa",
+      "opponent_slug": "iowa",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sep 12 2026",
+      "location": "home",
+      "notes": "FCS",
+      "opponent": "Illinois State",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-19",
+      "date_raw": "Sep 19 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Arizona",
+      "opponent_slug": "arizona",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Sep 26 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Georgia State",
+      "opponent_slug": "georgia-state",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "non-conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-10",
+      "date_raw": "Oct 10 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "Air Force",
+      "opponent_slug": "air-force",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Oct 17 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "Wyoming",
+      "opponent_slug": "wyoming",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-24",
+      "date_raw": "Oct 24 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "Hawaiʻi",
+      "opponent_slug": "hawaii",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-31",
+      "date_raw": "Oct 31 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "UNLV",
+      "opponent_slug": "unlv",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Nov 7 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "San José State",
+      "opponent_slug": "san-jose-state",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-14",
+      "date_raw": "Nov 14 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "Nevada",
+      "opponent_slug": "nevada",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-21",
+      "date_raw": "Nov 21 2026",
+      "location": "away",
+      "notes": null,
+      "opponent": "North Dakota State",
+      "opponent_slug": "north-dakota-state",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-28",
+      "date_raw": "Nov 28 2026",
+      "location": "home",
+      "notes": null,
+      "opponent": "UTEP",
+      "opponent_slug": "utep",
+      "site": null,
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "type": "conference",
+      "week": null
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02b-g5-schedules-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "Northern Illinois",
+    "slug": "northern-illinois"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "counts": {
+    "byes": 0,
+    "conference_games": 0,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-05",
+      "date_raw": "Sat Sep 5",
+      "location": "home",
+      "notes": "SECN",
+      "opponent": "Florida Atlantic",
+      "opponent_slug": "florida-atlantic",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 1
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sat Sep 12",
+      "location": "home",
+      "notes": "SECN+",
+      "opponent": "Campbell",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 2
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Week 4 (Sat Sep 26)",
+      "location": "home",
+      "notes": null,
+      "opponent": "Ole Miss",
+      "opponent_slug": "ole-miss",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 4
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-03",
+      "date_raw": "Week 5 (Sat Oct 3)",
+      "location": "away",
+      "notes": null,
+      "opponent": "Missouri",
+      "opponent_slug": "missouri",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 5
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-10",
+      "date_raw": "Week 6 (Sat Oct 10)",
+      "location": "home",
+      "notes": null,
+      "opponent": "South Carolina",
+      "opponent_slug": "south-carolina",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 6
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Week 7 (Sat Oct 17)",
+      "location": "away",
+      "notes": null,
+      "opponent": "Texas",
+      "opponent_slug": "texas",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 7
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-31",
+      "date_raw": "Week 9 (Sat Oct 31)",
+      "location": "neutral",
+      "notes": "ABC, 3:30 p.m. ET; Neutral-site rivalry (ABC, 3:30 p.m. ET)",
+      "opponent": "Georgia",
+      "opponent_slug": "georgia",
+      "site": "Atlanta",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 9
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Week 10 (Sat Nov 7)",
+      "location": "home",
+      "notes": null,
+      "opponent": "Oklahoma",
+      "opponent_slug": "oklahoma",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 10
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-14",
+      "date_raw": "Week 11 (Sat Nov 14)",
+      "location": "away",
+      "notes": null,
+      "opponent": "Kentucky",
+      "opponent_slug": "kentucky",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 11
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-21",
+      "date_raw": "Week 12 (Sat Nov 21)",
+      "location": "home",
+      "notes": null,
+      "opponent": "Vanderbilt",
+      "opponent_slug": "vanderbilt",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 12
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-27",
+      "date_raw": "Fri Nov 27",
+      "location": "away",
+      "notes": "ABC, 3:30 p.m.",
+      "opponent": "Florida State",
+      "opponent_slug": "florida-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 13
+    },
+    {
+      "conference_game_marker": null,
+      "date": null,
+      "date_raw": "Week 3",
+      "location": "away",
+      "notes": "ESPN",
+      "opponent": "Auburn",
+      "opponent_slug": "auburn",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": 3
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "sec",
+    "school": "Florida",
+    "slug": "florida"
+  }
+}

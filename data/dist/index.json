@@ -44,6 +44,17 @@
         "with_stars": 1258
       }
     },
+    "schedules": {
+      "artifacts": 140,
+      "counts": {
+        "distinct_games": 925,
+        "neutral_games": 8,
+        "team_games": 1665,
+        "teams": 138,
+        "teams_missing": 0,
+        "week0_games": 8
+      }
+    },
     "sos": {
       "artifacts": 3,
       "counts": {
@@ -67,7 +78,6 @@
   },
   "missing_parsers": [
     "depth_charts",
-    "schedules",
     "stats_current",
     "stats_historical"
   ],

@@ -1,0 +1,1774 @@
+{
+  "coverage": [
+    {
+      "games": 223,
+      "section": "4.A Atlantic Coast Conference (17 teams)",
+      "shape": "per_team_bullets",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "teams": 17
+    },
+    {
+      "games": 235,
+      "section": "4.B Big Ten Conference (18 teams)",
+      "shape": "per_team_bullets",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "teams": 18
+    },
+    {
+      "games": 209,
+      "section": "4.C Big 12 Conference (16 teams)",
+      "shape": "per_team_bullets",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "teams": 16
+    },
+    {
+      "games": 104,
+      "section": "4.D Pac-12 Conference (8 teams)",
+      "shape": "per_team_bullets",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "teams": 8
+    },
+    {
+      "games": 226,
+      "section": "4.E Southeastern Conference (16 teams) — week-by-week slate",
+      "shape": "weekly",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "teams": 46
+    },
+    {
+      "games": 25,
+      "section": "4.F FBS Independents",
+      "shape": "per_team_table",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "teams": 2
+    },
+    {
+      "games": 198,
+      "section": "1. American Athletic Conference (14 teams)",
+      "shape": "per_team_table",
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "teams": 14
+    },
+    {
+      "games": 140,
+      "section": "2. Conference USA (10 teams) — membership confirmed",
+      "shape": "per_team_table",
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "teams": 10
+    },
+    {
+      "games": 156,
+      "section": "3. Mid-American Conference (13 teams)",
+      "shape": "per_team_table",
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "teams": 13
+    },
+    {
+      "games": 121,
+      "section": "4. Mountain West Conference (10 teams)",
+      "shape": "per_team_table",
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "teams": 10
+    },
+    {
+      "games": 168,
+      "section": "5. Sun Belt Conference (14 teams — East & West)",
+      "shape": "per_team_table",
+      "source": "02-stats/02b-g5-schedules-2026.md",
+      "teams": 14
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule-index",
+    "notes": [
+      "coverage records which document and layout each conference's grid came from; teams_without_schedule names any program the package did not publish a grid for."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/02b-g5-schedules-2026.md"
+    ]
+  },
+  "teams": [
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Air Force",
+      "slug": "air-force",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Akron",
+      "slug": "akron",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Alabama",
+      "slug": "alabama",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Appalachian State",
+      "slug": "appalachian-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Arizona",
+      "slug": "arizona",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Arizona State",
+      "slug": "arizona-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Arkansas",
+      "slug": "arkansas",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Arkansas State",
+      "slug": "arkansas-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 3,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Army",
+      "slug": "army",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Auburn",
+      "slug": "auburn",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Ball State",
+      "slug": "ball-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Baylor",
+      "slug": "baylor",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Boise State",
+      "slug": "boise-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Boston College",
+      "slug": "boston-college",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Bowling Green",
+      "slug": "bowling-green",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Buffalo",
+      "slug": "buffalo",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "BYU",
+      "slug": "byu",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "California",
+      "slug": "california",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Central Michigan",
+      "slug": "central-michigan",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Charlotte",
+      "slug": "charlotte",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Cincinnati",
+      "slug": "cincinnati",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Clemson",
+      "slug": "clemson",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Coastal Carolina",
+      "slug": "coastal-carolina",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Colorado",
+      "slug": "colorado",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Colorado State",
+      "slug": "colorado-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Delaware",
+      "slug": "delaware",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Duke",
+      "slug": "duke",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "East Carolina",
+      "slug": "east-carolina",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Eastern Michigan",
+      "slug": "eastern-michigan",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "FIU",
+      "slug": "fiu",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Florida",
+      "slug": "florida",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Florida Atlantic",
+      "slug": "florida-atlantic",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-08-29",
+      "games": 13,
+      "school": "Florida State",
+      "slug": "florida-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Fresno State",
+      "slug": "fresno-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Georgia",
+      "slug": "georgia",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Georgia Southern",
+      "slug": "georgia-southern",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Georgia State",
+      "slug": "georgia-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Georgia Tech",
+      "slug": "georgia-tech",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Hawai'i",
+      "slug": "hawaii",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Houston",
+      "slug": "houston",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Illinois",
+      "slug": "illinois",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Indiana",
+      "slug": "indiana",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Iowa",
+      "slug": "iowa",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Iowa State",
+      "slug": "iowa-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Jacksonville State",
+      "slug": "jacksonville-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "James Madison",
+      "slug": "james-madison",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 13,
+      "school": "Kansas",
+      "slug": "kansas",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Kansas State",
+      "slug": "kansas-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 13,
+      "school": "Kennesaw State",
+      "slug": "kennesaw-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Kent State",
+      "slug": "kent-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Kentucky",
+      "slug": "kentucky",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Liberty",
+      "slug": "liberty",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Louisiana",
+      "slug": "louisiana",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Louisiana Tech",
+      "slug": "louisiana-tech",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 13,
+      "school": "Louisville",
+      "slug": "louisville",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "LSU",
+      "slug": "lsu",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Marshall",
+      "slug": "marshall",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Maryland",
+      "slug": "maryland",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Memphis",
+      "slug": "memphis",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-04",
+      "games": 12,
+      "school": "Miami (FL)",
+      "slug": "miami-fl",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Miami (OH)",
+      "slug": "miami-oh",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Michigan",
+      "slug": "michigan",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Michigan State",
+      "slug": "michigan-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Middle Tennessee",
+      "slug": "middle-tennessee",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Minnesota",
+      "slug": "minnesota",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Mississippi State",
+      "slug": "mississippi-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Missouri",
+      "slug": "missouri",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Missouri State",
+      "slug": "missouri-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 3,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Navy",
+      "slug": "navy",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-08-29",
+      "games": 13,
+      "school": "NC State",
+      "slug": "nc-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Nebraska",
+      "slug": "nebraska",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Nevada",
+      "slug": "nevada",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-09-05",
+      "games": 13,
+      "school": "New Mexico",
+      "slug": "new-mexico",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "New Mexico State",
+      "slug": "new-mexico-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "North Carolina",
+      "slug": "north-carolina",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "North Dakota State",
+      "slug": "north-dakota-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "North Texas",
+      "slug": "north-texas",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Northern Illinois",
+      "slug": "northern-illinois",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Northwestern",
+      "slug": "northwestern",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "independents",
+      "first_game_date": "2026-09-06",
+      "games": 12,
+      "school": "Notre Dame",
+      "slug": "notre-dame",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Ohio",
+      "slug": "ohio",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Ohio State",
+      "slug": "ohio-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-04",
+      "games": 12,
+      "school": "Oklahoma",
+      "slug": "oklahoma",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Oklahoma State",
+      "slug": "oklahoma-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Old Dominion",
+      "slug": "old-dominion",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-06",
+      "games": 12,
+      "school": "Ole Miss",
+      "slug": "ole-miss",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Oregon",
+      "slug": "oregon",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Oregon State",
+      "slug": "oregon-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Penn State",
+      "slug": "penn-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Pittsburgh",
+      "slug": "pittsburgh",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Purdue",
+      "slug": "purdue",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Rice",
+      "slug": "rice",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Rutgers",
+      "slug": "rutgers",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Sacramento State",
+      "slug": "sacramento-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Sam Houston",
+      "slug": "sam-houston",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "San Diego State",
+      "slug": "san-diego-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-08-29",
+      "games": 13,
+      "school": "San José State",
+      "slug": "san-jose-state",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-07",
+      "games": 12,
+      "school": "SMU",
+      "slug": "smu",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "South Alabama",
+      "slug": "south-alabama",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "South Carolina",
+      "slug": "south-carolina",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "South Florida",
+      "slug": "south-florida",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Southern Miss",
+      "slug": "southern-miss",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Stanford",
+      "slug": "stanford",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Syracuse",
+      "slug": "syracuse",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "TCU",
+      "slug": "tcu",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Temple",
+      "slug": "temple",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Tennessee",
+      "slug": "tennessee",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Texas",
+      "slug": "texas",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Texas A&M",
+      "slug": "texas-am",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Texas State",
+      "slug": "texas-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Texas Tech",
+      "slug": "texas-tech",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Toledo",
+      "slug": "toledo",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 13,
+      "school": "Troy",
+      "slug": "troy",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Tulane",
+      "slug": "tulane",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Tulsa",
+      "slug": "tulsa",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "UAB",
+      "slug": "uab",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-04",
+      "games": 12,
+      "school": "UCF",
+      "slug": "ucf",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "UCLA",
+      "slug": "ucla",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "independents",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "UConn",
+      "slug": "uconn",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "sun-belt",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "ULM",
+      "slug": "ulm",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "UMass",
+      "slug": "umass",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "UNLV",
+      "slug": "unlv",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "USC",
+      "slug": "usc",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-04",
+      "games": 12,
+      "school": "Utah",
+      "slug": "utah",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Utah State",
+      "slug": "utah-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-09-04",
+      "games": 12,
+      "school": "UTEP",
+      "slug": "utep",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "aac",
+      "first_game_date": "2026-09-05",
+      "games": 13,
+      "school": "UTSA",
+      "slug": "utsa",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 0,
+      "conference_slug": "sec",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Vanderbilt",
+      "slug": "vanderbilt",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-08-29",
+      "games": 12,
+      "school": "Virginia",
+      "slug": "virginia",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Virginia Tech",
+      "slug": "virginia-tech",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "acc",
+      "first_game_date": "2026-09-03",
+      "games": 12,
+      "school": "Wake Forest",
+      "slug": "wake-forest",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Washington",
+      "slug": "washington",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "pac12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Washington State",
+      "slug": "washington-state",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big12",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "West Virginia",
+      "slug": "west-virginia",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 2,
+      "conference_games": 8,
+      "conference_slug": "cusa",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Western Kentucky",
+      "slug": "western-kentucky",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md",
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mac",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Western Michigan",
+      "slug": "western-michigan",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    },
+    {
+      "byes": 1,
+      "conference_games": 0,
+      "conference_slug": "big-ten",
+      "first_game_date": "2026-09-06",
+      "games": 12,
+      "school": "Wisconsin",
+      "slug": "wisconsin",
+      "sources": [
+        "02-stats/02-full-schedule-2026.md"
+      ]
+    },
+    {
+      "byes": 0,
+      "conference_games": 8,
+      "conference_slug": "mountain-west",
+      "first_game_date": "2026-09-05",
+      "games": 12,
+      "school": "Wyoming",
+      "slug": "wyoming",
+      "sources": [
+        "02-stats/02b-g5-schedules-2026.md"
+      ]
+    }
+  ],
+  "teams_without_schedule": [],
+  "totals": {
+    "distinct_games": 925,
+    "games": 1665,
+    "teams": 138
+  }
+}

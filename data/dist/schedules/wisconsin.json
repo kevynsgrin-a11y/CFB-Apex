@@ -1,0 +1,197 @@
+{
+  "counts": {
+    "byes": 1,
+    "conference_games": 0,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-06",
+      "date_raw": "Sep 6 (Sun)",
+      "location": "neutral",
+      "notes": "Lambeau Field, Green Bay; Shamrock Series",
+      "opponent": "Notre Dame",
+      "opponent_slug": "notre-dame",
+      "site": "Lambeau Field, Green Bay, WI",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sep 12",
+      "location": "home",
+      "notes": null,
+      "opponent": "Western Illinois",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-19",
+      "date_raw": "Sep 19",
+      "location": "home",
+      "notes": null,
+      "opponent": "Eastern Michigan",
+      "opponent_slug": "eastern-michigan",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Sep 26",
+      "location": "away",
+      "notes": null,
+      "opponent": "Penn State",
+      "opponent_slug": "penn-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-03",
+      "date_raw": "Oct 3",
+      "location": "home",
+      "notes": null,
+      "opponent": "Michigan State",
+      "opponent_slug": "michigan-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-10",
+      "date_raw": "Oct 10",
+      "location": null,
+      "notes": null,
+      "opponent": null,
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": "bye",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Oct 17",
+      "location": "away",
+      "notes": null,
+      "opponent": "UCLA",
+      "opponent_slug": "ucla",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-24",
+      "date_raw": "Oct 24",
+      "location": "home",
+      "notes": null,
+      "opponent": "USC",
+      "opponent_slug": "usc",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-31",
+      "date_raw": "Oct 31",
+      "location": "away",
+      "notes": null,
+      "opponent": "Iowa",
+      "opponent_slug": "iowa",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Nov 7",
+      "location": "home",
+      "notes": null,
+      "opponent": "Rutgers",
+      "opponent_slug": "rutgers",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-14",
+      "date_raw": "Nov 14",
+      "location": "away",
+      "notes": null,
+      "opponent": "Maryland",
+      "opponent_slug": "maryland",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-21",
+      "date_raw": "Nov 21",
+      "location": "away",
+      "notes": null,
+      "opponent": "Purdue",
+      "opponent_slug": "purdue",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-28",
+      "date_raw": "Nov 28",
+      "location": "home",
+      "notes": null,
+      "opponent": "Minnesota",
+      "opponent_slug": "minnesota",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "big-ten",
+    "school": "Wisconsin",
+    "slug": "wisconsin"
+  }
+}
