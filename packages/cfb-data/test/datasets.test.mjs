@@ -175,6 +175,34 @@ describe("datasets", { skip }, () => {
       assert.equal(army.counts.conference_games, 8);
     });
 
+    it("puts every FBS matchup on both teams' schedules", async () => {
+      // The strongest single check on the schedule data: if A's grid lists B,
+      // B's grid must list A. It is what caught Pittsburgh's Miami (OH) game
+      // being recorded against Miami (FL).
+      const teams = await client.teams();
+      const opponents = new Map();
+      for (const team of teams) {
+        const schedule = await client.schedule(team.slug);
+        opponents.set(
+          team.slug,
+          new Set(
+            (schedule?.games ?? [])
+              .map((game) => game.opponent_slug)
+              .filter((slug) => slug !== null),
+          ),
+        );
+      }
+      const asymmetric = [];
+      for (const [slug, played] of opponents) {
+        for (const opponent of played) {
+          if (opponents.has(opponent) && !opponents.get(opponent).has(slug)) {
+            asymmetric.push(`${slug} lists ${opponent}, but not the reverse`);
+          }
+        }
+      }
+      assert.deepEqual(asymmetric, []);
+    });
+
     it("dates every game inside the season window", async () => {
       const season = await client.seasonSchedule();
       for (const game of season.all_games) {
