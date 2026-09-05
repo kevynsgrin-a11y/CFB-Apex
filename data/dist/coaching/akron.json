@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Joe Moorhead",
+    "title_raw": "Joe Moorhead"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Exact published base front label (e.g., exclusive 4-2-5 vs 4-3) Not listed on materials reviewed; Tibesar returns as DC/linebackers. (gozips.com; ByTheBelt.)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Multi-tempo “Sophisticated Simplicity” attack blending West Coast–based passing with an RPO-anchored run game; Moorhead again calling plays. (Beacon Journal / Times-Gazette philosophy pieces; Coach and Coordinator RPO Symposium notes; ByTheBelt 2026 preview.)",
+      "label": "West Coast"
+    }
+  },
+  "sources": [
+    {
+      "title": "gozips.com/sports/football/coaches",
+      "url": "https://gozips.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Joe Moorhead",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UA athletics coaches page (2026)",
+      "title_raw": "Joe Moorhead"
+    },
+    {
+      "name": "Joe Moorhead",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "ByTheBelt 2026 MAC preview; Beacon Journal / prior Moorhead continuity reporting",
+      "title_raw": "Joe Moorhead (play-caller; no separate OC title on staff directory)"
+    },
+    {
+      "name": "Tim Tibesar",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UA athletics",
+      "title_raw": "Tim Tibesar (also Linebackers)"
+    },
+    {
+      "name": "Ryan Matviko",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UA athletics",
+      "title_raw": "Ryan Matviko (Assistant Coach | Special Teams)"
+    },
+    {
+      "name": "Michael Shuster",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official UA athletics",
+      "title_raw": "Michael Shuster"
+    },
+    {
+      "name": "Terry Richardson",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UA athletics",
+      "title_raw": "Terry Richardson (Assistant Head Coach | Running Backs)"
+    },
+    {
+      "name": "JD Brookhart",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UA athletics",
+      "title_raw": "JD Brookhart"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Akron",
+    "slug": "akron"
+  }
+}

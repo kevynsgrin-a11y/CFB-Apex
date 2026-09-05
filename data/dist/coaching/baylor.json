@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Dave Aranda",
+    "title_raw": "Dave Aranda"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Klanderman (formerly Kansas State DC) overhaul; exact 2026 base front label Not listed on official materials reviewed. (CBS Sports hire notes; Baylor athletics.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Spavital spread/downfield passing emphasis (vertical shots for wideouts); continuity into year three as OC. (VSiN / ESPN Big 12 previews referencing Spavital style.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "baylorbears.com/sports/football/coaches",
+      "url": "https://baylorbears.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Dave Aranda",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Baylor coaches page",
+      "title_raw": "Dave Aranda"
+    },
+    {
+      "name": "Jake Spavital",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Baylor coaches page",
+      "title_raw": "Jake Spavital (also Quarterbacks)"
+    },
+    {
+      "name": "Joe Klanderman",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Baylor coaches page; CBS Sports carousel",
+      "title_raw": "Joe Klanderman (also Safeties)"
+    },
+    {
+      "name": "Mark Scott",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Baylor coaches page",
+      "title_raw": "Mark Scott"
+    },
+    {
+      "name": "Jake Spavital",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC (Quarterbacks)",
+      "title_raw": "Jake Spavital"
+    },
+    {
+      "name": "Khenon Hall",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Baylor coaches page",
+      "title_raw": "Khenon Hall (Associate Head Coach / Running Backs)"
+    },
+    {
+      "name": "Dallas Baker",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Baylor coaches page",
+      "title_raw": "Dallas Baker"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Baylor",
+    "slug": "baylor"
+  }
+}

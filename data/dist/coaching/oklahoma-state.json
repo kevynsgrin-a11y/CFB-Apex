@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Eric Morris",
+    "title_raw": "Eric Morris"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Cassity (from North Texas) takeaway-oriented defense; exact published base front for Stillwater 2026 Not listed. (ESPN/CBS coordinator tracking; OSU athletics.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Morris Air Raid variant at high tempo, with renewed commitment to efficient rushing (~150–175+ ypg target), switch releases, and mixed personnel. (SI/OSU Air Raid + run feature; Road to CFP Big 12 preview.)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "okstate.com/sports/football/coaches",
+      "url": "https://okstate.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Eric Morris",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official OSU coaches page (first season)",
+      "title_raw": "Eric Morris"
+    },
+    {
+      "name": "Sean Brophy",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official OSU coaches page",
+      "title_raw": "Sean Brophy (also Quarterbacks)"
+    },
+    {
+      "name": "Skyler Cassity",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official OSU coaches page",
+      "title_raw": "Skyler Cassity"
+    },
+    {
+      "name": "Drew Svoboda",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official OSU coaches page",
+      "title_raw": "Drew Svoboda (Associate Head Coach / STC / Tight Ends)"
+    },
+    {
+      "name": "Sean Brophy",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Sean Brophy"
+    },
+    {
+      "name": "Patrick Cobbs",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official OSU coaches page",
+      "title_raw": "Patrick Cobbs (Run Game Coordinator / Running Backs)"
+    },
+    {
+      "name": "Nick Edwards",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official OSU coaches page",
+      "title_raw": "Nick Edwards"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Oklahoma State",
+    "slug": "oklahoma-state"
+  }
+}

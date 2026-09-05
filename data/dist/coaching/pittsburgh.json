@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Pat Narduzzi",
+    "title_raw": "Pat Narduzzi"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Sanders promoted to continue the system established under Randy Bates per CBS Sports; no exclusive official base-front tag published)",
+      "label": null
+    },
+    "offense": {
+      "description": "Aggressive / explosive passing-forward attack under Bell (TribLive Year-3 preview language; no single official brand label on athletics page) — formal brand Not listed beyond attributed explosive/tempo pass-game emphasis",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "pittsburghpanthers.com 2026 Football Coaches",
+      "url": "https://pittsburghpanthers.com/sports/football/coaches"
+    },
+    {
+      "title": "Priefer hire release",
+      "url": "https://pittsburghpanthers.com/news/2026/1/13/football-priefer-to-bring-longtime-nfl-experience-to-pitt"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Pat Narduzzi",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Pat Narduzzi"
+    },
+    {
+      "name": "Kade Bell",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kade Bell (Offensive Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "Cory Sanders",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Cory Sanders"
+    },
+    {
+      "name": "Mike Priefer",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Mike Priefer"
+    },
+    {
+      "name": "Kade Bell",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Kade Bell"
+    },
+    {
+      "name": "Lindsey Lamar",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Lindsey Lamar"
+    },
+    {
+      "name": "JJ Laster",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "JJ Laster"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Pittsburgh",
+    "slug": "pittsburgh"
+  }
+}

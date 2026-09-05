@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Zach Kittley",
+    "title_raw": "Zach Kittley"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Dewhurst continues as DC; exclusive published 2026 base-front label Not listed on FAU materials reviewed. (FAU athletics.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Kittley’s Owl Raid / Air Raid–influenced tempo-spacing attack (continuity from Houston Baptist / WKU / Texas Tech OC résumé); year-two refinement with returning staff and QB Caden Veltkamp. (Florida Football Live; FAU athletics continuity release; Wikipedia Zach Kittley.)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "fausports.com/sports/football/coaches",
+      "url": "https://fausports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Zach Kittley",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official FAU athletics 2026 coaches page",
+      "title_raw": "Zach Kittley"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "FAU coaches page; FAU continuity release (Feb. 5, 2026); Florida Football Live",
+      "title_raw": "Not listed as a discrete OC title on 2026 coaches directory (Kittley returns full-time staff intact and is widely described as the offense’s play-caller / “Owl Raid” architect)"
+    },
+    {
+      "name": "Brett Dewhurst",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official FAU athletics",
+      "title_raw": "Brett Dewhurst"
+    },
+    {
+      "name": "Tyler Schovanec",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official FAU athletics",
+      "title_raw": "Tyler Schovanec"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official FAU athletics",
+      "title_raw": "Not listed as a primary “Quarterbacks” title on full-time coaching staff table"
+    },
+    {
+      "name": "Trent Vasey listed as Assistant Quarterbacks Coach",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official FAU athletics",
+      "title_raw": "Trent Vasey listed as Assistant Quarterbacks Coach (support/assistant tier)"
+    },
+    {
+      "name": "Chris Perkins",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official FAU athletics",
+      "title_raw": "Chris Perkins"
+    },
+    {
+      "name": "DJ McCarthy",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official FAU athletics",
+      "title_raw": "DJ McCarthy"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Florida Atlantic",
+    "slug": "florida-atlantic"
+  }
+}

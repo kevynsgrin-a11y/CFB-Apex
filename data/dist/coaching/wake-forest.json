@@ -1,0 +1,108 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jake Dickert",
+    "title_raw": "Jake Dickert"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "4–2–5 (Wikipedia 2026 team page)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Spread (Wikipedia 2026 team page)",
+      "label": "Spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "godeacs.com 2026 Football Coaches",
+      "url": "https://godeacs.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 Wake Forest Demon Deacons football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Wake_Forest_Demon_Deacons_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jake Dickert",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jake Dickert"
+    },
+    {
+      "name": "Rob Ezell",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Rob Ezell"
+    },
+    {
+      "name": "Dan Enos",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Dan Enos (Co-OC / Quarterbacks)"
+    },
+    {
+      "name": "Scottie Hazelton",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Scottie Hazelton"
+    },
+    {
+      "name": "Freddie Banks",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Freddie Banks (Co-DC / Safeties)"
+    },
+    {
+      "name": "Nick Whitworth",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Nick Whitworth"
+    },
+    {
+      "name": "Dan Enos",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Dan Enos"
+    },
+    {
+      "name": "Effrem Reed",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Effrem Reed"
+    },
+    {
+      "name": "Dyrell Roberts",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Dyrell Roberts (The Balogh Family Football Assistant Coach for Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Wake Forest",
+    "slug": "wake-forest"
+  }
+}

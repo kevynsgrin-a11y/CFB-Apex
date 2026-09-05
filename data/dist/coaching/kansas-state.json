@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Collin Klein",
+    "title_raw": "Collin Klein"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Peterson (ex–Texas A&M co-DC/DBs) with Tim DeRuyter as Assistant Head Coach for Defense; exact base front Not listed in sources reviewed. (Capital-Journal; WIBW Dec. 2025 staff list.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Klein (ex–Texas A&M OC / former K-State OC) as play-caller with Gleeson as OC; Klein/Elko-influenced multiple college offense. Exact branded playbook name Not listed. (Capital-Journal staff feature, Aug. 21, 2026.)",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "kstatesports.com/sports/football/coaches",
+      "url": "https://www.kstatesports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Collin Klein",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official K-State coaches page; Klieman retired Dec. 2025",
+      "title_raw": "Collin Klein"
+    },
+    {
+      "name": "Sean Gleeson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official / WIBW staff list; Klein retains play-calling (Capital-Journal)",
+      "title_raw": "Sean Gleeson"
+    },
+    {
+      "name": "Jordan Peterson",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official / Capital-Journal Aug. 21, 2026 staff feature",
+      "title_raw": "Jordan Peterson (also Defensive Backs)"
+    },
+    {
+      "name": "Stanton Weber",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official / WIBW / Capital-Journal",
+      "title_raw": "Stanton Weber"
+    },
+    {
+      "name": "Christian Ellsworth",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Capital-Journal / WIBW",
+      "title_raw": "Christian Ellsworth"
+    },
+    {
+      "name": "Cory Patterson",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Capital-Journal / WIBW",
+      "title_raw": "Cory Patterson"
+    },
+    {
+      "name": "Thad Ward",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Capital-Journal / WIBW",
+      "title_raw": "Thad Ward (Associate Head Coach / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Kansas State",
+    "slug": "kansas-state"
+  }
+}

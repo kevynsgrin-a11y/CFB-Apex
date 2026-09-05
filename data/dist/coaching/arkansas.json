@@ -1,0 +1,105 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Ryan Silverfield",
+    "title_raw": "Ryan Silverfield (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (multiple-front staff titles published; no single official base-front label located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Veer & Shoot / tempo wide-split attack (Sports Illustrated SEC scheme survey naming Cramsey among 2026 Veer & Shoot play-callers)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Arkansas Razorbacks football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Arkansas_Razorbacks_football_team"
+    },
+    {
+      "title": "Arkansas 2026 football media guide PDF",
+      "url": "https://arkansasrazorbacks.com/pdf/mediaguide/football/2026/Razorback_Football.pdf"
+    },
+    {
+      "title": "SI: SEC Veer-and-Shoot boom",
+      "url": "https://www.si.com/college/texas/football/the-sec-veer-and-shoot-boom-is-coming-for-texas-in-2026"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Ryan Silverfield",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Ryan Silverfield (1st season)"
+    },
+    {
+      "name": "Tim Cramsey",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tim Cramsey"
+    },
+    {
+      "name": "Ron Roberts",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ron Roberts"
+    },
+    {
+      "name": "Deron Wilson",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Deron Wilson (Co-DC / Secondary)"
+    },
+    {
+      "name": "Chad Lunsford",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Chad Lunsford"
+    },
+    {
+      "name": "Mitch Stewart",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Mitch Stewart"
+    },
+    {
+      "name": "David Johnson",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "David Johnson (Assistant Head Coach / Running Backs)"
+    },
+    {
+      "name": "Larry Smith",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Larry Smith"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Arkansas",
+    "slug": "arkansas"
+  }
+}

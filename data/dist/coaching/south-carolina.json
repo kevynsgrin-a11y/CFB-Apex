@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Shane Beamer",
+    "title_raw": "Shane Beamer"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (White multiple; no official base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Veer & Shoot (Briles lineage; SI SEC survey; The State spring coverage on Briles install)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 South Carolina Gamecocks football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_South_Carolina_Gamecocks_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Shane Beamer",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Shane Beamer"
+    },
+    {
+      "name": "Kendal Briles",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kendal Briles (OC / Quarterbacks)"
+    },
+    {
+      "name": "Clayton White",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Clayton White (DC / Inside Linebackers)"
+    },
+    {
+      "name": "Torrian Gray",
+      "role_key": "other",
+      "role_raw": "Co-Defensive / secondary title",
+      "source_note": null,
+      "title_raw": "Torrian Gray (Defensive Backs; listed alongside White as defensive coordinators on some SEC coordinator roundups)"
+    },
+    {
+      "name": "Matthew Smiley",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Matthew Smiley"
+    },
+    {
+      "name": "Kendal Briles",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Kendal Briles"
+    },
+    {
+      "name": "Stan Drayton",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Stan Drayton (Associate Head Coach / Running Backs)"
+    },
+    {
+      "name": "Mike Furrey",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Mike Furrey (Passing Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "South Carolina",
+    "slug": "south-carolina"
+  }
+}

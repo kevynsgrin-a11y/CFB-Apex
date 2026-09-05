@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Joe Harasymiak",
+    "title_raw": "Joe Harasymiak"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Ourlads lists 4-3, 4-2-5; Keyte emphasizing communication, physicality, and “violence” of pursuit. (Ourlads 2026 UMass depth chart; Minuteman Command Keyte feature.)",
+      "label": "4-3, 4-2-5"
+    },
+    "offense": {
+      "description": "Multiple, quarterback-driven pro-style approach emphasizing toughness, varied formations/personnel, and establishing the run to open the pass (Warner spring media). Ourlads: “Multiple Pro.” (Daily Hampshire Gazette, Apr. 7, 2026; Minuteman Command Warner presser; Ourlads.)",
+      "label": "pro-style"
+    }
+  },
+  "sources": [
+    {
+      "title": "umassathletics.com/sports/football/coaches",
+      "url": "https://umassathletics.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Joe Harasymiak",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UMass athletics coaches page (2026)",
+      "title_raw": "Joe Harasymiak"
+    },
+    {
+      "name": "Max Warner",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UMass athletics; Berkshire Eagle staff-change reporting",
+      "title_raw": "Max Warner"
+    },
+    {
+      "name": "Jared Keyte",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UMass athletics; Wikipedia 2026 team page",
+      "title_raw": "Jared Keyte"
+    },
+    {
+      "name": "Joe Castellitto",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UMass athletics",
+      "title_raw": "Joe Castellitto"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "umassathletics.com",
+      "title_raw": "Not listed as a separate QB title (Warner is OC without paired “/Quarterbacks” on 2026 coaches directory)"
+    },
+    {
+      "name": "Jeremy Larkin",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UMass athletics",
+      "title_raw": "Jeremy Larkin"
+    },
+    {
+      "name": "Jordan Hogan",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UMass athletics",
+      "title_raw": "Jordan Hogan (Wide Receivers / Pass Game Coordinator)"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "UMass",
+    "slug": "umass"
+  }
+}

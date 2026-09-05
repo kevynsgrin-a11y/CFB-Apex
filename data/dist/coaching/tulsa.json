@@ -1,0 +1,111 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Tre Lamb",
+    "title_raw": "Tre Lamb"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Reardon/Gray co-structure; exclusive published 2026 base-front label Not listed on Tulsa athletics materials reviewed (historical Gillespie-era 3-3-5 language is not assumed for 2026). (Tulsa athletics.)",
+      "label": "3-3-5"
+    },
+    "offense": {
+      "description": "Barbay hire framed around high-powered, explosive production from App State / Central Michigan / Mississippi State / Houston OC résumé; exclusive 2026 Tulsa branded scheme label Not listed on athletics materials. (Tulsa Barbay hire release.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "tulsahurricane.com/sports/football/coaches",
+      "url": "https://tulsahurricane.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tre Lamb",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Tulsa athletics 2026 coaches page",
+      "title_raw": "Tre Lamb"
+    },
+    {
+      "name": "Kevin Barbay",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Tulsa athletics; Tulsa Barbay hire release (Jan. 10, 2026)",
+      "title_raw": "Kevin Barbay"
+    },
+    {
+      "name": "Ty Darlington Co-OC / Tight Ends",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Tulsa athletics; Tulsa Barbay hire release (Jan. 10, 2026)",
+      "title_raw": "Ty Darlington Co-OC / Tight Ends"
+    },
+    {
+      "name": "Josh Reardon",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Tulsa athletics",
+      "title_raw": "Josh Reardon (DC / Safeties)"
+    },
+    {
+      "name": "Mike Gray Co-DC / Linebackers",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Tulsa athletics",
+      "title_raw": "Mike Gray Co-DC / Linebackers"
+    },
+    {
+      "name": "Carter Barfield",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Tulsa athletics",
+      "title_raw": "Carter Barfield"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official Tulsa athletics; Barbay bio",
+      "title_raw": "Not listed as a discrete Quarterbacks title on 2026 coaches directory (Barbay historically coached QBs at prior OC stops; title here is Offensive Coordinator only)"
+    },
+    {
+      "name": "Dominique Davenport",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Tulsa athletics",
+      "title_raw": "Dominique Davenport"
+    },
+    {
+      "name": "BJ Johnson",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Tulsa athletics",
+      "title_raw": "BJ Johnson (Wide Receivers)"
+    },
+    {
+      "name": "Tyler Dell",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Tulsa athletics",
+      "title_raw": "Tyler Dell (Inside Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Tulsa",
+    "slug": "tulsa"
+  }
+}

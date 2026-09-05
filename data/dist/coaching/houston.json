@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Willie Fritz",
+    "title_raw": "Willie Fritz"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Armstrong year-two continuity after 2025 top-50 improvements. Exact base front label Not listed on official materials reviewed. (SI; uh cougars coaches page.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Fritz/Nagle continuity after 2025 scoring/passing jump; Fritz programs typically emphasize tempo, multiple personnel, and balanced attack. Named exclusive playbook brand Not listed. (SI Houston preview; UH athletics.)",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "uhcougars.com/sports/football/coaches",
+      "url": "https://uhcougars.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Willie Fritz",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Willie Fritz"
+    },
+    {
+      "name": "Slade Nagle",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Slade Nagle"
+    },
+    {
+      "name": "Austin Armstrong",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Austin Armstrong"
+    },
+    {
+      "name": "Chris Couch",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Chris Couch"
+    },
+    {
+      "name": "Shawn Bell",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Shawn Bell (Assistant Head Coach / Quarterbacks / Passing Game Coordinator)"
+    },
+    {
+      "name": "Jordy Joseph",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Jordy Joseph"
+    },
+    {
+      "name": "Brian Bell",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UH coaches page",
+      "title_raw": "Brian Bell"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Houston",
+    "slug": "houston"
+  }
+}

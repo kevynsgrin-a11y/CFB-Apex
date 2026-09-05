@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Brent Venables",
+    "title_raw": "Brent Venables"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed as a single official base on soonersports coaches page; Venables-led multiple defense (reporting notes Venables’ heavy defensive involvement)",
+      "label": null
+    },
+    "offense": {
+      "description": "Air Raid variant (pre-snap motion, RPOs, controlled tempo, rhythm passing — Arbuckle model per Yahoo/SoonersWire analysis)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "soonersports.com 2026 Football Coaches",
+      "url": "https://soonersports.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 Oklahoma Sooners football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Oklahoma_Sooners_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Brent Venables",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Brent Venables"
+    },
+    {
+      "name": "Ben Arbuckle",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ben Arbuckle (OC / Quarterbacks)"
+    },
+    {
+      "name": "Todd Bates",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Todd Bates (Associate Head Coach / Co-Defensive Coordinator / Run Defense / Defensive Tackles; Wikipedia 2026 page lists Bates as DC)"
+    },
+    {
+      "name": "Doug Deakin",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Doug Deakin"
+    },
+    {
+      "name": "Ben Arbuckle",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Ben Arbuckle"
+    },
+    {
+      "name": "John Kuceyeski",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "John Kuceyeski (Quarterbacks Coach)"
+    },
+    {
+      "name": "Deland McCullough",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Deland McCullough"
+    },
+    {
+      "name": "Emmett Jones",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Emmett Jones (Passing Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Oklahoma",
+    "slug": "oklahoma"
+  }
+}

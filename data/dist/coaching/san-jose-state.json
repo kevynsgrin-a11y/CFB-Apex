@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Ken Niumatalolo",
+    "title_raw": "Ken Niumatalolo"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "First-year full-time DC Filimoeatu emphasizes multiplicity and disguise rather than a single static front (contrast with prior 3-4 lean under prior staff lineage per MWC Connection). Exclusive official base-front label Not listed.",
+      "label": "3-4"
+    },
+    "offense": {
+      "description": "Stutzmann’s Spread & Shred (also styled Spread-and-Shred / Spread-N-Shred) — tempo, spaced receivers, quarterback-centric quick decisions, with an intentional complementary run game (Mountain West Connection; San Francisco Chronicle).",
+      "label": "Spread & Shred"
+    }
+  },
+  "sources": [
+    {
+      "title": "sjsuspartans.com 2026 roster / staff directory",
+      "url": "https://sjsuspartans.com/sports/football/roster/season/2026"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Ken Niumatalolo",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Ken Niumatalolo"
+    },
+    {
+      "name": "Craig Stutzmann",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Craig Stutzmann"
+    },
+    {
+      "name": "Bojay Filimoeatu",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Bojay Filimoeatu"
+    },
+    {
+      "name": null,
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Not listed as a coordinator title"
+    },
+    {
+      "name": "Fred Guidici is listed as Special Teams Analyst",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Fred Guidici is listed as Special Teams Analyst"
+    },
+    {
+      "name": "Craig Stutzmann",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Craig Stutzmann"
+    },
+    {
+      "name": "Michael Smith",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Michael Smith"
+    },
+    {
+      "name": "Billy Ray Stutzmann",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Billy Ray Stutzmann (Wide Receivers / Offensive Pass Game Coordinator)"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "San José State",
+    "slug": "san-jose-state"
+  }
+}

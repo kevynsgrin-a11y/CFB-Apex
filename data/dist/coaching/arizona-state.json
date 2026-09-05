@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Kenny Dillingham",
+    "title_raw": "Kenny Dillingham"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Pressure-oriented, “controlled chaos” multiple defense; often four-man pressure with situational blitzes and coverage disguise. Specific exclusive base (3-4 vs 4-2-5) Not listed as a single published alignment. (SI / 247Sports Ward reporting.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Pro-spread attack curated with Arroyo and position staff (Tuitele OL, Mohns TE, Hines Ward WR, Aguano RB); adaptable to personnel. (SI/ASU beat on Arroyo retention.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "thesundevils.com staff directory (Football)",
+      "url": "https://thesundevils.com/staff-directory/department/football-480965-3429-fax-480-965-8370"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Kenny Dillingham",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official ASU staff directory",
+      "title_raw": "Kenny Dillingham"
+    },
+    {
+      "name": "Marcus Arroyo",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official ASU staff directory",
+      "title_raw": "Marcus Arroyo (also Quarterbacks)"
+    },
+    {
+      "name": "Brian Ward",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official ASU staff directory",
+      "title_raw": "Brian Ward"
+    },
+    {
+      "name": "Jack Nudo",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official ASU staff directory",
+      "title_raw": "Jack Nudo"
+    },
+    {
+      "name": "Marcus Arroyo",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title pairs OC/QB",
+      "title_raw": "Marcus Arroyo"
+    },
+    {
+      "name": "Shaun Aguano",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official ASU staff directory",
+      "title_raw": "Shaun Aguano"
+    },
+    {
+      "name": "Hines Ward",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official ASU staff directory",
+      "title_raw": "Hines Ward (Associate Head Coach, Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Arizona State",
+    "slug": "arizona-state"
+  }
+}

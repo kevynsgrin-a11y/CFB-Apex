@@ -1,0 +1,85 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jedd Fisch",
+    "title_raw": "Jedd Fisch"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big-ten.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Walters year-two; published base front label Not listed in sources reviewed for this report.",
+      "label": null
+    },
+    "offense": {
+      "description": "Fisch-called offense (continuity from prior seasons); formal playbook brand Not listed. Senior offensive assistant Matt Cavanaugh added for game-planning support.",
+      "label": null
+    }
+  },
+  "sources": [],
+  "staff": [
+    {
+      "name": "Jedd Fisch",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jedd Fisch"
+    },
+    {
+      "name": "No titled OC — Jedd Fisch designs and calls the offense",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "No titled OC — Jedd Fisch designs and calls the offense (confirmed Feb 2026)"
+    },
+    {
+      "name": "Ryan Walters",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ryan Walters"
+    },
+    {
+      "name": "Chris Petrilli",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Chris Petrilli"
+    },
+    {
+      "name": "JP Losman",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "JP Losman"
+    },
+    {
+      "name": "Scottie Graham",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Scottie Graham (Assistant Head Coach / Running Backs)"
+    },
+    {
+      "name": "Kevin Cummings",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Kevin Cummings (Pass Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big-ten",
+    "school": "Washington",
+    "slug": "washington"
+  }
+}

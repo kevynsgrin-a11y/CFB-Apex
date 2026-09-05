@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Kirby Moore",
+    "title_raw": "Kirby Moore"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, attacking front under Bray (linemen encouraged to penetrate); Bray historically prefers hybrid three-/four-down spacing tailored to players. A single published 2026 “base” label (3-4 vs 4-2-5, etc.) was Not listed in official hire releases reviewed.",
+      "label": "3-4"
+    },
+    "offense": {
+      "description": "Fast, physical, explosive, high-IQ tempo offense tailored to roster strengths (Moore/Miller); spread-rushing DNA from Moore’s Missouri OC background; Miller designs around personnel. Formal named package (e.g., Air Raid) Not listed.",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "wsucougars.com Moore first hires (12/31/2025)",
+      "url": "https://wsucougars.com/news/2025/12/31/cougar-head-coach-kirby-moore-announces-first-coaching-hires"
+    },
+    {
+      "title": "wsucougars.com Larrondo + seven assistants (1/5/2026)",
+      "url": "https://wsucougars.com/news/2026/01/5/kirby-moore-adds-brad-larrondo-seven-assistants-to-cougar-coaching-staff"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Kirby Moore",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Kirby Moore"
+    },
+    {
+      "name": "Matt Miller",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Matt Miller"
+    },
+    {
+      "name": "Trent Bray",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Trent Bray"
+    },
+    {
+      "name": "Derek Sage",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator / Wide Receivers",
+      "source_note": null,
+      "title_raw": "Derek Sage"
+    },
+    {
+      "name": "Matt Miller",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Matt Miller"
+    },
+    {
+      "name": "Justin Green",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Justin Green (Assistant Head Coach / Running Backs per beat coverage)"
+    },
+    {
+      "name": "Derek Sage",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Derek Sage"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Washington State",
+    "slug": "washington-state"
+  }
+}

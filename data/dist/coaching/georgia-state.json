@@ -1,0 +1,108 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Dell McGee",
+    "title_raw": "Dell McGee"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple looks / blank-slate install under Clark–Haneline (AJC / 247Sports Media Day); no exclusive official base-front label located — Not listed as a single base",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Not listed as a single branded system; Jackson describes fashioning the attack around returning QB Cameran Brown and available personnel (AJC camp coverage)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "georgiastatesports.com Football Coaches",
+      "url": "https://georgiastatesports.com/sports/football/coaches"
+    },
+    {
+      "title": "Georgia State staff additions / elevations (Feb. 12, 2026)",
+      "url": "https://georgiastatesports.com/news/2026/2/12/georgia-state-football-announces-additions-elevations-to-coaching-staff.aspx"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Dell McGee",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Dell McGee"
+    },
+    {
+      "name": "Hue Jackson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Hue Jackson"
+    },
+    {
+      "name": "Cam Clark",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Cam Clark (Co-DC / Safeties)"
+    },
+    {
+      "name": "John Haneline (Co-DC / Outside Linebackers) — Clark calls the defense per Media Day reporting",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "John Haneline (Co-DC / Outside Linebackers) — Clark calls the defense per Media Day reporting"
+    },
+    {
+      "name": "Zach Conowal",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Zach Conowal"
+    },
+    {
+      "name": "Enrique Davis",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Enrique Davis (Co-Special Teams Coordinator / Running Backs)"
+    },
+    {
+      "name": "Ryan Williams",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Ryan Williams"
+    },
+    {
+      "name": "Enrique Davis",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Enrique Davis"
+    },
+    {
+      "name": "Dameyune Craig",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Dameyune Craig (Assistant Head Coach / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Georgia State",
+    "slug": "georgia-state"
+  }
+}

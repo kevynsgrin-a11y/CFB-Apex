@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": 6,
+    "name": "Butch Jones",
+    "title_raw": "Butch Jones (6th season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (aggressive, turnover-oriented multiple unit under McCarley; no exclusive official base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Balanced / less up-tempo merge of prior Red Wolves concepts with Altman’s Vanderbilt-rooted approach (Arkansas Democrat-Gazette); no single official brand label — Not listed as a branded system",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Arkansas State Red Wolves football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Arkansas_State_Red_Wolves_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Butch Jones",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Butch Jones (6th season)"
+    },
+    {
+      "name": "Garrett Altman",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Garrett Altman (1st season)"
+    },
+    {
+      "name": "Griff McCarley",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Griff McCarley (2nd season)"
+    },
+    {
+      "name": "Kody Schexnayder",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Kody Schexnayder"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Not listed (no separate titled QB coach on 2026 Wikipedia staff block / staff-change reporting; Altman works the QB room as OC)"
+    },
+    {
+      "name": "Kenny Hill",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Kenny Hill"
+    },
+    {
+      "name": "Derrick Lett",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Derrick Lett"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Arkansas State",
+    "slug": "arkansas-state"
+  }
+}

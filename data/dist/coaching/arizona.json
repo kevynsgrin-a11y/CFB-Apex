@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Brent Brennan",
+    "title_raw": "Brent Brennan"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple fronts (3- or 4-man) with interchangeable edge/off-ball roles, disguise, and pressure; Gonzales’ unit stressed turnovers in 2025. Exact base label (e.g., exclusive 4-2-5) Not listed as a single published “base.” (AZ Desert Swarm; UA athletics.)",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Air Raid–influenced spread with split-field rules, option/choice routes, and an emphasis on quick QB decisions and YAC; year-two continuity for QB Noah Fifita under Doege. (Arizona Desert Swarm / 247Sports Doege Q&A; UA gameday notes.)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "arizonawildcats.com/sports/football/coaches",
+      "url": "https://arizonawildcats.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Brent Brennan",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UA athletics coaches page; Wikipedia 2026 team page",
+      "title_raw": "Brent Brennan"
+    },
+    {
+      "name": "Seth Doege",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UA athletics",
+      "title_raw": "Seth Doege (also Quarterbacks)"
+    },
+    {
+      "name": "Danny Gonzales",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UA athletics",
+      "title_raw": "Danny Gonzales"
+    },
+    {
+      "name": "Craig Naivar",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UA athletics; KGUN9 continuity reporting",
+      "title_raw": "Craig Naivar"
+    },
+    {
+      "name": "Seth Doege",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Seth Doege"
+    },
+    {
+      "name": "Lyle Moevao",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UA athletics (promoted for 2026)",
+      "title_raw": "Lyle Moevao"
+    },
+    {
+      "name": "Bobby Wade",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UA athletics",
+      "title_raw": "Bobby Wade (Assistant Head Coach / Pass Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Arizona",
+    "slug": "arizona"
+  }
+}

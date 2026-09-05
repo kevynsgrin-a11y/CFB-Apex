@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Lance Taylor",
+    "title_raw": "Lance Taylor"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Continuity of Chris O’Leary’s 2025 system/verbiage under promoted Martini (“different person, same scheme”); multiple coverages with swarm-to-ball culture; exact exclusive front label Not listed as a single published base. (Mitten Football Martini feature; ByTheBelt.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Evolving from 2025’s physical, downhill, run-heavy championship identity toward a more balanced, varied attack with improved passing while retaining strong run foundations (Bell Year 3). (Mitten Football Bell feature; ByTheBelt WMU 2026; Mike Farrell Sports.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "wmubroncos.com/sports/football/coaches",
+      "url": "https://wmubroncos.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Lance Taylor",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official WMU athletics coaches page (2026)",
+      "title_raw": "Lance Taylor"
+    },
+    {
+      "name": "Walt Bell",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "wmubroncos.com coaches page + Bell staff-directory title",
+      "title_raw": "Walt Bell (staff directory bio also lists Quarterbacks)"
+    },
+    {
+      "name": "Greer Martini",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official WMU athletics; ByTheBelt WMU 2026",
+      "title_raw": "Greer Martini (also Linebackers)"
+    },
+    {
+      "name": "Duane Vaughn",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official WMU athletics; ByTheBelt WMU 2026",
+      "title_raw": "Duane Vaughn (OLB / Co-DC)"
+    },
+    {
+      "name": "Dan Sabock",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official WMU athletics",
+      "title_raw": "Dan Sabock"
+    },
+    {
+      "name": "Walt Bell",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "wmubroncos.com staff directory for Bell",
+      "title_raw": "Walt Bell (per staff-directory title OC/Quarterbacks; coaches table lists OC only)"
+    },
+    {
+      "name": "Darren Paige",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official WMU athletics",
+      "title_raw": "Darren Paige"
+    },
+    {
+      "name": "Kyle Perkins",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official WMU athletics",
+      "title_raw": "Kyle Perkins"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Western Michigan",
+    "slug": "western-michigan"
+  }
+}

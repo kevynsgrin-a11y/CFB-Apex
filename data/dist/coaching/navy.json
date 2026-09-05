@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Brian Newberry",
+    "title_raw": "Brian Newberry"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Hybrid 3-4 / 3-5 style undersized-but-quick front-seven identity described in 2026 previews; exclusive single “base” line on athletics site Not listed. (Underdog Dynasty; Action Network.)",
+      "label": "3-4 / 3-5"
+    },
+    "offense": {
+      "description": "Cronic’s hybrid Wing-T / option with substantial shotgun usage and an expanded passing element atop Navy’s option foundation (continuity into Cronic’s multi-year tenure). (Underdog Dynasty 2026 Navy preview; SB Nation Army–Navy option feature; Action Network AAC preview.)",
+      "label": "Wing-T / option"
+    }
+  },
+  "sources": [
+    {
+      "title": "navysports.com/sports/football/coaches",
+      "url": "https://navysports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Brian Newberry",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Navy athletics 2026 coaches directory",
+      "title_raw": "Brian Newberry"
+    },
+    {
+      "name": "Drew Cronic",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Navy athletics",
+      "title_raw": "Drew Cronic"
+    },
+    {
+      "name": "Eric Lewis",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Navy athletics",
+      "title_raw": "Eric Lewis (DC / Safeties)"
+    },
+    {
+      "name": "Ricky Brown Co-DC / Outside Linebackers",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Navy athletics",
+      "title_raw": "Ricky Brown Co-DC / Outside Linebackers"
+    },
+    {
+      "name": "Mick Yokitis",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Navy athletics",
+      "title_raw": "Mick Yokitis (Associate Head Coach / Special Teams Coordinator / Wide Receivers)"
+    },
+    {
+      "name": "Ivin Jasper",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official Navy athletics",
+      "title_raw": "Ivin Jasper"
+    },
+    {
+      "name": "Tommy Laurendine",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Navy athletics",
+      "title_raw": "Tommy Laurendine"
+    },
+    {
+      "name": "Mick Yokitis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official title includes Wide Receivers",
+      "title_raw": "Mick Yokitis"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Navy",
+    "slug": "navy"
+  }
+}

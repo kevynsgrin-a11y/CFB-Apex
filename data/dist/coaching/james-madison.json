@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Billy Napier",
+    "title_raw": "Billy Napier (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (staff structure supports multiple fronts with DL, edges, ILB/OLB, nickels, corners, safeties; no single official base tag on jmusports.com)",
+      "label": null
+    },
+    "offense": {
+      "description": "Up-tempo spread, primarily 11 personnel (JMUSportsNews / Napier-era scheme reporting; Aiken FCS tempo-spread background)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "jmusports.com 2026 Football Coaches",
+      "url": "https://jmusports.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 James Madison Dukes football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_James_Madison_Dukes_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Billy Napier",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Billy Napier (1st season)"
+    },
+    {
+      "name": "Cam Aiken",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Cam Aiken"
+    },
+    {
+      "name": "Robert Bala",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Robert Bala"
+    },
+    {
+      "name": "Josh Linam",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Josh Linam (Co-Defensive Coordinator / Linebackers)"
+    },
+    {
+      "name": "Rob Wenger",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Rob Wenger"
+    },
+    {
+      "name": "Aaron Pflugrad",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Aaron Pflugrad"
+    },
+    {
+      "name": "William Peagler",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "William Peagler"
+    },
+    {
+      "name": "RJ Fleming",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "RJ Fleming"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "James Madison",
+    "slug": "james-madison"
+  }
+}

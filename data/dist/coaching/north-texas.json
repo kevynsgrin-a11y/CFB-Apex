@@ -1,0 +1,111 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Neal Brown",
+    "title_raw": "Neal Brown"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Powledge (ex-Baylor DC) installing unit; exclusive published 2026 base-front label Not listed on UNT materials reviewed. (UNT athletics; Underdog Dynasty.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Brown calling plays with an entertainment / explosive-scoring mandate to replace Morris’s national-leading 2025 attack; multiple ways to attack rather than a single rigid brand name on athletics materials. Named exclusive scheme label Not listed. (NT Daily fall camp; TexasFootball UNT preview; Underdog Dynasty.)",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "meangreensports.com/sports/football/coaches",
+      "url": "https://meangreensports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Neal Brown",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UNT athletics 2026 coaches page",
+      "title_raw": "Neal Brown"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UNT athletics; Underdog Dynasty / NT Daily / TexasFootball previews",
+      "title_raw": "Not listed as a discrete OC title (Brown is primary play-caller; Sean Reagan is Special Assistant to the Head Coach — Offense)"
+    },
+    {
+      "name": "Matt Powledge",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Matt Powledge"
+    },
+    {
+      "name": "Bradley Dale Peveto Co-DC / Linebackers",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Bradley Dale Peveto Co-DC / Linebackers"
+    },
+    {
+      "name": "Jeff Crosby",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Jeff Crosby"
+    },
+    {
+      "name": "Tyler Allen",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Tyler Allen (Assistant Coach, Quarterbacks)"
+    },
+    {
+      "name": "Deuce Hogan Assistant Quarterbacks",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Deuce Hogan Assistant Quarterbacks"
+    },
+    {
+      "name": "Chad Scott",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Chad Scott"
+    },
+    {
+      "name": "Kishawn McClain",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Kishawn McClain (Wide Receivers)"
+    },
+    {
+      "name": "Dozier Dean",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UNT athletics",
+      "title_raw": "Dozier Dean (Inside Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "North Texas",
+    "slug": "north-texas"
+  }
+}

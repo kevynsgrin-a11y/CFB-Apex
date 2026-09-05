@@ -1,0 +1,104 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Mike Uremovich",
+    "title_raw": "Mike Uremovich"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Exact published base alignment Not listed on official materials reviewed; Knowles listed as DC/linebackers. (ballstatesports.com.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Physical, roster-adaptive structure under Uremovich; fine-grained named playbook label beyond “physical / assignment-sound” identity Not listed in sources reviewed. (ByTheBelt Uremovich interview, May 2026; BSU athletics.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "ballstatesports.com/sports/football/coaches",
+      "url": "https://ballstatesports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Mike Uremovich",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official BSU athletics coaches page (2026)",
+      "title_raw": "Mike Uremovich"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "ballstatesports.com; Star Press Dec. 2024 staff finalization",
+      "title_raw": "Not listed as a formal OC title"
+    },
+    {
+      "name": "Uremovich is primary play-caller",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "ballstatesports.com; Star Press Dec. 2024 staff finalization",
+      "title_raw": "Uremovich is primary play-caller (Star Press reporting on staff construction carried into 2026 directory structure)"
+    },
+    {
+      "name": "Jeff Knowles",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official BSU athletics",
+      "title_raw": "Jeff Knowles (also Linebackers)"
+    },
+    {
+      "name": "Nick Fiacable",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official BSU athletics",
+      "title_raw": "Nick Fiacable"
+    },
+    {
+      "name": "Craig Harmon",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official BSU athletics",
+      "title_raw": "Craig Harmon (Offensive Pass Game Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "Madison Bunch",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official BSU athletics",
+      "title_raw": "Madison Bunch"
+    },
+    {
+      "name": "Shaq Vann",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official BSU athletics",
+      "title_raw": "Shaq Vann (Wide Receivers)"
+    },
+    {
+      "name": "Ray Holmes",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official BSU athletics",
+      "title_raw": "Ray Holmes (Inside Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Ball State",
+    "slug": "ball-state"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Clark Lea",
+    "title_raw": "Clark Lea"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Gregory multiple; no official base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single branded playbook on vucommodores.com; Beck historically associated with Air Raid / RPO-spread concepts — treat official brand label as Not listed",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "vucommodores.com Football roster / coaching staff",
+      "url": "https://vucommodores.com/sports/football/roster"
+    },
+    {
+      "title": "2026 Vanderbilt Commodores football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Vanderbilt_Commodores_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Clark Lea",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Clark Lea"
+    },
+    {
+      "name": "Tim Beck",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tim Beck"
+    },
+    {
+      "name": "Steve Gregory",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Steve Gregory"
+    },
+    {
+      "name": "Nick Lezynski",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Nick Lezynski (Co-DC / Linebackers)"
+    },
+    {
+      "name": "Jeff LePak",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Jeff LePak (Special Teams Coordinator / H-Backs)"
+    },
+    {
+      "name": "Trenton Kirklin",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Trenton Kirklin (Quarterbacks; Wikipedia roster coaches list)"
+    },
+    {
+      "name": "Carson Casarahi listed as Assistant Quarterbacks",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Carson Casarahi listed as Assistant Quarterbacks"
+    },
+    {
+      "name": "Ghaali Muhammad-Lankford",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Ghaali Muhammad-Lankford (Run Game Coordinator / Running Backs)"
+    },
+    {
+      "name": "Alex Bailey",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Alex Bailey (Pass Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Vanderbilt",
+    "slug": "vanderbilt"
+  }
+}

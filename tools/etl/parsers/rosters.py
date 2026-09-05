@@ -247,7 +247,6 @@ _SCHOOL_WORDS = (
 
 _PAREN_RE = re.compile(r"\(([^)]*)\)")
 _SEGMENT_RE = re.compile(r"\s*(?:/|;|\s—\s|\s–\s)\s*")
-_PREV_PAREN_RE = re.compile(r"\(\s*prev\.?\b", re.IGNORECASE)
 
 
 def _is_place(segment: str) -> bool:
@@ -306,11 +305,10 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
     working = raw
 
     # "(prev. Georgia Tech // Anderson)" is explicit wherever it appears.
-    explicit = textutil.parse_transfer(working)
+    working, explicit = textutil.split_transfer(working)
     if explicit:
         previous.append(explicit)
-        working = _PREV_PAREN_RE.sub("(", working)
-        working = re.sub(r"\(\s*" + re.escape(explicit) + r"\s*\)", "", working).strip(" ;,/")
+    working = working or ""
 
     # A header that says "(prev. school)" means a trailing "(...)" is a transfer list.
     header_declares_prev = "prev" in header.lower()
@@ -325,6 +323,11 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
 
     segments = [_unmask(part, stash) for part in _SEGMENT_RE.split(masked) if part.strip()]
     segments = [segment.strip(" ,;") for segment in segments if segment.strip(" ,;")]
+    # A segment can itself be a recorded gap: "Not listed / Montreal, Quebec" and
+    # "Prokick Australia / Not listed / Buninyong, VIC" both name a real place and
+    # an explicitly absent one. Drop the absent segment rather than storing the
+    # marker text, which would print as "Not listed" twice on the team page.
+    segments = [segment for segment in segments if mdtable.clean(segment) is not None]
     if not segments:
         return {**empty, "raw": raw, "previous_schools": " // ".join(previous) or None}
 

@@ -1,5 +1,154 @@
 {
   "datasets": {
+    "coaching": {
+      "artifacts": [
+        "coaching/air-force.json",
+        "coaching/akron.json",
+        "coaching/alabama.json",
+        "coaching/appalachian-state.json",
+        "coaching/arizona-state.json",
+        "coaching/arizona.json",
+        "coaching/arkansas-state.json",
+        "coaching/arkansas.json",
+        "coaching/army.json",
+        "coaching/auburn.json",
+        "coaching/ball-state.json",
+        "coaching/baylor.json",
+        "coaching/boise-state.json",
+        "coaching/boston-college.json",
+        "coaching/bowling-green.json",
+        "coaching/buffalo.json",
+        "coaching/byu.json",
+        "coaching/california.json",
+        "coaching/central-michigan.json",
+        "coaching/charlotte.json",
+        "coaching/cincinnati.json",
+        "coaching/clemson.json",
+        "coaching/coastal-carolina.json",
+        "coaching/colorado-state.json",
+        "coaching/colorado.json",
+        "coaching/delaware.json",
+        "coaching/duke.json",
+        "coaching/east-carolina.json",
+        "coaching/eastern-michigan.json",
+        "coaching/fiu.json",
+        "coaching/florida-atlantic.json",
+        "coaching/florida-state.json",
+        "coaching/florida.json",
+        "coaching/fresno-state.json",
+        "coaching/georgia-southern.json",
+        "coaching/georgia-state.json",
+        "coaching/georgia-tech.json",
+        "coaching/georgia.json",
+        "coaching/hawaii.json",
+        "coaching/houston.json",
+        "coaching/illinois.json",
+        "coaching/index.json",
+        "coaching/indiana.json",
+        "coaching/iowa-state.json",
+        "coaching/iowa.json",
+        "coaching/jacksonville-state.json",
+        "coaching/james-madison.json",
+        "coaching/kansas-state.json",
+        "coaching/kansas.json",
+        "coaching/kennesaw-state.json",
+        "coaching/kent-state.json",
+        "coaching/kentucky.json",
+        "coaching/liberty.json",
+        "coaching/louisiana-tech.json",
+        "coaching/louisiana.json",
+        "coaching/louisville.json",
+        "coaching/lsu.json",
+        "coaching/marshall.json",
+        "coaching/maryland.json",
+        "coaching/memphis.json",
+        "coaching/miami-fl.json",
+        "coaching/miami-oh.json",
+        "coaching/michigan-state.json",
+        "coaching/michigan.json",
+        "coaching/middle-tennessee.json",
+        "coaching/minnesota.json",
+        "coaching/mississippi-state.json",
+        "coaching/missouri-state.json",
+        "coaching/missouri.json",
+        "coaching/navy.json",
+        "coaching/nc-state.json",
+        "coaching/nebraska.json",
+        "coaching/nevada.json",
+        "coaching/new-mexico-state.json",
+        "coaching/new-mexico.json",
+        "coaching/north-carolina.json",
+        "coaching/north-dakota-state.json",
+        "coaching/north-texas.json",
+        "coaching/northern-illinois.json",
+        "coaching/northwestern.json",
+        "coaching/ohio-state.json",
+        "coaching/ohio.json",
+        "coaching/oklahoma-state.json",
+        "coaching/oklahoma.json",
+        "coaching/old-dominion.json",
+        "coaching/ole-miss.json",
+        "coaching/oregon-state.json",
+        "coaching/oregon.json",
+        "coaching/penn-state.json",
+        "coaching/pittsburgh.json",
+        "coaching/purdue.json",
+        "coaching/rice.json",
+        "coaching/rutgers.json",
+        "coaching/sacramento-state.json",
+        "coaching/sam-houston.json",
+        "coaching/san-diego-state.json",
+        "coaching/san-jose-state.json",
+        "coaching/smu.json",
+        "coaching/south-alabama.json",
+        "coaching/south-carolina.json",
+        "coaching/south-florida.json",
+        "coaching/southern-miss.json",
+        "coaching/stanford.json",
+        "coaching/syracuse.json",
+        "coaching/tcu.json",
+        "coaching/temple.json",
+        "coaching/tennessee.json",
+        "coaching/texas-am.json",
+        "coaching/texas-state.json",
+        "coaching/texas-tech.json",
+        "coaching/texas.json",
+        "coaching/toledo.json",
+        "coaching/troy.json",
+        "coaching/tulane.json",
+        "coaching/tulsa.json",
+        "coaching/uab.json",
+        "coaching/ucf.json",
+        "coaching/ucla.json",
+        "coaching/ulm.json",
+        "coaching/umass.json",
+        "coaching/unlv.json",
+        "coaching/usc.json",
+        "coaching/utah-state.json",
+        "coaching/utah.json",
+        "coaching/utep.json",
+        "coaching/utsa.json",
+        "coaching/vanderbilt.json",
+        "coaching/virginia-tech.json",
+        "coaching/virginia.json",
+        "coaching/wake-forest.json",
+        "coaching/washington-state.json",
+        "coaching/washington.json",
+        "coaching/west-virginia.json",
+        "coaching/western-kentucky.json",
+        "coaching/western-michigan.json",
+        "coaching/wisconsin.json",
+        "coaching/wyoming.json"
+      ],
+      "counts": {
+        "staff_entries": 1060,
+        "teams": 136,
+        "teams_without_file": 2,
+        "with_defense_scheme": 70,
+        "with_offense_scheme": 77
+      },
+      "warnings": []
+    },
     "core": {
       "artifacts": [
         "teams.json",
@@ -7,6 +156,19 @@
       ],
       "counts": {
         "teams": 138
+      },
+      "warnings": []
+    },
+    "injuries": {
+      "artifacts": [
+        "injuries/2026-09-05.json",
+        "injuries/latest.json",
+        "injuries/index.json"
+      ],
+      "counts": {
+        "conferences_covered": 5,
+        "players_listed": 76,
+        "teams_reporting": 17
       },
       "warnings": []
     },
@@ -124,8 +286,8 @@
         "players": 10455,
         "teams": 92,
         "teams_without_rosters": 46,
-        "with_high_school": 10031,
-        "with_hometown": 10440,
+        "with_high_school": 9972,
+        "with_hometown": 10439,
         "with_stars": 1258
       },
       "warnings": [
@@ -138,16 +300,29 @@
         "fresno-state (01-rosters/pac12-2026/fresno-state.md): no 'As of' / access-date line in the source; as_of is null",
         "oregon-state (01-rosters/pac12-2026/oregon-state.md): no 'As of' / access-date line in the source; as_of is null"
       ]
+    },
+    "sos": {
+      "artifacts": [
+        "sos/2026.json",
+        "sos/2025.json",
+        "sos/index.json"
+      ],
+      "counts": {
+        "conflicts": 0,
+        "teams_2025": 106,
+        "teams_2026": 106,
+        "teams_missing": 32
+      },
+      "warnings": [
+        "32 FBS teams have no 2026 SOS row in the package: air-force, appalachian-state, arkansas-state, boise-state, coastal-carolina, colorado-state, fresno-state, georgia-southern, georgia-state, hawaii, james-madison, louisiana..."
+      ]
     }
   },
   "missing_parsers": [
     "depth_charts",
     "schedules",
-    "sos",
-    "coaching",
     "stats_current",
-    "stats_historical",
-    "injuries"
+    "stats_historical"
   ],
   "package": "data/source/cfb-2026-master-package",
   "warnings": [
@@ -158,6 +333,7 @@
     "rosters: cincinnati (01-rosters/big12-2026/cincinnati.md): no head-coach line in the source; head_coach is null",
     "rosters: colorado (01-rosters/big12-2026/colorado.md): no head-coach line in the source; head_coach is null",
     "rosters: fresno-state (01-rosters/pac12-2026/fresno-state.md): no 'As of' / access-date line in the source; as_of is null",
-    "rosters: oregon-state (01-rosters/pac12-2026/oregon-state.md): no 'As of' / access-date line in the source; as_of is null"
+    "rosters: oregon-state (01-rosters/pac12-2026/oregon-state.md): no 'As of' / access-date line in the source; as_of is null",
+    "sos: 32 FBS teams have no 2026 SOS row in the package: air-force, appalachian-state, arkansas-state, boise-state, coastal-carolina, colorado-state, fresno-state, georgia-southern, georgia-state, hawaii, james-madison, louisiana..."
   ]
 }

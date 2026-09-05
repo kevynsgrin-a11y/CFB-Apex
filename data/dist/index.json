@@ -1,9 +1,27 @@
 {
   "datasets": {
+    "coaching": {
+      "artifacts": 137,
+      "counts": {
+        "staff_entries": 1060,
+        "teams": 136,
+        "teams_without_file": 2,
+        "with_defense_scheme": 70,
+        "with_offense_scheme": 77
+      }
+    },
     "core": {
       "artifacts": 2,
       "counts": {
         "teams": 138
+      }
+    },
+    "injuries": {
+      "artifacts": 3,
+      "counts": {
+        "conferences_covered": 5,
+        "players_listed": 76,
+        "teams_reporting": 17
       }
     },
     "polls": {
@@ -21,9 +39,18 @@
         "players": 10455,
         "teams": 92,
         "teams_without_rosters": 46,
-        "with_high_school": 10031,
-        "with_hometown": 10440,
+        "with_high_school": 9972,
+        "with_hometown": 10439,
         "with_stars": 1258
+      }
+    },
+    "sos": {
+      "artifacts": 3,
+      "counts": {
+        "conflicts": 0,
+        "teams_2025": 106,
+        "teams_2026": 106,
+        "teams_missing": 32
       }
     }
   },
@@ -41,12 +68,9 @@
   "missing_parsers": [
     "depth_charts",
     "schedules",
-    "sos",
-    "coaching",
     "stats_current",
-    "stats_historical",
-    "injuries"
+    "stats_historical"
   ],
   "team_count": 138,
-  "warning_count": 8
+  "warning_count": 9
 }

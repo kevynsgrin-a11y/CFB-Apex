@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Mario Cristobal",
+    "title_raw": "Mario Cristobal"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Hetherman Year 2; aggressive/pressure-oriented descriptions in previews without a published exclusive official base-front tag)",
+      "label": null
+    },
+    "offense": {
+      "description": "Air Raid–based with power-run concepts (Duo / Wide Zone) in 11 personnel (State of the U / SI Dawson system reporting, 2026)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Miami Hurricanes football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Miami_Hurricanes_football_team"
+    },
+    {
+      "title": "State of the U: Miami offense ’26",
+      "url": "https://www.stateoftheu.com/miami-hurricanes-football/87213/the-miami-hurricanes-offense-in-26"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Mario Cristobal",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Mario Cristobal"
+    },
+    {
+      "name": "Shannon Dawson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Shannon Dawson (Offensive Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "Corey Hetherman",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Corey Hetherman (Defensive Coordinator / Linebackers)"
+    },
+    {
+      "name": "Danny Kalter",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Danny Kalter"
+    },
+    {
+      "name": "Shannon Dawson",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Shannon Dawson"
+    },
+    {
+      "name": "Favian Upshaw",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Favian Upshaw"
+    },
+    {
+      "name": "Kevin Beard",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Kevin Beard"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Miami (FL)",
+    "slug": "miami-fl"
+  }
+}

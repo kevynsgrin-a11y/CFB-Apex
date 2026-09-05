@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Kalani Sitake",
+    "title_raw": "Kalani Sitake"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Continuity of the Sitake–Andersen–Whittingham / Jay Hill tree: man-free, man-pressure, Cover-3 with Cover-2 wrinkles; Poppinga keeping Hill’s base with modest personal twists; multiple fronts (three- and four-down). (Deseret News; SI/BYU Poppinga scheme pieces.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Continuity under Roderick (year six as OC); BYU’s established multiple/spread approach. Fine-grained “named” playbook label beyond Roderick continuity Not listed in sources reviewed.",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "byucougars.com football roster coaching staff",
+      "url": "https://byucougars.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Kalani Sitake",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official BYU roster/coaching staff",
+      "title_raw": "Kalani Sitake"
+    },
+    {
+      "name": "Aaron Roderick",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official BYU roster coaching staff",
+      "title_raw": "Aaron Roderick (also Quarterbacks)"
+    },
+    {
+      "name": "Kelly Poppinga",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official BYU; Sitake Jan. 2026 announcement",
+      "title_raw": "Kelly Poppinga (also Inside Linebackers)"
+    },
+    {
+      "name": "Justin Ena",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official BYU (promoted Feb. 2026)",
+      "title_raw": "Justin Ena"
+    },
+    {
+      "name": "Aaron Roderick",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Aaron Roderick"
+    },
+    {
+      "name": "Harvey Unga",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official BYU roster coaching staff",
+      "title_raw": "Harvey Unga"
+    },
+    {
+      "name": "Fesi Sitake",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official BYU roster coaching staff",
+      "title_raw": "Fesi Sitake (Passing Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "BYU",
+    "slug": "byu"
+  }
+}

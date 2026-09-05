@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Bill Belichick",
+    "title_raw": "Bill Belichick"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Belichick family defensive structure; no exclusive official 2026 base-front tag on goheels.com)",
+      "label": null
+    },
+    "offense": {
+      "description": "Tempo-driven spread (Petrino résumé / CBS Sports hire coverage citing tempo spread and QB development)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "goheels.com 2026 Football Coaches",
+      "url": "https://goheels.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Bill Belichick",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Bill Belichick"
+    },
+    {
+      "name": "Bobby Petrino",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Bobby Petrino"
+    },
+    {
+      "name": "Steve Belichick",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Steve Belichick"
+    },
+    {
+      "name": "Billy Miller",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Billy Miller"
+    },
+    {
+      "name": "Matt Lombardi",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Matt Lombardi"
+    },
+    {
+      "name": "Natrone Means",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Natrone Means"
+    },
+    {
+      "name": "Garrick McGee",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Garrick McGee"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "North Carolina",
+    "slug": "north-carolina"
+  }
+}

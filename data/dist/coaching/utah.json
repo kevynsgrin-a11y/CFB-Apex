@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Morgan Scalley",
+    "title_raw": "Morgan Scalley"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Swan promotion within Whittingham/Scalley tree; continuity expected with Utah’s long-standing man-pressure / multiple-front identity. Exact single base label for 2026 Not listed. (utahutes.com; KSL Scalley staff hires.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "McGiven spread/RPO-adaptable offense emphasizing designed QB runs and personnel packages (from Utah State 2025 style). (Deseret News McGiven install, Mar. 2026.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "utahutes.com/sports/football/coaches",
+      "url": "https://utahutes.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Morgan Scalley",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Utah coaches page (Whittingham departed post-2025)",
+      "title_raw": "Morgan Scalley"
+    },
+    {
+      "name": "Kevin McGiven",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Utah coaches page",
+      "title_raw": "Kevin McGiven"
+    },
+    {
+      "name": "Colton Swan",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Utah coaches page",
+      "title_raw": "Colton Swan (also Linebackers)"
+    },
+    {
+      "name": "Sharrieff Shah",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Utah coaches page",
+      "title_raw": "Sharrieff Shah (Associate Head Coach / Cornerbacks / Special Teams Coordinator)"
+    },
+    {
+      "name": "Ryan Gunderson",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official Utah coaches page",
+      "title_raw": "Ryan Gunderson"
+    },
+    {
+      "name": "Mark Atuaia",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Utah coaches page",
+      "title_raw": "Mark Atuaia (Assistant Head Coach / Running Backs)"
+    },
+    {
+      "name": "Chad Bumphis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Utah coaches page",
+      "title_raw": "Chad Bumphis"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Utah",
+    "slug": "utah"
+  }
+}

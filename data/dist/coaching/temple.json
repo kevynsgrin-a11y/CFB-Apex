@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "K.C. Keeler",
+    "title_raw": "K.C. Keeler"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Smith 3-4 base with highly multiple three- and four-man fronts (Keeler public comments on personnel flexibility). (247Sports Keeler hire/camp reporting; OwlsDaily.)",
+      "label": "3-4"
+    },
+    "offense": {
+      "description": "Walker’s run-oriented / physical offensive philosophy (Keeler priority hire from Montana State); year-two continuity. Exact exclusive branded scheme name Not listed on athletics materials. (The Temple News; Temple athletics spring blog.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "owlsports.com/sports/football/coaches",
+      "url": "https://owlsports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "K.C. Keeler",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Temple athletics; Wikipedia 2026 team page",
+      "title_raw": "K.C. Keeler"
+    },
+    {
+      "name": "Tyler Walker",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Temple coaches directory (partial table via search); Wikipedia",
+      "title_raw": "Tyler Walker (also Quarterbacks)"
+    },
+    {
+      "name": "Brian L. Smith",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Wikipedia 2026 Temple team page; 247Sports / OwlsDaily reporting",
+      "title_raw": "Brian L. Smith (Brian Smith)"
+    },
+    {
+      "name": "Brian Ginn",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Temple athletics; spring practice blog",
+      "title_raw": "Brian Ginn"
+    },
+    {
+      "name": "Tyler Walker",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Tyler Walker"
+    },
+    {
+      "name": "Andrew Pierce",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Temple coaches directory",
+      "title_raw": "Andrew Pierce"
+    },
+    {
+      "name": "Roy Roundtree",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Temple spring practice coverage / On3 Owl Scoop; 2025 offensive staff intro continuity into 2026",
+      "title_raw": "Roy Roundtree"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Temple",
+    "slug": "temple"
+  }
+}

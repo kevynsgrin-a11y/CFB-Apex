@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Charles Kelly",
+    "title_raw": "Charles Kelly"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/cusa.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Wikipedia 2026 team page lists base 4–3. Ourlads depth-chart label: 3–3–5. Both published labels are noted; no single exclusive base is asserted beyond these sources. (Wikipedia; Ourlads.)",
+      "label": "4-3"
+    },
+    "offense": {
+      "description": "Wikipedia 2026 team page lists Multiple. Run-to-win / throw-to-score continuity under Kelly with Housewright (Montana State OC background); Anniston Star / Diehard Sports Network preview emphasis on physical ground game and more frequent passing in 2026. Ourlads depth-chart label: “Spread Option.” (Wikipedia; Diehard; Anniston Star; Ourlads.)",
+      "label": "Multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "jaxstatesports.com/sports/football/coaches",
+      "url": "https://jaxstatesports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Charles Kelly",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official JSU athletics; Wikipedia 2026 team page (2nd season)",
+      "title_raw": "Charles Kelly"
+    },
+    {
+      "name": "Taylor Housewright",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official JSU athletics; promoted Dec. 2025 after Clint Trickett departure",
+      "title_raw": "Taylor Housewright (OC / Quarterbacks)"
+    },
+    {
+      "name": "Brian Williams",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official JSU athletics; Wikipedia",
+      "title_raw": "Brian Williams (DC / Safeties)"
+    },
+    {
+      "name": "Max Thurmond",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official JSU athletics",
+      "title_raw": "Max Thurmond (Special Teams Coordinator / Running Backs)"
+    },
+    {
+      "name": "Taylor Housewright",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title pairs OC / Quarterbacks",
+      "title_raw": "Taylor Housewright"
+    },
+    {
+      "name": "Max Thurmond",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official title pairs STC / Running Backs",
+      "title_raw": "Max Thurmond"
+    },
+    {
+      "name": "Lawrence Dawsey",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official JSU athletics; Wikipedia coaching staff table",
+      "title_raw": "Lawrence Dawsey"
+    }
+  ],
+  "team": {
+    "conference_slug": "cusa",
+    "school": "Jacksonville State",
+    "slug": "jacksonville-state"
+  }
+}

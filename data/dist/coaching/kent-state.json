@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Mark Carney",
+    "title_raw": "Mark Carney"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Wikipedia 2025 team page lists base 4-3 under Valeria; 2026 exclusive published base confirmation beyond that continuity Not listed on official 2026 coaches page. (Wikipedia 2025 Kent State team page; kentstatesports.com.)",
+      "label": "4-3"
+    },
+    "offense": {
+      "description": "Clarity-driven spread emphasizing efficiency, purposeful motion/shifts, and explosives; Wikipedia 2025 team page listed “spread option” under Carney/Patterson continuity into 2026. (Coach and Coordinator Carney features, Jan. 2026; Kent State camp scrimmage quotes; ByTheBelt Kent State 2026.)",
+      "label": "spread option"
+    }
+  },
+  "sources": [
+    {
+      "title": "kentstatesports.com/sports/football/coaches",
+      "url": "https://kentstatesports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Mark Carney",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Kent State athletics coaches page (2026)",
+      "title_raw": "Mark Carney"
+    },
+    {
+      "name": "Clay Patterson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Kent State athletics",
+      "title_raw": "Clay Patterson (also Quarterbacks)"
+    },
+    {
+      "name": "Cherokee Valeria",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Kent State athletics",
+      "title_raw": "Cherokee Valeria (Assistant HC / DC / Safeties)"
+    },
+    {
+      "name": null,
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Kent State athletics",
+      "title_raw": "Not listed as a dedicated STC title (Josh Cribbs listed as Special Teams Analyst)"
+    },
+    {
+      "name": "Clay Patterson",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Clay Patterson"
+    },
+    {
+      "name": "Braxton Chapman",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Kent State athletics",
+      "title_raw": "Braxton Chapman"
+    },
+    {
+      "name": "Isaac Vance",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Kent State athletics",
+      "title_raw": "Isaac Vance"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Kent State",
+    "slug": "kent-state"
+  }
+}

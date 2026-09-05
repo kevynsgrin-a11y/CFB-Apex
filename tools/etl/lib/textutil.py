@@ -12,7 +12,8 @@ from . import mdtable
 
 _STAR_RE = re.compile(r"(\d)\s*(?:★|\*|-?\s*star)", re.IGNORECASE)
 _NUM_RE = re.compile(r"-?\d[\d,]*\.?\d*")
-_TRANSFER_RE = re.compile(r"\(\s*prev\.?\s*([^)]*)\)", re.IGNORECASE)
+# Sources write the transfer note as "(prev. X)", "(prev: X)" or "(previous X)".
+_TRANSFER_RE = re.compile(r"\(\s*prev(?:ious)?\s*[.:]?\s*([^)]*?)\s*\)", re.IGNORECASE)
 _RECORD_RE = re.compile(r"(\d+)\s*[-–]\s*(\d+)(?:\s*[-–]\s*(\d+))?")
 
 #: Class-year spellings seen across the roster files, mapped to a canonical form.
@@ -116,16 +117,22 @@ def parse_hometown(value: str | None) -> dict[str, str | None]:
 
     high_school: str | None = None
     hometown: str | None = None
-    if "/" in text:
+    # The delimiter is a spaced slash. Splitting on a bare "/" would cut "N/A"
+    # in half and turn a recorded gap into the school "N" in the city "A".
+    if " / " in text:
+        left, _, right = text.partition(" / ")
+        high_school = mdtable.clean(left)
+        hometown = mdtable.clean(right)
+    elif "/" in text and mdtable.clean(text) is not None and "," in text:
         left, _, right = text.partition("/")
-        high_school = left.strip() or None
-        hometown = right.strip() or None
+        high_school = mdtable.clean(left)
+        hometown = mdtable.clean(right)
     else:
         # No delimiter: a bare "City, State" is a hometown, anything else a school.
         if "," in text:
-            hometown = text
+            hometown = mdtable.clean(text)
         else:
-            high_school = text
+            high_school = mdtable.clean(text)
 
     city = state = None
     if hometown:
@@ -153,6 +160,23 @@ def parse_transfer(value: str | None) -> str | None:
         return None
     match = _TRANSFER_RE.search(text)
     return match.group(1).strip() if match else None
+
+
+def split_transfer(value: str | None) -> tuple[str | None, str | None]:
+    """Separate a cell's transfer note from the rest of its text.
+
+    Returns ``(remainder, previous_schools)``. Callers that need both halves
+    should use this rather than removing the note themselves — the sources
+    write it three ways and only one regex should have to know that.
+    """
+    text = mdtable.clean(value)
+    if not text:
+        return None, None
+    match = _TRANSFER_RE.search(text)
+    if not match:
+        return text, None
+    remainder = (text[: match.start()] + text[match.end() :]).strip(" ;,/")
+    return (remainder or None), (match.group(1).strip() or None)
 
 
 def parse_number(value: str | None) -> float | int | None:

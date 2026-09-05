@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Blake Harrell",
+    "title_raw": "Blake Harrell"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Hankins arrives from Memphis DC role; published exclusive 2026 ECU base-front label Not listed on athletics materials reviewed. (ECU Hankins hire release.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Installation of Davis’s high-tempo, high-volume passing/spread system that led FBS in scoring and total offense at North Texas in 2025; wide-receiver continuity via Soto from that staff. Exact single branded label beyond “high-tempo / prolific spread” Not listed on ECU athletics. (ECU Soto hire; Bonesville; 247Sports.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "ecupirates.com/sports/football/coaches",
+      "url": "https://ecupirates.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Blake Harrell",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official ECU athletics 2026 coaches page",
+      "title_raw": "Blake Harrell"
+    },
+    {
+      "name": "Jordan Davis",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official ECU athletics; Bonesville / 247Sports hire coverage",
+      "title_raw": "Jordan Davis (also Quarterbacks)"
+    },
+    {
+      "name": "Jordon Hankins",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official ECU athletics; ECU Hankins hire release",
+      "title_raw": "Jordon Hankins (also Linebackers)"
+    },
+    {
+      "name": "Roy Tesh Co-DC / Defensive Line",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official ECU athletics; ECU Hankins hire release",
+      "title_raw": "Roy Tesh Co-DC / Defensive Line"
+    },
+    {
+      "name": "Ryan Smith",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official ECU athletics (WebSearch synthesis of coaches directory)",
+      "title_raw": "Ryan Smith"
+    },
+    {
+      "name": "Jordan Davis",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Jordan Davis"
+    },
+    {
+      "name": "Julian Griffin",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official ECU athletics",
+      "title_raw": "Julian Griffin"
+    },
+    {
+      "name": "Juan Soto",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "ECU athletics hire release (Jan. 5, 2026); 247Sports",
+      "title_raw": "Juan Soto"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "East Carolina",
+    "slug": "east-carolina"
+  }
+}

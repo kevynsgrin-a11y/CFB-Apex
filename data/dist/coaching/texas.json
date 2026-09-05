@@ -1,0 +1,115 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Steve Sarkisian",
+    "title_raw": "Steve Sarkisian"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple (Muschamp); reporting highlights Mint-front / MOD coverage tools vs. Veer & Shoot — no single fixed “3–4 only” or “4–3 only” official tag on texaslonghorns.com",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Pro-style / West Coast–spread hybrid under Sarkisian (multiple personnel; play-action and timing concepts); Sarkisian remains primary offensive play-caller",
+      "label": "Pro-style"
+    }
+  },
+  "sources": [
+    {
+      "title": "texaslonghorns.com 2026 Football Coaches",
+      "url": "https://texaslonghorns.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 Texas Longhorns football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Texas_Longhorns_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Steve Sarkisian",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Steve Sarkisian"
+    },
+    {
+      "name": "Kyle Flood",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kyle Flood (OC / Offensive Line)"
+    },
+    {
+      "name": "A. J. Milwee",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "A. J. Milwee (Co-OC / Quarterbacks)"
+    },
+    {
+      "name": "Will Muschamp",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Will Muschamp"
+    },
+    {
+      "name": "Johnny Nansen",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Johnny Nansen (Co-DC / Inside Linebackers)"
+    },
+    {
+      "name": "Jeff Banks",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Jeff Banks (Special Teams Coordinator / Tight Ends)"
+    },
+    {
+      "name": "A. J. Milwee",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "A. J. Milwee (primary)"
+    },
+    {
+      "name": "Michael Bimonte",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Michael Bimonte (Co-Passing Game Coordinator / Assistant QB)"
+    },
+    {
+      "name": "Jabbar Juluke",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Jabbar Juluke"
+    },
+    {
+      "name": "Chris Jackson",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Chris Jackson (Passing Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Texas",
+    "slug": "texas"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "James Franklin",
+    "title_raw": "James Franklin (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Pry retained as DC after prior HC tenure; no exclusive official 2026 base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed (Howle from Penn State co-OC tree under Franklin; no official 2026 brand label located)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Virginia Tech Hokies football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Virginia_Tech_Hokies_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "James Franklin",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "James Franklin (1st season)"
+    },
+    {
+      "name": "Ty Howle",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ty Howle (Offensive Coordinator / Tight Ends)"
+    },
+    {
+      "name": "Brent Pry",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Brent Pry (Defensive Coordinator / Linebackers)"
+    },
+    {
+      "name": "Doug Shearer",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Doug Shearer"
+    },
+    {
+      "name": "Danny O’Brien",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Danny O’Brien"
+    },
+    {
+      "name": "Norval McKenzie",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Norval McKenzie (Assistant Head Coach / Run Game Coordinator / Running Backs)"
+    },
+    {
+      "name": "Fontel Mines",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Fontel Mines (Offensive Recruiting Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Virginia Tech",
+    "slug": "virginia-tech"
+  }
+}

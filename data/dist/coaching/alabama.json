@@ -1,0 +1,105 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Kalen DeBoer",
+    "title_raw": "Kalen DeBoer"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "4–2–5 “Swarm” (Wikipedia 2026 team page); multiple coverage/front tools under Wommack",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Spread / Air Raid (Wikipedia 2026 team page; DeBoer–Grubb system with renewed run-game emphasis reported for 2026)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "rolltide.com 2026 Football Coaches",
+      "url": "https://rolltide.com/sports/football/coaches/2026"
+    },
+    {
+      "title": "2026 Alabama Crimson Tide football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Alabama_Crimson_Tide_football_team"
+    },
+    {
+      "title": "List of current NCAA Division I FBS football coaches",
+      "url": "https://en.wikipedia.org/wiki/List_of_current_NCAA_Division_I_FBS_football_coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Kalen DeBoer",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Kalen DeBoer"
+    },
+    {
+      "name": "Ryan Grubb",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ryan Grubb"
+    },
+    {
+      "name": "Kane Wommack",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kane Wommack"
+    },
+    {
+      "name": "Maurice Linguist",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Maurice Linguist (Co-DC / Defensive Backs)"
+    },
+    {
+      "name": "Jay Nunez",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Jay Nunez"
+    },
+    {
+      "name": "Bryan Ellis",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Bryan Ellis"
+    },
+    {
+      "name": "Robert Gillespie",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Robert Gillespie (Assistant Head Coach / Running Backs)"
+    },
+    {
+      "name": "Derrick Nix",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Derrick Nix"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Alabama",
+    "slug": "alabama"
+  }
+}

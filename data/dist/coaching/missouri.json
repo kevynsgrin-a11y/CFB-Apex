@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Eliah (Eli) Drinkwitz",
+    "title_raw": "Eliah (Eli) Drinkwitz"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Batoon multiple; foundational teaching emphasized in spring reporting; no official base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a branded system on mutigers.com; Lindsey (ex-Michigan OC) installs Drinkwitz’s preferred multiple/spread attack — brand label Not listed",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "mutigers.com 2026 Football Roster / coaching staff",
+      "url": "https://mutigers.com/sports/football/roster"
+    },
+    {
+      "title": "2026 Missouri Tigers football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Missouri_Tigers_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Eliah (Eli) Drinkwitz",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Eliah (Eli) Drinkwitz"
+    },
+    {
+      "name": "Chip Lindsey",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Chip Lindsey"
+    },
+    {
+      "name": "Corey Batoon",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Corey Batoon"
+    },
+    {
+      "name": "Derek Nicholson",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Derek Nicholson (Co-DC / Linebackers)"
+    },
+    {
+      "name": "John Papuchis",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "John Papuchis"
+    },
+    {
+      "name": "Garrett Riley",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Garrett Riley"
+    },
+    {
+      "name": "Curtis Luper",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Curtis Luper"
+    },
+    {
+      "name": "Jacob Peeler",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Jacob Peeler (Wide Receivers / Recruiting Coordinator)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Missouri",
+    "slug": "missouri"
+  }
+}
