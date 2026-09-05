@@ -197,6 +197,31 @@ def _split_people(cell: str) -> list[str]:
     return [part.strip() for part in parts if part.strip()]
 
 
+_PARTICLES = {
+    "de", "la", "van", "von", "del", "da", "di", "st", "jr", "sr",
+    "ii", "iii", "iv", "v",
+}
+
+
+def _looks_like_person(text: str) -> bool:
+    """Is this a person's name, or a sentence about the role?
+
+    These cells mix the two — "Mark Tommerdahl identified as STC in 2026 beat
+    preview" and "No titled OC — Jedd Fisch designs and calls the offense" are
+    explanations, and publishing them as a coach's name invents a person.
+    """
+    tokens = [token for token in text.replace("—", " ").split() if token]
+    if not 1 <= len(tokens) <= 5:
+        return False
+    for token in tokens:
+        bare = token.strip(".'\u2019\"-,")
+        if not bare or bare.lower() in _PARTICLES:
+            continue
+        if not (bare[0].isupper() or bare[0].isdigit()):
+            return False
+    return True
+
+
 def _person(entry: str) -> tuple[str | None, str | None]:
     """Split "C. J. Spiller (Run Game Coordinator / Running Backs)" into parts."""
     text = mdtable.strip_markdown(entry).strip()
@@ -205,10 +230,11 @@ def _person(entry: str) -> tuple[str | None, str | None]:
     if text.lower().startswith("not listed"):
         return None, text
     match = _TRAILING_TITLE_RE.search(text)
-    if match:
-        name = text[: match.start()].strip()
-        return (name or None), text
-    return text, text
+    candidate = text[: match.start()].strip() if match else text
+    if not candidate or not _looks_like_person(candidate):
+        # Keep the source's wording in title_raw; do not publish it as a person.
+        return None, text
+    return candidate, text
 
 
 def _sources(body: str) -> list[dict[str, str]]:
