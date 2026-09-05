@@ -1,0 +1,1132 @@
+{
+  "comparison_notes": [
+    {
+      "finding": "Ohio State",
+      "topic": "No. 1 in both polls"
+    },
+    {
+      "finding": "Same five teams; AP has Notre Dame 4 / Texas 5; Coaches has Texas 4 / Notre Dame 5",
+      "topic": "Top five"
+    },
+    {
+      "finding": "Louisville (No. 24 AP; others receiving votes in Coaches)",
+      "topic": "Notable AP-only Top 25 team"
+    },
+    {
+      "finding": "Clemson (No. 23 Coaches; others receiving votes in AP)",
+      "topic": "Notable Coaches-only Top 25 team"
+    },
+    {
+      "finding": "BYU and USC tied at No. 14 in AP; Coaches ranks USC 14, BYU 15",
+      "topic": "Tied ranking"
+    },
+    {
+      "finding": "None yet on either official Top 25; preseason ballots still govern as of Sept. 5, 2026 (PT)",
+      "topic": "Week 0 / early-season effect"
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "polls",
+    "notes": [
+      "Preseason polls. Neither poll had published a post-Week 0 update as of 2026-09-05.",
+      "An em dash in the first-place-votes column means zero votes; elsewhere in this document it means the source published no value, and is carried through as null.",
+      "Previous rank is not a real prior ranking on a first ballot (AP repeats the current rank, the Coaches Poll writes NR), so it is null with the source wording preserved."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/00-top25-ap-coaches-2026-09-05.md"
+    ]
+  },
+  "polls": [
+    {
+      "name": "Associated Press Top 25",
+      "next_release": "Tuesday, September 8, 2026, noon ET",
+      "others_receiving_votes": [
+        {
+          "points": 112,
+          "team": "Clemson",
+          "team_slug": "clemson"
+        },
+        {
+          "points": 51,
+          "team": "Florida",
+          "team_slug": "florida"
+        },
+        {
+          "points": 43,
+          "team": "Boise State",
+          "team_slug": "boise-state"
+        },
+        {
+          "points": 32,
+          "team": "Arizona",
+          "team_slug": "arizona"
+        },
+        {
+          "points": 11,
+          "team": "TCU",
+          "team_slug": "tcu"
+        },
+        {
+          "points": 10,
+          "team": "Navy",
+          "team_slug": "navy"
+        },
+        {
+          "points": 10,
+          "team": "South Carolina",
+          "team_slug": "south-carolina"
+        },
+        {
+          "points": 9,
+          "team": "Illinois",
+          "team_slug": "illinois"
+        },
+        {
+          "points": 8,
+          "team": "Oklahoma State",
+          "team_slug": "oklahoma-state"
+        },
+        {
+          "points": 8,
+          "team": "Vanderbilt",
+          "team_slug": "vanderbilt"
+        },
+        {
+          "points": 7,
+          "team": "Pittsburgh",
+          "team_slug": "pittsburgh"
+        },
+        {
+          "points": 6,
+          "team": "Virginia Tech",
+          "team_slug": "virginia-tech"
+        },
+        {
+          "points": 5,
+          "team": "Minnesota",
+          "team_slug": "minnesota"
+        },
+        {
+          "points": 4,
+          "team": "UNLV",
+          "team_slug": "unlv"
+        },
+        {
+          "points": 4,
+          "team": "New Mexico",
+          "team_slug": "new-mexico"
+        },
+        {
+          "points": 4,
+          "team": "Georgia Tech",
+          "team_slug": "georgia-tech"
+        },
+        {
+          "points": 3,
+          "team": "James Madison",
+          "team_slug": "james-madison"
+        },
+        {
+          "points": 3,
+          "team": "Auburn",
+          "team_slug": "auburn"
+        },
+        {
+          "points": 2,
+          "team": "Memphis",
+          "team_slug": "memphis"
+        },
+        {
+          "points": 2,
+          "team": "California",
+          "team_slug": "california"
+        },
+        {
+          "points": 1,
+          "team": "Liberty",
+          "team_slug": "liberty"
+        },
+        {
+          "points": 1,
+          "team": "Western Michigan",
+          "team_slug": "western-michigan"
+        },
+        {
+          "points": 1,
+          "team": "Tulane",
+          "team_slug": "tulane"
+        },
+        {
+          "points": 1,
+          "team": "Virginia",
+          "team_slug": "virginia"
+        }
+      ],
+      "panel": null,
+      "points_system": "25 points for a first-place vote through 1 point for 25th",
+      "poll": "ap",
+      "rankings": [
+        {
+          "first_place_votes": 40,
+          "points": 1672,
+          "previous_rank": 1,
+          "previous_rank_raw": "1",
+          "rank": 1,
+          "rank_raw": "1",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Ohio State",
+          "team_slug": "ohio-state",
+          "tied": false
+        },
+        {
+          "first_place_votes": 14,
+          "points": 1597,
+          "previous_rank": 2,
+          "previous_rank_raw": "2",
+          "rank": 2,
+          "rank_raw": "2",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Oregon",
+          "team_slug": "oregon",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1513,
+          "previous_rank": 3,
+          "previous_rank_raw": "3",
+          "rank": 3,
+          "rank_raw": "3",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Georgia",
+          "team_slug": "georgia",
+          "tied": false
+        },
+        {
+          "first_place_votes": 6,
+          "points": 1510,
+          "previous_rank": 4,
+          "previous_rank_raw": "4",
+          "rank": 4,
+          "rank_raw": "4",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Notre Dame",
+          "team_slug": "notre-dame",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1483,
+          "previous_rank": 5,
+          "previous_rank_raw": "5",
+          "rank": 5,
+          "rank_raw": "5",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Texas",
+          "team_slug": "texas",
+          "tied": false
+        },
+        {
+          "first_place_votes": 8,
+          "points": 1440,
+          "previous_rank": 6,
+          "previous_rank_raw": "6",
+          "rank": 6,
+          "rank_raw": "6",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Indiana",
+          "team_slug": "indiana",
+          "tied": false
+        },
+        {
+          "first_place_votes": 1,
+          "points": 1379,
+          "previous_rank": 7,
+          "previous_rank_raw": "7",
+          "rank": 7,
+          "rank_raw": "7",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Miami (FL)",
+          "team_slug": "miami-fl",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1131,
+          "previous_rank": 8,
+          "previous_rank_raw": "8",
+          "rank": 8,
+          "rank_raw": "8",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Texas A&M",
+          "team_slug": "texas-am",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1102,
+          "previous_rank": 9,
+          "previous_rank_raw": "9",
+          "rank": 9,
+          "rank_raw": "9",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Ole Miss",
+          "team_slug": "ole-miss",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1047,
+          "previous_rank": 10,
+          "previous_rank_raw": "10",
+          "rank": 10,
+          "rank_raw": "10",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Oklahoma",
+          "team_slug": "oklahoma",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 988,
+          "previous_rank": 11,
+          "previous_rank_raw": "11",
+          "rank": 11,
+          "rank_raw": "11",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "LSU",
+          "team_slug": "lsu",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 983,
+          "previous_rank": 12,
+          "previous_rank_raw": "12",
+          "rank": 12,
+          "rank_raw": "12",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Texas Tech",
+          "team_slug": "texas-tech",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 904,
+          "previous_rank": 13,
+          "previous_rank_raw": "13",
+          "rank": 13,
+          "rank_raw": "13",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Alabama",
+          "team_slug": "alabama",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 839,
+          "previous_rank": 14,
+          "previous_rank_raw": "14",
+          "rank": 14,
+          "rank_raw": "T-14",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "BYU",
+          "team_slug": "byu",
+          "tied": true
+        },
+        {
+          "first_place_votes": 0,
+          "points": 839,
+          "previous_rank": 14,
+          "previous_rank_raw": "14",
+          "rank": 14,
+          "rank_raw": "T-14",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "USC (Southern California)",
+          "team_slug": "usc",
+          "tied": true
+        },
+        {
+          "first_place_votes": 0,
+          "points": 718,
+          "previous_rank": 16,
+          "previous_rank_raw": "16",
+          "rank": 16,
+          "rank_raw": "16",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Michigan",
+          "team_slug": "michigan",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 501,
+          "previous_rank": 17,
+          "previous_rank_raw": "17",
+          "rank": 17,
+          "rank_raw": "17",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Washington",
+          "team_slug": "washington",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 482,
+          "previous_rank": 18,
+          "previous_rank_raw": "18",
+          "rank": 18,
+          "rank_raw": "18",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Penn State",
+          "team_slug": "penn-state",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 434,
+          "previous_rank": 19,
+          "previous_rank_raw": "19",
+          "rank": 19,
+          "rank_raw": "19",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "SMU",
+          "team_slug": "smu",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 394,
+          "previous_rank": 20,
+          "previous_rank_raw": "20",
+          "rank": 20,
+          "rank_raw": "20",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Tennessee",
+          "team_slug": "tennessee",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 304,
+          "previous_rank": 21,
+          "previous_rank_raw": "21",
+          "rank": 21,
+          "rank_raw": "21",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Utah",
+          "team_slug": "utah",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 260,
+          "previous_rank": 22,
+          "previous_rank_raw": "22",
+          "rank": 22,
+          "rank_raw": "22",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Iowa",
+          "team_slug": "iowa",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 252,
+          "previous_rank": 23,
+          "previous_rank_raw": "23",
+          "rank": 23,
+          "rank_raw": "23",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Houston",
+          "team_slug": "houston",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 194,
+          "previous_rank": 24,
+          "previous_rank_raw": "24",
+          "rank": 24,
+          "rank_raw": "24",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Louisville",
+          "team_slug": "louisville",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 117,
+          "previous_rank": 25,
+          "previous_rank_raw": "25",
+          "rank": 25,
+          "rank_raw": "25",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Missouri",
+          "team_slug": "missouri",
+          "tied": false
+        }
+      ],
+      "release_date": "Monday, August 17, 2026",
+      "season_designation": null,
+      "sources": [
+        {
+          "title": "NCAA.com — Associated Press Top 25",
+          "url": "https://www.ncaa.com/rankings/football/fbs/associated-press"
+        },
+        {
+          "title": "AP News — The AP Top 25 (tabular release)",
+          "url": "https://apnews.com/article/fbc-t25-ap-top-25-bd2413a0e5694f53a5d59b0d511fbc34"
+        },
+        {
+          "title": "AP News — Preseason poll story (Aug. 17, 2026)",
+          "url": "https://apnews.com/article/ap-top-25-preseason-poll-bd5dd1c058fab6047510f09e18b035f1"
+        },
+        {
+          "title": "AP News — Live Top 25 blog (next poll Sept. 8)",
+          "url": "https://apnews.com/live/top-25-college-football-poll-8-17-2026"
+        },
+        {
+          "title": "CBS Sports — Preseason AP Top 25",
+          "url": "https://www.cbssports.com/college-football/news/ap-top-25-preseason-2026-ohio-state-oregon-college-football-rankings/"
+        }
+      ],
+      "voters": 69
+    },
+    {
+      "name": "USA Today Sports / US LBM Coaches Poll (conducted with AFCA participation)",
+      "next_release": null,
+      "others_receiving_votes": [
+        {
+          "points": 153,
+          "team": "Louisville",
+          "team_slug": "louisville"
+        },
+        {
+          "points": 147,
+          "team": "Florida",
+          "team_slug": "florida"
+        },
+        {
+          "points": 63,
+          "team": "TCU",
+          "team_slug": "tcu"
+        },
+        {
+          "points": 62,
+          "team": "Illinois",
+          "team_slug": "illinois"
+        },
+        {
+          "points": 50,
+          "team": "South Carolina",
+          "team_slug": "south-carolina"
+        },
+        {
+          "points": 50,
+          "team": "Arizona",
+          "team_slug": "arizona"
+        },
+        {
+          "points": 40,
+          "team": "Virginia",
+          "team_slug": "virginia"
+        },
+        {
+          "points": 37,
+          "team": "Vanderbilt",
+          "team_slug": "vanderbilt"
+        },
+        {
+          "points": 29,
+          "team": "Auburn",
+          "team_slug": "auburn"
+        },
+        {
+          "points": 26,
+          "team": "Georgia Tech",
+          "team_slug": "georgia-tech"
+        },
+        {
+          "points": 24,
+          "team": "Boise State",
+          "team_slug": "boise-state"
+        },
+        {
+          "points": 22,
+          "team": "Oklahoma State",
+          "team_slug": "oklahoma-state"
+        },
+        {
+          "points": 17,
+          "team": "UNLV",
+          "team_slug": "unlv"
+        },
+        {
+          "points": 13,
+          "team": "North Carolina State",
+          "team_slug": "nc-state"
+        },
+        {
+          "points": 13,
+          "team": "Florida State",
+          "team_slug": "florida-state"
+        },
+        {
+          "points": 12,
+          "team": "Virginia Tech",
+          "team_slug": "virginia-tech"
+        },
+        {
+          "points": 12,
+          "team": "Nebraska",
+          "team_slug": "nebraska"
+        },
+        {
+          "points": 9,
+          "team": "Memphis",
+          "team_slug": "memphis"
+        },
+        {
+          "points": 8,
+          "team": "Arizona State",
+          "team_slug": "arizona-state"
+        },
+        {
+          "points": 6,
+          "team": "James Madison",
+          "team_slug": "james-madison"
+        },
+        {
+          "points": 6,
+          "team": "Duke",
+          "team_slug": "duke"
+        },
+        {
+          "points": 4,
+          "team": "Pittsburgh",
+          "team_slug": "pittsburgh"
+        },
+        {
+          "points": 4,
+          "team": "New Mexico",
+          "team_slug": "new-mexico"
+        },
+        {
+          "points": 3,
+          "team": "Western Michigan",
+          "team_slug": "western-michigan"
+        },
+        {
+          "points": 3,
+          "team": "Navy",
+          "team_slug": "navy"
+        },
+        {
+          "points": 2,
+          "team": "San Diego State",
+          "team_slug": "san-diego-state"
+        },
+        {
+          "points": 1,
+          "team": "Kansas State",
+          "team_slug": "kansas-state"
+        },
+        {
+          "points": 1,
+          "team": "Jacksonville State",
+          "team_slug": "jacksonville-state"
+        },
+        {
+          "points": 1,
+          "team": "Hawaii",
+          "team_slug": "hawaii"
+        },
+        {
+          "points": 1,
+          "team": "California",
+          "team_slug": "california"
+        }
+      ],
+      "panel": "FBS head coaches (random draw by conference plus independents from AFCA-willing pool)",
+      "points_system": "25 points for a first-place vote through 1 point for 25th",
+      "poll": "coaches",
+      "rankings": [
+        {
+          "first_place_votes": 38,
+          "points": 1741,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 1,
+          "rank_raw": "1",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Ohio State",
+          "team_slug": "ohio-state",
+          "tied": false
+        },
+        {
+          "first_place_votes": 6,
+          "points": 1637,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 2,
+          "rank_raw": "2",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Oregon",
+          "team_slug": "oregon",
+          "tied": false
+        },
+        {
+          "first_place_votes": 7,
+          "points": 1591,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 3,
+          "rank_raw": "3",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Georgia",
+          "team_slug": "georgia",
+          "tied": false
+        },
+        {
+          "first_place_votes": 2,
+          "points": 1544,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 4,
+          "rank_raw": "4",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Texas",
+          "team_slug": "texas",
+          "tied": false
+        },
+        {
+          "first_place_votes": 5,
+          "points": 1524,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 5,
+          "rank_raw": "5",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Notre Dame",
+          "team_slug": "notre-dame",
+          "tied": false
+        },
+        {
+          "first_place_votes": 14,
+          "points": 1522,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 6,
+          "rank_raw": "6",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Indiana",
+          "team_slug": "indiana",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1409,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 7,
+          "rank_raw": "7",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Miami (FL)",
+          "team_slug": "miami-fl",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1174,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 8,
+          "rank_raw": "8",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Texas A&M",
+          "team_slug": "texas-am",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1104,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 9,
+          "rank_raw": "9",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Oklahoma",
+          "team_slug": "oklahoma",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1096,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 10,
+          "rank_raw": "10",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Ole Miss",
+          "team_slug": "ole-miss",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1050,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 11,
+          "rank_raw": "11",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Alabama",
+          "team_slug": "alabama",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 1034,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 12,
+          "rank_raw": "12",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Texas Tech",
+          "team_slug": "texas-tech",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 951,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 13,
+          "rank_raw": "13",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "LSU",
+          "team_slug": "lsu",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 838,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 14,
+          "rank_raw": "14",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "USC",
+          "team_slug": "usc",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 781,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 15,
+          "rank_raw": "15",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "BYU",
+          "team_slug": "byu",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 719,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 16,
+          "rank_raw": "16",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Michigan",
+          "team_slug": "michigan",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 463,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 17,
+          "rank_raw": "17",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Penn State",
+          "team_slug": "penn-state",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 428,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 18,
+          "rank_raw": "18",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Tennessee",
+          "team_slug": "tennessee",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 406,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 19,
+          "rank_raw": "19",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Washington",
+          "team_slug": "washington",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 378,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 20,
+          "rank_raw": "20",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "SMU",
+          "team_slug": "smu",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 313,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 21,
+          "rank_raw": "21",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Utah",
+          "team_slug": "utah",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 291,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 22,
+          "rank_raw": "22",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Iowa",
+          "team_slug": "iowa",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 235,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 23,
+          "rank_raw": "23",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Clemson",
+          "team_slug": "clemson",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 194,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 24,
+          "rank_raw": "24",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Houston",
+          "team_slug": "houston",
+          "tied": false
+        },
+        {
+          "first_place_votes": 0,
+          "points": 158,
+          "previous_rank": null,
+          "previous_rank_raw": "NR",
+          "rank": 25,
+          "rank_raw": "25",
+          "record": {
+            "losses": 0,
+            "wins": 0
+          },
+          "team": "Missouri",
+          "team_slug": "missouri",
+          "tied": false
+        }
+      ],
+      "release_date": "August 4, 2026",
+      "season_designation": "2026–27 US LBM Coaches Poll (preseason)",
+      "sources": [
+        {
+          "title": "USA Today Sports — 2026 Coaches Poll (Aug. 4, 2026)",
+          "url": "https://sportsdata.usatoday.com/football/ncaaf/coaches-poll/2026/2026-08-04"
+        },
+        {
+          "title": "USA Today Sports — 2026 Coaches Poll hub",
+          "url": "https://sportsdata.usatoday.com/football/ncaaf/coaches-poll/2026"
+        },
+        {
+          "title": "AP News — USA Today Sports / US LBM Coaches Poll (preseason, Aug. 4)",
+          "url": "https://apnews.com/article/college-football-college-sports-1d1f0995a59653fca7b7686ed356ea2b"
+        }
+      ],
+      "voters": null
+    }
+  ],
+  "status": {
+    "next_update": "2026-09-08T12:00:00-04:00",
+    "note": "Preseason polls remain in effect. Neither the Associated Press Top 25 nor the USA Today Sports / US LBM (AFCA) Coaches Poll has published a post–Week 0 or Week 1 update as of this date. The first regular-season AP Top 25 is scheduled for release at noon ET on Tuesday, September 8, 2026, after the opening two weekends of play. Subsequent AP polls are scheduled for Sundays at 2 p.m. ET. Week 0 results, if any, have not yet been reflected in either official Top 25.",
+    "preseason": true
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "counts": {
+    "byes": 1,
+    "conference_games": null,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-05",
+      "date_raw": "Sep 5",
+      "location": "home",
+      "notes": null,
+      "opponent": "Boise State",
+      "opponent_slug": "boise-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sep 12",
+      "location": "away",
+      "notes": null,
+      "opponent": "Oklahoma State",
+      "opponent_slug": "oklahoma-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-19",
+      "date_raw": "Sep 19",
+      "location": "home",
+      "notes": null,
+      "opponent": "Portland State",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Sep 26",
+      "location": "away",
+      "notes": null,
+      "opponent": "USC",
+      "opponent_slug": "usc",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-03",
+      "date_raw": "Oct 3",
+      "location": null,
+      "notes": null,
+      "opponent": null,
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": "bye",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-10",
+      "date_raw": "Oct 10",
+      "location": "home",
+      "notes": null,
+      "opponent": "UCLA",
+      "opponent_slug": "ucla",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Oct 17",
+      "location": "home",
+      "notes": null,
+      "opponent": "Nebraska",
+      "opponent_slug": "nebraska",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-24",
+      "date_raw": "Oct 24",
+      "location": "away",
+      "notes": null,
+      "opponent": "Illinois",
+      "opponent_slug": "illinois",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-31",
+      "date_raw": "Oct 31",
+      "location": "home",
+      "notes": null,
+      "opponent": "Northwestern",
+      "opponent_slug": "northwestern",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Nov 7",
+      "location": "away",
+      "notes": null,
+      "opponent": "Ohio State",
+      "opponent_slug": "ohio-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-14",
+      "date_raw": "Nov 14",
+      "location": "home",
+      "notes": null,
+      "opponent": "Michigan",
+      "opponent_slug": "michigan",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-21",
+      "date_raw": "Nov 21",
+      "location": "away",
+      "notes": null,
+      "opponent": "Michigan State",
+      "opponent_slug": "michigan-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-28",
+      "date_raw": "Nov 28",
+      "location": "home",
+      "notes": null,
+      "opponent": "Washington",
+      "opponent_slug": "washington",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "big-ten",
+    "school": "Oregon",
+    "slug": "oregon"
+  }
+}

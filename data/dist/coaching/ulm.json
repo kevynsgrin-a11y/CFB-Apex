@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": 3,
+    "name": "Bryant Vincent",
+    "title_raw": "Bryant Vincent (3rd season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "3-4 with exotic pressures / front shifts under Reffett (247Sports opponent preview)",
+      "label": "3-4"
+    },
+    "offense": {
+      "description": "RPO-oriented, creative tight-end alignment attack attributed to Montalto (247Sports Mississippi State opponent preview); no single athletics-branded label — report as RPO / creative TE usage per beat attribution",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "ulmwarhawks.com 2026 Football Coaches",
+      "url": "https://ulmwarhawks.com/sports/football/coaches/2026"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Bryant Vincent",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Bryant Vincent (3rd season)"
+    },
+    {
+      "name": "Jesse Montalto",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jesse Montalto (OC / Receivers)"
+    },
+    {
+      "name": "Troy Reffett",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Troy Reffett (DC / Inside Linebackers)"
+    },
+    {
+      "name": "Tony McClain",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Tony McClain (STC / Defensive Line)"
+    },
+    {
+      "name": "Taylor Dupuis",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Taylor Dupuis"
+    },
+    {
+      "name": "Shawn Simmons",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Shawn Simmons"
+    },
+    {
+      "name": "Jesse Montalto",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Jesse Montalto"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "ULM",
+    "slug": "ulm"
+  }
+}

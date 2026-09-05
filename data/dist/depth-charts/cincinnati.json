@@ -1,0 +1,584 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/big12-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/big12-2026/cincinnati.md"
+    ]
+  },
+  "schemes": {
+    "defense": null,
+    "offense": null,
+    "special_teams": null
+  },
+  "status": "MIXED",
+  "status_caveat": "QB1 JC French IV OFFICIAL (On3/beat); remainder PROJECTED (Cincinnati Enquirer / Yahoo Aug 17, 2026); no program Week-1 two-deep found",
+  "status_raw": "MIXED",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Cincinnati",
+    "slug": "cincinnati"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Roswell",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "Blessed Trinity Catholic",
+                  "hometown": "Roswell, GA",
+                  "jersey": null,
+                  "name": "JC French IV",
+                  "note": "OFFICIAL starter",
+                  "previous_schools": "Georgia Southern",
+                  "stars": null,
+                  "state": "GA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Samaj Jones",
+                  "note": "Liam O'Brien battling for No. 2",
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Cincinnati",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "La Salle",
+                  "hometown": "Cincinnati, OH",
+                  "jersey": null,
+                  "name": "Gi'Bran Payne",
+                  "note": null,
+                  "previous_schools": "Notre Dame",
+                  "stars": null,
+                  "state": "OH"
+                },
+                {
+                  "city": "Covington",
+                  "class": "SO",
+                  "class_raw": "PROJECTED co",
+                  "high_school": "Newton",
+                  "hometown": "Covington, GA",
+                  "jersey": null,
+                  "name": "Zion Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "GA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Zylan Perry",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cole Tabb",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Opelousas",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "Opelousas",
+                  "hometown": "Opelousas, LA",
+                  "jersey": null,
+                  "name": "JV Gibson",
+                  "note": null,
+                  "previous_schools": "Oklahoma",
+                  "stars": null,
+                  "state": "LA"
+                },
+                {
+                  "city": "Beltsville",
+                  "class": "SO",
+                  "class_raw": "Sophomore",
+                  "high_school": "Riverdale Baptist",
+                  "hometown": "Beltsville, MD",
+                  "jersey": null,
+                  "name": "Giyahni Kontosis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "MD"
+                },
+                {
+                  "city": "Fort Walton Beach",
+                  "class": "JR",
+                  "class_raw": "PROJECTED",
+                  "high_school": "Choctawhatchee",
+                  "hometown": "Fort Walton Beach, FL",
+                  "jersey": null,
+                  "name": "Isaiah Johnson",
+                  "note": null,
+                  "previous_schools": "Western Carolina",
+                  "stars": null,
+                  "state": "FL"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lewis Center",
+                  "class": "JR",
+                  "class_raw": "PROJECTED",
+                  "high_school": "Olentangy",
+                  "hometown": "Lewis Center, OH",
+                  "jersey": null,
+                  "name": "Gavin Grover",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "OH"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Sioux Falls",
+                  "class": null,
+                  "class_raw": "PROJECTED",
+                  "high_school": "Roosevelt",
+                  "hometown": "Sioux Falls, SD",
+                  "jersey": null,
+                  "name": "Joe Cotton",
+                  "note": null,
+                  "previous_schools": "South Dakota",
+                  "stars": null,
+                  "state": "SD"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Dayton",
+                  "class": "SR",
+                  "class_raw": "PROJECTED",
+                  "high_school": "Wayne",
+                  "hometown": "Dayton, OH",
+                  "jersey": null,
+                  "name": "Evan Tengesdahl",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "OH"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Greenville",
+                  "class": null,
+                  "class_raw": "PROJECTED",
+                  "high_school": "Versailles",
+                  "hometown": "Greenville, OH",
+                  "jersey": null,
+                  "name": "Taran Tyo",
+                  "note": null,
+                  "previous_schools": "Ball State",
+                  "stars": null,
+                  "state": "OH"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Ridley Park",
+                  "class": "SR",
+                  "class_raw": "PROJECTED",
+                  "high_school": "IMG Academy",
+                  "hometown": "Ridley Park, PA",
+                  "jersey": null,
+                  "name": "Xavier Lozowicki",
+                  "note": null,
+                  "previous_schools": "Maine",
+                  "stars": null,
+                  "state": "PA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Killeen",
+                  "class": null,
+                  "class_raw": "PROJECTED",
+                  "high_school": "Shoemaker",
+                  "hometown": "Killeen, TX",
+                  "jersey": null,
+                  "name": "Judea Milon",
+                  "note": null,
+                  "previous_schools": "Tyler JC",
+                  "stars": null,
+                  "state": "TX"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "West Memphis",
+                  "class": "JR",
+                  "class_raw": "Junior",
+                  "high_school": "West Memphis",
+                  "hometown": "West Memphis, AR",
+                  "jersey": null,
+                  "name": "Marquaze Parker",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "AR"
+                },
+                {
+                  "city": "Lawndale",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "Lawndale",
+                  "hometown": "Lawndale, CA",
+                  "jersey": null,
+                  "name": "Thomas Johnson",
+                  "note": null,
+                  "previous_schools": "North Carolina Central",
+                  "stars": null,
+                  "state": "CA"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DE/Edge"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "LaGrange",
+                  "class": "SR",
+                  "class_raw": "Senior",
+                  "high_school": "Callaway",
+                  "hometown": "LaGrange, GA",
+                  "jersey": null,
+                  "name": "Elijah Gunn",
+                  "note": null,
+                  "previous_schools": "Southern Illinois",
+                  "stars": null,
+                  "state": "GA"
+                },
+                {
+                  "city": "Beaver Falls",
+                  "class": null,
+                  "class_raw": "Sixth Year",
+                  "high_school": "Beaver Falls",
+                  "hometown": "Beaver Falls, PA )",
+                  "jersey": null,
+                  "name": "Josh Hough",
+                  "note": null,
+                  "previous_schools": "California (Pa.",
+                  "stars": null,
+                  "state": "PA )"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "Interior DL"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Columbus",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "St. Francis De Sales",
+                  "hometown": "Columbus, OH",
+                  "jersey": null,
+                  "name": "Jonathan Thompson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "OH"
+                },
+                {
+                  "city": "Pompano Beach",
+                  "class": "JR",
+                  "class_raw": "Junior",
+                  "high_school": "Coconut Creek",
+                  "hometown": "Pompano Beach, FL",
+                  "jersey": null,
+                  "name": "Damaine Wilson",
+                  "note": null,
+                  "previous_schools": "Georgia State",
+                  "stars": null,
+                  "state": "FL"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "ILB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Cincinnati",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "Indian Hill",
+                  "hometown": "Cincinnati, OH",
+                  "jersey": null,
+                  "name": "Antwan Peek Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "OH"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "OLB \"Cat\""
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Baltimore",
+                  "class": "SR",
+                  "class_raw": "Senior",
+                  "high_school": "St. Frances Academy",
+                  "hometown": "Baltimore, MD",
+                  "jersey": null,
+                  "name": "Brian Simms III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "MD"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "OLB \"Dog\""
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Evanston",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "Evanston Township",
+                  "hometown": "Evanston, IL",
+                  "jersey": null,
+                  "name": "MJ Cannon",
+                  "note": null,
+                  "previous_schools": "Bowling Green",
+                  "stars": null,
+                  "state": "IL"
+                },
+                {
+                  "city": "Farmington",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "North Farmington",
+                  "hometown": "Farmington, MI",
+                  "jersey": null,
+                  "name": "Jasper Beeler",
+                  "note": null,
+                  "previous_schools": "Northern Illinois",
+                  "stars": null,
+                  "state": "MI"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "S"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Buckeye",
+                  "class": "JR",
+                  "class_raw": "Junior",
+                  "high_school": "Centennial",
+                  "hometown": "Buckeye, AZ",
+                  "jersey": null,
+                  "name": "Kenny Worthy",
+                  "note": null,
+                  "previous_schools": "Washington State",
+                  "stars": null,
+                  "state": "AZ"
+                },
+                {
+                  "city": "Birmingham",
+                  "class": null,
+                  "class_raw": "Fifth Year",
+                  "high_school": "Hoover",
+                  "hometown": "Birmingham, AL",
+                  "jersey": null,
+                  "name": "Jacob Finley",
+                  "note": null,
+                  "previous_schools": "Northern Illinois",
+                  "stars": null,
+                  "state": "AL"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "CB"
+        }
+      ],
+      "scheme": null,
+      "unit": "defense"
+    }
+  ]
+}

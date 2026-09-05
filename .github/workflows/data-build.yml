@@ -1,0 +1,54 @@
+name: Data build
+
+# The dataset in data/dist is generated from data/source. This job proves the
+# committed output is exactly what the ETL produces, so a reviewer never has to
+# trust a hand-edited JSON file.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Rebuild and verify dataset
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild data/dist from data/source
+        run: python3 tools/etl/build.py --clean
+
+      - name: Fail if the committed dataset is stale
+        run: |
+          if ! git diff --quiet -- data/dist; then
+            echo "::error::data/dist does not match a fresh build from data/source."
+            echo "Run 'python3 tools/etl/build.py --clean' and commit the result."
+            git --no-pager diff --stat -- data/dist
+            exit 1
+          fi
+          echo "data/dist is reproducible from data/source."
+
+      - name: Validate dataset integrity
+        run: python3 tools/etl/validate.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install workspace dependencies
+        run: npm ci --workspaces --include-workspace-root
+
+      - name: Typecheck the data package and API worker
+        run: npm run typecheck
+
+      - name: Run data package tests
+        run: npm test

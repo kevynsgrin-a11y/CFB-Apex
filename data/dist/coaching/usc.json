@@ -1,0 +1,99 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Lincoln Riley",
+    "title_raw": "Lincoln Riley"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big-ten.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Base 4-2-5 (Wikipedia team page citation); Patterson install (LA Times, NY Post staff finalization).",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Lincoln Riley air-raid / spread continuity (Riley remains primary play-caller; Huard titled OC/QB). Formal alternate label Not listed.",
+      "label": "spread"
+    }
+  },
+  "sources": [],
+  "staff": [
+    {
+      "name": "Lincoln Riley",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Lincoln Riley"
+    },
+    {
+      "name": "Luke Huard",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Luke Huard (also Quarterbacks)"
+    },
+    {
+      "name": "Co-OC Dennis Simmons",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Co-OC Dennis Simmons (Wide Receivers)"
+    },
+    {
+      "name": "Gary Patterson",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Gary Patterson"
+    },
+    {
+      "name": "Mike Ekeler",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Mike Ekeler (also Linebackers)"
+    },
+    {
+      "name": "Co-ST Ryan Dougherty",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Co-ST Ryan Dougherty (Specialists)"
+    },
+    {
+      "name": "Luke Huard",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Luke Huard"
+    },
+    {
+      "name": "Anthony Jones Jr.",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Anthony Jones Jr. (Assistant Head Coach for Offense / Running Backs)"
+    },
+    {
+      "name": "Dennis Simmons",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Dennis Simmons"
+    }
+  ],
+  "team": {
+    "conference_slug": "big-ten",
+    "school": "USC",
+    "slug": "usc"
+  }
+}

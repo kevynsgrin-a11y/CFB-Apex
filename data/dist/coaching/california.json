@@ -1,0 +1,108 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Tosh Lupoi",
+    "title_raw": "Tosh Lupoi (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (co-DC structure published; no single official base-front label on calbears.com consulted)",
+      "label": null
+    },
+    "offense": {
+      "description": "Pro-style (school / SI reporting): shotgun or under center, multi–tight end downhill run emphasis, extensive pre-snap reads; rare hurry-up (SI feature on Somerville offense)",
+      "label": "Pro-style"
+    }
+  },
+  "sources": [
+    {
+      "title": "calbears.com 2026 Football Coaches",
+      "url": "https://calbears.com/sports/football/coaches"
+    },
+    {
+      "title": "SI: Cal offense under Somerville",
+      "url": "https://www.si.com/college/cal/football/what-cal-s-offense-will-look-like-under-offensive-coordinator-jordan-somerville-01m0dvyt6fst"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tosh Lupoi",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Tosh Lupoi (1st season)"
+    },
+    {
+      "name": "Jordan Somerville",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jordan Somerville"
+    },
+    {
+      "name": "Ike Hilliard",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ike Hilliard (Wide Receivers / Co-Offensive Coordinator)"
+    },
+    {
+      "name": "Michael Hutchings",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Michael Hutchings"
+    },
+    {
+      "name": "Da’Von Brown",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Da’Von Brown (Defensive Backs / Co-Defensive Coordinator)"
+    },
+    {
+      "name": "Zach Tinker",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Zach Tinker"
+    },
+    {
+      "name": "Nick Rolovich",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Nick Rolovich (Associate Head Coach / Quarterbacks)"
+    },
+    {
+      "name": "Keith Bhonapha",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Keith Bhonapha (Running Backs / Recruiting Coordinator)"
+    },
+    {
+      "name": "Ike Hilliard",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Ike Hilliard"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "California",
+    "slug": "california"
+  }
+}

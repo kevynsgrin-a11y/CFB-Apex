@@ -1,0 +1,197 @@
+{
+  "counts": {
+    "byes": 1,
+    "conference_games": null,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-05",
+      "date_raw": "Sep 5",
+      "location": "home",
+      "notes": null,
+      "opponent": "Coastal Carolina",
+      "opponent_slug": "coastal-carolina",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sep 12",
+      "location": "home",
+      "notes": null,
+      "opponent": "UT Martin",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-19",
+      "date_raw": "Sep 19",
+      "location": "neutral",
+      "notes": "Charlotte; Duke’s Mayo Classic",
+      "opponent": "Virginia",
+      "opponent_slug": "virginia",
+      "site": "Bank of America Stadium, Charlotte, NC",
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Sep 26",
+      "location": "home",
+      "notes": null,
+      "opponent": "Oklahoma State",
+      "opponent_slug": "oklahoma-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-03",
+      "date_raw": "Oct 3",
+      "location": "away",
+      "notes": null,
+      "opponent": "Iowa State",
+      "opponent_slug": "iowa-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-10",
+      "date_raw": "Oct 10",
+      "location": "home",
+      "notes": null,
+      "opponent": "Arizona",
+      "opponent_slug": "arizona",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Oct 17",
+      "location": "home",
+      "notes": null,
+      "opponent": "Cincinnati",
+      "opponent_slug": "cincinnati",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-24",
+      "date_raw": "Oct 24",
+      "location": "away",
+      "notes": null,
+      "opponent": "TCU",
+      "opponent_slug": "tcu",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-31",
+      "date_raw": "Oct 31",
+      "location": null,
+      "notes": null,
+      "opponent": null,
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": "bye",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Nov 7",
+      "location": "away",
+      "notes": null,
+      "opponent": "Texas Tech",
+      "opponent_slug": "texas-tech",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-14",
+      "date_raw": "Nov 14",
+      "location": "home",
+      "notes": null,
+      "opponent": "Kansas",
+      "opponent_slug": "kansas",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-21",
+      "date_raw": "Nov 21",
+      "location": "home",
+      "notes": null,
+      "opponent": "Houston",
+      "opponent_slug": "houston",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-28",
+      "date_raw": "Nov 28",
+      "location": "away",
+      "notes": null,
+      "opponent": "Utah",
+      "opponent_slug": "utah",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "big12",
+    "school": "West Virginia",
+    "slug": "west-virginia"
+  }
+}

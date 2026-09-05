@@ -1,0 +1,60 @@
+#:schema node_modules/wrangler/config-schema.json
+#
+# The CFB Apex data API.
+#
+# Deliberately a SEPARATE Worker from the `cfb-apex` site Worker. The site is
+# built and deployed by hand from a local tree; this one is deployed by CI from
+# this repository, so merging to main is what changes what it serves. Sharing a
+# Worker name would let one deploy silently overwrite the other.
+#
+# `assets` serves data/dist straight from the edge — no KV, no R2, no database
+# to drift out of sync with the committed data.
+
+name = "cfb-apex-data"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+# The Worker owns routing; assets are only reached through env.ASSETS.fetch().
+run_worker_first = true
+
+[observability]
+enabled = true
+
+[vars]
+# Tighten to the site's origins once the front end consumes this API.
+ALLOWED_ORIGINS = "*"
+DATASET_VERSION = "2026.09.05"
+
+[env.production]
+name = "cfb-apex-data"
+
+[env.production.vars]
+ALLOWED_ORIGINS = "*"
+DATASET_VERSION = "2026.09.05"
+
+[env.production.assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Uncomment once a hostname is chosen and the DNS record exists.
+# [[env.production.routes]]
+# pattern = "data.cfbapex.com"
+# custom_domain = true
+
+[env.staging]
+name = "cfb-apex-data-staging"
+
+[env.staging.vars]
+ALLOWED_ORIGINS = "*"
+DATASET_VERSION = "2026.09.05-staging"
+
+[env.staging.assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true

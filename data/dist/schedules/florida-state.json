@@ -1,0 +1,210 @@
+{
+  "counts": {
+    "byes": 2,
+    "conference_games": null,
+    "games": 12,
+    "non_fbs_opponents": 1
+  },
+  "games": [
+    {
+      "conference_game_marker": null,
+      "date": "2026-08-29",
+      "date_raw": "Aug 29",
+      "location": "home",
+      "notes": null,
+      "opponent": "New Mexico State",
+      "opponent_slug": "new-mexico-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-07",
+      "date_raw": "Sep 7",
+      "location": "home",
+      "notes": null,
+      "opponent": "SMU",
+      "opponent_slug": "smu",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-12",
+      "date_raw": "Sep 12",
+      "location": null,
+      "notes": null,
+      "opponent": null,
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": "bye",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-19",
+      "date_raw": "Sep 19",
+      "location": "away",
+      "notes": null,
+      "opponent": "Alabama",
+      "opponent_slug": "alabama",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-09-26",
+      "date_raw": "Sep 26",
+      "location": "home",
+      "notes": null,
+      "opponent": "Central Arkansas",
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-03",
+      "date_raw": "Oct 3",
+      "location": "home",
+      "notes": null,
+      "opponent": "Virginia",
+      "opponent_slug": "virginia",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-09",
+      "date_raw": "Oct 9",
+      "location": "away",
+      "notes": null,
+      "opponent": "Louisville",
+      "opponent_slug": "louisville",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-17",
+      "date_raw": "Oct 17",
+      "location": "away",
+      "notes": null,
+      "opponent": "Miami",
+      "opponent_slug": "miami-fl",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-24",
+      "date_raw": "Oct 24",
+      "location": null,
+      "notes": null,
+      "opponent": null,
+      "opponent_slug": null,
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": "bye",
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-10-31",
+      "date_raw": "Oct 31",
+      "location": "home",
+      "notes": null,
+      "opponent": "Clemson",
+      "opponent_slug": "clemson",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-07",
+      "date_raw": "Nov 7",
+      "location": "away",
+      "notes": null,
+      "opponent": "Boston College",
+      "opponent_slug": "boston-college",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-13",
+      "date_raw": "Nov 13",
+      "location": "away",
+      "notes": null,
+      "opponent": "Pittsburgh",
+      "opponent_slug": "pittsburgh",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-21",
+      "date_raw": "Nov 21",
+      "location": "home",
+      "notes": null,
+      "opponent": "NC State",
+      "opponent_slug": "nc-state",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    },
+    {
+      "conference_game_marker": null,
+      "date": "2026-11-27",
+      "date_raw": "Nov 27",
+      "location": "home",
+      "notes": null,
+      "opponent": "Florida",
+      "opponent_slug": "florida",
+      "site": null,
+      "source": "02-stats/02-full-schedule-2026.md",
+      "type": null,
+      "week": null
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "schedule",
+    "notes": [
+      "An opponent_slug of null is a non-FBS opponent, not a missing value.",
+      "A game with no 'at' or 'vs' prefix in the source is a home game; the Big Ten and Big 12 releases write home games that way."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md"
+    ]
+  },
+  "season": 2026,
+  "team": {
+    "conference_slug": "acc",
+    "school": "Florida State",
+    "slug": "florida-state"
+  }
+}

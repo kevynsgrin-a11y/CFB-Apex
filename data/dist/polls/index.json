@@ -1,0 +1,29 @@
+{
+  "available": [
+    {
+      "name": "Associated Press Top 25",
+      "others_receiving_votes": 24,
+      "poll": "ap",
+      "ranked": 25,
+      "release_date": "Monday, August 17, 2026",
+      "unresolved": 0
+    },
+    {
+      "name": "USA Today Sports / US LBM Coaches Poll (conducted with AFCA participation)",
+      "others_receiving_votes": 30,
+      "poll": "coaches",
+      "ranked": 25,
+      "release_date": "August 4, 2026",
+      "unresolved": 0
+    }
+  ],
+  "latest": "polls/latest.json",
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "polls-index",
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/00-top25-ap-coaches-2026-09-05.md"
+    ]
+  }
+}

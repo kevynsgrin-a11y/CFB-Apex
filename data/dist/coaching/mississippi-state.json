@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jeff Lebby",
+    "title_raw": "Jeff Lebby"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed as a single published base for 2026; Arnett historically associated with odd-stack / 3–3–5 concepts at prior MSU stops — treat 2026 official base as Not listed without athletics confirmation",
+      "label": null
+    },
+    "offense": {
+      "description": "Veer & Shoot (SI SEC survey; Lebby is a primary conference practitioner)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "Clarion Ledger: Lebby 2026 staff",
+      "url": "https://www.clarionledger.com/story/sports/college/mississippi-state/2026/02/25/mississippi-state-football-jeff-lebby-coaching-staff-2026/88812536007/"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jeff Lebby",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jeff Lebby"
+    },
+    {
+      "name": "Jeff Lebby",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jeff Lebby (head coach; no separate OC listed — Lebby oversees / calls offense)"
+    },
+    {
+      "name": "Zach Arnett",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Zach Arnett"
+    },
+    {
+      "name": "Matt Brock",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Matt Brock (Co-DC / Linebackers)"
+    },
+    {
+      "name": "Cliff Odom",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Cliff Odom (Cliff Odom Jr. on FBS coaches list)"
+    },
+    {
+      "name": "Kevin Johns",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Kevin Johns"
+    },
+    {
+      "name": "Anthony Tucker",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Anthony Tucker (Assistant Head Coach / Pass Game Coordinator / Running Backs)"
+    },
+    {
+      "name": "Phillip Montgomery",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Phillip Montgomery (Associate Head Coach for Offense / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Mississippi State",
+    "slug": "mississippi-state"
+  }
+}

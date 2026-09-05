@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Phil Longo",
+    "title_raw": "Phil Longo"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/cusa.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Full autonomy for Aughtry-Lindsay (Longo comments). Exclusive published base front label (3-3-5 vs 4-2-5, etc.) Not listed on official athletics materials reviewed for 2026. (Texas Football staff notes; gobearkats.com coaches directory.)",
+      "label": "3-3-5"
+    },
+    "offense": {
+      "description": "Air Raid under Longo (primary play-caller; continuity from Wisconsin / North Carolina / Ole Miss stops). Patterson holds OC title while Longo scripts/calls. (ItemOnline July 2026; Dave Campbell’s Texas Football; Wikipedia continuity.)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "gobearkats.com/sports/football/coaches",
+      "url": "https://gobearkats.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Phil Longo",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official SHSU athletics; Wikipedia 2026 team page (2nd season); primary offensive play-caller",
+      "title_raw": "Phil Longo"
+    },
+    {
+      "name": "Zack Patterson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official SHSU athletics",
+      "title_raw": "Zack Patterson"
+    },
+    {
+      "name": "Freddie Aughtry-Lindsay",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official SHSU athletics",
+      "title_raw": "Freddie Aughtry-Lindsay"
+    },
+    {
+      "name": "Eric Raisbeck",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official SHSU athletics",
+      "title_raw": "Eric Raisbeck (Associate Head Coach / Special Teams Coordinator / Slot Receivers)"
+    },
+    {
+      "name": null,
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official SHSU athletics; ItemOnline / Texas Football on Longo play-calling",
+      "title_raw": "Not listed as a dedicated QB coach title on the 2026 coaches directory (Longo calls plays; Patterson is OC)"
+    },
+    {
+      "name": "Antonio Williams",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official SHSU athletics coaches page",
+      "title_raw": "Antonio Williams"
+    },
+    {
+      "name": "Keyan Williams",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official SHSU athletics",
+      "title_raw": "Keyan Williams (Wide Receivers)"
+    },
+    {
+      "name": null,
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official SHSU athletics",
+      "title_raw": "slot receivers also under Raisbeck"
+    }
+  ],
+  "team": {
+    "conference_slug": "cusa",
+    "school": "Sam Houston",
+    "slug": "sam-houston"
+  }
+}
