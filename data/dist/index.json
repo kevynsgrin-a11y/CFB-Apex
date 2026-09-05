@@ -5,6 +5,26 @@
       "counts": {
         "teams": 138
       }
+    },
+    "polls": {
+      "artifacts": 3,
+      "counts": {
+        "others_receiving_votes": 54,
+        "polls": 2,
+        "ranked_teams": 50
+      }
+    },
+    "rosters": {
+      "artifacts": 93,
+      "counts": {
+        "off_official_roster": 10,
+        "players": 10455,
+        "teams": 92,
+        "teams_without_rosters": 46,
+        "with_high_school": 10031,
+        "with_hometown": 10440,
+        "with_stars": 1258
+      }
     }
   },
   "meta": {
@@ -19,10 +39,8 @@
     ]
   },
   "missing_parsers": [
-    "rosters",
     "depth_charts",
     "schedules",
-    "polls",
     "sos",
     "coaching",
     "stats_current",
@@ -30,5 +48,5 @@
     "injuries"
   ],
   "team_count": 138,
-  "warning_count": 0
+  "warning_count": 8
 }
