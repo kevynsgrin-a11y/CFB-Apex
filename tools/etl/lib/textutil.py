@@ -14,6 +14,13 @@ _STAR_RE = re.compile(r"(\d)\s*(?:★|\*|-?\s*star)", re.IGNORECASE)
 _NUM_RE = re.compile(r"-?\d[\d,]*\.?\d*")
 # Sources write the transfer note as "(prev. X)", "(prev: X)" or "(previous X)".
 _TRANSFER_RE = re.compile(r"\(\s*prev(?:ious)?\s*[.:]?\s*([^)]*?)\s*\)", re.IGNORECASE)
+
+# Others write it unparenthesised inside another column: "R-Jr.; prev. College
+# of San Mateo / Arizona", "Acad: R-Jr.; Prev: Washington / Ventura CC". It runs
+# to the next semicolon or the end of the cell.
+_BARE_TRANSFER_RE = re.compile(
+    r"(?:^|[;,]|\s)prev(?:ious)?\s*[.:]\s*([^;]+?)\s*(?=[;]|$)", re.IGNORECASE
+)
 _RECORD_RE = re.compile(r"(\d+)\s*[-–]\s*(\d+)(?:\s*[-–]\s*(\d+))?")
 
 #: Class-year spellings seen across the roster files, mapped to a canonical form.
@@ -47,6 +54,14 @@ CLASS_YEARS: dict[str, str] = {
     "gr.": "GR",
     "grad": "GR",
     "graduate": "GR",
+    "rs-freshman": "RFR",
+    "rs freshman": "RFR",
+    "rs-sophomore": "RSO",
+    "rs sophomore": "RSO",
+    "rs-junior": "RJR",
+    "rs junior": "RJR",
+    "rs-senior": "RSR",
+    "rs senior": "RSR",
     "5th": "5TH",
     "5th (gr.)": "5TH",
     "6th": "6TH",
@@ -55,7 +70,21 @@ CLASS_YEARS: dict[str, str] = {
 
 
 def parse_stars(value: str | None) -> int | None:
-    """Recruiting stars from cells like ``4★``, ``3-star``, ``Not listed``."""
+    """Recruiting stars from cells like ``4★``, ``4*``, ``3-star``, ``Not listed``.
+
+    The raw cell is checked first: several files write the rating with an ASCII
+    asterisk ("4* (HS '26 per PuntAndRally)"), and stripping Markdown emphasis
+    would remove that asterisk before the rating could be read.
+    """
+    if value is None:
+        return None
+    raw = str(value).strip()
+    if raw:
+        match = _STAR_RE.search(raw)
+        if match:
+            stars = int(match.group(1))
+            if 1 <= stars <= 5:
+                return stars
     text = mdtable.clean(value)
     if not text:
         return None
@@ -158,7 +187,7 @@ def parse_transfer(value: str | None) -> str | None:
     text = mdtable.clean(value)
     if not text:
         return None
-    match = _TRANSFER_RE.search(text)
+    match = _TRANSFER_RE.search(text) or _BARE_TRANSFER_RE.search(text)
     return match.group(1).strip() if match else None
 
 
@@ -172,7 +201,7 @@ def split_transfer(value: str | None) -> tuple[str | None, str | None]:
     text = mdtable.clean(value)
     if not text:
         return None, None
-    match = _TRANSFER_RE.search(text)
+    match = _TRANSFER_RE.search(text) or _BARE_TRANSFER_RE.search(text)
     if not match:
         return text, None
     remainder = (text[: match.start()] + text[match.end() :]).strip(" ;,/")

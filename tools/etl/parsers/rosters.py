@@ -127,6 +127,29 @@ def _lookup(text: str, keys: set[str]) -> str | None:
     return None
 
 
+def _sources_table_date(text: str) -> str | None:
+    """Access date from a Sources table, for files with no "As of" line.
+
+    Two files publish their date only as an "Accessed" column in the Sources
+    table. Without this they would carry no as_of at all, which reads as "the
+    source gave no date" when it in fact gave one.
+    """
+    section = mdtable.find_section(text, lambda title: "source" in title.lower(), 2)
+    if section is None:
+        return None
+    dates: list[str] = []
+    for table in section.tables():
+        index = table.header_index("Accessed", "Access date", "Access Date", "Date")
+        if index is None:
+            continue
+        for row in table.rows:
+            if index < len(row):
+                iso = _iso_date(mdtable.clean(row[index]) or "")
+                if iso:
+                    dates.append(iso)
+    return min(dates) if dates else None
+
+
 def _find_as_of(text: str) -> str | None:
     front = _front_matter(text)
     for zone in (front, _meta_zone(text)):
@@ -136,14 +159,16 @@ def _find_as_of(text: str) -> str | None:
         prose = _PROSE_DATE_RE.search(zone)
         if prose:
             return mdtable.strip_markdown(prose.group(1)) or None
-    return None
+    return _sources_table_date(text)
 
 
 def _find_head_coach(text: str) -> str | None:
     for zone in (_front_matter(text), _meta_zone(text)):
         value = _lookup(zone, _COACH_KEYS)
         if value:
-            return mdtable.clean(value)
+            # Several front-matter lines pack fields onto one line separated by
+            # "·", leaving the separator on the tail of the last value.
+            return mdtable.clean(value.strip(" ·|;,"))
     return None
 
 
@@ -247,6 +272,58 @@ _SCHOOL_WORDS = (
 
 _PAREN_RE = re.compile(r"\(([^)]*)\)")
 _SEGMENT_RE = re.compile(r"\s*(?:/|;|\s—\s|\s–\s)\s*")
+_TRAILING_PAREN_RE = re.compile(r"\s*\(([^)]*)\)\s*$")
+
+#: A segment that only says the value is absent, however it is dressed up:
+#: "Not listed", "HS: Not listed on athletics", "(HS not listed)", "Hometown".
+_ABSENT_SEGMENT_RE = re.compile(
+    r"^\(?\s*(?:hs|h\.s\.?|high school|hometown|home town)?\s*[:\-]?\s*"
+    r"(?:not\s+listed|not\s+published|not\s+available|n/?a|unknown|tbd)\b",
+    re.IGNORECASE,
+)
+#: A bare column label left in the cell in place of a value.
+_LABEL_ONLY_RE = re.compile(r"^(?:hs|h\.s\.?|high school|hometown|home town)$", re.IGNORECASE)
+
+#: Words that mark a trailing parenthetical as editorial commentary rather than
+#: a previous school ("*247 composite ratings exist for 2026 class; ...").
+_NOTE_MARKERS = (
+    "rating",
+    "composite",
+    "per ",
+    "listed",
+    "roster",
+    "athletics",
+    "beat",
+    "media",
+    "verified",
+    "unconfirmed",
+    "star",
+)
+
+
+def _is_absent(segment: str) -> bool:
+    """True when a segment records the absence of a value rather than a value."""
+    text = mdtable.strip_markdown(segment).strip(" .")
+    if not text:
+        return True
+    # A segment that is exactly a gap marker — "—", "N/A", "Not listed".
+    if mdtable.clean(segment) is None:
+        return True
+    if _LABEL_ONLY_RE.match(text):
+        return True
+    return bool(_ABSENT_SEGMENT_RE.match(text))
+
+
+def _classify_parenthetical(text: str) -> str:
+    """Is a trailing "(...)" a previous school, or a note about the row?"""
+    lowered = text.lower()
+    if any(marker in lowered for marker in _NOTE_MARKERS):
+        return "note"
+    if ";" in text or lowered.count(" ") > 8:
+        return "note"
+    if mdtable.clean(text) is None:
+        return "note"
+    return "previous"
 
 
 def _is_place(segment: str) -> bool:
@@ -280,7 +357,11 @@ def _unmask(text: str, stash: list[str]) -> str:
     return re.sub(r"\x00(\d+)\x00", lambda m: stash[int(m.group(1))], text).strip()
 
 
-def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
+def _parse_place(
+    cell: str | None,
+    header: str,
+    hometown_first: bool | None = None,
+) -> dict[str, str | None]:
     """Split a hometown / high-school cell into its parts.
 
     ``textutil.parse_hometown`` handles the common "HS / City, State (prev. X)"
@@ -295,6 +376,7 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
         "state": None,
         "hometown": None,
         "previous_schools": None,
+        "note": None,
         "raw": None,
     }
     raw = mdtable.clean(cell)
@@ -302,6 +384,7 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
         return empty
 
     previous: list[str] = []
+    early_notes: list[str] = []
     working = raw
 
     # "(prev. Georgia Tech // Anderson)" is explicit wherever it appears.
@@ -317,9 +400,17 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
         trailing = re.search(r"\x00(\d+)\x00\s*$", masked)
         if trailing:
             inner = stash[int(trailing.group(1))][1:-1].strip()
-            if inner:
-                previous.append(" // ".join(part.strip() for part in inner.split("/") if part.strip()))
-            masked = masked[: trailing.start()].strip(" ;,/")
+            # The column header promising a previous school does not make every
+            # trailing parenthetical one: "(*247 composite ratings exist ...)"
+            # is a note about the star column, not a school.
+            if inner and _classify_parenthetical(inner) == "previous":
+                previous.append(
+                    " // ".join(part.strip() for part in inner.split("/") if part.strip())
+                )
+                masked = masked[: trailing.start()].strip(" ;,/")
+            elif inner:
+                early_notes.append(inner)
+                masked = masked[: trailing.start()].strip(" ;,/")
 
     segments = [_unmask(part, stash) for part in _SEGMENT_RE.split(masked) if part.strip()]
     segments = [segment.strip(" ,;") for segment in segments if segment.strip(" ,;")]
@@ -327,9 +418,35 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
     # "Prokick Australia / Not listed / Buninyong, VIC" both name a real place and
     # an explicitly absent one. Drop the absent segment rather than storing the
     # marker text, which would print as "Not listed" twice on the team page.
-    segments = [segment for segment in segments if mdtable.clean(segment) is not None]
+    segments = [segment for segment in segments if not _is_absent(segment)]
+
+    # A trailing "(...)" on a segment is never part of the place: it is the
+    # previous college the file's own format line promises ("Hometown / HS
+    # (Previous)"), or an editorial note. Leaving it attached puts "(Hinds CC)"
+    # inside a player's state.
+    notes: list[str] = list(early_notes)
+    peeled: list[str] = []
+    for segment in segments:
+        match = _TRAILING_PAREN_RE.search(segment)
+        if match and segment[: match.start()].strip():
+            inner = match.group(1).strip()
+            segment = segment[: match.start()].strip()
+            if inner:
+                if _classify_parenthetical(inner) == "previous":
+                    previous.append(inner)
+                else:
+                    notes.append(inner)
+        if segment:
+            peeled.append(segment)
+    segments = [segment for segment in peeled if not _is_absent(segment)]
+
     if not segments:
-        return {**empty, "raw": raw, "previous_schools": " // ".join(previous) or None}
+        return {
+            **empty,
+            "raw": raw,
+            "previous_schools": " // ".join(dict.fromkeys(previous)) or None,
+            "note": "; ".join(notes) or None,
+        }
 
     places = [segment for segment in segments if _is_place(segment)]
     others = [segment for segment in segments if not _is_place(segment)]
@@ -346,15 +463,26 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
         high_school = others[0]
         # Extra college names trailing a "(prev ...)" column are transfers.
         leftovers = [segment for segment in others[1:] if segment not in {high_school}]
-        if header_declares_prev and segments.index(places[0]) < segments.index(others[0]):
-            # "Union, S.C. / FIU / Stetson": hometown first, colleges after.
+        if (
+            header_declares_prev
+            and len(others) > 1
+            and segments.index(places[0]) < segments.index(others[0])
+        ):
+            # "Union, S.C. / FIU / Stetson": hometown first, then colleges. With
+            # only one non-place segment there is nothing to spare — it is the
+            # high school, which is what "Hometown / HS (Previous)" promises.
             high_school = None
             leftovers = others
         if leftovers:
             previous.append(" // ".join(leftovers))
     else:
-        # Every segment reads the same way: trust the column header's order.
-        if _hometown_first(header):
+        # Every segment reads the same way, so orientation comes from what the
+        # rest of this table does — a per-row header fallback flips the handful
+        # of ambiguous rows against every neighbouring row in the same column.
+        first_is_hometown = (
+            hometown_first if hometown_first is not None else _hometown_first(header)
+        )
+        if first_is_hometown:
             hometown, high_school = segments[0], segments[1]
         else:
             high_school, hometown = segments[0], segments[1]
@@ -369,6 +497,7 @@ def _parse_place(cell: str | None, header: str) -> dict[str, str | None]:
             city = hometown.strip() or None
 
     return {
+        "note": "; ".join(notes) or None,
         "high_school": high_school or None,
         "city": city,
         "state": state,
@@ -503,6 +632,44 @@ def _row_markdown(cells: list[str]) -> str:
     return "|" + "|".join(cells) + "|"
 
 
+def _table_orientation(
+    table: mdtable.Table, index: int | None, header: str
+) -> bool | None:
+    """Does this table's place column write the hometown first?
+
+    Decided once for the whole column by counting the rows whose content is
+    unambiguous — a segment ending in a US state is a hometown. Three files
+    label the column "HS/Hometown" but write it hometown-first, so the header
+    alone is not to be trusted; but with no resolvable row, it is all there is.
+    """
+    if index is None:
+        return None
+    hometown_first = school_first = 0
+    for row in table.rows:
+        if index >= len(row):
+            continue
+        text = mdtable.clean(row[index])
+        if not text:
+            continue
+        masked, stash = _mask_parens(text)
+        segments = [
+            _unmask(part, stash).strip(" ,;")
+            for part in _SEGMENT_RE.split(masked)
+            if part.strip()
+        ]
+        segments = [segment for segment in segments if segment and not _is_absent(segment)]
+        if len(segments) != 2:
+            continue
+        first, second = _is_place(segments[0]), _is_place(segments[1])
+        if first and not second:
+            hometown_first += 1
+        elif second and not first:
+            school_first += 1
+    if hometown_first == school_first:
+        return None
+    return hometown_first > school_first
+
+
 def _parse_table(
     table: mdtable.Table,
     group: str,
@@ -519,6 +686,7 @@ def _parse_table(
         )
         return []
     place_header = table.headers[columns["hometown"]] if "hometown" in columns else ""
+    hometown_first = _table_orientation(table, columns.get("hometown"), place_header)
 
     players: list[dict] = []
     for row in table.rows:
@@ -534,9 +702,19 @@ def _parse_table(
             warnings.append(f"{label}: unparsable row (no name) in '{group}': {raw_row.strip()}")
             continue
 
-        place = _parse_place(cell("hometown"), place_header)
+        place = _parse_place(cell("hometown"), place_header, hometown_first)
         column_prev = mdtable.clean(cell("prev"))
-        previous = [value for value in (column_prev, place["previous_schools"]) if value]
+        # Akron, Colorado State and others put the transfer inside the class or
+        # notes cell instead of a column of its own: "R-Jr.; prev. College of
+        # San Mateo / Arizona".
+        inline_prev = [
+            textutil.parse_transfer(cell(field)) for field in ("class", "notes")
+        ]
+        previous = [
+            value
+            for value in (column_prev, place["previous_schools"], *inline_prev)
+            if value
+        ]
         class_code, class_raw = _parse_class(cell("class"))
 
         players.append(
@@ -556,7 +734,14 @@ def _parse_table(
                 "hometown": place["hometown"],
                 "previous_schools": " // ".join(dict.fromkeys(previous)) or None,
                 "on_official_roster": on_official,
-                "notes": mdtable.clean(cell("notes")),
+                "notes": "; ".join(
+                    dict.fromkeys(
+                        value
+                        for value in (mdtable.clean(cell("notes")), place["note"])
+                        if value
+                    )
+                )
+                or None,
                 "source_row_raw": raw_row,
             }
         )
