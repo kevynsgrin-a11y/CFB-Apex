@@ -2,58 +2,18 @@
   "conflicts": [
     {
       "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Rod Robinson II, Bam McReynolds, Ja'Vin Simpkins",
-        "01-rosters/aac-2026/uab.md": "Rod Robinson II, Bam McReynolds"
+        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Ty Mims, CJ Smith, EJ Reid",
+        "01-rosters/aac-2026/uab.md": "Ty Mims, CJ Smith, EJ Reid, CD Gill"
       },
-      "position": "RB",
+      "position": "WR",
       "unit": "offense"
     },
     {
       "per_source": {
         "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Antonio Ferguson, Gabriel Cline, Brayden Johnson",
-        "01-rosters/aac-2026/uab.md": "Antonio Ferguson, Gabriel Cline, Brayden Johnson, Scott Isacks"
+        "01-rosters/aac-2026/uab.md": "Antonio Ferguson, Gabriel Cline, Brayden Johnson, Scott Isacks, Sean Persson"
       },
       "position": "TE",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Payton Kirkland, Barry Walker, Keyon Cox",
-        "01-rosters/aac-2026/uab.md": "Payton Kirkland, Barry Walker"
-      },
-      "position": "LT",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Jaden Ligon, Donovan Lawrence, Kade Martin",
-        "01-rosters/aac-2026/uab.md": "Jaden Ligon, Donovan Lawrence"
-      },
-      "position": "LG",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Adam Lepkowski",
-        "01-rosters/aac-2026/uab.md": "Cooper Young"
-      },
-      "position": "C",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Calib Perez, Nelson Ramirez, Cooper Young",
-        "01-rosters/aac-2026/uab.md": "Calib Perez, Nelson Ramirez"
-      },
-      "position": "RG",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Barrett Maddox, Kyrik Mason, Samuel Riddy",
-        "01-rosters/aac-2026/uab.md": "Barrett Maddox, Kyrik Mason"
-      },
-      "position": "RT",
       "unit": "offense"
     },
     {
@@ -170,6 +130,14 @@
     },
     {
       "per_source": {
+        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Evan Bishop",
+        "01-rosters/aac-2026/uab.md": "Evan Bishop, Noah Medlen"
+      },
+      "position": "LS",
+      "unit": "special_teams"
+    },
+    {
+      "per_source": {
         "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Ja'Vin Simpkins",
         "01-rosters/aac-2026/uab.md": "Ja'Vin Simpkins, Bam McReynolds, Moll, Higgins, Ty Mims"
       },
@@ -219,33 +187,70 @@
         {
           "depth": [
             {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Springville",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Springville (BYU/West Virginia)",
+                  "hometown": "Springville, Utah",
+                  "jersey": null,
+                  "name": "Ryder Burton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Utah"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
               "co_listed": true,
               "players": [
                 {
-                  "city": "Lincoln (Georgia)",
+                  "city": "San Diego",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "San Diego, Calif.",
-                  "hometown": "Lincoln (Georgia)",
+                  "high_school": "Lincoln (Georgia)",
+                  "hometown": "San Diego, Calif.",
                   "jersey": null,
                   "name": "Rod Robinson II",
-                  "note": "Ja'Vin Simpkins | Not listed | R-Jr./R-Sr./R-Jr. — then Jayson Moll, JR Mosley, Hudson Higgins",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Calif."
                 },
                 {
-                  "city": "McGill-Toolen (South Alabama/ULM)",
+                  "city": "Mobile",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Mobile, Ala.",
-                  "hometown": "McGill-Toolen (South Alabama/ULM)",
+                  "high_school": "McGill-Toolen (South Alabama/ULM)",
+                  "hometown": "Mobile, Ala.",
                   "jersey": null,
                   "name": "Bam McReynolds",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
+                },
+                {
+                  "city": "Miami",
+                  "class": "RJR",
+                  "class_raw": "committee",
+                  "high_school": "Miami Northwestern (Coastal Carolina)",
+                  "hometown": "Miami, Fla.",
+                  "jersey": null,
+                  "name": "Ja'Vin Simpkins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla."
                 }
               ],
               "rank": 1
@@ -256,44 +261,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "St. Rita (Ohio State/Iowa)",
+                  "city": "Chicago",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Chicago, Ill.",
-                  "hometown": "St. Rita (Ohio State/Iowa)",
+                  "high_school": "St. Rita (Ohio State/Iowa)",
+                  "hometown": "Chicago, Ill.",
                   "jersey": null,
                   "name": "Kaleb Brown",
-                  "note": "KJ Daniels | Not listed | R-Sr./R-So. — Brayton, Muhammad, Wainwright",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "position": "WR"
-        },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
+                  "state": "Ill."
+                },
                 {
-                  "city": "Western (FL) (Gardner-Webb/ETSU)",
-                  "class": "GR",
-                  "class_raw": "Gr.",
-                  "high_school": "New Orleans, La.",
-                  "hometown": "Western (FL) (Gardner-Webb/ETSU)",
+                  "city": "Franklinton",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Bowling Green School (Oklahoma)",
+                  "hometown": "Franklinton, La.",
                   "jersey": null,
-                  "name": "AJ Johnson",
-                  "note": "Jailen Holmes | Not listed | Gr./R-Sr. — Lamar White, Brogan McNab",
+                  "name": "KJ Daniels",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "La."
                 }
               ],
               "rank": 1
@@ -307,39 +301,89 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Baldwin County (Southern Miss/Texas State)",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "Bay Minette, Ala.",
-                  "hometown": "Baldwin County (Southern Miss/Texas State)",
+                  "city": "New Orleans",
+                  "class": "GR",
+                  "class_raw": "Gr.",
+                  "high_school": "Western (FL) (Gardner-Webb/ETSU)",
+                  "hometown": "New Orleans, La.",
                   "jersey": null,
-                  "name": "Ty Mims",
-                  "note": "CD Gill | Not listed — Jayden Skelton",
+                  "name": "AJ Johnson",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "La."
                 },
                 {
-                  "city": "Mt. Dora (Georgia/Purdue/Memphis)",
+                  "city": "Huntsville",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Apopka, Fla.",
-                  "hometown": "Mt. Dora (Georgia/Purdue/Memphis)",
+                  "high_school": "Madison Academy (Independence/Oregon State)",
+                  "hometown": "Huntsville, Ala.",
+                  "jersey": null,
+                  "name": "Jailen Holmes",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Bay Minette",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Baldwin County (Southern Miss/Texas State)",
+                  "hometown": "Bay Minette, Ala.",
+                  "jersey": null,
+                  "name": "Ty Mims",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala."
+                },
+                {
+                  "city": "Apopka",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Mt. Dora (Georgia/Purdue/Memphis)",
+                  "hometown": "Apopka, Fla.",
                   "jersey": null,
                   "name": "CJ Smith",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
                 },
                 {
-                  "city": "Freedom (Wake Forest)",
+                  "city": "Woodbridge",
                   "class": "RSO",
                   "class_raw": "R-So.",
-                  "high_school": "Woodbridge, Va.",
-                  "hometown": "Freedom (Wake Forest)",
+                  "high_school": "Freedom (Wake Forest)",
+                  "hometown": "Woodbridge, Va.",
                   "jersey": null,
                   "name": "EJ Reid",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "CD Gill",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -357,39 +401,52 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Apopka (East Carolina/FIU)",
+                  "city": "Apopka",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Apopka, Fla.",
-                  "hometown": "Apopka (East Carolina/FIU)",
+                  "high_school": "Apopka (East Carolina/FIU)",
+                  "hometown": "Apopka, Fla.",
                   "jersey": null,
                   "name": "Antonio Ferguson",
-                  "note": "Sean Persson | Not listed",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
                 },
                 {
-                  "city": "Monsignor Pace",
+                  "city": "Miami",
                   "class": "RFR",
                   "class_raw": "R-Fr.",
-                  "high_school": "Miami, Fla.",
-                  "hometown": "Monsignor Pace",
+                  "high_school": "Monsignor Pace",
+                  "hometown": "Miami, Fla.",
                   "jersey": null,
                   "name": "Gabriel Cline",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
                 },
                 {
                   "city": "Elba",
                   "class": "RSO",
                   "class_raw": "R-So.",
-                  "high_school": "Elba, Ala.",
-                  "hometown": "Elba",
+                  "high_school": "Elba",
+                  "hometown": "Elba, Ala.",
                   "jersey": null,
                   "name": "Brayden Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Scott Isacks",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -402,7 +459,7 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Scott Isacks",
+                  "name": "Sean Persson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -420,30 +477,43 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Dr. Phillips (Texas/Colorado)",
+                  "city": "Orlando",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Orlando, Fla.",
-                  "hometown": "Dr. Phillips (Texas/Colorado)",
+                  "high_school": "Dr. Phillips (Texas/Colorado)",
+                  "hometown": "Orlando, Fla.",
                   "jersey": null,
                   "name": "Payton Kirkland",
-                  "note": "Keyon Cox | Not listed — Amos Talalele",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
                 },
                 {
-                  "city": "Crisp County",
+                  "city": "Cordele",
                   "class": "RSO",
                   "class_raw": "R-So.",
-                  "high_school": "Cordele, Ga.",
-                  "hometown": "Crisp County",
+                  "high_school": "Crisp County",
+                  "hometown": "Cordele, Ga.",
                   "jersey": null,
                   "name": "Barry Walker",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ga."
+                },
+                {
+                  "city": "Phenix City",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Central Phenix City (UCF/Oregon State)",
+                  "hometown": "Phenix City, Ala.",
+                  "jersey": null,
+                  "name": "Keyon Cox",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala."
                 }
               ],
               "rank": 1
@@ -460,27 +530,40 @@
                   "city": "LaGrange",
                   "class": "RSO",
                   "class_raw": "R-So.",
-                  "high_school": "LaGrange, Ga.",
-                  "hometown": "LaGrange",
+                  "high_school": "LaGrange",
+                  "hometown": "LaGrange, Ga.",
                   "jersey": null,
                   "name": "Jaden Ligon",
-                  "note": "Kade Martin | Not listed — Wes Wiggins",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ga."
                 },
                 {
                   "city": "Dacula",
                   "class": "SO",
                   "class_raw": "So.",
-                  "high_school": "Dacula, Ga.",
-                  "hometown": "Dacula",
+                  "high_school": "Dacula",
+                  "hometown": "Dacula, Ga.",
                   "jersey": null,
                   "name": "Donovan Lawrence",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ga."
+                },
+                {
+                  "city": "Trussville",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Hewitt-Trussville",
+                  "hometown": "Trussville, Ala.",
+                  "jersey": null,
+                  "name": "Kade Martin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala."
                 }
               ],
               "rank": 1
@@ -494,17 +577,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": "Downingtown West (West Virginia)",
-                  "class": "RJR",
-                  "class_raw": "R-Jr.",
-                  "high_school": "Downingtown, Pa.",
-                  "hometown": "Downingtown West (West Virginia)",
+                  "city": "Hoover",
+                  "class": "GR",
+                  "class_raw": "Gr.",
+                  "high_school": "Hoover",
+                  "hometown": "Hoover, Ala.",
                   "jersey": null,
-                  "name": "Cooper Young",
-                  "note": "Adam Lepkowski | Not listed | Gr. | OL | Hoover HS — Aidan Platt",
+                  "name": "Adam Lepkowski",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 }
               ],
               "rank": 1
@@ -518,30 +601,43 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Glenda Dawson (Duke)",
+                  "city": "Pearland",
                   "class": "GR",
                   "class_raw": "Gr.",
-                  "high_school": "Pearland, Texas",
-                  "hometown": "Glenda Dawson (Duke)",
+                  "high_school": "Glenda Dawson (Duke)",
+                  "hometown": "Pearland, Texas",
                   "jersey": null,
                   "name": "Calib Perez",
-                  "note": "Cooper Young | Not listed",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Texas"
                 },
                 {
-                  "city": "East Coweta (College of San Mateo)",
+                  "city": "Newnan",
                   "class": "SR",
                   "class_raw": "Sr.",
-                  "high_school": "Newnan, Ga.",
-                  "hometown": "East Coweta (College of San Mateo)",
+                  "high_school": "East Coweta (College of San Mateo)",
+                  "hometown": "Newnan, Ga.",
                   "jersey": null,
                   "name": "Nelson Ramirez",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ga."
+                },
+                {
+                  "city": "Downingtown",
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": "Downingtown West (West Virginia)",
+                  "hometown": "Downingtown, Pa.",
+                  "jersey": null,
+                  "name": "Cooper Young",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Pa."
                 }
               ],
               "rank": 1
@@ -555,30 +651,43 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Clinton (Vanderbilt/Marshall/Itawamba CC)",
+                  "city": "Clinton",
                   "class": "JR",
                   "class_raw": "Jr.",
-                  "high_school": "Clinton, Tenn.",
-                  "hometown": "Clinton (Vanderbilt/Marshall/Itawamba CC)",
+                  "high_school": "Clinton (Vanderbilt/Marshall/Itawamba CC)",
+                  "hometown": "Clinton, Tenn.",
                   "jersey": null,
                   "name": "Barrett Maddox",
-                  "note": "Samuel Riddy | Not listed",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Tenn."
                 },
                 {
-                  "city": "St. John's Catholic (Monmouth/Georgia State)",
+                  "city": "Columbia",
                   "class": "GR",
                   "class_raw": "Gr.",
-                  "high_school": "Columbia, Md.",
-                  "hometown": "St. John's Catholic (Monmouth/Georgia State)",
+                  "high_school": "St. John's Catholic (Monmouth/Georgia State)",
+                  "hometown": "Columbia, Md.",
                   "jersey": null,
                   "name": "Kyrik Mason",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Md."
+                },
+                {
+                  "city": "North Charleston",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "North Charleston (East Carolina)",
+                  "hometown": "North Charleston, S.C.",
+                  "jersey": null,
+                  "name": "Samuel Riddy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "S.C."
                 }
               ],
               "rank": 1
@@ -598,17 +707,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Federal Way (Eastern Washington)",
+                  "city": "Federal Way",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Federal Way, Wash.",
-                  "hometown": "Federal Way (Eastern Washington)",
+                  "high_school": "Federal Way (Eastern Washington)",
+                  "hometown": "Federal Way, Wash.",
                   "jersey": null,
                   "name": "Tylin Jackson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Wash."
                 },
                 {
                   "city": null,
@@ -624,17 +733,17 @@
                   "state": null
                 },
                 {
-                  "city": "C.H. Flowers (Morgan State)",
+                  "city": "Springdale",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Springdale, Md.",
-                  "hometown": "C.H. Flowers (Morgan State)",
+                  "high_school": "C.H. Flowers (Morgan State)",
+                  "hometown": "Springdale, Md.",
                   "jersey": null,
                   "name": "Blanche Gold",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Md."
                 },
                 {
                   "city": null,
@@ -661,30 +770,30 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Pender (Old Dominion)",
+                  "city": "Burgaw",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Burgaw, N.C.",
-                  "hometown": "Pender (Old Dominion)",
+                  "high_school": "Pender (Old Dominion)",
+                  "hometown": "Burgaw, N.C.",
                   "jersey": null,
                   "name": "Chris Spencer",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "N.C."
                 },
                 {
-                  "city": "Bullis School (Boston College)",
+                  "city": "Washington",
                   "class": "GR",
                   "class_raw": "Gr.",
-                  "high_school": "Washington, D.C.",
-                  "hometown": "Bullis School (Boston College)",
+                  "high_school": "Bullis School (Boston College)",
+                  "hometown": "Washington, D.C.",
                   "jersey": null,
                   "name": "Nigel Tate",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "D.C."
                 },
                 {
                   "city": null,
@@ -724,17 +833,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Portage Northern (Saginaw Valley/Youngstown State)",
+                  "city": "Portage",
                   "class": "GR",
                   "class_raw": "Gr.",
-                  "high_school": "Portage, Mich.",
-                  "hometown": "Portage Northern (Saginaw Valley/Youngstown State)",
+                  "high_school": "Portage Northern (Saginaw Valley/Youngstown State)",
+                  "hometown": "Portage, Mich.",
                   "jersey": null,
                   "name": "Cam Cunningham",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Mich."
                 },
                 {
                   "city": null,
@@ -787,17 +896,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "C.H. Flowers (Morgan State)",
+                  "city": "Springdale",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Springdale, Md.",
-                  "hometown": "C.H. Flowers (Morgan State)",
+                  "high_school": "C.H. Flowers (Morgan State)",
+                  "hometown": "Springdale, Md.",
                   "jersey": null,
                   "name": "Blanche Gold",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Md."
                 },
                 {
                   "city": null,
@@ -863,17 +972,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Manor (Oklahoma State)",
+                  "city": "Manor",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Manor, Texas",
-                  "hometown": "Manor (Oklahoma State)",
+                  "high_school": "Manor (Oklahoma State)",
+                  "hometown": "Manor, Texas",
                   "jersey": null,
                   "name": "Ike Esonwune",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Texas"
                 },
                 {
                   "city": null,
@@ -926,17 +1035,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "DeMatha Catholic (Md.) (Middle Tennessee)",
+                  "city": "York",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "York, Pa.",
-                  "hometown": "DeMatha Catholic (Md.) (Middle Tennessee)",
+                  "high_school": "DeMatha Catholic (Md.) (Middle Tennessee)",
+                  "hometown": "York, Pa.",
                   "jersey": null,
                   "name": "Muaaz Byard",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Pa."
                 },
                 {
                   "city": null,
@@ -989,17 +1098,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "The Benjamin School (Temple/Marshall)",
+                  "city": "West Palm Beach",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "West Palm Beach, Fla.",
-                  "hometown": "The Benjamin School (Temple/Marshall)",
+                  "high_school": "The Benjamin School (Temple/Marshall)",
+                  "hometown": "West Palm Beach, Fla.",
                   "jersey": null,
                   "name": "Darrell Sweeting",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
                 },
                 {
                   "city": null,
@@ -1052,17 +1161,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Saraland (Alabama A&M)",
+                  "city": "Saraland",
                   "class": "JR",
                   "class_raw": "Jr.",
-                  "high_school": "Saraland, Ala.",
-                  "hometown": "Saraland (Alabama A&M)",
+                  "high_school": "Saraland (Alabama A&M)",
+                  "hometown": "Saraland, Ala.",
                   "jersey": null,
                   "name": "Delvon Gulley",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 },
                 {
                   "city": null,
@@ -1102,17 +1211,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Edison (Sacramento State)",
+                  "city": "Stockton",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Stockton, Calif.",
-                  "hometown": "Edison (Sacramento State)",
+                  "high_school": "Edison (Sacramento State)",
+                  "hometown": "Stockton, Calif.",
                   "jersey": null,
                   "name": "Anta'Veon McKenzie",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Calif."
                 },
                 {
                   "city": null,
@@ -1152,17 +1261,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "East Valley (Idaho/Montana)",
+                  "city": "Spokane",
                   "class": "JR",
                   "class_raw": "Jr.",
-                  "high_school": "Spokane, Wash.",
-                  "hometown": "East Valley (Idaho/Montana)",
+                  "high_school": "East Valley (Idaho/Montana)",
+                  "hometown": "Spokane, Wash.",
                   "jersey": null,
                   "name": "Diezel Wilkinson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Wash."
                 },
                 {
                   "city": null,
@@ -1215,17 +1324,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Cordova (Harding/Memphis)",
+                  "city": "Cordova",
                   "class": "RSR",
                   "class_raw": "R-Sr.",
-                  "high_school": "Cordova, Tenn.",
-                  "hometown": "Cordova (Harding/Memphis)",
+                  "high_school": "Cordova (Harding/Memphis)",
+                  "hometown": "Cordova, Tenn.",
                   "jersey": null,
                   "name": "Jeremiah Jordan",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Tenn."
                 },
                 {
                   "city": null,
@@ -1271,30 +1380,30 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Davidson",
+                  "city": "Mobile",
                   "class": "SR",
                   "class_raw": "Sr.",
-                  "high_school": "Mobile, Ala.",
-                  "hometown": "Davidson",
+                  "high_school": "Davidson",
+                  "hometown": "Mobile, Ala.",
                   "jersey": null,
                   "name": "Jonah Delange",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 },
                 {
-                  "city": "Vestavia Hills",
+                  "city": "Birmingham",
                   "class": "SO",
                   "class_raw": "So.",
-                  "high_school": "Birmingham, Ala.",
-                  "hometown": "Vestavia Hills",
+                  "high_school": "Vestavia Hills",
+                  "hometown": "Birmingham, Ala.",
                   "jersey": null,
                   "name": "Owen Simpson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 }
               ],
               "rank": 1
@@ -1308,30 +1417,30 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Vestavia Hills",
+                  "city": "Birmingham",
                   "class": "SO",
                   "class_raw": "So.",
-                  "high_school": "Birmingham, Ala.",
-                  "hometown": "Vestavia Hills",
+                  "high_school": "Vestavia Hills",
+                  "hometown": "Birmingham, Ala.",
                   "jersey": null,
                   "name": "Owen Simpson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 },
                 {
-                  "city": "Davidson",
+                  "city": "Mobile",
                   "class": "SR",
                   "class_raw": "Sr.",
-                  "high_school": "Mobile, Ala.",
-                  "hometown": "Davidson",
+                  "high_school": "Davidson",
+                  "hometown": "Mobile, Ala.",
                   "jersey": null,
                   "name": "Jonah Delange",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 }
               ],
               "rank": 1
@@ -1345,17 +1454,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Ascension Episcopal (LSU)",
+                  "city": "Lafayette",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Lafayette, La.",
-                  "hometown": "Ascension Episcopal (LSU)",
+                  "high_school": "Ascension Episcopal (LSU)",
+                  "hometown": "Lafayette, La.",
                   "jersey": null,
                   "name": "Badger Hargett",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "La."
                 },
                 {
                   "city": null,
@@ -1392,17 +1501,30 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "Spain Park (Jacksonville State)",
+                  "city": "Hoover",
                   "class": "RJR",
                   "class_raw": "athletics",
-                  "high_school": "Hoover, Ala.",
-                  "hometown": "Spain Park (Jacksonville State)",
+                  "high_school": "Spain Park (Jacksonville State)",
+                  "hometown": "Hoover, Ala.",
                   "jersey": 50,
                   "name": "Evan Bishop",
-                  "note": "Noah Medlen — notes ST chart printed Bishop as #46",
+                  "note": "notes ST chart printed Bishop as #46 (conflict with P Straw #46)",
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ala."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Noah Medlen",
+                  "note": null,
                   "previous_schools": null,
                   "stars": null,
                   "state": null
@@ -1419,17 +1541,17 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Miami Northwestern (Coastal Carolina)",
+                  "city": "Miami",
                   "class": "RJR",
                   "class_raw": "R-Jr.",
-                  "high_school": "Miami, Fla.",
-                  "hometown": "Miami Northwestern (Coastal Carolina)",
+                  "high_school": "Miami Northwestern (Coastal Carolina)",
+                  "hometown": "Miami, Fla.",
                   "jersey": null,
                   "name": "Ja'Vin Simpkins",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
                 },
                 {
                   "city": null,
@@ -1498,14 +1620,14 @@
                   "city": "Saraland",
                   "class": "RFR",
                   "class_raw": "R-Fr.",
-                  "high_school": "Saraland, Ala.",
-                  "hometown": "Saraland",
+                  "high_school": "Saraland",
+                  "hometown": "Saraland, Ala.",
                   "jersey": null,
                   "name": "CD Gill",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ala."
                 },
                 {
                   "city": null,

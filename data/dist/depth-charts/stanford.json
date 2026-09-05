@@ -1,46 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/acc-2026/01-starter-depth-charts-summary.md": "Jordan Onovughe",
-        "01-rosters/acc-2026/stanford.md": "Shaw INJ)"
-      },
-      "position": "WR-X",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/acc-2026/01-starter-depth-charts-summary.md": "Kahlil House",
-        "01-rosters/acc-2026/stanford.md": "Prongos INJ)"
-      },
-      "position": "LT",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/acc-2026/01-starter-depth-charts-summary.md": "Ziron Brown",
-        "01-rosters/acc-2026/stanford.md": "Fattig INJ)"
-      },
-      "position": "LG",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/acc-2026/01-starter-depth-charts-summary.md": "Josh Williams",
-        "01-rosters/acc-2026/stanford.md": "Pale INJ)"
-      },
-      "position": "RG",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/acc-2026/01-starter-depth-charts-summary.md": "Cam Richardson",
-        "01-rosters/acc-2026/stanford.md": "Morris INJ)"
-      },
-      "position": "LCB",
-      "unit": "defense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -56,8 +15,8 @@
     ]
   },
   "schemes": {
-    "defense": null,
-    "offense": null,
+    "defense": "multiple 3-4",
+    "offense": "pro-style",
     "special_teams": null
   },
   "status": "PROJECTED",
@@ -78,17 +37,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Pomona",
+                  "class": "SR",
+                  "class_raw": "Ourlads 8/29; Shaw INJ",
+                  "high_school": "Mater Dei",
+                  "hometown": "Pomona, Calif.",
                   "jersey": null,
-                  "name": "Shaw INJ)",
-                  "note": "Jordan Onovughe (Ourlads 8/29",
-                  "previous_schools": null,
+                  "name": "Jordan Onovughe",
+                  "note": null,
+                  "previous_schools": "Colorado",
                   "stars": null,
-                  "state": null
+                  "state": "Calif."
                 }
               ],
               "rank": 1
@@ -202,6 +161,25 @@
               "co_listed": false,
               "players": [
                 {
+                  "city": "New York City",
+                  "class": "SO",
+                  "class_raw": "Ourlads 8/29; High/Brown injured or rotated",
+                  "high_school": "The Hun School of Princeton",
+                  "hometown": "New York City, N.Y. ; Not listed",
+                  "jersey": null,
+                  "name": "Liam Thorpe",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.Y. ; Not listed"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": false,
+              "players": [
+                {
                   "city": null,
                   "class": null,
                   "class_raw": null,
@@ -245,17 +223,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Warner Robins",
+                  "class": "JR",
+                  "class_raw": "Ourlads; Prongos INJ",
+                  "high_school": "Houston County",
+                  "hometown": "Warner Robins, Ga. ; Not listed",
                   "jersey": null,
-                  "name": "Prongos INJ)",
-                  "note": "Kahlil House (Ourlads; media Week 1 listed Niki Prongos",
+                  "name": "Kahlil House",
+                  "note": "media Week 1 listed Niki Prongos",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ga. ; Not listed"
                 }
               ],
               "rank": 1
@@ -288,17 +266,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Waveland",
+                  "class": "JR",
+                  "class_raw": "Ourlads; Fattig INJ",
+                  "high_school": "Bay",
+                  "hometown": "Waveland, Miss. ; Not listed",
                   "jersey": null,
-                  "name": "Fattig INJ)",
-                  "note": "Ziron Brown (Ourlads; media Week 1 listed Josh Williams",
+                  "name": "Ziron Brown",
+                  "note": "media Week 1 listed Josh Williams",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Miss. ; Not listed"
                 }
               ],
               "rank": 1
@@ -374,17 +352,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Radnor",
+                  "class": "SO",
+                  "class_raw": "Ourlads; Pale INJ",
+                  "high_school": "The Haverford School",
+                  "hometown": "Radnor, Pa. ; Not listed",
                   "jersey": null,
-                  "name": "Pale INJ)",
-                  "note": "Josh Williams (Ourlads; media Week 1 listed Simione Pale",
+                  "name": "Josh Williams",
+                  "note": "media Week 1 listed Simione Pale",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Pa. ; Not listed"
                 }
               ],
               "rank": 1
@@ -654,7 +632,7 @@
           "position": "RB"
         }
       ],
-      "scheme": null,
+      "scheme": "pro-style",
       "unit": "offense"
     },
     {
@@ -1099,17 +1077,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Irvington",
+                  "class": "JR",
+                  "class_raw": "Ourlads; Morris INJ",
+                  "high_school": "Irvington",
+                  "hometown": "Irvington, N.J. ; Not listed",
                   "jersey": null,
-                  "name": "Morris INJ)",
-                  "note": "Cam Richardson (Ourlads; media listed Aaron Morris",
+                  "name": "Cam Richardson",
+                  "note": "media listed Aaron Morris",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "N.J. ; Not listed"
                 }
               ],
               "rank": 1
@@ -1385,7 +1363,7 @@
           "position": "NB"
         }
       ],
-      "scheme": null,
+      "scheme": "multiple 3-4",
       "unit": "defense"
     },
     {

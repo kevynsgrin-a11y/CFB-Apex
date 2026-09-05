@@ -81,7 +81,10 @@ def _depth_rank(header: str) -> int | None:
     # is commentary.
     if text in _NON_DEPTH_HEADERS:
         return None
-    words = set(text.split())
+    words = text.split()
+    if words and words[0] in {"notes", "note", "status", "source", "comment", "chart"}:
+        return None
+    words = set(words)
     has_first = any(word in text for word in _FIRST_WORDS)
     has_second = any(word in text for word in _SECOND_WORDS)
 
@@ -117,19 +120,60 @@ _NOT_A_SCHEME = {
 }
 
 
+#: Vocabulary that actually names a scheme. Recognising schemes by an allowlist
+#: rather than by excluding known provenance words is the only way to keep
+#: "Ourlads (unofficial; updated 09/03/2026)" and "Official Week 1" out: the set
+#: of things a heading's parenthetical might say is open-ended, the set of
+#: scheme names is not.
+_SCHEME_VOCABULARY = (
+    "air raid", "spread", "pro-style", "pro style", "pro spread", "west coast",
+    "triple option", "flexbone", "wing-t", "wing t", "gun option", "option",
+    "run and shoot", "run-and-shoot", "pistol", "veer", "tempo", "up-tempo",
+    "smashmouth", "multiple", "rpo", "under center", "shotgun", "two-back",
+    "power", "zone", "nickel", "dime", "bear", "tite", "odd stack", "even front",
+    "3-3-5", "3-4", "4-2-5", "4-3", "4-4", "2-4-5", "5-2", "3-3", "4-2", "3-5",
+)
+_FRONT_RE = re.compile(r"\b\d-\d(?:-\d)?\b")
+
+
 def _scheme(title: str) -> str | None:
-    """Scheme label from a unit heading, ignoring provenance parentheticals."""
+    """Scheme label from a unit heading, or None if it names only provenance."""
     label = textutil.scheme_from_heading(title)
     if not label:
         return None
-    lowered = label.lower().strip()
-    if lowered in _NOT_A_SCHEME or lowered.endswith("starters"):
+    label = label.replace("–", "-").replace("—", "-").strip(" -")
+    lowered = label.lower()
+    if lowered.startswith("not listed"):
         return None
-    # "Spread — Ourlads projected" keeps only the scheme half; a heading that is
-    # nothing but provenance keeps nothing.
-    if all(word.strip(" -—") in _NOT_A_SCHEME for word in lowered.split()):
+    if not (_FRONT_RE.search(lowered) or any(word in lowered for word in _SCHEME_VOCABULARY)):
         return None
-    return label
+    # "Multiple — Ourlads PROJECTED" keeps the scheme half only, and an
+    # unbalanced "(per Ourlads framing" tail is a fragment of the heading, not
+    # part of the scheme's name.
+    label = re.split(r"\s+[-]\s+", label)[0].strip()
+    if label.count("(") != label.count(")"):
+        label = label.split("(")[0].strip()
+    return label.strip(" .,;") or None
+
+
+def _scheme_from_body(body: str) -> dict[str, str]:
+    """Schemes stated on a "Scheme notes:" line rather than in the heading."""
+    out: dict[str, str] = {}
+    for line in body.splitlines():
+        text = mdtable.strip_markdown(line)
+        if "scheme" not in text.lower() or ":" not in text:
+            continue
+        _, _, tail = text.partition(":")
+        for chunk in tail.split(";"):
+            chunk = chunk.strip()
+            match = re.match(r"^(offense|defense)\b[:\s]*(.+)$", chunk, re.IGNORECASE)
+            if not match:
+                continue
+            side = match.group(1).lower()
+            value = _scheme(f"x ({match.group(2).strip()})")
+            if value and side not in out:
+                out[side] = value
+    return out
 
 
 def _unit_of(title: str) -> str | None:
@@ -181,6 +225,9 @@ def _name_key(name: str) -> str:
     """
     # A quoted nickname is present in one source and absent in the other.
     text = re.sub(r"[\"“”'‘’]([^\"“”'‘’]{1,20})[\"“”'‘’]", " ", name.lower())
+    # One source writes "David McComb (R-Fr.; TR Kansas)" where the other writes
+    # "David McComb"; the annotation must not make them different people.
+    text = _PAREN_ANY_RE.sub(" ", text)
     text = _JERSEY_RE.sub(" ", text)
     text = _NAME_NOISE_RE.sub(" ", text)
     tokens = [
@@ -197,6 +244,7 @@ def _player(
     stars: str | None = None,
     class_year: str | None = None,
     place: str | None = None,
+    hometown_first: bool = False,
     note: str | None = None,
 ) -> dict:
     """One depth-chart entry, with any trailing "(Jr./TR)" kept as the class."""
@@ -222,7 +270,7 @@ def _player(
     cleaned = re.sub(r"\s+", " ", _PAREN_ANY_RE.sub(" ", cleaned)).strip(" ,;")
     raw_class = class_year or inline_class
     code, raw = textutil.parse_class_year(raw_class)
-    hometown = textutil.parse_hometown(place)
+    hometown = textutil.parse_hometown(place, hometown_first=hometown_first)
     return {
         "name": cleaned,
         "jersey": jersey,
@@ -249,7 +297,7 @@ _PLAYER_SPLIT_RE = re.compile(
 #: "**OR**" is the separator wearing emphasis. Normalising it before anything
 #: else keeps the split from eating the closing "**" of the bold run in front
 #: of it, which would leave that run unclosed and its text stuck in a name.
-_BOLD_OR_RE = re.compile(r"\*\*\s*OR\s*\*\*", re.IGNORECASE)
+_BOLD_OR_RE = re.compile(r"\*{1,2}\s*OR\s*\*{1,2}", re.IGNORECASE)
 
 _SEPARATOR_PROBE_RE = re.compile(r"\bOR\b|;|/", re.IGNORECASE)
 _JERSEY_ONLY_RE = re.compile(r"^#\s*\d{1,2}$")
@@ -289,6 +337,36 @@ _COMMA_SPLIT_RE = re.compile(r",\s+(?!\s*(?:Jr|Sr|II|III|IV|V)\b)")
 _NAME_PARTICLES = {"de", "la", "van", "von", "del", "da", "st", "jr", "sr", "ii", "iii", "iv", "v"}
 
 
+def _split_outside_parens(text: str, pattern: re.Pattern[str]) -> list[str]:
+    """Split on ``pattern``, ignoring matches inside parentheses or brackets.
+
+    "David McComb (R-Fr.; TR Kansas)" carries a semicolon and "Elijah Otieno
+    (Fr. / 3★)" a slash — both inside the annotation, neither a boundary
+    between players. Splitting through them produced names like ")".
+    """
+    depth = 0
+    spans: list[tuple[int, int]] = []
+    for index, char in enumerate(text):
+        if char in "([":
+            depth += 1
+        elif char in ")]":
+            depth = max(0, depth - 1)
+        elif depth == 0:
+            continue
+        spans.append((index, depth))
+    protected = {index for index, depth in spans if depth > 0}
+
+    parts: list[str] = []
+    last = 0
+    for match in pattern.finditer(text):
+        if any(index in protected for index in range(match.start(), match.end())):
+            continue
+        parts.append(text[last : match.start()])
+        last = match.end()
+    parts.append(text[last:])
+    return parts
+
+
 def _looks_like_name(text: str) -> bool:
     text = _PAREN_ANY_RE.sub(" ", mdtable.strip_markdown(text))
     # A leading jersey number is part of the cell's formatting, not the name.
@@ -310,7 +388,11 @@ def _looks_like_name(text: str) -> bool:
 
 
 def _comma_split(piece: str) -> list[str]:
-    parts = [part.strip() for part in _COMMA_SPLIT_RE.split(piece) if part.strip()]
+    parts = [
+        part.strip()
+        for part in _split_outside_parens(piece, _COMMA_SPLIT_RE)
+        if part.strip()
+    ]
     if len(parts) < 2 or not all(_looks_like_name(part) for part in parts):
         return [piece]
     return parts
@@ -328,7 +410,8 @@ def _jersey_split(piece: str) -> list[str]:
 #: Emphasis in a depth cell is an annotation about the player, never the name:
 #: "#84 AJ Miller (R-So.) **co-starter**", "Mitch Griffis (#12) **OFFICIAL
 #: Week 1 starter** OR Emory Williams".
-_BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
+#: Emphasis, bold or italic — the files use both for the same purposes.
+_BOLD_RE = re.compile(r"\*{1,2}([^*]+)\*{1,2}")
 _STAR_RATING_RE = re.compile(r"(?:★\s*\d|\d\s*★)")
 
 
@@ -346,11 +429,16 @@ def _split_cell(cell: str | None) -> list[tuple[str, str | None]]:
     if not raw:
         return []
 
+    # UAB escapes a whole nested table row into the cell: "Ryder Burton \| Not
+    # listed \| R-Jr. \| QB \| Springville, Utah / Springville — then ...".
+    # Only the first field is a player; the rest is that row's other columns.
+    if "\\|" in raw or "|" in raw:
+        raw = raw.replace("\\|", "|").split("|")[0].strip()
     raw = _BOLD_OR_RE.sub(" OR ", raw)
     raw, notes = _strip_note_emphasis(raw)
 
     pieces: list[str] = []
-    for piece in _PLAYER_SPLIT_RE.split(raw):
+    for piece in _split_outside_parens(raw, _PLAYER_SPLIT_RE):
         piece = piece.strip()
         if not piece:
             continue
@@ -359,6 +447,13 @@ def _split_cell(cell: str | None) -> list[tuple[str, str | None]]:
 
     out: list[tuple[str, str | None]] = []
     for piece in pieces:
+        # "JC French IV — OFFICIAL starter": what follows a spaced dash is a
+        # remark about the player, not part of his name.
+        dash = re.split(r"\s+[—–]\s+", piece, maxsplit=1)
+        if len(dash) == 2 and dash[0].strip():
+            piece = dash[0].strip()
+            if dash[1].strip():
+                notes.append(mdtable.strip_markdown(dash[1]).strip())
         name = _STAR_RATING_RE.sub(" ", piece)
         name = mdtable.strip_markdown(name)
         name = name.strip(" -—–,;")
@@ -395,21 +490,34 @@ def _team_file_chart(text: str, source: str) -> dict:
 
     units: list[dict] = []
     schemes: dict[str, str | None] = {}
+    unparsed: list[str] = []
+    body_schemes = _scheme_from_body(section.body)
     for sub in section.subsections(3):
         unit = _unit_of(sub.title)
         if unit is None:
             continue
-        scheme = _scheme(sub.title)
+        scheme = _scheme(sub.title) or body_schemes.get(unit)
         schemes.setdefault(unit, scheme)
         positions: list[dict] = []
         for table in sub.tables():
             if not table.headers or table.headers[0].lower() not in {"pos", "position"}:
                 continue
+            # A depth column's rank is whatever number its header states; when
+            # it states none ("Starter | Backup | Next"), it is the column's
+            # position among the depth columns. Reading "Next" as a synonym for
+            # "Backup" published third-stringers as second-stringers.
             depth_columns: list[tuple[str, int]] = []
+            position_counter = 0
             for header in table.headers[1:]:
                 rank = _depth_rank(header)
-                if rank is not None:
-                    depth_columns.append((header, rank))
+                if rank is None:
+                    continue
+                position_counter += 1
+                explicit = _HEADER_NUMBER_RE.search(header.replace("★", " "))
+                if explicit and 1 <= int(explicit.group(1)) <= 6:
+                    depth_columns.append((header, int(explicit.group(1))))
+                else:
+                    depth_columns.append((header, position_counter))
             # Raw rows, so a bolded annotation stays distinguishable from a name.
             for raw_record in table.raw_records():
                 position = mdtable.clean(raw_record.get(table.headers[0]))
@@ -420,6 +528,13 @@ def _team_file_chart(text: str, source: str) -> dict:
                     cell = raw_record.get(header)
                     entries = _split_cell(cell)
                     if not entries:
+                        # A cell with text but no player is either a recorded
+                        # gap or something this parser did not understand; say
+                        # which rather than dropping it silently.
+                        if mdtable.clean(cell) is not None:
+                            unparsed.append(
+                                f"{position} / {header}: {mdtable.clean(cell)}"
+                            )
                         continue
                     depth.append(
                         {
@@ -439,6 +554,7 @@ def _team_file_chart(text: str, source: str) -> dict:
         "units": units,
         "schemes": schemes,
         "status": textutil.status_from_text(section.body),
+        "unparsed": unparsed,
         "injury_notes": [
             mdtable.strip_markdown(match)
             for match in _INJ_RE.findall(text)
@@ -454,6 +570,37 @@ def _team_file_chart(text: str, source: str) -> dict:
 # --------------------------------------------------------------------------
 # Conference summary: enriched starters, plus status and caveat
 # --------------------------------------------------------------------------
+
+
+_COMMA_RE = re.compile(r",")
+
+
+def _place_hometown_first(table: mdtable.Table, header: str | None) -> bool:
+    """Does this table's place column write the hometown before the school?
+
+    A hometown is "City, State"; a school name is not. Counting which half of
+    the cell carries the comma settles the orientation for the whole column,
+    which is what Coastal Carolina needs — its header says "High School /
+    Hometown" while every row is written the other way round.
+    """
+    if header is None:
+        return False
+    left = right = 0
+    for record in table.records():
+        text = record.get(header)
+        if not text:
+            continue
+        separator = next((sep for sep in (" / ", " — ", " – ") if sep in text), None)
+        if not separator:
+            continue
+        head, _, tail = text.partition(separator)
+        head_comma = bool(_COMMA_RE.search(head))
+        tail_comma = bool(_COMMA_RE.search(tail))
+        if head_comma and not tail_comma:
+            left += 1
+        elif tail_comma and not head_comma:
+            right += 1
+    return left > right
 
 
 def _summary_chart(section: mdtable.Section, source: str) -> dict:
@@ -493,6 +640,7 @@ def _summary_chart(section: mdtable.Section, source: str) -> dict:
                 ),
                 None,
             )
+            hometown_first = _place_hometown_first(table, place_header)
             raw_rows = table.raw_records()
             for index_row, record in enumerate(table.records()):
                 position = record.get("Pos")
@@ -511,6 +659,7 @@ def _summary_chart(section: mdtable.Section, source: str) -> dict:
                         stars=stars[index],
                         class_year=classes[index],
                         place=places[index],
+                        hometown_first=hometown_first,
                         note=entry_note,
                     )
                     for index, (name, entry_note) in enumerate(entries)
@@ -546,7 +695,7 @@ def _summary_chart(section: mdtable.Section, source: str) -> dict:
         "units": units,
         "schemes": schemes,
         "status": (
-            mdtable.strip_markdown(status_match.group(1)).upper() if status_match else None
+            mdtable.strip_markdown(status_match.group(1)) if status_match else None
         ),
         "caveat": mdtable.strip_markdown(caveat_match.group(1)) if caveat_match else None,
         "source": source,
@@ -662,6 +811,17 @@ def build(package_root: Path, out_dir: Path, registry) -> dict:
                     heading = numbered.group(1)
                 slug = registry.resolve(heading)
                 if slug is None:
+                    # Division headings are expected; anything else means a
+                    # team's enriched starters are being dropped silently.
+                    lowered = heading.lower()
+                    if not any(
+                        marker in lowered
+                        for marker in ("division", "depth chart", "consolidated")
+                    ):
+                        warnings.append(
+                            f"{summary_source}: unresolved section heading "
+                            f"{section.title!r} — its starters are not merged"
+                        )
                     continue
                 summaries[slug] = _summary_chart(section, summary_source)
         else:
@@ -683,6 +843,11 @@ def build(package_root: Path, out_dir: Path, registry) -> dict:
             if not units:
                 warnings.append(f"{slug}: no depth chart in either source")
                 continue
+
+            for entry in team_chart.get("unparsed", []):
+                warnings.append(
+                    f"{slug} ({team_source}): cell yielded no player -- {entry}"
+                )
 
             schemes = {
                 "offense": team_chart["schemes"].get("offense")

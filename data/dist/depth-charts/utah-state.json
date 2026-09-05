@@ -1,5 +1,14 @@
 {
-  "conflicts": [],
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/pac12-2026/01-starter-depth-charts-summary.md": "Kadin Lynch, Jimmy Liston",
+        "01-rosters/pac12-2026/utah-state.md": "Kadin Lynch"
+      },
+      "position": "C",
+      "unit": "offense"
+    }
+  ],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -16,7 +25,7 @@
   },
   "schemes": {
     "defense": null,
-    "offense": "Big Blue primary; conflicts noted",
+    "offense": null,
     "special_teams": null
   },
   "status": "PROJECTED",
@@ -114,7 +123,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "QB"
@@ -215,7 +224,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "RB"
@@ -276,7 +285,7 @@
                   "hometown": "Lynchburg, VA",
                   "jersey": null,
                   "name": "Eli Wood",
-                  "note": null,
+                  "note": "(Big Blue); (Ourlads/HERO alternate)",
                   "previous_schools": null,
                   "stars": null,
                   "state": "VA"
@@ -284,7 +293,7 @@
                 {
                   "city": "Sacramento",
                   "class": null,
-                  "class_raw": "Ourlads/HERO alternate",
+                  "class_raw": null,
                   "high_school": "Capital Christian HS",
                   "hometown": "Sacramento, CA",
                   "jersey": null,
@@ -346,7 +355,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-X"
@@ -364,7 +373,7 @@
                   "hometown": "Sacramento, CA",
                   "jersey": null,
                   "name": "Anthony Garcia",
-                  "note": null,
+                  "note": "(Big Blue); (HERO)",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "CA"
@@ -372,7 +381,7 @@
                 {
                   "city": "Nashville",
                   "class": null,
-                  "class_raw": "HERO",
+                  "class_raw": null,
                   "high_school": "East Nashville Magnet",
                   "hometown": "Nashville, TN",
                   "jersey": null,
@@ -434,7 +443,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-Y"
@@ -509,7 +518,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-Z / Slot"
@@ -583,7 +592,7 @@
                   "hometown": "Hinsdale, IL",
                   "jersey": null,
                   "name": "Jimmy Liston",
-                  "note": null,
+                  "note": "(Big Blue lists Liston at LT)",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "IL"
@@ -653,7 +662,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "LT"
@@ -728,7 +737,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "LG"
@@ -736,7 +745,7 @@
         {
           "depth": [
             {
-              "co_listed": true,
+              "co_listed": false,
               "players": [
                 {
                   "city": "Weaverville/Asheville",
@@ -746,23 +755,10 @@
                   "hometown": "Weaverville/Asheville, NC",
                   "jersey": null,
                   "name": "Kadin Lynch",
-                  "note": null,
+                  "note": "(Big Blue); Liston often at C); Jimmy Liston (Ourlads/HERO",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "NC"
-                },
-                {
-                  "city": "Hinsdale",
-                  "class": null,
-                  "class_raw": "Ourlads/HERO — Liston often at C",
-                  "high_school": "Fenwick HS",
-                  "hometown": "Hinsdale, IL",
-                  "jersey": null,
-                  "name": "Jimmy Liston",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": 3,
-                  "state": "IL"
                 }
               ],
               "rank": 1
@@ -816,7 +812,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "C"
@@ -891,7 +887,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "RG"
@@ -909,7 +905,7 @@
                   "hometown": "Salem Hills, UT",
                   "jersey": null,
                   "name": "Jackson Nelson",
-                  "note": null,
+                  "note": "(Big Blue)",
                   "previous_schools": null,
                   "stars": null,
                   "state": "UT"
@@ -966,7 +962,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "RT"
@@ -1047,7 +1043,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "NT (1-tech)"
@@ -1122,7 +1118,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "DT (3-tech)"
@@ -1197,7 +1193,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "DE"
@@ -1298,7 +1294,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WILL (OLB)"
@@ -1386,7 +1382,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "SAM (LB)"
@@ -1461,7 +1457,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "BUCK (LB)"
@@ -1549,7 +1545,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "MIKE (ILB)"
@@ -1567,7 +1563,7 @@
                   "hometown": "Houston, TX",
                   "jersey": null,
                   "name": "Markie Grant",
-                  "note": null,
+                  "note": "(Big Blue)",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "TX"
@@ -1637,7 +1633,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "CB (Field)"
@@ -1712,7 +1708,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "CB (Boundary)"
@@ -1774,7 +1770,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "Nickel"
@@ -1862,7 +1858,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "BS / Safety"
@@ -1880,7 +1876,7 @@
                   "hometown": "Fort Worth, TX",
                   "jersey": null,
                   "name": "David Kabongo",
-                  "note": null,
+                  "note": "(Big Blue)",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "TX"
@@ -1963,7 +1959,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "FS / Safety"

@@ -33,8 +33,8 @@
   },
   "schemes": {
     "defense": "4-2-5",
-    "offense": "team depth chart",
-    "special_teams": "team depth chart"
+    "offense": null,
+    "special_teams": null
   },
   "status": "OFFICIAL",
   "status_caveat": "Primary: Team-released unofficial depth chart ahead of Duke (OFFICIAL). Injury OR designations preserved from team chart / nola.com.",
@@ -306,7 +306,7 @@
               "rank": 1
             },
             {
-              "co_listed": true,
+              "co_listed": false,
               "players": [
                 {
                   "city": null,
@@ -316,20 +316,7 @@
                   "hometown": null,
                   "jersey": 8,
                   "name": "Bredell Richardson",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": null
-                },
-                {
-                  "city": null,
-                  "class": null,
-                  "class_raw": "Not listed on current athletics table as of research — gap",
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": null,
-                  "name": "Antwaun Parham",
-                  "note": null,
+                  "note": "gap); Antwaun Parham (Not listed on current athletics table as of research",
                   "previous_schools": null,
                   "stars": null,
                   "state": null
@@ -694,7 +681,7 @@
           "position": "RT"
         }
       ],
-      "scheme": "team depth chart",
+      "scheme": null,
       "unit": "offense"
     },
     {
@@ -1587,7 +1574,7 @@
           "position": "LS"
         }
       ],
-      "scheme": "team depth chart",
+      "scheme": null,
       "unit": "special_teams"
     }
   ]

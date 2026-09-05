@@ -206,6 +206,10 @@ MANUAL_ALIASES: dict[str, str] = {
     "miami florida": "miami-fl",
     "miami": "miami-fl",
     "miami oh": "miami-oh",
+    # Depth-chart summaries head their sections "<School> <Nickname>" without
+    # the state disambiguator the registry carries.
+    "miami hurricanes": "miami-fl",
+    "miami redhawks": "miami-oh",
     "miami ohio": "miami-oh",
     "louisiana monroe": "ulm",
     "ul monroe": "ulm",

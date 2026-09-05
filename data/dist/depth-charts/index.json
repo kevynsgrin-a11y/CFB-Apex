@@ -2,8 +2,8 @@
   "by_status": {
     "MIXED": 21,
     "OFFICIAL": 35,
-    "PROJECTED": 34,
-    "unstated": 2
+    "PROJECTED": 35,
+    "unstated": 1
   },
   "meta": {
     "as_of": "2026-09-05",
@@ -42,8 +42,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "defense_scheme": "Multiple 4-2-5",
+      "offense_scheme": "Multiple Up-Tempo",
       "positions": 29,
       "school": "Akron",
       "slug": "akron",
@@ -107,7 +107,7 @@
       "conference_slug": "sun-belt",
       "conflicts": 0,
       "defense_scheme": null,
-      "offense_scheme": null,
+      "offense_scheme": "Spread / Defense 4-3",
       "positions": 27,
       "school": "Arkansas State",
       "slug": "arkansas-state",
@@ -138,8 +138,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": "Ourlads 08/24/2026",
-      "offense_scheme": "Ourlads 08/24/2026",
+      "defense_scheme": "3-4",
+      "offense_scheme": "Multiple",
       "positions": 28,
       "school": "Ball State",
       "slug": "ball-state",
@@ -179,7 +179,7 @@
         "01-rosters/pac12-2026/boise-state.md",
         "01-rosters/pac12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 22,
+      "starters": 24,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
@@ -202,8 +202,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 2,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "defense_scheme": "Multiple",
+      "offense_scheme": "Multiple",
       "positions": 30,
       "school": "Bowling Green",
       "slug": "bowling-green",
@@ -218,8 +218,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": "unofficial",
-      "offense_scheme": "unofficial; updated 09/03/2026",
+      "defense_scheme": null,
+      "offense_scheme": null,
       "positions": 22,
       "school": "Buffalo",
       "slug": "buffalo",
@@ -266,8 +266,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": "unofficial",
-      "offense_scheme": "unofficial; updated 08/12/2026",
+      "defense_scheme": null,
+      "offense_scheme": null,
       "positions": 23,
       "school": "Central Michigan",
       "slug": "central-michigan",
@@ -307,7 +307,7 @@
         "01-rosters/big12-2026/cincinnati.md",
         "01-rosters/big12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 23,
+      "starters": 24,
       "status": "MIXED",
       "status_raw": "MIXED"
     },
@@ -330,8 +330,8 @@
     {
       "conference_slug": "sun-belt",
       "conflicts": 11,
-      "defense_scheme": "CCU game notes, Sep 5, 2026",
-      "offense_scheme": "CCU game notes, Sep 5, 2026",
+      "defense_scheme": null,
+      "offense_scheme": null,
       "positions": 27,
       "school": "Coastal Carolina",
       "slug": "coastal-carolina",
@@ -393,7 +393,7 @@
     },
     {
       "conference_slug": "aac",
-      "conflicts": 1,
+      "conflicts": 0,
       "defense_scheme": "4-2-5",
       "offense_scheme": "Spread",
       "positions": 26,
@@ -410,8 +410,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": "unofficial",
-      "offense_scheme": "unofficial; updated 09/02/2026",
+      "defense_scheme": null,
+      "offense_scheme": null,
       "positions": 22,
       "school": "Eastern Michigan",
       "slug": "eastern-michigan",
@@ -469,7 +469,7 @@
       ],
       "starters": 0,
       "status": "OFFICIAL",
-      "status_raw": "OFFICIAL (WITH DL GAP)"
+      "status_raw": "OFFICIAL (with DL gap)"
     },
     {
       "conference_slug": "sun-belt",
@@ -569,9 +569,9 @@
     },
     {
       "conference_slug": "sun-belt",
-      "conflicts": 6,
+      "conflicts": 0,
       "defense_scheme": "3-3-5 / multiple",
-      "offense_scheme": "JMU Sports News",
+      "offense_scheme": null,
       "positions": 22,
       "school": "James Madison",
       "slug": "james-madison",
@@ -579,7 +579,7 @@
         "01-rosters/sbc-2026/james-madison.md",
         "01-rosters/sbc-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 23,
+      "starters": 30,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
@@ -601,7 +601,7 @@
     },
     {
       "conference_slug": "big12",
-      "conflicts": 2,
+      "conflicts": 0,
       "defense_scheme": null,
       "offense_scheme": null,
       "positions": 22,
@@ -611,7 +611,7 @@
         "01-rosters/big12-2026/kansas-state.md",
         "01-rosters/big12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 31,
+      "starters": 33,
       "status": "OFFICIAL",
       "status_raw": "OFFICIAL"
     },
@@ -619,7 +619,7 @@
       "conference_slug": "mac",
       "conflicts": 8,
       "defense_scheme": "Projected 4-3",
-      "offense_scheme": null,
+      "offense_scheme": "Spread",
       "positions": 26,
       "school": "Kent State",
       "slug": "kent-state",
@@ -627,7 +627,7 @@
         "01-rosters/mac-2026/kent-state.md",
         "01-rosters/mac-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 26,
+      "starters": 34,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
@@ -635,7 +635,7 @@
       "conference_slug": "sun-belt",
       "conflicts": 0,
       "defense_scheme": null,
-      "offense_scheme": null,
+      "offense_scheme": "Multiple / Defense 3-4",
       "positions": 27,
       "school": "Louisiana",
       "slug": "louisiana",
@@ -651,7 +651,7 @@
       "conference_slug": "sun-belt",
       "conflicts": 0,
       "defense_scheme": null,
-      "offense_scheme": null,
+      "offense_scheme": "Air Raid / Defense 3-3-5",
       "positions": 27,
       "school": "Louisiana Tech",
       "slug": "louisiana-tech",
@@ -666,8 +666,8 @@
     {
       "conference_slug": "acc",
       "conflicts": 0,
-      "defense_scheme": "SI Cards On SI",
-      "offense_scheme": "SI Cards On SI, Aug 31, 2026",
+      "defense_scheme": null,
+      "offense_scheme": null,
       "positions": 22,
       "school": "Louisville",
       "slug": "louisville",
@@ -681,7 +681,7 @@
     },
     {
       "conference_slug": "sun-belt",
-      "conflicts": 1,
+      "conflicts": 0,
       "defense_scheme": "Multiple",
       "offense_scheme": "Spread",
       "positions": 22,
@@ -714,23 +714,24 @@
     {
       "conference_slug": "acc",
       "conflicts": 0,
-      "defense_scheme": "Canes On SI",
-      "offense_scheme": "Canes On SI, Sep 3, 2026",
+      "defense_scheme": null,
+      "offense_scheme": null,
       "positions": 22,
       "school": "Miami (FL)",
       "slug": "miami-fl",
       "sources": [
-        "01-rosters/acc-2026/miami-fl.md"
+        "01-rosters/acc-2026/miami-fl.md",
+        "01-rosters/acc-2026/01-starter-depth-charts-summary.md"
       ],
       "starters": 22,
-      "status": null,
-      "status_raw": null
+      "status": "PROJECTED",
+      "status_raw": "PROJECTED"
     },
     {
       "conference_slug": "mac",
-      "conflicts": 8,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "conflicts": 0,
+      "defense_scheme": "Multiple",
+      "offense_scheme": "Multiple",
       "positions": 28,
       "school": "Miami (OH)",
       "slug": "miami-oh",
@@ -872,9 +873,9 @@
     },
     {
       "conference_slug": "mac",
-      "conflicts": 15,
-      "defense_scheme": "Official Week 1",
-      "offense_scheme": "Official Week 1",
+      "conflicts": 4,
+      "defense_scheme": "4-2-5",
+      "offense_scheme": "Multiple / spread option",
       "positions": 28,
       "school": "Ohio",
       "slug": "ohio",
@@ -882,13 +883,13 @@
         "01-rosters/mac-2026/ohio.md",
         "01-rosters/mac-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 31,
+      "starters": 33,
       "status": "OFFICIAL",
       "status_raw": "OFFICIAL"
     },
     {
       "conference_slug": "big12",
-      "conflicts": 15,
+      "conflicts": 0,
       "defense_scheme": null,
       "offense_scheme": null,
       "positions": 30,
@@ -922,7 +923,7 @@
       "conference_slug": "pac12",
       "conflicts": 2,
       "defense_scheme": "Multiple 4-2-5",
-      "offense_scheme": "projected unless noted",
+      "offense_scheme": null,
       "positions": 25,
       "school": "Oregon State",
       "slug": "oregon-state",
@@ -932,7 +933,7 @@
       ],
       "starters": 8,
       "status": "MIXED",
-      "status_raw": "MIXED (QB CONFIRMED; REMAINDER PROJECTED)"
+      "status_raw": "MIXED (QB confirmed; remainder projected)"
     },
     {
       "conference_slug": "acc",
@@ -986,7 +987,7 @@
       "conference_slug": "pac12",
       "conflicts": 0,
       "defense_scheme": "4-2-5 / multiple; SI preseason",
-      "offense_scheme": "SI opener / preseason",
+      "offense_scheme": null,
       "positions": 22,
       "school": "San Diego State",
       "slug": "san-diego-state",
@@ -994,13 +995,13 @@
         "01-rosters/pac12-2026/san-diego-state.md",
         "01-rosters/pac12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 19,
+      "starters": 22,
       "status": null,
       "status_raw": "MEDIA / OPENER"
     },
     {
       "conference_slug": "mountain-west",
-      "conflicts": 7,
+      "conflicts": 9,
       "defense_scheme": null,
       "offense_scheme": null,
       "positions": 24,
@@ -1010,7 +1011,7 @@
         "01-rosters/mw-2026/san-jose-state.md",
         "01-rosters/mw-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 29,
+      "starters": 33,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
@@ -1080,9 +1081,9 @@
     },
     {
       "conference_slug": "acc",
-      "conflicts": 5,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "conflicts": 0,
+      "defense_scheme": "multiple 3-4",
+      "offense_scheme": "pro-style",
       "positions": 30,
       "school": "Stanford",
       "slug": "stanford",
@@ -1090,15 +1091,15 @@
         "01-rosters/acc-2026/stanford.md",
         "01-rosters/acc-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 29,
+      "starters": 30,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
     {
       "conference_slug": "acc",
       "conflicts": 0,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "defense_scheme": "multiple 4-2-5",
+      "offense_scheme": "pro-style",
       "positions": 29,
       "school": "Syracuse",
       "slug": "syracuse",
@@ -1106,7 +1107,7 @@
         "01-rosters/acc-2026/syracuse.md",
         "01-rosters/acc-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 28,
+      "starters": 30,
       "status": "OFFICIAL",
       "status_raw": "OFFICIAL"
     },
@@ -1122,7 +1123,7 @@
         "01-rosters/big12-2026/tcu.md",
         "01-rosters/big12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 28,
+      "starters": 29,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
@@ -1154,15 +1155,15 @@
         "01-rosters/pac12-2026/texas-state.md",
         "01-rosters/pac12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 20,
+      "starters": 19,
       "status": "PROJECTED",
-      "status_raw": "PROJECTED (WEAKER CONFIDENCE)"
+      "status_raw": "PROJECTED (weaker confidence)"
     },
     {
       "conference_slug": "big12",
       "conflicts": 0,
       "defense_scheme": null,
-      "offense_scheme": "Avalanche-Journal camp chart",
+      "offense_scheme": null,
       "positions": 27,
       "school": "Texas Tech",
       "slug": "texas-tech",
@@ -1210,7 +1211,7 @@
       "conference_slug": "aac",
       "conflicts": 2,
       "defense_scheme": "4-2-5",
-      "offense_scheme": "team depth chart",
+      "offense_scheme": null,
       "positions": 30,
       "school": "Tulane",
       "slug": "tulane",
@@ -1240,17 +1241,17 @@
     },
     {
       "conference_slug": "aac",
-      "conflicts": 23,
+      "conflicts": 19,
       "defense_scheme": null,
       "offense_scheme": null,
-      "positions": 27,
+      "positions": 28,
       "school": "UAB",
       "slug": "uab",
       "sources": [
         "01-rosters/aac-2026/uab.md",
         "01-rosters/aac-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 79,
+      "starters": 90,
       "status": "OFFICIAL",
       "status_raw": "OFFICIAL"
     },
@@ -1289,8 +1290,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "defense_scheme": "4-3 / 4-2-5 with nickel",
+      "offense_scheme": "Multiple Pro",
       "positions": 28,
       "school": "UMass",
       "slug": "umass",
@@ -1314,7 +1315,7 @@
         "01-rosters/mw-2026/unlv.md",
         "01-rosters/mw-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 30,
+      "starters": 31,
       "status": "MIXED",
       "status_raw": "MIXED"
     },
@@ -1336,9 +1337,9 @@
     },
     {
       "conference_slug": "pac12",
-      "conflicts": 0,
+      "conflicts": 1,
       "defense_scheme": null,
-      "offense_scheme": "Big Blue primary; conflicts noted",
+      "offense_scheme": null,
       "positions": 24,
       "school": "Utah State",
       "slug": "utah-state",
@@ -1346,7 +1347,7 @@
         "01-rosters/pac12-2026/utah-state.md",
         "01-rosters/pac12-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 31,
+      "starters": 30,
       "status": "PROJECTED",
       "status_raw": "PROJECTED"
     },
@@ -1385,7 +1386,7 @@
     {
       "conference_slug": "acc",
       "conflicts": 0,
-      "defense_scheme": "OFFICIAL chart",
+      "defense_scheme": null,
       "offense_scheme": null,
       "positions": 29,
       "school": "Virginia",
@@ -1394,7 +1395,7 @@
         "01-rosters/acc-2026/virginia.md",
         "01-rosters/acc-2026/01-starter-depth-charts-summary.md"
       ],
-      "starters": 28,
+      "starters": 30,
       "status": "OFFICIAL",
       "status_raw": "OFFICIAL"
     },
@@ -1434,7 +1435,7 @@
       "conference_slug": "pac12",
       "conflicts": 0,
       "defense_scheme": "Spokesman-Review projection; 4-2-5",
-      "offense_scheme": "Spokesman-Review projection, Aug 31, 2026",
+      "offense_scheme": null,
       "positions": 22,
       "school": "Washington State",
       "slug": "washington-state",
@@ -1444,13 +1445,13 @@
       ],
       "starters": 22,
       "status": "MIXED",
-      "status_raw": "MIXED (QB CONFIRMED; REMAINDER PROJECTED)"
+      "status_raw": "MIXED (QB confirmed; remainder projected)"
     },
     {
       "conference_slug": "big12",
       "conflicts": 8,
       "defense_scheme": null,
-      "offense_scheme": "by position",
+      "offense_scheme": null,
       "positions": 22,
       "school": "West Virginia",
       "slug": "west-virginia",
@@ -1465,8 +1466,8 @@
     {
       "conference_slug": "mac",
       "conflicts": 0,
-      "defense_scheme": null,
-      "offense_scheme": null,
+      "defense_scheme": "4-3. Gold = 2026 transfer",
+      "offense_scheme": "Multiple",
       "positions": 28,
       "school": "Western Michigan",
       "slug": "western-michigan",
@@ -1544,8 +1545,8 @@
     "wisconsin"
   ],
   "totals": {
-    "conflicts": 137,
-    "starters": 2686,
+    "conflicts": 87,
+    "starters": 2731,
     "teams": 92
   }
 }

@@ -1,54 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "JC Evans, Camden Coleman",
-        "01-rosters/sbc-2026/james-madison.md": "Camden Coleman Ourlads"
-      },
-      "position": "QB",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "Evan Bushong, Tyler Brown",
-        "01-rosters/sbc-2026/james-madison.md": "Tyler Brown Ourlads LG"
-      },
-      "position": "LG",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "Tyler Brown, Evan Bushong",
-        "01-rosters/sbc-2026/james-madison.md": "Evan Bushong Ourlads"
-      },
-      "position": "RG",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "DJ Kelly, Damier Minkah",
-        "01-rosters/sbc-2026/james-madison.md": "Damier Minkah Ourlads RCB"
-      },
-      "position": "CB",
-      "unit": "defense"
-    },
-    {
-      "per_source": {
-        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "TJ McGill, Seth Gathers",
-        "01-rosters/sbc-2026/james-madison.md": "Seth Gathers Ourlads"
-      },
-      "position": "SS",
-      "unit": "defense"
-    },
-    {
-      "per_source": {
-        "01-rosters/sbc-2026/01-starter-depth-charts-summary.md": "Seth Gathers, Jayon Harvey, Javis Mynatt",
-        "01-rosters/sbc-2026/james-madison.md": "Seth Gathers, Javis Mynatt Ourlads"
-      },
-      "position": "FS",
-      "unit": "defense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -65,7 +16,7 @@
   },
   "schemes": {
     "defense": "3-3-5 / multiple",
-    "offense": "JMU Sports News",
+    "offense": null,
     "special_teams": null
   },
   "status": "PROJECTED",
@@ -83,20 +34,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Miami",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 7,
-                  "name": "Camden Coleman Ourlads",
-                  "note": "JC Evans beat",
+                  "class_raw": "3rd",
+                  "high_school": "Miami Central",
+                  "hometown": "Miami, Fla.",
+                  "jersey": 1,
+                  "name": "JC Evans",
+                  "note": "beat; Ourlads",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Fla."
+                },
+                {
+                  "city": "Winston-Salem",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Robert B. Glenn",
+                  "hometown": "Winston-Salem, N.C. (Richmond)",
+                  "jersey": 7,
+                  "name": "Camden Coleman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C. (Richmond)"
                 }
               ],
               "rank": 1
@@ -391,20 +355,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Harrisburg",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 56,
-                  "name": "Tyler Brown Ourlads LG",
-                  "note": "Evan Bushong beat",
+                  "class_raw": "3rd",
+                  "high_school": "Central Dauphin",
+                  "hometown": "Harrisburg, Pa.",
+                  "jersey": 73,
+                  "name": "Evan Bushong",
+                  "note": "beat; Ourlads LG",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Pa."
+                },
+                {
+                  "city": "Jackson",
+                  "class": null,
+                  "class_raw": "8th",
+                  "high_school": "St. Joseph Catholic",
+                  "hometown": "Jackson, Miss. (Colorado)",
+                  "jersey": 56,
+                  "name": "Tyler Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Miss. (Colorado)"
                 }
               ],
               "rank": 1
@@ -477,20 +454,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Jackson",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 73,
-                  "name": "Evan Bushong Ourlads",
-                  "note": "Tyler Brown beat",
+                  "class_raw": "8th",
+                  "high_school": "St. Joseph Catholic",
+                  "hometown": "Jackson, Miss. (Colorado)",
+                  "jersey": 56,
+                  "name": "Tyler Brown",
+                  "note": "beat; Ourlads",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Miss. (Colorado)"
+                },
+                {
+                  "city": "Harrisburg",
+                  "class": null,
+                  "class_raw": "3rd",
+                  "high_school": "Central Dauphin",
+                  "hometown": "Harrisburg, Pa.",
+                  "jersey": 73,
+                  "name": "Evan Bushong",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Pa."
                 }
               ],
               "rank": 1
@@ -561,7 +551,7 @@
           "position": "RT"
         }
       ],
-      "scheme": "JMU Sports News",
+      "scheme": null,
       "unit": "offense"
     },
     {
@@ -909,20 +899,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 6,
-                  "name": "DJ Kelly Ourlads LCB",
-                  "note": "Ken Willis beat",
+                  "city": "Cincinnati",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Colerain",
+                  "hometown": "Cincinnati, Ohio (Cincinnati)",
+                  "jersey": 23,
+                  "name": "Ken Willis",
+                  "note": "beat; Ourlads LCB",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ohio (Cincinnati)"
+                },
+                {
+                  "city": "Allentown",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "St. Frances Academy [MD]",
+                  "hometown": "Allentown, Pa. (Toledo)",
+                  "jersey": 6,
+                  "name": "DJ Kelly",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Pa. (Toledo)"
                 }
               ],
               "rank": 1
@@ -965,20 +968,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Allentown",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 1,
-                  "name": "Damier Minkah Ourlads RCB",
-                  "note": "DJ Kelly beat",
+                  "class_raw": "2nd",
+                  "high_school": "St. Frances Academy [MD]",
+                  "hometown": "Allentown, Pa. (Toledo)",
+                  "jersey": 6,
+                  "name": "DJ Kelly",
+                  "note": "beat; Ourlads RCB",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Pa. (Toledo)"
+                },
+                {
+                  "city": "Gainesville",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "Battlefield",
+                  "hometown": "Gainesville, Va. (Shepherd)",
+                  "jersey": 1,
+                  "name": "Damier Minkah",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va. (Shepherd)"
                 }
               ],
               "rank": 1
@@ -989,20 +1005,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Charlotte",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 31,
-                  "name": "Seth Gathers Ourlads",
-                  "note": "TJ McGill beat",
+                  "class_raw": "4th",
+                  "high_school": "Julius L. Chambers",
+                  "hometown": "Charlotte, N.C. (William & Mary)",
+                  "jersey": 16,
+                  "name": "TJ McGill",
+                  "note": "beat; Ourlads",
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "N.C. (William & Mary)"
+                },
+                {
+                  "city": "Waldorf",
+                  "class": null,
+                  "class_raw": "2nd",
+                  "high_school": "North Point",
+                  "hometown": "Waldorf, Md.",
+                  "jersey": 31,
+                  "name": "Seth Gathers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Md."
                 }
               ],
               "rank": 1
@@ -1042,23 +1071,36 @@
                   "hometown": "Waldorf, Md.",
                   "jersey": null,
                   "name": "Seth Gathers",
-                  "note": "Jayon Harvey beat",
+                  "note": "beat; Ourlads",
                   "previous_schools": null,
                   "stars": null,
                   "state": "Md."
                 },
                 {
-                  "city": null,
+                  "city": "Indianapolis",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": 7,
-                  "name": "Javis Mynatt Ourlads",
+                  "class_raw": "3rd",
+                  "high_school": "Franklin Central",
+                  "hometown": "Indianapolis, Ind. (Findlay)",
+                  "jersey": null,
+                  "name": "Jayon Harvey",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": null
+                  "state": "Ind. (Findlay)"
+                },
+                {
+                  "city": "Knoxville",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Knoxville Catholic",
+                  "hometown": "Knoxville, Tenn. (Texas State)",
+                  "jersey": 7,
+                  "name": "Javis Mynatt",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Tenn. (Texas State)"
                 }
               ],
               "rank": 1

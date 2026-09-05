@@ -15,8 +15,8 @@
     ]
   },
   "schemes": {
-    "defense": null,
-    "offense": null,
+    "defense": "multiple 4-2-5",
+    "offense": "pro-style",
     "special_teams": null
   },
   "status": "OFFICIAL",
@@ -476,12 +476,76 @@
                 }
               ],
               "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Amari Odom",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "competition for",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 2,
+                  "name": "Malachi Nelson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 2
             }
           ],
           "position": "QB"
         },
         {
           "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Asbury Park",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Pope John XXIII",
+                  "hometown": "Asbury Park, N.J.",
+                  "jersey": null,
+                  "name": "Tylik Hill",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.J."
+                },
+                {
+                  "city": "Portsmouth",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "I.C. Norcom",
+                  "hometown": "Portsmouth, Va.",
+                  "jersey": null,
+                  "name": "Matthew Outten",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Va."
+                }
+              ],
+              "rank": 1
+            },
             {
               "co_listed": false,
               "players": [
@@ -505,7 +569,7 @@
           "position": "RB"
         }
       ],
-      "scheme": null,
+      "scheme": "pro-style",
       "unit": "offense"
     },
     {
@@ -1060,7 +1124,7 @@
           "position": "NB"
         }
       ],
-      "scheme": null,
+      "scheme": "multiple 4-2-5",
       "unit": "defense"
     },
     {

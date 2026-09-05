@@ -119,11 +119,16 @@ def parse_class_year(value: str | None) -> tuple[str | None, str | None]:
     return None, text
 
 
-def parse_hometown(value: str | None) -> dict[str, str | None]:
+def parse_hometown(
+    value: str | None, *, hometown_first: bool = False
+) -> dict[str, str | None]:
     """Split a ``HS / City, State (prev. School)`` cell into parts.
 
     Returns ``{"high_school", "city", "state", "hometown", "previous_schools",
     "raw"}`` with ``None`` for anything the source did not supply.
+
+    ``hometown_first`` inverts the two halves, for the files that write the
+    column that way regardless of what their header calls it.
     """
     text = mdtable.clean(value)
     empty: dict[str, str | None] = {
@@ -146,10 +151,12 @@ def parse_hometown(value: str | None) -> dict[str, str | None]:
 
     high_school: str | None = None
     hometown: str | None = None
-    # The delimiter is a spaced slash. Splitting on a bare "/" would cut "N/A"
-    # in half and turn a recorded gap into the school "N" in the city "A".
-    if " / " in text:
-        left, _, right = text.partition(" / ")
+    # The delimiter is a spaced slash, or a spaced dash in the files that use
+    # one ("Blanche Ely — Hollywood, Fla."). Splitting on a bare "/" would cut
+    # "N/A" in half and turn a recorded gap into the school "N" in the city "A".
+    separator = next((sep for sep in (" / ", " — ", " – ") if sep in text), None)
+    if separator:
+        left, _, right = text.partition(separator)
         high_school = mdtable.clean(left)
         hometown = mdtable.clean(right)
     elif "/" in text and mdtable.clean(text) is not None and "," in text:
@@ -162,6 +169,9 @@ def parse_hometown(value: str | None) -> dict[str, str | None]:
             hometown = mdtable.clean(text)
         else:
             high_school = mdtable.clean(text)
+
+    if hometown_first and high_school and hometown:
+        high_school, hometown = hometown, high_school
 
     city = state = None
     if hometown:
