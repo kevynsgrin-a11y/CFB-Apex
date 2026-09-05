@@ -1,4 +1,65 @@
-# CFB Apex — Audit Remediation Bundle
+# CFB Apex
+
+Two things live here:
+
+1. **The real 2026 FBS dataset** — rosters, depth charts, schedules, polls,
+   strength of schedule, coaching staffs and schemes, current-season stats and
+   fourteen seasons of history, plus the ETL that builds it, a typed reader the
+   site imports, and an edge API that serves it.
+2. **The audit remediation bundle** — fixes for the 28 August 2026 audit of
+   `cfbapex.com`, documented from ["Audit remediation bundle"](#audit-remediation-bundle) down.
+
+---
+
+## The 2026 dataset
+
+`cfbapex.com` currently serves `fixture-pack-2026.07.31` — a fictional universe
+with teams like "Red Mesa" and "Blue Ridge State". This replaces it with data
+compiled entirely from published sources.
+
+| | |
+|---|---|
+| **138** | FBS programs for 2026, across 11 conferences |
+| **10,455** | players with name, position, recruiting stars, class, high school and hometown |
+| **2,665** | starters on depth charts, labelled OFFICIAL / MIXED / PROJECTED |
+| **917** | distinct games across all 138 schedules |
+| **1,060** | coaching staff entries, with 147 scheme labels |
+| **2012–2025** | team and individual statistics; FEI back to 2010 |
+
+```bash
+python3 tools/etl/build.py      # rebuild data/dist from data/source
+python3 tools/etl/validate.py   # integrity checks
+npm test                        # reader behaviour against the real dataset
+npm run dev                     # browse the dataset locally
+```
+
+| Where | What |
+|---|---|
+| [`docs/DATASET.md`](./docs/DATASET.md) | What is in the data, how to read it, and where the sources stop |
+| [`docs/INTEGRATION.md`](./docs/INTEGRATION.md) | Putting it on the site, and which launch gates that needs |
+| [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md) | The data API, and what a merge deploys |
+| `data/source/` | The research package every figure is derived from |
+| `data/dist/` | Generated JSON — committed, and CI fails if it does not match a clean rebuild |
+| `tools/etl/` | The parsers |
+| `packages/cfb-data/` | Typed reader the site imports in place of its fixture pack |
+| `apps/data-api/` | Cloudflare Worker serving the dataset |
+
+Two rules run through all of it. **`null` means the source published nothing** —
+never zero, never "unknown by omission" — so a player with no recruiting rating
+is "Not listed", not a zero-star recruit. And **every artifact names the source
+documents it came from**, so any figure on the site can be traced back to one.
+
+> **Merging this does not by itself change what `cfbapex.com` renders.** The
+> site's source is not in this repository (audit Issue 9, below) and the site is
+> still gated by `DEMO_MODE=true`. [`docs/INTEGRATION.md`](./docs/INTEGRATION.md)
+> has the steps and is direct about which of them are legal decisions rather than
+> engineering ones.
+
+---
+
+<a id="audit-remediation-bundle"></a>
+
+## Audit remediation bundle
 
 Fixes for the 28 August 2026 audit of `cfbapex.com`, plus three findings the audit
 missed. Every issue was confirmed against the live production Worker before a fix was
@@ -15,9 +76,9 @@ that needs the local source tree, the Cloudflare dashboard, or a human decision.
 
 ## ⚠️ Read this first — why the fixes are here and not applied in place
 
-**This repository is empty.** There are no commits and no branches on
-`kevynsgrin-a11y/CFB-Apex` (GitHub returns `409 Git Repository is empty`), and no
-working tree locally.
+**The application source is not in this repository.** When the audit bundle was
+written this repository was empty; it now holds the dataset above, but still no
+app code.
 
 The application source is not in version control anywhere reachable. The deployed
 bundle leaks its build path:

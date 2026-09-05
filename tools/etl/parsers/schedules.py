@@ -613,7 +613,14 @@ def build(package_root: Path, out_dir: Path, registry) -> dict:
             games=unique,
             counts={
                 "games": sum(1 for game in unique if game["type"] != "bye"),
-                "conference_games": sum(1 for game in unique if game["type"] == "conference"),
+                # Only the G5 and independent grids label conference games. Where
+                # the source never states a type, the count is null — reporting 0
+                # would say the team plays no conference games.
+                "conference_games": (
+                    sum(1 for game in unique if game["type"] == "conference")
+                    if any(game["type"] in {"conference", "non-conference"} for game in unique)
+                    else None
+                ),
                 "byes": sum(1 for game in unique if game["type"] == "bye"),
                 "non_fbs_opponents": sum(
                     1
