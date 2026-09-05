@@ -1,22 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Dylan Wade, Caden Piening",
-        "01-rosters/big12-2026/ucf.md": "Dylan Wade, Caden Piening (R-Fr.) ★3"
-      },
-      "position": "TE",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Tackett Curtis, Jayden Jennings",
-        "01-rosters/big12-2026/ucf.md": "Tackett Curtis (Sr.) / Jayden Jennings"
-      },
-      "position": "LB",
-      "unit": "defense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -113,8 +96,21 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Landen Chambers",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": "RFR",
@@ -122,7 +118,7 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Landen Chambers (R-Jr.) / Taevion Swint",
+                  "name": "Taevion Swint",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -282,13 +278,13 @@
                   "state": null
                 },
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Anderson",
+                  "class": "RFR",
+                  "class_raw": "R-Fr.",
+                  "high_school": "Cincinnati, Ohio",
+                  "hometown": "Anderson",
                   "jersey": null,
-                  "name": "Caden Piening (R-Fr.) ★3",
+                  "name": "Caden Piening",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -562,7 +558,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -571,7 +567,20 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Bruno Dall / Aymeric Koumba",
+                  "name": "Bruno Dall",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Aymeric Koumba",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -765,16 +774,29 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Many (Wisconsin / USC)",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Many, La.",
+                  "hometown": "Many (Wisconsin / USC)",
+                  "jersey": null,
+                  "name": "Tackett Curtis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Salem (Virginia Tech)",
                   "class": "5TH",
                   "class_raw": "5th",
-                  "high_school": null,
-                  "hometown": null,
+                  "high_school": "Salem, Va.",
+                  "hometown": "Salem (Virginia Tech)",
                   "jersey": null,
-                  "name": "Tackett Curtis (Sr.) / Jayden Jennings",
+                  "name": "Jayden Jennings",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,

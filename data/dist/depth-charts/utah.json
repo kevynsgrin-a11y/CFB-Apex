@@ -1,30 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Hunter Andrews, Noah Bennee",
-        "01-rosters/big12-2026/utah.md": "Hunter Andrews (Jr.) / Noah Bennee"
-      },
-      "position": "TE",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Kelvin Obot",
-        "01-rosters/big12-2026/utah.md": "Kelvin Obot (Fr.) ★5"
-      },
-      "position": "LT",
-      "unit": "offense"
-    },
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Paul Fitzgerald, Kash Dillon",
-        "01-rosters/big12-2026/utah.md": "Paul Fitzgerald (5th) / Kash Dillon"
-      },
-      "position": "DE",
-      "unit": "defense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -113,7 +88,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "QB"
@@ -159,8 +134,21 @@
               "rank": 2
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Daniel Bray",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": "FR",
@@ -168,14 +156,14 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Daniel Bray (So.) / LaMarcus Bell",
+                  "name": "LaMarcus Bell",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "RB"
@@ -237,7 +225,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-X"
@@ -331,16 +319,29 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Magnolia",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Magnolia, Texas",
+                  "hometown": "Magnolia",
+                  "jersey": null,
+                  "name": "Hunter Andrews",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Olympus (Weber State)",
                   "class": "SR",
                   "class_raw": "Sr.",
-                  "high_school": null,
-                  "hometown": null,
+                  "high_school": "Holladay, Utah",
+                  "hometown": "Olympus (Weber State)",
                   "jersey": null,
-                  "name": "Hunter Andrews (Jr.) / Noah Bennee",
+                  "name": "Noah Bennee",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -377,16 +378,16 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Fruitland",
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": "Fruitland, Idaho",
+                  "hometown": "Fruitland",
                   "jersey": null,
-                  "name": "Kelvin Obot (Fr.) ★5",
+                  "name": "Kelvin Obot",
                   "note": null,
                   "previous_schools": null,
-                  "stars": null,
+                  "stars": 5,
                   "state": null
                 }
               ],
@@ -882,16 +883,29 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
+                  "city": "Thunder Ridge (Utah State)",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Idaho Falls, Idaho",
+                  "hometown": "Thunder Ridge (Utah State)",
+                  "jersey": null,
+                  "name": "Paul Fitzgerald",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Corner Canyon",
                   "class": "JR",
                   "class_raw": "Jr.",
-                  "high_school": null,
-                  "hometown": null,
+                  "high_school": "Draper, Utah",
+                  "hometown": "Corner Canyon",
                   "jersey": null,
-                  "name": "Paul Fitzgerald (5th) / Kash Dillon",
+                  "name": "Kash Dillon",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,

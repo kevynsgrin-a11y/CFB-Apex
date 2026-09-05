@@ -1,14 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/pac12-2026/01-starter-depth-charts-summary.md": "Greg Burrell (spring featured) / rotation",
-        "01-rosters/pac12-2026/texas-state.md": "Greg Burrell (not on Sep 2026 official roster fetch — verify) / rotation"
-      },
-      "position": "RB",
-      "unit": "offense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -70,22 +61,9 @@
                   "class_raw": null,
                   "high_school": null,
                   "hometown": null,
-                  "jersey": 10,
-                  "name": "Shaker Reisig (BC transfer",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": null
-                },
-                {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
                   "jersey": null,
                   "name": "Kinne: QB2)",
-                  "note": null,
+                  "note": "#10 Shaker Reisig (BC transfer",
                   "previous_schools": null,
                   "stars": null,
                   "state": null
@@ -104,12 +82,12 @@
                 {
                   "city": null,
                   "class": null,
-                  "class_raw": null,
+                  "class_raw": "not on Sep 2026 official roster fetch — verify",
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Greg Burrell (not on Sep 2026 official roster fetch — verify) / rotation",
-                  "note": null,
+                  "name": "Greg Burrell",
+                  "note": "rotation",
                   "previous_schools": null,
                   "stars": null,
                   "state": null
@@ -159,25 +137,6 @@
                 }
               ],
               "rank": 1
-            },
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": null,
-                  "name": "depth",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": null
-                }
-              ],
-              "rank": 2
             }
           ],
           "position": "WR1"
@@ -202,25 +161,6 @@
                 }
               ],
               "rank": 1
-            },
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": null,
-                  "name": "depth",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": null
-                }
-              ],
-              "rank": 2
             }
           ],
           "position": "WR2"
@@ -370,7 +310,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -379,7 +319,20 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 71,
-                  "name": "William Boone / #75 Rasheed Jackson",
+                  "name": "William Boone",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 75,
+                  "name": "Rasheed Jackson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -413,7 +366,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -422,7 +375,20 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 50,
-                  "name": "Jaylen Early, #53 Cameron Schultz",
+                  "name": "Jaylen Early",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 53,
+                  "name": "Cameron Schultz",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -437,7 +403,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -446,7 +412,46 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 78,
-                  "name": "Amari Smith, #79 Alan Grimme, #74 Jayden Luckett, #70 Ameer Ross",
+                  "name": "Amari Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 79,
+                  "name": "Alan Grimme",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 74,
+                  "name": "Jayden Luckett",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 70,
+                  "name": "Ameer Ross",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -486,7 +491,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -495,7 +500,59 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 96,
-                  "name": "Bryce Carter, #91 J.P. Deeter, #90 Chancellor Owens, #99 Kaleb James, #44 Phillip Bradford",
+                  "name": "Bryce Carter",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 91,
+                  "name": "J.P. Deeter",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 90,
+                  "name": "Chancellor Owens",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 99,
+                  "name": "Kaleb James",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 44,
+                  "name": "Phillip Bradford",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -529,16 +586,68 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "ACL recovery",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 6,
+                  "name": "Jo'Laison Landry",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": null,
                   "class_raw": null,
                   "high_school": null,
                   "hometown": null,
-                  "jersey": 6,
-                  "name": "Jo'Laison Landry (ACL recovery), #13 Ta'Derius Collins, #38 Mekhi Buchanan, #33 Blake Isbell, #31 Cullen Thompson",
+                  "jersey": 13,
+                  "name": "Ta'Derius Collins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 38,
+                  "name": "Mekhi Buchanan",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 33,
+                  "name": "Blake Isbell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 31,
+                  "name": "Cullen Thompson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -572,7 +681,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -581,7 +690,20 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 12,
-                  "name": "Javante Mackey, #21 Jordan Sample",
+                  "name": "Javante Mackey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 21,
+                  "name": "Jordan Sample",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -615,7 +737,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -624,7 +746,20 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 24,
-                  "name": "Dexter Ricks Jr., #3 Craig Royal Jr.",
+                  "name": "Dexter Ricks Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 3,
+                  "name": "Craig Royal Jr.",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -658,16 +793,42 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": "CB→S",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 0,
+                  "name": "Jayden Lawton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": null,
                   "class_raw": null,
                   "high_school": null,
                   "hometown": null,
-                  "jersey": 0,
-                  "name": "Jayden Lawton (CB→S), #26 Chase Davis, #19 Michael Patterson III",
+                  "jersey": 26,
+                  "name": "Chase Davis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 19,
+                  "name": "Michael Patterson III",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,

@@ -1,5 +1,70 @@
 {
-  "conflicts": [],
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Michael Hawkins Jr., Scotty Fox Jr.",
+        "01-rosters/big12-2026/west-virginia.md": "Michael Hawkins Jr., Scotty Fox Jr., Max Brown"
+      },
+      "position": "QB",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Cam Cook",
+        "01-rosters/big12-2026/west-virginia.md": "Cam Cook, Amari Latimer, Chris Talley, Martavious Boswell"
+      },
+      "position": "RB",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Josh Sapp, Ryan Ward",
+        "01-rosters/big12-2026/west-virginia.md": "Josh Sapp, Ryan Ward, Cam Ball"
+      },
+      "position": "TE",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Kevin Brown",
+        "01-rosters/big12-2026/west-virginia.md": "Kevin Brown, Malik Agbo, Deshawn Woods"
+      },
+      "position": "LT",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Nick Krahe",
+        "01-rosters/big12-2026/west-virginia.md": "Nick Krahe, Lamarcus Dillard"
+      },
+      "position": "LG",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Wes King",
+        "01-rosters/big12-2026/west-virginia.md": "Wes King, Josh Aisosa, Landen Livingston"
+      },
+      "position": "C",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Amare Grayson",
+        "01-rosters/big12-2026/west-virginia.md": "Amare Grayson, Cam Griffin"
+      },
+      "position": "RG",
+      "unit": "offense"
+    },
+    {
+      "per_source": {
+        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Carsten Casady",
+        "01-rosters/big12-2026/west-virginia.md": "Carsten Casady, Aidan Woods"
+      },
+      "position": "RT",
+      "unit": "offense"
+    }
+  ],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -44,7 +109,7 @@
                   "hometown": "Dallas, Texas",
                   "jersey": null,
                   "name": "Michael Hawkins Jr.",
-                  "note": null,
+                  "note": "then Jyron Hughley",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "Texas"
@@ -61,18 +126,30 @@
                   "previous_schools": null,
                   "stars": 3,
                   "state": "Ohio"
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Max Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "OR with Scotty Fox Jr.",
           "position": "QB"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Round Rock",
@@ -86,18 +163,56 @@
                   "previous_schools": null,
                   "stars": 4,
                   "state": "Texas"
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Amari Latimer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Chris Talley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Martavious Boswell",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "RB"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Norman",
@@ -111,18 +226,43 @@
                   "previous_schools": null,
                   "stars": 3,
                   "state": "Okla."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Taron Francis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Landon Drumm",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
-          "position": "WR-X"
+          "position": "WR (X)"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Phenix City",
@@ -136,18 +276,43 @@
                   "previous_schools": null,
                   "stars": null,
                   "state": "Ala."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cyrus Traugh",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Armoni Weaver-Bomar",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
-          "position": "WR-SL"
+          "position": "WR (SL/Y)"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Milford",
@@ -161,13 +326,38 @@
                   "previous_schools": null,
                   "stars": null,
                   "state": "Conn."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cyrus Traugh",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Keon Hutchins",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
-          "position": "WR-Z"
+          "position": "WR (Z)"
         },
         {
           "depth": [
@@ -182,7 +372,7 @@
                   "hometown": "Greenville, S.C.",
                   "jersey": null,
                   "name": "Josh Sapp",
-                  "note": null,
+                  "note": "then Kade Bush",
                   "previous_schools": null,
                   "stars": 3,
                   "state": "S.C."
@@ -199,18 +389,30 @@
                   "previous_schools": null,
                   "stars": 3,
                   "state": "N.J."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cam Ball",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "OR with Ryan Ward",
           "position": "TE"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Harrisburg",
@@ -224,18 +426,43 @@
                   "previous_schools": null,
                   "stars": 4,
                   "state": "Pa."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Malik Agbo",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Deshawn Woods",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "LT"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Erie",
@@ -249,18 +476,30 @@
                   "previous_schools": null,
                   "stars": 3,
                   "state": "Pa."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Lamarcus Dillard",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "LG"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Appleton",
@@ -274,18 +513,43 @@
                   "previous_schools": null,
                   "stars": 3,
                   "state": "Wis."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Josh Aisosa",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Landen Livingston",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "C"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Stockbridge",
@@ -299,18 +563,30 @@
                   "previous_schools": null,
                   "stars": 3,
                   "state": "Ga."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cam Griffin",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "RG"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": "Rolesville",
@@ -324,132 +600,75 @@
                   "previous_schools": null,
                   "stars": null,
                   "state": "N.C."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Aidan Woods",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "RT"
-        }
-      ],
-      "scheme": null,
-      "unit": "offense"
-    },
-    {
-      "positions": [
+        },
         {
           "depth": [
             {
               "co_listed": true,
               "players": [
                 {
-                  "city": "Atlanta",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "Marietta",
-                  "hometown": "Atlanta, Ga.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Zeke Durham-Campbell",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "Ga."
+                  "state": null
                 },
                 {
-                  "city": "Elizabethtown",
-                  "class": "RSO",
-                  "class_raw": "R-So.",
-                  "high_school": "North Hardin",
-                  "hometown": "Elizabethtown, Ky.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Darius Wiley",
                   "note": null,
                   "previous_schools": null,
-                  "stars": 3,
-                  "state": "Ky."
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Emerson Joy",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "OR with Darius Wiley",
           "position": "EDGE"
-        },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": "Port St. Lucie",
-                  "class": "RJR",
-                  "class_raw": "R-Jr.",
-                  "high_school": "Treasure Coast",
-                  "hometown": "Port St. Lucie, Fla.",
-                  "jersey": null,
-                  "name": "Corey McIntyre Jr.",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": 3,
-                  "state": "Fla."
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "note": "Listed starter",
-          "position": "DT"
-        },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": "Auburndale",
-                  "class": "JR",
-                  "class_raw": "Jr.",
-                  "high_school": "Auburndale",
-                  "hometown": "Auburndale, Fla.",
-                  "jersey": null,
-                  "name": "Nate Gabriel",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": 3,
-                  "state": "Fla."
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "note": "Listed starter",
-          "position": "NT"
-        },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": "Atlanta",
-                  "class": "JR",
-                  "class_raw": "Jr.",
-                  "high_school": "Westlake",
-                  "hometown": "Atlanta, Ga.",
-                  "jersey": null,
-                  "name": "Harper Holloman",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": 3,
-                  "state": "Ga."
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "note": "Listed starter",
-          "position": "BAN"
         },
         {
           "depth": [
@@ -457,136 +676,359 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "Hoover",
-                  "class": "RFR",
-                  "class_raw": "R-Fr.",
-                  "high_school": "Hoover",
-                  "hometown": "Hoover, Ala.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
-                  "name": "Cam Torbor",
+                  "name": "Corey McIntyre Jr.",
                   "note": null,
                   "previous_schools": null,
-                  "stars": 3,
-                  "state": "Ala."
+                  "stars": null,
+                  "state": null
                 },
                 {
-                  "city": "Marietta",
-                  "class": "JR",
-                  "class_raw": "Jr.",
-                  "high_school": "Walton",
-                  "hometown": "Marietta, Ga.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
-                  "name": "Ashton Woods",
+                  "name": "KJ Henson",
                   "note": null,
                   "previous_schools": null,
-                  "stars": 3,
-                  "state": "Ga."
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Yendor Mack",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "OR with Ashton Woods",
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Nate Gabriel",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Will LeBlanc",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Taylor Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "NT/NG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Harper Holloman",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "David Afogho",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Tobi Haastrup",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jeremiah Johnson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "BAN (Bandit)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cam Torbor",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Ashton Woods",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
           "position": "WILL"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "Denver",
-                  "class": "SR",
-                  "class_raw": "Sr.",
-                  "high_school": "East Lincoln",
-                  "hometown": "Denver, N.C.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Ben Cutter",
                   "note": null,
                   "previous_schools": null,
-                  "stars": 3,
-                  "state": "N.C."
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Tyler Stolsky",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Isaiah Patterson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "MIKE"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "Fairburn",
-                  "class": "SR",
-                  "class_raw": "Sr.",
-                  "high_school": "Sandy Creek",
-                  "hometown": "Fairburn, Ga.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Geimere Latimer II",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "Ga."
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Miles Khatri",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
-          "position": "N/S"
+          "position": "N/S (Nickel)"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "Atlanta",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "Drew",
-                  "hometown": "Atlanta, Ga.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Chams Diagne",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "Ga."
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Keyshawn Robinson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "LCB"
         },
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "Atlanta",
-                  "class": "JR",
-                  "class_raw": "Jr.",
-                  "high_school": "Gainesville",
-                  "hometown": "Atlanta, Ga.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Nick Taylor",
                   "note": null,
                   "previous_schools": null,
-                  "stars": 3,
-                  "state": "Ga."
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jaire Rawlison",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
           "position": "RCB"
         },
         {
@@ -595,160 +1037,90 @@
               "co_listed": true,
               "players": [
                 {
-                  "city": "The Woodlands",
-                  "class": "SR",
-                  "class_raw": "Sr.",
-                  "high_school": "College Park",
-                  "hometown": "The Woodlands, Texas",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Andrew Powdrell",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "Texas"
+                  "state": null
                 },
                 {
-                  "city": "McDonald",
-                  "class": "FR",
-                  "class_raw": "Fr.",
-                  "high_school": "Fort Cherry",
-                  "hometown": "McDonald, Pa.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
                   "name": "Matt Sieg",
                   "note": null,
                   "previous_schools": null,
-                  "stars": 4,
-                  "state": "Pa."
+                  "stars": null,
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "OR with Matt Sieg",
           "position": "FS"
         },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": "Ft. Pierce",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "IMG Academy",
-                  "hometown": "Ft. Pierce, Fla.",
-                  "jersey": null,
-                  "name": "Kamari Wilson",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": 4,
-                  "state": "Fla."
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "note": "Listed starter",
-          "position": "BS"
-        }
-      ],
-      "scheme": null,
-      "unit": "defense"
-    },
-    {
-      "positions": [
         {
           "depth": [
             {
               "co_listed": true,
               "players": [
                 {
-                  "city": "Derry",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "St. Mary's Grammar School",
-                  "hometown": "Derry, Ireland",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
-                  "name": "Jack Cassidy",
+                  "name": "Kamari Wilson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "Ireland"
+                  "state": null
                 },
                 {
-                  "city": "Fairmont",
-                  "class": "RJR",
-                  "class_raw": "R-Jr.",
-                  "high_school": "Fairmont Senior",
-                  "hometown": "Fairmont, W.Va.",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
-                  "name": "Nate Flower",
+                  "name": "Da'Mare Williams",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "W.Va."
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "note": "OR with Nate Flower",
-          "position": "K"
-        },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
+                  "state": null
+                },
                 {
-                  "city": "Colleyville",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "Colleyville Heritage",
-                  "hometown": "Colleyville, Texas",
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": null,
-                  "name": "Bryan Hansen",
+                  "name": "Kameron Reddic",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
-                  "state": "Texas"
+                  "state": null
                 }
               ],
               "rank": 1
             }
           ],
-          "note": "Listed starter",
-          "position": "P"
-        },
-        {
-          "depth": [
-            {
-              "co_listed": false,
-              "players": [
-                {
-                  "city": "Batavia",
-                  "class": "RSR",
-                  "class_raw": "R-Sr.",
-                  "high_school": "Batavia",
-                  "hometown": "Batavia, Ill.",
-                  "jersey": null,
-                  "name": "Macguire Moss",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": "Ill."
-                }
-              ],
-              "rank": 1
-            }
-          ],
-          "note": "Listed starter",
-          "position": "LS"
+          "position": "BS"
         }
       ],
-      "scheme": null,
-      "unit": "special_teams"
+      "scheme": "by position",
+      "unit": "offense"
     }
   ]
 }

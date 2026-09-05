@@ -2,16 +2,8 @@
   "conflicts": [
     {
       "per_source": {
-        "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Ben Grice, Quinton Jackson, Max Mosey",
-        "01-rosters/aac-2026/rice.md": "Ben Grice / Quinton Jackson / Max Mosey"
-      },
-      "position": "PR",
-      "unit": "special_teams"
-    },
-    {
-      "per_source": {
         "01-rosters/aac-2026/01-starter-depth-charts-summary.md": "Quinton Jackson, Ben Grice, Max Mosey",
-        "01-rosters/aac-2026/rice.md": "Quinton Jackson / Ben Grice / Max Mosey / Jordan Clark"
+        "01-rosters/aac-2026/rice.md": "Quinton Jackson, Ben Grice, Max Mosey, Jordan Clark"
       },
       "position": "KR",
       "unit": "special_teams"
@@ -212,7 +204,7 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -220,8 +212,21 @@
                   "class_raw": "R-Sr.",
                   "high_school": null,
                   "hometown": null,
+                  "jersey": 5,
+                  "name": "Davis Lane",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": null,
+                  "hometown": null,
                   "jersey": 13,
-                  "name": "Davis Lane (#5, R-Sr.) / Max Mosey",
+                  "name": "Max Mosey",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -255,8 +260,21 @@
               "rank": 1
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": "RJR",
+                  "class_raw": "R-Jr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": 7,
+                  "name": "Barry Jackson Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": "SO",
@@ -264,7 +282,7 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": 0,
-                  "name": "Barry Jackson Jr. (#7, R-Jr.) / Payton Matthews",
+                  "name": "Payton Matthews",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -1139,16 +1157,42 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Woodward Academy",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Atlanta, Georgia",
+                  "hometown": "Woodward Academy",
                   "jersey": null,
-                  "name": "Ben Grice / Quinton Jackson / Max Mosey",
+                  "name": "Ben Grice",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "North Crowley",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Fort Worth, Texas",
+                  "hometown": "North Crowley",
+                  "jersey": null,
+                  "name": "Quinton Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Central Dauphin",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Harrisburg, Pennsylvania",
+                  "hometown": "Central Dauphin",
+                  "jersey": null,
+                  "name": "Max Mosey",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -1163,8 +1207,47 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": "North Crowley",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Fort Worth, Texas",
+                  "hometown": "North Crowley",
+                  "jersey": null,
+                  "name": "Quinton Jackson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Woodward Academy",
+                  "class": "RSO",
+                  "class_raw": "R-So.",
+                  "high_school": "Atlanta, Georgia",
+                  "hometown": "Woodward Academy",
+                  "jersey": null,
+                  "name": "Ben Grice",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Central Dauphin",
+                  "class": "RSR",
+                  "class_raw": "R-Sr.",
+                  "high_school": "Harrisburg, Pennsylvania",
+                  "hometown": "Central Dauphin",
+                  "jersey": null,
+                  "name": "Max Mosey",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": null,
@@ -1172,7 +1255,7 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Quinton Jackson / Ben Grice / Max Mosey / Jordan Clark",
+                  "name": "Jordan Clark",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,

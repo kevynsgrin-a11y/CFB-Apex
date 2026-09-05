@@ -98,3 +98,9 @@ Set in `apps/data-api/wrangler.toml`:
 - The browse pages send `noindex, nofollow`. This is an internal verification
   surface and must not be indexed; the site's own launch gates are unaffected by
   it either way.
+- `wrangler dev` warns that it is falling back from the configured
+  `compatibility_date = "2026-09-01"` to the newest date its bundled local
+  runtime knows. That is a local-only notice — the deployed runtime honours the
+  configured date. `npm i -D wrangler@4` in `apps/data-api` silences it; the
+  pipeline is validated against the pinned v3 line, so re-run
+  `npx wrangler deploy --dry-run` and the smoke test after upgrading.

@@ -35,15 +35,71 @@ _BACKUP_RE = re.compile(r"Backup\(s\):\s*(.+?)\s*$", re.IGNORECASE)
 _INJ_RE = re.compile(r"\*\*INJ listed:\*\*\s*(.+?)\s*$", re.MULTILINE)
 _SUS_RE = re.compile(r"\*\*SUS listed:\*\*\s*(.+?)\s*$", re.MULTILINE)
 _TEAM_HEADING_RE = re.compile(r"^\s*\d+\.\s*(.+)$")
-_CLASS_SUFFIX_RE = re.compile(r"\s*\(([^)]*)\)\s*$")
 
-#: Depth-column header -> rank. "3rd+" holds everyone from third string down.
-_DEPTH_COLUMNS: list[tuple[tuple[str, ...], int]] = [
-    (("1st", "starter", "first"), 1),
-    (("2nd", "backup", "second"), 2),
-    (("3rd+", "3rd", "third", "3rd+/or"), 3),
-    (("4th",), 4),
-]
+#: Some Notes cells append the chart's status after the backup list
+#: ("Backup(s): Tucker Kilcrease (5th); Rodge Waldrop (3rd); OFFICIAL").
+_STATUS_WORDS = {"OFFICIAL", "MIXED", "PROJECTED", "UNOFFICIAL"}
+_CLASS_SUFFIX_RE = re.compile(r"\s*\(([^)]*)\)\s*$")
+#: Any parenthetical, wherever it sits in the cell.
+_PAREN_ANY_RE = re.compile(r"\s*\(([^)]*)\)")
+
+#: Column headers that carry no players, only commentary about the chart.
+_NON_DEPTH_HEADERS = {
+    "status",
+    "chart status",
+    "chart type",
+    "notes",
+    "note",
+    "source",
+    "depth",
+    "comment",
+}
+
+#: Words that name the first string, and words that name the second.
+_FIRST_WORDS = ("starter", "starters", "first", "listed", "projected", "no 1")
+_SECOND_WORDS = ("backup", "backups", "second", "next", "reserve")
+
+_HEADER_NUMBER_RE = re.compile(r"(\d+)")
+
+
+def _depth_rank(header: str) -> int | None:
+    """Which string a depth column names, or None if it is not a depth column.
+
+    The 92 team files use more than thirty different spellings for the same
+    three columns — "Starter | Backup", "1st | 2nd | 3rd+", "#1 | #2 | #3+",
+    "Depth 1 | Depth 2 | Depth 3+", "Starter ★ | Backup | Next", "Starter (1) |
+    Backup (2) | Backup (3)". Matching a fixed list of prefixes silently drops
+    whole teams' charts, so the rank is derived from the header's meaning.
+    """
+    text = header.lower().replace("★", " ").replace("#", " ")
+    text = re.sub(r"[^a-z0-9+/ ]+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return None
+
+    # "Starter / depth" is still the starter column; a bare "Depth" or "Status"
+    # is commentary.
+    if text in _NON_DEPTH_HEADERS:
+        return None
+    words = set(text.split())
+    has_first = any(word in text for word in _FIRST_WORDS)
+    has_second = any(word in text for word in _SECOND_WORDS)
+
+    number = _HEADER_NUMBER_RE.search(text)
+    rank = int(number.group(1)) if number else None
+
+    if has_second:
+        # "Backup (3)" is the third string, not the second.
+        return rank if rank and 2 <= rank <= 6 else 2
+    if has_first:
+        return rank if rank and 2 <= rank <= 6 else 1
+    if rank and 1 <= rank <= 6:
+        # "1st", "#2 / #3" (a merged column, ranked by its first number),
+        # "Depth 3+".
+        return rank
+    if words & {"status", "notes", "type"}:
+        return None
+    return None
 
 
 #: Parentheticals in a unit heading that name a source or a status, not a scheme.
@@ -154,16 +210,16 @@ def _player(
     if leading:
         jersey = int(leading.group(1))
         cleaned = leading.group(2).strip()
-    suffix = _CLASS_SUFFIX_RE.search(cleaned)
-    if suffix:
-        inner = suffix.group(1)
-        cleaned = cleaned[: suffix.start()].strip()
+    # Every parenthetical is annotation — class, jersey, transfer, status — and
+    # none of it belongs in the name. The first one supplies the class.
+    for inner in _PAREN_ANY_RE.findall(cleaned):
         number = _JERSEY_RE.search(inner)
-        if number:
+        if number and jersey is None:
             jersey = int(number.group(1))
-            inner = _JERSEY_RE.sub("", inner).strip(" ,;")
-        if inner:
-            inline_class = inner
+        remainder = _JERSEY_RE.sub("", inner).strip(" ,;")
+        if remainder and inline_class is None:
+            inline_class = remainder
+    cleaned = re.sub(r"\s+", " ", _PAREN_ANY_RE.sub(" ", cleaned)).strip(" ,;")
     raw_class = class_year or inline_class
     code, raw = textutil.parse_class_year(raw_class)
     hometown = textutil.parse_hometown(place)
@@ -182,23 +238,147 @@ def _player(
     }
 
 
-def _split_cell(cell: str | None) -> list[str]:
-    """Names in one depth cell: "A OR B", "A; B", "A, B" all mean several."""
-    text = mdtable.clean(cell)
-    if not text:
+#: The separators a depth cell uses between co-listed players. "-OR-" and a
+#: spaced slash are as common as " OR " across the 92 files.
+#: "OR" is written bare, bolded ("**OR**") and hyphenated ("-OR-"), and the
+#: cell is read as raw Markdown, so the emphasis markers have to be tolerated.
+_PLAYER_SPLIT_RE = re.compile(
+    r"(?:\s+OR\s+|\s*-\s*OR\s*-\s*|\s*;\s*|\s+/\s+)", re.IGNORECASE
+)
+
+#: "**OR**" is the separator wearing emphasis. Normalising it before anything
+#: else keeps the split from eating the closing "**" of the bold run in front
+#: of it, which would leave that run unclosed and its text stuck in a name.
+_BOLD_OR_RE = re.compile(r"\*\*\s*OR\s*\*\*", re.IGNORECASE)
+
+_SEPARATOR_PROBE_RE = re.compile(r"\bOR\b|;|/", re.IGNORECASE)
+_JERSEY_ONLY_RE = re.compile(r"^#\s*\d{1,2}$")
+
+
+def _strip_note_emphasis(raw: str) -> tuple[str, list[str]]:
+    """Remove emphasis that annotates a player, keep emphasis that *is* the name.
+
+    Some files bold the starter ("**Caden Pinnick** (Rs-So.) — **confirmed**"),
+    others bold a remark about him ("AJ Miller (R-So.) **co-starter**"). A bold
+    run counts as a name when nothing but a jersey number stands between it and
+    the start of its player — that is, the start of the cell or the last
+    separator. Everything else is a note.
+    """
+    notes: list[str] = []
+    out: list[str] = []
+    last = 0
+    for match in _BOLD_RE.finditer(raw):
+        before = raw[last : match.start()]
+        tail = _SEPARATOR_PROBE_RE.split(before)[-1].strip()
+        if not tail or _JERSEY_ONLY_RE.match(tail):
+            out.append(before + match.group(0))
+        else:
+            notes.append(match.group(1).strip())
+            out.append(before + " ")
+        last = match.end()
+    out.append(raw[last:])
+    return "".join(out), notes
+
+#: A comma separates co-listed players in some files ("JV Gibson, Giyahni
+#: Kontosis, Isaiah Johnson") and merely punctuates prose in others ("Samaj
+#: Jones battling for No. 2, PROJECTED"). Splitting on it is therefore
+#: all-or-nothing: the cell is only split when *every* resulting piece reads as
+#: a person's name. A wrong split invents players, which is worse than leaving
+#: a rare cell unsplit.
+_COMMA_SPLIT_RE = re.compile(r",\s+(?!\s*(?:Jr|Sr|II|III|IV|V)\b)")
+_NAME_PARTICLES = {"de", "la", "van", "von", "del", "da", "st", "jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def _looks_like_name(text: str) -> bool:
+    text = _PAREN_ANY_RE.sub(" ", mdtable.strip_markdown(text))
+    # A leading jersey number is part of the cell's formatting, not the name.
+    text = re.sub(r"^\s*#\s*\d{1,2}\s+", "", text)
+    tokens = [token for token in text.strip(" .").split() if token]
+    if not 1 <= len(tokens) <= 5:
+        return False
+    if any("|" in token for token in tokens):
+        return False
+    for token in tokens:
+        bare = token.strip(".'\u2019\"-")
+        if not bare:
+            return False
+        if bare.lower() in _NAME_PARTICLES:
+            continue
+        if not bare[0].isupper():
+            return False
+    return True
+
+
+def _comma_split(piece: str) -> list[str]:
+    parts = [part.strip() for part in _COMMA_SPLIT_RE.split(piece) if part.strip()]
+    if len(parts) < 2 or not all(_looks_like_name(part) for part in parts):
+        return [piece]
+    return parts
+
+
+#: Some cells run players together with only a jersey number between them:
+#: "Parker Almanza #88 Kai Wesley #43 Brody Wilhelm".
+_JERSEY_BOUNDARY_RE = re.compile(r"\s+(?=#\s*\d{1,2}\s+[A-Z])")
+
+
+def _jersey_split(piece: str) -> list[str]:
+    parts = [part.strip() for part in _JERSEY_BOUNDARY_RE.split(piece) if part.strip()]
+    return parts or [piece]
+
+#: Emphasis in a depth cell is an annotation about the player, never the name:
+#: "#84 AJ Miller (R-So.) **co-starter**", "Mitch Griffis (#12) **OFFICIAL
+#: Week 1 starter** OR Emory Williams".
+_BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
+_STAR_RATING_RE = re.compile(r"(?:★\s*\d|\d\s*★)")
+
+
+def _split_cell(cell: str | None) -> list[tuple[str, str | None]]:
+    """Split one depth cell into ``(name, annotation)`` pairs.
+
+    Operates on the raw Markdown so a bolded annotation can be told apart from
+    the name. Stripping the emphasis first would leave "Mitch Griffis OFFICIAL
+    Week 1 starter" as a player's name — which then reads as a different person
+    from the same player in the other source file.
+    """
+    if cell is None:
         return []
-    parts = _OR_RE.split(text)
-    expanded: list[str] = []
-    for part in parts:
-        expanded.extend(piece.strip() for piece in part.split(";") if piece.strip())
-    # A piece may itself be a recorded gap — "Jones OR —", or "Not listed
-    # (Ourlads)", where the parenthetical names the source of the *absence*.
-    # That slot has no player, not a player called "Not listed".
-    return [
-        piece
-        for piece in expanded
-        if mdtable.clean(_CLASS_SUFFIX_RE.sub("", piece)) is not None
-    ]
+    raw = str(cell).strip()
+    if not raw:
+        return []
+
+    raw = _BOLD_OR_RE.sub(" OR ", raw)
+    raw, notes = _strip_note_emphasis(raw)
+
+    pieces: list[str] = []
+    for piece in _PLAYER_SPLIT_RE.split(raw):
+        piece = piece.strip()
+        if not piece:
+            continue
+        for part in _comma_split(piece):
+            pieces.extend(_jersey_split(part))
+
+    out: list[tuple[str, str | None]] = []
+    for piece in pieces:
+        name = _STAR_RATING_RE.sub(" ", piece)
+        name = mdtable.strip_markdown(name)
+        name = name.strip(" -—–,;")
+        # A piece may itself be a recorded gap — "Jones OR —", or "Not listed
+        # (Ourlads)", where the parenthetical names the source of the absence.
+        bare = mdtable.clean(_PAREN_ANY_RE.sub("", name))
+        if bare is None:
+            continue
+        # Several files put commentary in the depth cell ("OFFICIAL team chart
+        # lists Brock Spalding as Slot starter"). That is a note about the
+        # position, not a player: emitting it as one would invent a person.
+        if not _looks_like_name(bare):
+            notes.append(bare)
+            continue
+        out.append((name, None))
+    # The cell's notes describe the first-listed player ("confirmed",
+    # "co-starter", "OFFICIAL Week 1 starter"), so they attach there.
+    if out and notes:
+        out[0] = (out[0][0], "; ".join(notes))
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -227,26 +407,27 @@ def _team_file_chart(text: str, source: str) -> dict:
                 continue
             depth_columns: list[tuple[str, int]] = []
             for header in table.headers[1:]:
-                lowered = header.lower().strip()
-                for needles, rank in _DEPTH_COLUMNS:
-                    if any(lowered.startswith(needle) for needle in needles):
-                        depth_columns.append((header, rank))
-                        break
-            for record in table.records():
-                position = record.get(table.headers[0])
+                rank = _depth_rank(header)
+                if rank is not None:
+                    depth_columns.append((header, rank))
+            # Raw rows, so a bolded annotation stays distinguishable from a name.
+            for raw_record in table.raw_records():
+                position = mdtable.clean(raw_record.get(table.headers[0]))
                 if not position:
                     continue
                 depth: list[dict] = []
                 for header, rank in depth_columns:
-                    names = _split_cell(record.get(header))
-                    if not names:
+                    cell = raw_record.get(header)
+                    entries = _split_cell(cell)
+                    if not entries:
                         continue
                     depth.append(
                         {
                             "rank": rank,
-                            "players": [_player(name) for name in names],
-                            "co_listed": len(names) > 1
-                            and bool(_OR_RE.search(record.get(header) or "")),
+                            "players": [
+                                _player(name, note=note) for name, note in entries
+                            ],
+                            "co_listed": len(entries) > 1,
                         }
                     )
                 if depth:
@@ -312,12 +493,13 @@ def _summary_chart(section: mdtable.Section, source: str) -> dict:
                 ),
                 None,
             )
-            for record in table.records():
+            raw_rows = table.raw_records()
+            for index_row, record in enumerate(table.records()):
                 position = record.get("Pos")
-                names = _split_cell(record.get("Name"))
-                if not position or not names:
+                entries = _split_cell(raw_rows[index_row].get("Name"))
+                if not position or not entries:
                     continue
-                count = len(names)
+                count = len(entries)
                 stars = _parallel(record.get("Stars"), count)
                 classes = _parallel(record.get(class_header), count) if class_header else [None] * count
                 places = _parallel(record.get(place_header), count) if place_header else [None] * count
@@ -329,26 +511,29 @@ def _summary_chart(section: mdtable.Section, source: str) -> dict:
                         stars=stars[index],
                         class_year=classes[index],
                         place=places[index],
+                        note=entry_note,
                     )
-                    for index, name in enumerate(names)
+                    for index, (name, entry_note) in enumerate(entries)
                 ]
                 depth = [
-                    {
-                        "rank": 1,
-                        "players": starters,
-                        "co_listed": count > 1
-                        and bool(_OR_RE.search(record.get("Name") or "")),
-                    }
+                    {"rank": 1, "players": starters, "co_listed": count > 1}
                 ]
                 backups = _BACKUP_RE.search(note or "")
                 if backups:
-                    backup_names = _split_cell(backups.group(1))
-                    if backup_names:
+                    backup_entries = [
+                        entry
+                        for entry in _split_cell(backups.group(1))
+                        if entry[0].upper() not in _STATUS_WORDS
+                    ]
+                    if backup_entries:
                         depth.append(
                             {
                                 "rank": 2,
-                                "players": [_player(name) for name in backup_names],
-                                "co_listed": bool(_OR_RE.search(backups.group(1))),
+                                "players": [
+                                    _player(name, note=entry_note)
+                                    for name, entry_note in backup_entries
+                                ],
+                                "co_listed": len(backup_entries) > 1,
                             }
                         )
                 positions.append(

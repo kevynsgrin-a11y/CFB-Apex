@@ -1,14 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "Fisher Clements, Charlie Williams",
-        "01-rosters/big12-2026/colorado.md": "Fisher Clements / Charlie Williams"
-      },
-      "position": "TE",
-      "unit": "offense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -163,20 +154,33 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Hattiesburg",
+                  "class": "5TH",
+                  "class_raw": "5th",
+                  "high_school": "Mountain View [Idaho]",
+                  "hometown": "Hattiesburg, MS",
                   "jersey": null,
-                  "name": "Fisher Clements / Charlie Williams",
+                  "name": "Fisher Clements",
                   "note": null,
-                  "previous_schools": null,
+                  "previous_schools": "Northern Colorado",
                   "stars": null,
-                  "state": null
+                  "state": "MS"
+                },
+                {
+                  "city": "Aspen",
+                  "class": null,
+                  "class_raw": "4th",
+                  "high_school": "IMG Academy",
+                  "hometown": "Aspen, CO",
+                  "jersey": null,
+                  "name": "Charlie Williams",
+                  "note": null,
+                  "previous_schools": "UNLV",
+                  "stars": null,
+                  "state": "CO"
                 }
               ],
               "rank": 1

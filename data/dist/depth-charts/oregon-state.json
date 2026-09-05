@@ -1,5 +1,22 @@
 {
-  "conflicts": [],
+  "conflicts": [
+    {
+      "per_source": {
+        "01-rosters/pac12-2026/01-starter-depth-charts-summary.md": "Tevita Pome'e, Jacob Schuster",
+        "01-rosters/pac12-2026/oregon-state.md": "Jacob Schuster"
+      },
+      "position": "NT",
+      "unit": "defense"
+    },
+    {
+      "per_source": {
+        "01-rosters/pac12-2026/01-starter-depth-charts-summary.md": "Jacob Schuster, Daniel Matagi",
+        "01-rosters/pac12-2026/oregon-state.md": "Daniel Matagi"
+      },
+      "position": "DT",
+      "unit": "defense"
+    }
+  ],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -34,7 +51,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -71,7 +88,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -108,7 +125,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -117,7 +134,20 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Karson Boschma / Cynai Thomas",
+                  "name": "Karson Boschma",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cynai Thomas",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -135,17 +165,17 @@
               "co_listed": false,
               "players": [
                 {
-                  "city": null,
+                  "city": "Calabasas, Calif. ; Daingerfield / Daingerfield",
                   "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "class_raw": "alt: Aeryn Hampton",
+                  "high_school": "Calabasas",
+                  "hometown": "Calabasas, Calif. ; Daingerfield / Daingerfield, Texas",
                   "jersey": null,
-                  "name": "Aaron Butler / others",
-                  "note": null,
+                  "name": "Aaron Butler",
+                  "note": "others",
                   "previous_schools": null,
-                  "stars": null,
-                  "state": null
+                  "stars": 4,
+                  "state": "Texas"
                 }
               ],
               "rank": 2
@@ -156,7 +186,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -193,7 +223,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -369,7 +399,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -409,6 +439,25 @@
               "co_listed": false,
               "players": [
                 {
+                  "city": "Lacey",
+                  "class": null,
+                  "class_raw": "co",
+                  "high_school": "Tumwater",
+                  "hometown": "Lacey, WA",
+                  "jersey": null,
+                  "name": "Jacob Schuster",
+                  "note": "★ Tevita Pome'e",
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "WA"
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
                   "city": null,
                   "class": null,
                   "class_raw": null,
@@ -446,6 +495,25 @@
               "co_listed": false,
               "players": [
                 {
+                  "city": "Chehalis",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "WF West",
+                  "hometown": "Chehalis, Wash.",
+                  "jersey": null,
+                  "name": "Daniel Matagi",
+                  "note": "★ Jacob Schuster",
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Wash."
+                }
+              ],
+              "rank": 1
+            },
+            {
+              "co_listed": true,
+              "players": [
+                {
                   "city": null,
                   "class": null,
                   "class_raw": null,
@@ -480,7 +548,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -517,7 +585,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -554,7 +622,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -591,7 +659,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -628,7 +696,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -689,7 +757,7 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
                   "city": null,
@@ -756,6 +824,56 @@
         {
           "depth": [
             {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Caleb Ojeda",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jadyn Oh",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Cameron Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "K"
+        },
+        {
+          "depth": [
+            {
               "co_listed": false,
               "players": [
                 {
@@ -765,17 +883,54 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Roles not officially confirmed in sources used",
+                  "name": "AJ Winsor",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 1
             }
           ],
-          "position": "K"
+          "position": "P"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Jonathan Zarut",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Tug Sanford",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LS"
         }
       ],
       "scheme": "limited public data",

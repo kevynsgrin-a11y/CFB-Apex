@@ -1,14 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/big12-2026/01-starter-depth-charts-summary.md": "J'Koby Williams, Kenny Johnson",
-        "01-rosters/big12-2026/texas-tech.md": "J'Koby Williams / Kenny Johnson"
-      },
-      "position": "KR",
-      "unit": "special_teams"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -81,8 +72,21 @@
               "rank": 2
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Lloyd Jones III",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": "5TH",
@@ -90,14 +94,14 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Lloyd Jones III (So.) / Thomas Castellanos",
+                  "name": "Thomas Castellanos",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "QB"
@@ -215,7 +219,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-X"
@@ -277,7 +281,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-Slot"
@@ -294,7 +298,7 @@
                   "high_school": "Temple, Texas",
                   "hometown": "Lake Belton",
                   "jersey": null,
-                  "name": "Micah Hudson (Jr.) ★5",
+                  "name": "Micah Hudson",
                   "note": null,
                   "previous_schools": null,
                   "stars": 5,
@@ -339,7 +343,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "WR-Z"
@@ -385,8 +389,21 @@
               "rank": 2
             },
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
+                {
+                  "city": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "Matt Ludwig",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
                 {
                   "city": null,
                   "class": "5TH",
@@ -394,14 +411,14 @@
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "Matt Ludwig (Fr.) / Jason Llewellyn",
+                  "name": "Jason Llewellyn",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "TE"
@@ -506,7 +523,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "LG"
@@ -568,7 +585,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "C"
@@ -630,7 +647,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "RG"
@@ -729,19 +746,19 @@
               "players": [
                 {
                   "city": null,
-                  "class": null,
-                  "class_raw": null,
+                  "class": "FR",
+                  "class_raw": "Fr.",
                   "high_school": null,
                   "hometown": null,
                   "jersey": null,
-                  "name": "LaDamion Guyton (Fr.) ★5",
+                  "name": "LaDamion Guyton",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "BDE/OLB"
@@ -803,7 +820,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "DT"
@@ -865,7 +882,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "NG"
@@ -927,7 +944,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "FDE/OLB"
@@ -989,7 +1006,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "BILB"
@@ -1051,7 +1068,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "FILB"
@@ -1113,7 +1130,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "STAR"
@@ -1175,7 +1192,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "CB"
@@ -1237,7 +1254,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "FS"
@@ -1299,7 +1316,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "SS"
@@ -1361,7 +1378,7 @@
                   "state": null
                 }
               ],
-              "rank": 2
+              "rank": 3
             }
           ],
           "position": "CB"
@@ -1485,16 +1502,29 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
+                  "city": "Beckville",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Beckville, Texas",
+                  "hometown": "Beckville",
                   "jersey": null,
-                  "name": "J'Koby Williams / Kenny Johnson",
+                  "name": "J'Koby Williams",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                },
+                {
+                  "city": "Dallastown",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "York, Pa.",
+                  "hometown": "Dallastown",
+                  "jersey": null,
+                  "name": "Kenny Johnson",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,

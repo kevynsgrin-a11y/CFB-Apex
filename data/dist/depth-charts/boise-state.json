@@ -1,14 +1,5 @@
 {
-  "conflicts": [
-    {
-      "per_source": {
-        "01-rosters/pac12-2026/01-starter-depth-charts-summary.md": "Jake Ripp, Logan Brantley",
-        "01-rosters/pac12-2026/boise-state.md": "Jake Ripp, Logan Brantley (#17) (coach: either-or, both banged up in camp)"
-      },
-      "position": "MLB",
-      "unit": "defense"
-    }
-  ],
+  "conflicts": [],
   "injury_notes": [],
   "meta": {
     "as_of": "2026-09-05",
@@ -94,8 +85,8 @@
                   "class_raw": "or rotates with Gaines",
                   "high_school": "Rancho Verde HS",
                   "hometown": "Moreno Valley, Calif.",
-                  "jersey": null,
-                  "name": "Dylan Riley (#0)",
+                  "jersey": 0,
+                  "name": "Dylan Riley",
                   "note": null,
                   "previous_schools": null,
                   "stars": 3,
@@ -137,8 +128,8 @@
                   "class_raw": "coach: true freshman starter",
                   "high_school": "Rocky Mountain HS",
                   "hometown": "Baker City, Ore. / Meridian, Idaho area",
-                  "jersey": null,
-                  "name": "Rasean Jones (#19)",
+                  "jersey": 19,
+                  "name": "Rasean Jones",
                   "note": null,
                   "previous_schools": null,
                   "stars": 3,
@@ -352,8 +343,8 @@
                   "class_raw": "coach-confirmed",
                   "high_school": "Owyhee HS",
                   "hometown": "Meridian, Idaho",
-                  "jersey": null,
-                  "name": "Carson Rasmussen (#64)",
+                  "jersey": 64,
+                  "name": "Carson Rasmussen",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -395,8 +386,8 @@
                   "class_raw": "coach-confirmed over Steele",
                   "high_school": "Bishop Gorman HS",
                   "hometown": "St. George, Utah",
-                  "jersey": null,
-                  "name": "Stewart Taufa (#52)",
+                  "jersey": 52,
+                  "name": "Stewart Taufa",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -608,16 +599,29 @@
         {
           "depth": [
             {
-              "co_listed": false,
+              "co_listed": true,
               "players": [
                 {
-                  "city": "Argyle, Texas ; Federal Way HS / Kent",
+                  "city": "Argyle",
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": "Argyle HS",
+                  "hometown": "Argyle, Texas",
+                  "jersey": 99,
+                  "name": "Michael Madrie",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                },
+                {
+                  "city": "Kent",
                   "class": null,
                   "class_raw": "coach: both start DT spots",
-                  "high_school": "Argyle HS",
-                  "hometown": "Argyle, Texas ; Federal Way HS / Kent, Wash.",
-                  "jersey": null,
-                  "name": "Michael Madrie (#99) / Mikaio Edward (#97)",
+                  "high_school": "Federal Way HS",
+                  "hometown": "Kent, Wash.",
+                  "jersey": 97,
+                  "name": "Mikaio Edward",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -737,51 +741,6 @@
         {
           "depth": [
             {
-              "co_listed": true,
-              "players": [
-                {
-                  "city": "Los Gatos",
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": "Los Gatos HS",
-                  "hometown": "Los Gatos, Calif.",
-                  "jersey": 43,
-                  "name": "Jake Ripp",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": "Calif."
-                },
-                {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": null,
-                  "name": "Logan Brantley (#17) (coach: either-or",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": null
-                },
-                {
-                  "city": null,
-                  "class": null,
-                  "class_raw": null,
-                  "high_school": null,
-                  "hometown": null,
-                  "jersey": null,
-                  "name": "both banged up in camp)",
-                  "note": null,
-                  "previous_schools": null,
-                  "stars": null,
-                  "state": null
-                }
-              ],
-              "rank": 1
-            },
-            {
               "co_listed": false,
               "players": [
                 {
@@ -814,8 +773,8 @@
                   "class_raw": "rotation",
                   "high_school": "Centennial HS",
                   "hometown": "Eastvale, Calif.",
-                  "jersey": null,
-                  "name": "Jaden Mickey (#7)",
+                  "jersey": 7,
+                  "name": "Jaden Mickey",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
@@ -857,8 +816,8 @@
                   "class_raw": "rotation with Mickey/Smith",
                   "high_school": "Westlake HS",
                   "hometown": "Atlanta, Ga.",
-                  "jersey": null,
-                  "name": "JeRico Washington Jr. (#6)",
+                  "jersey": 6,
+                  "name": "JeRico Washington Jr.",
                   "note": null,
                   "previous_schools": null,
                   "stars": null,
