@@ -13,6 +13,8 @@ import {
   getStadiumBySlug,
   getTeam,
   getTeamBySlug,
+  getTeamLeaders,
+  getTeamRatings,
   getTeamSeasons,
   injuriesAsOf,
   modelEstimatesAvailable,
@@ -1298,6 +1300,9 @@ function TeamDetail({ team }: { team: Team }) {
   const depth = getDepthChart(team.slug);
   const injuries = getInjuries(team.slug);
   const seasons = getTeamSeasons(team.slug);
+  const ratings = getTeamRatings(team.slug);
+  const ratingBySeason = new Map(ratings.map((row) => [row.season, row]));
+  const leaders = getTeamLeaders(team.slug);
   return (
     <>
       <div className="team-page-hero">
@@ -1350,16 +1355,46 @@ function TeamDetail({ team }: { team: Team }) {
           <SectionHeading eyebrow="HISTORY" title="Season by season" />
           {seasons.length ? (
             <div className="portal-list">
-              {seasons.slice(0, 5).map((row) => (
-                <div className="portal-row" key={row.season}>
-                  <span className="status status--final">{row.season}</span>
-                  <span><strong>{row.g ?? "—"} games</strong><small>{row.op != null ? `${row.op} pts/g for · ${row.dp ?? "—"} against` : "rates not listed"}</small></span>
-                  <b>{row.oy != null ? `${row.oy} yds/g` : "—"}</b>
-                </div>
-              ))}
+              {seasons.slice(0, 5).map((row) => {
+                const rating = ratingBySeason.get(row.season);
+                return (
+                  <div className="portal-row" key={row.season}>
+                    <span className="status status--final">{row.season}</span>
+                    <span>
+                      <strong>{row.g ?? "—"} games{rating?.record ? ` · ${rating.record}` : ""}</strong>
+                      <small>
+                        {row.op != null ? `${row.op} pts/g for · ${row.dp ?? "—"} against` : "rates not listed"}
+                        {rating?.feiRank ? ` · FEI No. ${rating.feiRank}` : ""}
+                        {rating?.spRank ? ` · SP+ No. ${rating.spRank}` : ""}
+                      </small>
+                    </span>
+                    <b>{rating?.spPlus != null ? `SP+ ${rating.spPlus}` : row.oy != null ? `${row.oy} yds/g` : "—"}</b>
+                  </div>
+                );
+              })}
             </div>
           ) : (
             <p className="panel-note">Historical season data is not published for this program.</p>
+          )}
+        </div>
+        <div className="dashboard-panel">
+          <SectionHeading eyebrow="LEADERBOARD HISTORY" title="Top-10 finishes" />
+          {leaders.length ? (
+            <div className="portal-list">
+              {leaders.slice(0, 8).map((row, index) => (
+                <div className="portal-row" key={`${row.season}-${row.category}-${row.player}-${index}`}>
+                  <span className="status status--scheduled">{row.season}</span>
+                  <span>
+                    <strong>{row.player ?? "Unlisted"}</strong>
+                    <small>{row.category}</small>
+                  </span>
+                  <b>No. {row.rank}</b>
+                </div>
+              ))}
+              {leaders.length > 8 ? <p className="panel-note">+{leaders.length - 8} more top-10 finishes since 2012</p> : null}
+            </div>
+          ) : (
+            <p className="panel-note">No top-10 national leaderboard finishes recorded for this program since 2012.</p>
           )}
         </div>
         <div className="dashboard-panel dashboard-panel--wide">

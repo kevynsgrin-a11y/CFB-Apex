@@ -430,6 +430,35 @@ export function getTeamSeasons(slug: string): TeamSeasonRow[] {
     .filter((row): row is TeamSeasonRow => row !== null);
 }
 
+export interface TeamRatingRow {
+  season: string;
+  feiRank: number | null;
+  fei: number | null;
+  spRank: number | null;
+  spPlus: number | null;
+  record: string | null;
+}
+
+export interface TeamLeaderRow {
+  season: string;
+  category: string;
+  player: string | null;
+  rank: number | null;
+}
+
+const ratingsBySlug = bundle.teamRatings as Record<string, TeamRatingRow[]>;
+const leadersBySlug = bundle.teamLeaders as Record<string, TeamLeaderRow[]>;
+
+/** FEI / SP+ finishes per team, most recent season first. */
+export function getTeamRatings(slug: string): TeamRatingRow[] {
+  return ratingsBySlug[slug] ?? [];
+}
+
+/** Top-10 individual leaderboard finishes by this team's players, latest first. */
+export function getTeamLeaders(slug: string): TeamLeaderRow[] {
+  return leadersBySlug[slug] ?? [];
+}
+
 export const seasonRules: SeasonRules = {
   id: "season-2026",
   season: 2026,
