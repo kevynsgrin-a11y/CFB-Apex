@@ -147,12 +147,13 @@ function Header({
 }
 
 function ScoreRibbon() {
+  const finals = games.filter((game) => game.status === "final").length;
   return (
     <section className="score-ribbon" aria-label="Featured scores">
       <div className="score-ribbon__rail">
         <div className="score-ribbon__date">
-          <span>WEEK 12</span>
-          <strong>SAT · NOV 14</strong>
+          <span>2026 SEASON</span>
+          <strong>{finals} FINAL · {games.length - finals} SCHEDULED</strong>
         </div>
         {games.slice(0, 4).map((game) => {
           const away = teamFor(game.awayTeamId);
@@ -1471,7 +1472,7 @@ function TeamDetail({ team }: { team: Team }) {
               <p className="panel-note">First six positions per unit shown; the full chart carries every listed position.</p>
             </div>
           ) : (
-            <p className="panel-note">Depth chart not available for this team — the research package covers the seven rostered conferences (92 of 138 programs).</p>
+            <p className="panel-note">Depth chart not available for this team — charts cover the seven rostered conferences plus projected SEC charts (108 of 138 programs).</p>
           )}
         </div>
         <div className="dashboard-panel dashboard-panel--wide">
