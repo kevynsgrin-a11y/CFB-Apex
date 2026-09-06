@@ -81,7 +81,7 @@ jobs:
 
       - name: Stage dataset into the worker's asset directory
         if: steps.creds.outputs.ready == 'true'
-        run: npm run -w @cfb-apex/data-api build
+        run: npm run -w @cfb-apex/data build && npm run -w @cfb-apex/data-api build
 
       - name: Deploy
         if: steps.creds.outputs.ready == 'true'
