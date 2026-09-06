@@ -1,0 +1,98 @@
+{
+  "head_coach": {
+    "first_season": 7,
+    "name": "Ricky Rahne",
+    "title_raw": "Ricky Rahne (7th season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed as an official 2026 athletics base tag; prior beat writing attributed a flexible 3-3-5 / STAR nickel to Seiler (pre-2026). No exclusive 2026 base republished on odusports.com",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single branded system on odusports.com for the Cook era; continuity under Rahne with Cook elevated from WR to OC/QB",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "odusports.com Football 2026 roster / coaching staff",
+      "url": "https://odusports.com/sports/football/roster"
+    },
+    {
+      "title": "Rahne announces offensive staff completion",
+      "url": "https://odusports.com/news/2026/01/8/rahne-announces-completion-of-offensive-coaching-staff"
+    },
+    {
+      "title": "2026 Old Dominion Monarchs football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Old_Dominion_Monarchs_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Ricky Rahne",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Ricky Rahne (7th season)"
+    },
+    {
+      "name": "Kody Cook",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kody Cook (OC / Quarterbacks; promoted for 2026)"
+    },
+    {
+      "name": "Blake Seiler",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Blake Seiler (DC / Inside Linebackers)"
+    },
+    {
+      "name": "Kevin Smith",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Kevin Smith (STC / Outside Linebackers)"
+    },
+    {
+      "name": "Kody Cook",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Kody Cook"
+    },
+    {
+      "name": "Tony Lucas",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Tony Lucas (Running Backs / Assistant Head Coach)"
+    },
+    {
+      "name": "Michael Smith",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Michael Smith"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Old Dominion",
+    "slug": "old-dominion"
+  }
+}

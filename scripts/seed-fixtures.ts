@@ -1,16 +1,17 @@
-import { coaches, dfsPlayers, games, portalEvents, stadiums, teams } from "../lib/fixtures.ts";
+import { coaches, games, portalEvents, stadiums, teams } from "../lib/cfb-dataset.ts";
 
 const counts = {
   teams: teams.length,
   games: games.length,
   portalEvents: portalEvents.length,
   coaches: coaches.length,
-  dfsPlayers: dfsPlayers.length,
   stadiums: stadiums.length,
 };
 
-if (Object.values(counts).some((value) => value === 0)) {
-  throw new Error("Fixture pack is incomplete.");
+// Portal and stadium surfaces are intentionally empty in the 2026 research
+// dataset; teams, games, and coaches must always be present.
+if (counts.teams === 0 || counts.games === 0 || counts.coaches === 0) {
+  throw new Error("Dataset pack is incomplete.");
 }
 
-console.log("Fixture seed check: PASS", counts);
+console.log("Dataset seed check: PASS", counts);

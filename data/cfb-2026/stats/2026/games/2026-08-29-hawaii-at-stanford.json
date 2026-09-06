@@ -1,0 +1,102 @@
+{
+  "away_slug": "hawaii",
+  "date": "2026-08-29",
+  "game_id": "2026-08-29-hawaii-at-stanford",
+  "home_slug": "stanford",
+  "leaders": {},
+  "line_score": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "game",
+    "notes": [
+      "Sample sizes are a single game for nearly every team. These are Week 0 / early Week 1 snapshots, not season rates, and must not be presented as season averages."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/03-season-2026-week0-early-stats.md"
+    ]
+  },
+  "narrative": "Stanford nearly blew a late lead; Micah Ford’s third rushing TD (2 yards, 1:41 remaining) closed out the win in Tavita Pritchard’s coaching debut.",
+  "neutral_site": false,
+  "note": null,
+  "scoring_plays": [],
+  "season": 2026,
+  "site": "Stanford Stadium",
+  "sources": [
+    {
+      "title": "ESPN box score",
+      "url": "https://www.espn.com/college-football/boxscore/_/gameId/401858201"
+    },
+    {
+      "title": "ESPN recap",
+      "url": "https://www.espn.com/college-football/recap?gameId=401858201"
+    }
+  ],
+  "team_stats": {
+    "columns": [
+      {
+        "label": "Hawaiʻi",
+        "team_slug": "hawaii"
+      },
+      {
+        "label": "Stanford",
+        "team_slug": "stanford"
+      }
+    ],
+    "normalized": {
+      "Hawaiʻi": {
+        "passing": "31–52, 276 yds, 2 TD, 0 INT",
+        "rushing": "22–46–2"
+      },
+      "Stanford": {
+        "passing": "22–34, 310 yds, 1 TD, 0 INT",
+        "rushing": "37–173–3"
+      }
+    },
+    "rows": [
+      {
+        "statistic": "Passing",
+        "values": {
+          "Hawaiʻi": "31–52, 276 yds, 2 TD, 0 INT",
+          "Stanford": "22–34, 310 yds, 1 TD, 0 INT"
+        }
+      },
+      {
+        "statistic": "Rushing",
+        "values": {
+          "Hawaiʻi": "22–46–2",
+          "Stanford": "37–173–3"
+        }
+      },
+      {
+        "statistic": "Micah Ford (STAN)",
+        "values": {
+          "Hawaiʻi": null,
+          "Stanford": "25 rush, 99 yds, 3 TD"
+        }
+      },
+      {
+        "statistic": "Davis Warren (STAN)",
+        "values": {
+          "Hawaiʻi": null,
+          "Stanford": "22/34, 310 yds, 1 TD"
+        }
+      }
+    ]
+  },
+  "teams": [
+    {
+      "name": "Stanford",
+      "points": 37,
+      "slug": "stanford"
+    },
+    {
+      "name": "Hawaiʻi",
+      "points": 27,
+      "slug": "hawaii"
+    }
+  ],
+  "title": "Stanford 37, Hawaiʻi 27",
+  "tv": "ACC Network"
+}

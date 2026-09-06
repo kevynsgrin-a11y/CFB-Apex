@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Manny Diaz",
+    "title_raw": "Manny Diaz"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Patke / Diaz attacking defense described in beat coverage without a published exclusive base-front tag on coaches page)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single branded system on goduke.com; Brewer continuity from ACC title year — treat formal brand as Not listed",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "goduke.com 2026 Football Coaches",
+      "url": "https://goduke.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 Duke Blue Devils football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Duke_Blue_Devils_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Manny Diaz",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Manny Diaz"
+    },
+    {
+      "name": "Jonathan Brewer",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jonathan Brewer (Hall Family Offensive Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "Jonathan Patke",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jonathan Patke (Defensive Coordinator / Linebackers)"
+    },
+    {
+      "name": "Gabe Infante",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Gabe Infante (Baxter Family Assistant Head Coach / Special Teams Coordinator / Defensive Line)"
+    },
+    {
+      "name": "Jonathan Brewer",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Jonathan Brewer"
+    },
+    {
+      "name": "Rodney Freeman II",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Rodney Freeman II"
+    },
+    {
+      "name": "Zohn Burden",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Zohn Burden"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Duke",
+    "slug": "duke"
+  }
+}

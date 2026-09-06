@@ -30,7 +30,7 @@ test("server-renders the finished home utility", async () => {
 
   const html = await response.text();
   assert.match(html, /Every Saturday/);
-  assert.match(html, /Demonstration environment/);
+  assert.match(html, /2026 FBS dataset/);
   assert.match(html, /Clean Mode/);
   assert.match(html, /What do you need/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
@@ -48,15 +48,18 @@ test("www canonicalizes to the apex domain without losing the request target", a
   assert.match(response.headers.get("strict-transport-security") ?? "", /includeSubDomains/);
 });
 
-test("critical product routes render fixture-backed content", async () => {
+test("critical product routes render dataset-backed content", async () => {
   const routes = [
     ["/scores", /The slate, without the scavenger hunt/],
-    ["/transfer-portal", /Roster movement, in the open/],
+    ["/transfer-portal", /NOT AVAILABLE IN THIS DATASET/],
     ["/playoff-predictor", /You call the Saturdays/],
     ["/coaching-carousel", /Separate the contract/],
     ["/dfs", /DFS stays behind a deliberate choice/],
-    ["/stadiums/harbor-field", /Harbor Field/],
-    ["/games/game-nco-ptb", /Why the model leans this way/],
+    ["/stadiums", /NOT AVAILABLE IN THIS DATASET/],
+    ["/teams", /All 138 FBS programs/],
+    ["/teams/clemson", /Clemson Tigers/],
+    ["/coaches/dabo-swinney", /Dabo Swinney/],
+    ["/games/2026-08-29-hawaii-at-stanford", /Stanford/],
   ];
 
   for (const [path, pattern] of routes) {
@@ -66,10 +69,10 @@ test("critical product routes render fixture-backed content", async () => {
   }
 });
 
-test("health and readiness endpoints disclose fixture state", async () => {
+test("health and readiness endpoints disclose dataset state", async () => {
   const health = await fetchRoute("/api/health", { headers: { accept: "application/json" } });
   assert.equal(health.status, 200);
-  assert.equal((await health.json()).dataEnvironment, "fixture");
+  assert.equal((await health.json()).dataEnvironment, "dataset");
 
   const readiness = await fetchRoute("/api/readiness", { headers: { accept: "application/json" } });
   const data = await readiness.json();
@@ -81,6 +84,15 @@ test("health and readiness endpoints disclose fixture state", async () => {
 });
 
 test("simulation API rejects invalid scenario participants and caps work", async () => {
+  // Any real scheduled game and one of its real participants.
+  const board = await fetchRoute("/api/simulate", {
+    method: "POST",
+    headers: { accept: "application/json", "content-type": "application/json" },
+    body: JSON.stringify({ iterations: 100_000 }),
+  });
+  assert.equal(board.status, 200);
+  assert.equal((await board.json()).iterations, 20_000);
+
   const invalid = await fetchRoute("/api/simulate", {
     method: "POST",
     headers: { accept: "application/json", "content-type": "application/json" },
@@ -88,11 +100,10 @@ test("simulation API rejects invalid scenario participants and caps work", async
   });
   assert.equal(invalid.status, 400);
 
-  const valid = await fetchRoute("/api/simulate", {
+  const unknownTeam = await fetchRoute("/api/simulate", {
     method: "POST",
     headers: { accept: "application/json", "content-type": "application/json" },
-    body: JSON.stringify({ forced: { "scenario-1": "team-1" }, iterations: 100_000 }),
+    body: JSON.stringify({ forced: { "scenario-1": "clemson" }, iterations: 100_000 }),
   });
-  assert.equal(valid.status, 200);
-  assert.equal((await valid.json()).iterations, 20_000);
+  assert.equal(unknownTeam.status, 400);
 });

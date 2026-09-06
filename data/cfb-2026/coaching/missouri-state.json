@@ -1,0 +1,104 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Casey Woods",
+    "title_raw": "Casey Woods"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/cusa.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, takeaway-oriented defense under Curtis (prior Auburn / Tulane stops; Woods quoted on turnovers and sacks pedigree). Exclusive published base front label Not listed. (missouristatebears.com Curtis hire; Herald-Dispatch.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Up-tempo, spread-oriented offense drawing on Woods’ SMU (Rhett Lashlee) OC background; physical one-back power emphasis noted in Woods interviews. Exclusive single named playbook label Not listed on official coaches page. (Marshall opponent preview / Herald-Dispatch; Springfield Daily Citizen; moremostate Substack.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "missouristatebears.com/sports/football/coaches",
+      "url": "https://missouristatebears.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Casey Woods",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Missouri State athletics (1st season; hired Dec. 2025)",
+      "title_raw": "Casey Woods"
+    },
+    {
+      "name": "Mark Cala",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Missouri State athletics",
+      "title_raw": "Mark Cala (OC / Quarterbacks)"
+    },
+    {
+      "name": "Jack Curtis",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Missouri State athletics; Jan. 6, 2026 hire release",
+      "title_raw": "Jack Curtis (DC / Safeties)"
+    },
+    {
+      "name": "Sparky Woods",
+      "role_key": "other",
+      "role_raw": "Special Teams",
+      "source_note": "Official Missouri State athletics — no single “Special Teams Coordinator” title; duties split",
+      "title_raw": "Sparky Woods (Chief of Staff / Offensive Special Teams)"
+    },
+    {
+      "name": "Blake Shrader",
+      "role_key": "other",
+      "role_raw": "Special Teams",
+      "source_note": "Official Missouri State athletics — no single “Special Teams Coordinator” title; duties split",
+      "title_raw": "Blake Shrader (Linebackers / Defensive Special Teams)"
+    },
+    {
+      "name": "Adam Ieyoub",
+      "role_key": "other",
+      "role_raw": "Special Teams",
+      "source_note": "Official Missouri State athletics — no single “Special Teams Coordinator” title; duties split",
+      "title_raw": "Adam Ieyoub (Assistant Special Teams)"
+    },
+    {
+      "name": "Mark Cala",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title pairs OC / Quarterbacks",
+      "title_raw": "Mark Cala"
+    },
+    {
+      "name": "Tyler Foster",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Missouri State athletics",
+      "title_raw": "Tyler Foster"
+    },
+    {
+      "name": "Jacoby Walker",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Missouri State athletics",
+      "title_raw": "Jacoby Walker"
+    }
+  ],
+  "team": {
+    "conference_slug": "cusa",
+    "school": "Missouri State",
+    "slug": "missouri-state"
+  }
+}

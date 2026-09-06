@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Dan Mullen",
+    "title_raw": "Dan Mullen"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "NFL-rooted, communication-heavy scheme under Guenther in his first full offseason as DC; staff adds variety and emphasizes fits / coverage communication (Las Vegas Review-Journal; Las Vegas Sun). Exclusive single base-front label Not listed.",
+      "label": null
+    },
+    "offense": {
+      "description": "Continuity of Mullen’s explosive, balanced attack under returning OC Corey Dennis; 2025 unit ranked among national leaders in scoring / total offense, with strong rush and pass production carrying into 2026 previews (Review-Journal / podcast previews). No separate proprietary scheme brand beyond Mullen/Dennis system language was required for labeling.",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "unlvrebels.com 2026 roster coaching staff",
+      "url": "https://unlvrebels.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Dan Mullen",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Dan Mullen"
+    },
+    {
+      "name": "Corey Dennis",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Corey Dennis"
+    },
+    {
+      "name": "Paul Guenther",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Paul Guenther (Associate Head Coach)"
+    },
+    {
+      "name": "Mitch Singler",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Mitch Singler"
+    },
+    {
+      "name": "Corey Dennis",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Corey Dennis"
+    },
+    {
+      "name": "Quinton Ganther",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Quinton Ganther"
+    },
+    {
+      "name": "Del Alexander",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Del Alexander"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "UNLV",
+    "slug": "unlv"
+  }
+}

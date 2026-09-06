@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": 2,
+    "name": "Tony Gibson",
+    "title_raw": "Tony Gibson (2nd season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple (game notes); mix of three- and four-man fronts with 3-3-5 tweaks from Gibson’s prior base (WV MetroNews fall-camp coverage)",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Multiple (Marshall Game 1 notes); Rodriguez-tree spread-option / tempo continuity under Smith (athletics hire release; WV MetroNews / Onward State). Game notes also list offense as Multiple.",
+      "label": "Multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "herdzone.com 2026 Football Coaches",
+      "url": "https://herdzone.com/sports/football/coaches"
+    },
+    {
+      "title": "2026 Marshall Thundering Herd football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Marshall_Thundering_Herd_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tony Gibson",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Tony Gibson (2nd season)"
+    },
+    {
+      "name": "Rod Smith",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Rod Smith (OC / Quarterbacks)"
+    },
+    {
+      "name": "Brad Lambert",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Brad Lambert (DC / Linebackers; 1st season in current stint)"
+    },
+    {
+      "name": "Jackson White",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Jackson White"
+    },
+    {
+      "name": "Rod Smith",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Rod Smith"
+    },
+    {
+      "name": "Rod McDowell",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Rod McDowell"
+    },
+    {
+      "name": "Chansi Stuckey",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Chansi Stuckey"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Marshall",
+    "slug": "marshall"
+  }
+}

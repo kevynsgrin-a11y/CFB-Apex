@@ -1,0 +1,104 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Sonny Dykes",
+    "title_raw": "Sonny Dykes"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Avalos base 4-2-5, pressure-oriented with multiple fronts/disguise (historically also 3-3-5-flavored packages). (Frogs O’War 2026 DL preview; SI Avalos background.)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Post–Kendal Briles shift under Sammis toward a less pure high-octane Air Raid look, with more multiple/TE usage vs. prior Dykes Air Raid years. (Road to CFP preview; Frogs O’War staff preview.)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "gofrogs.com/sports/football/coaches",
+      "url": "https://gofrogs.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Sonny Dykes",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "Sonny Dykes"
+    },
+    {
+      "name": "Gordon Sammis",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "Gordon Sammis"
+    },
+    {
+      "name": "A.J. Ricker",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "A.J. Ricker (Co-Offensive Coordinator / Offensive Line)"
+    },
+    {
+      "name": "Andy Avalos",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "Andy Avalos"
+    },
+    {
+      "name": null,
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "gofrogs.com; Frogs O’War coaching-staff preview",
+      "title_raw": "Mark Tommerdahl identified as STC in 2026 beat preview"
+    },
+    {
+      "name": null,
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "gofrogs.com; Frogs O’War coaching-staff preview",
+      "title_raw": "official directory title is Special Assistant to the Head Coach. Casey Petree: Assistant Special Teams Coach"
+    },
+    {
+      "name": "Brad Robbins",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "Brad Robbins"
+    },
+    {
+      "name": "Antonio Wilcox",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "Antonio Wilcox"
+    },
+    {
+      "name": "Malcolm Kelly",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official TCU coaches page",
+      "title_raw": "Malcolm Kelly (Assistant Head Coach / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "TCU",
+    "slug": "tcu"
+  }
+}

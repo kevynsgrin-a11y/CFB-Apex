@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Major Applewhite",
+    "title_raw": "Major Applewhite (also primary offensive play-caller; no separate titled OC)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple 4-2-5 (Ourlads; program continuity). Orlando has also used 3-4 and 3-3-5 looks historically and says he will fit personnel rather than marry one front (al.com)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Multiple spread (Ourlads); Applewhite restoring a more aggressive, explosive passing complement to a strong run identity (al.com Media Day)",
+      "label": "Multiple spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "usajaguars.com Football Coaches",
+      "url": "https://usajaguars.com/sports/football/coaches"
+    },
+    {
+      "title": "Applewhite announces 2026 staff",
+      "url": "https://usajaguars.com/news/2026/1/20/applewhite-announces-2026-football-coaching-staff.aspx"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Major Applewhite",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Major Applewhite (also primary offensive play-caller; no separate titled OC)"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Not listed as a separate title — Major Applewhite calls the offense (al.com / Diehard Sports Network)"
+    },
+    {
+      "name": "Todd Orlando",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Todd Orlando (DC / Inside Linebackers)"
+    },
+    {
+      "name": "Jason Washington",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jason Washington (Co-DC / Cornerbacks)"
+    },
+    {
+      "name": "Tommy Perry",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Tommy Perry"
+    },
+    {
+      "name": "Zach Crisler",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Zach Crisler"
+    },
+    {
+      "name": "Broderick Fobbs",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Broderick Fobbs"
+    },
+    {
+      "name": "Tim Rattay",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Tim Rattay (Passing Game Coordinator / Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "South Alabama",
+    "slug": "south-alabama"
+  }
+}

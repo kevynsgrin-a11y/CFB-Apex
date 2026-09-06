@@ -1,4 +1,4 @@
-import { scenarioGames, seasonRules, teams } from "./fixtures.ts";
+import { scenarioGames, seasonRules, teams } from "./cfb-dataset.ts";
 import type { SimulationResult } from "./types";
 
 export type ForcedOutcomes = Record<string, string>;

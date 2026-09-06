@@ -1,4 +1,4 @@
-import { providerHealth } from "@/lib/fixtures";
+import { providerHealth } from "@/lib/cfb-dataset";
 import { getProductionGates, isProductionLaunchReady } from "@/lib/release-readiness";
 
 export function GET() {
@@ -7,7 +7,7 @@ export function GET() {
     {
       readyForPreview: true,
       readyForProductionLiveData: isProductionLaunchReady(process.env),
-      fixtureProvider: providerHealth.find((provider) => provider.id === "fixture-sports")?.status,
+      datasetProvider: providerHealth.find((provider) => provider.id === "cfb-apex-dataset")?.status,
       externalDependencies: providerHealth
         .filter((provider) => provider.mode === "production")
         .map(({ id, status, note }) => ({ id, status, note })),

@@ -1,0 +1,113 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jim Mora",
+    "title_raw": "Jim Mora"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, multiple-front approach historically described by Summers as flexible (versions of 4-3, 3-4, 3-3 stack, Bear, and hybrid 3-3-5 / 4-2-5 usage depending on personnel)—not a single static front.",
+      "label": "3-3-5 / 4-2-5"
+    },
+    "offense": {
+      "description": "Run-first offense under Tracy; outside-zone emphasis via OL/run-game coordinator Christian Pace; dual-threat QB usage and tight-end involvement stressed in spring/preview reporting.",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "csurams.com coaches",
+      "url": "https://csurams.com/sports/football/coaches"
+    },
+    {
+      "title": "Mora staff announcement (1/1/2026)",
+      "url": "https://csurams.com/news/2026/1/1/football-mora-names-coordinators-strength-conditioning-position-coaches"
+    },
+    {
+      "title": "Coloradoan offensive staff",
+      "url": "https://www.coloradoan.com/story/sports/csu/football/2026/01/01/jim-moras-2026-colorado-state-football-offensive-staff/87974421007/"
+    },
+    {
+      "title": "Coloradoan defensive staff",
+      "url": "https://www.coloradoan.com/story/sports/csu/football/2026/01/02/jim-mora-2026-colorado-state-football-defensive-staff/87983671007/"
+    },
+    {
+      "title": "csurams.com “Building An Offense…” (4/7/2026)",
+      "url": "https://csurams.com/news/2026/4/7/ramwire-building-an-offense-from-the-ground-floor"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jim Mora",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jim Mora"
+    },
+    {
+      "name": "Pryce Tracy",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Pryce Tracy"
+    },
+    {
+      "name": "Tyson Summers",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tyson Summers"
+    },
+    {
+      "name": "Kenny McClendon",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator / Defensive Line",
+      "source_note": null,
+      "title_raw": "Kenny McClendon (Assistant Head Coach)"
+    },
+    {
+      "name": "Kyle Krantz",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Kyle Krantz (also Jacks / outside linebackers)"
+    },
+    {
+      "name": "Matt Mitchell",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Matt Mitchell (Passing Game Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "David Hill",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "David Hill"
+    },
+    {
+      "name": "Caleb Wilson",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Caleb Wilson"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Colorado State",
+    "slug": "colorado-state"
+  }
+}

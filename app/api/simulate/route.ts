@@ -1,5 +1,5 @@
 import { runPlayoffSimulation } from "@/lib/simulation";
-import { scenarioGames } from "@/lib/fixtures";
+import { scenarioGames } from "@/lib/cfb-dataset";
 
 export async function POST(request: Request) {
   const length = Number(request.headers.get("content-length") ?? "0");

@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Willie Simmons",
+    "title_raw": "Willie Simmons"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/cusa.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple fronts (four-down, three-down, and situational five-down packages) under Dewitt; coverages mix middle-of-field open/closed. Exclusive exclusive-base label (e.g., only 4-2-5) Not listed. (Penn State opponent scouting transcript re: Dewitt; Miami Herald / Letters from Las Cruces.)",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Tempo-based, personnel-adaptable system under Simmons (emphasized getting playmakers the ball in space). Exclusive single “named” playbook label (e.g., Air Raid vs. pro-style) Not listed on official materials reviewed. (CBS Sports Simmons profile; Letters from Las Cruces 2026 foe guide.)",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "fiusports.com football roster coaches",
+      "url": "https://fiusports.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Willie Simmons",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official FIU roster/coaches; Wikipedia 2026 team page (2nd season)",
+      "title_raw": "Willie Simmons"
+    },
+    {
+      "name": "Nick Coleman",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official FIU athletics",
+      "title_raw": "Nick Coleman (OC / Quarterbacks)"
+    },
+    {
+      "name": "Jovan Dewitt",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official FIU athletics; Wikipedia (5th season as DC)",
+      "title_raw": "Jovan Dewitt (Assistant Head Coach / Defensive Coordinator)"
+    },
+    {
+      "name": "Kenneth Gilstrap",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official FIU athletics",
+      "title_raw": "Kenneth Gilstrap (Special Teams Coordinator / Safeties)"
+    },
+    {
+      "name": "Nick Coleman",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title pairs OC / Quarterbacks",
+      "title_raw": "Nick Coleman"
+    },
+    {
+      "name": "Benedick Hyppolite",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official FIU athletics",
+      "title_raw": "Benedick Hyppolite"
+    },
+    {
+      "name": "Jelani Berassa",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official FIU athletics",
+      "title_raw": "Jelani Berassa"
+    }
+  ],
+  "team": {
+    "conference_slug": "cusa",
+    "school": "FIU",
+    "slug": "fiu"
+  }
+}

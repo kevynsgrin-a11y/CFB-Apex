@@ -1,0 +1,238 @@
+{
+  "conferences": [
+    {
+      "name": "American Athletic Conference",
+      "short": "AAC",
+      "slug": "aac",
+      "team_count": 14,
+      "teams": [
+        "army",
+        "charlotte",
+        "east-carolina",
+        "florida-atlantic",
+        "memphis",
+        "navy",
+        "north-texas",
+        "rice",
+        "south-florida",
+        "temple",
+        "tulane",
+        "tulsa",
+        "uab",
+        "utsa"
+      ]
+    },
+    {
+      "name": "Atlantic Coast Conference",
+      "short": "ACC",
+      "slug": "acc",
+      "team_count": 17,
+      "teams": [
+        "boston-college",
+        "california",
+        "clemson",
+        "duke",
+        "florida-state",
+        "georgia-tech",
+        "louisville",
+        "miami-fl",
+        "nc-state",
+        "north-carolina",
+        "pittsburgh",
+        "smu",
+        "stanford",
+        "syracuse",
+        "virginia",
+        "virginia-tech",
+        "wake-forest"
+      ]
+    },
+    {
+      "name": "Big 12 Conference",
+      "short": "B12",
+      "slug": "big12",
+      "team_count": 16,
+      "teams": [
+        "arizona",
+        "arizona-state",
+        "baylor",
+        "byu",
+        "cincinnati",
+        "colorado",
+        "houston",
+        "iowa-state",
+        "kansas",
+        "kansas-state",
+        "oklahoma-state",
+        "tcu",
+        "texas-tech",
+        "ucf",
+        "utah",
+        "west-virginia"
+      ]
+    },
+    {
+      "name": "Big Ten Conference",
+      "short": "B1G",
+      "slug": "big-ten",
+      "team_count": 18,
+      "teams": [
+        "illinois",
+        "indiana",
+        "iowa",
+        "maryland",
+        "michigan",
+        "michigan-state",
+        "minnesota",
+        "nebraska",
+        "northwestern",
+        "ohio-state",
+        "oregon",
+        "penn-state",
+        "purdue",
+        "rutgers",
+        "ucla",
+        "usc",
+        "washington",
+        "wisconsin"
+      ]
+    },
+    {
+      "name": "Conference USA",
+      "short": "CUSA",
+      "slug": "cusa",
+      "team_count": 10,
+      "teams": [
+        "delaware",
+        "fiu",
+        "jacksonville-state",
+        "kennesaw-state",
+        "liberty",
+        "middle-tennessee",
+        "missouri-state",
+        "new-mexico-state",
+        "sam-houston",
+        "western-kentucky"
+      ]
+    },
+    {
+      "name": "FBS Independents",
+      "short": "IND",
+      "slug": "independents",
+      "team_count": 2,
+      "teams": [
+        "notre-dame",
+        "uconn"
+      ]
+    },
+    {
+      "name": "Mid-American Conference",
+      "short": "MAC",
+      "slug": "mac",
+      "team_count": 13,
+      "teams": [
+        "akron",
+        "ball-state",
+        "bowling-green",
+        "buffalo",
+        "central-michigan",
+        "eastern-michigan",
+        "kent-state",
+        "miami-oh",
+        "ohio",
+        "sacramento-state",
+        "toledo",
+        "umass",
+        "western-michigan"
+      ]
+    },
+    {
+      "name": "Mountain West Conference",
+      "short": "MW",
+      "slug": "mountain-west",
+      "team_count": 10,
+      "teams": [
+        "air-force",
+        "hawaii",
+        "nevada",
+        "new-mexico",
+        "north-dakota-state",
+        "northern-illinois",
+        "san-jose-state",
+        "unlv",
+        "utep",
+        "wyoming"
+      ]
+    },
+    {
+      "name": "Pac-12 Conference",
+      "short": "PAC",
+      "slug": "pac12",
+      "team_count": 8,
+      "teams": [
+        "boise-state",
+        "colorado-state",
+        "fresno-state",
+        "oregon-state",
+        "san-diego-state",
+        "texas-state",
+        "utah-state",
+        "washington-state"
+      ]
+    },
+    {
+      "name": "Southeastern Conference",
+      "short": "SEC",
+      "slug": "sec",
+      "team_count": 16,
+      "teams": [
+        "alabama",
+        "arkansas",
+        "auburn",
+        "florida",
+        "georgia",
+        "kentucky",
+        "lsu",
+        "mississippi-state",
+        "missouri",
+        "oklahoma",
+        "ole-miss",
+        "south-carolina",
+        "tennessee",
+        "texas",
+        "texas-am",
+        "vanderbilt"
+      ]
+    },
+    {
+      "name": "Sun Belt Conference",
+      "short": "SBC",
+      "slug": "sun-belt",
+      "team_count": 14,
+      "teams": [
+        "appalachian-state",
+        "arkansas-state",
+        "coastal-carolina",
+        "georgia-southern",
+        "georgia-state",
+        "james-madison",
+        "louisiana",
+        "louisiana-tech",
+        "marshall",
+        "old-dominion",
+        "south-alabama",
+        "southern-miss",
+        "troy",
+        "ulm"
+      ]
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "conferences",
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/*.md"
+    ]
+  }
+}

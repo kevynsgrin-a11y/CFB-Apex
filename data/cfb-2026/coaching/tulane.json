@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Will Hall",
+    "title_raw": "Will Hall"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Polk/Fuqua co-structure with position labels (Bandits, Spears, etc.); exclusive published numeric base-front label Not listed on Tulane athletics materials reviewed. (Tulane athletics.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Hall’s multiple West Coast / spread with tempo capability, versatile tight ends, and “Superback” hybrid RB/slot usage (“Hall Ball”), built around QB strengths. (SI Tulane “Hall Ball” feature.)",
+      "label": "West Coast / spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "tulanegreenwave.com/sports/football/coaches",
+      "url": "https://tulanegreenwave.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Will Hall",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Tulane athletics 2026 coaches page",
+      "title_raw": "Will Hall"
+    },
+    {
+      "name": "Russ Callaway",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Russ Callaway"
+    },
+    {
+      "name": "Tayler Polk",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Tayler Polk (DC / Inside Linebackers)"
+    },
+    {
+      "name": null,
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Nate Fuqua Co-DC / Bandits"
+    },
+    {
+      "name": "Chris Forestier",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Chris Forestier"
+    },
+    {
+      "name": "Collin D'Angelo",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Collin D'Angelo"
+    },
+    {
+      "name": "Brock Hays",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Brock Hays"
+    },
+    {
+      "name": "Carter Sheridan",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Tulane athletics",
+      "title_raw": "Carter Sheridan"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Tulane",
+    "slug": "tulane"
+  }
+}

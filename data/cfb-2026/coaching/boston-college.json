@@ -1,0 +1,98 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Bill O’Brien",
+    "title_raw": "Bill O’Brien"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Roof installing his system; no official 2026 base-front tag on athletics pages consulted)",
+      "label": null
+    },
+    "offense": {
+      "description": "Multi-faceted / pro-style attack with formational diversity and mobile-QB integration (O’Brien / BC athletics preseason reporting, Aug. 2026; ACC Media Days comments)",
+      "label": "pro-style"
+    }
+  },
+  "sources": [
+    {
+      "title": "bceagles.com 2026 Football Coaches",
+      "url": "https://bceagles.com/sports/football/coaches"
+    },
+    {
+      "title": "BC athletics preseason offense feature",
+      "url": "https://bceagles.com/news/2026/8/7/-forboston-files-2026-boston-college-football-preseason-offensive-reconfiguration-takes-first-stage"
+    },
+    {
+      "title": "List of current NCAA Division I FBS football coaches",
+      "url": "https://en.wikipedia.org/wiki/List_of_current_NCAA_Division_I_FBS_football_coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Bill O’Brien",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Bill O’Brien"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Not listed as a separate title (HC Bill O’Brien listed as offensive coordinator on FBS coaches compilation; no discrete OC on bceagles.com 2026 coaches page)"
+    },
+    {
+      "name": "Ted Roof",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Ted Roof (Kevin T. Fee Family Defensive Coordinator)"
+    },
+    {
+      "name": "Matt Thurin",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Matt Thurin (Special Teams Coordinator / Safeties)"
+    },
+    {
+      "name": "Jonathan DiBiaso",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Jonathan DiBiaso (Matt and Rebecca Carroll Family Quarterbacks Coach)"
+    },
+    {
+      "name": "Mike Hart",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Mike Hart"
+    },
+    {
+      "name": "Joe Dailey",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Joe Dailey"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Boston College",
+    "slug": "boston-college"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "head_coach": {
+    "first_season": 2,
+    "name": "Dowell Loggains",
+    "title_raw": "Dowell Loggains (2nd season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (no single official 2026 base-front tag located on athletics pages; D. J. Smith continues as DC / LB)",
+      "label": null
+    },
+    "offense": {
+      "description": "Tempo / spread passing attack from the Kendal Briles tree (Anthony longtime Briles associate; ESPN / NCFootballNews / App State hire coverage). Loggains retains play-calling authority in beat reporting.",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "appstatesports.com roster / coaching staff",
+      "url": "https://appstatesports.com/sports/football/roster"
+    },
+    {
+      "title": "App State hires Anthony as OC",
+      "url": "https://appstatesports.com/news/2026/2/6/app-state-football-hires-anthony-as-offensive-coordinator.aspx"
+    },
+    {
+      "title": "2026 Appalachian State Mountaineers football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Appalachian_State_Mountaineers_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Dowell Loggains",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Dowell Loggains (2nd season)"
+    },
+    {
+      "name": "Mike Anthony",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Mike Anthony (1st season)"
+    },
+    {
+      "name": "D. J. Smith",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "D. J. Smith (DC / Linebackers; 2nd season as DC)"
+    },
+    {
+      "name": "Tyler Zielenske",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Tyler Zielenske"
+    },
+    {
+      "name": "Riley Watkins",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Riley Watkins"
+    },
+    {
+      "name": "Tyler Kelley",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Tyler Kelley"
+    },
+    {
+      "name": "Justin Harper",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Justin Harper"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Appalachian State",
+    "slug": "appalachian-state"
+  }
+}

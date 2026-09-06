@@ -6,6 +6,11 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "dataset:build": "node scripts/build-dataset.mjs",
+    "predataset:check": "node scripts/build-dataset.mjs",
+    "predev": "node scripts/build-dataset.mjs",
+    "prebuild": "node scripts/build-dataset.mjs",
+    "pretest": "node scripts/build-dataset.mjs",
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",

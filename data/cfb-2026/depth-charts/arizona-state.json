@@ -1,0 +1,975 @@
+{
+  "conflicts": [],
+  "injury_notes": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "depth-chart",
+    "notes": [
+      "status is the source's own label: OFFICIAL is a published team two-deep, MIXED is partly confirmed, PROJECTED is a synthesis of Ourlads and beat reporting. Do not present a PROJECTED chart as a team's official depth chart.",
+      "Where the per-team file and the conference summary name different starters, both are kept and the disagreement is listed in conflicts."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "01-rosters/big12-2026/01-starter-depth-charts-summary.md",
+      "01-rosters/big12-2026/arizona-state.md"
+    ]
+  },
+  "schemes": {
+    "defense": null,
+    "offense": null,
+    "special_teams": null
+  },
+  "status": "OFFICIAL",
+  "status_caveat": "Week 1 team chart vs Morgan State (reported ~Sept 2, 2026 via azcentral / Arizona Sports) + official athletics roster",
+  "status_raw": "OFFICIAL",
+  "suspension_notes": [],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Arizona State",
+    "slug": "arizona-state"
+  },
+  "units": [
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Hodgenville",
+                  "class": "JR",
+                  "class_raw": "Jr. (RS SO)",
+                  "high_school": "Lexington Christian Academy",
+                  "hometown": "Hodgenville, Ky.",
+                  "jersey": null,
+                  "name": "Cutter Boley",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ky."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "QB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Lancaster",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Lancaster",
+                  "hometown": "Lancaster, Texas",
+                  "jersey": null,
+                  "name": "Kyson Brown",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Milford",
+                  "class": "6TH",
+                  "class_raw": "6th (RS SR)",
+                  "high_school": "Milford",
+                  "hometown": "Milford, Del.",
+                  "jersey": null,
+                  "name": "Marquis Gillis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Del."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Great Falls",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Great Falls",
+                  "hometown": "Great Falls, Mont.",
+                  "jersey": null,
+                  "name": "Reed Harris",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mont."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR (X)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Vivian",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "North Caddo",
+                  "hometown": "Vivian, La.",
+                  "jersey": null,
+                  "name": "Omarion Miller",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "F"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Menlo Park",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Menlo-Atherton",
+                  "hometown": "Menlo Park, Calif.",
+                  "jersey": null,
+                  "name": "Jalen Moss",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                },
+                {
+                  "city": "Gainesville",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "F.W. Buchholz",
+                  "hometown": "Gainesville, Fla.",
+                  "jersey": null,
+                  "name": "Jaren Hamilton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR (Z)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Tempe",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "IMG Academy",
+                  "hometown": "Tempe, Ariz.",
+                  "jersey": null,
+                  "name": "Raiden Vines-Bright",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "WR (Y)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Detroit",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Cass Tech",
+                  "hometown": "Detroit, Mich.",
+                  "jersey": null,
+                  "name": "Khamari Anderson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                },
+                {
+                  "city": null,
+                  "class": null,
+                  "class_raw": null,
+                  "high_school": null,
+                  "hometown": null,
+                  "jersey": null,
+                  "name": "A.J. Ia",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": null
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "TE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Thousand Oaks",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Oaks Christian",
+                  "hometown": "Thousand Oaks, Calif.",
+                  "jersey": null,
+                  "name": "Luke Baklenko",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                },
+                {
+                  "city": "Los Angeles",
+                  "class": "JR",
+                  "class_raw": "Jr. (RS SO)",
+                  "high_school": "Loyola",
+                  "hometown": "Los Angeles, Calif.",
+                  "jersey": null,
+                  "name": "Champ Westbrooks",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Long Beach",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Millikan",
+                  "hometown": "Long Beach, Calif.",
+                  "jersey": null,
+                  "name": "Maki Stewart",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Brownsburg",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "IMG Academy",
+                  "hometown": "Brownsburg, Ind.",
+                  "jersey": null,
+                  "name": "Tana Alo-Tupuola",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ind."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "C"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Corona",
+                  "class": "JR",
+                  "class_raw": "Jr. (RS SO)",
+                  "high_school": "Centennial",
+                  "hometown": "Corona, Calif.",
+                  "jersey": null,
+                  "name": "Wade Helton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                },
+                {
+                  "city": "West Valley City",
+                  "class": "SO",
+                  "class_raw": "So. (RS FR)",
+                  "high_school": "West",
+                  "hometown": "West Valley City, Utah",
+                  "jersey": null,
+                  "name": "Rob Lapuaho",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Utah"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RG"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Mars",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Pine-Richland",
+                  "hometown": "Mars, Pa.",
+                  "jersey": null,
+                  "name": "Jalen Klemm",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Pa."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "RT"
+        }
+      ],
+      "scheme": null,
+      "unit": "offense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Baton Rouge",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "University Lab",
+                  "hometown": "Baton Rouge, La.",
+                  "jersey": null,
+                  "name": "Roman Pitre",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La."
+                },
+                {
+                  "city": "Portland",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Central Catholic",
+                  "hometown": "Portland, Ore.",
+                  "jersey": null,
+                  "name": "Emar'rion Winston",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ore."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Tatum",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Tatum",
+                  "hometown": "Tatum, Texas",
+                  "jersey": null,
+                  "name": "C.J. Fite",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Waimanalo",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Kailua",
+                  "hometown": "Waimanalo, Hawaii",
+                  "jersey": null,
+                  "name": "Blazen Lono-Wong",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Hawaii"
+                },
+                {
+                  "city": "Phoenix",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Brophy Prep",
+                  "hometown": "Phoenix, Ariz.",
+                  "jersey": null,
+                  "name": "Zac Swanson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DT"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Detroit",
+                  "class": "SR",
+                  "class_raw": "Sr.",
+                  "high_school": "Cass Tech",
+                  "hometown": "Detroit, Mich.",
+                  "jersey": null,
+                  "name": "Jalen Thompson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "DE"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Queen City",
+                  "class": "6TH",
+                  "class_raw": "6th (GR)",
+                  "high_school": "Texas HS",
+                  "hometown": "Queen City, Texas",
+                  "jersey": null,
+                  "name": "Clayton Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "R (EDGE/Jack)"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Whittier",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "La Serna",
+                  "hometown": "Whittier, Calif.",
+                  "jersey": null,
+                  "name": "Owen Long",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "San Diego",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Madison",
+                  "hometown": "San Diego, Calif.",
+                  "jersey": null,
+                  "name": "Martell Hughes",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Houston",
+                  "class": "JR",
+                  "class_raw": "Jr. (RS SO Ourlads)",
+                  "high_school": "Dickinson",
+                  "hometown": "Houston, Texas",
+                  "jersey": null,
+                  "name": "Rodney Bimage Jr.",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Harvey",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Archbishop Rummel",
+                  "hometown": "Harvey, La.",
+                  "jersey": null,
+                  "name": "Ashton Stamps",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "La."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "CB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Marshall",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Marshall",
+                  "hometown": "Marshall, Texas",
+                  "jersey": null,
+                  "name": "Montana Warren",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                },
+                {
+                  "city": "Dallas",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Keller Central",
+                  "hometown": "Dallas, Texas",
+                  "jersey": null,
+                  "name": "Adrian \"Boogie\" Wilson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "NB"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Dallas",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Keller Central",
+                  "hometown": "Dallas, Texas",
+                  "jersey": null,
+                  "name": "Adrian \"Boogie\" Wilson",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                },
+                {
+                  "city": "Tallahassee",
+                  "class": "SO",
+                  "class_raw": "So.",
+                  "high_school": "Florida State University School",
+                  "hometown": "Tallahassee, Fla.",
+                  "jersey": null,
+                  "name": "Jessiah McGrew",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "FS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Marshall",
+                  "class": "6TH",
+                  "class_raw": "6th (RS SR)",
+                  "high_school": "Marshall",
+                  "hometown": "Marshall, Texas",
+                  "jersey": null,
+                  "name": "Lyrik Rawls",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                },
+                {
+                  "city": "Marshall",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Marshall",
+                  "hometown": "Marshall, Texas",
+                  "jersey": null,
+                  "name": "Montana Warren",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Texas"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "SS"
+        }
+      ],
+      "scheme": null,
+      "unit": "defense"
+    },
+    {
+      "positions": [
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Scottsdale",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Horizon",
+                  "hometown": "Scottsdale, Ariz.",
+                  "jersey": null,
+                  "name": "Kanyon Floyd",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                },
+                {
+                  "city": "Melbourne",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS SO)",
+                  "high_school": "Caulfield Grammar & Punt Factory",
+                  "hometown": "Melbourne, Australia",
+                  "jersey": null,
+                  "name": "Nick McLarty",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Australia"
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "P"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "Belmont",
+                  "class": "6TH",
+                  "class_raw": "6th (RS SR)",
+                  "high_school": "South Point",
+                  "hometown": "Belmont, N.C.",
+                  "jersey": null,
+                  "name": "Carson Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C."
+                },
+                {
+                  "city": "Tempe",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "Corona Del Sol",
+                  "hometown": "Tempe, Ariz.",
+                  "jersey": null,
+                  "name": "Carston Kieffer",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "PK"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Belmont",
+                  "class": "6TH",
+                  "class_raw": "6th (RS SR)",
+                  "high_school": "South Point",
+                  "hometown": "Belmont, N.C.",
+                  "jersey": null,
+                  "name": "Carson Smith",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "N.C."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "KO"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": true,
+              "players": [
+                {
+                  "city": "East Lansing",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Haslett",
+                  "hometown": "East Lansing, Mich.",
+                  "jersey": null,
+                  "name": "Grayson Curtis",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Mich."
+                },
+                {
+                  "city": "Glendale",
+                  "class": "5TH",
+                  "class_raw": "5th (RS SR)",
+                  "high_school": "Mountain Ridge",
+                  "hometown": "Glendale, Ariz.",
+                  "jersey": null,
+                  "name": "Tyler Wigglesworth",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "LS"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Scottsdale",
+                  "class": "JR",
+                  "class_raw": "Jr.",
+                  "high_school": "Horizon",
+                  "hometown": "Scottsdale, Ariz.",
+                  "jersey": null,
+                  "name": "Kanyon Floyd",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Ariz."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "H"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Corona",
+                  "class": "SO",
+                  "class_raw": "So. (RS FR)",
+                  "high_school": "Centennial",
+                  "hometown": "Corona, Calif.",
+                  "jersey": null,
+                  "name": "Cory Butler",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Calif."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "PR"
+        },
+        {
+          "depth": [
+            {
+              "co_listed": false,
+              "players": [
+                {
+                  "city": "Gainesville",
+                  "class": "SR",
+                  "class_raw": "Sr. (RS JR)",
+                  "high_school": "F.W. Buchholz",
+                  "hometown": "Gainesville, Fla.",
+                  "jersey": null,
+                  "name": "Jaren Hamilton",
+                  "note": null,
+                  "previous_schools": null,
+                  "stars": null,
+                  "state": "Fla."
+                }
+              ],
+              "rank": 1
+            }
+          ],
+          "position": "KR"
+        }
+      ],
+      "scheme": null,
+      "unit": "special_teams"
+    }
+  ]
+}

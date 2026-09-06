@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Mike Elko",
+    "title_raw": "Mike Elko"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Elko historically 4–2–5-oriented; Hemphill/Robinson titles published without an official 2026 base-front label on 12thman.com roster staff table)",
+      "label": null
+    },
+    "offense": {
+      "description": "11-personnel, pass-leaning attack; players/media have described Air Raid influence under Wiggins (Austin American-Statesman spring reporting) after prior Collin Klein 12-personnel run emphasis",
+      "label": "Air Raid"
+    }
+  },
+  "sources": [
+    {
+      "title": "12thman.com 2026 Football Roster / coaching staff",
+      "url": "https://12thman.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Mike Elko",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Mike Elko"
+    },
+    {
+      "name": "Holmon Wiggins",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Holmon Wiggins"
+    },
+    {
+      "name": "Lyle Hemphill",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Lyle Hemphill"
+    },
+    {
+      "name": "Elijah Robinson",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Elijah Robinson (Co-DC / Defensive Line)"
+    },
+    {
+      "name": "Patrick Dougherty",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Patrick Dougherty"
+    },
+    {
+      "name": "Joey Lynch",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Joey Lynch"
+    },
+    {
+      "name": "Trooper Taylor",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Trooper Taylor (Associate Head Coach — Offense / Running Backs)"
+    },
+    {
+      "name": "John Perry",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "John Perry"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Texas A&M",
+    "slug": "texas-am"
+  }
+}

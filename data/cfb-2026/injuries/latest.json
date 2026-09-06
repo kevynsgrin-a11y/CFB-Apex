@@ -1,0 +1,763 @@
+{
+  "as_of_date": "2026-09-05",
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "injuries",
+    "notes": [
+      "Most Power conferences mandate formal availability reports primarily for conference games. Big Ten midweek/gameday reports for league opponents do not begin until mid-September 2026. SEC and Big 12 policies similarly emphasize conference competition. Consequently, early-season (non-conference) weeks rely heavily on coach comments and beat reporting, and many FBS programs publish little or no comprehensive public list. Absence from this document is not evidence that a roster is healthy.",
+      "Absence from this report is NOT evidence that a roster is healthy — do not render 'no injuries' for a team the report does not cover.",
+      "Statuses follow the publisher's own designations; none has been inferred.",
+      "Only injuries and statuses explicitly reported by the cited sources are included. Speculative depth-chart chatter without a stated status is omitted."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/01-injury-report-2026-09-05.md"
+    ]
+  },
+  "teams": [
+    {
+      "conference_slug": "sec",
+      "opponent_context": "Opponent context: vs. East Carolina",
+      "players": [
+        {
+          "injury": "High ankle sprain; TightRope surgery; ~6–8 weeks; not expected Week 1",
+          "name": "AK Dear",
+          "position": "RB",
+          "source": "AP; CBS Sports; al.com; BamaHammer",
+          "status": "out",
+          "status_raw": "Out (multi-week)"
+        },
+        {
+          "injury": null,
+          "name": "Jeremiah Beaman",
+          "position": "DL",
+          "source": "al.com (DeBoer injury roundup)",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        },
+        {
+          "injury": "Progressing; “much further ahead” than anticipated",
+          "name": "Noah Rogers",
+          "position": "WR",
+          "source": "al.com",
+          "status": "out",
+          "status_raw": "Out (early season)"
+        },
+        {
+          "injury": "Expected “a little bit later” in the season",
+          "name": "Jorden Edmonds",
+          "position": "CB",
+          "source": "al.com",
+          "status": "out",
+          "status_raw": "Out (later return expected)"
+        }
+      ],
+      "slug": "alabama",
+      "team_raw": "Alabama Crimson Tide"
+    },
+    {
+      "conference_slug": "acc",
+      "opponent_context": null,
+      "players": [
+        {
+          "injury": "Achilles (spring); rehab going well; return targeted January",
+          "name": "Kaelan Chudzinski",
+          "position": "TE",
+          "source": "ESPN (Bill O’Brien to ESPN)",
+          "status": "out_for_season",
+          "status_raw": "Out for season (expected)"
+        }
+      ],
+      "slug": "boston-college",
+      "team_raw": "Boston College Eagles"
+    },
+    {
+      "conference_slug": "acc",
+      "opponent_context": "Opponent context: at LSU",
+      "players": [
+        {
+          "injury": "Torn ACL (camp punt drill)",
+          "name": "Polo Anderson",
+          "position": "S",
+          "source": "Post and Courier; Greenville News; The Clemson Insider (Swinney)",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        },
+        {
+          "injury": "Torn ACL (camp)",
+          "name": "Joseph Roberto II",
+          "position": "LB",
+          "source": "The Clemson Insider (Swinney, Sep 1, 2026)",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        },
+        {
+          "injury": "Lower-body; held out of early scrimmages; “close” / practicing (late Aug); Swinney Sep 1: most hands on deck, couple battling to get back",
+          "name": "T.J. Moore",
+          "position": "WR",
+          "source": "CBS Sports tracker; The Clemson Insider",
+          "status": "other",
+          "status_raw": "Day-to-day / working back"
+        }
+      ],
+      "slug": "clemson",
+      "team_raw": "Clemson Tigers"
+    },
+    {
+      "conference_slug": "acc",
+      "opponent_context": "Opponent context: vs. No. 19 SMU (Labor Day); initial ACC availability report",
+      "players": [
+        {
+          "injury": null,
+          "name": "Devin Carter",
+          "position": "WR",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Season-ending ACL (camp); previously reported",
+          "name": "Karson Hobbs",
+          "position": "DB",
+          "source": "ACC availability report; CBS Sports injury tracker",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Chuck Kennon (Chauncey Kennon)",
+          "position": "DB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Injured late vs. New Mexico State",
+          "name": "Jordan Crutchfield",
+          "position": "DB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Gavin Markey",
+          "position": "TE",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "doubtful",
+          "status_raw": "Doubtful"
+        },
+        {
+          "injury": "Unavailable earlier in week",
+          "name": "Tae'Shaun Gelsey",
+          "position": "WR",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        },
+        {
+          "injury": null,
+          "name": "KJ Kirkland",
+          "position": "DB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        },
+        {
+          "injury": null,
+          "name": "Quindarrius Jones",
+          "position": "DB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Darryl Desir",
+          "position": "DL",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Ashlynd Barker",
+          "position": "DB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Zay Parks",
+          "position": "RB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Amari Thomas",
+          "position": "RB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Caleb LaVallee",
+          "position": "LB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Bradyn Welch-Joiner",
+          "position": "OL",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": null,
+          "name": "Kevin Wynn",
+          "position": "DL",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "probable",
+          "status_raw": "Probable"
+        }
+      ],
+      "slug": "florida-state",
+      "team_raw": "Florida State Seminoles"
+    },
+    {
+      "conference_slug": "sec",
+      "opponent_context": "Opponent context: vs. Tennessee State; no official SEC availability report until conference play (Week 3 vs. Arkansas)",
+      "players": [
+        {
+          "injury": "ATV accident (offseason)",
+          "name": "Dante Dowdell",
+          "position": "RB",
+          "source": "UGA Wire, Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out (extended)"
+        },
+        {
+          "injury": "Torn ACL (spring)",
+          "name": "Amaris Williams",
+          "position": "EDGE / LB",
+          "source": "UGA Wire, Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out (season / much of season)"
+        },
+        {
+          "injury": "ACL recovery (Dec. injury)",
+          "name": "Justice Fitzpatrick",
+          "position": "CB",
+          "source": "UGA Wire, Sep 4, 2026",
+          "status": "doubtful",
+          "status_raw": "Doubtful (start of season)"
+        },
+        {
+          "injury": "Foot; “pitch count” per Smart",
+          "name": "Kyron Jones",
+          "position": "S",
+          "source": "UGA Wire; Georgia on SI",
+          "status": "questionable",
+          "status_raw": "Questionable / limited"
+        },
+        {
+          "injury": "Undisclosed",
+          "name": "Craig Dandridge",
+          "position": "WR",
+          "source": "UGA Wire, Sep 4, 2026",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        },
+        {
+          "injury": "Foot (2025); full reps",
+          "name": "Drew Bobo",
+          "position": "C",
+          "source": "UGA Wire; Kirby Smart quotes",
+          "status": "available",
+          "status_raw": "Available / In"
+        },
+        {
+          "injury": "Toe (late 2025); full reps",
+          "name": "Gabe Harris",
+          "position": "DE",
+          "source": "UGA Wire; Kirby Smart quotes",
+          "status": "available",
+          "status_raw": "Available / In"
+        }
+      ],
+      "slug": "georgia",
+      "team_raw": "Georgia Bulldogs"
+    },
+    {
+      "conference_slug": "big12",
+      "opponent_context": "Opponent context: vs. Nicholls",
+      "players": [
+        {
+          "injury": "Lower-leg injury (preseason camp)",
+          "name": "John Pastore",
+          "position": "OT (LT)",
+          "source": "ESPN; Topeka Capital-Journal",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        },
+        {
+          "injury": "Medical clearance not granted; doctors recommended sitting 2026",
+          "name": "George Fitzpatrick",
+          "position": "OT",
+          "source": "ESPN (Klein)",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        }
+      ],
+      "slug": "kansas-state",
+      "team_raw": "Kansas State Wildcats"
+    },
+    {
+      "conference_slug": "big-ten",
+      "opponent_context": null,
+      "players": [
+        {
+          "injury": "Non-contact knee injury (camp)",
+          "name": "Zahir Mathis",
+          "position": "EDGE",
+          "source": "CBS Sports; Maryland on SI (Locksley)",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        }
+      ],
+      "slug": "maryland",
+      "team_raw": "Maryland Terrapins"
+    },
+    {
+      "conference_slug": "independents",
+      "opponent_context": "Opponent context: vs. Wisconsin (Lambeau); availability update Sept. 4",
+      "players": [
+        {
+          "injury": "Left knee (ACL recovery timeline)",
+          "name": "Kyngstonn Viliamu-Asa",
+          "position": "LB",
+          "source": "One Foot Down (ND availability update)",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        },
+        {
+          "injury": "Right foot",
+          "name": "Matty Augustine",
+          "position": "OL",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Left tibia",
+          "name": "Christopher Burgess Jr.",
+          "position": "DL",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Right knee",
+          "name": "Tiki Hola",
+          "position": "DL",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Left humerus",
+          "name": "Charles Jagusah",
+          "position": "OL",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Left shoulder",
+          "name": "Ko’o Kia",
+          "position": "LB",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Left knee",
+          "name": "Quincy Porter",
+          "position": "WR",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Right wrist",
+          "name": "Chaz Smith",
+          "position": "DB",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Right knee",
+          "name": "Chris Terek",
+          "position": "OL",
+          "source": "One Foot Down (ND availability update)",
+          "status": "out",
+          "status_raw": "Out"
+        }
+      ],
+      "slug": "notre-dame",
+      "team_raw": "Notre Dame Fighting Irish"
+    },
+    {
+      "conference_slug": "sec",
+      "opponent_context": "Opponent context: vs. UTEP",
+      "players": [
+        {
+          "injury": "Sprained MCL (camp); practicing again; targeted healthier for Michigan",
+          "name": "Jake Maikkula",
+          "position": "C",
+          "source": "CBS Sports; Stormin’ in Norman; Sooners on SI",
+          "status": "out",
+          "status_raw": "Out (Week 1)"
+        },
+        {
+          "injury": "Knee; negative MRI; held for Michigan prep",
+          "name": "Ryan Fodje",
+          "position": "OL",
+          "source": "Stormin’ in Norman",
+          "status": "out",
+          "status_raw": "Out (Week 1, precaution)"
+        },
+        {
+          "injury": "Cleared concussion protocol; available for debut",
+          "name": "Parker Livingstone",
+          "position": "WR",
+          "source": "Stormin’ in Norman (citing ESPN’s Pete Thamel)",
+          "status": "available",
+          "status_raw": "Available"
+        }
+      ],
+      "slug": "oklahoma",
+      "team_raw": "Oklahoma Sooners"
+    },
+    {
+      "conference_slug": "big-ten",
+      "opponent_context": "Opponent context: vs. Marshall; no official Big Ten availability report",
+      "players": [
+        {
+          "injury": "Knee “cleaned up” / setback (per LaVar Arrington on radio)",
+          "name": "LaVar Arrington II",
+          "position": "DE",
+          "source": "Penn State on SI",
+          "status": "out",
+          "status_raw": "Out (Week 1)"
+        },
+        {
+          "injury": "Returning from 2025 ACL; Campbell: probable",
+          "name": "Jeremiah Cooper",
+          "position": "DB",
+          "source": "Penn State on SI",
+          "status": "probable",
+          "status_raw": "Probable"
+        },
+        {
+          "injury": "Camp absence; no official designation",
+          "name": "Gabe Burkle",
+          "position": "TE",
+          "source": "Penn State on SI",
+          "status": "other",
+          "status_raw": "Likely Q/D (beat)"
+        },
+        {
+          "injury": "Camp absence; no official designation",
+          "name": "Cooper Alexander",
+          "position": "TE",
+          "source": "Penn State on SI",
+          "status": "other",
+          "status_raw": "Likely Q/D (beat)"
+        },
+        {
+          "injury": "Returned to practice to varying degrees",
+          "name": "Armstrong Nnodim",
+          "position": "DT",
+          "source": "Penn State on SI",
+          "status": "uncertain",
+          "status_raw": "Uncertain / limited camp"
+        },
+        {
+          "injury": "Camp absence",
+          "name": "Jahmir Joseph",
+          "position": "CB",
+          "source": "Penn State on SI",
+          "status": "uncertain",
+          "status_raw": "Uncertain"
+        },
+        {
+          "injury": "Working back from late-2025 injury",
+          "name": "Alex Tatsch",
+          "position": "LB",
+          "source": "Penn State on SI",
+          "status": "uncertain",
+          "status_raw": "Uncertain"
+        }
+      ],
+      "slug": "penn-state",
+      "team_raw": "Penn State Nittany Lions"
+    },
+    {
+      "conference_slug": "acc",
+      "opponent_context": "Opponent context: at Florida State; initial ACC availability report",
+      "players": [
+        {
+          "injury": null,
+          "name": "Caden Marshall",
+          "position": "LB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Deuce Gilbert",
+          "position": "CB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "EJ Kelly",
+          "position": "RB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Christian Rhodes",
+          "position": "RB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Link Rhodes",
+          "position": "RB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Kenneth Goodwin III",
+          "position": "LB",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Abel Hoopii",
+          "position": "OL",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": null,
+          "name": "Ahmaad Moses",
+          "position": "S",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        },
+        {
+          "injury": null,
+          "name": "Jaden Milliner-Jones",
+          "position": "S",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        },
+        {
+          "injury": null,
+          "name": "Daylon Singleton",
+          "position": "WR",
+          "source": "ACC availability report via SI / NoleGameday",
+          "status": "questionable",
+          "status_raw": "Questionable"
+        }
+      ],
+      "slug": "smu",
+      "team_raw": "SMU Mustangs"
+    },
+    {
+      "conference_slug": "sec",
+      "opponent_context": "Opponent context: vs. Kent State",
+      "players": [
+        {
+          "injury": "Back; ramping toward contact clearance",
+          "name": "Dylan Stewart",
+          "position": "EDGE",
+          "source": "On3; ESPN (Beamer to Pete Thamel); Beamer presser",
+          "status": "out",
+          "status_raw": "Out (Week 1)"
+        },
+        {
+          "injury": "Knee (Feb. basketball); progressing",
+          "name": "Jacarrius Peak",
+          "position": "OT",
+          "source": "On3; ESPN (Beamer to Pete Thamel); Beamer presser",
+          "status": "out",
+          "status_raw": "Out (Week 1)"
+        },
+        {
+          "injury": "Lower-body (practice)",
+          "name": "Jayden Sellers",
+          "position": "WR",
+          "source": "South Carolina Athletics / Daily Gamecock",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        },
+        {
+          "injury": "Lower-body (practice)",
+          "name": "Jayden Gibson",
+          "position": "WR",
+          "source": "South Carolina Athletics / Daily Gamecock",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        }
+      ],
+      "slug": "south-carolina",
+      "team_raw": "South Carolina Gamecocks"
+    },
+    {
+      "conference_slug": "acc",
+      "opponent_context": "Opponent context: vs. No. 7 Miami (ACC opener)",
+      "players": [
+        {
+          "injury": "Starter",
+          "name": "Niki Prongos",
+          "position": "OL (LT)",
+          "source": "ESPN (sources / Pete Thamel), Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Starter",
+          "name": "Simione Pale",
+          "position": "OL (G)",
+          "source": "ESPN (sources / Pete Thamel), Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Starter",
+          "name": "Aidan Kilstrom",
+          "position": "OL (C)",
+          "source": "ESPN (sources / Pete Thamel), Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Did not appear vs. Hawai‘i",
+          "name": "Nico Brown",
+          "position": "WR",
+          "source": "ESPN (sources / Pete Thamel), Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out"
+        },
+        {
+          "injury": "Had 1.5 sacks vs. Hawai‘i",
+          "name": "Gabe Kaminski",
+          "position": "EDGE",
+          "source": "ESPN (sources / Pete Thamel), Sep 4, 2026",
+          "status": "out",
+          "status_raw": "Out"
+        }
+      ],
+      "slug": "stanford",
+      "team_raw": "Stanford Cardinal"
+    },
+    {
+      "conference_slug": "sec",
+      "opponent_context": "Opponent context: vs. Furman",
+      "players": [
+        {
+          "injury": "Torn patellar tendon (right knee), fall practice",
+          "name": "Edrees Farooq",
+          "position": "S",
+          "source": "ESPN; On3; Tennessee statement",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        }
+      ],
+      "slug": "tennessee",
+      "team_raw": "Tennessee Volunteers"
+    },
+    {
+      "conference_slug": "sec",
+      "opponent_context": "Opponent context: vs. Texas State",
+      "players": [
+        {
+          "injury": "Left knee bone bruise (Aug. 17); returned to practice; Sarkisian: “good to go”; workload to be managed in heat",
+          "name": "Trevor Goosby",
+          "position": "OT (LT)",
+          "source": "SI / Texas on SI; Dallas Sports Journal; ESPN (initial diagnosis)",
+          "status": "probable",
+          "status_raw": "Cleared / Probable (available)"
+        }
+      ],
+      "slug": "texas",
+      "team_raw": "Texas Longhorns"
+    },
+    {
+      "conference_slug": "big-ten",
+      "opponent_context": null,
+      "players": [
+        {
+          "injury": "Non-contact knee (first week of camp)",
+          "name": "Kilian O’Connor",
+          "position": "C",
+          "source": "CBS Sports injury tracker",
+          "status": "out_for_season",
+          "status_raw": "Out for season"
+        }
+      ],
+      "slug": "usc",
+      "team_raw": "USC Trojans"
+    },
+    {
+      "conference_slug": "big-ten",
+      "opponent_context": "Opponent context: vs. Notre Dame (Lambeau Field)",
+      "players": [
+        {
+          "injury": "Foot (spring surgery); limited camp; Fickell: game-time decision",
+          "name": "Emerson Mandell",
+          "position": "OL (RG)",
+          "source": "Bucky’s 5th Quarter; WSAU; Fighting Irish Wire",
+          "status": "questionable",
+          "status_raw": "Questionable / GTD"
+        },
+        {
+          "injury": "Lower-body / ACL recovery (reports vary on mechanism); limited camp; Fickell: game-time decision",
+          "name": "Kevin Heywood",
+          "position": "OL (RT)",
+          "source": "Bucky’s 5th Quarter; WSAU; Wisconsin on SI",
+          "status": "questionable",
+          "status_raw": "Questionable / GTD"
+        }
+      ],
+      "slug": "wisconsin",
+      "team_raw": "Wisconsin Badgers"
+    }
+  ]
+}

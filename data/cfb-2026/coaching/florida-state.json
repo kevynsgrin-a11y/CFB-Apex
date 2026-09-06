@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Mike Norvell",
+    "title_raw": "Mike Norvell"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "3–3–5 / three-safety (Tony White system; 247Sports scheme reporting on FSU’s three-safety defense)",
+      "label": "3-3-5"
+    },
+    "offense": {
+      "description": "Not listed as a single official brand on seminoles.com after Malzahn retirement / Harris elevation; multiple / tempo Norvell tree elements reported — formal brand Not listed",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "seminoles.com 2026 Football Coaches",
+      "url": "https://seminoles.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Mike Norvell",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Mike Norvell"
+    },
+    {
+      "name": "Tim Harris Jr.",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tim Harris Jr. (Offensive Coordinator / Wide Receivers)"
+    },
+    {
+      "name": "Tony White",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tony White"
+    },
+    {
+      "name": "Adam Scheier",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Adam Scheier"
+    },
+    {
+      "name": "Austin Tucker",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Austin Tucker"
+    },
+    {
+      "name": "Kam Martin",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Kam Martin"
+    },
+    {
+      "name": "Tim Harris Jr.",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Tim Harris Jr."
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Florida State",
+    "slug": "florida-state"
+  }
+}

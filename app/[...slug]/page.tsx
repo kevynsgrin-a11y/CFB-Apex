@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { HubApp } from "@/components/HubApp";
-import { coaches, dfsPlayers, games, portalEvents, stadiums, teams } from "@/lib/fixtures";
+import { coaches, dfsPlayers, games, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
 
 const staticRoots = new Set([
   "scores",

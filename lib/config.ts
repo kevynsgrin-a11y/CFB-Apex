@@ -38,10 +38,10 @@ export const utilityNavigation = [
 ] as const;
 
 export const environment = {
-  dataMode: "fixture",
-  isDemo: true,
+  dataMode: "dataset",
+  isDemo: false,
   season: 2026,
   siteUrl: process.env.SITE_URL ?? "https://cfbapex.com",
 } as const;
 
-export const disclosureVersion = "2026-07-31";
+export const disclosureVersion = "2026-09-05";

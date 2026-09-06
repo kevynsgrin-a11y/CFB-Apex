@@ -1,0 +1,105 @@
+{
+  "head_coach": {
+    "first_season": 3,
+    "name": "Gerad Parker",
+    "title_raw": "Gerad Parker (3rd season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sun-belt.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Wright / Burton co-structure with safeties / ILB emphasis; no exclusive official base-front tag located on athletics pages consulted)",
+      "label": null
+    },
+    "offense": {
+      "description": "Veer & Shoot (Austin on-record — Troy athletics Johnson’s Journal / Troy Messenger; Art Briles–rooted wide-split RPO / vertical system)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "troytrojans.com 2026 Football Coaches",
+      "url": "https://troytrojans.com/sports/football/coaches"
+    },
+    {
+      "title": "Johnson’s Journal — Adam Austin / Veer & Shoot",
+      "url": "https://troytrojans.com/news/2026/3/11/new-troy-oc-adam-austin-bringing-explosive-offense-energy-to-troy-football"
+    },
+    {
+      "title": "2026 Troy Trojans football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Troy_Trojans_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Gerad Parker",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Gerad Parker (3rd season)"
+    },
+    {
+      "name": "Adam Austin",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Adam Austin (OC / Quarterbacks; 1st season)"
+    },
+    {
+      "name": "Dontae Wright",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Dontae Wright (DC / Safeties)"
+    },
+    {
+      "name": "Nathan Burton",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Nathan Burton (Co-DC / Inside Linebackers)"
+    },
+    {
+      "name": null,
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Not listed (troytrojans.com lists Tyler Hancock as Analyst — Special Teams and Gabe Ingram as Assistant (Special Teams); no dedicated STC title located)"
+    },
+    {
+      "name": "Adam Austin",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Adam Austin"
+    },
+    {
+      "name": "Re’quan Boyette",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Re’quan Boyette (Running Backs / Assistant Head Coach of Offense)"
+    },
+    {
+      "name": "Gary Banks",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Gary Banks"
+    }
+  ],
+  "team": {
+    "conference_slug": "sun-belt",
+    "school": "Troy",
+    "slug": "troy"
+  }
+}

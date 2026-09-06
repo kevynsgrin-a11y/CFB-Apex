@@ -10,13 +10,14 @@ import {
   getStadiumBySlug,
   getTeam,
   getTeamBySlug,
+  modelEstimatesAvailable,
   portalEvents,
   providerHealth,
   scenarioGames,
   seasonRules,
   stadiums,
   teams,
-} from "@/lib/fixtures";
+} from "@/lib/cfb-dataset";
 import {
   brand,
   disclosureVersion,
@@ -47,8 +48,8 @@ function teamFor(teamId: string) {
 function DemoBanner() {
   return (
     <div className="demo-banner" role="status">
-      <span className="demo-banner__label">Demonstration environment</span>
-      <span>Fictional teams · deterministic fixtures · no live provider is connected</span>
+      <span className="demo-banner__label">2026 FBS dataset</span>
+      <span>138 real programs · compiled 2026-09-05 · scores update with each dataset release</span>
       <a href="/data-sources">Inspect data status</a>
     </div>
   );
@@ -135,7 +136,7 @@ function Header({
 
 function ScoreRibbon() {
   return (
-    <section className="score-ribbon" aria-label="Featured demonstration scores">
+    <section className="score-ribbon" aria-label="Featured scores">
       <div className="score-ribbon__rail">
         <div className="score-ribbon__date">
           <span>WEEK 12</span>
@@ -200,7 +201,7 @@ function ModeDialog({
         <span className="eyebrow">Optional experience</span>
         <h2 id="mode-dialog-title">Show Odds & DFS Mode?</h2>
         <p>
-          This demonstration adds model distributions and fictional market context. It does not
+          Analysis mode adds model distributions and market context. It does not
           confirm legal eligibility, offer wagering, or guarantee an outcome.
         </p>
         <label className="check-row">
@@ -262,7 +263,7 @@ function Freshness({ provenance }: { provenance: Provenance }) {
   return (
     <span className="freshness">
       <span aria-hidden="true" />
-      Demo · as of {date}
+      Dataset · as of {date}
     </span>
   );
 }
@@ -332,11 +333,11 @@ function GameCard({
       </div>
       {mode === "analysis" && game.line ? (
         <div className="odds-strip">
-          <span>DEMO MARKET</span>
+          <span>MARKET</span>
           <strong>
             {home.abbreviation} {game.line.home}
           </strong>
-          <small>Fictional context · no operator actions</small>
+          <small>Market context · no operator actions</small>
         </div>
       ) : null}
     </article>
@@ -426,7 +427,7 @@ function HomePage({ mode, favorites, onFavorite }: HomeProps) {
         </div>
         <article className="feature-game">
           <div className="feature-game__header">
-            <span className="pulse-label">NEXT DEMO MATCHUP</span>
+            <span className="pulse-label">NEXT MATCHUP</span>
             <Freshness provenance={featured.provenance} />
           </div>
           <div className="feature-game__teams">
@@ -462,20 +463,30 @@ function HomePage({ mode, favorites, onFavorite }: HomeProps) {
               <strong>{featured.weather?.temperature}° · {featured.weather?.summary}</strong>
             </div>
           </div>
-          <div className="probability">
-            <div>
-              <span>{brand.shortName} model estimate</span>
-              <strong>{percent(featured.modelHomeWinProbability)} {home.abbreviation}</strong>
+          {modelEstimatesAvailable ? (
+            <div className="probability">
+              <div>
+                <span>{brand.shortName} model estimate</span>
+                <strong>{percent(featured.modelHomeWinProbability)} {home.abbreviation}</strong>
+              </div>
+              <div
+                className="probability__track"
+                role="img"
+                aria-label={`${home.shortName} has a ${percent(featured.modelHomeWinProbability)} win estimate, plus or minus ${percent(featured.modelUncertainty)}`}
+              >
+                <span style={{ width: percent(featured.modelHomeWinProbability) }} />
+              </div>
+              <small>±{percent(featured.modelUncertainty)} uncertainty</small>
             </div>
-            <div
-              className="probability__track"
-              role="img"
-              aria-label={`${home.shortName} has a ${percent(featured.modelHomeWinProbability)} demonstration win estimate, plus or minus ${percent(featured.modelUncertainty)}`}
-            >
-              <span style={{ width: percent(featured.modelHomeWinProbability) }} />
+          ) : (
+            <div className="probability">
+              <div>
+                <span>{brand.shortName} model estimate</span>
+                <strong>Pending 2026 season data</strong>
+              </div>
+              <small>Win probabilities resume once in-season results accumulate.</small>
             </div>
-            <small>±{percent(featured.modelUncertainty)} uncertainty · fixture model</small>
-          </div>
+          )}
           <a className="feature-game__link" href={`/games/${featured.id}`}>
             Open complete matchup intelligence <span aria-hidden="true">→</span>
           </a>
@@ -504,7 +515,7 @@ function HomePage({ mode, favorites, onFavorite }: HomeProps) {
       </section>
 
       <section className="content-section">
-        <SectionHeading eyebrow="WEEK 12 · FIXTURE BOARD" title="Matchups worth your screen" href="/scores" />
+        <SectionHeading eyebrow="2026 SEASON BOARD" title="Matchups worth your screen" href="/scores" />
         <div className="game-grid">
           {games.slice(0, 3).map((game) => (
             <GameCard
@@ -522,47 +533,51 @@ function HomePage({ mode, favorites, onFavorite }: HomeProps) {
         <div className="dashboard-panel dashboard-panel--wide">
           <SectionHeading eyebrow="ROSTER VOLATILITY" title="Portal pulse" href="/transfer-portal" />
           <div className="portal-list">
-            {portalEvents.slice(0, 4).map((event) => (
-              <PortalRow event={event} key={event.id} />
-            ))}
+            {portalEvents.length > 0 ? (
+              portalEvents.slice(0, 4).map((event) => (
+                <PortalRow event={event} key={event.id} />
+              ))
+            ) : (
+              <p className="panel-note">Transfer-portal movement is not part of the 2026 research dataset.</p>
+            )}
           </div>
         </div>
         <div className="dashboard-panel">
-          <SectionHeading eyebrow="PLAYOFF MODEL" title="Bubble pressure" href="/playoff-predictor" linkLabel="Simulate" />
+          <SectionHeading eyebrow="AP PRESEASON TOP 25" title="Bubble pressure" href="/rankings" linkLabel="Rankings" />
           <div className="rank-stack">
-            {teams.slice(6, 10).map((team) => (
-              <div key={team.id}>
-                <Monogram team={team} size="sm" />
-                <span>
-                  <strong>{team.shortName}</strong>
-                  <small>±5.2 pts</small>
-                </span>
-                <b>{team.playoffProbability}%</b>
-              </div>
-            ))}
+            {teams
+              .filter((team) => team.rank != null)
+              .sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99))
+              .slice(5, 9)
+              .map((team) => (
+                <div key={team.id}>
+                  <Monogram team={team} size="sm" />
+                  <span>
+                    <strong>{team.shortName}</strong>
+                    <small>AP No. {team.rank}</small>
+                  </span>
+                  <b>{team.record}</b>
+                </div>
+              ))}
           </div>
-          <p className="panel-note">Model estimate · not a committee forecast</p>
+          <p className="panel-note">AP preseason poll · not a committee forecast</p>
         </div>
         <div className="dashboard-panel">
-          <SectionHeading eyebrow="COACHING ECONOMICS" title="Carousel pressure" href="/coaching-carousel" />
+          <SectionHeading eyebrow="COACHING CAROUSEL" title="On the sideline" href="/coaching-carousel" />
           <div className="coach-pulse">
             <div className="coach-pulse__badge">{featuredCoach.name.split(" ").map((part) => part[0]).join("")}</div>
             <div>
               <strong>{featuredCoach.name}</strong>
               <span>{coachTeam.shortName} · {featuredCoach.record}</span>
             </div>
-            <b>{featuredCoach.hotSeatIndex}</b>
           </div>
-          <div className="meter" role="img" aria-label={`Demonstration hot-seat index ${featuredCoach.hotSeatIndex} out of 100`}>
-            <span style={{ width: `${featuredCoach.hotSeatIndex}%` }} />
-          </div>
-          <p className="panel-note">Context index · coverage {percent(featuredCoach.hotSeatCoverage)}</p>
+          <p className="panel-note">Contract terms and hot-seat economics are not published in the 2026 dataset.</p>
         </div>
         <div className="dashboard-panel dashboard-panel--field">
           <span className="eyebrow">GAMEDAY INTELLIGENCE</span>
           <h2>Know the gate before you leave the driveway.</h2>
-          <p>Fixture parking, clear-bag, transit, visitor, and accessibility guidance in one maintained brief.</p>
-          <a className="button button--light" href="/stadiums/harbor-field">Open Harbor Field guide</a>
+          <p>Stadium guides return once venue data joins the research dataset.</p>
+          <a className="button button--light" href="/stadiums">Browse stadium guides</a>
         </div>
       </section>
 
@@ -593,15 +608,15 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
       <PageHeading
         eyebrow="PRIORITY 01 · SCOREBOARD"
         title="The slate, without the scavenger hunt."
-        description="Scheduled, final, delayed, and postponed demonstration states with weather, provider status, and direct route actions."
+        description="Scheduled, final, delayed, and postponed game states with weather, provider status, and direct route actions."
         actions={<Freshness provenance={games[0].provenance} />}
       />
       <div className="sticky-tools">
         <fieldset className="date-switcher">
           <legend className="sr-only">Score date</legend>
-          <button type="button" disabled title="Only one fixture date is available" aria-label="Previous fixture date unavailable">←</button>
-          <span><small>DEMO WEEK 12</small><strong>Saturday · Nov 14</strong></span>
-          <button type="button" disabled title="Only one fixture date is available" aria-label="Next fixture date unavailable">→</button>
+          <button type="button" disabled title="One scoreboard window is available" aria-label="Previous scoreboard window unavailable">←</button>
+          <span><small>2026 SEASON</small><strong>{games.length} games tracked</strong></span>
+          <button type="button" disabled title="One scoreboard window is available" aria-label="Next scoreboard window unavailable">→</button>
         </fieldset>
         <fieldset className="filter-chips">
           <legend className="sr-only">Score filters</legend>
@@ -619,10 +634,10 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
       </div>
       <section className="content-section">
         <div className="scoreboard-summary">
-          <div><span>5</span><small>DEMO GAMES</small></div>
-          <div><span>0</span><small>CLAIMED LIVE</small></div>
-          <div><span>1</span><small>FINAL</small></div>
-          <div><span>2</span><small>EXCEPTION STATES</small></div>
+          <div><span>{games.length}</span><small>GAMES</small></div>
+          <div><span>{games.filter((game) => game.status === "final").length}</span><small>FINAL</small></div>
+          <div><span>{games.filter((game) => game.status === "scheduled").length}</span><small>SCHEDULED</small></div>
+          <div><span>{teams.length}</span><small>PROGRAMS</small></div>
           <a href="/schedule">Full schedule →</a>
         </div>
         {filtered.length ? (
@@ -639,7 +654,7 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
           </div>
         ) : (
           <EmptyState
-            title="No favorite teams on this fixture board yet."
+            title="No favorite teams on this season board yet."
             copy="Add a favorite from any game card, then return to this filter."
             href="/teams"
             action="Browse teams"
@@ -655,7 +670,7 @@ function SchedulePage(props: HomeProps) {
     <>
       <PageHeading
         eyebrow="SEASON-AWARE SCHEDULE"
-        title="Week 12 demonstration schedule"
+        title="2026 schedule"
         description="Conference membership and postseason rules are versioned by season; the preview never hardcodes a permanent team count."
       />
       <section className="content-section schedule-board">
@@ -715,77 +730,96 @@ function GamePage({ gameId, mode, favorites, onFavorite }: HomeProps & { gameId:
 
       <section className="content-section game-layout">
         <div className="game-main">
-          <SectionHeading eyebrow="MODEL SNAPSHOT" title="Why the model leans this way" />
-          <article className="win-model-card">
-            <div>
-              <span className="eyebrow">HOME WIN ESTIMATE</span>
-              <strong>{homeEdge}%</strong>
-              <small>±{percent(game.modelUncertainty)} uncertainty</small>
-            </div>
-            <div className="win-model-card__track" aria-hidden="true">
-              <span style={{ width: `${homeEdge}%` }} />
-            </div>
-            <p>
-              {home.shortName} carries the stronger demonstration strength rating and a modest
-              home-context edge. Weather and unverified availability are excluded rather than
-              invented.
-            </p>
-          </article>
+          {modelEstimatesAvailable ? (
+            <>
+              <SectionHeading eyebrow="MODEL SNAPSHOT" title="Why the model leans this way" />
+              <article className="win-model-card">
+                <div>
+                  <span className="eyebrow">HOME WIN ESTIMATE</span>
+                  <strong>{homeEdge}%</strong>
+                  <small>±{percent(game.modelUncertainty)} uncertainty</small>
+                </div>
+                <div className="win-model-card__track" aria-hidden="true">
+                  <span style={{ width: `${homeEdge}%` }} />
+                </div>
+                <p>
+                  {home.shortName} carries the stronger strength rating and a modest
+                  home-context edge. Weather and unverified availability are excluded rather than
+                  invented.
+                </p>
+              </article>
+            </>
+          ) : (
+            <article className="win-model-card">
+              <div>
+                <span className="eyebrow">MATCHUP MODEL</span>
+                <strong>Pending 2026 season data</strong>
+              </div>
+              <p>
+                Win probabilities and matchup edges resume once in-season results accumulate.
+                Schedules, results, and poll data below are live from the 2026 dataset.
+              </p>
+            </article>
+          )}
 
-          <article className="metric-card">
-            <div className="metric-card__header">
-              <div><Monogram team={away} size="sm" /><strong>{away.abbreviation}</strong></div>
-              <span>Original, fixture-safe metrics</span>
-              <div><strong>{home.abbreviation}</strong><Monogram team={home} size="sm" /></div>
-            </div>
-            <div className="metric-list">
-              {metrics.map(([label, awayValue, homeValue]) => (
-                <div className="metric-row" key={label}>
-                  <b>{awayValue}</b>
-                  <div>
-                    <span>{label}</span>
-                    <div className="split-bar" role="img" aria-label={`${label}: ${away.shortName} ${awayValue}; ${home.shortName} ${homeValue}`}>
-                      <i style={{ width: `${awayValue}%` }} />
-                      <em style={{ width: `${homeValue}%` }} />
+          {modelEstimatesAvailable && (
+            <article className="metric-card">
+              <div className="metric-card__header">
+                <div><Monogram team={away} size="sm" /><strong>{away.abbreviation}</strong></div>
+                <span>Original efficiency metrics</span>
+                <div><strong>{home.abbreviation}</strong><Monogram team={home} size="sm" /></div>
+              </div>
+              <div className="metric-list">
+                {metrics.map(([label, awayValue, homeValue]) => (
+                  <div className="metric-row" key={label}>
+                    <b>{awayValue}</b>
+                    <div>
+                      <span>{label}</span>
+                      <div className="split-bar" role="img" aria-label={`${label}: ${away.shortName} ${awayValue}; ${home.shortName} ${homeValue}`}>
+                        <i style={{ width: `${awayValue}%` }} />
+                        <em style={{ width: `${homeValue}%` }} />
+                      </div>
                     </div>
+                    <b>{homeValue}</b>
                   </div>
-                  <b>{homeValue}</b>
-                </div>
-              ))}
-            </div>
-          </article>
+                ))}
+              </div>
+            </article>
+          )}
 
-          <article className="mismatch-card">
-            <div>
-              <span className="eyebrow">POSITIONAL MATCHUPS</span>
-              <h2>Where Saturday tilts</h2>
-              <p>Color intensity is paired with labels and a text summary for accessibility.</p>
-            </div>
-            <div className="mismatch-grid" role="img" aria-label={`${home.shortName} has advantages in pass protection and secondary; ${away.shortName} has an advantage at receiver`}>
-              {[
-                ["QB", 2], ["RB", -1], ["WR", -3], ["OL", 4], ["DL", 1], ["LB", 0], ["DB", 3], ["ST", -1],
-              ].map(([label, edge]) => (
-                <div className={`edge edge--${Number(edge) > 1 ? "home" : Number(edge) < -1 ? "away" : "even"}`} key={label}>
-                  <span>{label}</span>
-                  <strong>{Number(edge) > 0 ? `+${edge} ${home.abbreviation}` : Number(edge) < 0 ? `${Math.abs(Number(edge))} ${away.abbreviation}` : "Even"}</strong>
-                </div>
-              ))}
-            </div>
-          </article>
+          {modelEstimatesAvailable && (
+            <article className="mismatch-card">
+              <div>
+                <span className="eyebrow">POSITIONAL MATCHUPS</span>
+                <h2>Where Saturday tilts</h2>
+                <p>Color intensity is paired with labels and a text summary for accessibility.</p>
+              </div>
+              <div className="mismatch-grid" role="img" aria-label={`${home.shortName} has advantages in pass protection and secondary; ${away.shortName} has an advantage at receiver`}>
+                {[
+                  ["QB", 2], ["RB", -1], ["WR", -3], ["OL", 4], ["DL", 1], ["LB", 0], ["DB", 3], ["ST", -1],
+                ].map(([label, edge]) => (
+                  <div className={`edge edge--${Number(edge) > 1 ? "home" : Number(edge) < -1 ? "away" : "even"}`} key={label}>
+                    <span>{label}</span>
+                    <strong>{Number(edge) > 0 ? `+${edge} ${home.abbreviation}` : Number(edge) < 0 ? `${Math.abs(Number(edge))} ${away.abbreviation}` : "Even"}</strong>
+                  </div>
+                ))}
+              </div>
+            </article>
+          )}
         </div>
         <aside className="game-sidebar">
           <article className="sidebar-card">
             <span className="eyebrow">GAMEDAY</span>
             <h2>{game.weather ? `${game.weather.temperature}° · ${game.weather.summary}` : "Weather unavailable"}</h2>
-            <p>{game.weather ? `Wind ${game.weather.windMph} mph. Demonstration weather, not a live forecast.` : "A live weather provider is not configured for this fixture."}</p>
+            <p>{game.weather ? `Wind ${game.weather.windMph} mph. Weather is not part of this dataset release.` : "A live weather provider is not configured."}</p>
             <a href={`/stadiums/${game.venueSlug}`}>Parking, bags & transit →</a>
           </article>
           {mode === "analysis" && game.line ? (
             <article className="sidebar-card sidebar-card--gold">
-              <span className="eyebrow">FICTIONAL MARKET CONTEXT</span>
+              <span className="eyebrow">MARKET CONTEXT</span>
               <h2>{home.abbreviation} {game.line.home}</h2>
               <p>No licensed odds provider or operator action is configured.</p>
-              <div className="sparkline" role="img" aria-label={`Fictional line movement from ${game.line.movement[0]} to ${game.line.movement.at(-1)}`}>
+              <div className="sparkline" role="img" aria-label={`Line movement from ${game.line.movement[0]} to ${game.line.movement.at(-1)}`}>
                 {game.line.movement.map((point, index) => (
                   <span key={`${point}-${index}`} style={{ height: `${32 + Math.abs(point) * 10}%` }} />
                 ))}
@@ -849,22 +883,38 @@ function PortalPage({ teamSlug }: { teamSlug?: string }) {
       <PageHeading
         eyebrow="PRIORITY 02 · ROSTER VOLATILITY"
         title={scopedTeam ? `${scopedTeam.shortName} portal ledger` : "Roster movement, in the open."}
-        description="Fictional player movement with snaps, position-weighted impact, source confidence, and no NIL guesswork."
+        description="Transfer-portal entries with snaps, position-weighted impact, and source confidence — no NIL guesswork."
         actions={<a className="button button--ghost" href="/methodology#portal">Portal methodology</a>}
       />
-      <section className="portal-summary">
-        {(scopedTeam ? [scopedTeam] : [...teams].sort((a, b) => b.portalImpact - a.portalImpact).slice(0, 4)).map((team) => (
-          <a href={`/transfer-portal/${team.slug}`} className="impact-card" key={team.id}>
-            <div><Monogram team={team} /><span><small>{team.conference}</small><strong>{team.shortName}</strong></span></div>
-            <b>{signed(team.portalImpact)}</b>
-            <div className="impact-track" role="img" aria-label={`${team.shortName} demonstration portal impact ${signed(team.portalImpact)}`}>
-              <span style={{ width: `${Math.min(100, Math.max(8, 50 + team.portalImpact * 4))}%` }} />
+      {portalEvents.length === 0 ? (
+        <section className="content-section">
+          <article className="win-model-card">
+            <div>
+              <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
+              <strong>Transfer-portal movement</strong>
             </div>
-            <small>{team.returningProduction}% returning production</small>
-          </a>
-        ))}
-      </section>
-      <section className="content-section">
+            <p>
+              The 2026 research dataset covers rosters, schedules, polls, coaching staffs, and SOS —
+              it does not include portal entries. This surface turns on when portal data joins a
+              future dataset release.
+            </p>
+          </article>
+        </section>
+      ) : (
+        <>
+          <section className="portal-summary">
+            {(scopedTeam ? [scopedTeam] : [...teams].sort((a, b) => b.portalImpact - a.portalImpact).slice(0, 4)).map((team) => (
+              <a href={`/transfer-portal/${team.slug}`} className="impact-card" key={team.id}>
+                <div><Monogram team={team} /><span><small>{team.conference}</small><strong>{team.shortName}</strong></span></div>
+                <b>{signed(team.portalImpact)}</b>
+                <div className="impact-track" role="img" aria-label={`${team.shortName} portal impact ${signed(team.portalImpact)}`}>
+                  <span style={{ width: `${Math.min(100, Math.max(8, 50 + team.portalImpact * 4))}%` }} />
+                </div>
+                <small>{team.returningProduction}% returning production</small>
+              </a>
+            ))}
+          </section>
+          <section className="content-section">
         <div className="table-tools">
           <div>
             <label>Position
@@ -878,7 +928,7 @@ function PortalPage({ teamSlug }: { teamSlug?: string }) {
               </select>
             </label>
           </div>
-          <span>{filtered.length} demonstration records</span>
+          <span>{filtered.length} records</span>
         </div>
         <section className="data-table-wrap" tabIndex={0} aria-label="Scrollable portal movement table">
           <table className="data-table">
@@ -903,8 +953,10 @@ function PortalPage({ teamSlug }: { teamSlug?: string }) {
             </tbody>
           </table>
         </section>
-        <p className="table-caption">Unknown usage is explicitly preserved and reduces confidence. Fictional records only.</p>
-      </section>
+        <p className="table-caption">Unknown usage is explicitly preserved and reduces confidence.</p>
+          </section>
+        </>
+      )}
     </>
   );
 }
@@ -980,13 +1032,13 @@ function PlayoffPage() {
               </fieldset>
             );
           })}
-          <button className="button button--gold button--full" type="button" onClick={run}>Run 20,000 demo simulations</button>
+          <button className="button button--gold button--full" type="button" onClick={run}>Run 20,000 simulations</button>
           <button className="button button--ghost button--full" type="button" onClick={share}>Copy scenario link</button>
           <p className="sim-message" role="status">{message}</p>
         </div>
         <div className="simulation-results">
           <div className="simulation-results__header">
-            <div><span className="eyebrow">DEMONSTRATION OUTPUT</span><h2>Projected field</h2></div>
+            <div><span className="eyebrow">SIMULATION OUTPUT</span><h2>Projected field</h2></div>
             <span>{result.iterations.toLocaleString()} runs · seed {result.seed}</span>
           </div>
           <div className="field-list">
@@ -1006,14 +1058,14 @@ function PlayoffPage() {
               );
             })}
           </div>
-          <div className="bracket" role="img" aria-label="Accessible demonstration playoff bracket">
+          <div className="bracket" role="img" aria-label="Accessible playoff bracket">
             <span className="eyebrow">BRACKET SNAPSHOT</span>
             <div>
               {result.results.slice(4, 12).map((entry, index) => (
                 <div key={entry.teamId}><small>Seed {index + 5}</small><strong>{teamFor(entry.teamId).abbreviation}</strong></div>
               ))}
             </div>
-            <p>Top four seeds receive byes under fixture rules. Full probabilities appear in the table above.</p>
+            <p>Top four seeds receive byes under the 2026 twelve-team format. Full probabilities appear in the table above.</p>
           </div>
         </div>
       </section>
@@ -1045,7 +1097,7 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
       <PageHeading
         eyebrow="PRIORITY 04 · CONTRACT ECONOMICS"
         title={focused ? `${focused.name} contract ledger` : "Separate the contract from the carousel noise."}
-        description="Fictional verified-state timelines, transparent buyout math, and a contextual hot-seat index that is not a firing probability."
+        description="Verified timelines and transparent buyout math where published; hot-seat context returns with contract data."
       />
       <section className="coaching-layout content-section">
         <div className="coach-index">
@@ -1060,7 +1112,7 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
               >
                 <span>{item.name.split(" ").map((part) => part[0]).join("")}</span>
                 <div><strong>{item.name}</strong><small>{itemTeam.shortName} · {item.title}</small></div>
-                <b>{item.hotSeatIndex}</b>
+                <b>{item.record}</b>
               </button>
             );
           })}
@@ -1068,15 +1120,15 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
         <div className="coach-detail">
           <div className="coach-detail__hero">
             <div className="coach-avatar">{coach.name.split(" ").map((part) => part[0]).join("")}</div>
-            <div><span className="eyebrow">{team.shortName} · {coach.title}</span><h2>{coach.name}</h2><p>{coach.record} demonstration record</p></div>
-            <div className="hot-seat-dial"><strong>{coach.hotSeatIndex}</strong><span>CONTEXT INDEX</span></div>
+            <div><span className="eyebrow">{team.shortName} · {coach.title}</span><h2>{coach.name}</h2><p>{coach.record} record</p></div>
           </div>
           <div className="contract-grid">
-            <div><span>Term</span><strong>{coach.contractStart.slice(0, 4)}–{coach.contractEnd.slice(0, 4)}</strong></div>
-            <div><span>Annual salary</span><strong>{money.format(coach.annualSalary)}</strong></div>
-            <div><span>Guarantee remaining</span><strong>{money.format(coach.guaranteedRemaining)}</strong></div>
-            <div><span>Mitigation</span><strong>{coach.mitigationApplies ? "Applies" : "Not in fixture"}</strong></div>
+            <div><span>Term</span><strong>{coach.annualSalary > 0 && coach.contractStart ? `${coach.contractStart.slice(0, 4)}–${coach.contractEnd.slice(0, 4)}` : "Not published"}</strong></div>
+            <div><span>Annual salary</span><strong>{coach.annualSalary > 0 ? money.format(coach.annualSalary) : "Not published"}</strong></div>
+            <div><span>Guarantee remaining</span><strong>{coach.guaranteedRemaining > 0 ? money.format(coach.guaranteedRemaining) : "Not published"}</strong></div>
+            <div><span>Mitigation</span><strong>{coach.mitigationApplies ? "Applies" : "Not published"}</strong></div>
           </div>
+          <p className="panel-note">Contract terms are not part of the 2026 research dataset; use the calculator with your own inputs.</p>
           <div className="timeline">
             <span className="eyebrow">VERIFIED TIMELINE</span>
             {coach.timeline.map((entry) => (
@@ -1103,7 +1155,7 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
             <strong>{money.format(buyout.estimatedNet)}</strong>
             <small>{buyout.formula}</small>
           </div>
-          <p>Fixture estimate only. Real contracts require source-document and counsel review.</p>
+          <p>Editorial estimate only. Real contracts require source-document and counsel review.</p>
           <a href="/methodology#coaching">Read calculation policy →</a>
         </aside>
       </section>
@@ -1124,14 +1176,14 @@ function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => voi
         <PageHeading
           eyebrow="PRIORITY 05 · OPTIONAL ANALYSIS"
           title="DFS stays behind a deliberate choice."
-          description="Clean Mode hides fantasy and fictional market context. Core team win-probability models remain available elsewhere and are not betting odds."
+          description="Clean Mode hides fantasy and market context. Core team win-probability models remain available elsewhere and are not betting odds."
         />
         <section className="gate-card content-section">
           <span className="gate-card__mark">21+</span>
           <div>
             <span className="eyebrow">CLEAN MODE ACTIVE</span>
             <h2>Projection distributions, when you ask for them.</h2>
-            <p>Enable the optional preview to see fictional player floor, median, ceiling, volume, availability, and model-version context.</p>
+            <p>Enable the optional preview to see illustrative player floor, median, ceiling, volume, availability, and model-version context.</p>
             <button className="button button--gold" type="button" onClick={onModeRequest}>Review disclosure</button>
           </div>
         </section>
@@ -1144,7 +1196,7 @@ function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => voi
       <PageHeading
         eyebrow="PRIORITY 05 · DISTRIBUTION MODEL"
         title="Volume first. Uncertainty always."
-        description="Fictional projections are informational estimates, not promises. No operator, contest, or referral is configured."
+        description="Projections are informational estimates, not promises. No operator, contest, or referral is configured."
       />
       <section className="content-section">
         <div className="table-tools">
@@ -1160,11 +1212,24 @@ function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => voi
               </select>
             </label>
           </div>
-          <span>Model dfs-2026.4.0-demo</span>
+          <span>Projection model pending 2026 season data</span>
         </div>
-        <div className="dfs-grid">
-          {filtered.map((player) => <DfsCard player={player} key={player.id} />)}
-        </div>
+        {filtered.length ? (
+          <div className="dfs-grid">
+            {filtered.map((player) => <DfsCard player={player} key={player.id} />)}
+          </div>
+        ) : (
+          <article className="win-model-card">
+            <div>
+              <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
+              <strong>DFS projections</strong>
+            </div>
+            <p>
+              Fantasy projections are not part of the 2026 research dataset. This surface turns on
+              when a projection model is trained and validated against the season.
+            </p>
+          </article>
+        )}
         <ResponsibleGamingNotice />
       </section>
     </>
@@ -1180,7 +1245,7 @@ function DfsCard({ player }: { player: DfsPlayer }) {
         <span><small>{player.position} · {team.abbreviation}</small><strong>{player.name}</strong><em>{player.availability}</em></span>
         <b>{money.format(player.salary)}</b>
       </div>
-      <div className="distribution" role="img" aria-label={`${player.name} floor ${player.floor}, median ${player.median}, ceiling ${player.ceiling} demonstration fantasy points`}>
+      <div className="distribution" role="img" aria-label={`${player.name} floor ${player.floor}, median ${player.median}, ceiling ${player.ceiling} fantasy points`}>
         <span className="distribution__range" style={{ left: `${player.floor * 2}%`, width: `${(player.ceiling - player.floor) * 2}%` }} />
         <i style={{ left: `${player.median * 2}%` }} />
       </div>
@@ -1204,8 +1269,8 @@ function TeamsPage({ teamSlug }: { teamSlug?: string }) {
     <>
       <PageHeading
         eyebrow="SEASON-AWARE MEMBERSHIP"
-        title="Every program in the fixture ledger."
-        description="Conference affiliation, strength, returning production, portal impact, and playoff paths are versioned to the active demonstration season."
+        title="All 138 FBS programs for 2026."
+        description="Conference affiliation, AP rank, record, and a strength index derived from published SOS ratings."
       />
       <section className="team-directory content-section">
         {teams.map((item) => (
@@ -1229,13 +1294,13 @@ function TeamDetail({ team }: { team: Team }) {
     <>
       <div className="team-page-hero">
         <Monogram team={team} size="lg" />
-        <div><span className="eyebrow">{team.conference} · {team.subdivision}</span><h1>{team.name}</h1><p>{team.record} demonstration record · strength index {team.strength}</p></div>
+        <div><span className="eyebrow">{team.conference} · {team.subdivision}</span><h1>{team.name}</h1><p>{team.record} · strength index {team.strength}</p></div>
         <Freshness provenance={team.provenance} />
       </div>
       <section className="team-kpis">
-        <div><span>Returning production</span><strong>{team.returningProduction}%</strong></div>
-        <div><span>Portal impact</span><strong>{signed(team.portalImpact)}</strong></div>
-        <div><span>Playoff estimate</span><strong>{team.playoffProbability}%</strong></div>
+        <div><span>AP rank</span><strong>{team.rank ? `No. ${team.rank}` : "Unranked"}</strong></div>
+        <div><span>Record</span><strong>{team.record}</strong></div>
+        <div><span>Strength index</span><strong>{team.strength}</strong></div>
         <div><span>Coverage</span><strong>{percent(team.provenance.confidence)}</strong></div>
       </section>
       <section className="dashboard-grid content-section">
@@ -1248,21 +1313,20 @@ function TeamDetail({ team }: { team: Team }) {
                 <span><strong>{teamFor(game.awayTeamId).shortName} at {teamFor(game.homeTeamId).shortName}</strong><small>{game.kickoffLabel} · {game.venue}</small></span>
                 <b>{game.statusDetail}</b>
               </a>
-            )) : <p className="panel-note">No fixture games in this sample window.</p>}
+            )) : <p className="panel-note">No games in this sample window.</p>}
           </div>
         </div>
         <div className="dashboard-panel">
           <SectionHeading eyebrow="PORTAL" title="Movement" href={`/transfer-portal/${team.slug}`} />
-          <p>{teamPortal.length} fixture event{teamPortal.length === 1 ? "" : "s"} connected to this program.</p>
-          <div className="meter"><span style={{ width: `${Math.min(100, Math.max(10, 50 + team.portalImpact * 4))}%` }} /></div>
+          <p className="panel-note">Portal movement is not part of the 2026 research dataset.</p>
         </div>
         <div className="dashboard-panel">
-          <SectionHeading eyebrow="COACHING" title={coach?.name ?? "No fixture coach"} href={coach ? `/coaches/${coach.slug}` : "/coaches"} />
-          <p>{coach ? `${coach.title} · ${coach.record}` : "The fixture pack does not assign a coach to this program."}</p>
+          <SectionHeading eyebrow="COACHING" title={coach?.name ?? "Head coach not listed"} href={coach ? `/coaches/${coach.slug}` : "/coaches"} />
+          <p>{coach ? `${coach.title} · ${coach.record}` : "The dataset does not list a head coach for this program."}</p>
         </div>
         <div className="dashboard-panel">
-          <SectionHeading eyebrow="GAMEDAY" title={stadium?.name ?? "Venue not in fixture pack"} href={stadium ? `/stadiums/${stadium.slug}` : "/stadiums"} />
-          <p>{stadium ? `${stadium.city} · last verified ${stadium.lastVerified}` : "Browse the maintained demonstration guides."}</p>
+          <SectionHeading eyebrow="GAMEDAY" title={stadium?.name ?? "Venue guide pending"} href={stadium ? `/stadiums/${stadium.slug}` : "/stadiums"} />
+          <p>{stadium ? `${stadium.city} · last verified ${stadium.lastVerified}` : "Venue guides return once stadium data joins the dataset."}</p>
         </div>
       </section>
     </>
@@ -1277,20 +1341,35 @@ function StadiumsPage({ stadiumSlug }: { stadiumSlug?: string }) {
       <PageHeading
         eyebrow="GAMEDAY FIELD NOTES"
         title="Parking, bags, transit, and the gate."
-        description="Every fact in these fictional guides is visibly marked, dated, and connected to a source record."
+        description="Venue guides return once stadium data joins the research dataset."
       />
-      <section className="stadium-grid content-section">
-        {stadiums.map((item) => {
-          const team = teamFor(item.teamId);
-          return (
-            <a href={`/stadiums/${item.slug}`} key={item.slug}>
-              <div className="stadium-visual"><span>{team.monogram}</span><i /></div>
-              <div><small>{item.city}</small><h2>{item.name}</h2><p>{item.capacity.toLocaleString()} fixture capacity · verified {item.lastVerified}</p></div>
-              <span>Open guide →</span>
-            </a>
-          );
-        })}
-      </section>
+      {stadiums.length === 0 ? (
+        <section className="content-section">
+          <article className="win-model-card">
+            <div>
+              <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
+              <strong>Stadium guides</strong>
+            </div>
+            <p>
+              Parking, bag policy, transit, and accessibility briefs are not part of the 2026
+              research package. They turn on when venue data joins a future release.
+            </p>
+          </article>
+        </section>
+      ) : (
+        <section className="stadium-grid content-section">
+          {stadiums.map((item) => {
+            const team = teamFor(item.teamId);
+            return (
+              <a href={`/stadiums/${item.slug}`} key={item.slug}>
+                <div className="stadium-visual"><span>{team.monogram}</span><i /></div>
+                <div><small>{item.city}</small><h2>{item.name}</h2><p>{item.capacity.toLocaleString()} capacity · verified {item.lastVerified}</p></div>
+                <span>Open guide →</span>
+              </a>
+            );
+          })}
+        </section>
+      )}
     </>
   );
 }
@@ -1309,8 +1388,8 @@ function StadiumDetail({ slug }: { slug: string }) {
   return (
     <>
       <div className="stadium-hero">
-        <div><span className="eyebrow">{team.shortName} · FIXTURE GUIDE</span><h1>{stadium.name}</h1><p>{stadium.address} · {stadium.capacity.toLocaleString()} demonstration capacity</p></div>
-        <div className="stadium-map" role="img" aria-label={`Stylized demonstration map placeholder for ${stadium.name}`}>
+        <div><span className="eyebrow">{team.shortName} · VENUE GUIDE</span><h1>{stadium.name}</h1><p>{stadium.address} · {stadium.capacity.toLocaleString()} capacity</p></div>
+        <div className="stadium-map" role="img" aria-label={`Stylized map placeholder for ${stadium.name}`}>
           <span>{team.monogram}</span><i /><b>MAP PROVIDER NOT CONFIGURED</b>
         </div>
       </div>
@@ -1331,9 +1410,9 @@ function RankingsPage() {
   return (
     <>
       <PageHeading
-        eyebrow="ORIGINAL FIXTURE MODEL"
+        eyebrow="STRENGTH INDEX"
         title="Strength without borrowed black boxes."
-        description="This transparent demonstration index is not SP+, FPI, a committee ranking, or a licensed market rating."
+        description="This index is derived from published SOS ratings. It is not SP+, FPI, or a committee ranking."
       />
       <section className="content-section">
         <div className="rankings-list">
@@ -1386,14 +1465,14 @@ function SearchPage() {
   }, [normalized]);
   return (
     <>
-      <PageHeading eyebrow="FIXTURE SEARCH" title="Find the next useful answer." description="Search demonstration teams, players, coaches, and stadiums. Internal search is always noindexed." />
+      <PageHeading eyebrow="SEARCH" title="Find the next useful answer." description="Search teams, coaches, and stadiums from the 2026 dataset. Internal search is always noindexed." />
       <section className="search-panel content-section">
         <label htmlFor="site-search">Search the Hub</label>
         <input id="site-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try North Coast, Mara Vance, or Harbor Field" />
         {normalized ? (
           results.length ? <div className="search-results">{results.map((result) => <a href={result.href} key={`${result.type}-${result.href}`}><span>{result.type}</span><strong>{result.label}</strong><b>→</b></a>)}</div>
-          : <EmptyState title="No matching fixture record." copy="Try another fictional team, coach, player, or stadium." />
-        ) : <p>Start typing to search the deterministic fixture pack.</p>}
+          : <EmptyState title="No matching record." copy="Try another team or coach." />
+        ) : <p>Start typing to search the 2026 dataset.</p>}
       </section>
     </>
   );
@@ -1409,7 +1488,7 @@ function NewsletterPage() {
       <section className="newsletter-page content-section">
         <form onSubmit={(event) => { event.preventDefault(); if (email) setState("pending"); }}>
           <label>Email address<input type="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="fan@example.com" /></label>
-          <fieldset><legend>Choose fixture preferences</legend>
+          <fieldset><legend>Choose preferences</legend>
             {["Weekly scoreboard", "Portal alerts", "Playoff scenarios", "Coaching carousel", "Stadium & gameday"].map((item) => <label className="check-row" key={item}><input type="checkbox" defaultChecked={item === "Weekly scoreboard"} /><span>{item}</span></label>)}
           </fieldset>
           <label className="check-row"><input type="checkbox" required /><span>I agree to receive the selected development-mode emails. Unsubscribe is always available.</span></label>
@@ -1426,8 +1505,8 @@ function NewsletterPage() {
           ) : state === "confirmed" ? (
             <>
               <h2>Preferences confirmed.</h2>
-              <p>Your fixture subscription is active only in this browser session.</p>
-              <button className="button button--ghost" type="button" onClick={() => setState("unsubscribed")}>Unsubscribe fixture record</button>
+              <p>Your subscription is active only in this browser session.</p>
+              <button className="button button--ghost" type="button" onClick={() => setState("unsubscribed")}>Unsubscribe</button>
             </>
           ) : (
             <>
@@ -1443,7 +1522,7 @@ function NewsletterPage() {
 
 function CorrectionsPage() {
   const [submitted, setSubmitted] = useState(false);
-  if (submitted) return <SimpleStatus title="Fixture correction received." copy="Case DEMO-CORR-104 was created locally. No personal information was transmitted." action={() => setSubmitted(false)} actionLabel="Report another issue" />;
+  if (submitted) return <SimpleStatus title="Correction received." copy="Case CORR-2026-104 was created locally. No personal information was transmitted." action={() => setSubmitted(false)} actionLabel="Report another issue" />;
   return (
     <>
       <PageHeading eyebrow="TRUST WORKFLOW" title="See something wrong? Put it on the record." description="Corrections append a new version; they never silently rewrite historical predictions or source lineage." />
@@ -1453,7 +1532,7 @@ function CorrectionsPage() {
         <label>What should we review?<textarea required minLength={20} maxLength={1200} placeholder="Describe the discrepancy and include a public source when possible." /></label>
         <label>Public source URL (optional)<input type="url" placeholder="https://..." /></label>
         <p>No sensitive medical details, private forum content, or paywalled material. High-risk identity, privacy, and rights issues are quarantined first.</p>
-        <button className="button button--gold" type="submit">Submit fixture correction</button>
+        <button className="button button--gold" type="submit">Submit correction</button>
       </form>
     </>
   );
@@ -1461,11 +1540,11 @@ function CorrectionsPage() {
 
 function MethodologyPage() {
   const cards = [
-    ["Matchup concept", "Authored fixture values demonstrate the interface. A future production model would combine play value, pace, continuity, context, and uncertainty; no such trained model or validation artifact ships here."],
-    ["Portal concept", "Authored fixture values demonstrate position, usage, experience, and continuity views. No portal-impact calculation is implemented, and NIL estimates are excluded."],
-    ["Playoff demonstration", "The implemented seeded Monte Carlo uses a fixture field, bounded runs, validated ±6 forced-game adjustments, explicit precision, and an approximate committee order. It is not a season results engine."],
-    ["Coaching concept", "The displayed context index is an authored fixture, not a firing probability. A future production method would require performance, roster, tenure, administration, and verified contract inputs."],
-    ["DFS concept", "Authored floor, median, ceiling, volume, and availability fixtures demonstrate the gated interface. No trained projection model or backtest ships in this preview."],
+    ["Matchup concept", "A future production model would combine play value, pace, continuity, context, and uncertainty; no such trained model or validation artifact ships here."],
+    ["Portal concept", "This surface documents the position, usage, and continuity views. No portal-impact calculation is implemented, and NIL estimates are excluded."],
+    ["Playoff simulation", "The implemented seeded Monte Carlo uses the 138-team field, bounded runs, validated ±6 forced-game adjustments, explicit precision, and an approximate committee order. It is not a season results engine."],
+    ["Coaching concept", "Hot-seat context is not published in the current dataset and is never treated as a firing probability. A future production method would require performance, roster, tenure, administration, and verified contract inputs."],
+    ["DFS concept", "Floor, median, ceiling, volume, and availability projections would power the gated interface; none ship in this release. No trained projection model or backtest ships in this preview."],
   ];
   return (
     <>
@@ -1520,11 +1599,11 @@ function DesignSystemPage() {
           <span className="eyebrow">STATUS & PROVENANCE</span>
           <h2>State belongs next to the claim.</h2>
           <div className="component-row">
-            <span className="provider-state provider-state--on">verified fixture</span>
+            <span className="provider-state provider-state--on">verified</span>
             <span className="provider-state provider-state--off">not configured</span>
             <span className="status status--live">demo state</span>
           </div>
-          <p className="design-note">Fixture, modeled, verified, estimated, stale, and unavailable states never share the same visual treatment.</p>
+          <p className="design-note">Dataset, modeled, verified, estimated, stale, and unavailable states never share the same visual treatment.</p>
         </article>
         <article>
           <span className="eyebrow">TYPE & SPACING</span>
@@ -1539,7 +1618,7 @@ function DesignSystemPage() {
 function DataSourcesPage() {
   return (
     <>
-      <PageHeading eyebrow="PROVENANCE & PROVIDER HEALTH" title="No source, no silent claim." description="Production providers fail closed. This preview never swaps in fixtures invisibly after a live outage." />
+      <PageHeading eyebrow="PROVENANCE & PROVIDER HEALTH" title="No source, no silent claim." description="Production providers fail closed. The site never swaps data invisibly after an outage." />
       <section className="content-section provider-table">
         {providerHealth.map((provider) => (
           <article key={provider.id}>
@@ -1565,14 +1644,14 @@ function PolicyPage({ kind }: { kind: string }) {
     privacy: {
       eyebrow: "DRAFT FOR COUNSEL",
       title: "Privacy notice — preview draft",
-      intro: "This demonstration stores only device-local mode and favorite preferences. No production analytics, email, advertising, or precise location provider is active.",
+      intro: "This site stores only device-local mode and favorite preferences. No production analytics, email, advertising, or precise location provider is active.",
       sections: [["Data minimization", "Future services may process account identity, newsletter email, coarse consent attestation, and short-lived abuse logs only for stated purposes."], ["Your choices", "Production activation requires access, correction, deletion, consent withdrawal, and processor workflows reviewed by counsel."]],
     },
     terms: {
       eyebrow: "DRAFT FOR COUNSEL",
       title: "Terms of use — preview draft",
-      intro: "Fixture information and model outputs are demonstrations, not live facts, financial advice, legal advice, or a guarantee of any event.",
-      sections: [["Permitted use", "Use the preview to evaluate product behavior. Do not treat fictional records as current team, player, coach, venue, or market facts."], ["External services", "Future destinations remain subject to their own terms and may be unavailable by jurisdiction."]],
+      intro: "Dataset information and model outputs are informational, not live facts, financial advice, legal advice, or a guarantee of any event.",
+      sections: [["Permitted use", "Use the preview to evaluate product behavior. Verify critical facts against the cited sources."], ["External services", "Future destinations remain subject to their own terms and may be unavailable by jurisdiction."]],
     },
     "affiliate-disclosure": {
       eyebrow: "COMMERCIAL TRANSPARENCY",
@@ -1631,10 +1710,10 @@ function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "confere
     );
     return (
       <>
-        <PageHeading eyebrow="SEASON-AWARE STRUCTURE" title="Conference membership is data, not a constant." description="The fixture pack demonstrates year-specific affiliation without hardcoding a permanent national structure." />
+        <PageHeading eyebrow="SEASON-AWARE STRUCTURE" title="Conference membership is data, not a constant." description="Conference affiliation is versioned to the 2026 dataset, not hardcoded." />
         <section className="conference-grid content-section">{conferences.map((conference) => {
           const members = teams.filter((team) => team.conference === conference);
-          return <article key={conference}><span className="eyebrow">{members.length} fixture members</span><h2>{conference}</h2><div>{members.map((team) => <a href={`/teams/${team.slug}`} key={team.id}>{team.shortName}<b>{team.record}</b></a>)}</div></article>;
+          return <article key={conference}><span className="eyebrow">{members.length} members</span><h2>{conference}</h2><div>{members.map((team) => <a href={`/teams/${team.slug}`} key={team.id}>{team.shortName}<b>{team.record}</b></a>)}</div></article>;
         })}</section>
       </>
     );
@@ -1651,10 +1730,10 @@ function PlayerPage({ slug }: { slug: string }) {
   const currentTeam = currentTeamId ? teamFor(currentTeamId) : null;
   return (
     <>
-      <PageHeading eyebrow="PLAYER LEDGER · FIXTURE RECORD" title={playerName} description={`${portal?.position ?? dfs?.position} · ${currentTeam?.shortName ?? "Available"} · source and model states remain separate.`} />
+      <PageHeading eyebrow="PLAYER RECORD" title={playerName} description={`${portal?.position ?? dfs?.position} · ${currentTeam?.shortName ?? "Available"} · source and model states remain separate.`} />
       <section className="player-layout content-section">
         {portal ? <article><span className="eyebrow">PORTAL EVENT</span><h2>{teamFor(portal.fromTeamId).shortName} → {portal.toTeamId ? teamFor(portal.toTeamId).shortName : "Available"}</h2><p>{portal.snaps ?? "Unknown"} prior snaps · impact {signed(portal.impact)} · {percent(portal.confidence)} confidence</p><SourceMeta provenance={portal.provenance} /></article> : null}
-        {dfs ? <DfsCard player={dfs} /> : <article><span className="eyebrow">DFS STATE</span><h2>No projection in this fixture slate.</h2><p>Missing data remains an explicit empty state.</p></article>}
+        {dfs ? <DfsCard player={dfs} /> : <article><span className="eyebrow">DFS STATE</span><h2>No projection available.</h2><p>Missing data remains an explicit empty state.</p></article>}
         <article><span className="eyebrow">CORRECTIONS</span><h2>Identity and status issues are quarantined first.</h2><a href={`/corrections?record=player-${slug}`}>Report a data issue →</a></article>
       </section>
     </>
@@ -1694,7 +1773,7 @@ function SimpleStatus({ title, copy, action, actionLabel }: { title: string; cop
 }
 
 function NotFoundPage() {
-  return <EmptyState title="That fixture route is not in the field." copy="The URL may be old, incomplete, or intentionally unavailable." href="/scores" action="Return to scores" />;
+  return <EmptyState title="That route is not in the field." copy="The URL may be old, incomplete, or intentionally unavailable." href="/scores" action="Return to scores" />;
 }
 
 function Footer() {
@@ -1706,7 +1785,7 @@ function Footer() {
         <div><strong>Trust</strong><a href="/about">About</a><a href="/corrections">Corrections</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
         <div><strong>Business</strong><a href="/advertise">Advertise</a><a href="/partnerships">Partnerships</a><a href="/media-kit">Media kit</a><a href="/affiliate-disclosure">Affiliate disclosure</a></div>
       </div>
-      <div className="site-footer__bottom"><span>© 2026 {brand.name} · demonstration product</span><span>Fixture pack 2026.07.31 · no live claims</span></div>
+      <div className="site-footer__bottom"><span>© 2026 {brand.name} · independent analytics</span><span>2026 FBS dataset · compiled 2026-09-05</span></div>
     </footer>
   );
 }

@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Tony Elliott",
+    "title_raw": "Tony Elliott"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple 4–2–5 (Wikipedia 2026 team page)",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Spread (Wikipedia 2026 team page)",
+      "label": "Spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Virginia Cavaliers football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Virginia_Cavaliers_football_team"
+    },
+    {
+      "title": "virginiasports.com — Des Kitchings",
+      "url": "https://virginiasports.com/sports/football/roster/season/2026-27/staff/des-kitchings"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tony Elliott",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Tony Elliott"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Desmond “Des” Kitchings (Offensive Coordinator / Tight Ends)"
+    },
+    {
+      "name": "John Rudzinski",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "John Rudzinski"
+    },
+    {
+      "name": "Keith Gaither",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Keith Gaither (Special Teams Coordinator / Running Backs)"
+    },
+    {
+      "name": "Taylor Lamb",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Taylor Lamb"
+    },
+    {
+      "name": "Keith Gaither",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Keith Gaither"
+    },
+    {
+      "name": "Adam Mims",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Adam Mims"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Virginia",
+    "slug": "virginia"
+  }
+}

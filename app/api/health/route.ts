@@ -4,7 +4,7 @@ export function GET() {
   return Response.json({
     status: "ok",
     service: brand.name,
-    dataEnvironment: "fixture",
+    dataEnvironment: "dataset",
     timestamp: new Date().toISOString(),
   });
 }

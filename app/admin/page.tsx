@@ -1,5 +1,5 @@
 import { getChatGPTUser, chatGPTSignInPath } from "../chatgpt-auth";
-import { providerHealth } from "@/lib/fixtures";
+import { providerHealth } from "@/lib/cfb-dataset";
 import { getProductionGates } from "@/lib/release-readiness";
 
 export const dynamic = "force-dynamic";

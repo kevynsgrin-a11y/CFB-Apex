@@ -1,0 +1,104 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Rob Harley",
+    "title_raw": "Rob Harley (Interim)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Formal exclusive base-front label Not listed. Harley’s prior DC background and interim-HC role leave defensive play-calling / oversight without a separately titled 2026 coordinator on the published staff table.",
+      "label": null
+    },
+    "offense": {
+      "description": "Petersen’s attack is described in local coverage as vertical-oriented, aiming to pair a physical run game with more consistent downfield passing (Northern Star).",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "niuhuskies.com 2026 coaches",
+      "url": "https://niuhuskies.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Rob Harley",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Rob Harley (Interim)"
+    },
+    {
+      "name": "Tony Petersen",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Tony Petersen"
+    },
+    {
+      "name": "Quinn Sanders",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator / Wide Receivers",
+      "source_note": null,
+      "title_raw": "Quinn Sanders"
+    },
+    {
+      "name": null,
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Not listed (no discrete DC title on the official 2026 athletics coaches directory after Harley’s promotion from DC to interim HC)"
+    },
+    {
+      "name": "Cory Connolly",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Cory Connolly"
+    },
+    {
+      "name": "Tony Petersen",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Tony Petersen"
+    },
+    {
+      "name": "Ty Boles",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Ty Boles"
+    },
+    {
+      "name": "Quinn Sanders",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Quinn Sanders (primary Co-OC / WR title)"
+    },
+    {
+      "name": null,
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Joseph Hawkins is listed as Tight Ends on the official directory"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "Northern Illinois",
+    "slug": "northern-illinois"
+  }
+}

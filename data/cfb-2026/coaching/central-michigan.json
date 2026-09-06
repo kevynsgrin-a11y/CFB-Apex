@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Matt Drinkall",
+    "title_raw": "Matt Drinkall"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple looks with even-front foundation (Drinkall: base even front, packages including 3-4 and dime); Ourlads lists 4-3. (Hustle Belt Drinkall interview; Ourlads 2026 CMU depth chart.)",
+      "label": "4-3"
+    },
+    "offense": {
+      "description": "Power-spread foundation (shotgun/pistol heavy, no-huddle communication with tempo variance; physical inside run + perimeter distribution; QB run/read elements). Drinkall stated 2026 offense would open up relative to a more conservative 2025 approach. (Hustle Belt Drinkall interview; Mitten Football spring notes; ByTheBelt CMU 2026 preview; Ourlads “Power Spread.”)",
+      "label": "pistol"
+    }
+  },
+  "sources": [
+    {
+      "title": "cmuchippewas.com/sports/football/coaches",
+      "url": "https://cmuchippewas.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Matt Drinkall",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official CMU athletics coaches page (2026)",
+      "title_raw": "Matt Drinkall"
+    },
+    {
+      "name": "Jim Chapin",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official CMU athletics",
+      "title_raw": "Jim Chapin (also Quarterbacks)"
+    },
+    {
+      "name": "Derek Fulton",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official CMU athletics",
+      "title_raw": "Derek Fulton (Co-OC / Tight Ends)"
+    },
+    {
+      "name": "Sean Cronin",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official CMU athletics",
+      "title_raw": "Sean Cronin (also Linebackers)"
+    },
+    {
+      "name": "Keith Murphy",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official CMU athletics",
+      "title_raw": "Keith Murphy"
+    },
+    {
+      "name": "Jim Chapin",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Jim Chapin"
+    },
+    {
+      "name": "Charles Walker",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official CMU athletics",
+      "title_raw": "Charles Walker"
+    },
+    {
+      "name": "Brandon Johnson-Farrell",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official CMU athletics",
+      "title_raw": "Brandon Johnson-Farrell"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Central Michigan",
+    "slug": "central-michigan"
+  }
+}

@@ -30,10 +30,11 @@ export async function generateMetadata(): Promise<Metadata> {
     description: brand.description,
     applicationName: brand.name,
     robots: {
-      index: false,
-      follow: false,
-      noarchive: true,
-      nocache: true,
+      // Page-level metadata allows indexing once the launch gates pass; the
+      // Worker enforces X-Robots-Tag: noindex and a disallow-all robots.txt
+      // until isProductionLaunchReady() is true.
+      index: true,
+      follow: true,
     },
     openGraph: {
       type: "website",
@@ -79,7 +80,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="en" data-environment="fixture">
+    <html lang="en" data-environment="dataset">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

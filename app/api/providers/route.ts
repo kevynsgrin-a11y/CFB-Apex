@@ -1,8 +1,8 @@
-import { providerHealth } from "@/lib/fixtures";
+import { providerHealth } from "@/lib/cfb-dataset";
 
 export function GET() {
   return Response.json({
-    environment: "fixture",
+    environment: "dataset",
     providers: providerHealth,
   });
 }

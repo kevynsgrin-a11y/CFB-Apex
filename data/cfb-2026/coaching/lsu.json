@@ -1,0 +1,119 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Lane Kiffin",
+    "title_raw": "Lane Kiffin (1st season at LSU)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Baker returns as DC; no single official base-front label located on sources consulted)",
+      "label": null
+    },
+    "offense": {
+      "description": "Tempo, wide-split Kiffin attack with Veer & Shoot DNA and added 2026 personnel flexibility (tight end–heavy packages noted in SI analysis); Sports Illustrated groups Kiffin among SEC Veer & Shoot practitioners",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 LSU Tigers football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_LSU_Tigers_football_team"
+    },
+    {
+      "title": "WBRZ: Kiffin coaching lineup",
+      "url": "https://www.wbrz.com/news/lane-kiffin-releases-official-coaching-lineup-for-2026-season/"
+    },
+    {
+      "title": "SI LSU scheme flexibility",
+      "url": "https://www.si.com/college/lsu/football/why-lsu-could-have-the-sec-s-most-scheme-flexible-football-team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Lane Kiffin",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Lane Kiffin (1st season at LSU)"
+    },
+    {
+      "name": "Charlie Weis Jr.",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Charlie Weis Jr."
+    },
+    {
+      "name": "Joe Cox",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Joe Cox (Co-OC / Tight Ends)"
+    },
+    {
+      "name": "Blake Baker",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Blake Baker"
+    },
+    {
+      "name": "Chris Kiffin",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Chris Kiffin (Co-DC / Linebackers)"
+    },
+    {
+      "name": "Joe Houston",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Joe Houston"
+    },
+    {
+      "name": "Dane Stevens",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Dane Stevens"
+    },
+    {
+      "name": "Kevin Smith",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Kevin Smith"
+    },
+    {
+      "name": "George McDonald",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "George McDonald (Passing Game Coordinator / Wide Receivers)"
+    },
+    {
+      "name": "Sawyer Jordan",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Sawyer Jordan (Inside Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "LSU",
+    "slug": "lsu"
+  }
+}

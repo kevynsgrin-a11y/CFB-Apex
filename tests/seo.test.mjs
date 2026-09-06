@@ -9,11 +9,17 @@ const [layout, robots, sitemap, config] = await Promise.all([
   readFile(new URL("../lib/config.ts", import.meta.url), "utf8"),
 ]);
 
-test("fixture preview is globally noindexed", () => {
-  assert.match(layout, /index:\s*false/);
-  assert.match(layout, /follow:\s*false/);
+test("indexing is gated by the Worker, not by page metadata", () => {
+  // The Worker enforces X-Robots-Tag: noindex until every launch gate is
+  // ready; page metadata itself must allow indexing for that flip to work.
+  assert.match(layout, /index:\s*true/);
+  assert.match(layout, /follow:\s*true/);
+  // The build-time robots.txt disallows everything as the pre-launch default;
+  // the Worker serves the real rules once launch-ready.
   assert.match(robots, /disallow:\s*"\/"/);
-  assert.match(sitemap, /return \[\]/);
+  // The sitemap enumerates real dataset routes, never a fixture universe.
+  assert.match(sitemap, /teams\.map/);
+  assert.doesNotMatch(sitemap, /return \[\]/);
 });
 
 test("metadata is centralized on the brand", () => {
