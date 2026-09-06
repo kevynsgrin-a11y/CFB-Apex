@@ -6,10 +6,15 @@ import {
   dfsPlayers,
   games,
   getCoachBySlug,
+  getDepthChart,
   getGame,
+  getInjuries,
+  getRoster,
   getStadiumBySlug,
   getTeam,
   getTeamBySlug,
+  getTeamSeasons,
+  injuriesAsOf,
   modelEstimatesAvailable,
   portalEvents,
   providerHealth,
@@ -1287,9 +1292,12 @@ function TeamsPage({ teamSlug }: { teamSlug?: string }) {
 
 function TeamDetail({ team }: { team: Team }) {
   const teamGames = games.filter((game) => game.awayTeamId === team.id || game.homeTeamId === team.id);
-  const teamPortal = portalEvents.filter((event) => event.fromTeamId === team.id || event.toTeamId === team.id);
   const coach = coaches.find((item) => item.teamId === team.id);
   const stadium = stadiums.find((item) => item.teamId === team.id);
+  const roster = getRoster(team.slug);
+  const depth = getDepthChart(team.slug);
+  const injuries = getInjuries(team.slug);
+  const seasons = getTeamSeasons(team.slug);
   return (
     <>
       <div className="team-page-hero">
@@ -1317,12 +1325,94 @@ function TeamDetail({ team }: { team: Team }) {
           </div>
         </div>
         <div className="dashboard-panel">
-          <SectionHeading eyebrow="PORTAL" title="Movement" href={`/transfer-portal/${team.slug}`} />
-          <p className="panel-note">Portal movement is not part of the 2026 research dataset.</p>
-        </div>
-        <div className="dashboard-panel">
           <SectionHeading eyebrow="COACHING" title={coach?.name ?? "Head coach not listed"} href={coach ? `/coaches/${coach.slug}` : "/coaches"} />
           <p>{coach ? `${coach.title} · ${coach.record}` : "The dataset does not list a head coach for this program."}</p>
+        </div>
+        <div className="dashboard-panel">
+          <SectionHeading eyebrow={`AVAILABILITY · AS OF ${injuriesAsOf ?? "LATEST"}`} title="Injury report" />
+          {injuries && injuries.players.length > 0 ? (
+            <div className="portal-list">
+              {injuries.players.slice(0, 8).map((player) => (
+                <div className="portal-row" key={player.name}>
+                  <span className={`portal-status portal-status--${player.status === "out" ? "withdrawn" : "available"}`}>{player.status}</span>
+                  <span><strong>{player.name}</strong><small>{player.position}{player.injury ? ` · ${player.injury}` : ""}</small></span>
+                </div>
+              ))}
+              {injuries.players.length > 8 ? <p className="panel-note">+{injuries.players.length - 8} more on the full report</p> : null}
+            </div>
+          ) : (
+            <p className="panel-note">
+              {injuries ? "No players listed on the latest availability report." : "No availability report published for this team in the dataset."}
+            </p>
+          )}
+        </div>
+        <div className="dashboard-panel">
+          <SectionHeading eyebrow="HISTORY" title="Season by season" />
+          {seasons.length ? (
+            <div className="portal-list">
+              {seasons.slice(0, 5).map((row) => (
+                <div className="portal-row" key={row.season}>
+                  <span className="status status--final">{row.season}</span>
+                  <span><strong>{row.g ?? "—"} games</strong><small>{row.op != null ? `${row.op} pts/g for · ${row.dp ?? "—"} against` : "rates not listed"}</small></span>
+                  <b>{row.oy != null ? `${row.oy} yds/g` : "—"}</b>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="panel-note">Historical season data is not published for this program.</p>
+          )}
+        </div>
+        <div className="dashboard-panel dashboard-panel--wide">
+          <SectionHeading eyebrow="DEPTH CHART" title={depth?.status ? `${depth.status.charAt(0)}${depth.status.slice(1).toLowerCase()} two-deep` : "Projected two-deep"} />
+          {depth ? (
+            <div className="portal-list">
+              {depth.units.map((unit) => (
+                <div key={unit.unit} className="portal-row">
+                  <span className="status status--scheduled">{unit.unit.replace("_", " ")}</span>
+                  <span>
+                    <strong>
+                      {unit.positions.slice(0, 6).map((position) => {
+                        const line = position.depth
+                          .slice(0, 2)
+                          .map((slot) => slot.players.map((player) => player.name).join(" / "))
+                          .filter(Boolean)
+                          .join(" · ");
+                        return line ? `${position.position}: ${line}` : null;
+                      })
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </strong>
+                    <small>{depth.schemes?.offense ?? ""}{depth.schemes?.defense ? ` / ${depth.schemes.defense}` : ""}{depth.status_caveat ? ` · ${depth.status_caveat}` : ""}</small>
+                  </span>
+                </div>
+              ))}
+              <p className="panel-note">First six positions per unit shown; the full chart carries every listed position.</p>
+            </div>
+          ) : (
+            <p className="panel-note">Depth chart not available for this team — the research package covers the seven rostered conferences (92 of 138 programs).</p>
+          )}
+        </div>
+        <div className="dashboard-panel dashboard-panel--wide">
+          <SectionHeading
+            eyebrow="ROSTER"
+            title={roster?.counts ? `${roster.counts.players} players listed` : "Roster"}
+          />
+          {roster ? (
+            <div className="portal-list">
+              {roster.position_groups.map((group) => (
+                <div className="portal-row" key={group.name}>
+                  <span className="status status--scheduled">{group.name}</span>
+                  <span>
+                    <strong>{group.players.slice(0, 5).map((player) => player.name).join(" · ")}</strong>
+                    <small>{group.players.length} players{roster.head_coach ? ` · ${roster.head_coach}` : ""}</small>
+                  </span>
+                </div>
+              ))}
+              <p className="panel-note">Top names per group shown; full roster tables ship with the roster pages.</p>
+            </div>
+          ) : (
+            <p className="panel-note">Roster not available for this team — the research package covers the seven rostered conferences (92 of 138 programs).</p>
+          )}
         </div>
         <div className="dashboard-panel">
           <SectionHeading eyebrow="GAMEDAY" title={stadium?.name ?? "Venue guide pending"} href={stadium ? `/stadiums/${stadium.slug}` : "/stadiums"} />

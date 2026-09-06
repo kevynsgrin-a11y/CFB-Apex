@@ -340,6 +340,96 @@ export const portalEvents: PortalEvent[] = [];
 export const dfsPlayers: DfsPlayer[] = [];
 export const stadiums: Stadium[] = [];
 
+/* ------------------------------------------------- rosters & depth charts */
+
+export interface RosterPlayer {
+  name: string;
+  position: string | null;
+  class: string | null;
+  jersey: number | null;
+  height: string | null;
+  weight: string | null;
+  stars: number | null;
+  hometown: string | null;
+}
+
+export interface TeamRoster {
+  head_coach: string | null;
+  counts: { players: number; with_stars: number; with_high_school: number } | null;
+  position_groups: Array<{ name: string; players: RosterPlayer[] }>;
+}
+
+export interface DepthSlotEntry {
+  rank: number;
+  co_listed: boolean;
+  players: Array<{ name: string; class: string | null; stars: number | null }>;
+}
+
+export interface TeamDepthChart {
+  status: string | null;
+  status_caveat: string | null;
+  schemes: { offense: string | null; defense: string | null; special_teams: string | null } | null;
+  units: Array<{ unit: string; positions: Array<{ position: string; depth: DepthSlotEntry[] }> }>;
+}
+
+export interface InjuryEntry {
+  name: string;
+  position: string | null;
+  status: string | null;
+  injury: string | null;
+}
+
+export interface TeamInjuries {
+  slug: string;
+  opponent_context: string | null;
+  players: InjuryEntry[];
+}
+
+export interface TeamSeasonRow {
+  season: string;
+  g: number | null;
+  op: number | null;
+  dp: number | null;
+  oy: number | null;
+  dy: number | null;
+}
+
+const rosterBySlug = bundle.rosters as Record<string, TeamRoster>;
+const depthBySlug = bundle.depthCharts as Record<string, TeamDepthChart>;
+const injuriesBySlug = new Map<string, TeamInjuries>(
+  ((bundle.injuries as { as_of_date: string | null; teams: TeamInjuries[] }).teams ?? []).map(
+    (team) => [team.slug, team],
+  ),
+);
+
+export const injuriesAsOf = (bundle.injuries as { as_of_date: string | null }).as_of_date;
+
+export function getRoster(slug: string): TeamRoster | undefined {
+  return rosterBySlug[slug];
+}
+
+export function getDepthChart(slug: string): TeamDepthChart | undefined {
+  return depthBySlug[slug];
+}
+
+export function getInjuries(slug: string): TeamInjuries | undefined {
+  return injuriesBySlug.get(slug);
+}
+
+const historicalBySeason = bundle.historical as Record<string, Array<{ slug: string | null; g: number | null; op: number | null; dp: number | null; oy: number | null; dy: number | null }>>;
+
+/** Most-recent-first season rows for one team across all historical seasons. */
+export function getTeamSeasons(slug: string): TeamSeasonRow[] {
+  return Object.keys(historicalBySeason)
+    .sort()
+    .reverse()
+    .map((season) => {
+      const row = historicalBySeason[season].find((team) => team.slug === slug);
+      return row ? { season, g: row.g, op: row.op, dp: row.dp, oy: row.oy, dy: row.dy } : null;
+    })
+    .filter((row): row is TeamSeasonRow => row !== null);
+}
+
 export const seasonRules: SeasonRules = {
   id: "season-2026",
   season: 2026,
