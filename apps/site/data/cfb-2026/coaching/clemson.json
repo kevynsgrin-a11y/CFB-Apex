@@ -1,0 +1,119 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Dabo Swinney",
+    "title_raw": "Dabo Swinney"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Allen Year 2; no exclusive official 2026 base-front tag located on athletics pages consulted)",
+      "label": null
+    },
+    "offense": {
+      "description": "Two-back, run-oriented, play-action / downfield-shot identity under Morris (Morris/Swinney quoted in Post and Courier, 2026); tempo and formation manipulation emphasized",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Clemson Tigers football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Clemson_Tigers_football_team"
+    },
+    {
+      "title": "clemsontigers.com staff — Rich Bisaccia",
+      "url": "https://clemsontigers.com/staff/rich-bisaccia"
+    },
+    {
+      "title": "Post and Courier: Morris offensive scheme",
+      "url": "https://www.postandcourier.com/sports/clemson/clemson-football-chad-morris-offensive-scheme/article_69f2811e-b60d-49b3-973d-d5a2fcfc5ef3.html"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Dabo Swinney",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Dabo Swinney"
+    },
+    {
+      "name": "Chad Morris",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Chad Morris"
+    },
+    {
+      "name": "Kyle Richardson",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinators",
+      "source_note": null,
+      "title_raw": "Kyle Richardson (Co-OC / Tight Ends)"
+    },
+    {
+      "name": "Matt Luke",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinators",
+      "source_note": null,
+      "title_raw": "Matt Luke (Assistant Head Coach / Co-OC / Offensive Line)"
+    },
+    {
+      "name": "Tom Allen",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Tom Allen"
+    },
+    {
+      "name": "Nick Eason",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Nick Eason (Associate Head Coach / Co-DC / Defensive Tackles)"
+    },
+    {
+      "name": "Rich Bisaccia",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Rich Bisaccia"
+    },
+    {
+      "name": "Tajh Boyd",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Tajh Boyd"
+    },
+    {
+      "name": "C. J. Spiller",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "C. J. Spiller (Offensive Run Game Coordinator / Running Backs)"
+    },
+    {
+      "name": "Tyler Grisham",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Tyler Grisham (Offensive Pass Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Clemson",
+    "slug": "clemson"
+  }
+}

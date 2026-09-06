@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jason Eck",
+    "title_raw": "Jason Eck"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, pressure-oriented unit under Nowinsky (“get after the quarterback”); bear-front and blitz wrinkles discussed in spring coverage. A single exclusive published base-front label for 2026 was Not listed.",
+      "label": null
+    },
+    "offense": {
+      "description": "Balanced, personnel-driven, complementary offense under Eck / Schleusner (creative / red-zone emphasis in prior reporting). Entering 2026, with starter Jack Layne out for the season, the staff publicly committed to a multi-quarterback approach (Laubstein, Moga, Faʻavae) rather than a rigid named system brand (Albuquerque Journal / Daily Lobo).",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "golobos.com 2026 football roster coaching staff",
+      "url": "https://golobos.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jason Eck",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jason Eck"
+    },
+    {
+      "name": "Luke Schleusner",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / QBs",
+      "source_note": null,
+      "title_raw": "Luke Schleusner"
+    },
+    {
+      "name": "Spence Nowinsky",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Spence Nowinsky"
+    },
+    {
+      "name": "Erik Link",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Erik Link (Assistant Head Coach)"
+    },
+    {
+      "name": "Luke Schleusner",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Luke Schleusner"
+    },
+    {
+      "name": "Darrius G. Smith",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Darrius G. Smith"
+    },
+    {
+      "name": "Carson Walch",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Carson Walch (Offensive Passing Game Coordinator / Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "New Mexico",
+    "slug": "new-mexico"
+  }
+}

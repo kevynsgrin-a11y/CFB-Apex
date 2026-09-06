@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jeff Brohm",
+    "title_raw": "Jeff Brohm"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Ellis/Ivey co-DC structure after Ron English departure; no official exclusive base-front tag located)",
+      "label": null
+    },
+    "offense": {
+      "description": "Brohm multiple / QB-centric attack (continuity; no single new official brand label located beyond established Brohm system language)",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Louisville Cardinals football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Louisville_Cardinals_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jeff Brohm",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jeff Brohm"
+    },
+    {
+      "name": "Brian Brohm",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Brian Brohm (Offensive Coordinator / Quarterbacks)"
+    },
+    {
+      "name": "Mark Ivey",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinators",
+      "source_note": null,
+      "title_raw": "Mark Ivey (Co-DC / Defensive Line)"
+    },
+    {
+      "name": "Steve Ellis",
+      "role_key": "co_dc",
+      "role_raw": "Co-Defensive Coordinators",
+      "source_note": null,
+      "title_raw": "Steve Ellis (Co-DC / Secondary)"
+    },
+    {
+      "name": "Karl Maslowski",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Karl Maslowski (Special Teams Coordinator / Assistant Linebackers)"
+    },
+    {
+      "name": "Brian Brohm",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Brian Brohm"
+    },
+    {
+      "name": "Chris Barclay",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Chris Barclay"
+    },
+    {
+      "name": "Deion Branch",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Deion Branch"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Louisville",
+    "slug": "louisville"
+  }
+}

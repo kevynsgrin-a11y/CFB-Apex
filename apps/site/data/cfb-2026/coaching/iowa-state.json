@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jimmy Rogers",
+    "title_raw": "Jimmy Rogers"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Transition from Heacock 3-3-5 to Bobbit 4-2-5 (four-down front, freer LBs, heavy man coverage usage). (Ames Tribune; Iowa State Daily.)",
+      "label": "3-3-5"
+    },
+    "offense": {
+      "description": "Roehl (ex–North Dakota State / prior ISU RB coach) installing new Rogers-era offense; beat notes describe a more pro-/balanced approach with under-center and QB-run elements vs. prior staff. Fine “named” label Not listed beyond new-regime install. (Iowa State Daily; ISU spring prospectus.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "cyclones.com/sports/football/coaches",
+      "url": "https://cyclones.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jimmy Rogers",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official ISU coaches page (Campbell → Penn State)",
+      "title_raw": "Jimmy Rogers"
+    },
+    {
+      "name": "Tyler Roehl",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official ISU coaches page",
+      "title_raw": "Tyler Roehl"
+    },
+    {
+      "name": "Jesse Bobbit",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official ISU coaches page",
+      "title_raw": "Jesse Bobbit"
+    },
+    {
+      "name": "Rob Grande",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official ISU coaches page",
+      "title_raw": "Rob Grande"
+    },
+    {
+      "name": "Keith Heckendorf",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official ISU coaches page",
+      "title_raw": "Keith Heckendorf"
+    },
+    {
+      "name": "John Johnson",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official ISU coaches page",
+      "title_raw": "John Johnson"
+    },
+    {
+      "name": "Derrick Sherman",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official ISU coaches page",
+      "title_raw": "Derrick Sherman"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "Iowa State",
+    "slug": "iowa-state"
+  }
+}

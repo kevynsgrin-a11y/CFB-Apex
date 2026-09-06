@@ -1,0 +1,133 @@
+{
+  "away_slug": "nc-state",
+  "date": "2026-08-29",
+  "game_id": "2026-08-29-nc-state-at-virginia",
+  "home_slug": "virginia",
+  "leaders": {
+    "key individuals": [
+      {
+        "player": "Beau Pribula",
+        "team": "UVA",
+        "team_slug": "virginia",
+        "values": {
+          "Stat line": "9/11, 155 yds, 2 TD, 0 INT; 15 rush, 110 yds"
+        }
+      },
+      {
+        "player": "Jekail Middlebrook",
+        "team": "UVA",
+        "team_slug": "virginia",
+        "values": {
+          "Stat line": "15 rush, 64 yds"
+        }
+      },
+      {
+        "player": "Xavier Brown",
+        "team": "UVA",
+        "team_slug": "virginia",
+        "values": {
+          "Stat line": "8 rush, 40 yds, 1 TD"
+        }
+      },
+      {
+        "player": "Xay Davis",
+        "team": "UVA",
+        "team_slug": "virginia",
+        "values": {
+          "Stat line": "7 rush, 13 yds, 1 TD"
+        }
+      },
+      {
+        "player": "CJ Bailey",
+        "team": "NCST",
+        "team_slug": "nc-state",
+        "values": {
+          "Stat line": "12/23, 84 yds, 0 TD, 1 INT"
+        }
+      },
+      {
+        "player": "Will Wilson",
+        "team": "NCST",
+        "team_slug": "nc-state",
+        "values": {
+          "Stat line": "3/4, 8 yds"
+        }
+      }
+    ]
+  },
+  "line_score": [
+    {
+      "final": 8,
+      "quarters": [
+        0,
+        0,
+        8,
+        0
+      ],
+      "team": "NC State",
+      "team_slug": "nc-state"
+    },
+    {
+      "final": 34,
+      "quarters": [
+        10,
+        7,
+        7,
+        10
+      ],
+      "team": "Virginia",
+      "team_slug": "virginia"
+    }
+  ],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "game",
+    "notes": [
+      "Sample sizes are a single game for nearly every team. These are Week 0 / early Week 1 snapshots, not season rates, and must not be presented as season averages."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/03-season-2026-week0-early-stats.md"
+    ]
+  },
+  "narrative": "Team totals (ACC / FOX / StatMuse): Virginia 413 total yards (258 rush, 155 pass) on 68 plays; NC State 168 total yards (76 rush, 92 pass) on 51 plays. Virginia first downs 19; NC State 10.",
+  "neutral_site": false,
+  "note": "ACC opener",
+  "scoring_plays": [],
+  "season": 2026,
+  "site": "Scott Stadium, Charlottesville, VA",
+  "sources": [
+    {
+      "title": "ACC box score",
+      "url": "https://theacc.com/"
+    },
+    {
+      "title": "FOX Sports boxscore",
+      "url": "https://www.foxsports.com/college-football/nc-state-wolfpack-vs-virginia-cavaliers-aug-29-2026-game-boxscore-42881"
+    },
+    {
+      "title": "StatMuse",
+      "url": "https://www.statmuse.com/cfb/game/8-29-2026-ncst-at-uva-125241"
+    },
+    {
+      "title": "cfbstats.com — Beau Pribula",
+      "url": "https://cfbstats.com/2026/player/746/1175169/passing/split.html"
+    }
+  ],
+  "team_stats": null,
+  "teams": [
+    {
+      "name": "Virginia",
+      "points": 34,
+      "slug": "virginia"
+    },
+    {
+      "name": "NC State",
+      "points": 8,
+      "slug": "nc-state"
+    }
+  ],
+  "title": "Virginia 34, NC State 8 (ACC opener)",
+  "tv": "ESPN"
+}

@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Jon Sumrall",
+    "title_raw": "Jon Sumrall (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/sec.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (staff structure supports multiple fronts with DL, ILB, OLB, nickel; no official base-front tag on coaches page)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed as a single branded system on floridagators.com; Faulkner installs Sumrall’s preferred attack (beat coverage describes RPO/spread elements — treat brand label as Not listed pending official terminology)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "floridagators.com 2026 Football Coaches",
+      "url": "https://floridagators.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jon Sumrall",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jon Sumrall (1st season)"
+    },
+    {
+      "name": "Buster Faulkner",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Buster Faulkner"
+    },
+    {
+      "name": "Brad White",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Brad White"
+    },
+    {
+      "name": "Johnathan Galante",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Johnathan Galante"
+    },
+    {
+      "name": "Joe Craddock",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Joe Craddock"
+    },
+    {
+      "name": "Chris Foster",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Chris Foster"
+    },
+    {
+      "name": "Marcus Davis",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Marcus Davis (Outside Wide Receivers)"
+    },
+    {
+      "name": "Trent McKnight",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Trent McKnight (Passing Game Coordinator / Inside Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "sec",
+    "school": "Florida",
+    "slug": "florida"
+  }
+}

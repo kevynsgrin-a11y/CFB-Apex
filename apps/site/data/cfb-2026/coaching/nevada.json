@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jeff Choate",
+    "title_raw": "Jeff Choate"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Ioane’s stated identity is smart, fast, physical, with scheme fitted to personnel rather than a fixed doctrine. 2026 depth-chart structure (JACK / nickel / nose) is consistent with flexible odd/hybrid fronts; an exclusive official “base defense” label remains Not listed.",
+      "label": "nickel"
+    },
+    "offense": {
+      "description": "First-year OC Brett Bartolone installs an Air Raid–inspired, explosivity-first passing attack after Choate’s prior run-first years; Choate has publicly framed a shift toward roughly balanced (≈50/50) run-pass while retaining physical run identity (Nevada Sports Net).",
+      "label": "Air Raid-inspired"
+    }
+  },
+  "sources": [
+    {
+      "title": "nevadawolfpack.com 2026 coaches",
+      "url": "https://nevadawolfpack.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jeff Choate",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jeff Choate"
+    },
+    {
+      "name": "Brett Bartolone",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Brett Bartolone"
+    },
+    {
+      "name": "Kane Ioane",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kane Ioane"
+    },
+    {
+      "name": "Parker Henry",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator / Nickels",
+      "source_note": null,
+      "title_raw": "Parker Henry"
+    },
+    {
+      "name": "Trey Tinsley",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Trey Tinsley"
+    },
+    {
+      "name": "Jim Mastro",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Jim Mastro"
+    },
+    {
+      "name": "Keith Price",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Keith Price"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "Nevada",
+    "slug": "nevada"
+  }
+}

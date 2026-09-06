@@ -1,0 +1,101 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Brent Key",
+    "title_raw": "Brent Key"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple 4–2–5 (Wikipedia 2026 team page)",
+      "label": "Multiple"
+    },
+    "offense": {
+      "description": "Pro spread (Wikipedia 2026 team page)",
+      "label": "Pro spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Georgia Tech Yellow Jackets football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Georgia_Tech_Yellow_Jackets_football_team"
+    },
+    {
+      "title": "ramblinwreck.com Hopkins hire",
+      "url": "https://ramblinwreck.com/news/2026/07/31/five-time-all-pro-hopkins-joins-georgia-tech-staff"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Brent Key",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Brent Key"
+    },
+    {
+      "name": "George Godsey",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "George Godsey"
+    },
+    {
+      "name": "Chris Weinke",
+      "role_key": "co_oc",
+      "role_raw": "Co-Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Chris Weinke (Assistant Head Coach / Co-OC / Quarterbacks)"
+    },
+    {
+      "name": "Jason Semore",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Jason Semore (Defensive Coordinator / Linebackers)"
+    },
+    {
+      "name": "Tim Salem",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Tim Salem"
+    },
+    {
+      "name": "Chris Weinke",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Chris Weinke"
+    },
+    {
+      "name": "Jimmy Smith",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Jimmy Smith"
+    },
+    {
+      "name": "Jafar Williams",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Jafar Williams (assistant WR DeAndre Hopkins also announced July 2026)"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Georgia Tech",
+    "slug": "georgia-tech"
+  }
+}

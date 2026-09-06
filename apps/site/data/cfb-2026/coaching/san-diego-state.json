@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Sean Lewis",
+    "title_raw": "Sean Lewis"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Program 4-2-5 identity retained; Sumler (promoted Dec. 2025 after Aurich’s departure) has publicly framed 2026 as reinforcing and layering the prior year’s principles rather than a full schematic reset.",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Continuity of the Sean Lewis Veer-and-Shoot family (spread / tempo / vertical choice concepts) with a strong run component under Johnson (2025 unit improved rushing and scoring; 2026 staff titles unchanged on official roster). Formal 2026 playbook rename Not listed.",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "goaztecs.com 2026 roster/coaches",
+      "url": "https://goaztecs.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Sean Lewis",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Sean Lewis"
+    },
+    {
+      "name": "Matt Johnson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Matt Johnson"
+    },
+    {
+      "name": "Demetrius Sumler",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Demetrius Sumler"
+    },
+    {
+      "name": "Zac Barton",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Zac Barton (Associate Head Coach)"
+    },
+    {
+      "name": "Matt Johnson",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Matt Johnson"
+    },
+    {
+      "name": "Darian Hagan",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Darian Hagan"
+    },
+    {
+      "name": "Matthew Middleton",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Matthew Middleton (Pass Game Coordinator / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "San Diego State",
+    "slug": "san-diego-state"
+  }
+}

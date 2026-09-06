@@ -1,0 +1,94 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Bronco Mendenhall",
+    "title_raw": "Bronco Mendenhall"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/pac12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Continuity of Mendenhall/Howell 3-3-5 (beat reporting and 2025–26 scheme familiarity commentary).",
+      "label": "3-3-5"
+    },
+    "offense": {
+      "description": "Anae installs a smart, adaptable, player-driven offense; publicly pass-first to spread defenses and open run lanes; motion/shift; physical “rhino”/tight-end role in the run game (2026 media day / local radio). Not a single rigid named playbook label.",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "utahstateaggies.com coaches",
+      "url": "https://utahstateaggies.com/sports/football/coaches"
+    },
+    {
+      "title": "USU Today Anae hire (1/3/2026)",
+      "url": "https://www.usu.edu/today/story/robert-anae-named-utah-state-football-offensive-coordinator"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Bronco Mendenhall",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Bronco Mendenhall"
+    },
+    {
+      "name": "Robert Anae",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Tight Ends",
+      "source_note": null,
+      "title_raw": "Robert Anae"
+    },
+    {
+      "name": "Nick Howell",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator / Safeties",
+      "source_note": null,
+      "title_raw": "Nick Howell"
+    },
+    {
+      "name": "Shane Hunter",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Shane Hunter"
+    },
+    {
+      "name": "Matt Johns",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Matt Johns"
+    },
+    {
+      "name": "Kirk Garner",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Kirk Garner"
+    },
+    {
+      "name": "Skyler Ridley",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Skyler Ridley"
+    }
+  ],
+  "team": {
+    "conference_slug": "pac12",
+    "school": "Utah State",
+    "slug": "utah-state"
+  }
+}

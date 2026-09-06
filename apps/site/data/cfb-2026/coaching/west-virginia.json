@@ -1,0 +1,111 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Rich Rodriguez",
+    "title_raw": "Rich Rodriguez"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Alley aggressive, blitz-heavy multiple defense. Exact base front label Not listed. (Weirton Daily Times; SI WVU staff features.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Rodriguez no-huddle spread option / zone-read identity (historical Rich Rod attack, reinstalled in Morgantown). (WV Sports Nation; WVU athletics context.)",
+      "label": "spread option"
+    }
+  },
+  "sources": [
+    {
+      "title": "wvusports.com/sports/football/coaches",
+      "url": "https://wvusports.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Rich Rodriguez",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official WVU coaches page (second stint)",
+      "title_raw": "Rich Rodriguez"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official WVU coaches page; Weirton Daily Times spring feature",
+      "title_raw": "Not listed as a titled OC"
+    },
+    {
+      "name": null,
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official WVU coaches page; Weirton Daily Times spring feature",
+      "title_raw": "Rich Rodriguez runs the offense with Travis Trickett as Senior Offensive Assistant (floater / offense overseer per beat)"
+    },
+    {
+      "name": "Zac Alley",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official WVU coaches page",
+      "title_raw": "Zac Alley (Assistant Head Coach / DC / Linebackers)"
+    },
+    {
+      "name": "Pat Kirkland",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official WVU coaches page",
+      "title_raw": "Pat Kirkland (STC / Defensive Assistant)"
+    },
+    {
+      "name": "Rhett Rodriguez",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official WVU coaches page",
+      "title_raw": "Rhett Rodriguez"
+    },
+    {
+      "name": "Pat White",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official WVU coaches page",
+      "title_raw": "Pat White (Assistant Quarterbacks / Assistant to HC)"
+    },
+    {
+      "name": "Jay Boulware",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official WVU coaches page (Noel Devine: Assistant RBs / Offensive Analyst)",
+      "title_raw": "Jay Boulware"
+    },
+    {
+      "name": "Ryan Garrett",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official WVU coaches page",
+      "title_raw": "Ryan Garrett (Wide Receivers)"
+    },
+    {
+      "name": "Logan Bradley",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official WVU coaches page",
+      "title_raw": "Logan Bradley (Inside Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "West Virginia",
+    "slug": "west-virginia"
+  }
+}

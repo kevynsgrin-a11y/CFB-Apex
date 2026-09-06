@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Tim Polasek",
+    "title_raw": "Tim Polasek"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Wikipedia 2026 team infobox: Multiple 4–3 under Grant Olson.",
+      "label": "Multiple 4-3"
+    },
+    "offense": {
+      "description": "Wikipedia 2026 team infobox: Multiple pro-style. PFF and program coverage describe a run-heavy, often under-center structure under Polasek / Larson, with below-average RPO rate and efficient play-action / conventional concepts rather than option gimmicks.",
+      "label": "Multiple pro-style"
+    }
+  },
+  "sources": [
+    {
+      "title": "gobison.com coaches",
+      "url": "https://gobison.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tim Polasek",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Tim Polasek"
+    },
+    {
+      "name": "Dan Larson",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Tight Ends and Fullbacks",
+      "source_note": null,
+      "title_raw": "Dan Larson"
+    },
+    {
+      "name": "Grant Olson",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Grant Olson"
+    },
+    {
+      "name": "Carlton Littlejohn",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator / Defensive Ends",
+      "source_note": null,
+      "title_raw": "Carlton Littlejohn"
+    },
+    {
+      "name": "Joe Beschorner",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Joe Beschorner"
+    },
+    {
+      "name": "Sam Ojuri",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Sam Ojuri"
+    },
+    {
+      "name": "Steve Crutchley",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Steve Crutchley"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "North Dakota State",
+    "slug": "north-dakota-state"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "John Hauser",
+    "title_raw": "John Hauser"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aggressive, multiple-front, pressure-oriented defense under Mattix (returned after Charlotte stop); prior Hauser-era film notes often described a 4-2-5 shape—2026 exclusive single-base label under Mattix Not listed as one published alignment. (ByTheBelt; The Grueling Truth defensive breakdown; LGHL film notes historically.)",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Spread-option / zone-read–heavy attack with RPOs and dual-threat QB usage; Isphording retained as play-caller under Hauser. (The Grueling Truth; Land-Grant Holy Land coach’s preview of Ohio scheme; ByTheBelt Ohio 2026.)",
+      "label": "Spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "ohiobobcats.com/sports/football/coaches",
+      "url": "https://ohiobobcats.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "John Hauser",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Ohio athletics coaches page (2026)",
+      "title_raw": "John Hauser"
+    },
+    {
+      "name": "Scott Isphording",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Ohio athletics",
+      "title_raw": "Scott Isphording (also Quarterbacks)"
+    },
+    {
+      "name": "Kurt Mattix",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Ohio athletics; ByTheBelt Ohio 2026",
+      "title_raw": "Kurt Mattix"
+    },
+    {
+      "name": "Blair Cavanaugh",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Ohio athletics",
+      "title_raw": "Blair Cavanaugh"
+    },
+    {
+      "name": "Scott Isphording",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Scott Isphording"
+    },
+    {
+      "name": "Lamar Conard",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Ohio athletics",
+      "title_raw": "Lamar Conard (Assistant HC / Running Backs)"
+    },
+    {
+      "name": "Danny Langsdorf",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Ohio athletics",
+      "title_raw": "Danny Langsdorf"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Ohio",
+    "slug": "ohio"
+  }
+}

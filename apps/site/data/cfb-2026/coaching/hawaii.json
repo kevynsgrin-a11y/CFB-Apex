@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Timmy Chang",
+    "title_raw": "Timmy Chang"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Multiple-front approach under Thurman; 2026 preview reporting describes 4-2-5 as a base look with three-man fronts also used by personnel (NFL Draft Buzz / related previews). Exclusive single-front doctrine is not rigidly branded on the athletics coaches page.",
+      "label": "4-2-5"
+    },
+    "offense": {
+      "description": "Base run-and-shoot / read-and-attack lineage (Mouse Davis / June Jones tradition via Chang), with Air Raid concepts and RPO wrinkles under Arceneaux; Chang remains primary play-caller with Arceneaux providing booth input (Honolulu Star-Advertiser; Aloha State Daily). Four-wide spacing and quarterback Micah Alejado’s command are central to 2026 previews.",
+      "label": "run-and-shoot / read-and-attack"
+    }
+  },
+  "sources": [
+    {
+      "title": "hawaiiathletics.com coaches / 2026 roster coaching staff",
+      "url": "https://hawaiiathletics.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Timmy Chang",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Timmy Chang"
+    },
+    {
+      "name": "Anthony Arceneaux",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Running Backs",
+      "source_note": null,
+      "title_raw": "Anthony Arceneaux"
+    },
+    {
+      "name": "Dennis Thurman",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Dennis Thurman"
+    },
+    {
+      "name": "Thomas Sheffield",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Thomas Sheffield"
+    },
+    {
+      "name": "Chad Kapanui",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Chad Kapanui"
+    },
+    {
+      "name": "Anthony Arceneaux",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Anthony Arceneaux"
+    },
+    {
+      "name": "Jared Ursua",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Jared Ursua (Pass Game Coordinator / Wide Receivers)"
+    },
+    {
+      "name": "William Overstreet",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "William Overstreet (Assistant Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "Hawai'i",
+    "slug": "hawaii"
+  }
+}

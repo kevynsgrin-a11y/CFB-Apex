@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jeff Monken",
+    "title_raw": "Jeff Monken"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/aac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Continuity of approach under new DC Daryl Dixon after Nate Woody’s departure to Cincinnati; personnel turnover but “approach remains the same.” Exact exclusive 2026 base-front label (e.g., 3-4 vs multiple) Not listed as a single published “base” on materials reviewed. (Times Herald-Record; Army athletics.)",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "Continuity of Monken’s option identity; Monken stated for 2026 the Black Knights expect to remain “very much like we have been” and utilize option elements that differentiate Army. Modernized option package with concepts such as GT counter reported in broader Army–Navy option coverage. (Times Herald-Record, Sept. 2026; SB Nation option feature.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "goarmywestpoint.com/sports/football/coaches",
+      "url": "https://goarmywestpoint.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jeff Monken",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Army athletics 2026 coaches page",
+      "title_raw": "Jeff Monken"
+    },
+    {
+      "name": "Cody Worley",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official Army athletics",
+      "title_raw": "Cody Worley (also Quarterbacks)"
+    },
+    {
+      "name": "Daryl Dixon",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official Army athletics; Times Herald-Record on Dixon succession after Nate Woody",
+      "title_raw": "Daryl Dixon"
+    },
+    {
+      "name": "Sean Saturnio",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official Army athletics",
+      "title_raw": "Sean Saturnio (Associate Head Coach / Special Teams Coordinator)"
+    },
+    {
+      "name": "Cody Worley",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official title: OC / Quarterbacks",
+      "title_raw": "Cody Worley"
+    },
+    {
+      "name": "Chandler Burks",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official Army athletics (Slot Backs: Dane Romero)",
+      "title_raw": "Chandler Burks"
+    },
+    {
+      "name": "Aaron Smith",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official Army athletics",
+      "title_raw": "Aaron Smith"
+    }
+  ],
+  "team": {
+    "conference_slug": "aac",
+    "school": "Army",
+    "slug": "army"
+  }
+}

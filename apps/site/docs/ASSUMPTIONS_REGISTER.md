@@ -1,0 +1,18 @@
+# Assumptions register
+
+| ID | Assumption | Rationale | Risk/mitigation |
+|---|---|---|---|
+| A-001 | The repository is a new project. | It contained no project files or Git history before initialization. | Preserve the generated Vinext foundation and document all migration choices. |
+| A-002 | This delivery uses deterministic fixture data. | No provider contracts, credentials, or content rights were supplied. | Label every fixture surface as demo; noindex demo content; expose provider configuration state. |
+| A-003 | “CFB Apex” is the approved release brand for `cfbapex.com`. | The owner selected the domain and requested deployment there. | Keep brand strings and metadata centralized so future changes remain consistent. |
+| A-004 | Clean Mode is the device default. | Required product principle. | Persist only an explicit local preference; gate Odds & DFS Mode with disclosure. |
+| A-005 | `cfbapex.com` and `www.cfbapex.com` are authorized for a public fixture beta; campaign, affiliate, paid-data, and live-data activation are not. | The owner explicitly requested the domain deployment, but supplied no provider contracts or launch evidence. | Keep the fixture/noindex boundary and all commercial/live activation environment-gated. |
+| A-006 | Public examples may use invented fixture schools and people. | Avoids false claims and licensing issues. | Mark them as deterministic demonstration records and never present them as live/current. |
+| A-007 | The current runtime supports four concurrent agent threads. | Platform limit is four, below the brief’s preferred 6–8. | Use three parallel specialists plus the managing thread and sequence later reviewers. |
+| A-008 | The domain release is an unauthenticated fixture beta, not a production live-data launch. | The owner authorized a public URL before provider and legal gates were closed. | Retain global noindex, synthetic labels, server-side kill switches, and lightweight public endpoints only. |
+| A-009 | Fixture transformations are product demonstrations, not predictive models. | No licensed historical corpus, trained artifact, calibration, or backtest was supplied. | Use synthetic provenance and candid model cards; never market accuracy claims. |
+| A-010 | One client-side product shell is acceptable for this preview. | It provides coherent interactive fixtures quickly. | Split routes and reduce client JavaScript before a public performance launch. |
+| A-011 | The supplied July 31 research report is discovery input, not authoritative data. | It contains material conflicts with current primary sources. | Quarantine unsupported facts; use `docs/RESEARCH_REPORT_AUDIT.md` before implementation. |
+| A-012 | Sportradar and SportsDataIO are RFP candidates, not selected vendors. | No signed order form, SLA, credentials, or pilot evidence was supplied. | Compare identical written rights/coverage responses and measured replay/live results. |
+| A-013 | An external persistent-stream relay may not be necessary. | Current Workers docs allow unlimited HTTP wall time while connected; lifecycle reliability still needs testing. | Prototype on Cloudflare first and add a minimal relay only on measured need. |
+| A-014 | Public live-data launch remains explicitly unauthorized. | Domain deployment approval does not supply rights, entity crosswalk, shadow pilot, drills, staffing, or legal approval. | Deny-by-default environment gates, noindex lock, fixture beta, and public live-launch runbook. |

@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Scott Frost",
+    "title_raw": "Scott Frost"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/big12.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Grinch year-two continuity; 2025 unit strong vs. pass. Exact base front label Not listed. (VSiN Big 12 preview; UCF athletics.)",
+      "label": null
+    },
+    "offense": {
+      "description": "Frost-era tempo spread continuity under Cooper (year two as OC). Named exclusive playbook brand beyond Frost/Cooper spread Not listed. (Underdog Dynasty 2026 UCF preview; ucfknights.com.)",
+      "label": "spread"
+    }
+  },
+  "sources": [
+    {
+      "title": "ucfknights.com football roster coaching staff",
+      "url": "https://ucfknights.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Scott Frost",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "Scott Frost"
+    },
+    {
+      "name": "Steve Cooper",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "Steve Cooper"
+    },
+    {
+      "name": "Alex Grinch",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "Alex Grinch (also Safeties)"
+    },
+    {
+      "name": "Pete Alamar",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "Pete Alamar"
+    },
+    {
+      "name": "McKenzie Milton",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "McKenzie Milton"
+    },
+    {
+      "name": "Jimmy Beal",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "Jimmy Beal"
+    },
+    {
+      "name": "Sean Beckton Sr.",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official UCF roster coaching staff",
+      "title_raw": "Sean Beckton Sr. (Associate Head Coach / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "big12",
+    "school": "UCF",
+    "slug": "ucf"
+  }
+}

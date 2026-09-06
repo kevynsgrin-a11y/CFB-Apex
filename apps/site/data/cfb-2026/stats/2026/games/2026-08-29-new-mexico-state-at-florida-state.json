@@ -1,0 +1,147 @@
+{
+  "away_slug": "new-mexico-state",
+  "date": "2026-08-29",
+  "game_id": "2026-08-29-new-mexico-state-at-florida-state",
+  "home_slug": "florida-state",
+  "leaders": {},
+  "line_score": [],
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "game",
+    "notes": [
+      "Sample sizes are a single game for nearly every team. These are Week 0 / early Week 1 snapshots, not season rates, and must not be presented as season averages."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "02-stats/02-full-schedule-2026.md",
+      "02-stats/03-season-2026-week0-early-stats.md"
+    ]
+  },
+  "narrative": "Leaders: Ashton Daniels (FSU) 17/27, 202 yds, 1 TD, 1 INT; 8 rush, 30 yds, 1 TD. Ousmane Kromah (FSU) 14 rush, 115 yds, 1 TD (long 52). Samuel Singleton Jr. (FSU) 9 rush, 42 yds, 1 TD; 4 rec, 54 yds, 1 TD. Trey Hedden (NMSU) 26/42, 272 yds, 2 TD, 1 INT. Brodie Malone-Bradford (NMSU) 6 rec, 96 yds, 1 TD. TK King (NMSU) 7 rec, 78 yds, 1 TD.",
+  "neutral_site": false,
+  "note": null,
+  "scoring_plays": [],
+  "season": 2026,
+  "site": "Doak Campbell Stadium",
+  "sources": [
+    {
+      "title": "Florida State Athletics box score",
+      "url": "https://seminoles.com/sports/football/stats/2026/new-mexico-st-/boxscore/16673"
+    },
+    {
+      "title": "ESPN box score",
+      "url": "https://www.espn.com/college-football/boxscore/_/gameId/401864570"
+    }
+  ],
+  "team_stats": {
+    "columns": [
+      {
+        "label": "NMSU",
+        "team_slug": "new-mexico-state"
+      },
+      {
+        "label": "FSU",
+        "team_slug": "florida-state"
+      }
+    ],
+    "normalized": {
+      "FSU": {
+        "first_downs": "20",
+        "passing": "17–27–1, 202 yds, 1 TD",
+        "possession": "31:32",
+        "rushing": "39–217–3",
+        "third_down": "8 of 14",
+        "total_offense": "66–419",
+        "yards_per_play": "6.3"
+      },
+      "NMSU": {
+        "first_downs": "18",
+        "passing": "26–43–1, 272 yds, 2 TD",
+        "possession": "28:28",
+        "rushing": "23–47–0",
+        "third_down": "10 of 17",
+        "total_offense": "66–319",
+        "yards_per_play": "4.8"
+      }
+    },
+    "rows": [
+      {
+        "statistic": "First downs",
+        "values": {
+          "FSU": "20",
+          "NMSU": "18"
+        }
+      },
+      {
+        "statistic": "Rushing",
+        "values": {
+          "FSU": "39–217–3",
+          "NMSU": "23–47–0"
+        }
+      },
+      {
+        "statistic": "Passing",
+        "values": {
+          "FSU": "17–27–1, 202 yds, 1 TD",
+          "NMSU": "26–43–1, 272 yds, 2 TD"
+        }
+      },
+      {
+        "statistic": "Total offense",
+        "values": {
+          "FSU": "66–419",
+          "NMSU": "66–319"
+        }
+      },
+      {
+        "statistic": "Yards/play",
+        "values": {
+          "FSU": "6.3",
+          "NMSU": "4.8"
+        }
+      },
+      {
+        "statistic": "Possession",
+        "values": {
+          "FSU": "31:32",
+          "NMSU": "28:28"
+        }
+      },
+      {
+        "statistic": "3rd down",
+        "values": {
+          "FSU": "8 of 14",
+          "NMSU": "10 of 17"
+        }
+      },
+      {
+        "statistic": "Red zone",
+        "values": {
+          "FSU": "6–6",
+          "NMSU": "1–1"
+        }
+      },
+      {
+        "statistic": "Sacks",
+        "values": {
+          "FSU": "3–25",
+          "NMSU": "1–9"
+        }
+      }
+    ]
+  },
+  "teams": [
+    {
+      "name": "Florida State",
+      "points": 34,
+      "slug": "florida-state"
+    },
+    {
+      "name": "New Mexico State",
+      "points": 17,
+      "slug": "new-mexico-state"
+    }
+  ],
+  "title": "Florida State 34, New Mexico State 17",
+  "tv": "The CW"
+}

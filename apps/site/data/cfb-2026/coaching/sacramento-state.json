@@ -1,0 +1,111 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Alonzo Carter",
+    "title_raw": "Alonzo Carter"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mac.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Exact published base front for Clark’s first Sac State season Not listed on materials reviewed. (hornetsports.com; Wikipedia 2026 Sac State team page.)",
+      "label": null
+    },
+    "offense": {
+      "description": "First FBS season under Carter/Kiesau; fine-grained published base scheme label for 2026 Not listed on athletics materials reviewed (staff assembled Dec. 2025–early 2026). (hornetsports.com roster staff; Sac Bee / Hornet Sports hire releases.)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "hornetsports.com/sports/football/roster",
+      "url": "https://hornetsports.com/sports/football/roster"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Alonzo Carter",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": "Official Hornet Sports roster/coaches (2026); first MAC/FBS season",
+      "title_raw": "Alonzo Carter"
+    },
+    {
+      "name": "Eric Kiesau",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Eric Kiesau"
+    },
+    {
+      "name": "Eric Scott",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Eric Scott (Co-OC / Wide Receivers)"
+    },
+    {
+      "name": "Adam Clark",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Adam Clark"
+    },
+    {
+      "name": "Kenwick Thompson",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Kenwick Thompson (Assistant HC / Co-DC / Linebackers)"
+    },
+    {
+      "name": "Milo Austin",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Milo Austin"
+    },
+    {
+      "name": "Nick Alaimalo",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Nick Alaimalo (Running Backs / Co-STC)"
+    },
+    {
+      "name": "Bobby Fresques",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Bobby Fresques (Quarterbacks / Passing Game Coordinator)"
+    },
+    {
+      "name": "Nick Alaimalo",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Nick Alaimalo"
+    },
+    {
+      "name": "Eric Scott",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": "Official roster coaching staff",
+      "title_raw": "Eric Scott (Co-OC / Wide Receivers)"
+    }
+  ],
+  "team": {
+    "conference_slug": "mac",
+    "school": "Sacramento State",
+    "slug": "sacramento-state"
+  }
+}

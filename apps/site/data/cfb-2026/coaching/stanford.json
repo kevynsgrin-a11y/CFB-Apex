@@ -1,0 +1,90 @@
+{
+  "head_coach": {
+    "first_season": 1,
+    "name": "Tavita Pritchard",
+    "title_raw": "Tavita Pritchard (1st season)"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/acc.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Not listed (Richard Year 1; NFL Legion of Boom résumé noted in hire coverage — not converted to a college base-front tag)",
+      "label": null
+    },
+    "offense": {
+      "description": "Not listed (Heffernan/Pritchard Year 1; no official brand label on 2026 team page consulted)",
+      "label": null
+    }
+  },
+  "sources": [
+    {
+      "title": "2026 Stanford Cardinal football team (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2026_Stanford_Cardinal_football_team"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Tavita Pritchard",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Tavita Pritchard (1st season)"
+    },
+    {
+      "name": "Terry Heffernan",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator",
+      "source_note": null,
+      "title_raw": "Terry Heffernan"
+    },
+    {
+      "name": "Kris Richard",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator",
+      "source_note": null,
+      "title_raw": "Kris Richard (Defensive Coordinator / Defensive Backs)"
+    },
+    {
+      "name": "Nate Kaczor",
+      "role_key": "stc",
+      "role_raw": "Special Teams Coordinator",
+      "source_note": null,
+      "title_raw": "Nate Kaczor"
+    },
+    {
+      "name": "Brian Lindgren",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Brian Lindgren (Quarterbacks / Passing Game Coordinator)"
+    },
+    {
+      "name": "Malcolm Agnew",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Malcolm Agnew"
+    },
+    {
+      "name": "Brian Bratton",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Brian Bratton"
+    }
+  ],
+  "team": {
+    "conference_slug": "acc",
+    "school": "Stanford",
+    "slug": "stanford"
+  }
+}

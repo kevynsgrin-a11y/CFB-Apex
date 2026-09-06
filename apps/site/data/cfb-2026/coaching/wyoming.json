@@ -1,0 +1,97 @@
+{
+  "head_coach": {
+    "first_season": null,
+    "name": "Jay Sawvel",
+    "title_raw": "Jay Sawvel"
+  },
+  "meta": {
+    "as_of": "2026-09-05",
+    "dataset": "coaching",
+    "notes": [
+      "Scheme labels are extracted only where the source plainly states one. A null label with a description means the source explained why no base scheme is published; nothing is inferred."
+    ],
+    "schema_version": "1.0.0",
+    "sources": [
+      "03-coaching/mountain-west.md"
+    ]
+  },
+  "schemes": {
+    "defense": {
+      "description": "Aaron Bohl’s unit is framed around leverage, effort, and physicality with a four-down line staff structure (DE / DT titles). A single exclusive “base defense” string is not emphasized on the athletics coaches page; treat formal exclusive base as Not listed beyond physical / multiple 4-down identity in beat coverage.",
+      "label": "multiple"
+    },
+    "offense": {
+      "description": "First-year OC Christian Taylor installs a physical, motion-heavy, “position-less” multiple attack (12 personnel, TE versatility, hard counts, dual-threat QB usage) per 7220 Sports and Wyoming Tribune Eagle. Wikipedia 2026 coverage and staff structure align with a multiple offensive label rather than a single named brand.",
+      "label": "multiple"
+    }
+  },
+  "sources": [
+    {
+      "title": "gowyo.com 2026 coaches",
+      "url": "https://gowyo.com/sports/football/coaches"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Jay Sawvel",
+      "role_key": "hc",
+      "role_raw": "Head Coach",
+      "source_note": null,
+      "title_raw": "Jay Sawvel"
+    },
+    {
+      "name": "Christian Taylor",
+      "role_key": "oc",
+      "role_raw": "Offensive Coordinator / Quarterbacks",
+      "source_note": null,
+      "title_raw": "Christian Taylor"
+    },
+    {
+      "name": "Aaron Bohl",
+      "role_key": "dc",
+      "role_raw": "Defensive Coordinator / Linebackers",
+      "source_note": null,
+      "title_raw": "Aaron Bohl"
+    },
+    {
+      "name": "Shannon Moore",
+      "role_key": "stc",
+      "role_raw": "Co-Special Teams Coordinator / Tight Ends and Fullbacks",
+      "source_note": null,
+      "title_raw": "Shannon Moore"
+    },
+    {
+      "name": "Jason Petrino",
+      "role_key": "stc",
+      "role_raw": "Co-Special Teams Coordinator / Safeties",
+      "source_note": null,
+      "title_raw": "Jason Petrino"
+    },
+    {
+      "name": "Christian Taylor",
+      "role_key": "qb",
+      "role_raw": "QB Coach",
+      "source_note": null,
+      "title_raw": "Christian Taylor (Justin Hiller: Assistant Quarterbacks)"
+    },
+    {
+      "name": "Gary Harrell",
+      "role_key": "rb",
+      "role_raw": "RB Coach",
+      "source_note": null,
+      "title_raw": "Gary Harrell"
+    },
+    {
+      "name": "Jovon Bouknight",
+      "role_key": "wr",
+      "role_raw": "WR Coach",
+      "source_note": null,
+      "title_raw": "Jovon Bouknight"
+    }
+  ],
+  "team": {
+    "conference_slug": "mountain-west",
+    "school": "Wyoming",
+    "slug": "wyoming"
+  }
+}
