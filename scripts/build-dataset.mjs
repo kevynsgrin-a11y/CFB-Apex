@@ -9,8 +9,10 @@
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { inflateSync } from "node:zlib";
 
 const root = fileURLToPath(new URL("../data/cfb-2026", import.meta.url));
+const projectRoot = fileURLToPath(new URL("..", import.meta.url));
 
 const read = (path) => JSON.parse(readFileSync(join(root, path), "utf8"));
 
@@ -224,7 +226,140 @@ const playedGames = readdirSync(join(root, "stats/2026/games"))
   }))
   .sort((a, b) => a.date.localeCompare(b.date));
 
-const payload = { teams, conferences, polls, pollsStatus, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex };
+/* Team logos + brand colors: scan public/logos for verified PNGs (downloaded
+   from the ESPN CDN, two-source verified) and derive each team's brand color
+   from the mark's dominant saturated pixel bucket. */
+const logoSlugs = readdirSync(join(projectRoot, "public/logos"))
+  .filter((file) => file.endsWith(".png"))
+  .map((file) => file.replace(/\.png$/, ""));
+
+function decodePng(buffer) {
+  if (buffer.readUInt32BE(0) !== 0x89_50_4e_47) throw new Error("not a PNG");
+  let offset = 8;
+  let width = 0;
+  let height = 0;
+  let colorType = 0;
+  let bitDepth = 0;
+  const idat = [];
+  let palette = null;
+  let trns = null;
+  while (offset < buffer.length) {
+    const length = buffer.readUInt32BE(offset);
+    const type = buffer.toString("ascii", offset + 4, offset + 8);
+    const data = buffer.subarray(offset + 8, offset + 8 + length);
+    if (type === "IHDR") {
+      width = data.readUInt32BE(0);
+      height = data.readUInt32BE(4);
+      bitDepth = data[8];
+      colorType = data[9];
+    } else if (type === "PLTE") {
+      palette = [];
+      for (let i = 0; i < data.length; i += 3) palette.push([data[i], data[i + 1], data[i + 2]]);
+    } else if (type === "tRNS") {
+      trns = Array.from(data);
+    } else if (type === "IDAT") {
+      idat.push(data);
+    } else if (type === "IEND") {
+      break;
+    }
+    offset += 12 + length;
+  }
+  if (bitDepth !== 8) throw new Error(`unsupported bit depth ${bitDepth}`);
+  const channels = colorType === 6 ? 4 : colorType === 2 ? 3 : colorType === 3 ? 1 : 0;
+  if (!channels) throw new Error(`unsupported color type ${colorType}`);
+  const raw = inflateSync(Buffer.concat(idat));
+  const stride = width * channels;
+  const pixels = Buffer.alloc(height * stride);
+  const paeth = (a, b, c) => {
+    const p = a + b - c;
+    const pa = Math.abs(p - a);
+    const pb = Math.abs(p - b);
+    const pc = Math.abs(p - c);
+    return pa <= pb && pa <= pc ? a : pb <= pc ? b : c;
+  };
+  for (let y = 0; y < height; y++) {
+    const filter = raw[y * (stride + 1)];
+    const row = raw.subarray(y * (stride + 1) + 1, (y + 1) * (stride + 1));
+    const out = pixels.subarray(y * stride, (y + 1) * stride);
+    const prior = y > 0 ? pixels.subarray((y - 1) * stride, y * stride) : null;
+    for (let x = 0; x < stride; x++) {
+      const left = x >= channels ? out[x - channels] : 0;
+      const up = prior ? prior[x] : 0;
+      const ul = prior && x >= channels ? prior[x - channels] : 0;
+      let value = row[x];
+      if (filter === 1) value += left;
+      else if (filter === 2) value += up;
+      else if (filter === 3) value += Math.floor((left + up) / 2);
+      else if (filter === 4) value += paeth(left, up, ul);
+      out[x] = value & 0xff;
+    }
+  }
+  const rgb = [];
+  for (let i = 0; i < width * height; i++) {
+    if (colorType === 3) {
+      const index = pixels[i];
+      const entry = palette?.[index];
+      if (!entry) continue;
+      const alpha = trns && index < trns.length ? trns[index] : 255;
+      if (alpha > 40) rgb.push(entry);
+    } else {
+      const base = i * channels;
+      if (channels < 4 || pixels[base + 3] > 40) rgb.push([pixels[base], pixels[base + 1], pixels[base + 2]]);
+    }
+  }
+  return rgb;
+}
+
+function brandColorOf(buffer) {
+  const buckets = new Map();
+  for (const [r, g, b] of decodePng(buffer)) {
+    const lightness = (Math.max(r, g, b) + Math.min(r, g, b)) / 510;
+    if (lightness > 0.93) continue; // paper white / highlight
+    const key = ((r >> 4) << 8) | ((g >> 4) << 4) | (b >> 4);
+    const bucket = buckets.get(key) ?? { count: 0, r: 0, g: 0, b: 0 };
+    bucket.count += 1;
+    bucket.r += r;
+    bucket.g += g;
+    bucket.b += b;
+    buckets.set(key, bucket);
+  }
+  let best = null;
+  let bestScore = 0;
+  for (const bucket of buckets.values()) {
+    const r = bucket.r / bucket.count;
+    const g = bucket.g / bucket.count;
+    const b = bucket.b / bucket.count;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    const saturation = max === 0 ? 0 : (max - min) / max;
+    // Saturated marks win; near-black marks (Iowa, Purdue trim) still qualify.
+    const score = bucket.count * (saturation + 0.25) * (lightnessOf(r, g, b) > 0.85 ? 0.1 : 1);
+    if (score > bestScore) {
+      bestScore = score;
+      best = [r, g, b];
+    }
+  }
+  if (!best) return null;
+  // Clamp lightness into a readable band for tint chips.
+  let [r, g, b] = best.map(Math.round);
+  const l = lightnessOf(r, g, b);
+  if (l > 0.7) [r, g, b] = [r, g, b].map((v) => Math.round(v * 0.82));
+  else if (l < 0.16) [r, g, b] = [r, g, b].map((v) => Math.min(255, Math.round(v * 1.6 + 14)));
+  const hex = (v) => v.toString(16).padStart(2, "0");
+  return `#${hex(r)}${hex(g)}${hex(b)}`;
+}
+
+function lightnessOf(r, g, b) {
+  return (Math.max(r, g, b) + Math.min(r, g, b)) / 510;
+}
+
+const logoColors = {};
+for (const slug of logoSlugs) {
+  const color = brandColorOf(readFileSync(join(projectRoot, "public/logos", `${slug}.png`)));
+  if (color) logoColors[slug] = color;
+}
+
+const payload = { teams, conferences, polls, pollsStatus, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors };
 
 const body = `// GENERATED by scripts/build-dataset.mjs from data/cfb-2026 — do not edit.
 // biome-ignore lint: generated file

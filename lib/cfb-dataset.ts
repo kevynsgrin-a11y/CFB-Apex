@@ -159,6 +159,13 @@ function strengthFor(slug: string) {
   return { value: Math.max(1, Math.min(99, Math.round(101 - rank * 0.7))), published: true };
 }
 
+/* Verified team marks (public/logos, ESPN CDN, two-source checked) and the
+   brand color derived from each mark. */
+const logoSlugSet = new Set<string>((bundle.logoSlugs as string[]) ?? []);
+const logoColorBySlug = new Map<string, string>(
+  Object.entries((bundle.logoColors as Record<string, string>) ?? {}),
+);
+
 export const teams: Team[] = datasetTeams.map((team) => {
   const strength = strengthFor(team.slug);
   const rank = apRankBySlug.get(team.slug);
@@ -171,9 +178,10 @@ export const teams: Team[] = datasetTeams.map((team) => {
     monogram: team.school[0] ?? "?",
     conference: team.conference,
     subdivision: p4Conferences.has(team.conference_slug) ? "P4" : "G5",
+    logo: logoSlugSet.has(team.slug) ? `/logos/${team.slug}.png` : undefined,
     rank,
     record: recordFor(team.slug),
-    color: "#64748B",
+    color: logoColorBySlug.get(team.slug) ?? "#64748B",
     strength: strength.value,
     returningProduction: 0,
     portalImpact: 0,

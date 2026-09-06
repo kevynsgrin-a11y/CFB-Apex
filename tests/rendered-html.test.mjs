@@ -62,6 +62,8 @@ test("critical product routes render dataset-backed content", async () => {
     ["/coaches/dabo-swinney", /Dabo Swinney/],
     ["/games/2026-08-29-hawaii-at-stanford", /Stanford/],
     ["/teams/alabama", /Injury report/],
+    ["/teams/alabama", /\/logos\/alabama\.png/],
+    ["/teams/texas", /\/logos\/texas\.png/],
   ];
 
   for (const [path, pattern] of routes) {

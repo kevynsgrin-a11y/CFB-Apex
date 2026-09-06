@@ -44,6 +44,7 @@ export interface Team {
   monogram: string;
   conference: string;
   subdivision: "P4" | "G5" | "FCS";
+  logo?: string;
   rank?: number;
   record: string;
   color: string;

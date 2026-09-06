@@ -1,8 +1,25 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { calculateBuyout } from "../lib/contracts.ts";
 import { games, providerHealth, scenarioGames, teams } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
+
+test("team logos point at verified files and carry brand colors", () => {
+  const withLogos = teams.filter((team) => team.logo);
+  // The directory package covers SEC, Big Ten, Big 12, and Pac-12 marks.
+  assert.ok(withLogos.length >= 58, `expected at least 58 logo'd teams, got ${withLogos.length}`);
+  const projectRoot = fileURLToPath(new URL("..", import.meta.url));
+  for (const team of withLogos) {
+    assert.match(team.logo ?? "", /^\/logos\/[a-z0-9-]+\.png$/, team.slug);
+    assert.ok(existsSync(`${projectRoot}/public${team.logo}`), `${team.slug}: missing file`);
+    assert.match(team.color, /^#[0-9a-f]{6}$/, team.slug);
+  }
+  for (const slug of ["alabama", "texas", "michigan", "arizona-state", "texas-am"]) {
+    assert.ok(withLogos.some((team) => team.slug === slug), `${slug} lost its logo`);
+  }
+});
 
 test("playoff simulation is deterministic under the same seed", () => {
   const first = runPlayoffSimulation("same-seed", { "scenario-1": teams[0].id }, 2_000);

@@ -610,6 +610,19 @@ main {
 .monogram--md { font-size: 11px; height: 38px; width: 38px; }
 .monogram--lg { font-size: 16px; height: 58px; width: 58px; }
 
+.monogram--img {
+  background: color-mix(in srgb, var(--team-color) 6%, var(--surface-2));
+  border-color: color-mix(in srgb, var(--team-color) 30%, transparent);
+  overflow: hidden;
+}
+
+.monogram--img img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
 .feature-game__intel {
   border-bottom: 1px solid var(--border-soft);
   border-top: 1px solid var(--border-soft);

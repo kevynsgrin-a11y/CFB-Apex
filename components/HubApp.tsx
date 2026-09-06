@@ -258,11 +258,15 @@ function ModeDialog({
 function Monogram({ team, size = "md" }: { team: Team; size?: "sm" | "md" | "lg" }) {
   return (
     <span
-      className={`monogram monogram--${size}`}
+      className={`monogram monogram--${size}${team.logo ? " monogram--img" : ""}`}
       style={{ "--team-color": team.color } as React.CSSProperties}
       aria-hidden="true"
     >
-      {team.monogram}
+      {team.logo ? (
+        <img src={team.logo} alt="" loading="lazy" decoding="async" />
+      ) : (
+        team.monogram
+      )}
     </span>
   );
 }
