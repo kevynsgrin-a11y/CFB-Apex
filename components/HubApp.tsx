@@ -10,6 +10,8 @@ import {
   getGame,
   getInjuries,
   getRoster,
+  getSchemes,
+  getStaff,
   getStadiumBySlug,
   getTeam,
   getTeamBySlug,
@@ -18,9 +20,12 @@ import {
   getTeamSeasons,
   injuriesAsOf,
   modelEstimatesAvailable,
+  pollTables,
+  pollsStatusNote,
   portalEvents,
   providerHealth,
   scenarioGames,
+  searchPlayers,
   seasonRules,
   stadiums,
   teams,
@@ -1137,6 +1142,48 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
           </div>
           <p className="panel-note">Contract terms are not part of the 2026 research dataset; use the calculator with your own inputs.</p>
           <div className="timeline">
+            <span className="eyebrow">STAFF &amp; SCHEMES</span>
+            {(() => {
+              const staff = getStaff(team.id);
+              const schemes = getSchemes(team.id);
+              if (!staff.length && !schemes) {
+                return <p className="panel-note">Staff details beyond the head coach are not listed for this program.</p>;
+              }
+              const roleLabel = (role: string | null, raw: string | null) => {
+                if (!role) return raw ?? "Staff";
+                const map: Record<string, string> = {
+                  hc: "Head Coach",
+                  oc: "Offensive Coordinator",
+                  co_oc: "Co-OC",
+                  dc: "Defensive Coordinator",
+                  co_dc: "Co-DC",
+                  stc: "Special Teams Coordinator",
+                  qb: "QB Coach",
+                  rb: "RB Coach",
+                  wr: "WR Coach",
+                  other: raw ?? "Staff",
+                };
+                return map[role] ?? raw ?? "Staff";
+              };
+              return (
+                <div className="portal-list">
+                  {schemes && (schemes.offense || schemes.defense) ? (
+                    <div className="portal-row" key="schemes">
+                      <span className="status status--final">SCHEMES</span>
+                      <span><strong>{schemes.offense ?? "—"} offense · {schemes.defense ?? "—"} defense</strong><small>As listed in the coaching research file</small></span>
+                    </div>
+                  ) : null}
+                  {staff.slice(0, 10).map((member) => (
+                    <div className="portal-row" key={`${member.role}-${member.name}`}>
+                      <span className="position-badge">{roleLabel(member.role, member.role_raw).slice(0, 4)}</span>
+                      <span><strong>{member.name}</strong><small>{roleLabel(member.role, member.role_raw)}</small></span>
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
+          </div>
+          <div className="timeline">
             <span className="eyebrow">VERIFIED TIMELINE</span>
             {coach.timeline.map((entry) => (
               <div key={`${entry.date}-${entry.label}`}>
@@ -1532,16 +1579,94 @@ function StadiumDetail({ slug }: { slug: string }) {
 }
 
 function RankingsPage() {
+  const [pollId, setPollId] = useState("ap");
+  const table = pollTables.find((poll) => poll.poll === pollId) ?? pollTables[0];
+  if (!table) {
+    return (
+      <PageHeading
+        eyebrow="RANKINGS"
+        title="Polls not published."
+        description="No poll tables are present in this dataset release."
+      />
+    );
+  }
   return (
     <>
       <PageHeading
-        eyebrow="STRENGTH INDEX"
-        title="Strength without borrowed black boxes."
-        description="This index is derived from published SOS ratings. It is not SP+, FPI, or a committee ranking."
+        eyebrow="2026 PRESEASON RANKINGS"
+        title="AP and Coaches, straight from the release."
+        description={`${table.name}${table.release_date ? ` · released ${table.release_date}` : ""}. Every row cites the poll; no composite is invented.`}
       />
+      <div className="sticky-tools">
+        <fieldset className="filter-chips">
+          <legend className="sr-only">Poll</legend>
+          {pollTables.map((poll) => (
+            <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => setPollId(poll.poll)}>
+              {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
+            </button>
+          ))}
+        </fieldset>
+      </div>
       <section className="content-section">
+        <div className="scoreboard-summary">
+          <div><span>{table.rankings.length}</span><small>RANKED</small></div>
+          <div><span>{table.rankings[0]?.first_place_votes ?? "—"}</span><small>FIRST-PLACE VOTES (NO. 1)</small></div>
+          <div><span>{table.others.length}</span><small>OTHERS RECEIVING VOTES</small></div>
+        </div>
+        <section className="data-table-wrap" tabIndex={0} aria-label={`${table.name} top 25 table`}>
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Rank</th><th>Team</th><th>Record</th><th>Points</th><th>First votes</th><th>Prev.</th>
+              </tr>
+            </thead>
+            <tbody>
+              {table.rankings.map((entry) => {
+                const team = entry.team_slug ? getTeamBySlug(entry.team_slug) : undefined;
+                const movement =
+                  entry.previous_rank == null ? null : entry.rank - entry.previous_rank;
+                return (
+                  <tr key={`${entry.rank}-${entry.team_slug}`}>
+                    <td><b>{entry.rank}</b>{entry.tied ? <small> T</small> : null}</td>
+                    <td>
+                      <a href={team ? `/teams/${team.slug}` : "/rankings"}>{team ? team.name : entry.team}</a>
+                      <small> {team?.conference ?? ""}</small>
+                    </td>
+                    <td>{entry.record ?? "—"}</td>
+                    <td>{entry.points?.toLocaleString() ?? "—"}</td>
+                    <td>{entry.first_place_votes ?? "—"}</td>
+                    <td>
+                      {movement == null ? "—" : movement === 0 ? "—" : movement < 0 ? `▲ ${-movement}` : `▼ ${movement}`}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </section>
+        {table.others.length ? (
+          <>
+            <SectionHeading eyebrow="OTHERS RECEIVING VOTES" title="Just outside the Top 25" />
+            <div className="portal-list">
+              {table.others.map((entry) => (
+                <a className="portal-row" href={entry.team_slug ? `/teams/${entry.team_slug}` : "/rankings"} key={entry.team}>
+                  <span className="status status--scheduled">RV</span>
+                  <span><strong>{entry.team}</strong></span>
+                  <b>{entry.points?.toLocaleString() ?? "—"} pts</b>
+                </a>
+              ))}
+            </div>
+          </>
+        ) : null}
+        {pollsStatusNote ? <p className="panel-note">{pollsStatusNote}</p> : null}
+      </section>
+      <section className="content-section">
+        <SectionHeading eyebrow="STRENGTH OF SCHEDULE" title="Published SOS ratings" />
+        <p className="panel-note">
+          Composite strength index derived from Phil Steele and ESPN FPI SOS ratings — not SP+, FPI, or a committee ranking.
+        </p>
         <div className="rankings-list">
-          {[...teams].sort((a, b) => b.strength - a.strength).map((team, index) => (
+          {[...teams].sort((a, b) => b.strength - a.strength).slice(0, 25).map((team, index) => (
             <a href={`/teams/${team.slug}`} key={team.id}>
               <b>{index + 1}</b><Monogram team={team} size="sm" />
               <span><strong>{team.name}</strong><small>{team.conference} · {team.record}</small></span>
@@ -1579,24 +1704,40 @@ function WatchPage() {
 function SearchPage() {
   const [query, setQuery] = useState("");
   const normalized = query.trim().toLowerCase();
+  const playerResults = useMemo(() => searchPlayers(normalized, 8), [normalized]);
   const results = useMemo(() => {
     if (!normalized) return [];
     return [
       ...teams.filter((team) => team.name.toLowerCase().includes(normalized)).map((team) => ({ href: `/teams/${team.slug}`, label: team.name, type: "Team" })),
       ...coaches.filter((coach) => coach.name.toLowerCase().includes(normalized)).map((coach) => ({ href: `/coaches/${coach.slug}`, label: coach.name, type: "Coach" })),
-      ...stadiums.filter((stadium) => stadium.name.toLowerCase().includes(normalized)).map((stadium) => ({ href: `/stadiums/${stadium.slug}`, label: stadium.name, type: "Stadium" })),
-      ...portalEvents.filter((event) => event.player.toLowerCase().includes(normalized)).map((event) => ({ href: `/players/${event.playerSlug}`, label: event.player, type: "Player" })),
     ];
   }, [normalized]);
   return (
     <>
-      <PageHeading eyebrow="SEARCH" title="Find the next useful answer." description="Search teams, coaches, and stadiums from the 2026 dataset. Internal search is always noindexed." />
+      <PageHeading eyebrow="SEARCH" title="Find the next useful answer." description="Search all 138 teams, 134 head coaches, and every rostered player in the 2026 dataset." />
       <section className="search-panel content-section">
         <label htmlFor="site-search">Search the Hub</label>
-        <input id="site-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try North Coast, Mara Vance, or Harbor Field" />
+        <input id="site-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try Clemson, Dabo Swinney, or Bryant Wesco" />
         {normalized ? (
-          results.length ? <div className="search-results">{results.map((result) => <a href={result.href} key={`${result.type}-${result.href}`}><span>{result.type}</span><strong>{result.label}</strong><b>→</b></a>)}</div>
-          : <EmptyState title="No matching record." copy="Try another team or coach." />
+          <>
+            {results.length ? <div className="search-results">{results.map((result) => <a href={result.href} key={`${result.type}-${result.href}`}><span>{result.type}</span><strong>{result.label}</strong><b>→</b></a>)}</div> : null}
+            {playerResults.length ? (
+              <>
+                <SectionHeading eyebrow="PLAYERS" title="Roster matches" />
+                <div className="portal-list">
+                  {playerResults.map((player) => (
+                    <a className="portal-row" href={`/teams/${player.t}`} key={`${player.n}-${player.t}`}>
+                      <span className="position-badge">{player.p ?? "—"}</span>
+                      <span><strong>{player.n}</strong><small>{player.teamName}</small></span>
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  ))}
+                </div>
+                <p className="panel-note">Player links open the team page; individual player pages arrive with roster page depth.</p>
+              </>
+            ) : null}
+            {!results.length && !playerResults.length ? <EmptyState title="No matching record." copy="Try a team, coach, or player name." /> : null}
+          </>
         ) : <p>Start typing to search the 2026 dataset.</p>}
       </section>
     </>

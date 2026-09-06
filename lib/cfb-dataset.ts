@@ -95,10 +95,8 @@ function abbreviationFor(school: string) {
 
 /* AP preseason rank per team slug. */
 const apRankBySlug = new Map<string, number>();
-const apPoll = (bundle.polls as { polls: Array<{ poll: string; rankings: Array<{ rank: number; team_slug: string | null }> }> }).polls.find(
-  (poll) => poll.poll === "ap",
-);
-for (const entry of apPoll?.rankings ?? []) {
+const apPollTable = (bundle.polls as PollTable[]).find((poll) => poll.poll === "ap");
+for (const entry of apPollTable?.rankings ?? []) {
   if (entry.team_slug) apRankBySlug.set(entry.team_slug, entry.rank);
 }
 
@@ -457,6 +455,76 @@ export function getTeamRatings(slug: string): TeamRatingRow[] {
 /** Top-10 individual leaderboard finishes by this team's players, latest first. */
 export function getTeamLeaders(slug: string): TeamLeaderRow[] {
   return leadersBySlug[slug] ?? [];
+}
+
+/* ------------------------------------------------------------- polls (full) */
+
+export interface PollRanking {
+  rank: number;
+  team_slug: string | null;
+  team: string;
+  record: string | null;
+  points: number | null;
+  first_place_votes: number | null;
+  previous_rank: number | null;
+  tied: boolean;
+}
+
+export interface PollTable {
+  poll: string;
+  name: string;
+  release_date: string | null;
+  rankings: PollRanking[];
+  others: Array<{ team: string; team_slug: string | null; points: number | null }>;
+}
+
+export const pollTables = bundle.polls as PollTable[];
+export const pollsStatusNote = (bundle.pollsStatus as string | null) ?? null;
+
+/* -------------------------------------------------- coaching staff & players */
+
+export interface StaffMemberRow {
+  role: string | null;
+  role_raw: string | null;
+  name: string;
+}
+
+const staffBySlug: Record<string, { staff: StaffMemberRow[]; schemes: { offense: string | null; defense: string | null } | null }> = {};
+for (const [slug, doc] of Object.entries(bundle.coaching as Record<string, CoachingDoc & { staff?: StaffMemberRow[]; schemes?: { offense: string | null; defense: string | null } | null }>)) {
+  staffBySlug[slug] = { staff: doc.staff ?? [], schemes: doc.schemes ?? null };
+}
+
+export function getStaff(slug: string): StaffMemberRow[] {
+  return staffBySlug[slug]?.staff ?? [];
+}
+
+export function getSchemes(slug: string): { offense: string | null; defense: string | null } | null {
+  return staffBySlug[slug]?.schemes ?? null;
+}
+
+/* --------------------------------------------------------- player search */
+
+export interface PlayerIndexEntry {
+  n: string;
+  t: string;
+  p: string | null;
+}
+
+const playerIndex = bundle.playerIndex as PlayerIndexEntry[];
+
+/** Case-insensitive substring search across every rostered player. */
+export function searchPlayers(query: string, limit = 8): Array<PlayerIndexEntry & { teamName: string }> {
+  const needle = query.trim().toLowerCase();
+  if (!needle) return [];
+  const out: Array<PlayerIndexEntry & { teamName: string }> = [];
+  for (const entry of playerIndex) {
+    if (entry.n.toLowerCase().includes(needle)) {
+      const team = datasetTeams.find((candidate) => candidate.slug === entry.t);
+      out.push({ ...entry, teamName: team?.display_name ?? entry.t });
+      if (out.length >= limit) break;
+    }
+  }
+  return out;
 }
 
 export const seasonRules: SeasonRules = {
