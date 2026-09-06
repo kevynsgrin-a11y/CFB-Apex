@@ -6,17 +6,16 @@ import { calculateBuyout } from "../lib/contracts.ts";
 import { games, providerHealth, scenarioGames, teams } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
 
-test("team logos point at verified files and carry brand colors", () => {
+test("every team carries a verified logo file and a brand color", () => {
   const withLogos = teams.filter((team) => team.logo);
-  // The directory package covers SEC, Big Ten, Big 12, and Pac-12 marks.
-  assert.ok(withLogos.length >= 58, `expected at least 58 logo'd teams, got ${withLogos.length}`);
+  assert.equal(withLogos.length, teams.length, "all listed teams must have logos");
   const projectRoot = fileURLToPath(new URL("..", import.meta.url));
   for (const team of withLogos) {
     assert.match(team.logo ?? "", /^\/logos\/[a-z0-9-]+\.png$/, team.slug);
     assert.ok(existsSync(`${projectRoot}/public${team.logo}`), `${team.slug}: missing file`);
     assert.match(team.color, /^#[0-9a-f]{6}$/, team.slug);
   }
-  for (const slug of ["alabama", "texas", "michigan", "arizona-state", "texas-am"]) {
+  for (const slug of ["alabama", "texas", "michigan", "clemson", "florida-state", "notre-dame", "umass"]) {
     assert.ok(withLogos.some((team) => team.slug === slug), `${slug} lost its logo`);
   }
 });
