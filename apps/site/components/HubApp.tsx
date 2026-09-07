@@ -22,7 +22,10 @@ import {
   modelEstimatesAvailable,
   pollTables,
   pollsStatusNote,
+  portalAsOf,
+  portalCountsFor,
   portalEvents,
+  portalStatusNote,
   providerHealth,
   scenarioGames,
   searchPlayers,
@@ -55,6 +58,16 @@ const signed = (value: number) => `${value > 0 ? "+" : ""}${value.toFixed(1)}`;
 
 function teamFor(teamId: string) {
   return getTeam(teamId);
+}
+
+/** Dataset teams render as links; external programs (FCS origins) stay plain. */
+function teamLabelFor(teamId: string) {
+  const team = getTeamBySlug(teamId);
+  if (team) return { label: team.shortName, slug: team.slug };
+  return {
+    label: teamId.replaceAll("-", " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    slug: null,
+  };
 }
 
 function DemoBanner() {
@@ -868,18 +881,18 @@ function TeamHero({ team, score }: { team: Team; score?: number }) {
 }
 
 function PortalRow({ event }: { event: PortalEvent }) {
-  const from = teamFor(event.fromTeamId);
-  const to = event.toTeamId ? teamFor(event.toTeamId) : null;
+  const from = teamLabelFor(event.fromTeamId);
+  const to = event.toTeamId ? teamLabelFor(event.toTeamId) : null;
   return (
     <a className="portal-row" href={`/players/${event.playerSlug}`}>
       <span className="position-badge">{event.position}</span>
       <span>
         <strong>{event.player}</strong>
-        <small>{from.shortName} → {to?.shortName ?? "Available"}</small>
+        <small>{from.label} → {to?.label ?? "Available"}</small>
       </span>
       <span className={`portal-status portal-status--${event.status}`}>{event.status}</span>
-      <b>{signed(event.impact)}</b>
-      <small>{percent(event.confidence)} conf.</small>
+      <b>{event.impact == null ? "—" : signed(event.impact)}</b>
+      <small>{event.confidence} conf.</small>
     </a>
   );
 }
@@ -888,21 +901,40 @@ function PortalPage({ teamSlug }: { teamSlug?: string }) {
   const [position, setPosition] = useState("All");
   const [status, setStatus] = useState("All");
   const scopedTeam = teamSlug ? getTeamBySlug(teamSlug) : undefined;
+  const positions = ["All", ...new Set(portalEvents.map((event) => event.position).filter(Boolean))].sort();
+  const statuses = ["All", ...new Set(portalEvents.map((event) => event.status))];
   const filtered = portalEvents.filter((event) => {
     const teamMatch = !scopedTeam || event.fromTeamId === scopedTeam.id || event.toTeamId === scopedTeam.id;
     const positionMatch = position === "All" || event.position === position;
     const statusMatch = status === "All" || event.status === status;
     return teamMatch && positionMatch && statusMatch;
   });
+  const scopedCounts = scopedTeam ? portalCountsFor(scopedTeam.slug) : null;
+  const busiest = [...teams]
+    .map((team) => ({ team, counts: portalCountsFor(team.slug) }))
+    .sort((a, b) => b.counts.incoming + b.counts.outgoing - (a.counts.incoming + a.counts.outgoing))
+    .slice(0, 4);
 
   return (
     <>
       <PageHeading
         eyebrow="PRIORITY 02 · ROSTER VOLATILITY"
         title={scopedTeam ? `${scopedTeam.shortName} portal ledger` : "Roster movement, in the open."}
-        description="Transfer-portal entries with snaps, position-weighted impact, and source confidence — no NIL guesswork."
+        description="Verified FBS-to-FBS transfers with dates, positions, and source confidence — no NIL guesswork, no inferred destinations."
         actions={<a className="button button--ghost" href="/methodology#portal">Portal methodology</a>}
       />
+      <section className="content-section">
+        <article className="win-model-card">
+          <div>
+            <span className="eyebrow">COMPILED {portalAsOf ?? "—"}</span>
+            <strong>
+              {portalEvents.length} verified transfers
+              {scopedTeam ? ` · ${scopedCounts?.incoming ?? 0} in / ${scopedCounts?.outgoing ?? 0} out (net ${signed(scopedCounts?.net ?? 0)})` : ""}
+            </strong>
+          </div>
+          <p>{portalStatusNote}</p>
+        </article>
+      </section>
       {portalEvents.length === 0 ? (
         <section className="content-section">
           <article className="win-model-card">
@@ -910,38 +942,33 @@ function PortalPage({ teamSlug }: { teamSlug?: string }) {
               <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
               <strong>Transfer-portal movement</strong>
             </div>
-            <p>
-              The 2026 research dataset covers rosters, schedules, polls, coaching staffs, and SOS —
-              it does not include portal entries. This surface turns on when portal data joins a
-              future dataset release.
-            </p>
+            <p>This surface turns on when portal data joins a future dataset release.</p>
           </article>
         </section>
       ) : (
         <>
-          <section className="portal-summary">
-            {(scopedTeam ? [scopedTeam] : [...teams].sort((a, b) => b.portalImpact - a.portalImpact).slice(0, 4)).map((team) => (
-              <a href={`/transfer-portal/${team.slug}`} className="impact-card" key={team.id}>
-                <div><Monogram team={team} /><span><small>{team.conference}</small><strong>{team.shortName}</strong></span></div>
-                <b>{signed(team.portalImpact)}</b>
-                <div className="impact-track" role="img" aria-label={`${team.shortName} portal impact ${signed(team.portalImpact)}`}>
-                  <span style={{ width: `${Math.min(100, Math.max(8, 50 + team.portalImpact * 4))}%` }} />
-                </div>
-                <small>{team.returningProduction}% returning production</small>
-              </a>
-            ))}
-          </section>
+          {!scopedTeam ? (
+            <section className="portal-summary">
+              {busiest.map(({ team, counts }) => (
+                <a href={`/transfer-portal/${team.slug}`} className="impact-card" key={team.id}>
+                  <div><Monogram team={team} /><span><small>{team.conference}</small><strong>{team.shortName}</strong></span></div>
+                  <b>{counts.incoming} in · {counts.outgoing} out</b>
+                  <small>Net intake {signed(counts.net)}</small>
+                </a>
+              ))}
+            </section>
+          ) : null}
           <section className="content-section">
         <div className="table-tools">
           <div>
             <label>Position
               <select value={position} onChange={(event) => setPosition(event.target.value)}>
-                {["All", "QB", "RB", "WR", "OL", "EDGE", "CB"].map((item) => <option key={item}>{item}</option>)}
+                {positions.map((item) => <option key={item}>{item}</option>)}
               </select>
             </label>
             <label>Status
               <select value={status} onChange={(event) => setStatus(event.target.value)}>
-                {["All", "committed", "available", "withdrawn"].map((item) => <option key={item}>{item}</option>)}
+                {statuses.map((item) => <option key={item}>{item}</option>)}
               </select>
             </label>
           </div>
@@ -951,26 +978,34 @@ function PortalPage({ teamSlug }: { teamSlug?: string }) {
           <table className="data-table">
             <thead>
               <tr>
-                <th>Player</th><th>Pos.</th><th>Origin</th><th>Destination</th><th>Status</th><th>Snaps</th><th>Impact</th><th>Confidence</th>
+                <th>Player</th><th>Pos</th><th>Origin</th><th>Destination</th><th>Status</th><th>Date</th><th>Confidence</th>
               </tr>
             </thead>
             <tbody>
-              {filtered.map((event) => (
-                <tr key={event.id}>
-                  <td><a href={`/players/${event.playerSlug}`}>{event.player}</a></td>
-                  <td>{event.position}</td>
-                  <td>{teamFor(event.fromTeamId).shortName}</td>
-                  <td>{event.toTeamId ? teamFor(event.toTeamId).shortName : "Open"}</td>
-                  <td><span className={`portal-status portal-status--${event.status}`}>{event.status}</span></td>
-                  <td>{event.snaps ?? "Unknown"}</td>
-                  <td><strong>{signed(event.impact)}</strong></td>
-                  <td>{percent(event.confidence)}</td>
-                </tr>
-              ))}
+              {filtered.map((event) => {
+                const origin = teamLabelFor(event.fromTeamId);
+                const destination = event.toTeamId ? teamLabelFor(event.toTeamId) : null;
+                return (
+                  <tr key={event.id}>
+                    <td>
+                      <strong>{event.player}</strong>
+                      {event.notes ? <small className="portal-note">{event.notes}</small> : null}
+                    </td>
+                    <td>{event.position}</td>
+                    <td>{origin.slug ? <a href={`/teams/${origin.slug}`}>{origin.label}</a> : origin.label}</td>
+                    <td>{destination ? (destination.slug ? <a href={`/teams/${destination.slug}`}>{destination.label}</a> : destination.label) : "Open"}</td>
+                    <td><span className={`portal-status portal-status--${event.status}`}>{event.status}</span></td>
+                    <td>{event.eventDate}</td>
+                    <td><span className={`portal-status portal-status--conf-${event.confidence}`}>{event.confidence}</span></td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </section>
-        <p className="table-caption">Unknown usage is explicitly preserved and reduces confidence.</p>
+        <p className="table-caption">
+          {portalEvents.filter((event) => event.snaps == null).length} of {portalEvents.length} records have no published snap count; impact scores are not modeled for this dataset.
+        </p>
           </section>
         </>
       )}
@@ -1140,12 +1175,27 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
             <div><span className="eyebrow">{team.shortName} · {coach.title}</span><h2>{coach.name}</h2><p>{coach.record} record</p></div>
           </div>
           <div className="contract-grid">
-            <div><span>Term</span><strong>{coach.annualSalary > 0 && coach.contractStart ? `${coach.contractStart.slice(0, 4)}–${coach.contractEnd.slice(0, 4)}` : "Not published"}</strong></div>
+            <div><span>Term</span><strong>{coach.contractStart && coach.contractEnd ? `${coach.contractStart} → ${coach.contractEnd}` : coach.contractEnd ? `Through ${coach.contractEnd}` : "Not published"}</strong></div>
             <div><span>Annual salary</span><strong>{coach.annualSalary > 0 ? money.format(coach.annualSalary) : "Not published"}</strong></div>
+            <div><span>Total value</span><strong>{coach.totalValue ? money.format(coach.totalValue) : "Not published"}</strong></div>
             <div><span>Guarantee remaining</span><strong>{coach.guaranteedRemaining > 0 ? money.format(coach.guaranteedRemaining) : "Not published"}</strong></div>
-            <div><span>Mitigation</span><strong>{coach.mitigationApplies ? "Applies" : "Not published"}</strong></div>
+            <div><span>Offset mitigation</span><strong>{coach.mitigationApplies ? "Applies" : coach.contractAsOf ? "No offset / not owed" : "Not published"}</strong></div>
+            <div><span>Contract record</span><strong>{coach.contractAsOf ? `Through ${coach.contractAsOf}` : "Not published"}</strong></div>
           </div>
-          <p className="panel-note">Contract terms are not part of the 2026 research dataset; use the calculator with your own inputs.</p>
+          {coach.buyoutSummary ? <p className="panel-note"><strong>Buyout:</strong> {coach.buyoutSummary}</p> : null}
+          {coach.contractNote ? <p className="panel-note">{coach.contractNote}</p> : null}
+          {coach.contractSources && coach.contractSources.length > 0 ? (
+            <p className="panel-note">
+              Sources:{" "}
+              {coach.contractSources.map((source, index) => (
+                <span key={source}>
+                  {index > 0 ? " · " : ""}
+                  <a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a>
+                </span>
+              ))}
+            </p>
+          ) : null}
+          <p className="panel-note">Buyout math below uses your own inputs; the calculator never invents unpublished guarantee figures.</p>
           <div className="timeline">
             <span className="eyebrow">STAFF &amp; SCHEMES</span>
             {(() => {
@@ -1384,6 +1434,35 @@ function TeamDetail({ team }: { team: Team }) {
         <div className="dashboard-panel">
           <SectionHeading eyebrow="COACHING" title={coach?.name ?? "Head coach not listed"} href={coach ? `/coaches/${coach.slug}` : "/coaches"} />
           <p>{coach ? `${coach.title} · ${coach.record}` : "The dataset does not list a head coach for this program."}</p>
+        </div>
+        <div className="dashboard-panel">
+          <SectionHeading eyebrow={`PORTAL · AS OF ${portalAsOf ?? "—"}`} title="Transfer ledger" href="/transfer-portal" />
+          {(() => {
+            const incoming = portalEvents.filter((event) => event.toTeamId === team.id);
+            const outgoing = portalEvents.filter((event) => event.fromTeamId === team.id);
+            if (incoming.length === 0 && outgoing.length === 0) {
+              return <p className="panel-note">No verified FBS-to-FBS transfers recorded for this program.</p>;
+            }
+            return (
+              <div className="portal-list">
+                {incoming.slice(0, 6).map((event) => (
+                  <div className="portal-row" key={event.id}>
+                    <span className="portal-status portal-status--enrolled">in</span>
+                    <span><strong>{event.player}</strong><small>{event.position} · from {teamLabelFor(event.fromTeamId).label} · {event.eventDate}</small></span>
+                  </div>
+                ))}
+                {outgoing.slice(0, 4).map((event) => (
+                  <div className="portal-row" key={event.id}>
+                    <span className="portal-status portal-status--withdrawn">out</span>
+                    <span><strong>{event.player}</strong><small>{event.position} · to {event.toTeamId ? teamLabelFor(event.toTeamId).label : "open"} · {event.eventDate}</small></span>
+                  </div>
+                ))}
+                <p className="panel-note">
+                  {incoming.length} in · {outgoing.length} out — <a href={`/transfer-portal/${team.slug}`}>full ledger</a>
+                </p>
+              </div>
+            );
+          })()}
         </div>
         <div className="dashboard-panel">
           <SectionHeading eyebrow={`AVAILABILITY · AS OF ${injuriesAsOf ?? "LATEST"}`} title="Injury report" />
@@ -1812,9 +1891,9 @@ function CorrectionsPage() {
 function MethodologyPage() {
   const cards = [
     ["Matchup concept", "A future production model would combine play value, pace, continuity, context, and uncertainty; no such trained model or validation artifact ships here."],
-    ["Portal concept", "This surface documents the position, usage, and continuity views. No portal-impact calculation is implemented, and NIL estimates are excluded."],
+    ["Portal concept", "The 2026 portal ledger lists verified FBS-to-FBS transfers with dates, positions, and source confidence. Destinations are never inferred, impact scores are not modeled, and NIL estimates are excluded."],
     ["Playoff simulation", "The implemented seeded Monte Carlo uses the 138-team field, bounded runs, validated ±6 forced-game adjustments, explicit precision, and an approximate committee order. It is not a season results engine."],
-    ["Coaching concept", "Hot-seat context is not published in the current dataset and is never treated as a firing probability. A future production method would require performance, roster, tenure, administration, and verified contract inputs."],
+    ["Coaching concept", "Contract terms come from the 2026 head-coach contract compilation (dual-sourced where possible; private-school gaps stay null). Hot-seat context is not published and is never treated as a firing probability; buyout math runs only on user-supplied guarantee inputs."],
     ["DFS concept", "Floor, median, ceiling, volume, and availability projections would power the gated interface; none ship in this release. No trained projection model or backtest ships in this preview."],
   ];
   return (
@@ -1998,12 +2077,14 @@ function PlayerPage({ slug }: { slug: string }) {
   if (!portal && !dfs) return <NotFoundPage />;
   const playerName = portal?.player ?? dfs!.name;
   const currentTeamId = portal?.toTeamId ?? dfs?.teamId ?? portal?.fromTeamId;
-  const currentTeam = currentTeamId ? teamFor(currentTeamId) : null;
+  const currentTeam = currentTeamId ? getTeamBySlug(currentTeamId) : undefined;
+  const origin = portal ? teamLabelFor(portal.fromTeamId) : null;
+  const destination = portal?.toTeamId ? teamLabelFor(portal.toTeamId) : null;
   return (
     <>
       <PageHeading eyebrow="PLAYER RECORD" title={playerName} description={`${portal?.position ?? dfs?.position} · ${currentTeam?.shortName ?? "Available"} · source and model states remain separate.`} />
       <section className="player-layout content-section">
-        {portal ? <article><span className="eyebrow">PORTAL EVENT</span><h2>{teamFor(portal.fromTeamId).shortName} → {portal.toTeamId ? teamFor(portal.toTeamId).shortName : "Available"}</h2><p>{portal.snaps ?? "Unknown"} prior snaps · impact {signed(portal.impact)} · {percent(portal.confidence)} confidence</p><SourceMeta provenance={portal.provenance} /></article> : null}
+        {portal ? <article><span className="eyebrow">PORTAL EVENT</span><h2>{origin?.label} → {destination?.label ?? "Available"}</h2><p>{portal.snaps == null ? "No published snap count" : `${portal.snaps} prior snaps`} · {portal.eventDate} · {portal.confidence} confidence</p>{portal.notes ? <p className="panel-note">{portal.notes}</p> : null}{portal.sources && portal.sources.length ? <p className="panel-note">Sources: {portal.sources.map((source, index) => <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>)}</p> : null}<SourceMeta provenance={portal.provenance} /></article> : null}
         {dfs ? <DfsCard player={dfs} /> : <article><span className="eyebrow">DFS STATE</span><h2>No projection available.</h2><p>Missing data remains an explicit empty state.</p></article>}
         <article><span className="eyebrow">CORRECTIONS</span><h2>Identity and status issues are quarantined first.</h2><a href={`/corrections?record=player-${slug}`}>Report a data issue →</a></article>
       </section>
