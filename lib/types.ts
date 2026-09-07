@@ -87,12 +87,14 @@ export interface PortalEvent {
   position: string;
   fromTeamId: string;
   toTeamId: string | null;
-  status: "committed" | "available" | "withdrawn";
+  status: "committed" | "enrolled" | "available" | "withdrawn";
   eventDate: string;
   snaps: number | null;
   usage: number | null;
-  impact: number;
-  confidence: number;
+  impact: number | null;
+  confidence: "high" | "medium" | "low";
+  notes?: string | null;
+  sources?: string[];
   provenance: Provenance;
 }
 
@@ -148,6 +150,11 @@ export interface Coach {
   hotSeatCoverage: number;
   record: string;
   timeline: { date: string; label: string; kind: "verified" | "context" }[];
+  buyoutSummary?: string | null;
+  totalValue?: number | null;
+  contractAsOf?: string | null;
+  contractNote?: string | null;
+  contractSources?: string[];
   provenance: Provenance;
 }
 

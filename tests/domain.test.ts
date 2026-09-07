@@ -3,8 +3,51 @@ import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { calculateBuyout } from "../lib/contracts.ts";
-import { games, providerHealth, scenarioGames, teams } from "../lib/cfb-dataset.ts";
+import {
+  coaches,
+  games,
+  portalAsOf,
+  portalEvents,
+  providerHealth,
+  scenarioGames,
+  teams,
+} from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
+
+test("transfer portal ledger is complete, sourced, and slug-clean", () => {
+  assert.ok(portalEvents.length >= 600, `expected a full portal ledger, got ${portalEvents.length}`);
+  assert.match(portalAsOf ?? "", /^\d{4}-\d{2}-\d{2}$/);
+  const slugs = new Set(teams.map((team) => team.id));
+  for (const event of portalEvents) {
+    assert.match(event.eventDate, /^\d{4}-\d{2}-\d{2}$/, event.player);
+    assert.ok(event.toTeamId && slugs.has(event.toTeamId), `${event.player}: destination must be a dataset team`);
+    // Origins may be external (a handful of FCS move-ins) but must be slugs.
+    assert.match(event.fromTeamId, /^[a-z0-9-]+$/, event.player);
+    assert.ok(["high", "medium", "low"].includes(event.confidence), event.player);
+    assert.ok(event.impact === null, "impact is not modeled for this dataset");
+  }
+  const external = portalEvents.filter((event) => !slugs.has(event.fromTeamId));
+  assert.ok(external.length <= 5, `unexpected number of external origins: ${external.length}`);
+});
+
+test("every team lists a head coach and contract data is never fabricated", () => {
+  assert.equal(coaches.length, teams.length);
+  const withSalary = coaches.filter((coach) => coach.annualSalary > 0);
+  assert.ok(withSalary.length >= 60, `expected published salaries for most staffs, got ${withSalary.length}`);
+  for (const coach of coaches) {
+    if (coach.annualSalary > 0) {
+      assert.ok(coach.contractAsOf, `${coach.name}: salary without an as-of date`);
+      assert.ok((coach.contractSources ?? []).length > 0, `${coach.name}: salary without sources`);
+    } else {
+      // Unpublished terms stay zero/blank, never invented.
+      assert.equal(coach.guaranteedRemaining, 0, coach.name);
+      assert.equal(coach.totalValue ?? 0, 0, coach.name);
+    }
+  }
+  const deBoer = coaches.find((coach) => coach.slug === "kalen-deboer");
+  assert.ok(deBoer, "DeBoer contract record missing");
+  assert.equal(deBoer.annualSalary, 12_500_000);
+});
 
 test("every team carries a verified logo file and a brand color", () => {
   const withLogos = teams.filter((team) => team.logo);

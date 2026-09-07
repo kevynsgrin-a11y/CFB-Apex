@@ -51,7 +51,11 @@ test("www canonicalizes to the apex domain without losing the request target", a
 test("critical product routes render dataset-backed content", async () => {
   const routes = [
     ["/scores", /The slate, without the scavenger hunt/],
-    ["/transfer-portal", /NOT AVAILABLE IN THIS DATASET/],
+    ["/transfer-portal", /Cole Adams/],
+    ["/transfer-portal/alabama", /portal ledger/],
+    ["/transfer-portal/alabama", /vanderbilt/i],
+    ["/coaches/kalen-deboer", /\$12,500,000/],
+    ["/coaches/kalen-deboer", /Buyout:/],
     ["/playoff-predictor", /You call the Saturdays/],
     ["/coaching-carousel", /Separate the contract/],
     ["/dfs", /DFS stays behind a deliberate choice/],

@@ -62,6 +62,90 @@ function unavailableProvenance(id: string) {
   };
 }
 
+/* -------------------------------------------------------- transfer portal */
+
+interface PortalRow {
+  id: string;
+  player: string;
+  position: string | null;
+  class: string | null;
+  from: string;
+  to: string;
+  status: string;
+  date: string;
+  snaps: number | null;
+  notes: string | null;
+  confidence: string;
+  sources: string[];
+}
+
+const portalDoc = (bundle.portal ?? { asOf: null, statusNote: null, events: [] }) as {
+  asOf: string | null;
+  statusNote: string | null;
+  events: PortalRow[];
+};
+
+function playerSlugFor(name: string) {
+  return name
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z ]/g, "")
+    .trim()
+    .replaceAll(" ", "-");
+}
+
+export const portalEvents: PortalEvent[] = portalDoc.events.map((row) => ({
+  id: row.id,
+  playerSlug: playerSlugFor(row.player),
+  player: row.player,
+  position: row.position ?? "—",
+  fromTeamId: row.from,
+  toTeamId: row.to || null,
+  status: (row.status === "enrolled" ? "enrolled" : "committed") as PortalEvent["status"],
+  eventDate: row.date,
+  snaps: row.snaps,
+  usage: null,
+  impact: null,
+  confidence: (row.confidence === "high" ? "high" : row.confidence === "low" ? "low" : "medium") as PortalEvent["confidence"],
+  notes: row.notes,
+  sources: row.sources,
+  provenance: derivedProvenance(row.id),
+}));
+
+export const portalAsOf = portalDoc.asOf;
+export const portalStatusNote = portalDoc.statusNote;
+
+/* Net transfer intake per dataset team (incoming minus outgoing, both sides
+   restricted to teams the dataset lists). */
+const portalNetBySlug = new Map<string, number>();
+const portalInBySlug = new Map<string, number>();
+const portalOutBySlug = new Map<string, number>();
+const datasetSlugSet = new Set(
+  ((bundle.teams ?? []) as Array<{ slug: string }>).map((team) => team.slug),
+);
+for (const event of portalEvents) {
+  if (datasetSlugSet.has(event.fromTeamId)) {
+    portalOutBySlug.set(event.fromTeamId, (portalOutBySlug.get(event.fromTeamId) ?? 0) + 1);
+  }
+  if (event.toTeamId && datasetSlugSet.has(event.toTeamId)) {
+    portalInBySlug.set(event.toTeamId, (portalInBySlug.get(event.toTeamId) ?? 0) + 1);
+  }
+}
+for (const team of [...datasetSlugSet]) {
+  portalNetBySlug.set(
+    team,
+    (portalInBySlug.get(team) ?? 0) - (portalOutBySlug.get(team) ?? 0),
+  );
+}
+
+export function portalCountsFor(slug: string) {
+  return {
+    incoming: portalInBySlug.get(slug) ?? 0,
+    outgoing: portalOutBySlug.get(slug) ?? 0,
+    net: portalNetBySlug.get(slug) ?? 0,
+  };
+}
+
 /* ---------------------------------------------------------------- teams */
 
 interface DatasetTeam {
@@ -184,7 +268,7 @@ export const teams: Team[] = datasetTeams.map((team) => {
     color: logoColorBySlug.get(team.slug) ?? "#64748B",
     strength: strength.value,
     returningProduction: 0,
-    portalImpact: 0,
+    portalImpact: portalNetBySlug.get(team.slug) ?? 0,
     playoffProbability: rank ? Math.max(2, Math.round(140 / rank)) : 0,
     provenance: {
       ...derivedProvenance(`team-${team.slug}`),
@@ -313,10 +397,39 @@ function coachSlug(name: string) {
     .replaceAll(" ", "-");
 }
 
+/* Head-coach contract research (2026-09-07): supersedes the package coaching
+   docs for identity and contract terms when the two disagree — the contract
+   file is the later compilation. */
+interface ContractRow {
+  coach: string;
+  salary: number | null;
+  start: string | null;
+  end: string | null;
+  total_value: number | null;
+  guaranteed_remaining: number | null;
+  buyout: string | null;
+  offset_mitigation: boolean | null;
+  record_through: string | null;
+  notes: string | null;
+  sources: string[];
+  as_of: string;
+}
+
+const contractBySlug = new Map<string, ContractRow>(
+  Object.entries((bundle.coachContracts as Record<string, ContractRow>) ?? {}),
+);
+
 export const coaches: Coach[] = [];
+const handledByContract = new Set<string>();
 for (const [teamSlug, doc] of Object.entries(bundle.coaching as Record<string, CoachingDoc>)) {
-  const name = doc.head_coach?.name?.trim();
+  const contract = contractBySlug.get(teamSlug);
+  const contractName = contract?.coach?.trim() || null;
+  const docName = doc.head_coach?.name?.trim() || null;
+  // The contract compilation is newer; when it names a different head coach
+  // (late-cycle hires), its identity wins.
+  const name = contractName ?? docName;
   if (!name) continue;
+  if (contract) handledByContract.add(teamSlug);
   const slug = coachSlug(name);
   const wins = winsBySlug.get(teamSlug) ?? 0;
   const losses = lossesBySlug.get(teamSlug) ?? 0;
@@ -326,23 +439,58 @@ for (const [teamSlug, doc] of Object.entries(bundle.coaching as Record<string, C
     name,
     teamId: teamSlug,
     title: doc.head_coach?.title_raw ?? "Head Coach",
-    contractStart: "",
-    contractEnd: "",
-    annualSalary: 0,
-    guaranteedRemaining: 0,
+    contractStart: contract?.start ?? "",
+    contractEnd: contract?.end ?? "",
+    annualSalary: contract?.salary ?? 0,
+    guaranteedRemaining: contract?.guaranteed_remaining ?? 0,
     offsetEstimate: 0,
-    mitigationApplies: false,
+    mitigationApplies: contract?.offset_mitigation === true,
     hotSeatIndex: 0,
     hotSeatCoverage: 0,
     record: `${wins}–${losses}`,
     timeline: [],
-    provenance: unavailableProvenance(`coach-${slug}`),
+    buyoutSummary: contract?.buyout ?? null,
+    totalValue: contract?.total_value ?? null,
+    contractAsOf: contract?.as_of ?? null,
+    contractNote: contract?.notes ?? null,
+    contractSources: contract?.sources ?? [],
+    provenance: contract ? derivedProvenance(`contract-${slug}`) : unavailableProvenance(`coach-${slug}`),
   });
 }
+// Teams with no coaching doc at all still get a coach entry from contracts.
+for (const [teamSlug, contract] of contractBySlug) {
+  if (handledByContract.has(teamSlug) || !contract?.coach) continue;
+  const slug = coachSlug(contract.coach);
+  const wins = winsBySlug.get(teamSlug) ?? 0;
+  const losses = lossesBySlug.get(teamSlug) ?? 0;
+  coaches.push({
+    id: `${slug}-${teamSlug}`,
+    slug,
+    name: contract.coach,
+    teamId: teamSlug,
+    title: "Head Coach",
+    contractStart: contract.start ?? "",
+    contractEnd: contract.end ?? "",
+    annualSalary: contract.salary ?? 0,
+    guaranteedRemaining: contract.guaranteed_remaining ?? 0,
+    offsetEstimate: 0,
+    mitigationApplies: contract.offset_mitigation === true,
+    hotSeatIndex: 0,
+    hotSeatCoverage: 0,
+    record: `${wins}–${losses}`,
+    timeline: [],
+    buyoutSummary: contract.buyout ?? null,
+    totalValue: contract.total_value ?? null,
+    contractAsOf: contract.as_of ?? null,
+    contractNote: contract.notes ?? null,
+    contractSources: contract.sources ?? [],
+    provenance: derivedProvenance(`contract-${slug}`),
+  });
+}
+coaches.sort((a, b) => a.name.localeCompare(b.name));
 
 /* ------------------------------------------- surfaces with no dataset data */
 
-export const portalEvents: PortalEvent[] = [];
 export const dfsPlayers: DfsPlayer[] = [];
 export const stadiums: Stadium[] = [];
 

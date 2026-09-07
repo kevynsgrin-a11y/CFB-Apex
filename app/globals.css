@@ -1095,6 +1095,17 @@ main {
 .portal-status--committed { color: #7fe2ae; }
 .portal-status--available { color: var(--gold); }
 .portal-status--withdrawn { color: var(--muted); }
+.portal-status--enrolled { color: #7fe2ae; }
+.portal-status--conf-high { color: #7fe2ae; text-transform: capitalize; }
+.portal-status--conf-medium { color: var(--gold); text-transform: capitalize; }
+.portal-status--conf-low { color: var(--muted); text-transform: capitalize; }
+
+.portal-note {
+  color: var(--muted);
+  display: block;
+  font-size: 10px;
+  max-width: 320px;
+}
 
 .rank-stack > div {
   align-items: center;
