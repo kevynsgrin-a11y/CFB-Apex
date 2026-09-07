@@ -189,6 +189,8 @@ export interface Stadium {
   tailgating: string;
   visitorSection: string;
   accessibility: string;
+  notes?: string | null;
+  sources?: string[];
   lastVerified: string;
   provenance: Provenance;
 }

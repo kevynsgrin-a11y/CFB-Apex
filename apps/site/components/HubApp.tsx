@@ -20,6 +20,8 @@ import {
   getTeamSeasons,
   injuriesAsOf,
   modelEstimatesAvailable,
+  broadcastAsOf,
+  broadcastFor,
   pollTables,
   pollsStatusNote,
   portalAsOf,
@@ -351,9 +353,11 @@ function GameCard({
       <div className="game-card__meta">
         <span>{game.venue}</span>
         <span>
-          {game.weather
-            ? `${game.weather.temperature}° · ${game.weather.summary}`
-            : "Weather unavailable"}
+          {game.broadcast
+            ? `${game.broadcast}${broadcastFor(game.id)?.stream ? ` · ${broadcastFor(game.id)?.stream}` : ""}`
+            : game.weather
+              ? `${game.weather.temperature}° · ${game.weather.summary}`
+              : "Network not assigned"}
         </span>
       </div>
       <div className="game-card__actions">
@@ -638,7 +642,7 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
       <PageHeading
         eyebrow="PRIORITY 01 · SCOREBOARD"
         title="The slate, without the scavenger hunt."
-        description="Scheduled, final, delayed, and postponed game states with weather, provider status, and direct route actions."
+        description={`Scheduled, final, delayed, and postponed game states with assigned TV networks where locked (${broadcastAsOf ?? "—"} compilation; unlisted games sit on conference plus-networks or await the 6–12 day flex).`}
         actions={<Freshness provenance={games[0].provenance} />}
       />
       <div className="sticky-tools">
@@ -1425,7 +1429,7 @@ function TeamDetail({ team }: { team: Team }) {
             {teamGames.length ? teamGames.map((game) => (
               <a className="portal-row" href={`/games/${game.id}`} key={game.id}>
                 <span className={`status status--${game.status}`}>{game.status}</span>
-                <span><strong>{teamFor(game.awayTeamId).shortName} at {teamFor(game.homeTeamId).shortName}</strong><small>{game.kickoffLabel} · {game.venue}</small></span>
+                <span><strong>{teamFor(game.awayTeamId).shortName} at {teamFor(game.homeTeamId).shortName}</strong><small>{game.kickoffLabel} · {game.venue}{game.broadcast ? ` · ${game.broadcast}` : ""}</small></span>
                 <b>{game.statusDetail}</b>
               </a>
             )) : <p className="panel-note">No games in this sample window.</p>}
@@ -1582,7 +1586,7 @@ function TeamDetail({ team }: { team: Team }) {
         </div>
         <div className="dashboard-panel">
           <SectionHeading eyebrow="GAMEDAY" title={stadium?.name ?? "Venue guide pending"} href={stadium ? `/stadiums/${stadium.slug}` : "/stadiums"} />
-          <p>{stadium ? `${stadium.city} · last verified ${stadium.lastVerified}` : "Venue guides return once stadium data joins the dataset."}</p>
+          <p>{stadium ? `${stadium.city} · ${stadium.capacity.toLocaleString()} capacity · verified ${stadium.lastVerified}` : "Venue guides return once stadium data joins the dataset."}</p>
         </div>
       </section>
     </>
@@ -1597,7 +1601,7 @@ function StadiumsPage({ stadiumSlug }: { stadiumSlug?: string }) {
       <PageHeading
         eyebrow="GAMEDAY FIELD NOTES"
         title="Parking, bags, transit, and the gate."
-        description="Venue guides return once stadium data joins the research dataset."
+        description={`Venue guides for all 138 FBS programs, verified ${stadiums[0]?.lastVerified ?? "—"}. Policies change; confirm with the official athletics page before you travel.`}
       />
       {stadiums.length === 0 ? (
         <section className="content-section">
@@ -1653,6 +1657,12 @@ function StadiumDetail({ slug }: { slug: string }) {
         {items.map(([title, copy]) => (
           <article key={title}><span className="eyebrow">{title}</span><p>{copy}</p></article>
         ))}
+        {stadium.notes ? <article><span className="eyebrow">Venue note</span><p>{stadium.notes}</p></article> : null}
+        {stadium.sources && stadium.sources.length > 0 ? (
+          <article><span className="eyebrow">Sources</span><p>{stadium.sources.map((source, index) => (
+            <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>
+          ))}</p></article>
+        ) : null}
         <article className="stadium-detail-grid__source">
           <SourceMeta provenance={stadium.provenance} />
           <a href={`/corrections?record=stadium-${stadium.slug}`}>Report a guide issue →</a>
