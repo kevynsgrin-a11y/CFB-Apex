@@ -5,6 +5,7 @@ import test from "node:test";
 import { calculateBuyout } from "../lib/contracts.ts";
 import {
   coaches,
+  fantasyNotes,
   games,
   portalAsOf,
   portalEvents,
@@ -75,6 +76,27 @@ test("preseason ratings cover all 138 with honest nulls, TV times attach to game
   const ak = games.find((game) => game.id === "2026-09-12-alabama-at-kentucky");
   assert.equal(ak?.broadcast, "ABC");
   assert.match(ak?.kickoffLabel ?? "", /3:30 PM ET/);
+});
+
+test("fantasy notes are reported-only, slug-clean, and never invent projections", () => {
+  assert.ok(fantasyNotes.length >= 200, `expected the Week 1 notes board, got ${fantasyNotes.length}`);
+  const slugs = new Set(teams.map((team) => team.id));
+  for (const note of fantasyNotes) {
+    assert.ok(slugs.has(note.team), `${note.player}: unknown team ${note.team}`);
+    assert.ok(["QB", "RB", "WR", "TE"].includes(note.position ?? ""), note.player);
+    assert.ok(
+      ["active", "questionable", "doubtful", "inactive", "suspended"].includes(note.availability ?? ""),
+      `${note.player}: bad availability ${note.availability}`,
+    );
+    // A projection must always carry its outlet; reported ranks only, no invented points.
+    if (note.projection) {
+      assert.ok(note.projection.outlet, `${note.player}: projection without an outlet`);
+      assert.ok(!/\d+\.\d+ pts/i.test(note.projection.value ?? ""), note.player);
+    }
+  }
+  const smith = fantasyNotes.find((note) => note.player === "Jeremiah Smith");
+  assert.equal(smith?.team, "ohio-state");
+  assert.equal(smith?.projection?.value, "Week 1 WR rank No. 1");
 });
 
 test("every program has a gameday guide and broadcasts attach to real games", () => {

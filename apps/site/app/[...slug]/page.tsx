@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { HubApp } from "@/components/HubApp";
-import { coaches, dfsPlayers, games, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
+import { coaches, dfsPlayers, fantasyPlayerSlugs, games, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
 
 const staticRoots = new Set([
   "scores",
@@ -43,7 +43,7 @@ function isKnownPath(parts: string[]) {
   }
   if (root === "games") return games.some((game) => game.id === id);
   if (root === "players") {
-    return portalEvents.some((event) => event.playerSlug === id) || dfsPlayers.some((player) => player.slug === id);
+    return portalEvents.some((event) => event.playerSlug === id) || dfsPlayers.some((player) => player.slug === id) || fantasyPlayerSlugs.has(id);
   }
   return false;
 }

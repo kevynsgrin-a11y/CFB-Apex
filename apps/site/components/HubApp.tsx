@@ -5,6 +5,9 @@ import {
   coaches,
   dfsPlayers,
   games,
+  fantasyNotes,
+  fantasyNotesAsOf,
+  fantasyNotesContext,
   getCoachBySlug,
   getDepthChart,
   getGame,
@@ -1279,9 +1282,11 @@ function CoachingPage({ coachSlug }: { coachSlug?: string }) {
 
 function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => void }) {
   const [position, setPosition] = useState("All");
-  const [slate, setSlate] = useState("Main");
-  const filtered = dfsPlayers.filter((player) =>
-    (position === "All" || player.position === position) && player.slate === slate,
+  const [teamFilter, setTeamFilter] = useState("All");
+  const filteredNotes = fantasyNotes.filter(
+    (note) =>
+      (position === "All" || note.position === position) &&
+      (teamFilter === "All" || note.team === teamFilter),
   );
 
   if (mode === "clean") {
@@ -1296,8 +1301,8 @@ function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => voi
           <span className="gate-card__mark">21+</span>
           <div>
             <span className="eyebrow">CLEAN MODE ACTIVE</span>
-            <h2>Projection distributions, when you ask for them.</h2>
-            <p>Enable the optional preview to see illustrative player floor, median, ceiling, volume, availability, and model-version context.</p>
+            <h2>Fantasy context, when you ask for it.</h2>
+            <p>Enable the optional preview to see reported roles, usage notes, availability, and analyst ranks for Week 1.</p>
             <button className="button button--gold" type="button" onClick={onModeRequest}>Review disclosure</button>
           </div>
         </section>
@@ -1308,42 +1313,79 @@ function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => voi
   return (
     <>
       <PageHeading
-        eyebrow="PRIORITY 05 · DISTRIBUTION MODEL"
-        title="Volume first. Uncertainty always."
-        description="Projections are informational estimates, not promises. No operator, contest, or referral is configured."
+        eyebrow="PRIORITY 05 · FANTASY NOTES"
+        title="Roles, usage, and availability — as reported."
+        description={`Week 1 college-fantasy notes compiled ${fantasyNotesAsOf ?? "—"} from published analyst boards, official depth charts, and beat reports. Salaries and point projections are never invented; every row cites its sources.`}
       />
       <section className="content-section">
+        <div className="scoreboard-summary">
+          <div><span>{fantasyNotes.length}</span><small>PLAYERS NOTED</small></div>
+          <div><span>{new Set(fantasyNotes.map((note) => note.team)).size}</span><small>PROGRAMS</small></div>
+          <div><span>{fantasyNotes.filter((note) => note.projection).length}</span><small>ANALYST RANKS</small></div>
+          <div><span>{fantasyNotes.filter((note) => note.availability !== "active").length}</span><small>NOT FULLY AVAILABLE</small></div>
+        </div>
         <div className="table-tools">
           <div>
-            <label>Slate
-              <select value={slate} onChange={(event) => setSlate(event.target.value)}>
-                <option>Main</option><option>Late</option>
-              </select>
-            </label>
             <label>Position
               <select value={position} onChange={(event) => setPosition(event.target.value)}>
                 {["All", "QB", "RB", "WR", "TE"].map((item) => <option key={item}>{item}</option>)}
               </select>
             </label>
+            <label>Team
+              <select value={teamFilter} onChange={(event) => setTeamFilter(event.target.value)}>
+                <option value="All">All</option>
+                {[...new Set(fantasyNotes.map((note) => note.team))].sort().map((slug) => (
+                  <option key={slug} value={slug}>{getTeamBySlug(slug)?.shortName ?? slug}</option>
+                ))}
+              </select>
+            </label>
           </div>
-          <span>Projection model pending 2026 season data</span>
+          <span>{filteredNotes.length} notes</span>
         </div>
-        {filtered.length ? (
-          <div className="dfs-grid">
-            {filtered.map((player) => <DfsCard player={player} key={player.id} />)}
-          </div>
+        {filteredNotes.length ? (
+          <section className="data-table-wrap" tabIndex={0} aria-label="Week 1 fantasy notes table">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Player</th><th>Pos</th><th>Team</th><th>Reported role</th><th>Usage</th><th>Status</th><th>Analyst view</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredNotes.map((note) => (
+                  <tr key={note.id}>
+                    <td>
+                      <strong>{note.player}</strong>
+                      {note.class ? <small className="portal-note">{note.class}</small> : null}
+                      {note.injury ? <small className="portal-note">{note.injury}</small> : null}
+                    </td>
+                    <td>{note.position ?? "—"}</td>
+                    <td><a href={`/teams/${note.team}`}>{getTeamBySlug(note.team)?.shortName ?? note.team}</a></td>
+                    <td><span className="portal-note" style={{ maxWidth: 260 }}>{note.role ?? "—"}</span></td>
+                    <td><span className="portal-note" style={{ maxWidth: 220 }}>{note.usage ?? "—"}</span></td>
+                    <td>
+                      <span className={`portal-status portal-status--${note.availability === "active" ? "committed" : note.availability === "questionable" ? "available" : "withdrawn"}`}>
+                        {note.availability ?? "—"}
+                      </span>
+                    </td>
+                    <td>
+                      {note.projection?.value ?? "—"}
+                      {note.projection?.outlet ? <small className="portal-note">{note.projection.outlet}</small> : null}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
         ) : (
           <article className="win-model-card">
             <div>
-              <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
-              <strong>DFS projections</strong>
+              <span className="eyebrow">NO NOTES FOR THIS FILTER</span>
+              <strong>Fantasy notes</strong>
             </div>
-            <p>
-              Fantasy projections are not part of the 2026 research dataset. This surface turns on
-              when a projection model is trained and validated against the season.
-            </p>
+            <p>No published notes match the current position and team filter.</p>
           </article>
         )}
+        <p className="table-caption">{fantasyNotesContext}</p>
         <ResponsibleGamingNotice />
       </section>
     </>
@@ -2180,18 +2222,40 @@ function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "confere
 function PlayerPage({ slug }: { slug: string }) {
   const portal = portalEvents.find((event) => event.playerSlug === slug);
   const dfs = dfsPlayers.find((player) => player.slug === slug);
-  if (!portal && !dfs) return <NotFoundPage />;
-  const playerName = portal?.player ?? dfs!.name;
-  const currentTeamId = portal?.toTeamId ?? dfs?.teamId ?? portal?.fromTeamId;
+  const fantasyBySlug = fantasyNotes.find(
+    (note) =>
+      note.player
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[^a-z ]/g, "")
+        .trim()
+        .replaceAll(" ", "-") === slug,
+  );
+  if (!portal && !dfs && !fantasyBySlug) return <NotFoundPage />;
+  const playerName = portal?.player ?? dfs?.name ?? fantasyBySlug!.player;
+  const currentTeamId = portal?.toTeamId ?? dfs?.teamId ?? fantasyBySlug?.team ?? portal?.fromTeamId;
   const currentTeam = currentTeamId ? getTeamBySlug(currentTeamId) : undefined;
   const origin = portal ? teamLabelFor(portal.fromTeamId) : null;
   const destination = portal?.toTeamId ? teamLabelFor(portal.toTeamId) : null;
+  const fantasyNote = fantasyNotes.find((note) => note.player === playerName);
   return (
     <>
-      <PageHeading eyebrow="PLAYER RECORD" title={playerName} description={`${portal?.position ?? dfs?.position} · ${currentTeam?.shortName ?? "Available"} · source and model states remain separate.`} />
+      <PageHeading eyebrow="PLAYER RECORD" title={playerName} description={`${portal?.position ?? fantasyBySlug?.position ?? dfs?.position} · ${currentTeam?.shortName ?? "Available"} · source and model states remain separate.`} />
       <section className="player-layout content-section">
         {portal ? <article><span className="eyebrow">PORTAL EVENT</span><h2>{origin?.label} → {destination?.label ?? "Available"}</h2><p>{portal.snaps == null ? "No published snap count" : `${portal.snaps} prior snaps`} · {portal.eventDate} · {portal.confidence} confidence</p>{portal.notes ? <p className="panel-note">{portal.notes}</p> : null}{portal.sources && portal.sources.length ? <p className="panel-note">Sources: {portal.sources.map((source, index) => <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>)}</p> : null}<SourceMeta provenance={portal.provenance} /></article> : null}
-        {dfs ? <DfsCard player={dfs} /> : <article><span className="eyebrow">DFS STATE</span><h2>No projection available.</h2><p>Missing data remains an explicit empty state.</p></article>}
+        {fantasyNote ? (
+          <article>
+            <span className="eyebrow">FANTASY NOTE · {fantasyNote.as_of ?? "—"}</span>
+            <h2>{fantasyNote.position ?? "—"} · {getTeamBySlug(fantasyNote.team)?.shortName ?? fantasyNote.team} · {fantasyNote.availability ?? "status unreported"}</h2>
+            {fantasyNote.role ? <p>{fantasyNote.role}</p> : null}
+            {fantasyNote.usage ? <p className="panel-note">{fantasyNote.usage}</p> : null}
+            {fantasyNote.injury ? <p className="panel-note">{fantasyNote.injury}</p> : null}
+            {fantasyNote.projection?.value ? <p className="panel-note"><strong>{fantasyNote.projection.outlet ?? "Analyst"}:</strong> {fantasyNote.projection.value}</p> : null}
+            {fantasyNote.sources.length ? <p className="panel-note">Sources: {fantasyNote.sources.map((source, index) => <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>)}</p> : null}
+          </article>
+        ) : (
+          <article><span className="eyebrow">FANTASY NOTE</span><h2>No published Week 1 note.</h2><p>Missing notes remain an explicit empty state.</p></article>
+        )}
         <article><span className="eyebrow">CORRECTIONS</span><h2>Identity and status issues are quarantined first.</h2><a href={`/corrections?record=player-${slug}`}>Report a data issue →</a></article>
       </section>
     </>
