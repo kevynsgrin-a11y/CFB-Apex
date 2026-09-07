@@ -10,6 +10,7 @@ import {
   portalEvents,
   providerHealth,
   scenarioGames,
+  stadiums,
   teams,
 } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
@@ -47,6 +48,26 @@ test("every team lists a head coach and contract data is never fabricated", () =
   const deBoer = coaches.find((coach) => coach.slug === "kalen-deboer");
   assert.ok(deBoer, "DeBoer contract record missing");
   assert.equal(deBoer.annualSalary, 12_500_000);
+});
+
+test("every program has a gameday guide and broadcasts attach to real games", () => {
+  assert.equal(stadiums.length, teams.length);
+  const guideTeams = new Set(stadiums.map((stadium) => stadium.teamId));
+  for (const team of teams) {
+    assert.ok(guideTeams.has(team.id), `${team.slug}: missing gameday guide`);
+  }
+  for (const stadium of stadiums) {
+    assert.ok(stadium.capacity > 0, `${stadium.slug}: capacity missing`);
+    assert.ok(stadium.clearBag.length > 10, `${stadium.slug}: clear-bag note missing`);
+    assert.match(stadium.lastVerified, /^\d{4}-\d{2}-\d{2}$/, stadium.slug);
+  }
+  const withBroadcast = games.filter((game) => game.broadcast);
+  assert.ok(withBroadcast.length >= 80, `expected broadcast assignments, got ${withBroadcast.length}`);
+  for (const game of withBroadcast) {
+    assert.ok(typeof game.broadcast === "string" && game.broadcast.length > 0, game.id);
+  }
+  const alabamaAtKentucky = games.find((game) => game.id === "2026-09-12-alabama-at-kentucky");
+  assert.equal(alabamaAtKentucky?.broadcast, "ABC");
 });
 
 test("every team carries a verified logo file and a brand color", () => {

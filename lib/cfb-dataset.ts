@@ -310,6 +310,19 @@ interface ScheduleRow {
   week: number | null;
 }
 
+const broadcastIndex = ((bundle.broadcasts ?? { asOf: null, note: null, byGame: {} }) as {
+  asOf: string | null;
+  note: string | null;
+  byGame: Record<string, { tv: string | null; stream: string | null; note: string | null }>;
+}).byGame;
+
+export const broadcastAsOf = (bundle.broadcasts as { asOf?: string } | undefined)?.asOf ?? null;
+export const broadcastNote = (bundle.broadcasts as { note?: string } | undefined)?.note ?? null;
+
+export function broadcastFor(gameId: string) {
+  return broadcastIndex[gameId] ?? null;
+}
+
 function buildScheduledGames(): Game[] {
   const byKey = new Map<string, Game>();
   for (const [homeSlug, rows] of Object.entries(bundle.schedules as Record<string, ScheduleRow[]>)) {
@@ -340,7 +353,7 @@ function buildScheduledGames(): Game[] {
         venueSlug: homeTeam,
         venue,
         city: "",
-        broadcast: null,
+        broadcast: broadcastFor(id)?.tv ?? null,
         weather: null,
         neutralSite: isNeutral,
         modelHomeWinProbability: 0.5,
@@ -489,10 +502,49 @@ for (const [teamSlug, contract] of contractBySlug) {
 }
 coaches.sort((a, b) => a.name.localeCompare(b.name));
 
-/* ------------------------------------------- surfaces with no dataset data */
+/* -------------------------------------------------- stadiums & broadcasts */
+
+interface StadiumGuideRow {
+  team_slug: string;
+  stadium: string;
+  city: string;
+  address: string;
+  capacity: number;
+  clear_bag: string;
+  parking: string;
+  transit: string;
+  tailgating: string;
+  visitor_section: string;
+  accessibility: string;
+  notes: string | null;
+  last_verified: string;
+  sources: string[];
+}
+
+export const stadiums: Stadium[] = ((bundle.stadiumGuides ?? []) as StadiumGuideRow[])
+  .filter((row) => teamSlugs.has(row.team_slug))
+  .map((row) => ({
+    slug: row.team_slug,
+    name: row.stadium,
+    teamId: row.team_slug,
+    city: row.city,
+    address: row.address,
+    capacity: row.capacity,
+    parking: row.parking,
+    transit: row.transit,
+    clearBag: row.clear_bag,
+    tailgating: row.tailgating,
+    visitorSection: row.visitor_section,
+    accessibility: row.accessibility,
+    notes: row.notes,
+    sources: row.sources,
+    lastVerified: row.last_verified,
+    provenance: derivedProvenance(`stadium-${row.team_slug}`),
+  }));
 
 export const dfsPlayers: DfsPlayer[] = [];
-export const stadiums: Stadium[] = [];
+
+/* ------------------------------------------- surfaces with no dataset data */
 
 /* ------------------------------------------------- rosters & depth charts */
 
@@ -746,8 +798,8 @@ export function getCoachBySlug(slug: string) {
   return coaches.find((coach) => coach.slug === slug);
 }
 
-export function getStadiumBySlug(_slug: string): Stadium | undefined {
-  return undefined;
+export function getStadiumBySlug(slug: string): Stadium | undefined {
+  return stadiums.find((stadium) => stadium.slug === slug);
 }
 
 /** True when the model-estimate surfaces have published numbers behind them. */
