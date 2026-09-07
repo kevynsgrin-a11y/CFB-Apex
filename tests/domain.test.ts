@@ -8,6 +8,7 @@ import {
   games,
   portalAsOf,
   portalEvents,
+  preseasonRatings,
   providerHealth,
   scenarioGames,
   stadiums,
@@ -48,6 +49,32 @@ test("every team lists a head coach and contract data is never fabricated", () =
   const deBoer = coaches.find((coach) => coach.slug === "kalen-deboer");
   assert.ok(deBoer, "DeBoer contract record missing");
   assert.equal(deBoer.annualSalary, 12_500_000);
+});
+
+test("preseason ratings cover all 138 with honest nulls, TV times attach to games", () => {
+  assert.equal(Object.keys(preseasonRatings).length, teams.length);
+  for (const team of teams) {
+    const rating = preseasonRatings[team.id];
+    assert.ok(rating, `${team.slug}: missing ratings record`);
+    assert.match(rating.as_of, /^\d{4}-\d{2}-\d{2}$/);
+    if (rating.sp) {
+      assert.ok(typeof rating.sp.rank === "number" && rating.sp.rank >= 1 && rating.sp.rank <= 138, team.slug);
+      assert.ok(rating.sp.source.startsWith("http"), `${team.slug}: SP+ without source`);
+    }
+    if (rating.playoff?.value) assert.match(rating.playoff.value, /^\d+(\.\d+)?%$/, team.slug);
+  }
+  const alabama = preseasonRatings.alabama;
+  assert.equal(alabama.sp?.rank, 13);
+  assert.equal(alabama.sp?.overall, 17.6);
+  assert.equal(alabama.playoff?.outlet, "ESPN");
+
+  const withBroadcast = games.filter((game) => game.broadcast);
+  assert.ok(withBroadcast.length >= 140, `expected TV designations, got ${withBroadcast.length}`);
+  const withTime = games.filter((game) => game.kickoffLabel.includes("ET"));
+  assert.ok(withTime.length >= 120, `expected kickoff times, got ${withTime.length}`);
+  const ak = games.find((game) => game.id === "2026-09-12-alabama-at-kentucky");
+  assert.equal(ak?.broadcast, "ABC");
+  assert.match(ak?.kickoffLabel ?? "", /3:30 PM ET/);
 });
 
 test("every program has a gameday guide and broadcasts attach to real games", () => {

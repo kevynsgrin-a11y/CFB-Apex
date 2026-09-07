@@ -310,17 +310,48 @@ interface ScheduleRow {
   week: number | null;
 }
 
-const broadcastIndex = ((bundle.broadcasts ?? { asOf: null, note: null, byGame: {} }) as {
+const broadcastIndex = ((bundle.broadcasts ?? { asOf: null, note: null, byPair: {} }) as {
   asOf: string | null;
   note: string | null;
-  byGame: Record<string, { tv: string | null; stream: string | null; note: string | null }>;
-}).byGame;
+  byPair: Record<string, { tv: string | null; time_et: string | null; status: string; week: number }>;
+}).byPair;
 
 export const broadcastAsOf = (bundle.broadcasts as { asOf?: string } | undefined)?.asOf ?? null;
 export const broadcastNote = (bundle.broadcasts as { note?: string } | undefined)?.note ?? null;
 
-export function broadcastFor(gameId: string) {
-  return broadcastIndex[gameId] ?? null;
+function broadcastKey(date: string, a: string, b: string) {
+  return `${date}:${[a, b].sort().join(":")}`;
+}
+
+/* ------------------------------------------------ preseason ratings board */
+
+export interface PreseasonRating {
+  sp: { overall: number; rank: number; offense: number; defense: number; source: string } | null;
+  fpi: { value: number | null; rank: number; source: string } | null;
+  wins: { projected: number | null; line: number | null; source: string } | null;
+  playoff: { outlet: string; value: string | null; source: string } | null;
+  notes: string | null;
+  as_of: string;
+}
+
+export const preseasonRatings = (bundle.preseasonRatings ?? {}) as Record<string, PreseasonRating>;
+
+export function getPreseasonRating(slug: string) {
+  return preseasonRatings[slug] ?? null;
+}
+
+export function broadcastFor(date: string, awayId: string, homeId: string) {
+  return broadcastIndex[broadcastKey(date, awayId, homeId)] ?? null;
+}
+
+/** "15:30" -> "3:30 PM ET" */
+export function timeEtLabel(timeEt: string | null) {
+  if (!timeEt) return null;
+  const [hours, minutes] = timeEt.split(":").map(Number);
+  if (Number.isNaN(hours)) return null;
+  const suffix = hours >= 12 ? "PM" : "AM";
+  const twelve = hours % 12 === 0 ? 12 : hours % 12;
+  return `${twelve}:${String(minutes ?? 0).padStart(2, "0")} ${suffix} ET`;
 }
 
 function buildScheduledGames(): Game[] {
@@ -341,11 +372,13 @@ function buildScheduledGames(): Game[] {
       if (playedGameIds.has(id)) continue;
       const venue =
         row.site ?? `${teams.find((team) => team.slug === homeTeam)?.shortName ?? "Home"} home stadium`;
+      const tv = broadcastFor(row.date, awayTeam, homeTeam);
+      const timeLabel = timeEtLabel(tv?.time_et ?? null);
       byKey.set(key, {
         id,
         week: row.week ?? seasonWeek(row.date),
         date: `${row.date}T17:00:00.000Z`,
-        kickoffLabel: kickoffLabel(row.date),
+        kickoffLabel: timeLabel ? `${kickoffLabel(row.date)} · ${timeLabel}` : kickoffLabel(row.date),
         status: "scheduled" as const,
         statusDetail: row.type === "conference" ? "Conference game" : "Kickoff scheduled",
         awayTeamId: awayTeam,
@@ -353,7 +386,7 @@ function buildScheduledGames(): Game[] {
         venueSlug: homeTeam,
         venue,
         city: "",
-        broadcast: broadcastFor(id)?.tv ?? null,
+        broadcast: tv?.tv ?? null,
         weather: null,
         neutralSite: isNeutral,
         modelHomeWinProbability: 0.5,
@@ -384,7 +417,7 @@ export const games: Game[] = [
       venueSlug: game.home_slug,
       venue: game.site ?? `${home?.name ?? "Home"} stadium`,
       city: "",
-      broadcast: game.tv ?? null,
+      broadcast: broadcastFor(game.date, game.away_slug, game.home_slug)?.tv ?? game.tv ?? null,
       weather: null,
       neutralSite: game.neutral_site,
       modelHomeWinProbability: 0.5,
