@@ -577,6 +577,49 @@ export const stadiums: Stadium[] = ((bundle.stadiumGuides ?? []) as StadiumGuide
 
 export const dfsPlayers: DfsPlayer[] = [];
 
+/* ------------------------------------------- fantasy/DFS week-1 notes */
+
+export interface FantasyNote {
+  id: string;
+  player: string;
+  team: string;
+  position: string | null;
+  class: string | null;
+  role: string | null;
+  usage: string | null;
+  availability: string | null;
+  injury: string | null;
+  projection: { outlet: string | null; value: string | null } | null;
+  sources: string[];
+  as_of: string | null;
+}
+
+const fantasyDoc = (bundle.fantasy ?? { asOf: null, context: null, notes: [] }) as {
+  asOf: string | null;
+  context: string | null;
+  notes: FantasyNote[];
+};
+
+export const fantasyNotes: FantasyNote[] = fantasyDoc.notes;
+export const fantasyNotesAsOf = fantasyDoc.asOf;
+export const fantasyNotesContext = fantasyDoc.context;
+
+export function fantasyNotesForTeam(slug: string) {
+  return fantasyNotes.filter((note) => note.team === slug);
+}
+
+/** Slugs of every player the fantasy-notes board covers (for route checks). */
+export const fantasyPlayerSlugs = new Set(
+  fantasyNotes.map((note) =>
+    note.player
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[^a-z ]/g, "")
+      .trim()
+      .replaceAll(" ", "-"),
+  ),
+);
+
 /* ------------------------------------------- surfaces with no dataset data */
 
 /* ------------------------------------------------- rosters & depth charts */

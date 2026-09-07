@@ -1,0 +1,4473 @@
+{
+  "title": "2026 College Fantasy Football — publicly reported role, usage, and availability notes (master file)",
+  "as_of": "2026-09-07",
+  "week_context": "2026 season Week 1 opened September 5, 2026. Notes compile published analyst/depth-chart reporting only (Sporting News P4 starters, TWO·DEEP charts, College Football News Top 200, RotoBaller Week 1 boards, College Fantasy Football Zone Week 1 ranks, official team depth charts, local beat reports). Unreported fields are null. Availability uses only active/questionable/doubtful/inactive/suspended.",
+  "schema": [
+    "player",
+    "team_slug",
+    "position",
+    "class_raw",
+    "role_note",
+    "usage_note",
+    "availability",
+    "injury_note",
+    "analyst_projection",
+    "sources",
+    "as_of",
+    "conference"
+  ],
+  "conferences_covered": [
+    "SEC",
+    "Big Ten",
+    "Big 12",
+    "ACC",
+    "Independents",
+    "American Athletic",
+    "Sun Belt",
+    "MAC",
+    "Conference USA",
+    "Mountain West",
+    "Pac-12"
+  ],
+  "players": [
+    {
+      "player": "Keelon Russell",
+      "team_slug": "alabama",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": "RS Fr.",
+      "role_note": "TWO·DEEP’s Sept. 7 quarterback board lists Keelon Russell as Alabama’s starter in an OPEN BATTLE after 3% of 2025 snaps.",
+      "usage_note": "The Athletic wrote Russell accounted for 342 total yards in his first career start, a 48-10 win over East Carolina, and led the team with 86 rushing yards and a touchdown.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://www.nytimes.com/athletic/7571001/2026/09/07/quarterback-overreaction-keelon-russell-bryce-underwood-week-1/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Daniel Hill",
+      "team_slug": "alabama",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller’s Week 1 running-back board listed Daniel Hill among Alabama’s featured backs.",
+      "usage_note": "RotoBaller ranked Hill as Week 1 overall No. 32 among running backs.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 32",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ryan Coleman-Williams",
+      "team_slug": "alabama",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked Ryan Coleman-Williams as its No. 13 fantasy wide receiver for 2026.",
+      "usage_note": "RotoBaller ranked him as Week 1 WR No. 10.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 13",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "KJ Jackson",
+      "team_slug": "arkansas",
+      "conference": "SEC",
+      "position": "QB",
+      "role_note": "Sporting News listed KJ Jackson as Arkansas’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Sutton Smith",
+      "team_slug": "arkansas",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists transfer Sutton Smith as Arkansas’s NEW STARTER at running back.",
+      "usage_note": "RotoBaller ranked Smith as Week 1 RB No. 41.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 41",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Byrum Brown",
+      "team_slug": "auburn",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Byrum Brown as Auburn’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Brown as Week 1 QB No. 17 after Auburn’s 17-16 win over Baylor.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 18",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Aaron Philo",
+      "team_slug": "florida",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": "Jr.",
+      "role_note": "The Independent Florida Alligator published Florida’s Week 1 depth chart listing Aaron Philo as the starting quarterback over Tramell Jones Jr.",
+      "usage_note": "TWO·DEEP listed Philo in an OPEN BATTLE after 7% of 2025 snaps.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.alligator.org/article/2026/08/sumrall-talks-depth-chart-and-week-1",
+        "https://www.thetwodeep.com/college/depth-charts/position/qb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jadan Baugh",
+      "team_slug": "florida",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "Florida’s official Week 1 depth chart lists Jadan Baugh first at running back.",
+      "usage_note": "RotoBaller ranked Baugh as Week 1 RB No. 4 and called him a priority start.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 4",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.alligator.org/article/2026/08/sumrall-talks-depth-chart-and-week-1",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dallas Wilson",
+      "team_slug": "florida",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": "So.",
+      "role_note": "Florida’s official Week 1 chart lists Dallas Wilson as the starting X receiver.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.alligator.org/article/2026/08/sumrall-talks-depth-chart-and-week-1"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Eric Singleton Jr.",
+      "team_slug": "florida",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": "Sr.",
+      "role_note": "Florida’s official Week 1 chart lists Eric Singleton Jr. as a starting wide receiver.",
+      "usage_note": null,
+      "availability": "questionable",
+      "injury_note": "RotoWire reported Eric Singleton is dealing with an ankle injury.",
+      "analyst_projection": null,
+      "sources": [
+        "https://www.alligator.org/article/2026/08/sumrall-talks-depth-chart-and-week-1",
+        "https://www.rotowire.com/daily/cfb/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Vernell Brown III",
+      "team_slug": "florida",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": "So.",
+      "role_note": "Florida’s official Week 1 chart lists Vernell Brown III as a starting wide receiver.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.alligator.org/article/2026/08/sumrall-talks-depth-chart-and-week-1"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Gunner Stockton",
+      "team_slug": "georgia",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Gunner Stockton as Georgia’s starter after 93% of 2025 snaps.",
+      "usage_note": "College Fantasy Football Zone ranked Stockton as Week 1 QB No. 13 after Georgia’s 63-3 win over Tennessee State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nate Frazier",
+      "team_slug": "georgia",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Nate Frazier among Georgia’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Frazier as Week 1 RB No. 34.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 34",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kenny Minchey",
+      "team_slug": "kentucky",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "Sporting News listed Kenny Minchey as Kentucky’s 2026 starting quarterback. The Lexington Herald-Leader projected Minchey as the Week 1 starter in his first career start after three years as a Notre Dame backup.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://www.kentucky.com/sports/college/kentucky-sports/uk-football/article317085894.html"
+      ],
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "CJ Baxter",
+      "team_slug": "kentucky",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "TWO·DEEP lists transfer CJ Baxter first at Kentucky running back. The Lexington Herald-Leader projected Baxter as the Week 1 starter and wrote he appears to be at 100% entering the season.",
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.kentucky.com/sports/college/kentucky-sports/uk-football/article317085894.html"
+      ],
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Sam Leavitt",
+      "team_slug": "lsu",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Sam Leavitt as LSU’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Leavitt as Week 1 QB No. 23 after LSU’s 51-10 win over Clemson.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 10",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dilin Jones",
+      "team_slug": "lsu",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "RS So.",
+      "role_note": "TWO·DEEP lists Dilin Jones as LSU’s starter in an OPEN BATTLE with Stacy Gage and Caden Durham.",
+      "usage_note": "RotoBaller ranked Dilin Jones as Week 1 RB No. 29.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 29",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Trey'Dez Green",
+      "team_slug": "lsu",
+      "conference": "SEC",
+      "position": "TE",
+      "role_note": "College Football News ranked Trey’Dez Green as its No. 105 overall fantasy player, the first tight end on that Top 200 board.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 105 (first TE on Top 200)",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kamario Taylor",
+      "team_slug": "mississippi-state",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Kamario Taylor as Mississippi State’s 2026 starting quarterback.",
+      "usage_note": "The Athletic wrote Taylor threw for 354 yards and four touchdowns and rushed for 59 yards and another score against ULM, with Mississippi State scoring on all eight possessions he played.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 15",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://www.nytimes.com/athletic/7571001/2026/09/07/quarterback-overreaction-keelon-russell-bryce-underwood-week-1/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Fluff Bothwell",
+      "team_slug": "mississippi-state",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "TWO·DEEP lists Fluff Bothwell as Mississippi State’s starting running back.",
+      "usage_note": "RotoBaller ranked Bothwell as Week 1 RB No. 28.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 28",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Anthony Evans",
+      "team_slug": "mississippi-state",
+      "conference": "SEC",
+      "position": "WR",
+      "role_note": "College Football News ranked Anthony Evans as its No. 108 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 108",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Austin Simmons",
+      "team_slug": "missouri",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Austin Simmons as Missouri’s 2026 starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jamal Roberts",
+      "team_slug": "missouri",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "TWO·DEEP lists Jamal Roberts as Missouri’s starting running back after Ahmad Hardy’s departure.",
+      "usage_note": "RotoBaller ranked Roberts as Week 1 RB No. 25. College Football News still listed Ahmad Hardy as RB No. 18 in its preseason board.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 25",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "John Mateer",
+      "team_slug": "oklahoma",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": "5th",
+      "role_note": "Roundtable’s projected Oklahoma chart listed John Mateer as the clear starter after a healthy offseason.",
+      "usage_note": "College Fantasy Football Zone ranked Mateer as Week 1 QB No. 6 after Oklahoma’s 51-0 win over UTEP.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 13",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://roundtable.io/sports/ncaa/oklahoma/news/oklahoma-sooners-football-projected-depth-chart-after-fall-camp-ahead-of-week-1-vs-utep",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Lloyd Avant",
+      "team_slug": "oklahoma",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "Roundtable listed Lloyd Avant first at running back after Xavier Robinson and Tory Blaylock missed camp time.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://roundtable.io/sports/ncaa/oklahoma/news/oklahoma-sooners-football-projected-depth-chart-after-fall-camp-ahead-of-week-1-vs-utep"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Isaiah Sategna III",
+      "team_slug": "oklahoma",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": "5th",
+      "role_note": "Roundtable called Isaiah Sategna III the clear WR1 after a First-Team All-SEC season.",
+      "usage_note": "College Football News ranked Sategna as its No. 9 fantasy wide receiver.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 9",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://roundtable.io/sports/ncaa/oklahoma/news/oklahoma-sooners-football-projected-depth-chart-after-fall-camp-ahead-of-week-1-vs-utep",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Hayden Hansen",
+      "team_slug": "oklahoma",
+      "conference": "SEC",
+      "position": "TE",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Hayden Hansen as Oklahoma’s NEW STARTER at tight end.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/te"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Trinidad Chambliss",
+      "team_slug": "ole-miss",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Trinidad Chambliss as Ole Miss’s 2026 starting quarterback.",
+      "usage_note": "CBS Sports wrote Chambliss and Kewan Lacy are the first power-conference QB/RB tandem in a decade returning after a combined 6,000-yard season.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 7",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://www.cbssports.com/college-football/news/ole-miss-trinidad-chambliss-kewan-lacy-6000-yard-sequel/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kewan Lacy",
+      "team_slug": "ole-miss",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "CBS Sports described Kewan Lacy as the featured half of Ole Miss’s returning 6,000-yard backfield tandem.",
+      "usage_note": "RotoBaller ranked Lacy as Week 1 RB No. 3.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 3",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.cbssports.com/college-football/news/ole-miss-trinidad-chambliss-kewan-lacy-6000-yard-sequel/",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "LaNorris Sellers",
+      "team_slug": "south-carolina",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed LaNorris Sellers as South Carolina’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Sellers as Week 1 QB No. 19 after South Carolina’s 57-0 win over Kent State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 11",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nyck Harbor",
+      "team_slug": "south-carolina",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked Nyck Harbor as its No. 14 fantasy wide receiver for 2026.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 14",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Faizon Brandon",
+      "team_slug": "tennessee",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Faizon Brandon as Tennessee’s 2026 starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "DeSean Bishop",
+      "team_slug": "tennessee",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked DeSean Bishop as Week 1 RB No. 2.",
+      "usage_note": "College Football News ranked Bishop as its No. 4 fantasy running back.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 2",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Braylon Staley",
+      "team_slug": "tennessee",
+      "conference": "SEC",
+      "position": "WR",
+      "role_note": "College Football News ranked Braylon Staley as its No. 115 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 115",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Arch Manning",
+      "team_slug": "texas",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Arch Manning as Texas’s 2026 starting quarterback.",
+      "usage_note": "The Athletic wrote Manning threw for 305 yards and four touchdowns on 20 completions against Texas State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Fantasy Football Zone",
+        "value": "Week 1 QB rank No. 1",
+        "source": "https://cfbfantasyzone.com/projections/"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://www.nytimes.com/athletic/7569308/2026/09/06/nfl-draft-2027-week-1-manning-moore/",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Hollywood Smothers",
+      "team_slug": "texas",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "TWO·DEEP lists transfer Hollywood Smothers as Texas’s NEW STARTER at running back.",
+      "usage_note": "RotoBaller ranked Smothers as Week 1 RB No. 35 and Raleek Brown as No. 8.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 35",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Raleek Brown",
+      "team_slug": "texas",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "TWO·DEEP lists Raleek Brown as Texas’s No. 2 running back behind Hollywood Smothers.",
+      "usage_note": "RotoBaller ranked Brown as Week 1 RB No. 8.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 8",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cam Coleman",
+      "team_slug": "texas",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "The Athletic wrote Cam Coleman’s presence on the outside was a key offseason addition for Arch Manning.",
+      "usage_note": "College Football News ranked Coleman as its No. 3 fantasy wide receiver.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 3",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.nytimes.com/athletic/7569308/2026/09/06/nfl-draft-2027-week-1-manning-moore/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ryan Wingo",
+      "team_slug": "texas",
+      "conference": "SEC",
+      "position": "WR",
+      "role_note": "College Football News ranked Ryan Wingo as its No. 114 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 114",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Marcel Reed",
+      "team_slug": "texas-am",
+      "conference": "SEC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Marcel Reed as Texas A&M’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Reed as Week 1 QB No. 5 after Texas A&M’s 50-0 win over Missouri State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 12",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Rueben Owens II",
+      "team_slug": "texas-am",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "CBS Sports cited Rueben Owens II as Texas A&M’s returning featured back alongside Marcel Reed.",
+      "usage_note": "RotoBaller ranked Owens as Week 1 RB No. 45.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 45",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.cbssports.com/college-football/news/ole-miss-trinidad-chambliss-kewan-lacy-6000-yard-sequel/",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Mario Craver",
+      "team_slug": "texas-am",
+      "conference": "SEC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked Mario Craver as its No. 15 fantasy wide receiver.",
+      "usage_note": "RotoBaller ranked Craver as Week 1 WR No. 12.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 15",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Blake Berlowitz",
+      "team_slug": "vanderbilt",
+      "conference": "SEC",
+      "position": "QB",
+      "role_note": "Sporting News listed Blake Berlowitz as Vanderbilt’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Sedrick Alexander",
+      "team_slug": "vanderbilt",
+      "conference": "SEC",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Sedrick Alexander as Vanderbilt’s featured Week 1 running back.",
+      "usage_note": "RotoBaller ranked Alexander as Week 1 RB No. 21.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 21",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Katin Houser",
+      "team_slug": "illinois",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Katin Houser as Illinois’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ca'Lil Valentine",
+      "team_slug": "illinois",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "TWO·DEEP lists Ca'Lil Valentine as Illinois’s starter in an OPEN BATTLE with Aidan Laughery.",
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Christian Abney",
+      "team_slug": "illinois",
+      "conference": "Big Ten",
+      "position": "TE",
+      "class_raw": "Sr.",
+      "role_note": "TWO·DEEP lists transfer Christian Abney as Illinois’s NEW STARTER at tight end.",
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/te"
+      ],
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Josh Hoover",
+      "team_slug": "indiana",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Josh Hoover as Indiana’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Hoover as Week 1 QB No. 12 after Indiana’s 52-16 win over North Texas.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 27",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Turbo Richard",
+      "team_slug": "indiana",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Turbo Richard among Indiana’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Richard as Week 1 RB No. 43.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 43",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Charlie Becker",
+      "team_slug": "indiana",
+      "conference": "Big Ten",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Charlie Becker as Week 1 WR No. 6.",
+      "usage_note": "College Football News ranked Becker as its No. 16 fantasy wide receiver.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 WR rank No. 6",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nick Marsh",
+      "team_slug": "indiana",
+      "conference": "Big Ten",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "Sports Illustrated recommended starting Nick Marsh against North Texas.",
+      "usage_note": "College Football News ranked Marsh as its No. 10 fantasy wide receiver.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 10",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.si.com/college-football/college-fantasy-football-stars-to-start-sit-in-week-1",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Hank Brown",
+      "team_slug": "iowa",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Iowa’s 2026 starting quarterback as Jeremy Hecklinski or Hank Brown. Iowa’s official Week 1 depth chart listed No. 1 Hank Brown OR Jeremy Hecklinski.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://hawkeyeswire.usatoday.com/story/sports/college/hawkeyes/football/2026/08/31/iowa-football-week-1-depth-chart-vs-northern-illinois/91551934007/"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jeremy Hecklinski",
+      "team_slug": "iowa",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Iowa’s 2026 starting quarterback as Jeremy Hecklinski or Hank Brown. Iowa’s official Week 1 depth chart listed the pair in an OR grouping.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://hawkeyeswire.usatoday.com/story/sports/college/hawkeyes/football/2026/08/31/iowa-football-week-1-depth-chart-vs-northern-illinois/91551934007/"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kamari Moulton",
+      "team_slug": "iowa",
+      "conference": "Big Ten",
+      "position": "RB",
+      "role_note": "Iowa’s official Week 1 depth chart lists Kamari Moulton first at running back ahead of L.J. Phillips Jr.",
+      "usage_note": "College Football News ranked Moulton as its No. 92 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 92",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://hawkeyeswire.usatoday.com/story/sports/college/hawkeyes/football/2026/08/31/iowa-football-week-1-depth-chart-vs-northern-illinois/91551934007/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "L.J. Phillips Jr.",
+      "team_slug": "iowa",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed L.J. Phillips Jr. among Iowa’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Phillips as Week 1 RB No. 27.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 27",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "DJ Vonnahme",
+      "team_slug": "iowa",
+      "conference": "Big Ten",
+      "position": "TE",
+      "role_note": "Iowa’s official Week 1 depth chart lists DJ Vonnahme OR Addison Ostrenga first at tight end.",
+      "usage_note": "College Football News ranked Vonnahme as its No. 120 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 120",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://hawkeyeswire.usatoday.com/story/sports/college/hawkeyes/football/2026/08/31/iowa-football-week-1-depth-chart-vs-northern-illinois/91551934007/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Malik Washington",
+      "team_slug": "maryland",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "RotoWire’s Big Ten quarterback list included Malik Washington among Maryland’s quarterbacks.",
+      "usage_note": "College Fantasy Football Zone ranked Washington as Week 1 QB No. 26 after Maryland’s 62-0 win over Hampton.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 42",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://cfbfantasyzone.com/projections/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "DeJuan Williams",
+      "team_slug": "maryland",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed DeJuan Williams among Maryland’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Williams as Week 1 RB No. 37.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 37",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Bryce Underwood",
+      "team_slug": "michigan",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Bryce Underwood as Michigan’s 2026 starting quarterback.",
+      "usage_note": "The Athletic headlined that Underwood did not impress in a 13-12 win over Western Michigan.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 21",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://www.nytimes.com/athletic/7571001/2026/09/07/quarterback-overreaction-keelon-russell-bryce-underwood-week-1/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jordan Marshall",
+      "team_slug": "michigan",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Jordan Marshall as Michigan’s featured Week 1 running back.",
+      "usage_note": "College Football News ranked Marshall as its No. 8 fantasy running back.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 23",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Andrew Marsh",
+      "team_slug": "michigan",
+      "conference": "Big Ten",
+      "position": "WR",
+      "role_note": "College Football News ranked Andrew Marsh as its No. 148 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 148",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Alesso Milivojevic",
+      "team_slug": "michigan-state",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Alesso Milivojevic as Michigan State’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cam Edwards",
+      "team_slug": "michigan-state",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Cam Edwards among Michigan State’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Edwards as Week 1 RB No. 40.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 40",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Drake Lindsey",
+      "team_slug": "minnesota",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Drake Lindsey as Minnesota’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Darius Taylor",
+      "team_slug": "minnesota",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Darius Taylor as Minnesota’s featured Week 1 running back.",
+      "usage_note": "RotoBaller ranked Taylor as Week 1 RB No. 7.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 7",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Anthony Colandrea",
+      "team_slug": "nebraska",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Anthony Colandrea as Nebraska’s 2026 starting quarterback.",
+      "usage_note": "College Football News ranked Colandrea as its No. 133 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 133",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kwinten Ives",
+      "team_slug": "nebraska",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Kwinten Ives among Nebraska’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Ives as Week 1 RB No. 42.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 42",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Aidan Chiles",
+      "team_slug": "northwestern",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "TWO·DEEP lists transfer Aidan Chiles as Northwestern’s NEW STARTER after 61% of 2025 snaps.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Caleb Komolafe",
+      "team_slug": "northwestern",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "College Football News ranked Caleb Komolafe as its No. 14 fantasy running back.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "RB fantasy rank No. 14",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Griffin Wilde",
+      "team_slug": "northwestern",
+      "conference": "Big Ten",
+      "position": "WR",
+      "role_note": "College Football News ranked Griffin Wilde as its No. 113 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 113",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Julian Sayin",
+      "team_slug": "ohio-state",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Julian Sayin as Ohio State’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Sayin as Week 1 QB No. 18 after Ohio State’s 56-3 win over Ball State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 19",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Bo Jackson",
+      "team_slug": "ohio-state",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Bo Jackson among Ohio State’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Jackson as Week 1 RB No. 13.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 13",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jeremiah Smith",
+      "team_slug": "ohio-state",
+      "conference": "Big Ten",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Jeremiah Smith as Week 1 WR No. 1.",
+      "usage_note": "College Football News ranked Smith as its No. 1 fantasy wide receiver and No. 4 overall player.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 WR rank No. 1",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dante Moore",
+      "team_slug": "oregon",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sports Illustrated listed Dante Moore as Oregon’s Week 1 starting quarterback against Boise State.",
+      "usage_note": "The Athletic wrote Moore threw for 378 yards as Oregon erased a double-digit deficit to beat Boise State 34-27.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 20",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.si.com/college/boise-state/football/boise-state-vs-no-2-oregon-starting-lineups-for-week-1-college-football-matchup",
+        "https://www.nytimes.com/athletic/7569308/2026/09/06/nfl-draft-2027-week-1-manning-moore/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dierre Hill Jr.",
+      "team_slug": "oregon",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "Sports Illustrated listed Dierre Hill Jr. as Oregon’s Week 1 starting running back against Boise State.",
+      "usage_note": "RotoBaller ranked Hill as Week 1 RB No. 20.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 20",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.si.com/college/boise-state/football/boise-state-vs-no-2-oregon-starting-lineups-for-week-1-college-football-matchup",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jordon Davison",
+      "team_slug": "oregon",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "LineStar listed Jordon Davison first among Oregon running backs in its Week 1 lineup.",
+      "usage_note": "RotoBaller ranked Davison as Week 1 RB No. 14.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 14",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dakorien Moore",
+      "team_slug": "oregon",
+      "conference": "Big Ten",
+      "position": "WR",
+      "role_note": "College Football News ranked Dakorien Moore as its No. 119 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 119",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Evan Stewart",
+      "team_slug": "oregon",
+      "conference": "Big Ten",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "Sports Illustrated listed Evan Stewart among Oregon’s Week 1 starting wide receivers.",
+      "usage_note": "The Athletic noted Stewart was back after last year’s knee injury.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.si.com/college/boise-state/football/boise-state-vs-no-2-oregon-starting-lineups-for-week-1-college-football-matchup",
+        "https://www.nytimes.com/athletic/7569308/2026/09/06/nfl-draft-2027-week-1-manning-moore/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Rocco Becht",
+      "team_slug": "penn-state",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "LineStar listed Rocco Becht as Penn State’s Week 1 quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Becht as Week 1 QB No. 27 after Penn State’s 45-0 win over Marshall.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Carson Hansen",
+      "team_slug": "penn-state",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "LineStar listed Carson Hansen first among Penn State running backs.",
+      "usage_note": "RotoBaller ranked Hansen as Week 1 RB No. 36.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 36",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ryan Browne",
+      "team_slug": "purdue",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Ryan Browne as Purdue’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Fame Ijeboi",
+      "team_slug": "purdue",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": "RS So.",
+      "role_note": "TWO·DEEP lists transfer Fame Ijeboi first at Purdue running back.",
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dylan Lonergan",
+      "team_slug": "rutgers",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "LineStar listed Dylan Lonergan as Rutgers’s Week 1 quarterback against UMass.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Antwan Raymond",
+      "team_slug": "rutgers",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "LineStar listed Antwan Raymond first among Rutgers running backs.",
+      "usage_note": "RotoBaller ranked Raymond as Week 1 RB No. 5.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 5",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "KJ Duff",
+      "team_slug": "rutgers",
+      "conference": "Big Ten",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "LineStar listed KJ Duff among Rutgers’s Week 1 wide receivers.",
+      "usage_note": "RotoBaller ranked Duff as Week 1 WR No. 5; College Football News ranked him No. 8.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 WR rank No. 5",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793"
+      },
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-wide-receiver-rankings-cfb-2026/1919793"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nico Iamaleava",
+      "team_slug": "ucla",
+      "conference": "Big Ten",
+      "position": "QB",
+      "role_note": "Sporting News listed Nico Iamaleava as UCLA’s 2026 starting quarterback.",
+      "usage_note": "College Football News ranked Iamaleava as its No. 146 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 146",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Wayne Knight",
+      "team_slug": "ucla",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Wayne Knight as UCLA’s featured Week 1 running back after he transferred from James Madison.",
+      "usage_note": "RotoBaller ranked Knight as Week 1 RB No. 12.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 12",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788",
+        "https://www.underdogdynasty.com/sun-belt-conference/45467/james-madison-outduels-liberty-in-napiers-debut-20-13"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jayden Maiava",
+      "team_slug": "usc",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": "5th",
+      "role_note": "The Athletic listed Jayden Maiava among Week 1 stock-up quarterbacks after two games.",
+      "usage_note": "College Fantasy Football Zone ranked Maiava as Week 1 QB No. 16 after USC’s 39-0 win over Fresno State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 29",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.nytimes.com/athletic/7571001/2026/09/07/quarterback-overreaction-keelon-russell-bryce-underwood-week-1/",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Waymond Jordan",
+      "team_slug": "usc",
+      "conference": "Big Ten",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoBaller listed Waymond Jordan among USC’s Week 1 running backs.",
+      "usage_note": "RotoBaller ranked Jordan as Week 1 RB No. 46.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 RB rank No. 46",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-running-back-rankings-cfb-2026/1919788"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Tanook Hines",
+      "team_slug": "usc",
+      "conference": "Big Ten",
+      "position": "WR",
+      "role_note": "College Football News ranked Tanook Hines as its No. 121 overall fantasy player.",
+      "availability": "active",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 121",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Demond Williams Jr.",
+      "team_slug": "washington",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "College Fantasy Football Zone listed Demond Williams Jr. among its Week 1 quarterback board ahead of Washington vs. Washington State.",
+      "usage_note": "College Football News ranked Williams as its No. 9 fantasy quarterback.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 9",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://cfbfantasyzone.com/projections/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Colton Joseph",
+      "team_slug": "wisconsin",
+      "conference": "Big Ten",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Sporting News listed Colton Joseph as Wisconsin’s 2026 starting quarterback after transferring from Old Dominion.",
+      "usage_note": "College Football News ranked Joseph as its No. 33 fantasy quarterback.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 33",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Abu Sama",
+      "team_slug": "wisconsin",
+      "conference": "Big Ten",
+      "position": "RB",
+      "role_note": "College Football News ranked Abu Sama as its No. 151 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 151",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Noah Fifita",
+      "team_slug": "arizona",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Noah Fifita as Arizona’s starter after 95% of 2025 snaps.",
+      "usage_note": "College Fantasy Football Zone ranked Fifita as Week 1 QB No. 21 after Arizona’s 35-7 win over Northern Arizona.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Tre Spivey",
+      "team_slug": "arizona",
+      "conference": "Big 12",
+      "position": "WR",
+      "role_note": "College Football News ranked Tre Spivey as its No. 117 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 117",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cutter Boley",
+      "team_slug": "arizona-state",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed Cutter Boley as Arizona State’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kyson Brown",
+      "team_slug": "arizona-state",
+      "conference": "Big 12",
+      "position": "RB",
+      "role_note": "College Football News ranked Kyson Brown as its No. 137 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 137",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Omarion Miller",
+      "team_slug": "arizona-state",
+      "conference": "Big 12",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Omarion Miller as Week 1 overall No. 24.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 24",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Reed Harris",
+      "team_slug": "arizona-state",
+      "conference": "Big 12",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Reed Harris as Week 1 overall No. 19.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 19",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "DJ Lagway",
+      "team_slug": "baylor",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed DJ Lagway as Baylor’s 2026 starting quarterback.",
+      "usage_note": "College Football News ranked Lagway as its No. 102 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 102",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dre'lon Miller",
+      "team_slug": "baylor",
+      "conference": "Big 12",
+      "position": "WR",
+      "role_note": "College Football News ranked Dre’lon Miller as its No. 132 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 132",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Bear Bachmeier",
+      "team_slug": "byu",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "So.",
+      "role_note": "247Sports wrote there is little doubt Bear Bachmeier is BYU’s starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Bachmeier as Week 1 QB No. 3 after BYU’s 63-7 win over Utah Tech.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://247sports.com/college/byu/longformarticle/projecting-byus-week-1-depth-chart-as-camp-kalani-winds-down-289161998/",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "LJ Martin",
+      "team_slug": "byu",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "Sr.",
+      "role_note": "247Sports called LJ Martin BYU’s top dog at running back.",
+      "usage_note": "RotoBaller ranked Martin as Week 1 overall No. 47.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 47",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://247sports.com/college/byu/longformarticle/projecting-byus-week-1-depth-chart-as-camp-kalani-winds-down-289161998/",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "JC French IV",
+      "team_slug": "cincinnati",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed JC French IV as Cincinnati’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Gi'Bran Payne",
+      "team_slug": "cincinnati",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists transfer Gi'Bran Payne as Cincinnati’s NEW STARTER at running back.",
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Julian Lewis",
+      "team_slug": "colorado",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "RS Fr.",
+      "role_note": "DNVR reported Julian Lewis as Colorado’s Week 1 starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://thednvr.com/buffs/colorado-football-projected-starters-depth-chart/",
+        "https://www.thetwodeep.com/college/depth-charts/position/qb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Danny Scudero",
+      "team_slug": "colorado",
+      "conference": "Big 12",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "DNVR listed Danny Scudero as Colorado’s starting Z receiver and the engine of the passing game.",
+      "usage_note": "DNVR wrote Scudero led the NCAA in receiving yards (1,291) at San Jose State in 2025.",
+      "availability": "active",
+      "injury_note": "LineStar listed Scudero as probable entering the Georgia Tech opener.",
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 94",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://thednvr.com/buffs/colorado-football-projected-starters-depth-chart/",
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Conner Weigman",
+      "team_slug": "houston",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Conner Weigman as Houston’s NEW STARTER after 95% of 2025 snaps.",
+      "usage_note": "College Fantasy Football Zone ranked Weigman as Week 1 QB No. 4 after Houston’s 33-20 win over Oregon State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "CollegeFFB",
+        "value": "No. 4 fantasy QB",
+        "source": "https://collegeffb.com/blog/2026-college-fantasy-football-qb-rankings/"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Makhi Hughes",
+      "team_slug": "houston",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Makhi Hughes as Houston’s NEW STARTER at running back.",
+      "usage_note": "Sports Illustrated recommended starting Hughes against Oregon State after he ran for 2,779 yards and 23 touchdowns in two seasons at Tulane.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 84",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.si.com/college-football/college-fantasy-football-stars-to-start-sit-in-week-1"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Amare Thomas",
+      "team_slug": "houston",
+      "conference": "Big 12",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Amare Thomas as Week 1 overall No. 4.",
+      "usage_note": "College Football News ranked Thomas as its No. 4 fantasy wide receiver.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 4",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jaylen Raynor",
+      "team_slug": "iowa-state",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed Jaylen Raynor as Iowa State’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Isaiah Marshall",
+      "team_slug": "kansas",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed Isaiah Marshall as Kansas’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Avery Johnson",
+      "team_slug": "kansas-state",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "TWO·DEEP lists Avery Johnson as Kansas State’s starter after 99% of 2025 snaps.",
+      "usage_note": "College Fantasy Football Zone ranked Johnson as Week 1 QB No. 11 after Kansas State’s 71-3 win over Nicholls.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 16",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Joe Jackson",
+      "team_slug": "kansas-state",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "TWO·DEEP lists Joe Jackson as Kansas State’s starting running back.",
+      "usage_note": "RotoBaller ranked Jackson as Week 1 overall No. 92.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 92",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Drew Mestemaker",
+      "team_slug": "oklahoma-state",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "RS So.",
+      "role_note": "Oklahoma State’s official Week 1 depth chart lists Drew Mestemaker first at quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Mestemaker as Week 1 QB No. 15 after Oklahoma State’s 10-24 loss at Tulsa.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 38",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.si.com/college/oklahomastate/football/oklahoma-state-releases-depth-chart-season-opener-vs-tulsa",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Caleb Hawkins",
+      "team_slug": "oklahoma-state",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "So.",
+      "role_note": "Oklahoma State’s official Week 1 depth chart lists Caleb Hawkins as the starting running back.",
+      "usage_note": "RotoBaller ranked Hawkins as Week 1 overall No. 1; College Football News listed him as RB No. 1.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 1",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.si.com/college/oklahomastate/football/oklahoma-state-releases-depth-chart-season-opener-vs-tulsa",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Wyatt Young",
+      "team_slug": "oklahoma-state",
+      "conference": "Big 12",
+      "position": "WR",
+      "class_raw": "Jr.",
+      "role_note": "Oklahoma State’s official Week 1 chart lists Wyatt Young in an OR pairing at Y receiver.",
+      "usage_note": "RotoBaller ranked Young as Week 1 overall No. 8.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 8",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.si.com/college/oklahomastate/football/oklahoma-state-releases-depth-chart-season-opener-vs-tulsa",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jaden Craig",
+      "team_slug": "tcu",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed Jaden Craig as TCU’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jeremy Payne",
+      "team_slug": "tcu",
+      "conference": "Big 12",
+      "position": "RB",
+      "role_note": "College Football News ranked Jeremy Payne as its No. 94 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 94",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jordan Dwyer",
+      "team_slug": "tcu",
+      "conference": "Big 12",
+      "position": "WR",
+      "role_note": "College Football News ranked Jordan Dwyer as its No. 17 fantasy wide receiver and No. 81 overall player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 17",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Will Hammond",
+      "team_slug": "texas-tech",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "RS So.",
+      "role_note": "TWO·DEEP lists Will Hammond as Texas Tech’s starter; On3 treated him as QB1 after the ACU opener.",
+      "usage_note": "College Fantasy Football Zone ranked Hammond as Week 1 QB No. 29 after Texas Tech’s 33-10 win over ACU.",
+      "availability": "active",
+      "injury_note": "Roundtable reported in July that Hammond was rehabbing a torn ACL; subsequent Week 1 coverage treated him as active QB1.",
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://roundtable.io/sports/ncaa/texas-tech/players/inside-joey-mcguires-texas-tech-football-depth-chart",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cameron Dickey",
+      "team_slug": "texas-tech",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "TWO·DEEP lists Cameron Dickey as Texas Tech’s starting running back.",
+      "usage_note": "RotoBaller ranked Dickey as Week 1 overall No. 30.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 30",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Terrance Carter",
+      "team_slug": "texas-tech",
+      "conference": "Big 12",
+      "position": "TE",
+      "role_note": "College Football News ranked Terrance Carter as its No. 129 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 129",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Alonza Barnett III",
+      "team_slug": "ucf",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed Alonza Barnett III as UCF’s 2026 starting quarterback.",
+      "usage_note": "College Football News ranked Alonza Barnett as its No. 143 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 143",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dylan Wade",
+      "team_slug": "ucf",
+      "conference": "Big 12",
+      "position": "TE",
+      "role_note": "College Football News ranked Dylan Wade as its No. 135 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 135",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Devon Dampier",
+      "team_slug": "utah",
+      "conference": "Big 12",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "TWO·DEEP lists Devon Dampier as Utah’s NEW STARTER after 86% of 2025 snaps.",
+      "usage_note": "College Fantasy Football Zone ranked Dampier as Week 1 QB No. 2 after Utah’s 66-14 win over Idaho.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "CollegeFFB",
+        "value": "No. 1 fantasy QB",
+        "source": "https://collegeffb.com/blog/2026-college-fantasy-football-qb-rankings/"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Wayshawn Parker",
+      "team_slug": "utah",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "TWO·DEEP lists Wayshawn Parker as Utah’s NEW STARTER at running back.",
+      "usage_note": "RotoBaller ranked Parker as Week 1 overall No. 54.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 54",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Michael Hawkins Jr.",
+      "team_slug": "west-virginia",
+      "conference": "Big 12",
+      "position": "QB",
+      "role_note": "Sporting News listed Michael Hawkins Jr. as West Virginia’s 2026 starting quarterback.",
+      "usage_note": "College Football News ranked Michael Hawkins as its No. 183 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 183",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cam Cook",
+      "team_slug": "west-virginia",
+      "conference": "Big 12",
+      "position": "RB",
+      "class_raw": "Sr.",
+      "role_note": "West Virginia’s official Week 1 chart lists Cam Cook first at running back.",
+      "usage_note": "RotoBaller ranked Cook as Week 1 overall No. 13.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 13",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://hailwv.com/west-virginia-reveals-depth-chart-for-week-1-ahead-of-coastal-carolina-showdown",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Mason McKenzie",
+      "team_slug": "boston-college",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Mason McKenzie as Boston College’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Evan Dickens",
+      "team_slug": "boston-college",
+      "conference": "ACC",
+      "position": "RB",
+      "role_note": "College Football News ranked Evan Dickens as its No. 76 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 76",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jaron-Keawe Sagapolutele",
+      "team_slug": "california",
+      "conference": "ACC",
+      "position": "QB",
+      "class_raw": "So.",
+      "role_note": "TWO·DEEP lists Jaron-Keawe Sagapolutele as California’s starter after 98% of 2025 snaps.",
+      "usage_note": "College Fantasy Football Zone ranked him as Week 1 QB No. 25 after Cal’s 24-45 loss to UCLA.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 39",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Adam Mohammed",
+      "team_slug": "california",
+      "conference": "ACC",
+      "position": "RB",
+      "role_note": "College Football News ranked Adam Mohammed as its No. 86 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 86",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ian Strong",
+      "team_slug": "california",
+      "conference": "ACC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Ian Strong as Week 1 overall No. 32.",
+      "usage_note": "College Football News ranked Strong as its No. 21 fantasy wide receiver.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 32",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Christopher Vizzina",
+      "team_slug": "clemson",
+      "conference": "ACC",
+      "position": "QB",
+      "class_raw": "RS Jr.",
+      "role_note": "TWO·DEEP lists Christopher Vizzina as Clemson’s starter in an OPEN BATTLE; LineStar listed him as Week 1 QB at LSU.",
+      "usage_note": "Sports Illustrated recommended sitting Vizzina at LSU.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://www.si.com/college-football/college-fantasy-football-stars-to-start-sit-in-week-1"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Bryant Wesco",
+      "team_slug": "clemson",
+      "conference": "ACC",
+      "position": "WR",
+      "role_note": "College Football News ranked Bryant Wesco as its No. 18 fantasy wide receiver.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 18",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Walker Eget",
+      "team_slug": "duke",
+      "conference": "ACC",
+      "position": "QB",
+      "class_raw": "Gr.",
+      "role_note": "Duke’s official Week 1 depth chart lists Walker Eget as the starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://247sports.com/college/duke/article/duke-releases-first-2026-depth-chart-position-by-position-breakdown-and-key-takeaways-289353904/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nate Sheppard",
+      "team_slug": "duke",
+      "conference": "ACC",
+      "position": "RB",
+      "class_raw": "So.",
+      "role_note": "Duke’s official Week 1 chart lists Nate Sheppard first after 1,132 yards and 11 touchdowns as a freshman.",
+      "usage_note": "RotoBaller ranked Sheppard as Week 1 overall No. 151.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 151",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://247sports.com/college/duke/article/duke-releases-first-2026-depth-chart-position-by-position-breakdown-and-key-takeaways-289353904/",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ashton Daniels",
+      "team_slug": "florida-state",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Ashton Daniels as Florida State’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Duce Robinson",
+      "team_slug": "florida-state",
+      "conference": "ACC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "LineStar listed Duce Robinson first among Florida State’s Week 1 wide receivers.",
+      "usage_note": "RotoBaller ranked Robinson as Week 1 overall No. 6.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 6",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Alberto Mendoza",
+      "team_slug": "georgia-tech",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Alberto Mendoza as Georgia Tech’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Justice Haynes",
+      "team_slug": "georgia-tech",
+      "conference": "ACC",
+      "position": "RB",
+      "class_raw": "Sr.",
+      "role_note": "TWO·DEEP lists Justice Haynes as Georgia Tech’s NEW STARTER at running back.",
+      "usage_note": "RotoBaller ranked Haynes as Week 1 overall No. 80.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 80",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Lincoln Kienholz",
+      "team_slug": "louisville",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Lincoln Kienholz as Louisville’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Isaac Brown",
+      "team_slug": "louisville",
+      "conference": "ACC",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "TWO·DEEP lists Isaac Brown as Louisville’s starting running back in an OPEN BATTLE.",
+      "usage_note": "RotoBaller ranked Brown as Week 1 overall No. 59.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 59",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Chris Bell",
+      "team_slug": "louisville",
+      "conference": "ACC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoBaller ranked Chris Bell as Week 1 overall No. 18.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 18",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Darian Mensah",
+      "team_slug": "miami",
+      "conference": "ACC",
+      "position": "QB",
+      "class_raw": "RS Jr.",
+      "role_note": "Sports Illustrated wrote no starter is being listed over Darian Mensah even though Miami issued a blank official chart.",
+      "usage_note": "College Fantasy Football Zone ranked Mensah as Week 1 QB No. 14 after Miami’s 45-6 win at Stanford.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "CollegeFFB",
+        "value": "No. 5 fantasy QB",
+        "source": "https://collegeffb.com/blog/2026-college-fantasy-football-qb-rankings/"
+      },
+      "sources": [
+        "https://www.si.com/college/miami/football/no-7-miami-distributes-blank-depth-chart-before-stanford-game",
+        "https://cfbfantasyzone.com/projections/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Mark Fletcher Jr.",
+      "team_slug": "miami",
+      "conference": "ACC",
+      "position": "RB",
+      "class_raw": "Sr.",
+      "role_note": "Sports Illustrated and LineStar listed Mark Fletcher Jr. as Miami’s starting running back.",
+      "usage_note": "RotoBaller ranked Fletcher as Week 1 overall No. 40.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 40",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.si.com/college/miami/football/no-7-miami-distributes-blank-depth-chart-before-stanford-game",
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cooper Barkate",
+      "team_slug": "miami",
+      "conference": "ACC",
+      "position": "WR",
+      "role_note": "College Football News ranked Cooper Barkate as its No. 20 fantasy wide receiver and No. 98 overall player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 20",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Malachi Toney",
+      "team_slug": "miami",
+      "conference": "ACC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "Sports Illustrated wrote no starter is being listed over Malachi Toney.",
+      "usage_note": "RotoBaller ranked Toney as Week 1 overall No. 10.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 10",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.si.com/college/miami/football/no-7-miami-distributes-blank-depth-chart-before-stanford-game",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Elija Lofton",
+      "team_slug": "miami",
+      "conference": "ACC",
+      "position": "TE",
+      "class_raw": null,
+      "role_note": "Sports Illustrated listed Elija Lofton as Miami’s projected starting tight end.",
+      "usage_note": "RotoBaller ranked Lofton as Week 1 overall No. 43.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 43",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.si.com/college/miami/football/no-7-miami-distributes-blank-depth-chart-before-stanford-game",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "CJ Bailey",
+      "team_slug": "nc-state",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed CJ Bailey as NC State’s 2026 starting quarterback.",
+      "usage_note": "College Football News ranked Bailey as its No. 131 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 131",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Duke Scott",
+      "team_slug": "nc-state",
+      "conference": "ACC",
+      "position": "RB",
+      "role_note": "College Football News ranked Duke Scott as its No. 77 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 77",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Billy Edwards Jr.",
+      "team_slug": "north-carolina",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Billy Edwards Jr. as North Carolina’s 2026 starting quarterback.",
+      "injury_note": "Sporting News noted Edwards had a knee injury in 2025 that limited him to two games; he is listed as the 2026 starter.",
+      "availability": "active",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Mason Heintschel",
+      "team_slug": "pittsburgh",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Mason Heintschel as Pittsburgh’s 2026 starting quarterback.",
+      "usage_note": "College Fantasy Football Zone ranked Heintschel as Week 1 QB No. 30 after Pittsburgh’s 59-14 win over Miami (OH).",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 130",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://cfbfantasyzone.com/projections/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ja'Kyrian Turner",
+      "team_slug": "pittsburgh",
+      "conference": "ACC",
+      "position": "RB",
+      "class_raw": "So.",
+      "role_note": "TWO·DEEP lists Ja'Kyrian Turner as Pittsburgh’s starting running back.",
+      "usage_note": "RotoBaller ranked Turner as Week 1 overall No. 5.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 5",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kevin Jennings",
+      "team_slug": "smu",
+      "conference": "ACC",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Kevin Jennings as SMU’s starter after 99% of 2025 snaps.",
+      "usage_note": "Sports Illustrated recommended starting Jennings at Florida State.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 23",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://www.si.com/college-football/college-fantasy-football-stars-to-start-sit-in-week-1"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kendrick Raphael",
+      "team_slug": "smu",
+      "conference": "ACC",
+      "position": "RB",
+      "role_note": "College Football News ranked Kendrick Raphael as its No. 67 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 67",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jalen Cooper",
+      "team_slug": "smu",
+      "conference": "ACC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "LineStar listed Jalen Cooper first among SMU’s Week 1 wide receivers.",
+      "usage_note": "RotoBaller ranked Cooper as Week 1 overall No. 25.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 25",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Yamir Knight",
+      "team_slug": "smu",
+      "conference": "ACC",
+      "position": "WR",
+      "role_note": "College Football News ranked Yamir Knight as its No. 22 fantasy wide receiver and No. 104 overall player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 22",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Davis Warren",
+      "team_slug": "stanford",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Davis Warren as Stanford’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Steve Angeli",
+      "team_slug": "syracuse",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Steve Angeli as Syracuse’s 2026 starting quarterback. Pro Football Network ranked Angeli as its No. 6 2026 CFB fantasy quarterback.",
+      "injury_note": "Sporting News noted Angeli tore his Achilles early in 2025, ending that season; he is listed as the 2026 starter.",
+      "availability": "active",
+      "analyst_projection": {
+        "outlet": "Pro Football Network",
+        "value": "2026 CFB fantasy QB rank No. 6",
+        "source": "https://www.profootballnetwork.com/cfb/cfb-fantasy-qb-rankings-2026-conner-weigman-is-qb1-arch-manning-misses-the-top-4/"
+      },
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d",
+        "https://www.profootballnetwork.com/cfb/cfb-fantasy-qb-rankings-2026-conner-weigman-is-qb1-arch-manning-misses-the-top-4/"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Beau Pribula",
+      "team_slug": "virginia",
+      "conference": "ACC",
+      "position": "QB",
+      "class_raw": "Gr.",
+      "role_note": "TWO·DEEP lists Beau Pribula as Virginia’s NEW STARTER after 73% of 2025 snaps.",
+      "usage_note": "College Football News ranked Pribula as its No. 11 fantasy quarterback.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 11",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Malachi Fields",
+      "team_slug": "virginia",
+      "conference": "ACC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked Malachi Fields as its No. 16 fantasy wide receiver.",
+      "usage_note": "RotoBaller ranked Fields as Week 1 overall No. 86.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 16",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ethan Grunkmeyer",
+      "team_slug": "virginia-tech",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Ethan Grunkmeyer as Virginia Tech’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Marcellous Hawkins",
+      "team_slug": "virginia-tech",
+      "conference": "ACC",
+      "position": "RB",
+      "role_note": "College Football News ranked Marcellous Hawkins as its No. 111 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 111",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Gio Lopez",
+      "team_slug": "wake-forest",
+      "conference": "ACC",
+      "position": "QB",
+      "role_note": "Sporting News listed Gio Lopez as Wake Forest’s 2026 starting quarterback.",
+      "sources": [
+        "https://www.sportingnews.com/us/ncaa-football/news/starting-qbs-all-power-4-schools-2026/d53aedbe388bc0716e776f1d"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Carlos Hernandez",
+      "team_slug": "wake-forest",
+      "conference": "ACC",
+      "position": "WR",
+      "role_note": "College Football News ranked Carlos Hernandez as its No. 153 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 153",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "CJ Carr",
+      "team_slug": "notre-dame",
+      "conference": "Independents",
+      "position": "QB",
+      "class_raw": "Jr.",
+      "role_note": "Notre Dame’s official Week 1 depth chart versus Wisconsin lists CJ Carr as the starting quarterback.",
+      "usage_note": "RotoBaller ranked Carr as Week 1 overall No. 28.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 28",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.on3.com/teams/notre-dame-fighting-irish/news/notre-dame-releases-depth-chart-for-week-1-vs-wisconsin/",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Aneyas Williams",
+      "team_slug": "notre-dame",
+      "conference": "Independents",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "Notre Dame’s official Week 1 chart lists Aneyas Williams as RB1.",
+      "usage_note": "RotoBaller ranked Williams as Week 1 overall No. 31.",
+      "availability": "active",
+      "injury_note": "The South Bend Tribune reported in March that Williams was rehabbing right elbow surgery; the official Aug. 31 Week 1 chart listed him as the starter with no out designation.",
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 31",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.on3.com/teams/notre-dame-fighting-irish/news/notre-dame-releases-depth-chart-for-week-1-vs-wisconsin/",
+        "https://www.southbendtribune.com/story/sports/college/football/2026/03/18/notre-dame-football-offers-health-updates-on-aneyas-williams-others-kyngstonn-viliamu-asa-surgery/89137448007/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jordan Faison",
+      "team_slug": "notre-dame",
+      "conference": "Independents",
+      "position": "WR",
+      "class_raw": "Sr.",
+      "role_note": "Notre Dame’s official Week 1 chart lists Jordan Faison as the starting field receiver.",
+      "usage_note": "RotoBaller ranked Faison as Week 1 overall No. 26.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoBaller",
+        "value": "Week 1 overall rank No. 26",
+        "source": "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      },
+      "sources": [
+        "https://www.on3.com/teams/notre-dame-fighting-irish/news/notre-dame-releases-depth-chart-for-week-1-vs-wisconsin/",
+        "https://www.rotoballer.com/week-1-college-fantasy-football-rankings-top-300-2026/1919804"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Quincy Porter",
+      "team_slug": "notre-dame",
+      "conference": "Independents",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "Ohio State transfer Quincy Porter is not listed among Notre Dame’s Week 1 starting wideouts.",
+      "usage_note": null,
+      "availability": "inactive",
+      "injury_note": "UHND’s Aug. 31 availability update listed Porter out for Wisconsin with a left knee injury; CBS Sports wrote he was not expected to be ready for the opener; Covers still lists him questionable (knee) for Rice on Sept. 12.",
+      "analyst_projection": null,
+      "sources": [
+        "https://www.uhnd.com/football/2026/08/31/notre-dame-football-depth-chart-2026-week-1-vs-wisconsin/",
+        "https://www.cbssports.com/college-football/news/college-football-injury-tracker-2026-season/",
+        "https://www.covers.com/sport/football/ncaaf/teams/main/notre-dame-fighting-irish/injuries"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kalieb Osborne",
+      "team_slug": "uconn",
+      "conference": "Independents",
+      "position": "QB",
+      "class_raw": "Jr.",
+      "role_note": "Storrs Central lists Kalieb Osborne first at quarterback after UConn’s 56-7 win over Lafayette.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://storrscentral.com/football/depth-chart"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kenji Christian",
+      "team_slug": "uconn",
+      "conference": "Independents",
+      "position": "RB",
+      "class_raw": "RS Sr.",
+      "role_note": "Storrs Central and TWO·DEEP list Kenji Christian as UConn’s NEW STARTER at running back.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://storrscentral.com/football/depth-chart",
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cale Hellums",
+      "team_slug": "army",
+      "conference": "American Athletic",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "Underdog Dynasty projected Cale Hellums as Army’s resolved 2026 starter.",
+      "usage_note": "College Football News ranked Hellums as its No. 24 fantasy quarterback.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 24",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.underdogdynasty.com/american-conference/43399/projecting-14-american-starting-qb-quarterbacks-2026-aac",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Ashton Gray",
+      "team_slug": "east-carolina",
+      "conference": "American Athletic",
+      "position": "RB",
+      "role_note": "College Football News ranked Ashton Gray as its No. 88 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 88",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Caden Veltkamp",
+      "team_slug": "florida-atlantic",
+      "conference": "American Athletic",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "College Football News ranked Caden Veltkamp as its No. 17 fantasy quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 17",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Easton Messer",
+      "team_slug": "florida-atlantic",
+      "conference": "American Athletic",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked Easton Messer as its No. 6 fantasy wide receiver.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 6",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Braxton Woodson",
+      "team_slug": "navy",
+      "conference": "American Athletic",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "Navy’s official Sept. 6 depth chart lists Braxton Woodson as the starting quarterback.",
+      "usage_note": "College Football News ranked Woodson as its No. 26 fantasy quarterback.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 26",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/navysports.com/documents/2026/4/24/2026_Navy_FB_Depth_Chart.pdf",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Tayven Jackson",
+      "team_slug": "north-texas",
+      "conference": "American Athletic",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Tayven Jackson as North Texas’s starter after Drew Mestemaker transferred to Oklahoma State.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/qb",
+        "https://www.underdogdynasty.com/american-conference/43632/2026-american-preseason-previews-north-texas-mean-green"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jahiem White",
+      "team_slug": "north-texas",
+      "conference": "American Athletic",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "TWO·DEEP lists Jahiem White as North Texas’s NEW STARTER.",
+      "usage_note": "RotoWire recommended sitting White at Indiana, citing a 2025 knee injury at West Virginia.",
+      "availability": "active",
+      "injury_note": "RotoWire wrote White’s 2025 West Virginia season was cut short by a knee injury.",
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb",
+        "https://www.rotowire.com/cfootball/article/college-football-week-1-start-sit-131553"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Michael Van Buren",
+      "team_slug": "south-florida",
+      "conference": "American Athletic",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "RotoWire recommended starting Michael Van Buren against Florida International.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/college-football-week-1-start-sit-131553"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jamauri McClure",
+      "team_slug": "tulane",
+      "conference": "American Athletic",
+      "position": "RB",
+      "role_note": "College Football News ranked Jamauri McClure as its No. 93 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 93",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Owen McCown",
+      "team_slug": "utsa",
+      "conference": "American Athletic",
+      "position": "QB",
+      "role_note": "College Football News ranked Owen McCown as its No. 141 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 141",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Will Henderson",
+      "team_slug": "utsa",
+      "conference": "American Athletic",
+      "position": "RB",
+      "role_note": "College Football News ranked Will Henderson as its No. 71 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 71",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "David Amador",
+      "team_slug": "utsa",
+      "conference": "American Athletic",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked David Amador as its No. 19 fantasy wide receiver.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 19",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jaquari Lewis",
+      "team_slug": "appalachian-state",
+      "conference": "Sun Belt",
+      "position": "RB",
+      "role_note": "College Football News ranked Jaquari Lewis as its No. 112 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 112",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dominic Knicely",
+      "team_slug": "coastal-carolina",
+      "conference": "Sun Belt",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoWire treated Dominic Knicely as Coastal Carolina’s featured back.",
+      "usage_note": "RotoWire recommended sitting Knicely at West Virginia after he averaged 5.7 yards per carry in a supporting role in 2025.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/college-football-week-1-start-sit-131553"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Max Johnson",
+      "team_slug": "georgia-southern",
+      "conference": "Sun Belt",
+      "position": "QB",
+      "class_raw": "7th",
+      "role_note": "CBS Sports reported Max Johnson was named Georgia Southern’s starter on Aug. 23.",
+      "usage_note": "CBS Sports wrote he has 6,355 passing yards and 49 touchdowns but has played only five games since the end of 2023.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.cbssports.com/college-football/news/max-johnson-georgia-southern-seventh-year-quarterback-injury-comeback/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Cameran Brown",
+      "team_slug": "georgia-state",
+      "conference": "Sun Belt",
+      "position": "QB",
+      "role_note": "College Football News ranked Cameran Brown as its No. 95 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 95",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "JC Evans",
+      "team_slug": "james-madison",
+      "conference": "Sun Belt",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Underdog Dynasty wrote JC Evans earned the Week 1 start against Liberty and finished 7-of-9 for 61 yards while rushing for a game-high 69 yards.",
+      "usage_note": "JMU rotated Evans with Camden Coleman (5-of-7, 57 yards) in a 20-13 win.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.underdogdynasty.com/sun-belt-conference/45467/james-madison-outduels-liberty-in-napiers-debut-20-13",
+        "https://jmusportsnews.com/2026/09/02/jmu-football-projected-depth-chart-liberty-week-1/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "George Pettaway",
+      "team_slug": "james-madison",
+      "conference": "Sun Belt",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "JMU Sports News projected George Pettaway as RB1 versus Liberty, and Underdog Dynasty wrote Pettaway was instrumental in the 20-13 win.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://jmusportsnews.com/2026/09/02/jmu-football-projected-depth-chart-liberty-week-1/",
+        "https://www.underdogdynasty.com/sun-belt-conference/45467/james-madison-outduels-liberty-in-napiers-debut-20-13"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Lunch Winfield",
+      "team_slug": "louisiana",
+      "conference": "Sun Belt",
+      "position": "QB",
+      "role_note": "College Football News ranked Lunch Winfield as its No. 100 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 100",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Carlos Del Rio-Wilson",
+      "team_slug": "marshall",
+      "conference": "Sun Belt",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "The Real WV reported Carlos Del Rio-Wilson was named 2026 Sun Belt Preseason Offensive Player of the Year.",
+      "usage_note": "He threw for 2,043 yards and rushed for 661 yards in 2025.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 22",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://therealwv.com/2026/07/20/herd-quarterback-named-sun-belt-preseason-offensive-player-of-the-year/",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Toby Payne",
+      "team_slug": "marshall",
+      "conference": "Sun Belt",
+      "position": "TE",
+      "class_raw": null,
+      "role_note": "The Real WV listed Toby Payne among Marshall’s Preseason All-Sun Belt First Team offensive honorees.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://therealwv.com/2026/07/20/herd-quarterback-named-sun-belt-preseason-offensive-player-of-the-year/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Quinn Henicle",
+      "team_slug": "old-dominion",
+      "conference": "Sun Belt",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "College Football News ranked Quinn Henicle as its No. 28 fantasy quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 28",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jordan Lovett",
+      "team_slug": "troy",
+      "conference": "Sun Belt",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoWire recommended starting Jordan Lovett as Troy’s presumed lead back against Sam Houston.",
+      "usage_note": "RotoWire cited Lovett’s 113-yard, two-touchdown game against Louisiana in 2025 and Sam Houston allowing 37.8 points per game.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/college-football-week-1-start-sit-131553"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jordan Gant",
+      "team_slug": "akron",
+      "conference": "MAC",
+      "position": "RB",
+      "class_raw": "RS Sr.",
+      "role_note": "TWO·DEEP lists Jordan Gant as Akron’s NEW STARTER at running back.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Austyn Dendy",
+      "team_slug": "bowling-green",
+      "conference": "MAC",
+      "position": "RB",
+      "class_raw": "RS So.",
+      "role_note": "TWO·DEEP lists Austyn Dendy as Bowling Green’s NEW STARTER at running back.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Terrance Shelton Jr.",
+      "team_slug": "buffalo",
+      "conference": "MAC",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "TWO·DEEP lists Terrance Shelton Jr. as Buffalo’s starting running back in an OPEN BATTLE.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nick Devereaux",
+      "team_slug": "eastern-michigan",
+      "conference": "MAC",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoWire recommended starting Nick Devereaux at home against San Jose State.",
+      "usage_note": "RotoWire wrote Devereaux had six catches for 71 yards and a score in EMU’s Week 0 opener after 34-510-7 in 2025.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/college-football-week-1-start-sit-131553"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "David McComb",
+      "team_slug": "miami-oh",
+      "conference": "MAC",
+      "position": "QB",
+      "class_raw": "RS Fr.",
+      "role_note": "Ourlads’ Sept. 5 chart lists David McComb as Miami (OH)’s starting quarterback.",
+      "usage_note": "Athlon’s June projection still listed Thomas Gotkowski ahead of McComb; the September Ourlads chart supersedes that for Week 1.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/miami-university/91096",
+        "https://athlonsports.com/college-football/predicting-starting-quarterbacks-all-138-college-football-teams-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Rodney Nelson",
+      "team_slug": "miami-oh",
+      "conference": "MAC",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "Ourlads and TWO·DEEP list Rodney Nelson as Miami (OH)’s NEW STARTER at running back.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/miami-university/91096",
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Telly Johnson",
+      "team_slug": "northern-illinois",
+      "conference": "MAC",
+      "position": "RB",
+      "role_note": "College Football News ranked Telly Johnson as its No. 149 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 149",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nick Poulos",
+      "team_slug": "ohio",
+      "conference": "MAC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Athlon projected Nick Poulos as Ohio’s 2026 starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://athlonsports.com/college-football/predicting-starting-quarterbacks-all-138-college-football-teams-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "John Alan Richter",
+      "team_slug": "toledo",
+      "conference": "MAC",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "Ourlads lists John Alan Richter as Toledo’s starting quarterback; Athlon also projected Richter as Toledo’s starter.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/toledo/92085",
+        "https://athlonsports.com/college-football/predicting-starting-quarterbacks-all-138-college-football-teams-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "CJ Miller",
+      "team_slug": "toledo",
+      "conference": "MAC",
+      "position": "RB",
+      "class_raw": "RS Sr.",
+      "role_note": "Ourlads and TWO·DEEP list CJ Miller as Toledo’s NEW STARTER at running back.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/toledo/92085",
+        "https://www.thetwodeep.com/college/depth-charts/position/rb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "William Watson III",
+      "team_slug": "umass",
+      "conference": "MAC",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "LineStar listed William Watson III as UMass’s Week 1 starter at Rutgers.",
+      "usage_note": "The Athletic wrote Watson threw for 197 yards and three touchdowns and ran for 40 yards in UMass’s upset at Rutgers.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB",
+        "https://www.nytimes.com/athletic/7571001/2026/09/07/quarterback-overreaction-keelon-russell-bryce-underwood-week-1/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Broc Lowry",
+      "team_slug": "western-michigan",
+      "conference": "MAC",
+      "position": "QB",
+      "class_raw": "RS So.",
+      "role_note": "Athlon projected Broc Lowry as Western Michigan’s 2026 starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://athlonsports.com/college-football/predicting-starting-quarterbacks-all-138-college-football-teams-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jalen Buckley",
+      "team_slug": "western-michigan",
+      "conference": "MAC",
+      "position": "RB",
+      "class_raw": "RS Jr.",
+      "role_note": "RotoWire treated Jalen Buckley as Western Michigan’s featured back.",
+      "usage_note": "RotoWire wrote Buckley has topped 1,000 rushing yards in two of the last three seasons and recommended sitting him at Michigan.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/college-football-week-1-start-sit-131553"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Nick Minicucci",
+      "team_slug": "delaware",
+      "conference": "Conference USA",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "RotoWire listed Nick Minicucci as Conference USA’s first-team fantasy quarterback at position rank No. 4.",
+      "usage_note": "College Football News ranked Minicucci as its No. 19 overall player.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "overall fantasy rank No. 19",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/2026-conference-usa-fantasy-sleepers-126261",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Sean Wilson",
+      "team_slug": "delaware",
+      "conference": "Conference USA",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "RotoWire listed Sean Wilson as a Conference USA first-team fantasy wide receiver at position rank No. 34.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoWire",
+        "value": "C-USA first-team WR, position rank No. 34",
+        "source": "https://www.rotowire.com/cfootball/article/2026-conference-usa-fantasy-sleepers-126261"
+      },
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/2026-conference-usa-fantasy-sleepers-126261"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Caden Creel",
+      "team_slug": "jacksonville-state",
+      "conference": "Conference USA",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "RotoWire listed Caden Creel as Conference USA’s second-team fantasy quarterback at position rank No. 18.",
+      "usage_note": "College Football News ranked Creel as its No. 25 fantasy quarterback.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 25",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/2026-conference-usa-fantasy-sleepers-126261",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Kanye Udoh",
+      "team_slug": "liberty",
+      "conference": "Conference USA",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "RotoWire listed Kanye Udoh as Conference USA’s first-team fantasy running back at position rank No. 39.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "RotoWire",
+        "value": "C-USA first-team RB, position rank No. 39",
+        "source": "https://www.rotowire.com/cfootball/article/2026-conference-usa-fantasy-sleepers-126261"
+      },
+      "sources": [
+        "https://www.rotowire.com/cfootball/article/2026-conference-usa-fantasy-sleepers-126261"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Liam Szarka",
+      "team_slug": "air-force",
+      "conference": "Mountain West",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "Athlon wrote Liam Szarka ran for 922 yards and 13 touchdowns and threw for 1,294 yards and nine scores in his first year as Air Force’s starter.",
+      "usage_note": "College Football News ranked Szarka as its No. 12 overall college fantasy player.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "overall fantasy rank No. 12",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://athlonsports.com/college-football/mountain-west-quarterback-rankings-2026",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Hauss Hejny",
+      "team_slug": "colorado-state",
+      "conference": "Mountain West",
+      "position": "QB",
+      "role_note": "College Football News ranked Hauss Hejny as its No. 186 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 186",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Micah Alejado",
+      "team_slug": "hawaii",
+      "conference": "Mountain West",
+      "position": "QB",
+      "class_raw": "So.",
+      "role_note": "Athlon called Micah Alejado the Mountain West’s unquestioned No. 1 signal-caller.",
+      "usage_note": "Mountain West Connection wrote Alejado passed for more than 3,000 yards and 24 touchdowns as a freshman.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "QB fantasy rank No. 37",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://athlonsports.com/college-football/mountain-west-quarterback-rankings-2026",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Pofele Ashlock",
+      "team_slug": "hawaii",
+      "conference": "Mountain West",
+      "position": "WR",
+      "role_note": "College Football News ranked Pofele Ashlock as its No. 110 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 110",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Luke Weaver",
+      "team_slug": "san-jose-state",
+      "conference": "Mountain West",
+      "position": "QB",
+      "role_note": "College Football News ranked Luke Weaver as its No. 182 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 182",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jackson Arnold",
+      "team_slug": "unlv",
+      "conference": "Mountain West",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "Ourlads lists Jackson Arnold as UNLV’s starting quarterback.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/unlv/92246",
+        "https://www.thetwodeep.com/college/depth-charts/position/qb"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jai'Den Thomas",
+      "team_slug": "unlv",
+      "conference": "Mountain West",
+      "position": "RB",
+      "class_raw": "Sr.",
+      "role_note": "Ourlads lists Jai'Den Thomas as UNLV’s starting running back.",
+      "usage_note": "College Football News ranked Thomas as its No. 17 fantasy running back.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "RB fantasy rank No. 17",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/unlv/92246",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Javen Jacobs",
+      "team_slug": "utah-state",
+      "conference": "Mountain West",
+      "position": "RB",
+      "role_note": "College Football News ranked Javen Jacobs as its No. 168 overall fantasy player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "Overall fantasy rank No. 168",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Maddux Madsen",
+      "team_slug": "boise-state",
+      "conference": "Pac-12",
+      "position": "QB",
+      "class_raw": "RS Sr.",
+      "role_note": "Sports Illustrated listed Maddux Madsen as Boise State’s Week 1 quarterback at Oregon.",
+      "usage_note": "SI wrote Madsen is making his 27th career start with a 20-6 record and 6,586 passing yards.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "The Athletic via San Diego Union-Tribune",
+        "value": "No. 61 among 138 projected FBS starting quarterbacks",
+        "source": "https://www.sandiegouniontribune.com/2026/07/23/the-athletic-rates-only-one-pac-12-qb-among-top-50-and-it-isnt-sdsus-jayden-denegal/"
+      },
+      "sources": [
+        "https://www.si.com/college/boise-state/football/boise-state-vs-no-2-oregon-starting-lineups-for-week-1-college-football-matchup"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Dylan Riley",
+      "team_slug": "boise-state",
+      "conference": "Pac-12",
+      "position": "RB",
+      "class_raw": "Jr.",
+      "role_note": "Sports Illustrated listed Dylan Riley as Boise State’s Week 1 starting running back.",
+      "usage_note": "College Football News ranked Riley as its No. 21 fantasy running back.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "RB fantasy rank No. 21",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.si.com/college/boise-state/football/boise-state-vs-no-2-oregon-starting-lineups-for-week-1-college-football-matchup",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jayden Mandal",
+      "team_slug": "fresno-state",
+      "conference": "Pac-12",
+      "position": "QB",
+      "class_raw": null,
+      "role_note": "247Sports reported Fresno State’s official depth chart named Jayden Mandal the Week 1 starter over Khristian Martin.",
+      "usage_note": "LineStar listed Mandal as Fresno State’s QB at USC.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://247sports.com/college/fresno-state/longformarticle/fresno-state-football-depth-chart-2026-breaking-down-the-new-official-two-deep-bulldogs-jayden-mandal-quarterback-matt-entz-289360657/",
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Jayden Denegal",
+      "team_slug": "san-diego-state",
+      "conference": "Pac-12",
+      "position": "QB",
+      "class_raw": "Sr.",
+      "role_note": "The San Diego Union-Tribune wrote Jayden Denegal returns as San Diego State’s starting quarterback.",
+      "usage_note": "The Athletic ranked Denegal No. 82 among 138 projected FBS starting quarterbacks.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "The Athletic via San Diego Union-Tribune",
+        "value": "No. 82 among 138 projected FBS starting quarterbacks",
+        "source": "https://www.sandiegouniontribune.com/2026/07/23/the-athletic-rates-only-one-pac-12-qb-among-top-50-and-it-isnt-sdsus-jayden-denegal/"
+      },
+      "sources": [
+        "https://www.sandiegouniontribune.com/2026/07/23/the-athletic-rates-only-one-pac-12-qb-among-top-50-and-it-isnt-sdsus-jayden-denegal/"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Lucky Sutton",
+      "team_slug": "san-diego-state",
+      "conference": "Pac-12",
+      "position": "RB",
+      "class_raw": null,
+      "role_note": "ESPN wrote Lucky Sutton returns with Christian Washington after the pair combined for 1,680 yards and 14 touchdowns.",
+      "usage_note": "College Football News ranked Sutton as its No. 16 fantasy running back.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "RB fantasy rank No. 16",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.espn.com/college-football/story/_/id/48892618/2026-college-football-pac-12-conference-preview-predictions-transfers-more",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Brad Jackson",
+      "team_slug": "texas-state",
+      "conference": "Pac-12",
+      "position": "QB",
+      "class_raw": "So.",
+      "role_note": "SI called Brad Jackson a Pac-12 Offensive Player of the Year frontrunner after 3,224 passing yards, 21 passing touchdowns, 744 rushing yards and 17 rushing scores as a redshirt freshman.",
+      "usage_note": "College Football News ranked Jackson as its No. 1 overall college fantasy player.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "overall fantasy rank No. 1; QB fantasy rank No. 1",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://www.si.com/college/boise-state/football/breaking-down-every-pac-12-starting-quarterback-situation-entering-2026-college-football-season",
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Beau Sparks",
+      "team_slug": "texas-state",
+      "conference": "Pac-12",
+      "position": "WR",
+      "class_raw": null,
+      "role_note": "College Football News ranked Beau Sparks as its No. 7 fantasy wide receiver.",
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 7",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Chris Dawn",
+      "team_slug": "texas-state",
+      "conference": "Pac-12",
+      "position": "WR",
+      "role_note": "College Football News ranked Chris Dawn as its No. 12 fantasy wide receiver and No. 57 overall player.",
+      "analyst_projection": {
+        "outlet": "College Football News",
+        "value": "WR fantasy rank No. 12",
+        "source": "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      },
+      "sources": [
+        "https://collegefootballnews.com/college-football/college-football-fantasy-rankings-2026"
+      ],
+      "class_raw": null,
+      "usage_note": null,
+      "availability": "active",
+      "injury_note": null,
+      "as_of": "2026-09-07"
+    },
+    {
+      "player": "Caden Pinnick",
+      "team_slug": "washington-state",
+      "conference": "Pac-12",
+      "position": "QB",
+      "class_raw": "RS So.",
+      "role_note": "Ourlads and LineStar list UC Davis transfer Caden Pinnick as Washington State’s Week 1 starter.",
+      "usage_note": "The Athletic wrote Pinnick passed for 3,206 yards and rushed for 437 yards with 32 total touchdowns at FCS UC Davis.",
+      "availability": "active",
+      "injury_note": null,
+      "analyst_projection": null,
+      "sources": [
+        "https://www.ourlads.com/ncaa-football-depth-charts/depth-chart/washington-state/92476",
+        "https://www.linestarapp.com/DailyDashboard/Sport/CFB"
+      ],
+      "as_of": "2026-09-07"
+    }
+  ],
+  "player_count": 230,
+  "notes": [
+    "Numeric projections are quoted only when an outlet published a rank or projection; no original numbers were invented.",
+    "Injury/availability claims that change status away from active require two sources; historical 2025 injuries that outlets still list a player as the 2026 starter remain availability=active with the cited note.",
+    "as_of is 2026-09-07 for every record in this master file."
+  ]
+}
