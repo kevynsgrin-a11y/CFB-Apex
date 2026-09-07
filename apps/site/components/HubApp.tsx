@@ -9,6 +9,7 @@ import {
   getDepthChart,
   getGame,
   getInjuries,
+  getPreseasonRating,
   getRoster,
   getSchemes,
   getStaff,
@@ -354,7 +355,7 @@ function GameCard({
         <span>{game.venue}</span>
         <span>
           {game.broadcast
-            ? `${game.broadcast}${broadcastFor(game.id)?.stream ? ` · ${broadcastFor(game.id)?.stream}` : ""}`
+            ? game.broadcast
             : game.weather
               ? `${game.weather.temperature}° · ${game.weather.summary}`
               : "Network not assigned"}
@@ -1402,6 +1403,7 @@ function TeamDetail({ team }: { team: Team }) {
   const teamGames = games.filter((game) => game.awayTeamId === team.id || game.homeTeamId === team.id);
   const coach = coaches.find((item) => item.teamId === team.id);
   const stadium = stadiums.find((item) => item.teamId === team.id);
+  const rating = getPreseasonRating(team.slug);
   const roster = getRoster(team.slug);
   const depth = getDepthChart(team.slug);
   const injuries = getInjuries(team.slug);
@@ -1588,6 +1590,40 @@ function TeamDetail({ team }: { team: Team }) {
           <SectionHeading eyebrow="GAMEDAY" title={stadium?.name ?? "Venue guide pending"} href={stadium ? `/stadiums/${stadium.slug}` : "/stadiums"} />
           <p>{stadium ? `${stadium.city} · ${stadium.capacity.toLocaleString()} capacity · verified ${stadium.lastVerified}` : "Venue guides return once stadium data joins the dataset."}</p>
         </div>
+        <div className="dashboard-panel">
+          <SectionHeading eyebrow={`PRESEASON · AS OF ${rating?.as_of ?? "—"}`} title="Published numbers" href="/rankings" />
+          {rating ? (
+            <div className="portal-list">
+              {rating.sp ? (
+                <div className="portal-row">
+                  <span className="portal-status portal-status--committed">SP+</span>
+                  <span><strong>No. {rating.sp.rank} · {signed(rating.sp.overall)} overall</strong><small>off {signed(rating.sp.offense)} · def {rating.sp.defense} (points per 20 possessions)</small></span>
+                </div>
+              ) : null}
+              {rating.fpi ? (
+                <div className="portal-row">
+                  <span className="portal-status portal-status--committed">FPI</span>
+                  <span><strong>No. {rating.fpi.rank}{rating.fpi.value != null ? ` · ${rating.fpi.value.toFixed(1)}` : ""}</strong><small>ESPN Football Power Index</small></span>
+                </div>
+              ) : null}
+              {rating.wins && (rating.wins.line != null || rating.wins.projected != null) ? (
+                <div className="portal-row">
+                  <span className="portal-status portal-status--available">O/U</span>
+                  <span><strong>{rating.wins.line != null ? rating.wins.line.toFixed(1) : "—"} win total</strong><small>{rating.wins.projected != null ? `projected ${rating.wins.projected.toFixed(1)} wins` : "projection not published"}</small></span>
+                </div>
+              ) : null}
+              {rating.playoff?.value ? (
+                <div className="portal-row">
+                  <span className="portal-status portal-status--withdrawn">CFP</span>
+                  <span><strong>{rating.playoff.value} playoff odds</strong><small>as reported by {rating.playoff.outlet}</small></span>
+                </div>
+              ) : null}
+              {rating.notes ? <p className="panel-note">{rating.notes}</p> : null}
+            </div>
+          ) : (
+            <p className="panel-note">No published preseason numbers for this program.</p>
+          )}
+        </div>
       </section>
     </>
   );
@@ -1675,6 +1711,65 @@ function StadiumDetail({ slug }: { slug: string }) {
 function RankingsPage() {
   const [pollId, setPollId] = useState("ap");
   const table = pollTables.find((poll) => poll.poll === pollId) ?? pollTables[0];
+  const ratingsRows = [...teams]
+    .map((team) => ({ team, rating: getPreseasonRating(team.slug) }))
+    .filter((row) => row.rating?.sp)
+    .sort((a, b) => (a.rating?.sp?.rank ?? 999) - (b.rating?.sp?.rank ?? 999));
+  const ratingsAsOf = ratingsRows[0]?.rating?.as_of;
+  if (pollId === "ratings") {
+    return (
+      <>
+        <PageHeading
+          eyebrow="2026 PRESEASON RATINGS"
+          title="SP+ and FPI, as published."
+          description={`Bill Connelly's final preseason SP+ and ESPN's FPI, plus win totals and playoff odds exactly as each outlet reported them${ratingsAsOf ? ` · compiled through ${ratingsAsOf}` : ""}. Blank means the number was not published.`}
+        />
+        <div className="sticky-tools">
+          <fieldset className="filter-chips">
+            <legend className="sr-only">Board</legend>
+            {pollTables.map((poll) => (
+              <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => setPollId(poll.poll)}>
+                {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
+              </button>
+            ))}
+            <button type="button" aria-pressed={true} onClick={() => setPollId("ratings")}>SP+ / FPI board</button>
+          </fieldset>
+        </div>
+        <section className="content-section">
+          <div className="scoreboard-summary">
+            <div><span>{ratingsRows.length}</span><small>RATED (SP+)</small></div>
+            <div><span>{ratingsRows.filter((r) => r.rating?.fpi).length}</span><small>WITH FPI</small></div>
+            <div><span>{ratingsRows.filter((r) => r.rating?.wins?.line != null).length}</span><small>WIN TOTALS PUBLISHED</small></div>
+          </div>
+          <section className="data-table-wrap" tabIndex={0} aria-label="Preseason ratings board">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>SP+</th><th>Team</th><th>SP+ rating</th><th>Off.</th><th>Def.</th><th>FPI</th><th>Win total</th><th>Proj. wins</th><th>Playoff odds*</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ratingsRows.map(({ team, rating }) => (
+                  <tr key={team.id}>
+                    <td><b>{rating?.sp?.rank}</b></td>
+                    <td><a href={`/teams/${team.slug}`}>{team.shortName}</a><small> {team.conference}</small></td>
+                    <td>{rating?.sp ? signed(rating.sp.overall) : "—"}</td>
+                    <td>{rating?.sp ? signed(rating.sp.offense - 20) : "—"}</td>
+                    <td>{rating?.sp ? signed(20 - rating.sp.defense) : "—"}</td>
+                    <td>{rating?.fpi ? `#${rating.fpi.rank}` : "—"}</td>
+                    <td>{rating?.wins?.line != null ? rating.wins.line.toFixed(1) : "—"}</td>
+                    <td>{rating?.wins?.projected != null ? rating.wins.projected.toFixed(1) : "—"}</td>
+                    <td>{rating?.playoff?.value ?? "—"}{rating?.playoff ? <small> {rating.playoff.outlet}</small> : null}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+          <p className="table-caption">*Playoff odds are the outlet's reported number (ESPN FPI simulations or The Athletic model), not this site's simulation. SP+ offense/defense columns are adjusted for readability; raw figures sit on each team page.</p>
+        </section>
+      </>
+    );
+  }
   if (!table) {
     return (
       <PageHeading
@@ -1699,6 +1794,7 @@ function RankingsPage() {
               {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
             </button>
           ))}
+          <button type="button" aria-pressed={pollId === "ratings"} onClick={() => setPollId("ratings")}>SP+ / FPI board</button>
         </fieldset>
       </div>
       <section className="content-section">
