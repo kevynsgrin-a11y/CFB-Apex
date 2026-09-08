@@ -38,12 +38,15 @@ export function ScoreTicker({
       return;
     let frame: number;
     let last = 0;
+    // Keep fractional movement outside the DOM: scrollLeft rounds small steps.
+    let position = rail.current?.scrollLeft ?? 0;
     const move = (time: number) => {
       const element = rail.current;
       if (element && last) {
-        element.scrollLeft += Math.min(time - last, 50) * 0.025;
-        if (element.scrollLeft >= element.scrollWidth - element.clientWidth - 1)
-          element.scrollLeft = 0;
+        const limit = element.scrollWidth - element.clientWidth;
+        position += Math.min(time - last, 50) * 0.025;
+        if (position >= limit) position = 0;
+        element.scrollLeft = position;
       }
       last = time;
       frame = requestAnimationFrame(move);
