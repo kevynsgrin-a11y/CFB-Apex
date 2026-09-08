@@ -319,6 +319,27 @@ const broadcastIndex = ((bundle.broadcasts ?? { asOf: null, note: null, byPair: 
 export const broadcastAsOf = (bundle.broadcasts as { asOf?: string } | undefined)?.asOf ?? null;
 export const broadcastNote = (bundle.broadcasts as { note?: string } | undefined)?.note ?? null;
 
+export interface TvRow {
+  date: string;
+  away: string;
+  home: string;
+  tv: string | null;
+  time_et: string | null;
+  status: string;
+  week: number;
+}
+
+/** Flat, date-sorted TV designations for the weekly watch board. */
+export const tvRows = ((bundle.broadcasts as { rows?: TvRow[] } | undefined)?.rows ?? []) as TvRow[];
+
+export function tvWeeks() {
+  return [...new Set(tvRows.map((row) => row.week))].sort((a, b) => a - b);
+}
+
+export function tvRowsForWeek(week: number) {
+  return tvRows.filter((row) => row.week === week);
+}
+
 function broadcastKey(date: string, a: string, b: string) {
   return `${date}:${[a, b].sort().join(":")}`;
 }
