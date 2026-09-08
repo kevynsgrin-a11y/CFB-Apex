@@ -3,6 +3,7 @@ import { Barlow_Condensed, Inter } from "next/font/google";
 import { headers } from "next/headers";
 import { brand, environment } from "@/lib/config";
 import "./globals.css";
+import "./scoreboard.css";
 
 const inter = Inter({
   variable: "--font-inter",

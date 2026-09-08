@@ -23,7 +23,6 @@ import {
   getTeamRatings,
   getTeamSeasons,
   injuriesAsOf,
-  modelEstimatesAvailable,
   broadcastAsOf,
   broadcastNote,
   timeEtLabel,
@@ -51,17 +50,18 @@ import {
 } from "@/lib/config";
 import { calculateBuyout } from "@/lib/contracts";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
-import type { DfsPlayer, Game, Provenance, Team } from "@/lib/types";
+import type { DfsPlayer, Provenance, Team } from "@/lib/types";
 import { ticketAffiliatesConfigured, ticketLinksForTeam } from "@/lib/affiliates";
 import { SourceMeta } from "./SourceMeta";
 import { BroadcastHeader } from "./broadcast/header";
 import { ScoreTicker } from "./broadcast/score-ticker";
 import { BroadcastFooter } from "./broadcast/footer";
+import { GameDetailPage } from "./broadcast/game-detail-page";
 import { BroadcastHomepage } from "./broadcast/homepage";
+import { ScoreboardPage } from "./broadcast/scoreboard-page";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
 
 type Mode = "clean" | "analysis";
-type ScoreFilter = "All" | "P4" | "G5" | "FCS" | "Top 25" | "Favorites";
 
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -191,84 +191,6 @@ function Freshness({ provenance }: { provenance: Provenance }) {
   );
 }
 
-function GameCard({
-  game,
-  mode,
-  favoriteIds,
-  onFavorite,
-}: {
-  game: Game;
-  mode: Mode;
-  favoriteIds: Set<string>;
-  onFavorite: (teamId: string) => void;
-}) {
-  const away = teamFor(game.awayTeamId);
-  const home = teamFor(game.homeTeamId);
-  const isFavorite = favoriteIds.has(away.id) || favoriteIds.has(home.id);
-
-  return (
-    <article className="game-card">
-      <div className="game-card__topline">
-        <span className={`status status--${game.status}`}>{game.statusDetail}</span>
-        <span>{game.kickoffLabel}</span>
-        <button
-          className="favorite-button"
-          type="button"
-          onClick={() => onFavorite(home.id)}
-          aria-pressed={isFavorite}
-          aria-label={`${isFavorite ? "Remove" : "Add"} ${home.shortName} as a favorite`}
-        >
-          {isFavorite ? "★" : "☆"}
-        </button>
-      </div>
-      <a className="game-card__matchup" href={`/games/${game.id}`}>
-        <div className="team-line">
-          <Monogram team={away} />
-          <span>
-            <small>{away.rank ? `#${away.rank}` : away.conference}</small>
-            <strong>{away.shortName}</strong>
-            <em>{away.record}</em>
-          </span>
-          <b>{game.awayScore ?? "—"}</b>
-        </div>
-        <div className="team-line">
-          <Monogram team={home} />
-          <span>
-            <small>{home.rank ? `#${home.rank}` : home.conference}</small>
-            <strong>{home.shortName}</strong>
-            <em>{home.record}</em>
-          </span>
-          <b>{game.homeScore ?? "—"}</b>
-        </div>
-      </a>
-      <div className="game-card__meta">
-        <span>{game.venue}</span>
-        <span>
-          {game.broadcast
-            ? game.broadcast
-            : game.weather
-              ? `${game.weather.temperature}° · ${game.weather.summary}`
-              : "Network not assigned"}
-        </span>
-      </div>
-      <div className="game-card__actions">
-        <a href={`/games/${game.id}`}>Preview</a>
-        <a href="/watch">Watch status</a>
-        <a href={`/stadiums/${game.venueSlug}`}>Gameday guide</a>
-      </div>
-      {mode === "analysis" && game.line ? (
-        <div className="odds-strip">
-          <span>MARKET</span>
-          <strong>
-            {home.abbreviation} {game.line.home}
-          </strong>
-          <small>Market context · no operator actions</small>
-        </div>
-      ) : null}
-    </article>
-  );
-}
-
 function PageHeading({
   eyebrow,
   title,
@@ -314,270 +236,6 @@ function SectionHeading({
           {linkLabel} <span aria-hidden="true">→</span>
         </a>
       ) : null}
-    </div>
-  );
-}
-
-interface HomeProps {
-  mode: Mode;
-  favorites: Set<string>;
-  onFavorite: (teamId: string) => void;
-}
-
-function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
-  const [filter, setFilter] = useState<ScoreFilter>("All");
-  const filtered = games.filter((game) => {
-    const away = teamFor(game.awayTeamId);
-    const home = teamFor(game.homeTeamId);
-    if (filter === "All") return true;
-    if (filter === "Top 25") return Boolean(away.rank || home.rank);
-    if (filter === "Favorites") return favorites.has(away.id) || favorites.has(home.id);
-    return away.subdivision === filter || home.subdivision === filter;
-  });
-
-  return (
-    <>
-      <PageHeading
-        eyebrow="PRIORITY 01 · SCOREBOARD"
-        title="The slate, without the scavenger hunt."
-        description={`Scheduled, final, delayed, and postponed game states with assigned TV networks where locked (${broadcastAsOf ?? "—"} compilation; unlisted games sit on conference plus-networks or await the 6–12 day flex).`}
-        actions={<Freshness provenance={games[0].provenance} />}
-      />
-      <div className="sticky-tools">
-        <fieldset className="date-switcher">
-          <legend className="sr-only">Score date</legend>
-          <button type="button" disabled title="One scoreboard window is available" aria-label="Previous scoreboard window unavailable">←</button>
-          <span><small>2026 SEASON</small><strong>{games.length} games tracked</strong></span>
-          <button type="button" disabled title="One scoreboard window is available" aria-label="Next scoreboard window unavailable">→</button>
-        </fieldset>
-        <fieldset className="filter-chips">
-          <legend className="sr-only">Score filters</legend>
-          {(["All", "P4", "G5", "FCS", "Top 25", "Favorites"] as ScoreFilter[]).map((item) => (
-            <button
-              type="button"
-              key={item}
-              aria-pressed={filter === item}
-              onClick={() => setFilter(item)}
-            >
-              {item}
-            </button>
-          ))}
-        </fieldset>
-      </div>
-      <section className="content-section">
-        <div className="scoreboard-summary">
-          <div><span>{games.length}</span><small>GAMES</small></div>
-          <div><span>{games.filter((game) => game.status === "final").length}</span><small>FINAL</small></div>
-          <div><span>{games.filter((game) => game.status === "scheduled").length}</span><small>SCHEDULED</small></div>
-          <div><span>{teams.length}</span><small>PROGRAMS</small></div>
-          <a href="/schedule">Full schedule →</a>
-        </div>
-        {filtered.length ? (
-          <div className="game-grid game-grid--two">
-            {filtered.map((game) => (
-              <GameCard
-                key={game.id}
-                game={game}
-                mode={mode}
-                favoriteIds={favorites}
-                onFavorite={onFavorite}
-              />
-            ))}
-          </div>
-        ) : (
-          <EmptyState
-            title="No favorite teams on this season board yet."
-            copy="Add a favorite from any game card, then return to this filter."
-            href="/teams"
-            action="Browse teams"
-          />
-        )}
-      </section>
-    </>
-  );
-}
-
-function SchedulePage(props: HomeProps) {
-  return (
-    <>
-      <PageHeading
-        eyebrow="SEASON-AWARE SCHEDULE"
-        title="2026 schedule"
-        description="Conference membership and postseason rules are versioned by season; the preview never hardcodes a permanent team count."
-      />
-      <section className="content-section schedule-board">
-        {games.map((game) => (
-          <GameCard
-            key={game.id}
-            game={game}
-            mode={props.mode}
-            favoriteIds={props.favorites}
-            onFavorite={props.onFavorite}
-          />
-        ))}
-      </section>
-    </>
-  );
-}
-
-function GamePage({ gameId, mode, favorites, onFavorite }: HomeProps & { gameId: string }) {
-  const game = getGame(gameId) ?? games[0];
-  const away = teamFor(game.awayTeamId);
-  const home = teamFor(game.homeTeamId);
-  const homeEdge = Math.round(game.modelHomeWinProbability * 100);
-  const metrics = [
-    ["Play value / drive", away.strength - 65, home.strength - 65],
-    ["Successful play rate", 47, 51],
-    ["Explosive play index", 61, 55],
-    ["Disruption created", 58, 64],
-    ["Returning production", away.returningProduction, home.returningProduction],
-  ] as const;
-
-  return (
-    <>
-      <div className="game-hero">
-        <div className="game-hero__meta">
-          <span className={`status status--${game.status}`}>{game.statusDetail}</span>
-          <Freshness provenance={game.provenance} />
-        </div>
-        <div className="game-hero__matchup">
-          <TeamHero team={away} score={game.awayScore} />
-          <div className="game-hero__center">
-            <h1 className="sr-only">{away.name} at {home.name} game preview</h1>
-            <span>{game.kickoffLabel}</span>
-            <strong>{game.broadcast ?? "Broadcast provider not configured"}</strong>
-            <small>{game.venue} · {game.city}</small>
-          </div>
-          <TeamHero team={home} score={game.homeScore} />
-        </div>
-        <div className="game-action-row">
-          <a href="/watch">Watch status</a>
-          <a href="/watch#radio">Audio status</a>
-          <a href={`/stadiums/${game.venueSlug}`}>Venue guide</a>
-          <button type="button" onClick={() => onFavorite(home.id)} aria-pressed={favorites.has(home.id)}>
-            {favorites.has(home.id) ? "★ Favorited" : "☆ Favorite"}
-          </button>
-        </div>
-      </div>
-
-      <section className="content-section game-layout">
-        <div className="game-main">
-          {modelEstimatesAvailable ? (
-            <>
-              <SectionHeading eyebrow="MODEL SNAPSHOT" title="Why the model leans this way" />
-              <article className="win-model-card">
-                <div>
-                  <span className="eyebrow">HOME WIN ESTIMATE</span>
-                  <strong>{homeEdge}%</strong>
-                  <small>±{percent(game.modelUncertainty)} uncertainty</small>
-                </div>
-                <div className="win-model-card__track" aria-hidden="true">
-                  <span style={{ width: `${homeEdge}%` }} />
-                </div>
-                <p>
-                  {home.shortName} carries the stronger strength rating and a modest
-                  home-context edge. Weather and unverified availability are excluded rather than
-                  invented.
-                </p>
-              </article>
-            </>
-          ) : (
-            <article className="win-model-card">
-              <div>
-                <span className="eyebrow">MATCHUP MODEL</span>
-                <strong>Pending 2026 season data</strong>
-              </div>
-              <p>
-                Win probabilities and matchup edges resume once in-season results accumulate.
-                Schedules, results, and poll data below are live from the 2026 dataset.
-              </p>
-            </article>
-          )}
-
-          {modelEstimatesAvailable && (
-            <article className="metric-card">
-              <div className="metric-card__header">
-                <div><Monogram team={away} size="sm" /><strong>{away.abbreviation}</strong></div>
-                <span>Original efficiency metrics</span>
-                <div><strong>{home.abbreviation}</strong><Monogram team={home} size="sm" /></div>
-              </div>
-              <div className="metric-list">
-                {metrics.map(([label, awayValue, homeValue]) => (
-                  <div className="metric-row" key={label}>
-                    <b>{awayValue}</b>
-                    <div>
-                      <span>{label}</span>
-                      <div className="split-bar" role="img" aria-label={`${label}: ${away.shortName} ${awayValue}; ${home.shortName} ${homeValue}`}>
-                        <i style={{ width: `${awayValue}%` }} />
-                        <em style={{ width: `${homeValue}%` }} />
-                      </div>
-                    </div>
-                    <b>{homeValue}</b>
-                  </div>
-                ))}
-              </div>
-            </article>
-          )}
-
-          {modelEstimatesAvailable && (
-            <article className="mismatch-card">
-              <div>
-                <span className="eyebrow">POSITIONAL MATCHUPS</span>
-                <h2>Where Saturday tilts</h2>
-                <p>Color intensity is paired with labels and a text summary for accessibility.</p>
-              </div>
-              <div className="mismatch-grid" role="img" aria-label={`${home.shortName} has advantages in pass protection and secondary; ${away.shortName} has an advantage at receiver`}>
-                {[
-                  ["QB", 2], ["RB", -1], ["WR", -3], ["OL", 4], ["DL", 1], ["LB", 0], ["DB", 3], ["ST", -1],
-                ].map(([label, edge]) => (
-                  <div className={`edge edge--${Number(edge) > 1 ? "home" : Number(edge) < -1 ? "away" : "even"}`} key={label}>
-                    <span>{label}</span>
-                    <strong>{Number(edge) > 0 ? `+${edge} ${home.abbreviation}` : Number(edge) < 0 ? `${Math.abs(Number(edge))} ${away.abbreviation}` : "Even"}</strong>
-                  </div>
-                ))}
-              </div>
-            </article>
-          )}
-        </div>
-        <aside className="game-sidebar">
-          <article className="sidebar-card">
-            <span className="eyebrow">GAMEDAY</span>
-            <h2>{game.weather ? `${game.weather.temperature}° · ${game.weather.summary}` : "Weather unavailable"}</h2>
-            <p>{game.weather ? `Wind ${game.weather.windMph} mph. Weather is not part of this dataset release.` : "A live weather provider is not configured."}</p>
-            <a href={`/stadiums/${game.venueSlug}`}>Parking, bags & transit →</a>
-          </article>
-          {mode === "analysis" && game.line ? (
-            <article className="sidebar-card sidebar-card--gold">
-              <span className="eyebrow">MARKET CONTEXT</span>
-              <h2>{home.abbreviation} {game.line.home}</h2>
-              <p>No licensed odds provider or operator action is configured.</p>
-              <div className="sparkline" role="img" aria-label={`Line movement from ${game.line.movement[0]} to ${game.line.movement.at(-1)}`}>
-                {game.line.movement.map((point, index) => (
-                  <span key={`${point}-${index}`} style={{ height: `${32 + Math.abs(point) * 10}%` }} />
-                ))}
-              </div>
-            </article>
-          ) : null}
-          <article className="sidebar-card">
-            <SourceMeta provenance={game.provenance} />
-            <a href={`/corrections?record=${game.id}`}>Report a data issue →</a>
-          </article>
-        </aside>
-      </section>
-    </>
-  );
-}
-
-function TeamHero({ team, score }: { team: Team; score?: number }) {
-  return (
-    <div className="team-hero">
-      <Monogram team={team} size="lg" />
-      <span>
-        <small>{team.rank ? `#${team.rank}` : team.conference}</small>
-        <strong>{team.name}</strong>
-        <em>{team.record}</em>
-      </span>
-      {score !== undefined ? <b>{score}</b> : null}
     </div>
   );
 }
@@ -2117,12 +1775,31 @@ export function HubApp({ path = "/" }: { path?: string }) {
   const parts = normalizedPath.split("/").filter(Boolean);
   const root = parts[0] ?? "";
   let content: React.ReactNode;
-  const common = { mode, favorites, onFavorite: toggleFavorite };
+  const scoreboardProps = {
+    games,
+    teams,
+    publishedWeeks: tvWeeks(),
+    broadcastAsOf,
+    broadcastNote,
+    favorites,
+    onFavorite: toggleFavorite,
+  };
 
   if (!root) content = <BroadcastHomepage data={homepageData} cleanMode={mode === "clean"} onModeRequest={() => setModeDialogOpen(true)} />;
-  else if (root === "scores") content = <ScoresPage {...common} />;
-  else if (root === "schedule") content = <SchedulePage {...common} />;
-  else if (root === "games" && parts[1]) content = <GamePage gameId={parts[1]} {...common} />;
+  else if (root === "scores" || root === "schedule") content = <ScoreboardPage {...scoreboardProps} />;
+  else if (root === "games" && parts[1]) {
+    const game = getGame(parts[1]) ?? games[0];
+    content = (
+      <GameDetailPage
+        game={game}
+        away={teamFor(game.awayTeamId)}
+        home={teamFor(game.homeTeamId)}
+        broadcastAsOf={broadcastAsOf}
+        favorites={favorites}
+        onFavorite={toggleFavorite}
+      />
+    );
+  }
   else if (root === "transfer-portal") content = <PortalPage teamSlug={parts[1]} />;
   else if (root === "playoff-predictor") content = <PlayoffPage />;
   else if (root === "coaching-carousel") content = <CoachingPage />;
