@@ -49,6 +49,11 @@ export async function generateMetadata(): Promise<Metadata> {
       description: brand.description,
       images: [image],
     },
+    other: {
+      // TicketNetwork affiliate signup (Impact). Verification meta required in
+      // the homepage <head>; rendered on every page via the root layout.
+      "impact-site-verification": "c81c4223-6b4f-49f8-8ae5-93b6cc54ffb0",
+    },
   };
 }
 
