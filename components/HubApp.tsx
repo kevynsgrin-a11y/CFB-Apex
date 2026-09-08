@@ -26,6 +26,11 @@ import {
   modelEstimatesAvailable,
   broadcastAsOf,
   broadcastFor,
+  broadcastNote,
+  timeEtLabel,
+  tvRows,
+  tvRowsForWeek,
+  tvWeeks,
   pollTables,
   pollsStatusNote,
   portalAsOf,
@@ -1913,21 +1918,81 @@ function RankingsPage() {
 }
 
 function WatchPage() {
+  const [week, setWeek] = useState(() => {
+    const now = Date.now();
+    const upcoming = tvRows.find((row) => Date.parse(`${row.date}T23:59:59Z`) >= now);
+    return upcoming?.week ?? tvRows[tvRows.length - 1]?.week ?? 1;
+  });
+  const weeks = tvWeeks();
+  const rows = tvRowsForWeek(week);
+  const networks = [...new Set(rows.map((row) => row.tv).filter(Boolean))].sort();
+  const athleticsSites = stadiums
+    .map((stadium) => ({ slug: stadium.slug, name: getTeamBySlug(stadium.slug)?.shortName ?? stadium.slug, url: stadium.sources?.[0] ?? null }))
+    .filter((site) => site.url && site.url.startsWith("http"));
+  const [radioTeam, setRadioTeam] = useState("alabama");
+
   return (
     <>
       <PageHeading
         eyebrow="AUTHORIZED DESTINATIONS"
         title="Know where the game is. Never fake the stream."
-        description="This preview does not embed, retransmit, or invent broadcast, radio, ticket, or operator destinations."
+        description={`National TV designations come from the research compilation dated ${broadcastAsOf ?? "—"}. Radio and tickets stay with the schools — this site embeds, retransmits, or invents none of it.`}
       />
+      <section className="content-section">
+        <div className="table-tools">
+          <div>
+            <label>Week
+              <select value={week} onChange={(event) => setWeek(Number(event.target.value))}>
+                {weeks.map((item) => <option key={item} value={item}>{item === 0 ? "Week 0" : `Week ${item}`}</option>)}
+              </select>
+            </label>
+          </div>
+          <span>{rows.length} televised games{networks.length ? ` · ${networks.join(" · ")}` : ""}</span>
+        </div>
+        {rows.length ? (
+          <section className="data-table-wrap" tabIndex={0} aria-label={`Week ${week} broadcast schedule`}>
+            <table className="data-table">
+              <thead>
+                <tr><th>Date</th><th>Kickoff</th><th>Matchup</th><th>Network</th></tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr key={`${row.date}-${row.away}-at-${row.home}`}>
+                    <td>{row.date}</td>
+                    <td>{timeEtLabel(row.time_et) ?? (row.status === "time_tbd" ? "TBD" : "—")}</td>
+                    <td><a href={`/teams/${row.away}`}>{getTeamBySlug(row.away)?.shortName ?? row.away}</a> at <a href={`/teams/${row.home}`}>{getTeamBySlug(row.home)?.shortName ?? row.home}</a></td>
+                    <td>{row.tv ?? <span className="portal-status portal-status--withdrawn">unassigned</span>}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        ) : (
+          <article className="win-model-card">
+            <div><span className="eyebrow">NO DESIGNATIONS YET</span><strong>Week {week}</strong></div>
+            <p>Later weeks sit inside the 6–12 day selection windows and appear here once networks announce them.</p>
+          </article>
+        )}
+        <p className="table-caption">{broadcastNote}</p>
+      </section>
       <section className="content-section provider-cards" id="radio">
-        {[
-          ["Broadcast schedule", "Provider not configured", "A licensed schedule feed is required before network and streaming destinations can display."],
-          ["Local radio", "Provider not configured", "Only school, network, or station-authorized destinations may appear."],
-          ["Ticket inventory", "No partner active", "The preview does not invent availability, pricing, or affiliate status."],
-        ].map(([title, status, copy]) => (
-          <article key={title}><span className="provider-state provider-state--off">{status}</span><h2>{title}</h2><p>{copy}</p><a href="/data-sources">Review dependency →</a></article>
-        ))}
+        <article>
+          <span className="provider-state provider-state--research">RESEARCH GAP</span>
+          <h2>Local radio</h2>
+          <p>Radio affiliates are not part of the research dataset, and only station-authorized listings may appear. Each program publishes its affiliate network on its official athletics site:</p>
+          <label>Team
+            <select value={radioTeam} onChange={(event) => setRadioTeam(event.target.value)}>
+              {athleticsSites.map((site) => <option key={site.slug} value={site.slug}>{site.name}</option>)}
+            </select>
+          </label>{" "}
+          <a className="button button--ghost" href={athleticsSites.find((site) => site.slug === radioTeam)?.url ?? "#"} rel="nofollow noreferrer noopener" target="_blank">Open official athletics site →</a>
+        </article>
+        <article>
+          <span className="provider-state provider-state--research">NO PARTNER BY DESIGN</span>
+          <h2>Ticket inventory</h2>
+          <p>Schools and their athletics departments are the only ticket sources this site points to. No resale marketplace, pricing, or availability is shown, and none is invented. Use the same official athletics sites for tickets.</p>
+          <a href="/data-sources">Review dependency policy →</a>
+        </article>
       </section>
     </>
   );
