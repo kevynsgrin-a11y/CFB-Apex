@@ -99,6 +99,23 @@ test("fantasy notes are reported-only, slug-clean, and never invent projections"
   assert.equal(smith?.projection?.value, "Week 1 WR rank No. 1");
 });
 
+test("affiliate and radio seams stay fail-closed until configured", async () => {
+  const { ticketLinksForTeam, ticketAffiliatesConfigured } = await import("../lib/affiliates.ts");
+  if (!ticketAffiliatesConfigured) {
+    assert.deepEqual(ticketLinksForTeam("Alabama Crimson Tide"), []);
+  } else {
+    for (const link of ticketLinksForTeam("Alabama Crimson Tide")) {
+      assert.match(link.url, /^https:\/\//);
+      assert.ok(link.url.includes("url="), "CJ wrapper must encode the destination");
+    }
+  }
+  const { radioStations } = await import("../lib/cfb-dataset.ts");
+  assert.ok(Array.isArray(radioStations));
+  for (const station of radioStations) {
+    assert.match(station.team, /^[a-z0-9-]+$/);
+  }
+});
+
 test("every program has a gameday guide and broadcasts attach to real games", () => {
   assert.equal(stadiums.length, teams.length);
   const guideTeams = new Set(stadiums.map((stadium) => stadium.teamId));

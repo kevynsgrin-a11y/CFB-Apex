@@ -38,6 +38,8 @@ import {
   portalEvents,
   portalStatusNote,
   providerHealth,
+  radioAsOf,
+  radioForTeam,
   scenarioGames,
   searchPlayers,
   seasonRules,
@@ -53,6 +55,7 @@ import {
 import { calculateBuyout } from "@/lib/contracts";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import type { DfsPlayer, Game, PortalEvent, Provenance, Team } from "@/lib/types";
+import { ticketAffiliatesConfigured, ticketLinksForTeam } from "@/lib/affiliates";
 import { SourceMeta } from "./SourceMeta";
 
 type Mode = "clean" | "analysis";
@@ -1977,9 +1980,37 @@ function WatchPage() {
       </section>
       <section className="content-section provider-cards" id="radio">
         <article>
-          <span className="provider-state provider-state--research">RESEARCH GAP</span>
+          <span className={`provider-state ${radioForTeam(radioTeam) ? "provider-state--on" : "provider-state--research"}`}>
+            {radioForTeam(radioTeam) ? "RESEARCH VERIFIED" : "RESEARCH GAP"}
+          </span>
           <h2>Local radio</h2>
-          <p>Radio affiliates are not part of the research dataset, and only station-authorized listings may appear. Each program publishes its affiliate network on its official athletics site:</p>
+          {(() => {
+            const station = radioForTeam(radioTeam);
+            if (station) {
+              return (
+                <div className="portal-list">
+                  <div className="portal-row">
+                    <span className="portal-status portal-status--committed">FM/AM</span>
+                    <span><strong>{station.station ?? "Flagship not published"}{station.frequency ? ` · ${station.frequency}` : ""}</strong><small>{station.market ?? "Market not published"}{station.network ? ` · ${station.network}` : ""}</small></span>
+                  </div>
+                  {station.satellite ? (
+                    <div className="portal-row">
+                      <span className="portal-status portal-status--available">SAT</span>
+                      <span><strong>{station.satellite}</strong><small>national carriage</small></span>
+                    </div>
+                  ) : null}
+                  {station.notes ? <p className="panel-note">{station.notes}</p> : null}
+                  {station.sources.length ? (
+                    <p className="panel-note">Sources: {station.sources.map((source, index) => (
+                      <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>
+                    ))}</p>
+                  ) : null}
+                  <p className="panel-note">Affiliate facts compiled {radioAsOf ?? "—"} · confidence {station.confidence ?? "—"}. Full affiliate lists live on the official athletics site:</p>
+                </div>
+              );
+            }
+            return <p>Radio affiliates are not part of the research dataset, and only station-authorized listings may appear. Each program publishes its affiliate network on its official athletics site:</p>;
+          })()}
           <label>Team
             <select value={radioTeam} onChange={(event) => setRadioTeam(event.target.value)}>
               {athleticsSites.map((site) => <option key={site.slug} value={site.slug}>{site.name}</option>)}
@@ -1988,9 +2019,25 @@ function WatchPage() {
           <a className="button button--ghost" href={athleticsSites.find((site) => site.slug === radioTeam)?.url ?? "#"} rel="nofollow noreferrer noopener" target="_blank">Open official athletics site →</a>
         </article>
         <article>
-          <span className="provider-state provider-state--research">NO PARTNER BY DESIGN</span>
+          <span className={`provider-state ${ticketAffiliatesConfigured ? "provider-state--on" : "provider-state--research"}`}>
+            {ticketAffiliatesConfigured ? "PARTNER ACTIVE" : "NO PARTNER BY DESIGN"}
+          </span>
           <h2>Ticket inventory</h2>
-          <p>Schools and their athletics departments are the only ticket sources this site points to. No resale marketplace, pricing, or availability is shown, and none is invented. Use the same official athletics sites for tickets.</p>
+          <p>Schools and their athletics departments are the only ticket sources this site points to. No resale marketplace, pricing, or availability is shown, and none is invented.</p>
+          {(() => {
+            const team = getTeamBySlug(radioTeam);
+            const links = team ? ticketLinksForTeam(team.name) : [];
+            return links.length ? (
+              <p>
+                {links.map((link) => (
+                  <a key={link.partner} className="button button--ghost" href={link.url} rel="sponsored nofollow noreferrer noopener" target="_blank" style={{ marginRight: 8 }}>
+                    Compare on {link.partner} →
+                  </a>
+                ))}
+                <small className="portal-note">Sponsored links · see the <a href="/affiliate-disclosure">affiliate disclosure</a>.</small>
+              </p>
+            ) : null;
+          })()}
           <a href="/data-sources">Review dependency policy →</a>
         </article>
       </section>

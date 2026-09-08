@@ -598,6 +598,34 @@ export const stadiums: Stadium[] = ((bundle.stadiumGuides ?? []) as StadiumGuide
 
 export const dfsPlayers: DfsPlayer[] = [];
 
+/* --------------------------------------------- local radio flagships */
+
+export interface RadioStation {
+  team: string;
+  station: string | null;
+  frequency: string | null;
+  market: string | null;
+  network: string | null;
+  rights_holder: string | null;
+  satellite: string | null;
+  stream: string | null;
+  notes: string | null;
+  sources: string[];
+  confidence: string | null;
+}
+
+const radioDoc = (bundle.radio ?? { as_of: null, stations: [] }) as {
+  as_of: string | null;
+  stations: RadioStation[];
+};
+
+export const radioStations: RadioStation[] = radioDoc.stations;
+export const radioAsOf = radioDoc.as_of;
+
+export function radioForTeam(slug: string) {
+  return radioStations.find((station) => station.team === slug) ?? null;
+}
+
 /* ------------------------------------------- fantasy/DFS week-1 notes */
 
 export interface FantasyNote {
