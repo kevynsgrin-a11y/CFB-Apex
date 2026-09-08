@@ -927,5 +927,62 @@ export function getStadiumBySlug(slug: string): Stadium | undefined {
   return stadiums.find((stadium) => stadium.slug === slug);
 }
 
+/* ------------------------------------------------ team-hub schedule view */
+
+export interface TeamScheduleGame {
+  id: string;
+  date: string | null;
+  week: number | null;
+  opponent: string | null;
+  opponentSlug: string | null;
+  homeAway: "home" | "away" | "neutral" | null;
+  isBye: boolean;
+  result: string | null;
+  kickoffLabel: string | null;
+  broadcast: string | null;
+  venue: string | null;
+  href: string | null;
+}
+
+export function getTeamSchedule(slug: string): TeamScheduleGame[] | null {
+  const rows = (bundle.schedules as Record<string, ScheduleRow[]>)[slug];
+  if (!rows) return null;
+  return rows.map((row, index) => {
+    const played = playedGames.find(
+      (game) =>
+        game.date === row.date &&
+        ((game.home_slug === slug && game.away_slug === row.opponent_slug) ||
+          (game.away_slug === slug && game.home_slug === row.opponent_slug)),
+    );
+    const ownScore = played?.teams.find((team) => team.slug === slug)?.points;
+    const otherScore = played?.teams.find((team) => team.slug !== slug)?.points;
+    const broadcast = row.date && row.opponent_slug ? broadcastFor(row.date, slug, row.opponent_slug) : null;
+    const displayGame = games.find(
+      (game) =>
+        game.date.startsWith(row.date ?? "not-published") &&
+        ((game.homeTeamId === slug && game.awayTeamId === row.opponent_slug) ||
+          (game.awayTeamId === slug && game.homeTeamId === row.opponent_slug)),
+    );
+    const venueTeam = row.location === "home" ? slug : row.location === "away" ? row.opponent_slug : null;
+    return {
+      id: `${slug}-${row.date ?? "undated"}-${index}`,
+      date: row.date,
+      week: row.week ?? (row.date ? Math.floor((Date.parse(row.date) - Date.parse("2026-08-24")) / 604_800_000) : null),
+      opponent: row.opponent ?? null,
+      opponentSlug: row.opponent_slug,
+      homeAway: row.location,
+      isBye: row.type === "bye",
+      result:
+        ownScore != null && otherScore != null
+          ? `${ownScore > otherScore ? "W" : ownScore < otherScore ? "L" : "T"} ${ownScore}–${otherScore}`
+          : null,
+      kickoffLabel: timeEtLabel(broadcast?.time_et ?? null),
+      broadcast: broadcast?.tv ?? played?.tv ?? null,
+      venue: row.site ?? played?.site ?? stadiums.find((stadium) => stadium.teamId === venueTeam)?.name ?? null,
+      href: displayGame ? `/games/${displayGame.id}` : null,
+    };
+  });
+}
+
 /** True when the model-estimate surfaces have published numbers behind them. */
 export const modelEstimatesAvailable = false;
