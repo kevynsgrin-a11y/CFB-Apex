@@ -66,6 +66,8 @@ test("critical product routes render dataset-backed content", async () => {
     ["/coaching-carousel", /Separate the contract/],
     ["/dfs", /Fantasy context, when you ask for it/],
     ["/watch", /televised games/],
+    ["/watch", /WFFN/],
+    ["/watch", /Crimson Tide Sports Network/],
     ["/", /hello@cfbapex\.com/],
     ["/", /privacy@cfbapex\.com/],
     ["/privacy", /privacy@cfbapex\.com/],
