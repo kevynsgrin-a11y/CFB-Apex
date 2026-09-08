@@ -2141,7 +2141,7 @@ function CorrectionsPage() {
         <label>Issue category<select><option>Score or schedule</option><option>Roster or transfer</option><option>Contract or coach</option><option>Stadium guide</option><option>Source or rights</option><option>Other</option></select></label>
         <label>What should we review?<textarea required minLength={20} maxLength={1200} placeholder="Describe the discrepancy and include a public source when possible." /></label>
         <label>Public source URL (optional)<input type="url" placeholder="https://..." /></label>
-        <p>No sensitive medical details, private forum content, or paywalled material. High-risk identity, privacy, and rights issues are quarantined first.</p>
+        <p>No sensitive medical details, private forum content, or paywalled material. High-risk identity, privacy, and rights issues are quarantined first. Data and site issues can also be reported to <a href="mailto:admin@cfbapex.com">admin@cfbapex.com</a>.</p>
         <button className="button button--gold" type="submit">Submit correction</button>
       </form>
     </>
@@ -2244,18 +2244,18 @@ function DataSourcesPage() {
 }
 
 function PolicyPage({ kind }: { kind: string }) {
-  const content: Record<string, { eyebrow: string; title: string; intro: string; sections: [string, string][] }> = {
+  const content: Record<string, { eyebrow: string; title: string; intro: string; sections: [string, React.ReactNode][] }> = {
     about: {
       eyebrow: "INDEPENDENCE STATEMENT",
       title: "Built for the Saturday task, not the scroll.",
       intro: `${brand.name} is a conference-neutral product concept for transparent utility, accessible models, and maintained gameday information.`,
-      sections: [["What we value", "Speed, source visibility, corrections, calm monetization, and understandable uncertainty."], ["What we do not do", "No paywall bypasses, fabricated live states, unlicensed marks, guaranteed picks, autoplay, or commercial ranking disguised as editorial judgment."]],
+      sections: [["What we value", "Speed, source visibility, corrections, calm monetization, and understandable uncertainty."], ["What we do not do", "No paywall bypasses, fabricated live states, unlicensed marks, guaranteed picks, autoplay, or commercial ranking disguised as editorial judgment."], ["Contact", <>General: <a href="mailto:hello@cfbapex.com">hello@cfbapex.com</a> · Social and community: <a href="mailto:socials@cfbapex.com">socials@cfbapex.com</a>.</>]],
     },
     privacy: {
       eyebrow: "DRAFT FOR COUNSEL",
       title: "Privacy notice — preview draft",
       intro: "This site stores only device-local mode and favorite preferences. No production analytics, email, advertising, or precise location provider is active.",
-      sections: [["Data minimization", "Future services may process account identity, newsletter email, coarse consent attestation, and short-lived abuse logs only for stated purposes."], ["Your choices", "Production activation requires access, correction, deletion, consent withdrawal, and processor workflows reviewed by counsel."]],
+      sections: [["Data minimization", "Future services may process account identity, newsletter email, coarse consent attestation, and short-lived abuse logs only for stated purposes."], ["Your choices", "Production activation requires access, correction, deletion, consent withdrawal, and processor workflows reviewed by counsel."], ["Privacy contact", "Privacy questions, access requests, and deletion requests: privacy@cfbapex.com."]],
     },
     terms: {
       eyebrow: "DRAFT FOR COUNSEL",
@@ -2306,7 +2306,7 @@ function CommercialPage({ kind }: { kind: "advertise" | "partnerships" | "media-
           ["Research partnerships", "Provider, conference, event, and academic opportunities with commercial/editorial separation."],
         ].map(([title, copy]) => <article key={title}><span className="sponsor-placeholder">SPONSOR-SAFE ZONE</span><h2>{title}</h2><p>{copy}</p></article>)}
       </section>
-      <section className="inquiry-band"><div><span className="eyebrow">NO LIVE SUBMISSION</span><h2>Partnership inquiry workflow is staged, not activated.</h2><p>Legal entity, inventory, rates, measurement, privacy, and approval owners must be configured first.</p></div><a className="button button--light" href="/affiliate-disclosure">Read the commercial firewall</a></section>
+      <section className="inquiry-band"><div><span className="eyebrow">NO LIVE SUBMISSION</span><h2>Partnership inquiry workflow is staged, not activated.</h2><p>Legal entity, inventory, rates, measurement, privacy, and approval owners must be configured first.{isKit ? <> Press and media inquiries: <a href="mailto:media@cfbapex.com">media@cfbapex.com</a>.</> : null}</p></div><a className="button button--light" href="/affiliate-disclosure">Read the commercial firewall</a></section>
     </>
   );
 }
@@ -2418,6 +2418,7 @@ function Footer() {
         <div><strong>Product</strong>{utilityNavigation.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}</div>
         <div><strong>Trust</strong><a href="/about">About</a><a href="/corrections">Corrections</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
         <div><strong>Business</strong><a href="/advertise">Advertise</a><a href="/partnerships">Partnerships</a><a href="/media-kit">Media kit</a><a href="/affiliate-disclosure">Affiliate disclosure</a></div>
+        <div><strong>Contact</strong><a href="mailto:hello@cfbapex.com">hello@cfbapex.com</a><a href="mailto:socials@cfbapex.com">socials@cfbapex.com</a><a href="mailto:media@cfbapex.com">media@cfbapex.com</a><a href="mailto:admin@cfbapex.com">admin@cfbapex.com</a><a href="mailto:privacy@cfbapex.com">privacy@cfbapex.com</a></div>
       </div>
       <div className="site-footer__bottom"><span>© 2026 {brand.name} · independent analytics</span><span>2026 FBS dataset · compiled 2026-09-05</span></div>
     </footer>
