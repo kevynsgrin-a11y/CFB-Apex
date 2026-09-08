@@ -111,6 +111,7 @@ test("affiliate and radio seams stay fail-closed until configured", async () => 
   }
   const { radioStations } = await import("../lib/cfb-dataset.ts");
   assert.ok(Array.isArray(radioStations));
+  assert.equal(radioStations.length, teams.length, "every program carries a radio record");
   const slugs = new Set(teams.map((team) => team.id));
   for (const station of radioStations) {
     assert.ok(slugs.has(station.team), `radio: unknown team ${station.team}`);

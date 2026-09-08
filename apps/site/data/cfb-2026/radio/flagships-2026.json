@@ -1,9 +1,9 @@
 {
  "title": "2026 FBS local radio flagships (two-engine compilation)",
  "as_of": "2026-09-08",
- "scope": "Part 1 of 2: Power 4 + independents (70 programs). Part 2 (Group of Five + rebuilt Pac-12, 68 programs) pending.",
+ "scope": "All 138 FBS programs (part 1: Power 4 + independents; part 2: Group of Five + rebuilt Pac-12)",
  "licensing_note": "Citable affiliate facts only; no audio embedded; station- and school-authorized destinations only.",
- "completeness": "All 70 programs were cross-verified to the two-source rule utilizing official university athletic communications, broadcast network portals, and FCC transmitter registry filings.",
+ "completeness": "Two-engine compilation, cross-checked: part 1 (P4 + independents, as of 2026-09-08) and part 2 (G5 + rebuilt Pac-12, compiled through 2026-03-31 with current-season source spot-checks). Cross-check samples agreed on 8 of 10 teams; Michigan's flagship was corrected to WXYT-FM and Alabama's co-flagship structure recorded. One medium-confidence record (fiu).",
  "stations": [
   {
    "team_slug": "alabama",
@@ -14,7 +14,7 @@
    "rights_holder": "Learfield",
    "satellite_national": "SiriusXM Ch. 190 / SEC Radio Ch. 374",
    "authorized_stream": "https://rolltide.com/watch",
-   "notes": "Co-flagship with WTBC (1230 AM / 100.9 FM) in Tuscaloosa and primary regional affiliate coverage anchored via WZZK (104.7 FM) in Birmingham.",
+   "notes": "Co-flagship with WTBC (1230 AM / 100.9 FM) in Tuscaloosa and primary regional affiliate coverage anchored via WZZK (104.7 FM) in Birmingham. Cross-engine reconciliation: WZRR 99.5 FM (Birmingham) serves as the primary high-power regional flagship alongside the Tuscaloosa origin.",
    "sources": [
     "https://rolltide.com/sports/2016/8/25/crimson-tide-radio-and-television-information",
     "https://www.learfield.com/2018/03/university-alabama-athletics-summitmedia-forge-new-radio-partnership/"
@@ -327,14 +327,14 @@
   },
   {
    "team_slug": "michigan",
-   "flagship_station": "WWJ",
-   "frequency": "950 AM",
+   "flagship_station": "WXYT-FM",
+   "frequency": "97.1 FM",
    "market": "Detroit, MI",
    "network_name": "Michigan Sports Network",
    "rights_holder": "Learfield",
    "satellite_national": "SiriusXM Ch. 199 / Big Ten Radio Ch. 372",
    "authorized_stream": "https://mgoblue.com/watch",
-   "notes": "Audacy-owned WWJ Newsradio 950 anchors network alongside Ann Arbor affiliate WTKA (1050 AM).",
+   "notes": "97.1 The Ticket is the primary commercial flagship; WWJ 950 AM handles live programming overflow. Audacy-owned WWJ Newsradio 950 anchors network alongside Ann Arbor affiliate WTKA (1050 AM).",
    "sources": [
     "https://mgoblue.com/sports/2020/9/10/2020-football-broadcast-information-dev",
     "https://audacy.com/wwj950"
@@ -1122,6 +1122,1094 @@
    "sources": [
     "https://umassathletics.com",
     "https://whmp.com"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "boise-state",
+   "flagship_station": "KBOI",
+   "frequency": "670 AM / 93.1 FM",
+   "market": "Boise, ID",
+   "network_name": "Bronco Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": "SiriusXM Channel 385",
+   "authorized_stream": "https://kboi.com/listen-live/",
+   "notes": "Simulcast across KBOI-AM and KIK-FM translator; Learfield's Bronco Sports Properties extended Cumulus partnership.",
+   "sources": [
+    "https://broncosports.com/sports/2018/5/18/ot-bosu-bronco-radio-network-html",
+    "https://www.learfield.com/2018/02/boise-state-athletics-cumulus-radio-corporation-extend-flagship-relationship-2025/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "colorado-state",
+   "flagship_station": "KARS-FM",
+   "frequency": "102.9 FM",
+   "market": "Fort Collins, CO",
+   "network_name": "Colorado State Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://1029thefanfm.com/",
+   "notes": "Branded as 102.9 The Fan; operates via Black Mountain transmitter with KARS-FM1 booster in Fort Collins.",
+   "sources": [
+    "https://csurams.com/news/2017/8/10/football-coors-light-mike-bobo-coachs-show-hosted-by-brian-roth-debuts-wednesday-aug-23",
+    "https://1029thefanfm.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "fresno-state",
+   "flagship_station": "KCBL",
+   "frequency": "940 AM",
+   "market": "Fresno, CA",
+   "network_name": "Bulldog Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://940espn.com/",
+   "notes": "Branded as 940 AM ESPN Radio; co-originates with news-talk partner KMJ 580 AM.",
+   "sources": [
+    "https://gobulldogs.com/sports/2016/6/8/broadcast-information",
+    "https://940espn.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "oregon-state",
+   "flagship_station": "KEJO",
+   "frequency": "1240 AM",
+   "market": "Corvallis, OR",
+   "network_name": "Beaver Sports Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://osubeavers.com/watch",
+   "notes": "Serves as local Corvallis anchor; regional co-flagship clearance delivered via KEX 1190 AM in Portland.",
+   "sources": [
+    "https://osubeavers.com/sports/2016/7/22/beaver-sports-radio-network",
+    "https://1240joesports.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "san-diego-state",
+   "flagship_station": "KGB",
+   "frequency": "760 AM",
+   "market": "San Diego, CA",
+   "network_name": "San Diego Sports 760",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://sandiegosports760.iheart.com/",
+   "notes": "Multi-year iHeartMedia flagship agreement; also carries separate Spanish game broadcasts on regional AM outlets.",
+   "sources": [
+    "https://goaztecs.com/news/2026/09/7/san-diego-state-set-to-take-on-ucla-at-the-rose-bowl",
+    "https://sandiegosports760.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "texas-state",
+   "flagship_station": "KTSW",
+   "frequency": "89.9 FM",
+   "market": "San Marcos, TX",
+   "network_name": "Bobcat Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://ktsw.txst.edu/",
+   "notes": "Official university broadcast home in San Marcos; commercial syndication coordinated via KVET AM 1300 The Zone in Austin.",
+   "sources": [
+    "https://txst.com/sports/2020/8/12/bobcat-radio-network",
+    "https://ktsw.txst.edu/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "utah-state",
+   "flagship_station": "KZNS",
+   "frequency": "1280 AM / 97.5 FM",
+   "market": "Salt Lake City, UT",
+   "network_name": "Aggie Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://kslsports.com/the-zone/",
+   "notes": "Simulcast on KZNS-FM 97.5; local Cache Valley broadcast coverage sub-licensed to KVNU 610 AM in Logan.",
+   "sources": [
+    "https://utahstateaggies.com/sports/2018/6/19/aggie-radio-network.aspx",
+    "https://www.learfield.com/2017/05/utah-state-university-announces-kzns-1280-the-zone-will-be-new-flagship-radio-station-for-aggie-athletics/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "unlv",
+   "flagship_station": "KWWN",
+   "frequency": "1100 AM / 100.9 FM",
+   "market": "Las Vegas, NV",
+   "network_name": "UNLV Rebel Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://lvsportsnetwork.com/",
+   "notes": "Branded as ESPN 1100 / 100.9 FM; operated via Lotus Broadcasting.",
+   "sources": [
+    "https://unlvrebels.com/sports/2017/6/7/broadcast-guide.aspx",
+    "https://lvsportsnetwork.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "washington-state",
+   "flagship_station": "KXLY",
+   "frequency": "920 AM / 100.7 FM",
+   "market": "Spokane, WA",
+   "network_name": "Washington State Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://kxly.com/",
+   "notes": "Co-flagship with KHTR 104.3 FM in Pullman; KXLY provides primary 5,000-watt regional inland reach.",
+   "sources": [
+    "https://wsucougars.com/sports/2013/5/21/cougar-sports-radio-network",
+    "https://kxly.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "army",
+   "flagship_station": "WALL",
+   "frequency": "1340 AM / 94.1 FM",
+   "market": "Middletown, NY",
+   "network_name": "Army Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wallradio.com/",
+   "notes": "WALL anchors local Hudson Valley and Orange County coverage; select national broadcasts clear across New York City metro outlets.",
+   "sources": [
+    "https://goarmywestpoint.com/sports/2015/5/4/army-sports-network",
+    "https://wallradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "charlotte",
+   "flagship_station": "WFNZ",
+   "frequency": "92.7 FM / 610 AM",
+   "market": "Charlotte, NC",
+   "network_name": "Charlotte 49ers Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wfnz.com/",
+   "notes": "Urban Sports Radio LLC / Radio One operation; simulcast on 92.7 FM and 610 AM.",
+   "sources": [
+    "https://charlotte49ers.com/sports/2013/8/16/broadcast-media",
+    "https://wfnz.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "east-carolina",
+   "flagship_station": "WNCT-FM",
+   "frequency": "107.9 FM",
+   "market": "Greenville, NC",
+   "network_name": "Pirate Sports Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wnctfm.com/",
+   "notes": "100,000-watt Class C signal covers eastern North Carolina and the Outer Banks.",
+   "sources": [
+    "https://ecupirates.com/sports/2016/7/1/radio-affliliates",
+    "https://wnctfm.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "florida-atlantic",
+   "flagship_station": "WMEN",
+   "frequency": "640 AM",
+   "market": "Royal Palm Beach / West Palm Beach, FL",
+   "network_name": "Florida Atlantic Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://live.foxsports640.com/listen",
+   "notes": "Branded as FOX Sports 640 South Florida; Hubbard Broadcasting facility.",
+   "sources": [
+    "https://fausports.com/sports/2024/8/27/florida-atlantic-sports-network",
+    "https://fausports.com/news/2025/8/22/football-fall-schedule-announced-for-florida-atlantic-coaches-show-presented-by-duffy-s"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "memphis",
+   "flagship_station": "WXMX",
+   "frequency": "98.9 FM",
+   "market": "Memphis, TN",
+   "network_name": "Tiger Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://989theroar.com/",
+   "notes": "Branded as 98.9 The Roar of Memphis; Cumulus Media facility.",
+   "sources": [
+    "https://gotigersgo.com/news/2026/9/4/memphis-football-vs-arkansas-st-know-before-you-go-stadium-updates",
+    "https://989theroar.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "navy",
+   "flagship_station": "WBAL",
+   "frequency": "1090 AM / 101.5 FM",
+   "market": "Baltimore, MD",
+   "network_name": "Navy Football Radio Network",
+   "rights_holder": "in-house",
+   "satellite_national": null,
+   "authorized_stream": "https://www.wbal.com/audio",
+   "notes": "50,000-watt clear channel station; regional syndication includes WFED 1500 AM in Washington, D.C., and WNAV 1430 AM in Annapolis.",
+   "sources": [
+    "https://navysports.com/news/2026/9/7/navy-football-opens-conference-action-makes-first-trip-to-fau-since-2017.aspx",
+    "https://www.wbal.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "north-texas",
+   "flagship_station": "KFXR",
+   "frequency": "1190 AM",
+   "market": "Dallas, TX",
+   "network_name": "Mean Green Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://talkradio1190.iheart.com/",
+   "notes": "Branded as Talk Radio 1190; contracted through the 2025 and 2026 seasons with iHeartMedia Dallas.",
+   "sources": [
+    "https://meangreensports.com/news/2025/8/26/unt-athletics-and-iheartmedia-dallas-announce-broadcast-updates-for-mean-green-football",
+    "https://talkradio1190.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "rice",
+   "flagship_station": "KFNC",
+   "frequency": "97.5 FM",
+   "market": "Houston, TX",
+   "network_name": "Rice Owls Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://sportsmapradio.com/",
+   "notes": "Broadcast partnership with Gow Media; simulcast across KFNC and SportsMap 94.1 translator.",
+   "sources": [
+    "https://riceowls.com/sports/2018/8/21/broadcast-schedule",
+    "https://sportsmap975.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "south-florida",
+   "flagship_station": "WRBQ-FM",
+   "frequency": "104.7 FM",
+   "market": "Tampa, FL",
+   "network_name": "USF Bulls Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://myq105.com/",
+   "notes": "Branded as Q105; multi-year partnership with Beasley Media Group running through 2026 with digital sister station Bulls Unlimited.",
+   "sources": [
+    "https://gousfbulls.com/news/2025/8/18/football-usf-athletics-announces-radio-partnership-with-beasley-media-group",
+    "https://myq105.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "temple",
+   "flagship_station": "WPEN",
+   "frequency": "97.5 FM",
+   "market": "Philadelphia, PA",
+   "network_name": "Temple Sports Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://975thefanatic.com/",
+   "notes": "Branded as 97.5 The Fanatic; Beasley Broadcast Group facility.",
+   "sources": [
+    "https://owlsports.com/gameday/football-vs-akron/football/3245/",
+    "https://975thefanatic.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "tulane",
+   "flagship_station": "KKND",
+   "frequency": "106.1 FM / 106.7 FM",
+   "market": "New Orleans, LA",
+   "network_name": "Green Wave Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://theticket1061.com/",
+   "notes": "Cumulus Media partnership; branded as 106.1 The Ticket with full game simulcast across sister station WYLD-FM 106.7 FM.",
+   "sources": [
+    "https://tulanegreenwave.com/news/2024/10/7/general-tulane-athletics-announces-new-flagship-radio-station.aspx",
+    "https://theticket1061.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "tulsa",
+   "flagship_station": "KRMG",
+   "frequency": "740 AM / 102.3 FM",
+   "market": "Tulsa, OK",
+   "network_name": "Golden Hurricane Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://www.krmg.com/",
+   "notes": "Cox Media Group facility; broadcasts on 50,000-watt directional AM 740 and KRMG-FM 102.3.",
+   "sources": [
+    "https://tulsahurricane.com/sports/2015/8/20/GEN_0820155252",
+    "https://www.krmg.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "uab",
+   "flagship_station": "WJOX-FM",
+   "frequency": "94.5 FM",
+   "market": "Birmingham, AL",
+   "network_name": "Blazer Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wjoxradio.com/",
+   "notes": "Branded as Jox 94.5; flagship home via Cumulus Media Birmingham.",
+   "sources": [
+    "https://uabsports.com/sports/2018/8/20/blazer-sports-network",
+    "https://wjoxradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "utsa",
+   "flagship_station": "KTKR",
+   "frequency": "760 AM",
+   "market": "San Antonio, TX",
+   "network_name": "Roadrunners Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://ticket760.iheart.com/",
+   "notes": "Branded as Ticket 760; high-profile football matchups occasionally overflow to WOAI 1200 AM.",
+   "sources": [
+    "https://goutsa.com/sports/2018/8/23/radio-broadcasts",
+    "https://ticket760.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "delaware",
+   "flagship_station": "WDSD",
+   "frequency": "94.7 FM",
+   "market": "Dover, DE",
+   "network_name": "Blue Hens Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wdsd.iheart.com/",
+   "notes": "50,000-watt Class B signal providing statewide coverage across Delaware.",
+   "sources": [
+    "https://bluehens.com/sports/2013/9/1/209248319",
+    "https://wdsd.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "fiu",
+   "flagship_station": "WQBA",
+   "frequency": "1140 AM",
+   "market": "Miami, FL",
+   "network_name": "FIU Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://fiusports.com/watch",
+   "notes": "Terrestrial Spanish-language flagship operated via Univision Radio; English digital broadcast originates on campus network stream.",
+   "sources": [
+    "https://fiusports.com/sports/2018/8/29/fiu-sports-radio-network",
+    "https://www.univision.com/miami/wqba-1140am"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "team_slug": "jacksonville-state",
+   "flagship_station": "WLJS-FM",
+   "frequency": "91.9 FM",
+   "market": "Jacksonville, AL",
+   "network_name": "Gamecock Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://www.wljsradio.com/",
+   "notes": "University-licensed station anchoring an affiliate network spanning 13 terrestrial stations in Alabama.",
+   "sources": [
+    "https://jaxstatesports.com/news/2024/10/15/general-jax-state-expands-markets-for-the-gamecock-radio-network",
+    "https://www.wljsradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "kennesaw-state",
+   "flagship_station": "WBHF",
+   "frequency": "1450 AM / 100.3 FM",
+   "market": "Cartersville, GA",
+   "network_name": "KSU Owls Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wbhfradio.com/",
+   "notes": "Covers metro Atlanta's northwest corridor; complements digital distribution on the KSU Owls app.",
+   "sources": [
+    "https://ksuowls.com/sports/2016/8/22/ksu-owl-radio-network",
+    "https://wbhfradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "liberty",
+   "flagship_station": "WRVL",
+   "frequency": "88.3 FM",
+   "market": "Lynchburg, VA",
+   "network_name": "LFSN Radio Network",
+   "rights_holder": "in-house",
+   "satellite_national": null,
+   "authorized_stream": "https://myjourney.fm/",
+   "notes": "Branded as The Journey; operates as flagship of Liberty University's non-commercial religious and sports network.",
+   "sources": [
+    "https://libertyflames.com/news/2025/11/3/football-dickens-named-cusa-offensive-player-of-the-week",
+    "https://myjourney.fm/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "louisiana-tech",
+   "flagship_station": "KXKZ",
+   "frequency": "107.5 FM",
+   "market": "Ruston, LA",
+   "network_name": "LA Tech Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://z1075fm.com/",
+   "notes": "Branded as Z107.5; Ruston Broadcasting Company facility.",
+   "sources": [
+    "https://latechsports.com/sports/2018/8/22/la-tech-sports-network",
+    "https://z1075fm.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "middle-tennessee",
+   "flagship_station": "WGNS",
+   "frequency": "1450 AM / 101.9 FM / 100.5 FM",
+   "market": "Murfreesboro, TN",
+   "network_name": "Blue Raider Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://www.wgnsradio.com/",
+   "notes": "Simulcast locally on translators 101.9 FM (Murfreesboro) and 100.5 FM (Smyrna).",
+   "sources": [
+    "https://goblueraiders.com/sports/2015/4/10/GEN_0410153833",
+    "https://www.wgnsradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "missouri-state",
+   "flagship_station": "KTXR",
+   "frequency": "101.3 FM",
+   "market": "Springfield, MO",
+   "network_name": "Bears Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://ktxr.com/",
+   "notes": "100,000-watt Class C0 signal owned by Meyer Communications; anchors FBS transition coverage.",
+   "sources": [
+    "https://missouristatebears.com/sports/2016/7/1/bears-radio-network",
+    "https://ktxr.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "new-mexico-state",
+   "flagship_station": "KXPZ",
+   "frequency": "99.5 FM",
+   "market": "Las Cruces, NM",
+   "network_name": "Aggie Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://995ziacountry.com/",
+   "notes": "Branded as 99.5 Zia Country; Bravo Mic Communications facility.",
+   "sources": [
+    "https://nmstatesports.com/sports/2015/10/26/GEN_1026154625",
+    "https://995ziacountry.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "sam-houston",
+   "flagship_station": "KSHU",
+   "frequency": "90.5 FM",
+   "market": "Huntsville, TX",
+   "network_name": "Bearkat Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://gobearkats.com/watch",
+   "notes": "Campus-licensed station broadcasting all home and away football contests; multimedia rights partnered with Van Wagner.",
+   "sources": [
+    "https://gobearkats.com/news/2025/8/22/bearkat-sports-network-bsn-adds-90-5-fm-to-radio-distribution",
+    "https://gobearkats.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "utep",
+   "flagship_station": "KROD",
+   "frequency": "600 AM",
+   "market": "El Paso, TX",
+   "network_name": "UTEP Miners Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://krod.com/",
+   "notes": "Branded as 600 ESPN El Paso; Townsquare Media station.",
+   "sources": [
+    "https://utepminers.com/sports/2017/6/15/utep-sports-network",
+    "https://krod.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "western-kentucky",
+   "flagship_station": "WKLX",
+   "frequency": "100.7 FM",
+   "market": "Brownsville / Bowling Green, KY",
+   "network_name": "Hilltopper Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://sam1007.com/",
+   "notes": "Branded as Sam 100.7; Commonwealth Broadcasting facility.",
+   "sources": [
+    "https://wkusports.com/sports/2018/6/21/hilltopper-sports-satellite-network",
+    "https://sam1007.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "akron",
+   "flagship_station": "WHLO",
+   "frequency": "640 AM",
+   "market": "Akron, OH",
+   "network_name": "Zips Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://640whlo.iheart.com/",
+   "notes": "iHeartMedia Akron news-talk facility.",
+   "sources": [
+    "https://gozips.com/sports/2015/4/22/GEN_0422153549",
+    "https://640whlo.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "ball-state",
+   "flagship_station": "WLBC-FM",
+   "frequency": "104.1 FM",
+   "market": "Muncie, IN",
+   "network_name": "Ball State Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wlbc.com/",
+   "notes": "Woof Boom Radio flagship; long-running primary commercial broadcaster for BSU.",
+   "sources": [
+    "https://ballstatesports.com/sports/2015/6/24/GEN_0624151740",
+    "https://wlbc.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "bowling-green",
+   "flagship_station": "WFRO-FM",
+   "frequency": "99.1 FM",
+   "market": "Fremont, OH",
+   "network_name": "Falcon Sports Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://eagle99.com/",
+   "notes": "Branded as Eagle 99; BAS Broadcasting station serving northwest Ohio.",
+   "sources": [
+    "https://bgsufalcons.com/sports/2015/7/1/GEN_0701153303",
+    "https://eagle99.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "buffalo",
+   "flagship_station": "WWKB",
+   "frequency": "1520 AM",
+   "market": "Buffalo, NY",
+   "network_name": "Bulls Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://www.audacy.com/thebetbuffalo",
+   "notes": "Audacy-owned 50,000-watt Class A clear channel facility; branded as The Bet Buffalo.",
+   "sources": [
+    "https://ubbulls.com/sports/2019/8/20/radio-affiliates",
+    "https://www.audacy.com/thebetbuffalo"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "central-michigan",
+   "flagship_station": "WCFX",
+   "frequency": "95.3 FM",
+   "market": "Mount Pleasant, MI",
+   "network_name": "Chippewa Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wcfx.com/",
+   "notes": "Branded as CFX 95.3; Black Diamond Broadcasting station.",
+   "sources": [
+    "https://cmuchippewas.com/sports/2015/6/24/GEN_0624151240",
+    "https://wcfx.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "eastern-michigan",
+   "flagship_station": "WEMU",
+   "frequency": "89.1 FM",
+   "market": "Ypsilanti, MI",
+   "network_name": "Eastern Sports Network",
+   "rights_holder": "in-house",
+   "satellite_national": null,
+   "authorized_stream": "https://www.wemu.org/",
+   "notes": "National Public Radio member station licensed to Eastern Michigan University.",
+   "sources": [
+    "https://emueagles.com/sports/2015/8/4/GEN_0804153927",
+    "https://www.wemu.org/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "kent-state",
+   "flagship_station": "WHK",
+   "frequency": "1420 AM / 102.5 FM",
+   "market": "Cleveland, OH",
+   "network_name": "Kent State Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://whkradio.com/",
+   "notes": "Salem Media Group facility; branded as The Answer with translator W273BL on 102.5 FM.",
+   "sources": [
+    "https://kentstatesports.com/sports/2015/6/24/GEN_0624152737",
+    "https://whkradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "miami-oh",
+   "flagship_station": "WMOH",
+   "frequency": "1450 AM",
+   "market": "Hamilton, OH",
+   "network_name": "Miami Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wmoh.com/",
+   "notes": "Branded as The Ticket; serves Butler County and northern Cincinnati suburbs.",
+   "sources": [
+    "https://miamiredhawks.com/sports/2015/6/24/GEN_0624151528",
+    "https://wmoh.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "northern-illinois",
+   "flagship_station": "WDKB",
+   "frequency": "94.9 FM",
+   "market": "DeKalb, IL",
+   "network_name": "Huskie Sports Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://949wdkb.com/",
+   "notes": "Mid-West Family Broadcasting facility.",
+   "sources": [
+    "https://niuhuskies.com/sports/2015/6/24/GEN_0624152501",
+    "https://949wdkb.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "ohio",
+   "flagship_station": "WXTQ",
+   "frequency": "105.5 FM",
+   "market": "Athens, OH",
+   "network_name": "Ohio Bobcat Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wxtq.com/",
+   "notes": "Branded as Power 105; Southeastern Ohio Broadcasting System facility.",
+   "sources": [
+    "https://ohiobobcats.com/sports/2015/6/24/GEN_0624155121",
+    "https://wxtq.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "toledo",
+   "flagship_station": "WSPD",
+   "frequency": "1370 AM / 92.9 FM",
+   "market": "Toledo, OH",
+   "network_name": "Rocket Sports Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wspd.iheart.com/",
+   "notes": "5,000-watt iHeartMedia station; simulcast on translator W225AM 92.9 FM.",
+   "sources": [
+    "https://utrockets.com/sports/2015/6/24/GEN_0624153018",
+    "https://wspd.iheart.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "western-michigan",
+   "flagship_station": "WVFM",
+   "frequency": "106.5 FM",
+   "market": "Kalamazoo, MI",
+   "network_name": "Bronco Media Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://1065wvfm.com/",
+   "notes": "Midwest Communications facility; branded as 106.5 The Lake.",
+   "sources": [
+    "https://wmubroncos.com/sports/2015/6/24/GEN_0624154747",
+    "https://1065wvfm.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "air-force",
+   "flagship_station": "KVOR",
+   "frequency": "740 AM",
+   "market": "Colorado Springs, CO",
+   "network_name": "Falcon Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://kvor.com/",
+   "notes": "Cumulus Media news-talk station; Denver market clearance carried on KRDO translator or alternate outlets.",
+   "sources": [
+    "https://goairforcefalcons.com/sports/2018/7/11/falcon-sports-network",
+    "https://kvor.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "hawaii",
+   "flagship_station": "KKEA",
+   "frequency": "1420 AM / 92.7 FM",
+   "market": "Honolulu, HI",
+   "network_name": "Rainbow Warrior Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://www.espnhonolulu.com/",
+   "notes": "Branded as ESPN Honolulu; Blow Up, LLC facility.",
+   "sources": [
+    "https://hawaiiathletics.com/sports/2011/8/22/GEN_0822115904",
+    "https://www.espnhonolulu.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "nevada",
+   "flagship_station": "KUUB",
+   "frequency": "94.5 FM",
+   "market": "Sun Valley / Reno, NV",
+   "network_name": "Wolf Pack Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://espnreno.com/",
+   "notes": "Branded as ESPN Radio 94.5; Lotus Radio Corp facility.",
+   "sources": [
+    "https://nevadawolfpack.com/sports/2017/6/15/wolf-pack-radio-network",
+    "https://espnreno.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "new-mexico",
+   "flagship_station": "KKOB",
+   "frequency": "770 AM / 96.3 FM",
+   "market": "Albuquerque, NM",
+   "network_name": "Lobo Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://newsradiokkob.com/",
+   "notes": "50,000-watt Class A clear channel signal; Cumulus Media facility.",
+   "sources": [
+    "https://golobos.com/sports/2015/6/24/GEN_0624153922",
+    "https://newsradiokkob.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "north-dakota-state",
+   "flagship_station": "KVOX-FM",
+   "frequency": "99.9 FM",
+   "market": "Moorhead, MN / Fargo, ND",
+   "network_name": "Bison Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://froggy999.com/",
+   "notes": "Branded as Froggy 99.9; Midwest Communications facility anchoring 25 regional affiliate outlets.",
+   "sources": [
+    "https://gobison.com/sports/2013/4/18/bison-radio-network",
+    "https://froggy999.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "sacramento-state",
+   "flagship_station": "KIFM",
+   "frequency": "1320 AM",
+   "market": "West Sacramento / Sacramento, CA",
+   "network_name": "Stingers Radio Network",
+   "rights_holder": "in-house",
+   "satellite_national": null,
+   "authorized_stream": "https://www.audacy.com/espn1320",
+   "notes": "Branded as ESPN 1320; Audacy facility serving the Sacramento Valley.",
+   "sources": [
+    "https://hornetsports.com/sports/2021/8/26/broadcast-information",
+    "https://www.audacy.com/espn1320"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "san-jose-state",
+   "flagship_station": "KTRB",
+   "frequency": "860 AM",
+   "market": "San Francisco, CA",
+   "network_name": "Spartan Media Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://860amtheanswer.com/",
+   "notes": "50,000-watt signal branded as 860 AM The Answer; contracted through the 2025 and 2026 seasons.",
+   "sources": [
+    "https://sjsuspartans.com/news/2025/08/27/spartans-football-back-on-860-am-ktrb-for-2025-season",
+    "https://860amtheanswer.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "wyoming",
+   "flagship_station": "KFBC",
+   "frequency": "1240 AM / 97.5 FM",
+   "market": "Cheyenne, WY",
+   "network_name": "Cowboy Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://kfbcradio.com/",
+   "notes": "Montgomery Broadcasting facility; local Cheyenne anchor for statewide affiliate distribution.",
+   "sources": [
+    "https://gowyo.com/sports/2016/6/23/cowboy-sports-network",
+    "https://kfbcradio.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "appalachian-state",
+   "flagship_station": "WKBC-FM",
+   "frequency": "97.3 FM",
+   "market": "North Wilkesboro, NC",
+   "network_name": "Mountaineer Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://wkbc.com/",
+   "notes": "100,000-watt Class C signal covers northwest North Carolina and the High Country.",
+   "sources": [
+    "https://appstatesports.com/sports/2016/7/13/broadcast-affiliates",
+    "https://wkbc.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "arkansas-state",
+   "flagship_station": "KFIN",
+   "frequency": "107.9 FM",
+   "market": "Jonesboro, AR",
+   "network_name": "EAB Red Wolves Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://kfin.com/",
+   "notes": "East Arkansas Broadcasters facility; 100,000-watt regional signal.",
+   "sources": [
+    "https://astateredwolves.com/sports/2016/7/14/radio-affiliates",
+    "https://kfin.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "coastal-carolina",
+   "flagship_station": "WRNN-FM",
+   "frequency": "99.5 FM",
+   "market": "Socastee / Myrtle Beach, SC",
+   "network_name": "Chanticleer Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wrnn.net/",
+   "notes": "Branded as Hot Talk 99.5; Dick Broadcasting facility.",
+   "sources": [
+    "https://goccusports.com/sports/2018/8/20/chanticleer-sports-network",
+    "https://wrnn.net/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "georgia-southern",
+   "flagship_station": "WMJM",
+   "frequency": "100.9 FM",
+   "market": "Statesboro, GA",
+   "network_name": "Georgia Southern Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://magic1009.com/",
+   "notes": "Branded as Magic 100.9; co-originates with WPMX 102.9 FM in Statesboro.",
+   "sources": [
+    "https://gseagles.com/sports/2015/3/13/GEN_0313154817",
+    "https://magic1009.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "georgia-state",
+   "flagship_station": "WRAS",
+   "frequency": "88.5 FM",
+   "market": "Atlanta, GA",
+   "network_name": "Georgia State Radio Network",
+   "rights_holder": "in-house",
+   "satellite_national": null,
+   "authorized_stream": "https://wras.org/",
+   "notes": "100,000-watt university-owned station; daytime NPR format programmed by GPB with student athletics programming in evenings/weekends.",
+   "sources": [
+    "https://georgiastatesports.com/sports/2013/8/20/GEN_0820135824",
+    "https://wras.org/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "james-madison",
+   "flagship_station": "WSVA",
+   "frequency": "550 AM / 92.1 FM",
+   "market": "Harrisonburg, VA",
+   "network_name": "JMU Broadcast Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wsvaonline.com/",
+   "notes": "Harrisonburg Radio Group facility; simulcast on translator W221CF 92.1 FM.",
+   "sources": [
+    "https://jmusports.com/sports/2015/4/8/radio-affiliates",
+    "https://wsvaonline.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "louisiana",
+   "flagship_station": "KPEL-FM",
+   "frequency": "96.5 FM",
+   "market": "Breaux Bridge / Lafayette, LA",
+   "network_name": "Ragin' Cajuns Radio Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://kpel965.com/",
+   "notes": "Townsquare Media news-talk facility serving Acadiana.",
+   "sources": [
+    "https://ragincajuns.com/sports/2014/8/12/radio-affiliates",
+    "https://kpel965.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "marshall",
+   "flagship_station": "WDGG",
+   "frequency": "93.7 FM",
+   "market": "Huntington, WV",
+   "network_name": "Thundering Herd Sports Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://937thedawg.com/",
+   "notes": "Branded as 93.7 The Dawg; Kindred Communications facility.",
+   "sources": [
+    "https://herdzone.com/sports/2015/6/24/GEN_0624151743",
+    "https://937thedawg.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "old-dominion",
+   "flagship_station": "WVSP-FM",
+   "frequency": "94.1 FM",
+   "market": "Yorktown / Norfolk, VA",
+   "network_name": "ODU Sports Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://espnradio941.com/",
+   "notes": "Branded as ESPN Radio 94.1; Max Media facility.",
+   "sources": [
+    "https://odusports.com/sports/2019/8/14/radio-affiliates",
+    "https://espnradio941.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "south-alabama",
+   "flagship_station": "WNSP",
+   "frequency": "105.5 FM",
+   "market": "Bay Minette / Mobile, AL",
+   "network_name": "Jaguar Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wnsp.com/",
+   "notes": "Branded as Sports Talk 105.5; Dot Com Plus facility.",
+   "sources": [
+    "https://usajaguars.com/sports/2013/8/13/GEN_0813134114",
+    "https://wnsp.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "southern-miss",
+   "flagship_station": "WXXR",
+   "frequency": "104.5 FM",
+   "market": "Hattiesburg, MS",
+   "network_name": "Southern Miss Sports Network",
+   "rights_holder": "Learfield",
+   "satellite_national": null,
+   "authorized_stream": "https://rock104fm.com/",
+   "notes": "Branded as Rock 104; Blakeney Communications facility.",
+   "sources": [
+    "https://southernmiss.com/sports/2018/8/20/southern-miss-sports-network",
+    "https://rock104fm.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "troy",
+   "flagship_station": "WTBF-FM",
+   "frequency": "94.7 FM / 970 AM",
+   "market": "Troy, AL",
+   "network_name": "Troy Sports Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://wtbf.com/",
+   "notes": "Troy Broadcasting Corporation facility; simulcast on WTBF 970 AM.",
+   "sources": [
+    "https://troytrojans.com/sports/2015/6/24/GEN_0624151624",
+    "https://wtbf.com/"
+   ],
+   "confidence": "high"
+  },
+  {
+   "team_slug": "ulm",
+   "flagship_station": "KLIP",
+   "frequency": "105.3 FM",
+   "market": "Monroe, LA",
+   "network_name": "Warhawk Radio Network",
+   "rights_holder": "Playfly Sports",
+   "satellite_national": null,
+   "authorized_stream": "https://la105.com/",
+   "notes": "Branded as LA 105.3; Holladay Broadcasting facility.",
+   "sources": [
+    "https://ulmwarhawks.com/sports/2015/6/24/GEN_0624153923",
+    "https://la105.com/"
    ],
    "confidence": "high"
   }
