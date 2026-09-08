@@ -7,6 +7,7 @@ import {
   coaches,
   fantasyNotes,
   games,
+  getTeamSchedule,
   portalAsOf,
   portalEvents,
   preseasonRatings,
@@ -16,6 +17,48 @@ import {
   teams,
 } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
+import { getTeamHubData } from "../lib/team-hub.ts";
+
+test("team hub preserves missing coverage and distinguishes current dates from source dates", () => {
+  const ohio = getTeamHubData(teams.find((team) => team.slug === "ohio-state")!, "2026-09-08");
+  assert.equal(ohio.referenceDate, "2026-09-08");
+  assert.equal(ohio.asOf, "2026-09-05");
+  assert.equal(ohio.pollDate, "2026-08-17");
+  const next = ohio.schedule?.find((game) => !game.isBye && !game.result && game.date && game.date >= ohio.referenceDate);
+  assert.equal(next?.opponentSlug, "texas");
+  const arizona = getTeamHubData(teams.find((team) => team.slug === "arizona")!, "2026-09-08");
+  assert.ok(arizona.roster?.position_groups.some((group) => group.name === "QB" && group.players.some((player) => player.name === "Noah Fifita")));
+  assert.ok(arizona.roster?.position_groups.some((group) => group.name === "RB"));
+  assert.equal(arizona.roster?.position_groups.reduce((count, group) => count + group.players.length, 0), 109);
+  const alabama = getTeamHubData(teams.find((team) => team.slug === "alabama")!, "2026-09-08");
+  assert.equal(alabama.roster, null);
+  assert.ok(alabama.depth, "projected chart is preserved even when the roster is unavailable");
+  for (const team of teams) {
+    const hub = getTeamHubData(team, "2026-09-08");
+    assert.equal(hub.preseason, preseasonRatings[team.slug]);
+    assert.equal(hub.portal?.incoming.length, portalEvents.filter((event) => event.toTeamId === team.slug).length);
+    assert.equal(hub.portal?.outgoing.length, portalEvents.filter((event) => event.fromTeamId === team.slug).length);
+  }
+});
+
+test("team schedules retain byes, past unreported games and non-FBS opponents", () => {
+  assert.equal(getTeamSchedule("not-a-program"), null);
+  for (const team of teams) {
+    const schedule = getTeamSchedule(team.slug);
+    assert.ok(schedule?.length, `${team.slug}: full schedule missing`);
+    for (const game of schedule) {
+      if (game.result != null) assert.match(game.result, /^[WLT] \d+–\d+$/);
+      if (game.isBye) assert.equal(game.result, null);
+      if (game.href) assert.ok(games.some((candidate) => `/games/${candidate.id}` === game.href));
+      assert.ok(game.week == null || Number.isInteger(game.week));
+    }
+  }
+  const ohioState = getTeamSchedule("ohio-state")!;
+  assert.equal(ohioState.filter((game) => !game.isBye).length, 12);
+  assert.ok(ohioState.some((game) => game.opponentSlug === "ball-state" && game.date === "2026-09-05"));
+  assert.ok(ohioState.some((game) => game.isBye && game.date === "2026-10-24" && game.week === 8));
+  assert.ok(teams.some((team) => getTeamSchedule(team.slug)?.some((game) => !game.isBye && !game.opponentSlug && game.opponent)));
+});
 
 test("transfer portal ledger is complete, sourced, and slug-clean", () => {
   assert.ok(portalEvents.length >= 600, `expected a full portal ledger, got ${portalEvents.length}`);

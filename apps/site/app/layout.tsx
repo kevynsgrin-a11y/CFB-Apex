@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Barlow_Condensed, Geist } from "next/font/google";
 import { headers } from "next/headers";
 import { brand, environment } from "@/lib/config";
 import "./globals.css";
+import "./broadcast.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const displayFont = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
   subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -58,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export const viewport = {
-  themeColor: "#07131f",
+  themeColor: "#0A0F1A",
   colorScheme: "dark",
 };
 
@@ -85,9 +88,9 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="en" data-environment="dataset">
+    <html lang="en" className="bg-background" data-environment="dataset">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${displayFont.variable} font-sans antialiased`}
       >
         <script type="application/ld+json">
           {JSON.stringify(structuredData).replaceAll("<", "\\u003c")}

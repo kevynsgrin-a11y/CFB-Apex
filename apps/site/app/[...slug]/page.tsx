@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { HubApp } from "@/components/HubApp";
 import { coaches, dfsPlayers, fantasyPlayerSlugs, games, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
@@ -46,6 +47,15 @@ function isKnownPath(parts: string[]) {
     return portalEvents.some((event) => event.playerSlug === id) || dfsPlayers.some((player) => player.slug === id) || fantasyPlayerSlugs.has(id);
   }
   return false;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const team = slug[0] === "teams" && slug.length === 2 ? teams.find((item) => item.slug === slug[1]) : null;
+  if (!team) return {};
+  const title = `${team.name} — 2026 Team Hub`;
+  const description = `${team.name} schedules, transfers, roster, depth chart, gameday guide, published ratings and program history. Source-aware ${team.conference} coverage from CFB Apex.`;
+  return { title, description, alternates: { canonical: `/teams/${team.slug}` }, openGraph: { title, description }, twitter: { title, description } };
 }
 
 export default async function RoutePage({

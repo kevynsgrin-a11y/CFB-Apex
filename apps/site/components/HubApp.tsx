@@ -9,20 +9,13 @@ import {
   fantasyNotesAsOf,
   fantasyNotesContext,
   getCoachBySlug,
-  getDepthChart,
   getGame,
-  getInjuries,
   getPreseasonRating,
-  getRoster,
   getSchemes,
   getStaff,
   getStadiumBySlug,
   getTeam,
   getTeamBySlug,
-  getTeamLeaders,
-  getTeamRatings,
-  getTeamSeasons,
-  injuriesAsOf,
   modelEstimatesAvailable,
   broadcastAsOf,
   broadcastNote,
@@ -59,6 +52,8 @@ import { ScoreTicker } from "./broadcast/score-ticker";
 import { BroadcastFooter } from "./broadcast/footer";
 import { BroadcastHomepage } from "./broadcast/homepage";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
+import { getTeamHubData } from "@/lib/team-hub";
+import { TeamHub } from "./team-hub/team-hub";
 
 type Mode = "clean" | "analysis";
 type ScoreFilter = "All" | "P4" | "G5" | "FCS" | "Top 25" | "Favorites";
@@ -1119,233 +1114,7 @@ function TeamsPage({ teamSlug }: { teamSlug?: string }) {
 }
 
 function TeamDetail({ team }: { team: Team }) {
-  const teamGames = games.filter((game) => game.awayTeamId === team.id || game.homeTeamId === team.id);
-  const coach = coaches.find((item) => item.teamId === team.id);
-  const stadium = stadiums.find((item) => item.teamId === team.id);
-  const rating = getPreseasonRating(team.slug);
-  const roster = getRoster(team.slug);
-  const depth = getDepthChart(team.slug);
-  const injuries = getInjuries(team.slug);
-  const seasons = getTeamSeasons(team.slug);
-  const ratings = getTeamRatings(team.slug);
-  const ratingBySeason = new Map(ratings.map((row) => [row.season, row]));
-  const leaders = getTeamLeaders(team.slug);
-  return (
-    <>
-      <div className="team-page-hero">
-        <Monogram team={team} size="lg" />
-        <div><span className="eyebrow">{team.conference} · {team.subdivision}</span><h1>{team.name}</h1><p>{team.record} · strength index {team.strength}</p></div>
-        <Freshness provenance={team.provenance} />
-      </div>
-      <section className="team-kpis">
-        <div><span>AP rank</span><strong>{team.rank ? `No. ${team.rank}` : "Unranked"}</strong></div>
-        <div><span>Record</span><strong>{team.record}</strong></div>
-        <div><span>Strength index</span><strong>{team.strength}</strong></div>
-        <div><span>Coverage</span><strong>{percent(team.provenance.confidence)}</strong></div>
-      </section>
-      <section className="dashboard-grid content-section">
-        <div className="dashboard-panel dashboard-panel--wide">
-          <SectionHeading eyebrow="SCHEDULE" title="Relevant games" />
-          <div className="portal-list">
-            {teamGames.length ? teamGames.map((game) => (
-              <a className="portal-row" href={`/games/${game.id}`} key={game.id}>
-                <span className={`status status--${game.status}`}>{game.status}</span>
-                <span><strong>{teamFor(game.awayTeamId).shortName} at {teamFor(game.homeTeamId).shortName}</strong><small>{game.kickoffLabel} · {game.venue}{game.broadcast ? ` · ${game.broadcast}` : ""}</small></span>
-                <b>{game.statusDetail}</b>
-              </a>
-            )) : <p className="panel-note">No games in this sample window.</p>}
-          </div>
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow="COACHING" title={coach?.name ?? "Head coach not listed"} href={coach ? `/coaches/${coach.slug}` : "/coaches"} />
-          <p>{coach ? `${coach.title} · ${coach.record}` : "The dataset does not list a head coach for this program."}</p>
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow={`PORTAL · AS OF ${portalAsOf ?? "—"}`} title="Transfer ledger" href="/transfer-portal" />
-          {(() => {
-            const incoming = portalEvents.filter((event) => event.toTeamId === team.id);
-            const outgoing = portalEvents.filter((event) => event.fromTeamId === team.id);
-            if (incoming.length === 0 && outgoing.length === 0) {
-              return <p className="panel-note">No verified FBS-to-FBS transfers recorded for this program.</p>;
-            }
-            return (
-              <div className="portal-list">
-                {incoming.slice(0, 6).map((event) => (
-                  <div className="portal-row" key={event.id}>
-                    <span className="portal-status portal-status--enrolled">in</span>
-                    <span><strong>{event.player}</strong><small>{event.position} · from {teamLabelFor(event.fromTeamId).label} · {event.eventDate}</small></span>
-                  </div>
-                ))}
-                {outgoing.slice(0, 4).map((event) => (
-                  <div className="portal-row" key={event.id}>
-                    <span className="portal-status portal-status--withdrawn">out</span>
-                    <span><strong>{event.player}</strong><small>{event.position} · to {event.toTeamId ? teamLabelFor(event.toTeamId).label : "open"} · {event.eventDate}</small></span>
-                  </div>
-                ))}
-                <p className="panel-note">
-                  {incoming.length} in · {outgoing.length} out — <a href={`/transfer-portal/${team.slug}`}>full ledger</a>
-                </p>
-              </div>
-            );
-          })()}
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow={`AVAILABILITY · AS OF ${injuriesAsOf ?? "LATEST"}`} title="Injury report" />
-          {injuries && injuries.players.length > 0 ? (
-            <div className="portal-list">
-              {injuries.players.slice(0, 8).map((player) => (
-                <div className="portal-row" key={player.name}>
-                  <span className={`portal-status portal-status--${player.status === "out" ? "withdrawn" : "available"}`}>{player.status}</span>
-                  <span><strong>{player.name}</strong><small>{player.position}{player.injury ? ` · ${player.injury}` : ""}</small></span>
-                </div>
-              ))}
-              {injuries.players.length > 8 ? <p className="panel-note">+{injuries.players.length - 8} more on the full report</p> : null}
-            </div>
-          ) : (
-            <p className="panel-note">
-              {injuries ? "No players listed on the latest availability report." : "No availability report published for this team in the dataset."}
-            </p>
-          )}
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow="HISTORY" title="Season by season" />
-          {seasons.length ? (
-            <div className="portal-list">
-              {seasons.slice(0, 5).map((row) => {
-                const rating = ratingBySeason.get(row.season);
-                return (
-                  <div className="portal-row" key={row.season}>
-                    <span className="status status--final">{row.season}</span>
-                    <span>
-                      <strong>{row.g ?? "—"} games{rating?.record ? ` · ${rating.record}` : ""}</strong>
-                      <small>
-                        {row.op != null ? `${row.op} pts/g for · ${row.dp ?? "—"} against` : "rates not listed"}
-                        {rating?.feiRank ? ` · FEI No. ${rating.feiRank}` : ""}
-                        {rating?.spRank ? ` · SP+ No. ${rating.spRank}` : ""}
-                      </small>
-                    </span>
-                    <b>{rating?.spPlus != null ? `SP+ ${rating.spPlus}` : row.oy != null ? `${row.oy} yds/g` : "—"}</b>
-                  </div>
-                );
-              })}
-            </div>
-          ) : (
-            <p className="panel-note">Historical season data is not published for this program.</p>
-          )}
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow="LEADERBOARD HISTORY" title="Top-10 finishes" />
-          {leaders.length ? (
-            <div className="portal-list">
-              {leaders.slice(0, 8).map((row, index) => (
-                <div className="portal-row" key={`${row.season}-${row.category}-${row.player}-${index}`}>
-                  <span className="status status--scheduled">{row.season}</span>
-                  <span>
-                    <strong>{row.player ?? "Unlisted"}</strong>
-                    <small>{row.category}</small>
-                  </span>
-                  <b>No. {row.rank}</b>
-                </div>
-              ))}
-              {leaders.length > 8 ? <p className="panel-note">+{leaders.length - 8} more top-10 finishes since 2012</p> : null}
-            </div>
-          ) : (
-            <p className="panel-note">No top-10 national leaderboard finishes recorded for this program since 2012.</p>
-          )}
-        </div>
-        <div className="dashboard-panel dashboard-panel--wide">
-          <SectionHeading eyebrow="DEPTH CHART" title={depth?.status ? `${depth.status.charAt(0)}${depth.status.slice(1).toLowerCase()} two-deep` : "Projected two-deep"} />
-          {depth ? (
-            <div className="portal-list">
-              {depth.units.map((unit) => (
-                <div key={unit.unit} className="portal-row">
-                  <span className="status status--scheduled">{unit.unit.replace("_", " ")}</span>
-                  <span>
-                    <strong>
-                      {unit.positions.slice(0, 6).map((position) => {
-                        const line = position.depth
-                          .slice(0, 2)
-                          .map((slot) => slot.players.map((player) => player.name).join(" / "))
-                          .filter(Boolean)
-                          .join(" · ");
-                        return line ? `${position.position}: ${line}` : null;
-                      })
-                        .filter(Boolean)
-                        .join(" · ")}
-                    </strong>
-                    <small>{depth.schemes?.offense ?? ""}{depth.schemes?.defense ? ` / ${depth.schemes.defense}` : ""}{depth.status_caveat ? ` · ${depth.status_caveat}` : ""}</small>
-                  </span>
-                </div>
-              ))}
-              <p className="panel-note">First six positions per unit shown; the full chart carries every listed position.</p>
-            </div>
-          ) : (
-            <p className="panel-note">Depth chart not available for this team — charts cover the seven rostered conferences plus projected SEC charts (108 of 138 programs).</p>
-          )}
-        </div>
-        <div className="dashboard-panel dashboard-panel--wide">
-          <SectionHeading
-            eyebrow="ROSTER"
-            title={roster?.counts ? `${roster.counts.players} players listed` : "Roster"}
-          />
-          {roster ? (
-            <div className="portal-list">
-              {roster.position_groups.map((group) => (
-                <div className="portal-row" key={group.name}>
-                  <span className="status status--scheduled">{group.name}</span>
-                  <span>
-                    <strong>{group.players.slice(0, 5).map((player) => player.name).join(" · ")}</strong>
-                    <small>{group.players.length} players{roster.head_coach ? ` · ${roster.head_coach}` : ""}</small>
-                  </span>
-                </div>
-              ))}
-              <p className="panel-note">Top names per group shown; full roster tables ship with the roster pages.</p>
-            </div>
-          ) : (
-            <p className="panel-note">Roster not available for this team — the research package covers the seven rostered conferences (92 of 138 programs).</p>
-          )}
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow="GAMEDAY" title={stadium?.name ?? "Venue guide pending"} href={stadium ? `/stadiums/${stadium.slug}` : "/stadiums"} />
-          <p>{stadium ? `${stadium.city} · ${stadium.capacity.toLocaleString()} capacity · verified ${stadium.lastVerified}` : "Venue guides return once stadium data joins the dataset."}</p>
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow={`PRESEASON · AS OF ${rating?.as_of ?? "—"}`} title="Published numbers" href="/rankings" />
-          {rating ? (
-            <div className="portal-list">
-              {rating.sp ? (
-                <div className="portal-row">
-                  <span className="portal-status portal-status--committed">SP+</span>
-                  <span><strong>No. {rating.sp.rank} · {signed(rating.sp.overall)} overall</strong><small>off {signed(rating.sp.offense)} · def {rating.sp.defense} (points per 20 possessions)</small></span>
-                </div>
-              ) : null}
-              {rating.fpi ? (
-                <div className="portal-row">
-                  <span className="portal-status portal-status--committed">FPI</span>
-                  <span><strong>No. {rating.fpi.rank}{rating.fpi.value != null ? ` · ${rating.fpi.value.toFixed(1)}` : ""}</strong><small>ESPN Football Power Index</small></span>
-                </div>
-              ) : null}
-              {rating.wins && (rating.wins.line != null || rating.wins.projected != null) ? (
-                <div className="portal-row">
-                  <span className="portal-status portal-status--available">O/U</span>
-                  <span><strong>{rating.wins.line != null ? rating.wins.line.toFixed(1) : "—"} win total</strong><small>{rating.wins.projected != null ? `projected ${rating.wins.projected.toFixed(1)} wins` : "projection not published"}</small></span>
-                </div>
-              ) : null}
-              {rating.playoff?.value ? (
-                <div className="portal-row">
-                  <span className="portal-status portal-status--withdrawn">CFP</span>
-                  <span><strong>{rating.playoff.value} playoff odds</strong><small>as reported by {rating.playoff.outlet}</small></span>
-                </div>
-              ) : null}
-              {rating.notes ? <p className="panel-note">{rating.notes}</p> : null}
-            </div>
-          ) : (
-            <p className="panel-note">No published preseason numbers for this program.</p>
-          )}
-        </div>
-      </section>
-    </>
-  );
+  return <TeamHub {...getTeamHubData(team)} />;
 }
 
 function StadiumsPage({ stadiumSlug }: { stadiumSlug?: string }) {
@@ -2145,7 +1914,7 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else content = <NotFoundPage />;
 
   return (
-    <div className="app-shell">
+    <div className={root === "teams" && parts[1] ? "app-shell app-shell--team" : "app-shell"}>
       <BroadcastHeader
         teams={teams}
         activePath={normalizedPath}
