@@ -111,8 +111,15 @@ test("affiliate and radio seams stay fail-closed until configured", async () => 
   }
   const { radioStations } = await import("../lib/cfb-dataset.ts");
   assert.ok(Array.isArray(radioStations));
+  const slugs = new Set(teams.map((team) => team.id));
   for (const station of radioStations) {
+    assert.ok(slugs.has(station.team), `radio: unknown team ${station.team}`);
     assert.match(station.team, /^[a-z0-9-]+$/);
+    // Every carried record must be a verified flagship, never a guess.
+    if (station.station) {
+      assert.match(station.station, /^[A-Z]{3,6}(-[AFM]{2})?$/, `${station.team}: bad callsign ${station.station}`);
+      assert.ok((station.sources ?? []).length >= 1, `${station.team}: no source`);
+    }
   }
 });
 
