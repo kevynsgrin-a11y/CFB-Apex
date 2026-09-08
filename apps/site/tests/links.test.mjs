@@ -6,7 +6,9 @@ const [component, config] = await Promise.all([
   readFile(new URL("../components/HubApp.tsx", import.meta.url), "utf8"),
   readFile(new URL("../lib/config.ts", import.meta.url), "utf8"),
 ]);
-const source = `${component}\n${config}`;
+const header = await readFile(new URL("../components/broadcast/header.tsx", import.meta.url), "utf8");
+const footer = await readFile(new URL("../components/broadcast/footer.tsx", import.meta.url), "utf8");
+const source = `${component}\n${config}\n${header}\n${footer}`;
 const required = [
   "/scores",
   "/schedule",

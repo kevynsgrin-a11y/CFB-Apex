@@ -30,9 +30,10 @@ test("server-renders the finished home utility", async () => {
 
   const html = await response.text();
   assert.match(html, /Every Saturday/);
-  assert.match(html, /2026 FBS dataset/);
+  assert.match(html, /GAME OF THE WEEK|MARQUEE MATCHUP/);
+  assert.match(html, /138/);
+  assert.match(html, /FBS programs/);
   assert.match(html, /Clean Mode/);
-  assert.match(html, /What do you need/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 
