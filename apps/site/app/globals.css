@@ -1,28 +1,27 @@
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./broadcast.css";
 
 :root {
-  --ink: #07131f;
-  --ink-2: #0a1a28;
-  --surface: #0d2030;
-  --surface-2: #142b3d;
-  --surface-3: #193448;
-  --border: #294255;
-  --border-soft: rgba(170, 185, 197, 0.18);
-  --text: #f5f2e9;
-  --muted: #aab9c5;
-  --muted-2: #7f94a4;
-  --green: #35b77c;
-  --gold: #f1b84b;
-  --blue: #65c7f2;
-  --orange: #f59e5b;
-  --red: #ff7066;
-  --paper: #ece8dc;
-  --black: #081017;
-  --font-editorial: Georgia, "Times New Roman", serif;
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-  --radius-sm: 6px;
-  --radius: 10px;
-  --radius-lg: 14px;
+  --ink: var(--background);
+  --ink-2: var(--card);
+  --surface: var(--card);
+  --surface-2: var(--secondary);
+  --surface-3: var(--secondary);
+  --border-soft: var(--border);
+  --text: var(--foreground);
+  --muted-2: var(--muted-foreground);
+  --green: var(--accent);
+  --gold: var(--primary);
+  --blue: var(--accent);
+  --orange: var(--primary);
+  --red: var(--primary);
+  --paper: var(--foreground);
+  --black: var(--background);
+  --font-editorial: var(--display-family);
+  --font-geist-sans: var(--body-family);
+  --font-geist-mono: var(--body-family);
+  --shadow: var(--shadow-card);
 }
 
 * {
@@ -37,11 +36,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    linear-gradient(rgba(101, 199, 242, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(101, 199, 242, 0.025) 1px, transparent 1px),
-    var(--ink);
-  background-size: 44px 44px;
+  background: var(--background);
   color: var(--text);
   font-family: var(--font-geist-sans), Arial, sans-serif;
   min-width: 320px;

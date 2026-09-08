@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Barlow_Condensed, Inter } from "next/font/google";
 import { headers } from "next/headers";
 import { brand, environment } from "@/lib/config";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barlow = Barlow_Condensed({
+  variable: "--font-barlow",
   subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -24,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: {
-      default: `${brand.name} — Every Saturday. One command center.`,
+      default: `${brand.name} — Every team. Every angle.`,
       template: `%s | ${brand.name}`,
     },
     description: brand.description,
@@ -38,14 +41,14 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       type: "website",
-      title: `${brand.name} — Every Saturday. One command center.`,
+      title: `${brand.name} — Every team. Every angle.`,
       description: brand.description,
       siteName: brand.name,
       images: [{ url: image, width: 1792, height: 896, alt: `${brand.name} command center preview` }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${brand.name} — Every Saturday. One command center.`,
+      title: `${brand.name} — Every team. Every angle.`,
       description: brand.description,
       images: [image],
     },
@@ -58,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export const viewport = {
-  themeColor: "#07131f",
+  themeColor: "#0a0f1a",
   colorScheme: "dark",
 };
 
@@ -85,10 +88,8 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="en" data-environment="dataset">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" data-environment="dataset" className={`${inter.variable} ${barlow.variable} bg-background`}>
+      <body className="font-sans antialiased">
         <script type="application/ld+json">
           {JSON.stringify(structuredData).replaceAll("<", "\\u003c")}
         </script>

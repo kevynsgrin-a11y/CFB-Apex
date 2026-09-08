@@ -25,7 +25,6 @@ import {
   injuriesAsOf,
   modelEstimatesAvailable,
   broadcastAsOf,
-  broadcastFor,
   broadcastNote,
   timeEtLabel,
   tvRows,
@@ -49,14 +48,17 @@ import {
 import {
   brand,
   disclosureVersion,
-  primaryNavigation,
-  utilityNavigation,
 } from "@/lib/config";
 import { calculateBuyout } from "@/lib/contracts";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
-import type { DfsPlayer, Game, PortalEvent, Provenance, Team } from "@/lib/types";
+import type { DfsPlayer, Game, Provenance, Team } from "@/lib/types";
 import { ticketAffiliatesConfigured, ticketLinksForTeam } from "@/lib/affiliates";
 import { SourceMeta } from "./SourceMeta";
+import { BroadcastHeader } from "./broadcast/header";
+import { ScoreTicker } from "./broadcast/score-ticker";
+import { BroadcastFooter } from "./broadcast/footer";
+import { BroadcastHomepage } from "./broadcast/homepage";
+import { homepageData, tickerGames } from "@/lib/homepage-data";
 
 type Mode = "clean" | "analysis";
 type ScoreFilter = "All" | "P4" | "G5" | "FCS" | "Top 25" | "Favorites";
@@ -82,129 +84,6 @@ function teamLabelFor(teamId: string) {
     label: teamId.replaceAll("-", " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     slug: null,
   };
-}
-
-function DemoBanner() {
-  return (
-    <div className="demo-banner" role="status">
-      <span className="demo-banner__label">2026 FBS dataset</span>
-      <span>138 real programs · compiled 2026-09-05 · scores update with each dataset release</span>
-      <a href="/data-sources">Inspect data status</a>
-    </div>
-  );
-}
-
-function Header({
-  activePath,
-  mode,
-  onModeRequest,
-  onCleanMode,
-}: {
-  activePath: string;
-  mode: Mode;
-  onModeRequest: () => void;
-  onCleanMode: () => void;
-}) {
-  const isActive = (href: string) =>
-    href === "/scores"
-      ? activePath === "/scores" || activePath === "/schedule"
-      : activePath.startsWith(href);
-
-  return (
-    <>
-      <a className="skip-link" href="#main-content">
-        Skip to main content
-      </a>
-      <DemoBanner />
-      <header className="site-header">
-        <div className="site-header__inner">
-          <a className="brand" href="/" aria-label={`${brand.name} home`}>
-            <span className="brand__mark" aria-hidden="true">
-              H
-            </span>
-            <span>
-              <strong>{brand.shortName}</strong>
-              <small>Saturday intelligence</small>
-            </span>
-          </a>
-          <nav className="primary-nav" aria-label="Primary navigation">
-            {primaryNavigation.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                aria-current={isActive(item.href) ? "page" : undefined}
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-          <div className="header-actions">
-            <a className="icon-button" href="/search">
-              <span aria-hidden="true">⌕</span>
-              <span className="sr-only">Search {brand.name}</span>
-            </a>
-            {mode === "clean" ? (
-              <button className="mode-button" type="button" onClick={onModeRequest}>
-                <span className="mode-dot" aria-hidden="true" />
-                Clean Mode
-              </button>
-            ) : (
-              <button className="mode-button mode-button--analysis" type="button" onClick={onCleanMode}>
-                <span className="mode-dot" aria-hidden="true" />
-                Odds & DFS
-              </button>
-            )}
-          </div>
-        </div>
-        <nav className="mobile-nav" aria-label="Mobile primary navigation">
-          {primaryNavigation.slice(0, 4).map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          ))}
-          <a href="/teams">More</a>
-        </nav>
-      </header>
-    </>
-  );
-}
-
-function ScoreRibbon() {
-  const finals = games.filter((game) => game.status === "final").length;
-  return (
-    <section className="score-ribbon" aria-label="Featured scores">
-      <div className="score-ribbon__rail">
-        <div className="score-ribbon__date">
-          <span>2026 SEASON</span>
-          <strong>{finals} FINAL · {games.length - finals} SCHEDULED</strong>
-        </div>
-        {games.slice(0, 4).map((game) => {
-          const away = teamFor(game.awayTeamId);
-          const home = teamFor(game.homeTeamId);
-          return (
-            <a className="ribbon-game" href={`/games/${game.id}`} key={game.id}>
-              <span className={`status status--${game.status}`}>{game.statusDetail}</span>
-              <span>
-                {away.abbreviation}
-                <b>{game.awayScore ?? "—"}</b>
-              </span>
-              <span>
-                {home.abbreviation}
-                <b>{game.homeScore ?? "—"}</b>
-              </span>
-            </a>
-          );
-        })}
-        <a className="ribbon-all" href="/scores">
-          All scores <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </section>
-  );
 }
 
 function ModeDialog({
@@ -436,199 +315,6 @@ function SectionHeading({
         </a>
       ) : null}
     </div>
-  );
-}
-
-function HomePage({ mode, favorites, onFavorite }: HomeProps) {
-  const featured = games[0];
-  const away = teamFor(featured.awayTeamId);
-  const home = teamFor(featured.homeTeamId);
-  const featuredCoach = coaches[0];
-  const coachTeam = teamFor(featuredCoach.teamId);
-
-  return (
-    <>
-      <section className="hero">
-        <div className="hero__copy">
-          <span className="eyebrow">{brand.eyebrow}</span>
-          <h1>
-            Every Saturday.
-            <br />
-            <em>One command center.</em>
-          </h1>
-          <p>{brand.description}</p>
-          <div className="hero__actions">
-            <a className="button button--gold" href="/scores">
-              Open scoreboard <span aria-hidden="true">→</span>
-            </a>
-            <a className="button button--ghost" href="/playoff-predictor">
-              Build a playoff path
-            </a>
-          </div>
-          <div className="trust-row">
-            <span>No autoplay</span>
-            <span>Clean Mode default</span>
-            <span>Sources on every record</span>
-          </div>
-        </div>
-        <article className="feature-game">
-          <div className="feature-game__header">
-            <span className="pulse-label">NEXT MATCHUP</span>
-            <Freshness provenance={featured.provenance} />
-          </div>
-          <div className="feature-game__teams">
-            <div>
-              <Monogram team={away} size="lg" />
-              <span>
-                <small>#{away.rank}</small>
-                <strong>{away.shortName}</strong>
-                <em>{away.record}</em>
-              </span>
-            </div>
-            <b>at</b>
-            <div>
-              <Monogram team={home} size="lg" />
-              <span>
-                <small>#{home.rank}</small>
-                <strong>{home.shortName}</strong>
-                <em>{home.record}</em>
-              </span>
-            </div>
-          </div>
-          <div className="feature-game__intel">
-            <div>
-              <span>Kickoff</span>
-              <strong>{featured.kickoffLabel}</strong>
-            </div>
-            <div>
-              <span>Venue</span>
-              <strong>{featured.venue}</strong>
-            </div>
-            <div>
-              <span>Weather</span>
-              <strong>{featured.weather?.temperature}° · {featured.weather?.summary}</strong>
-            </div>
-          </div>
-          {modelEstimatesAvailable ? (
-            <div className="probability">
-              <div>
-                <span>{brand.shortName} model estimate</span>
-                <strong>{percent(featured.modelHomeWinProbability)} {home.abbreviation}</strong>
-              </div>
-              <div
-                className="probability__track"
-                role="img"
-                aria-label={`${home.shortName} has a ${percent(featured.modelHomeWinProbability)} win estimate, plus or minus ${percent(featured.modelUncertainty)}`}
-              >
-                <span style={{ width: percent(featured.modelHomeWinProbability) }} />
-              </div>
-              <small>±{percent(featured.modelUncertainty)} uncertainty</small>
-            </div>
-          ) : (
-            <div className="probability">
-              <div>
-                <span>{brand.shortName} model estimate</span>
-                <strong>Pending 2026 season data</strong>
-              </div>
-              <small>Win probabilities resume once in-season results accumulate.</small>
-            </div>
-          )}
-          <a className="feature-game__link" href={`/games/${featured.id}`}>
-            Open complete matchup intelligence <span aria-hidden="true">→</span>
-          </a>
-        </article>
-      </section>
-
-      <section className="quick-deck" aria-labelledby="quick-deck-title">
-        <div className="quick-deck__intro">
-          <span className="eyebrow">START HERE</span>
-          <h2 id="quick-deck-title">What do you need?</h2>
-        </div>
-        {[
-          ["/scores", "01", "Track the slate", "Scores, schedules, watch status, weather"],
-          ["/transfer-portal", "02", "Read roster movement", "Open portal table and team impact"],
-          ["/playoff-predictor", "03", "Test the playoff", "Force outcomes and rerun the field"],
-          ["/coaching-carousel", "04", "Follow coaching", "Verified moves, contracts, buyouts"],
-          ["/stadiums", "05", "Plan gameday", "Parking, bags, transit, visitor notes"],
-        ].map(([href, number, title, copy]) => (
-          <a className="quick-card" href={href} key={href}>
-            <span>{number}</span>
-            <strong>{title}</strong>
-            <small>{copy}</small>
-            <b aria-hidden="true">↗</b>
-          </a>
-        ))}
-      </section>
-
-      <section className="content-section">
-        <SectionHeading eyebrow="2026 SEASON BOARD" title="Matchups worth your screen" href="/scores" />
-        <div className="game-grid">
-          {games.slice(0, 3).map((game) => (
-            <GameCard
-              key={game.id}
-              game={game}
-              mode={mode}
-              favoriteIds={favorites}
-              onFavorite={onFavorite}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className="dashboard-grid content-section">
-        <div className="dashboard-panel dashboard-panel--wide">
-          <SectionHeading eyebrow="ROSTER VOLATILITY" title="Portal pulse" href="/transfer-portal" />
-          <div className="portal-list">
-            {portalEvents.length > 0 ? (
-              portalEvents.slice(0, 4).map((event) => (
-                <PortalRow event={event} key={event.id} />
-              ))
-            ) : (
-              <p className="panel-note">Transfer-portal movement is not part of the 2026 research dataset.</p>
-            )}
-          </div>
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow="AP PRESEASON TOP 25" title="Bubble pressure" href="/rankings" linkLabel="Rankings" />
-          <div className="rank-stack">
-            {teams
-              .filter((team) => team.rank != null)
-              .sort((a, b) => (a.rank ?? 99) - (b.rank ?? 99))
-              .slice(5, 9)
-              .map((team) => (
-                <div key={team.id}>
-                  <Monogram team={team} size="sm" />
-                  <span>
-                    <strong>{team.shortName}</strong>
-                    <small>AP No. {team.rank}</small>
-                  </span>
-                  <b>{team.record}</b>
-                </div>
-              ))}
-          </div>
-          <p className="panel-note">AP preseason poll · not a committee forecast</p>
-        </div>
-        <div className="dashboard-panel">
-          <SectionHeading eyebrow="COACHING CAROUSEL" title="On the sideline" href="/coaching-carousel" />
-          <div className="coach-pulse">
-            <div className="coach-pulse__badge">{featuredCoach.name.split(" ").map((part) => part[0]).join("")}</div>
-            <div>
-              <strong>{featuredCoach.name}</strong>
-              <span>{coachTeam.shortName} · {featuredCoach.record}</span>
-            </div>
-          </div>
-          <p className="panel-note">Contract terms and hot-seat economics are not published in the 2026 dataset.</p>
-        </div>
-        <div className="dashboard-panel dashboard-panel--field">
-          <span className="eyebrow">GAMEDAY INTELLIGENCE</span>
-          <h2>Know the gate before you leave the driveway.</h2>
-          <p>Stadium guides return once venue data joins the research dataset.</p>
-          <a className="button button--light" href="/stadiums">Browse stadium guides</a>
-        </div>
-      </section>
-
-      <NewsletterBand />
-    </>
   );
 }
 
@@ -893,23 +579,6 @@ function TeamHero({ team, score }: { team: Team; score?: number }) {
       </span>
       {score !== undefined ? <b>{score}</b> : null}
     </div>
-  );
-}
-
-function PortalRow({ event }: { event: PortalEvent }) {
-  const from = teamLabelFor(event.fromTeamId);
-  const to = event.toTeamId ? teamLabelFor(event.toTeamId) : null;
-  return (
-    <a className="portal-row" href={`/players/${event.playerSlug}`}>
-      <span className="position-badge">{event.position}</span>
-      <span>
-        <strong>{event.player}</strong>
-        <small>{from.label} → {to?.label ?? "Available"}</small>
-      </span>
-      <span className={`portal-status portal-status--${event.status}`}>{event.status}</span>
-      <b>{event.impact == null ? "—" : signed(event.impact)}</b>
-      <small>{event.confidence} conf.</small>
-    </a>
   );
 }
 
@@ -2374,15 +2043,6 @@ function PlayerPage({ slug }: { slug: string }) {
   );
 }
 
-function NewsletterBand() {
-  return (
-    <section className="newsletter-band">
-      <div><span className="eyebrow">THE SATURDAY BRIEF</span><h2>One clean read before the games get loud.</h2><p>Scoreboard, playoff pressure, verified portal movement, and gameday notes. Development mail sink only.</p></div>
-      <a className="button button--light" href="/newsletter">Choose your brief</a>
-    </section>
-  );
-}
-
 function ResponsibleGamingNotice() {
   return (
     <aside className="responsible-notice">
@@ -2408,21 +2068,6 @@ function SimpleStatus({ title, copy, action, actionLabel }: { title: string; cop
 
 function NotFoundPage() {
   return <EmptyState title="That route is not in the field." copy="The URL may be old, incomplete, or intentionally unavailable." href="/scores" action="Return to scores" />;
-}
-
-function Footer() {
-  return (
-    <footer className="site-footer">
-      <div className="site-footer__brand"><span className="brand__mark">H</span><div><strong>{brand.name}</strong><p>Independent utility. Transparent models. Saturday ready.</p></div></div>
-      <div className="site-footer__links">
-        <div><strong>Product</strong>{utilityNavigation.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}</div>
-        <div><strong>Trust</strong><a href="/about">About</a><a href="/corrections">Corrections</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
-        <div><strong>Business</strong><a href="/advertise">Advertise</a><a href="/partnerships">Partnerships</a><a href="/media-kit">Media kit</a><a href="/affiliate-disclosure">Affiliate disclosure</a></div>
-        <div><strong>Contact</strong><a href="mailto:hello@cfbapex.com">hello@cfbapex.com</a><a href="mailto:socials@cfbapex.com">socials@cfbapex.com</a><a href="mailto:media@cfbapex.com">media@cfbapex.com</a><a href="mailto:admin@cfbapex.com">admin@cfbapex.com</a><a href="mailto:privacy@cfbapex.com">privacy@cfbapex.com</a></div>
-      </div>
-      <div className="site-footer__bottom"><span>© 2026 {brand.name} · independent analytics</span><span>2026 FBS dataset · compiled 2026-09-05</span></div>
-    </footer>
-  );
 }
 
 export function HubApp({ path = "/" }: { path?: string }) {
@@ -2474,7 +2119,7 @@ export function HubApp({ path = "/" }: { path?: string }) {
   let content: React.ReactNode;
   const common = { mode, favorites, onFavorite: toggleFavorite };
 
-  if (!root) content = <HomePage {...common} />;
+  if (!root) content = <BroadcastHomepage data={homepageData} cleanMode={mode === "clean"} onModeRequest={() => setModeDialogOpen(true)} />;
   else if (root === "scores") content = <ScoresPage {...common} />;
   else if (root === "schedule") content = <SchedulePage {...common} />;
   else if (root === "games" && parts[1]) content = <GamePage gameId={parts[1]} {...common} />;
@@ -2501,15 +2146,15 @@ export function HubApp({ path = "/" }: { path?: string }) {
 
   return (
     <div className="app-shell">
-      <Header
+      <BroadcastHeader
+        teams={teams}
         activePath={normalizedPath}
-        mode={mode}
-        onModeRequest={() => setModeDialogOpen(true)}
-        onCleanMode={enableClean}
+        cleanMode={mode === "clean"}
+        onCleanModeChange={(enabled) => enabled ? enableClean() : setModeDialogOpen(true)}
       />
-      <ScoreRibbon />
+      <ScoreTicker games={tickerGames} teams={teams} />
       <main id="main-content">{content}</main>
-      <Footer />
+      <BroadcastFooter />
       <ModeDialog open={modeDialogOpen} onClose={() => setModeDialogOpen(false)} onConfirm={enableAnalysis} />
     </div>
   );

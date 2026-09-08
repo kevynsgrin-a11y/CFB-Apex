@@ -4,6 +4,9 @@ __pycache__/
 *.pyc
 *.tsbuildinfo
 .DS_Store
+.next/
+next-env.d.ts
+.env*.local
 
 # Build output of the TypeScript reader package.
 packages/*/dist/

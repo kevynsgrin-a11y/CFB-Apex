@@ -2,9 +2,9 @@ export const brand = {
   name: "CFB Apex",
   shortName: "CFB Apex",
   eyebrow: "Independent college football intelligence",
-  tagline: "Every Saturday. One command center.",
+  tagline: "Every team. Every angle.",
   description:
-    "Scores, roster movement, playoff paths, coaching economics, and gameday intelligence in one fast, source-aware workspace.",
+    "College football, elevated. Scores, schedules, rankings, transfer portal moves, and gameday guides for all 138 FBS teams. Independent intelligence. Every Saturday.",
   supportEmail: "corrections@example.invalid",
 } as const;
 

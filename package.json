@@ -12,12 +12,15 @@
     "node": ">=20"
   },
   "scripts": {
+    "postinstall": "npm --prefix apps/site ci --ignore-scripts",
     "data:build": "python3 tools/etl/build.py",
     "data:check": "python3 tools/etl/build.py --check && python3 tools/etl/validate.py",
     "build": "npm run -w @cfb-apex/data build && npm run -w @cfb-apex/data-api build",
     "typecheck": "npm run -w @cfb-apex/data build && npm run --workspaces --if-present typecheck",
     "test": "npm run --workspaces --if-present test",
-    "dev": "npm run -w @cfb-apex/data-api dev",
+    "dev": "npm --prefix apps/site run dev:preview",
+    "dev:data": "npm run -w @cfb-apex/data-api dev",
+    "build:site": "npm --prefix apps/site run build:next",
     "deploy": "npm run -w @cfb-apex/data-api deploy"
   },
   "devDependencies": {

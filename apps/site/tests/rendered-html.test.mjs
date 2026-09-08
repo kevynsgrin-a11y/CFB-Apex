@@ -32,7 +32,10 @@ test("server-renders the finished home utility", async () => {
   assert.match(html, /Every Saturday/);
   assert.match(html, /2026 FBS dataset/);
   assert.match(html, /Clean Mode/);
-  assert.match(html, /What do you need/);
+  assert.match(html, /Every team/);
+  assert.match(html, /GAME OF THE WEEK/);
+  assert.match(html, /Portal movers/);
+  assert.match(html, /Preseason numbers/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 
