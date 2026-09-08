@@ -87,6 +87,17 @@ test("critical product routes render dataset-backed content", async () => {
   }
 });
 
+test("spoofed admin-identity headers never reach the app (NF-1)", async () => {
+  const response = await fetchRoute("/admin", {
+    headers: { "oai-authenticated-user-email": "operator@cfbapex.com" },
+  });
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  // The console must render its unauthenticated state — a spoofed identity
+  // header can never authorize it.
+  assert.ok(!/operator@cfbapex\.com/.test(html), "spoofed email leaked into the admin page");
+});
+
 test("health and readiness endpoints disclose dataset state", async () => {
   const health = await fetchRoute("/api/health", { headers: { accept: "application/json" } });
   assert.equal(health.status, 200);

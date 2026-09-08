@@ -41,9 +41,42 @@ function secureResponse(response: Response, url: URL, launchReady: boolean) {
     secured.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
   }
   if (url.protocol === "https:") {
-    secured.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+    secured.headers.set(
+      "Strict-Transport-Security",
+      "max-age=31536000; includeSubDomains",
+    );
   }
   return secured;
+}
+
+/**
+ * NF-1 remediation: the app's admin identity comes from request headers that
+ * were designed to be set by a trusted edge proxy — but no such proxy exists
+ * on this deployment, so any client could set them and impersonate an
+ * allowlisted operator. Strip them from every inbound request before the app
+ * can read them; the admin console stays fail-closed until a real
+ * authentication mechanism (e.g. Cloudflare Access) is wired in front.
+ */
+const TRUSTED_PROXY_HEADERS = [
+  "oai-authenticated-user-email",
+  "oai-authenticated-user-full-name",
+  "oai-authenticated-user-full-name-encoding",
+];
+
+function stripSpoofableAuthHeaders(request: Request): Request {
+  if (!TRUSTED_PROXY_HEADERS.some((name) => request.headers.has(name))) {
+    return request;
+  }
+  const headers = new Headers(request.headers);
+  for (const name of TRUSTED_PROXY_HEADERS) {
+    headers.delete(name);
+  }
+  return new Request(request.url, {
+    method: request.method,
+    headers,
+    body: request.body,
+    redirect: "manual",
+  });
 }
 
 // Image security config. SVG sources with .svg extension auto-skip the
@@ -109,7 +142,7 @@ const worker = {
       );
     }
 
-    const response = await handler.fetch(request, env, ctx);
+    const response = await handler.fetch(stripSpoofableAuthHeaders(request), env, ctx);
     return secureResponse(response, url, launchReady);
   },
 };
