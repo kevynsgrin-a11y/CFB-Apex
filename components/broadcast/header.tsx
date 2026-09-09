@@ -219,8 +219,19 @@ export function BroadcastHeader({
                 </div>
               )}
             </div>
-            <a className="apex-text-link apex-menu-all" href="/teams">
-              Explore all {teams.length} FBS teams
+            <a
+              className="apex-text-link apex-menu-all"
+              href={
+                panel === "search" && query.trim()
+                  ? `/search?q=${encodeURIComponent(query.trim())}`
+                  : panel === "search"
+                    ? "/search"
+                    : "/teams"
+              }
+            >
+              {panel === "search"
+                ? "Search all teams, coaches, and players"
+                : `Explore all ${teams.length} FBS teams`}
               <ArrowRight size={16} aria-hidden="true" />
             </a>
           </Dialog.Content>
