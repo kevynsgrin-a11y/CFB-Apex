@@ -57,11 +57,36 @@ export async function generateMetadata({
   params,
 }: RoutePageProps): Promise<Metadata> {
   const { slug } = await params;
-  if (slug[0] === "watch") {
+  const [root, detail] = slug;
+  if (root === "watch") {
     return {
       title: "Where to Watch College Football",
       description:
         "Find weekly college football TV windows, verified local radio flagships, and official team ticket destinations.",
+    };
+  }
+  if (root === "transfer-portal") {
+    const team = detail ? teams.find((candidate) => candidate.slug === detail) : null;
+    return {
+      title: team ? `${team.shortName} Transfer Portal Ledger` : "College Football Transfer Portal Board",
+      description: team
+        ? `Verified incoming and outgoing transfer movement for ${team.name}.`
+        : "Track verified college football transfers by player, position, program, status, date, and source confidence.",
+    };
+  }
+  if (root === "dfs") {
+    return {
+      title: "College Fantasy Notes Board",
+      description:
+        "Published college fantasy roles, usage notes, availability, and analyst ranks with source context.",
+    };
+  }
+  if (root === "coaching-carousel" || root === "coaches") {
+    const coach = detail ? coaches.find((candidate) => candidate.slug === detail) : null;
+    return {
+      title: coach ? `${coach.name} Contract Ledger` : "College Football Coaching Ledger",
+      description:
+        "Compare verified college football coaching contracts, source notes, and explainable buyout estimates.",
     };
   }
   return {};

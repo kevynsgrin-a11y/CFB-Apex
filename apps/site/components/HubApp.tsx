@@ -10,11 +10,8 @@ import {
   fantasyNotesAsOf,
   fantasyNotesContext,
   games,
-  getCoachBySlug,
   getGame,
   getPreseasonRating,
-  getSchemes,
-  getStaff,
   getStadiumBySlug,
   getTeam,
   getTeamBySlug,
@@ -37,27 +34,23 @@ import {
   tvWeeks,
 } from "@/lib/cfb-dataset";
 import { brand, disclosureVersion } from "@/lib/config";
-import { calculateBuyout } from "@/lib/contracts";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import { getTeamHubData } from "@/lib/team-hub";
-import type { DfsPlayer, Game, Provenance, Team } from "@/lib/types";
+import type { Game, Provenance, Team } from "@/lib/types";
 import { SourceMeta } from "./SourceMeta";
 import { BroadcastFooter } from "./broadcast/footer";
 import { BroadcastHeader } from "./broadcast/header";
 import { BroadcastHomepage } from "./broadcast/homepage";
 import { ScoreTicker } from "./broadcast/score-ticker";
 import { WatchPage } from "./broadcast/watch-page";
+import { CoachingLedger } from "./coaching-ledger";
+import { FantasyNotesBoard } from "./fantasy-notes-board";
 import { TeamHub } from "./team-hub/team-hub";
+import { TransferPortalBoard } from "./transfer-portal-board";
 
 type Mode = "clean" | "analysis";
 type ScoreFilter = "All" | "P4" | "G5" | "FCS" | "Top 25" | "Favorites";
-
-const money = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-});
 
 const percent = (value: number) => `${Math.round(value * 100)}%`;
 const signed = (value: number) => `${value > 0 ? "+" : ""}${value.toFixed(1)}`;
@@ -572,122 +565,6 @@ function TeamHero({ team, score }: { team: Team; score?: number }) {
   );
 }
 
-function PortalPage({ teamSlug }: { teamSlug?: string }) {
-  const [position, setPosition] = useState("All");
-  const [status, setStatus] = useState("All");
-  const scopedTeam = teamSlug ? getTeamBySlug(teamSlug) : undefined;
-  const positions = ["All", ...new Set(portalEvents.map((event) => event.position).filter(Boolean))].sort();
-  const statuses = ["All", ...new Set(portalEvents.map((event) => event.status))];
-  const filtered = portalEvents.filter((event) => {
-    const teamMatch = !scopedTeam || event.fromTeamId === scopedTeam.id || event.toTeamId === scopedTeam.id;
-    const positionMatch = position === "All" || event.position === position;
-    const statusMatch = status === "All" || event.status === status;
-    return teamMatch && positionMatch && statusMatch;
-  });
-  const scopedCounts = scopedTeam ? portalCountsFor(scopedTeam.slug) : null;
-  const busiest = [...teams]
-    .map((team) => ({ team, counts: portalCountsFor(team.slug) }))
-    .sort((a, b) => b.counts.incoming + b.counts.outgoing - (a.counts.incoming + a.counts.outgoing))
-    .slice(0, 4);
-
-  return (
-    <>
-      <PageHeading
-        eyebrow="PRIORITY 02 · ROSTER VOLATILITY"
-        title={scopedTeam ? `${scopedTeam.shortName} portal ledger` : "Roster movement, in the open."}
-        description="Verified FBS-to-FBS transfers with dates, positions, and source confidence — no NIL guesswork, no inferred destinations."
-        actions={<a className="button button--ghost" href="/methodology#portal">Portal methodology</a>}
-      />
-      <section className="content-section">
-        <article className="win-model-card">
-          <div>
-            <span className="eyebrow">COMPILED {portalAsOf ?? "—"}</span>
-            <strong>
-              {portalEvents.length} verified transfers
-              {scopedTeam ? ` · ${scopedCounts?.incoming ?? 0} in / ${scopedCounts?.outgoing ?? 0} out (net ${signed(scopedCounts?.net ?? 0)})` : ""}
-            </strong>
-          </div>
-          <p>{portalStatusNote}</p>
-        </article>
-      </section>
-      {portalEvents.length === 0 ? (
-        <section className="content-section">
-          <article className="win-model-card">
-            <div>
-              <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
-              <strong>Transfer-portal movement</strong>
-            </div>
-            <p>This surface turns on when portal data joins a future dataset release.</p>
-          </article>
-        </section>
-      ) : (
-        <>
-          {!scopedTeam ? (
-            <section className="portal-summary">
-              {busiest.map(({ team, counts }) => (
-                <a href={`/transfer-portal/${team.slug}`} className="impact-card" key={team.id}>
-                  <div><Monogram team={team} /><span><small>{team.conference}</small><strong>{team.shortName}</strong></span></div>
-                  <b>{counts.incoming} in · {counts.outgoing} out</b>
-                  <small>Net intake {signed(counts.net)}</small>
-                </a>
-              ))}
-            </section>
-          ) : null}
-          <section className="content-section">
-        <div className="table-tools">
-          <div>
-            <label>Position
-              <select value={position} onChange={(event) => setPosition(event.target.value)}>
-                {positions.map((item) => <option key={item}>{item}</option>)}
-              </select>
-            </label>
-            <label>Status
-              <select value={status} onChange={(event) => setStatus(event.target.value)}>
-                {statuses.map((item) => <option key={item}>{item}</option>)}
-              </select>
-            </label>
-          </div>
-          <span>{filtered.length} records</span>
-        </div>
-        <section className="data-table-wrap" tabIndex={0} aria-label="Scrollable portal movement table">
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Player</th><th>Pos</th><th>Origin</th><th>Destination</th><th>Status</th><th>Date</th><th>Confidence</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((event) => {
-                const origin = teamLabelFor(event.fromTeamId);
-                const destination = event.toTeamId ? teamLabelFor(event.toTeamId) : null;
-                return (
-                  <tr key={event.id}>
-                    <td>
-                      <strong>{event.player}</strong>
-                      {event.notes ? <small className="portal-note">{event.notes}</small> : null}
-                    </td>
-                    <td>{event.position}</td>
-                    <td>{origin.slug ? <a href={`/teams/${origin.slug}`}>{origin.label}</a> : origin.label}</td>
-                    <td>{destination ? (destination.slug ? <a href={`/teams/${destination.slug}`}>{destination.label}</a> : destination.label) : "Open"}</td>
-                    <td><span className={`portal-status portal-status--${event.status}`}>{event.status}</span></td>
-                    <td>{event.eventDate}</td>
-                    <td><span className={`portal-status portal-status--conf-${event.confidence}`}>{event.confidence}</span></td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </section>
-        <p className="table-caption">
-          {portalEvents.filter((event) => event.snaps == null).length} of {portalEvents.length} records have no published snap count; impact scores are not modeled for this dataset.
-        </p>
-          </section>
-        </>
-      )}
-    </>
-  );
-}
-
 function PlayoffPage() {
   const [forced, setForced] = useState<ForcedOutcomes>({});
   const [result, setResult] = useState(() => runPlayoffSimulation("saturday-2026", {}, 2_000));
@@ -797,290 +674,6 @@ function PlayoffPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function CoachingPage({ coachSlug }: { coachSlug?: string }) {
-  const focused = coachSlug ? getCoachBySlug(coachSlug) : undefined;
-  const [selectedId, setSelectedId] = useState(focused?.id ?? coaches[0].id);
-  const coach = coaches.find((item) => item.id === selectedId)!;
-  const team = teamFor(coach.teamId);
-  const [guaranteed, setGuaranteed] = useState(coach.guaranteedRemaining);
-  const [offset, setOffset] = useState(coach.offsetEstimate);
-  const buyout = calculateBuyout({
-    guaranteedRemaining: guaranteed,
-    mitigationApplies: coach.mitigationApplies,
-    estimatedOffset: offset,
-  });
-
-  const selectCoach = (item: typeof coach) => {
-    setSelectedId(item.id);
-    setGuaranteed(item.guaranteedRemaining);
-    setOffset(item.offsetEstimate);
-  };
-
-  return (
-    <>
-      <PageHeading
-        eyebrow="PRIORITY 04 · CONTRACT ECONOMICS"
-        title={focused ? `${focused.name} contract ledger` : "Separate the contract from the carousel noise."}
-        description="Verified timelines and transparent buyout math where published; hot-seat context returns with contract data."
-      />
-      <section className="coaching-layout content-section">
-        <div className="coach-index">
-          {coaches.map((item) => {
-            const itemTeam = teamFor(item.teamId);
-            return (
-              <button
-                type="button"
-                key={item.id}
-                onClick={() => selectCoach(item)}
-                aria-pressed={coach.id === item.id}
-              >
-                <span>{item.name.split(" ").map((part) => part[0]).join("")}</span>
-                <div><strong>{item.name}</strong><small>{itemTeam.shortName} · {item.title}</small></div>
-                <b>{item.record}</b>
-              </button>
-            );
-          })}
-        </div>
-        <div className="coach-detail">
-          <div className="coach-detail__hero">
-            <div className="coach-avatar">{coach.name.split(" ").map((part) => part[0]).join("")}</div>
-            <div><span className="eyebrow">{team.shortName} · {coach.title}</span><h2>{coach.name}</h2><p>{coach.record} record</p></div>
-          </div>
-          <div className="contract-grid">
-            <div><span>Term</span><strong>{coach.contractStart && coach.contractEnd ? `${coach.contractStart} → ${coach.contractEnd}` : coach.contractEnd ? `Through ${coach.contractEnd}` : "Not published"}</strong></div>
-            <div><span>Annual salary</span><strong>{coach.annualSalary > 0 ? money.format(coach.annualSalary) : "Not published"}</strong></div>
-            <div><span>Total value</span><strong>{coach.totalValue ? money.format(coach.totalValue) : "Not published"}</strong></div>
-            <div><span>Guarantee remaining</span><strong>{coach.guaranteedRemaining > 0 ? money.format(coach.guaranteedRemaining) : "Not published"}</strong></div>
-            <div><span>Offset mitigation</span><strong>{coach.mitigationApplies ? "Applies" : coach.contractAsOf ? "No offset / not owed" : "Not published"}</strong></div>
-            <div><span>Contract record</span><strong>{coach.contractAsOf ? `Through ${coach.contractAsOf}` : "Not published"}</strong></div>
-          </div>
-          {coach.buyoutSummary ? <p className="panel-note"><strong>Buyout:</strong> {coach.buyoutSummary}</p> : null}
-          {coach.contractNote ? <p className="panel-note">{coach.contractNote}</p> : null}
-          {coach.contractSources && coach.contractSources.length > 0 ? (
-            <p className="panel-note">
-              Sources:{" "}
-              {coach.contractSources.map((source, index) => (
-                <span key={source}>
-                  {index > 0 ? " · " : ""}
-                  <a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a>
-                </span>
-              ))}
-            </p>
-          ) : null}
-          <p className="panel-note">Buyout math below uses your own inputs; the calculator never invents unpublished guarantee figures.</p>
-          <div className="timeline">
-            <span className="eyebrow">STAFF &amp; SCHEMES</span>
-            {(() => {
-              const staff = getStaff(team.id);
-              const schemes = getSchemes(team.id);
-              if (!staff.length && !schemes) {
-                return <p className="panel-note">Staff details beyond the head coach are not listed for this program.</p>;
-              }
-              const roleLabel = (role: string | null, raw: string | null) => {
-                if (!role) return raw ?? "Staff";
-                const map: Record<string, string> = {
-                  hc: "Head Coach",
-                  oc: "Offensive Coordinator",
-                  co_oc: "Co-OC",
-                  dc: "Defensive Coordinator",
-                  co_dc: "Co-DC",
-                  stc: "Special Teams Coordinator",
-                  qb: "QB Coach",
-                  rb: "RB Coach",
-                  wr: "WR Coach",
-                  other: raw ?? "Staff",
-                };
-                return map[role] ?? raw ?? "Staff";
-              };
-              return (
-                <div className="portal-list">
-                  {schemes && (schemes.offense || schemes.defense) ? (
-                    <div className="portal-row" key="schemes">
-                      <span className="status status--final">SCHEMES</span>
-                      <span><strong>{schemes.offense ?? "—"} offense · {schemes.defense ?? "—"} defense</strong><small>As listed in the coaching research file</small></span>
-                    </div>
-                  ) : null}
-                  {staff.slice(0, 10).map((member) => (
-                    <div className="portal-row" key={`${member.role}-${member.name}`}>
-                      <span className="position-badge">{roleLabel(member.role, member.role_raw).slice(0, 4)}</span>
-                      <span><strong>{member.name}</strong><small>{roleLabel(member.role, member.role_raw)}</small></span>
-                    </div>
-                  ))}
-                </div>
-              );
-            })()}
-          </div>
-          <div className="timeline">
-            <span className="eyebrow">VERIFIED TIMELINE</span>
-            {coach.timeline.map((entry) => (
-              <div key={`${entry.date}-${entry.label}`}>
-                <span className={`timeline-dot timeline-dot--${entry.kind}`} />
-                <time>{entry.date}</time>
-                <strong>{entry.label}</strong>
-              </div>
-            ))}
-          </div>
-          <SourceMeta provenance={coach.provenance} />
-        </div>
-        <aside className="buyout-card">
-          <span className="eyebrow">BUYOUT CALCULATOR</span>
-          <h2>Verified inputs in. Explainable estimate out.</h2>
-          <label>Guaranteed compensation remaining
-            <input type="number" min="0" step="100000" value={guaranteed} onChange={(event) => setGuaranteed(Number(event.target.value))} />
-          </label>
-          <label>Estimated offset / mitigation
-            <input type="number" min="0" step="100000" value={offset} onChange={(event) => setOffset(Number(event.target.value))} disabled={!coach.mitigationApplies} />
-          </label>
-          <div className="buyout-total">
-            <span>Estimated net obligation</span>
-            <strong>{money.format(buyout.estimatedNet)}</strong>
-            <small>{buyout.formula}</small>
-          </div>
-          <p>Editorial estimate only. Real contracts require source-document and counsel review.</p>
-          <a href="/methodology#coaching">Read calculation policy →</a>
-        </aside>
-      </section>
-    </>
-  );
-}
-
-function DfsPage({ mode, onModeRequest }: { mode: Mode; onModeRequest: () => void }) {
-  const [position, setPosition] = useState("All");
-  const [teamFilter, setTeamFilter] = useState("All");
-  const filteredNotes = fantasyNotes.filter(
-    (note) =>
-      (position === "All" || note.position === position) &&
-      (teamFilter === "All" || note.team === teamFilter),
-  );
-
-  if (mode === "clean") {
-    return (
-      <>
-        <PageHeading
-          eyebrow="PRIORITY 05 · OPTIONAL ANALYSIS"
-          title="DFS stays behind a deliberate choice."
-          description="Clean Mode hides fantasy and market context. Core team win-probability models remain available elsewhere and are not betting odds."
-        />
-        <section className="gate-card content-section">
-          <span className="gate-card__mark">21+</span>
-          <div>
-            <span className="eyebrow">CLEAN MODE ACTIVE</span>
-            <h2>Fantasy context, when you ask for it.</h2>
-            <p>Enable the optional preview to see reported roles, usage notes, availability, and analyst ranks for Week 1.</p>
-            <button className="button button--gold" type="button" onClick={onModeRequest}>Review disclosure</button>
-          </div>
-        </section>
-      </>
-    );
-  }
-
-  return (
-    <>
-      <PageHeading
-        eyebrow="PRIORITY 05 · FANTASY NOTES"
-        title="Roles, usage, and availability — as reported."
-        description={`Week 1 college-fantasy notes compiled ${fantasyNotesAsOf ?? "—"} from published analyst boards, official depth charts, and beat reports. Salaries and point projections are never invented; every row cites its sources.`}
-      />
-      <section className="content-section">
-        <div className="scoreboard-summary">
-          <div><span>{fantasyNotes.length}</span><small>PLAYERS NOTED</small></div>
-          <div><span>{new Set(fantasyNotes.map((note) => note.team)).size}</span><small>PROGRAMS</small></div>
-          <div><span>{fantasyNotes.filter((note) => note.projection).length}</span><small>ANALYST RANKS</small></div>
-          <div><span>{fantasyNotes.filter((note) => note.availability !== "active").length}</span><small>NOT FULLY AVAILABLE</small></div>
-        </div>
-        <div className="table-tools">
-          <div>
-            <label>Position
-              <select value={position} onChange={(event) => setPosition(event.target.value)}>
-                {["All", "QB", "RB", "WR", "TE"].map((item) => <option key={item}>{item}</option>)}
-              </select>
-            </label>
-            <label>Team
-              <select value={teamFilter} onChange={(event) => setTeamFilter(event.target.value)}>
-                <option value="All">All</option>
-                {[...new Set(fantasyNotes.map((note) => note.team))].sort().map((slug) => (
-                  <option key={slug} value={slug}>{getTeamBySlug(slug)?.shortName ?? slug}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <span>{filteredNotes.length} notes</span>
-        </div>
-        {filteredNotes.length ? (
-          <section className="data-table-wrap" tabIndex={0} aria-label="Week 1 fantasy notes table">
-            <table className="data-table">
-              <thead>
-                <tr>
-                  <th>Player</th><th>Pos</th><th>Team</th><th>Reported role</th><th>Usage</th><th>Status</th><th>Analyst view</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredNotes.map((note) => (
-                  <tr key={note.id}>
-                    <td>
-                      <strong>{note.player}</strong>
-                      {note.class ? <small className="portal-note">{note.class}</small> : null}
-                      {note.injury ? <small className="portal-note">{note.injury}</small> : null}
-                    </td>
-                    <td>{note.position ?? "—"}</td>
-                    <td><a href={`/teams/${note.team}`}>{getTeamBySlug(note.team)?.shortName ?? note.team}</a></td>
-                    <td><span className="portal-note" style={{ maxWidth: 260 }}>{note.role ?? "—"}</span></td>
-                    <td><span className="portal-note" style={{ maxWidth: 220 }}>{note.usage ?? "—"}</span></td>
-                    <td>
-                      <span className={`portal-status portal-status--${note.availability === "active" ? "committed" : note.availability === "questionable" ? "available" : "withdrawn"}`}>
-                        {note.availability ?? "—"}
-                      </span>
-                    </td>
-                    <td>
-                      {note.projection?.value ?? "—"}
-                      {note.projection?.outlet ? <small className="portal-note">{note.projection.outlet}</small> : null}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
-        ) : (
-          <article className="win-model-card">
-            <div>
-              <span className="eyebrow">NO NOTES FOR THIS FILTER</span>
-              <strong>Fantasy notes</strong>
-            </div>
-            <p>No published notes match the current position and team filter.</p>
-          </article>
-        )}
-        <p className="table-caption">{fantasyNotesContext}</p>
-        <ResponsibleGamingNotice />
-      </section>
-    </>
-  );
-}
-
-function DfsCard({ player }: { player: DfsPlayer }) {
-  const team = teamFor(player.teamId);
-  return (
-    <article className={`dfs-card ${player.availability === "inactive" ? "dfs-card--inactive" : ""}`}>
-      <div className="dfs-card__header">
-        <Monogram team={team} />
-        <span><small>{player.position} · {team.abbreviation}</small><strong>{player.name}</strong><em>{player.availability}</em></span>
-        <b>{money.format(player.salary)}</b>
-      </div>
-      <div className="distribution" role="img" aria-label={`${player.name} floor ${player.floor}, median ${player.median}, ceiling ${player.ceiling} fantasy points`}>
-        <span className="distribution__range" style={{ left: `${player.floor * 2}%`, width: `${(player.ceiling - player.floor) * 2}%` }} />
-        <i style={{ left: `${player.median * 2}%` }} />
-      </div>
-      <div className="quantiles">
-        <span>Floor <strong>{player.floor}</strong></span>
-        <span>Median <strong>{player.median}</strong></span>
-        <span>Ceiling <strong>{player.ceiling}</strong></span>
-      </div>
-      <p><strong>Volume:</strong> {player.projectedVolume}</p>
-      <p><strong>Matchup:</strong> {player.matchup}</p>
-      <SourceMeta provenance={player.provenance} compact />
-    </article>
   );
 }
 
@@ -1620,7 +1213,7 @@ function CommercialPage({ kind }: { kind: "advertise" | "partnerships" | "media-
 }
 
 function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "conferences" | "players"; conferenceSlug?: string }) {
-  if (kind === "coaches") return <CoachingPage />;
+  if (kind === "coaches") return <CoachingLedger coaches={coaches} teams={teams} />;
   if (kind === "conferences") {
     const conferences = [...new Set(teams.map((team) => team.conference))].filter(
       (conference) =>
@@ -1679,16 +1272,6 @@ function PlayerPage({ slug }: { slug: string }) {
         <article><span className="eyebrow">CORRECTIONS</span><h2>Identity and status issues are quarantined first.</h2><a href={`/corrections?record=player-${slug}`}>Report a data issue →</a></article>
       </section>
     </>
-  );
-}
-
-function ResponsibleGamingNotice() {
-  return (
-    <aside className="responsible-notice">
-      <strong>Informational estimates, not promises.</strong>
-      <span>No operator action is configured. Availability and legality vary by jurisdiction.</span>
-      <a href="/responsible-gaming">Responsible-gaming controls →</a>
-    </aside>
   );
 }
 
@@ -1762,11 +1345,39 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else if (root === "scores") content = <ScoresPage {...common} />;
   else if (root === "schedule") content = <SchedulePage {...common} />;
   else if (root === "games" && parts[1]) content = <GamePage gameId={parts[1]} {...common} />;
-  else if (root === "transfer-portal") content = <PortalPage teamSlug={parts[1]} />;
+  else if (root === "transfer-portal") {
+    content = (
+      <TransferPortalBoard
+        events={portalEvents}
+        teams={teams}
+        asOf={portalAsOf}
+        statusNote={portalStatusNote}
+        countsFor={portalCountsFor}
+        teamSlug={parts[1]}
+      />
+    );
+  }
   else if (root === "playoff-predictor") content = <PlayoffPage />;
-  else if (root === "coaching-carousel") content = <CoachingPage />;
-  else if (root === "coaches") content = parts[1] ? <CoachingPage coachSlug={parts[1]} /> : <GenericDirectory kind="coaches" />;
-  else if (root === "dfs") content = <DfsPage mode={mode} onModeRequest={() => setModeDialogOpen(true)} />;
+  else if (root === "coaching-carousel") content = <CoachingLedger coaches={coaches} teams={teams} />;
+  else if (root === "coaches") {
+    content = parts[1] ? (
+      <CoachingLedger coaches={coaches} teams={teams} initialCoachSlug={parts[1]} />
+    ) : (
+      <GenericDirectory kind="coaches" />
+    );
+  }
+  else if (root === "dfs") {
+    content = (
+      <FantasyNotesBoard
+        cleanMode={mode === "clean"}
+        onModeRequest={() => setModeDialogOpen(true)}
+        notes={fantasyNotes}
+        teams={teams}
+        asOf={fantasyNotesAsOf}
+        context={fantasyNotesContext}
+      />
+    );
+  }
   else if (root === "teams") content = <TeamsPage teamSlug={parts[1]} />;
   else if (root === "players" && parts[1]) content = <PlayerPage slug={parts[1]} />;
   else if (root === "conferences") content = <GenericDirectory kind="conferences" conferenceSlug={parts[1]} />;

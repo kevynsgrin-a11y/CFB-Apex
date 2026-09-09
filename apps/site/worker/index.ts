@@ -86,10 +86,11 @@ function stripSpoofableAuthHeaders(request: Request): Request {
 // const imageConfig: ImageConfig = { dangerouslyAllowSVG: true };
 
 const worker = {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: Env | undefined, ctx: ExecutionContext): Promise<Response> {
+    const runtimeEnv = env ?? ({} as Env);
     const url = new URL(request.url);
     const launchReady = isProductionLaunchReady(
-      env as unknown as Record<string, string | undefined>,
+      runtimeEnv as unknown as Record<string, string | undefined>,
     );
 
     if (url.hostname.toLowerCase() === "www.cfbapex.com") {
@@ -113,9 +114,9 @@ const worker = {
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       const imageResponse = await handleImageOptimization(request, {
-        fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
+        fetchAsset: (path) => runtimeEnv.ASSETS.fetch(new Request(new URL(path, request.url))),
         transformImage: async (body, { width, format, quality }) => {
-          const result = await env.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({ format, quality });
+          const result = await runtimeEnv.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({ format, quality });
           return result.response();
         },
       }, allowedWidths);
@@ -142,7 +143,7 @@ const worker = {
       );
     }
 
-    const response = await handler.fetch(stripSpoofableAuthHeaders(request), env, ctx);
+    const response = await handler.fetch(stripSpoofableAuthHeaders(request), runtimeEnv, ctx);
     return secureResponse(response, url, launchReady);
   },
 };
