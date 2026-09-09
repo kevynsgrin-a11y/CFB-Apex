@@ -17,6 +17,56 @@ import {
 } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
 
+test("Heisman watch: every contender maps to a dataset team, odds carry outlets, sources exist", async () => {
+  const { heismanWatch, heismanBoard, oddsRank } = await import("../lib/awards-watch.ts");
+  assert.ok(heismanWatch.contenders.length >= 15, `expected a real watch board, got ${heismanWatch.contenders.length}`);
+  const slugs = new Set(teams.map((team) => team.slug));
+  for (const contender of heismanWatch.contenders) {
+    assert.ok(slugs.has(contender.team_slug), `${contender.player}: unknown team_slug ${contender.team_slug}`);
+    assert.ok(["high", "medium", "low"].includes(contender.confidence), contender.player);
+    assert.ok(contender.stat_line.length > 10, `${contender.player}: stat line missing`);
+    assert.ok(contender.case_for.length > 30 && contender.case_against.length > 20, contender.player);
+    assert.ok(contender.sources.length >= 1, `${contender.player}: no source`);
+    if (contender.odds_as_reported) {
+      for (const odds of contender.odds_as_reported) {
+        assert.ok(odds.outlet.length > 1, `${contender.player}: odds without outlet`);
+        assert.match(odds.value, /\+\d+/, `${contender.player}: odds value not a published price`);
+      }
+    }
+  }
+  // The board orders by shortest reported odds; unpriced contenders sit last.
+  const board = heismanBoard();
+  assert.ok(oddsRank(board[0]) <= oddsRank(board[board.length - 1]));
+  assert.ok(board[0].odds_as_reported !== null, "board leader must be priced");
+  // Cross-verification discipline: the engine-flagged contender is low confidence.
+  const reed = heismanWatch.contenders.find((contender) => contender.player === "Marcel Reed");
+  assert.ok(!reed || reed.confidence === "low", "Reed carries the unresolved-verification flag");
+});
+
+test("NIL watch: ledger is sourced, valuations stay single-source medium, no estimated values", async () => {
+  const { nilWatch, formatValuation } = await import("../lib/awards-watch.ts");
+  assert.ok(nilWatch.week_deals.length >= 15, `expected a real ledger, got ${nilWatch.week_deals.length}`);
+  const slugs = new Set(teams.map((team) => team.slug));
+  for (const deal of nilWatch.week_deals) {
+    assert.ok(slugs.has(deal.team_slug), `${deal.player}: unknown team_slug ${deal.team_slug}`);
+    assert.ok(["high", "medium", "low"].includes(deal.confidence), deal.player);
+    assert.ok(deal.sources.length >= 1, `${deal.player}: unsourced deal`);
+    assert.ok(deal.deal_summary.length > 20, `${deal.player}: summary missing`);
+    if (deal.announced_value != null) assert.ok(deal.announced_value > 0, deal.player);
+  }
+  for (const entry of nilWatch.watch_valuations) {
+    assert.ok(slugs.has(entry.team_slug), `valuation: unknown team_slug ${entry.team_slug}`);
+    // On3's index is a single proprietary source — high would violate the two-source rule.
+    assert.ok(entry.confidence !== "high", `${entry.player}: valuation cannot be high confidence`);
+    assert.ok(entry.valuation.reported_by.length > 1, entry.player);
+    assert.match(entry.valuation.reported_on, /^\d{4}-\d{2}-\d{2}$/, entry.player);
+  }
+  assert.ok(nilWatch.watch_valuations.length >= 15);
+  assert.equal(formatValuation(6500000), "$6.5M");
+  assert.equal(formatValuation(225000), "$225K");
+  assert.equal(formatValuation(null), "Not disclosed");
+});
+
 test("injury desk: ESPN base maps to dataset teams, long-term rule holds, cadence works", async () => {
   const injury = await import("../lib/injury-report.ts");
   // ESPN's college feed populates through the season — early season may be thin;
