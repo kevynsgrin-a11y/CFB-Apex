@@ -5,7 +5,6 @@ import {
   broadcastAsOf,
   broadcastNote,
   coaches,
-  dfsPlayers,
   fantasyNotes,
   fantasyNotesAsOf,
   fantasyNotesContext,
@@ -37,10 +36,14 @@ import {
 } from "@/lib/cfb-dataset";
 import { brand, disclosureVersion } from "@/lib/config";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
+import { getRosterPlayerBySlug } from "@/lib/player-records";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import { getTeamHubData } from "@/lib/team-hub";
 import type { Game, Provenance, Team } from "@/lib/types";
+import { PlayerRecordPage } from "./player-record-page";
+import { SiteSearchPage } from "./site-search-page";
 import { SourceMeta } from "./SourceMeta";
+import { StadiumDetail, StadiumDirectory } from "./stadium-pages";
 import { BroadcastFooter } from "./broadcast/footer";
 import { BroadcastHeader } from "./broadcast/header";
 import { BroadcastHomepage } from "./broadcast/homepage";
@@ -61,16 +64,6 @@ const signed = (value: number) => `${value > 0 ? "+" : ""}${value.toFixed(1)}`;
 
 function teamFor(teamId: string) {
   return getTeam(teamId);
-}
-
-/** Dataset teams render as links; external programs (FCS origins) stay plain. */
-function teamLabelFor(teamId: string) {
-  const team = getTeamBySlug(teamId);
-  if (team) return { label: team.shortName, slug: team.slug };
-  return {
-    label: teamId.replaceAll("-", " ").replace(/\b\w/g, (c) => c.toUpperCase()),
-    slug: null,
-  };
 }
 
 function ModeDialog({
@@ -734,85 +727,6 @@ function TeamDetail({ team }: { team: Team }) {
   return <TeamHub {...getTeamHubData(team)} />;
 }
 
-function StadiumsPage({ stadiumSlug }: { stadiumSlug?: string }) {
-  const stadium = stadiumSlug ? getStadiumBySlug(stadiumSlug) : undefined;
-  if (stadium) return <StadiumDetail slug={stadium.slug} />;
-  return (
-    <>
-      <PageHeading
-        eyebrow="GAMEDAY FIELD NOTES"
-        title="Parking, bags, transit, and the gate."
-        description={`Venue guides for all 138 FBS programs, verified ${stadiums[0]?.lastVerified ?? "—"}. Policies change; confirm with the official athletics page before you travel.`}
-      />
-      {stadiums.length === 0 ? (
-        <section className="content-section">
-          <article className="win-model-card">
-            <div>
-              <span className="eyebrow">NOT AVAILABLE IN THIS DATASET</span>
-              <strong>Stadium guides</strong>
-            </div>
-            <p>
-              Parking, bag policy, transit, and accessibility briefs are not part of the 2026
-              research package. They turn on when venue data joins a future release.
-            </p>
-          </article>
-        </section>
-      ) : (
-        <section className="stadium-grid content-section">
-          {stadiums.map((item) => {
-            const team = teamFor(item.teamId);
-            return (
-              <a href={`/stadiums/${item.slug}`} key={item.slug}>
-                <div className="stadium-visual"><span>{team.monogram}</span><i /></div>
-                <div><small>{item.city}</small><h2>{item.name}</h2><p>{item.capacity.toLocaleString()} capacity · verified {item.lastVerified}</p></div>
-                <span>Open guide →</span>
-              </a>
-            );
-          })}
-        </section>
-      )}
-    </>
-  );
-}
-
-function StadiumDetail({ slug }: { slug: string }) {
-  const stadium = getStadiumBySlug(slug) ?? stadiums[0];
-  const team = teamFor(stadium.teamId);
-  const items = [
-    ["Parking", stadium.parking],
-    ["Transit & shuttle", stadium.transit],
-    ["Clear-bag policy", stadium.clearBag],
-    ["Tailgating", stadium.tailgating],
-    ["Visitor section", stadium.visitorSection],
-    ["Accessibility", stadium.accessibility],
-  ];
-  return (
-    <>
-      <div className="stadium-hero">
-        <div><span className="eyebrow">{team.shortName} · VENUE GUIDE</span><h1>{stadium.name}</h1><p>{stadium.address} · {stadium.capacity.toLocaleString()} capacity</p></div>
-        <div className="stadium-map" role="img" aria-label={`Stylized map placeholder for ${stadium.name}`}>
-          <span>{team.monogram}</span><i /><b>MAP PROVIDER NOT CONFIGURED</b>
-        </div>
-      </div>
-      <section className="content-section stadium-detail-grid">
-        {items.map(([title, copy]) => (
-          <article key={title}><span className="eyebrow">{title}</span><p>{copy}</p></article>
-        ))}
-        {stadium.notes ? <article><span className="eyebrow">Venue note</span><p>{stadium.notes}</p></article> : null}
-        {stadium.sources && stadium.sources.length > 0 ? (
-          <article><span className="eyebrow">Sources</span><p>{stadium.sources.map((source, index) => (
-            <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>
-          ))}</p></article>
-        ) : null}
-        <article className="stadium-detail-grid__source">
-          <SourceMeta provenance={stadium.provenance} />
-          <a href={`/corrections?record=stadium-${stadium.slug}`}>Report a guide issue →</a>
-        </article>
-      </section>
-    </>
-  );
-}
-
 function RankingsPage() {
   const [pollId, setPollId] = useState("ap");
   const table = pollTables.find((poll) => poll.poll === pollId) ?? pollTables[0];
@@ -970,49 +884,6 @@ function RankingsPage() {
             </a>
           ))}
         </div>
-      </section>
-    </>
-  );
-}
-
-function SearchPage() {
-  const [query, setQuery] = useState("");
-  const normalized = query.trim().toLowerCase();
-  const playerResults = useMemo(() => searchPlayers(normalized, 8), [normalized]);
-  const results = useMemo(() => {
-    if (!normalized) return [];
-    return [
-      ...teams.filter((team) => team.name.toLowerCase().includes(normalized)).map((team) => ({ href: `/teams/${team.slug}`, label: team.name, type: "Team" })),
-      ...coaches.filter((coach) => coach.name.toLowerCase().includes(normalized)).map((coach) => ({ href: `/coaches/${coach.slug}`, label: coach.name, type: "Coach" })),
-    ];
-  }, [normalized]);
-  return (
-    <>
-      <PageHeading eyebrow="SEARCH" title="Find the next useful answer." description="Search all 138 teams, 134 head coaches, and every rostered player in the 2026 dataset." />
-      <section className="search-panel content-section">
-        <label htmlFor="site-search">Search the Hub</label>
-        <input id="site-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try Clemson, Dabo Swinney, or Bryant Wesco" />
-        {normalized ? (
-          <>
-            {results.length ? <div className="search-results">{results.map((result) => <a href={result.href} key={`${result.type}-${result.href}`}><span>{result.type}</span><strong>{result.label}</strong><b>→</b></a>)}</div> : null}
-            {playerResults.length ? (
-              <>
-                <SectionHeading eyebrow="PLAYERS" title="Roster matches" />
-                <div className="portal-list">
-                  {playerResults.map((player) => (
-                    <a className="portal-row" href={`/teams/${player.t}`} key={`${player.n}-${player.t}`}>
-                      <span className="position-badge">{player.p ?? "—"}</span>
-                      <span><strong>{player.n}</strong><small>{player.teamName}</small></span>
-                      <span aria-hidden="true">→</span>
-                    </a>
-                  ))}
-                </div>
-                <p className="panel-note">Player links open the team page; individual player pages arrive with roster page depth.</p>
-              </>
-            ) : null}
-            {!results.length && !playerResults.length ? <EmptyState title="No matching record." copy="Try a team, coach, or player name." /> : null}
-          </>
-        ) : <p>Start typing to search the 2026 dataset.</p>}
       </section>
     </>
   );
@@ -1350,65 +1221,19 @@ function ConferenceHubPage({ slug }: { slug: string }) {
   );
 }
 
-function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "conferences" | "players"; conferenceSlug?: string }) {
+function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "conferences"; conferenceSlug?: string }) {
   if (kind === "coaches") return <CoachingLedger coaches={coaches} teams={teams} />;
-  if (kind === "conferences") {
-    const conferences = [...new Set(teams.map((team) => team.conference))].filter(
-      (conference) =>
-        !conferenceSlug || conference.toLowerCase().replaceAll(" ", "-") === conferenceSlug,
-    );
-    return (
-      <>
-        <PageHeading eyebrow="SEASON-AWARE STRUCTURE" title="Conference membership is data, not a constant." description="Conference affiliation is versioned to the 2026 dataset, not hardcoded." />
-        <section className="conference-grid content-section">{conferences.map((conference) => {
-          const members = teams.filter((team) => team.conference === conference);
-          return <article key={conference}><span className="eyebrow">{members.length} members</span><h2>{conference}</h2><div>{members.map((team) => <a href={`/teams/${team.slug}`} key={team.id}>{team.shortName}<b>{team.record}</b></a>)}</div></article>;
-        })}</section>
-      </>
-    );
-  }
-  return <SearchPage />;
-}
-
-function PlayerPage({ slug }: { slug: string }) {
-  const portal = portalEvents.find((event) => event.playerSlug === slug);
-  const dfs = dfsPlayers.find((player) => player.slug === slug);
-  const fantasyBySlug = fantasyNotes.find(
-    (note) =>
-      note.player
-        .toLowerCase()
-        .normalize("NFKD")
-        .replace(/[^a-z ]/g, "")
-        .trim()
-        .replaceAll(" ", "-") === slug,
+  const conferences = [...new Set(teams.map((team) => team.conference))].filter(
+    (conference) =>
+      !conferenceSlug || conference.toLowerCase().replaceAll(" ", "-") === conferenceSlug,
   );
-  if (!portal && !dfs && !fantasyBySlug) return <NotFoundPage />;
-  const playerName = portal?.player ?? dfs?.name ?? fantasyBySlug!.player;
-  const currentTeamId = portal?.toTeamId ?? dfs?.teamId ?? fantasyBySlug?.team ?? portal?.fromTeamId;
-  const currentTeam = currentTeamId ? getTeamBySlug(currentTeamId) : undefined;
-  const origin = portal ? teamLabelFor(portal.fromTeamId) : null;
-  const destination = portal?.toTeamId ? teamLabelFor(portal.toTeamId) : null;
-  const fantasyNote = fantasyNotes.find((note) => note.player === playerName);
   return (
     <>
-      <PageHeading eyebrow="PLAYER RECORD" title={playerName} description={`${portal?.position ?? fantasyBySlug?.position ?? dfs?.position} · ${currentTeam?.shortName ?? "Available"} · source and model states remain separate.`} />
-      <section className="player-layout content-section">
-        {portal ? <article><span className="eyebrow">PORTAL EVENT</span><h2>{origin?.label} → {destination?.label ?? "Available"}</h2><p>{portal.snaps == null ? "No published snap count" : `${portal.snaps} prior snaps`} · {portal.eventDate} · {portal.confidence} confidence</p>{portal.notes ? <p className="panel-note">{portal.notes}</p> : null}{portal.sources && portal.sources.length ? <p className="panel-note">Sources: {portal.sources.map((source, index) => <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>)}</p> : null}<SourceMeta provenance={portal.provenance} /></article> : null}
-        {fantasyNote ? (
-          <article>
-            <span className="eyebrow">FANTASY NOTE · {fantasyNote.as_of ?? "—"}</span>
-            <h2>{fantasyNote.position ?? "—"} · {getTeamBySlug(fantasyNote.team)?.shortName ?? fantasyNote.team} · {fantasyNote.availability ?? "status unreported"}</h2>
-            {fantasyNote.role ? <p>{fantasyNote.role}</p> : null}
-            {fantasyNote.usage ? <p className="panel-note">{fantasyNote.usage}</p> : null}
-            {fantasyNote.injury ? <p className="panel-note">{fantasyNote.injury}</p> : null}
-            {fantasyNote.projection?.value ? <p className="panel-note"><strong>{fantasyNote.projection.outlet ?? "Analyst"}:</strong> {fantasyNote.projection.value}</p> : null}
-            {fantasyNote.sources.length ? <p className="panel-note">Sources: {fantasyNote.sources.map((source, index) => <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>)}</p> : null}
-          </article>
-        ) : (
-          <article><span className="eyebrow">FANTASY NOTE</span><h2>No published Week 1 note.</h2><p>Missing notes remain an explicit empty state.</p></article>
-        )}
-        <article><span className="eyebrow">CORRECTIONS</span><h2>Identity and status issues are quarantined first.</h2><a href={`/corrections?record=player-${slug}`}>Report a data issue →</a></article>
-      </section>
+      <PageHeading eyebrow="SEASON-AWARE STRUCTURE" title="Conference membership is data, not a constant." description="Conference affiliation is versioned to the 2026 dataset, not hardcoded." />
+      <section className="conference-grid content-section">{conferences.map((conference) => {
+        const members = teams.filter((team) => team.conference === conference);
+        return <article key={conference}><span className="eyebrow">{members.length} members</span><h2>{conference}</h2><div>{members.map((team) => <a href={`/teams/${team.slug}`} key={team.id}>{team.shortName}<b>{team.record}</b></a>)}</div></article>;
+      })}</section>
     </>
   );
 }
@@ -1518,10 +1343,27 @@ export function HubApp({ path = "/" }: { path?: string }) {
     );
   }
   else if (root === "teams") content = <TeamsPage teamSlug={parts[1]} />;
-  else if (root === "players" && parts[1]) content = <PlayerPage slug={parts[1]} />;
+  else if (root === "players" && parts[1]) {
+    content = (
+      <PlayerRecordPage
+        slug={parts[1]}
+        portalEvents={portalEvents}
+        fantasyNotes={fantasyNotes}
+        rosterPlayer={getRosterPlayerBySlug(parts[1])}
+        teams={teams}
+      />
+    );
+  }
   else if (root === "conferences" && parts[1]) content = <ConferenceHubPage slug={parts[1]} />;
   else if (root === "conferences") content = <GenericDirectory kind="conferences" />;
-  else if (root === "stadiums") content = <StadiumsPage stadiumSlug={parts[1]} />;
+  else if (root === "stadiums") {
+    const stadium = parts[1] ? getStadiumBySlug(parts[1]) : undefined;
+    content = stadium ? (
+      <StadiumDetail stadium={stadium} team={teamFor(stadium.teamId)} />
+    ) : (
+      <StadiumDirectory stadiums={stadiums} teams={teams} />
+    );
+  }
   else if (root === "watch") {
     content = (
       <WatchPage
@@ -1537,7 +1379,9 @@ export function HubApp({ path = "/" }: { path?: string }) {
     );
   }
   else if (root === "rankings") content = <RankingsPage />;
-  else if (root === "search") content = <SearchPage />;
+  else if (root === "search") {
+    content = <SiteSearchPage teams={teams} coaches={coaches} searchPlayers={searchPlayers} />;
+  }
   else if (root === "newsletter") content = <NewsletterPage />;
   else if (root === "methodology") content = <MethodologyPage />;
   else if (root === "data-sources") content = <DataSourcesPage />;
