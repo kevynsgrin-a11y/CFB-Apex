@@ -18,7 +18,6 @@ const navigation = [
   { label: "Scores", href: "/scores" },
   { label: "Teams", href: "/teams" },
   { label: "Rankings", href: "/rankings" },
-  { label: "Portal", href: "/transfer-portal" },
   { label: "Watch", href: "/watch" },
   { label: "Injuries", href: "/injuries" },
   { label: "Fantasy", href: "/dfs" },
@@ -27,9 +26,50 @@ const navigation = [
   { label: "Highlight", href: "/highlight" },
   { label: "NIL", href: "/nil" },
   { label: "The Panel", href: "/panel" },
+  { label: "Portal", href: "/transfer-portal" },
   { label: "Coaches", href: "/coaches" },
   { label: "Stadiums", href: "/stadiums" },
   { label: "More Sports ↗", href: "https://sports-always.com", external: true },
+];
+
+/** Drawer sections: every surface on the site, grouped for scanning. */
+const navSections: Array<{ label: string; items: typeof navigation }> = [
+  {
+    label: "Season",
+    items: [
+      { label: "Scores", href: "/scores" },
+      { label: "Teams", href: "/teams" },
+      { label: "Rankings", href: "/rankings" },
+      { label: "Watch", href: "/watch" },
+      { label: "Injuries", href: "/injuries" },
+    ],
+  },
+  {
+    label: "Features",
+    items: [
+      { label: "Fantasy", href: "/dfs" },
+      { label: "No Names", href: "/no-names" },
+      { label: "Heisman", href: "/heisman" },
+      { label: "Highlight", href: "/highlight" },
+      { label: "NIL", href: "/nil" },
+      { label: "The Panel", href: "/panel" },
+    ],
+  },
+  {
+    label: "Intelligence",
+    items: [
+      { label: "Transfer Portal", href: "/transfer-portal" },
+      { label: "Coaches", href: "/coaches" },
+      { label: "Stadiums", href: "/stadiums" },
+      { label: "Search", href: "/search" },
+    ],
+  },
+  {
+    label: "Network",
+    items: [
+      { label: "More Sports ↗", href: "https://sports-always.com", external: true },
+    ],
+  },
 ];
 
 interface HeaderProps {
@@ -73,6 +113,17 @@ export function BroadcastHeader({
       </a>
       <header className="apex-header">
         <div className="apex-header-inner apex-container">
+          <button
+            type="button"
+            className={`apex-menu-toggle${panel === "menu" ? " is-open" : ""}`}
+            onClick={() => openPanel("menu")}
+            aria-haspopup="dialog"
+            aria-expanded={panel === "menu"}
+          >
+            <Menu size={16} aria-hidden="true" />
+            <span>All features</span>
+            <b className="apex-menu-toggle-count">{navigation.length}</b>
+          </button>
           <ApexLogo />
           <nav className="apex-primary-nav" aria-label="Primary navigation">
             {navigation.map((item) =>
@@ -146,14 +197,7 @@ export function BroadcastHeader({
                 opens an optional analysis disclosure.
               </span>
             </div>
-            <button
-              className="apex-icon-button apex-mobile-menu-button"
-              type="button"
-              aria-label="Open navigation menu"
-              onClick={() => openPanel("menu")}
-            >
-              <Menu size={22} aria-hidden="true" />
-            </button>
+
           </div>
         </div>
       </header>
@@ -175,10 +219,12 @@ export function BroadcastHeader({
             <div className="apex-menu-heading">
               <div>
                 <Dialog.Title className="font-display">
-                  {panel === "search" ? "Find your edge." : "Find your team."}
+                  {panel === "search" ? "Find your edge." : panel === "menu" ? "Every feature. One panel." : "Find your team."}
                 </Dialog.Title>
                 <Dialog.Description>
-                  {teams.length} programs. Every conference. One place.
+                  {panel === "menu"
+                    ? "The whole site, grouped: season coverage, weekly features, and the intelligence boards."
+                    : `${teams.length} programs. Every conference. One place.`}
                 </Dialog.Description>
               </div>
               <Dialog.Close
@@ -200,17 +246,24 @@ export function BroadcastHeader({
             </div>
             {panel === "menu" && (
               <nav className="apex-drawer-nav" aria-label="All navigation">
-                {navigation.map((item) => (
-                  <a
-                    href={item.href}
-                    key={item.href}
-                    {...("external" in item && item.external
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                  >
-                    {item.label}
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </a>
+                {navSections.map((section) => (
+                  <section key={section.label} className="apex-drawer-section">
+                    <h3 className="apex-eyebrow">{section.label}</h3>
+                    <div className="apex-drawer-links">
+                      {section.items.map((item) => (
+                        <a
+                          href={item.href}
+                          key={item.href}
+                          {...("external" in item && item.external
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
+                        >
+                          {item.label}
+                          <ArrowRight size={16} aria-hidden="true" />
+                        </a>
+                      ))}
+                    </div>
+                  </section>
                 ))}
               </nav>
             )}
