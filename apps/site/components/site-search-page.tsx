@@ -142,7 +142,7 @@ export function SiteSearchPage({ teams, coaches, searchPlayers }: SiteSearchPage
 
   useEffect(() => {
     setActiveIndex(allResults.length ? 0 : -1);
-  }, [allResults.length, debouncedQuery]);
+  }, [allResults]);
 
   const activeResultId = activeIndex >= 0 ? `site-search-result-${activeIndex}` : undefined;
   const isDebouncing = query.trim() !== debouncedQuery;
@@ -196,7 +196,7 @@ export function SiteSearchPage({ teams, coaches, searchPlayers }: SiteSearchPage
 
       <section className="lt-search-shell lt-section" aria-labelledby="site-search-heading">
         <h2 className="sr-only" id="site-search-heading">Site-wide search</h2>
-        <form className="lt-search-form" role="search" onSubmit={handleSubmit}>
+        <form className="lt-search-form" aria-label="Site-wide search" onSubmit={handleSubmit}>
           <SearchIcon aria-hidden="true" />
           <label className="sr-only" htmlFor="site-wide-search">Search teams, coaches, and players</label>
           <input
@@ -250,12 +250,7 @@ export function SiteSearchPage({ teams, coaches, searchPlayers }: SiteSearchPage
           >
             {groups.map((group) =>
               group.results.length ? (
-                <section
-                  className="lt-search-group"
-                  key={group.label}
-                  role="group"
-                  aria-labelledby={`search-group-${group.label.toLowerCase()}`}
-                >
+                <div className="lt-search-group" key={group.label}>
                   <div className="lt-search-group__heading">
                     <h2 id={`search-group-${group.label.toLowerCase()}`} className="font-display">{group.label}</h2>
                     <span>{group.results.length}</span>
@@ -288,7 +283,7 @@ export function SiteSearchPage({ teams, coaches, searchPlayers }: SiteSearchPage
                       );
                     })}
                   </div>
-                </section>
+                </div>
               ) : null,
             )}
           </div>

@@ -110,9 +110,8 @@ export function PlayerRecordPage({
                 </span>
               </div>
 
-              <div
+              <section
                 className="lt-transfer-route"
-                role="group"
                 aria-label={`${originTeam?.shortName ?? portalEvent.fromTeamId} to ${destinationTeam?.shortName ?? "available"}`}
               >
                 <div>
@@ -128,7 +127,7 @@ export function PlayerRecordPage({
                     <span>Available</span>
                   )}
                 </div>
-              </div>
+              </section>
 
               <dl className="lt-record-facts">
                 <div>

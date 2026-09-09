@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   broadcastAsOf,
   broadcastNote,
@@ -10,7 +10,6 @@ import {
   fantasyNotesContext,
   games,
   getConferenceHub,
-  conferenceHubSlugs,
   getGame,
   getPreseasonRating,
   getStadiumBySlug,

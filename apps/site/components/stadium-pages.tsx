@@ -113,7 +113,11 @@ export function StadiumDirectory({ stadiums, teams }: StadiumDirectoryProps) {
           </span>
         </div>
 
-        <form className="lt-filter" role="search" onSubmit={(event) => event.preventDefault()}>
+        <form
+          className="lt-filter"
+          aria-label="Search stadiums"
+          onSubmit={(event) => event.preventDefault()}
+        >
           <Search aria-hidden="true" />
           <label className="sr-only" htmlFor="stadium-filter">
             Search stadiums by name or city
