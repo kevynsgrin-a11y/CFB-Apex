@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { teamStyle, type BroadcastTeam } from "@/lib/homepage";
+import { useFavoriteGesture } from "@/components/polish/favorites";
 
 export function ApexLogo() {
   return (
@@ -27,11 +28,13 @@ export function TeamMark({
   priority?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
+  const favoriteGesture = useFavoriteGesture(team.slug, team.shortName);
   return (
     <span
       className={`apex-team-mark apex-team-mark--${size}`}
       style={teamStyle(team.color)}
       aria-hidden="true"
+      {...favoriteGesture}
     >
       {team.logo && !failed ? (
         <Image

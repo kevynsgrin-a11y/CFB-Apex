@@ -13,9 +13,10 @@ const [component, portalBoard, searchPage, stadiumPages, css, broadcastHeader] =
 
 test("global shell includes accessibility foundations", () => {
   assert.match(broadcastHeader, /className="skip-link"/);
-  assert.match(component, /<main id="main-content">/);
+  assert.match(component, /<main id="main-content" className="route-frame"/);
   assert.match(component, /aria-modal="true"/);
-  assert.match(portalBoard, /<section className="db-table-wrap" tabIndex=\{0\} aria-label="Scrollable portal movement table"/);
+  assert.match(portalBoard, /className="db-table-wrap db-desktop-data-table"/);
+  assert.match(portalBoard, /<MobileDataCardStack label="Transfer portal records">/);
   assert.match(searchPage, /event\.key === "ArrowDown"/);
   assert.match(searchPage, /aria-activedescendant=\{activeResultId\}/);
   assert.match(stadiumPages, /htmlFor="stadium-filter"/);

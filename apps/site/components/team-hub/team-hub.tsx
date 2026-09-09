@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, ChevronRight, ShieldCheck } from "lucide-react";
 import type { TeamHubProps } from "@/lib/team-hub";
+import { FavoriteButton } from "@/components/polish/favorites";
 import { ScheduleSection } from "./schedule";
 import { RosterSection } from "./roster";
 import {
@@ -69,13 +70,16 @@ export function TeamHub(props: TeamHubProps) {
       .filter((element): element is HTMLElement => Boolean(element));
     const header = document.querySelector<HTMLElement>(".apex-header");
     let frame: number | null = null;
+    let hashFrame: number | null = null;
     const update = () => {
       frame = null;
       const headerHeight = header?.getBoundingClientRect().height ?? 0;
       root.style.setProperty("--hub-header-height", `${headerHeight}px`);
+      const rail = railRef.current;
+      const railTop = rail ? Number.parseFloat(getComputedStyle(rail).top) : Number.NaN;
       const offset =
-        headerHeight +
-        (railRef.current?.getBoundingClientRect().height ?? 0) +
+        (Number.isFinite(railTop) ? railTop : headerHeight) +
+        (rail?.getBoundingClientRect().height ?? 0) +
         48;
       const current = elements
         .filter((section) => section.getBoundingClientRect().top <= offset)
@@ -89,6 +93,18 @@ export function TeamHub(props: TeamHubProps) {
     };
     const onScroll = () => {
       if (frame == null) frame = window.requestAnimationFrame(update);
+    };
+    const syncHashTarget = () => {
+      const hashTarget = window.location.hash.slice(1) as SectionId;
+      if (!sections.includes(hashTarget)) return;
+      setActiveSection(hashTarget);
+      if (hashFrame != null) window.cancelAnimationFrame(hashFrame);
+      hashFrame = window.requestAnimationFrame(() => {
+        hashFrame = window.requestAnimationFrame(() => {
+          hashFrame = null;
+          update();
+        });
+      });
     };
     const resize = new ResizeObserver(onScroll);
     if (header) resize.observe(header);
@@ -107,15 +123,27 @@ export function TeamHub(props: TeamHubProps) {
     for (const element of elements) entrance.observe(element);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    window.addEventListener("hashchange", syncHashTarget);
     update();
+    syncHashTarget();
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      window.removeEventListener("hashchange", syncHashTarget);
       resize.disconnect();
       entrance.disconnect();
       if (frame != null) window.cancelAnimationFrame(frame);
+      if (hashFrame != null) window.cancelAnimationFrame(hashFrame);
     };
   }, [team.slug]);
+
+  useEffect(() => {
+    if (!window.matchMedia("(max-width: 720px)").matches) return;
+    const active = railRef.current?.querySelector<HTMLElement>(
+      `.hub-rail-links a[href="#${activeSection}"]`,
+    );
+    active?.scrollIntoView({ behavior: "auto", block: "nearest", inline: "center" });
+  }, [activeSection]);
 
   return (
     <div
@@ -143,6 +171,7 @@ export function TeamHub(props: TeamHubProps) {
             <div className="hub-hero-kicker">
               <span className="hub-team-chip">{team.conference}</span>
               <span className="hub-eyebrow">{season} SEASON</span>
+              <FavoriteButton teamId={team.slug} teamName={team.shortName} />
               {team.rank != null ? (
                 <span
                   className="hub-rank-chip"
