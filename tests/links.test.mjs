@@ -16,6 +16,7 @@ const required = [
   "/playoff-predictor",
   "/coaching-carousel",
   "/dfs",
+  "/injuries",
   "/stadiums",
   "/watch",
   "/methodology",

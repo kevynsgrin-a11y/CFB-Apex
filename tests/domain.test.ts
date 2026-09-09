@@ -17,6 +17,32 @@ import {
 } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
 
+test("injury desk: ESPN base maps to dataset teams, long-term rule holds, cadence works", async () => {
+  const injury = await import("../lib/injury-report.ts");
+  // ESPN's college feed populates through the season — early season may be thin;
+  // every published entry must still map to a real dataset team or null.
+  const slugs = new Set(teams.map((team) => team.slug));
+  for (const entry of injury.espnInjuries) {
+    assert.ok(entry.teamSlug === null || slugs.has(entry.teamSlug), `unknown team ${entry.teamSlug}`);
+  }
+  assert.ok(injury.isLongTerm({ status: "IR", weeksOut: null }));
+  assert.ok(injury.isLongTerm({ status: "OUT", weeksOut: 3 }));
+  assert.ok(!injury.isLongTerm({ status: "OUT", weeksOut: 2 }));
+  assert.ok(!injury.isLongTerm({ status: "QUESTIONABLE", weeksOut: null }));
+  assert.equal(injury.likelihoodFromPractice({ wed: null, thu: "FP", fri: "FP", sat: null }).likelihood, "likely");
+  assert.equal(injury.likelihoodFromPractice({ wed: null, thu: null, fri: "DNP", sat: null }).likelihood, "doubtful");
+  assert.equal(injury.likelihoodFromPractice({ wed: null, thu: null, fri: null, sat: null }).likelihood, null);
+  assert.equal(injury.INJURY_CADENCE.length, 3); // Tuesday main + two Saturday slots
+  const next = injury.nextInjurySlot();
+  assert.ok(next.at.getTime() > Date.now());
+  const friday = new Date("2026-09-11T18:00:00Z"); // 11 AM PT Friday
+  const fromFriday = injury.nextInjurySlot(friday);
+  assert.ok(fromFriday.at.getTime() > friday.getTime());
+  assert.equal(fromFriday.slot.id, "saturday-morning");
+  assert.equal(injury.injuryResearch.ledger.length, 0);
+  assert.equal(injury.injuryResearch.watch.length, 0);
+});
+
 test("transfer portal ledger is complete, sourced, and slug-clean", () => {
   assert.ok(portalEvents.length >= 600, `expected a full portal ledger, got ${portalEvents.length}`);
   assert.match(portalAsOf ?? "", /^\d{4}-\d{2}-\d{2}$/);

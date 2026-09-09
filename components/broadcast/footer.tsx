@@ -6,6 +6,7 @@ const columns = [
     title: "Product",
     links: [
       ["Scores & schedules", "/scores"],
+      ["Injury report", "/injuries"],
       ["All teams", "/teams"],
       ["Rankings", "/rankings"],
       ["Transfer portal", "/transfer-portal"],

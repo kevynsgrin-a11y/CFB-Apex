@@ -12,6 +12,7 @@ const staticRoots = new Set([
   "playoff-bracket",
   "no-names",
   "heisman",
+  "injuries",
   "nil",
   "panel",
   "coaches",
@@ -111,6 +112,13 @@ export async function generateMetadata({
       description: team
         ? `Verified incoming and outgoing transfer movement for ${team.name}.`
         : "Track verified college football transfers by player, position, program, status, date, and source confidence.",
+    };
+  }
+  if (root === "injuries") {
+    return {
+      title: "College Football Injury Report — Long-Term Ledger & Weekly Watch",
+      description:
+        "Every player out for the season or more than two weeks, plus a week-to-week watch with verified practice status and sourced likelihood to play. Weekly main report plus Saturday morning and midday updates.",
     };
   }
   if (root === "dfs") {

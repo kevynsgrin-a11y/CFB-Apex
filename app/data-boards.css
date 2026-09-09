@@ -1953,3 +1953,152 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================================== Injury report desk */
+
+.inj-page {
+  padding-bottom: 56px;
+}
+
+.inj-cadence-next {
+  align-items: center;
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, var(--border));
+  border-radius: var(--radius);
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding: 14px 18px;
+}
+
+.inj-cadence-next svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.inj-cadence-next strong {
+  color: var(--text);
+  display: block;
+  font-size: 0.98rem;
+}
+
+.inj-cadence-next span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.inj-cadence-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr));
+}
+
+.inj-cadence-slot {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 14px;
+}
+
+.inj-cadence-slot.is-next {
+  border-color: color-mix(in srgb, var(--primary) 50%, var(--border));
+}
+
+.inj-cadence-slot strong {
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.inj-cadence-slot span {
+  color: var(--muted-2);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inj-cadence-slot p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 4px 0 0;
+}
+
+.inj-cadence + .apex-data-note {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.inj-team-select {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font: 600 13px/1 var(--body-family);
+  padding: 9px 12px;
+}
+
+.inj-pill {
+  border-radius: 999px;
+  display: inline-flex;
+  font: 700 11px/1.4 var(--body-family);
+  letter-spacing: 0.05em;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+.inj-pill small {
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.inj-pill--ir { background: color-mix(in srgb, var(--red) 16%, transparent); color: var(--red); }
+.inj-pill--out { background: color-mix(in srgb, var(--orange) 16%, transparent); color: var(--orange); }
+.inj-pill--susp { background: color-mix(in srgb, var(--muted-2) 18%, transparent); color: var(--muted); }
+.inj-pill--q { background: color-mix(in srgb, var(--gold) 16%, transparent); color: var(--gold); }
+.inj-pill--likely { background: color-mix(in srgb, var(--green) 16%, transparent); color: var(--green); }
+.inj-pill--none { background: color-mix(in srgb, var(--muted-2) 14%, transparent); color: var(--muted); }
+
+.inj-practice {
+  font: 700 11px/1 var(--font-mono, monospace);
+  letter-spacing: 0.04em;
+}
+
+.inj-practice--fp { color: var(--green); }
+.inj-practice--lp { color: var(--gold); }
+.inj-practice--dnp { color: var(--red); }
+.inj-practice--none { color: var(--muted-2); }
+
+.inj-table td,
+.inj-table th {
+  vertical-align: top;
+}
+
+.inj-detail {
+  color: var(--muted);
+  font-size: 0.85rem;
+  max-width: 340px;
+}
+
+.inj-conf {
+  color: var(--muted-2);
+  font-size: 11px;
+}
+
+.inj-src-espn {
+  color: var(--muted-2);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inj-watch-note {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 14px;
+  max-width: 78ch;
+}
