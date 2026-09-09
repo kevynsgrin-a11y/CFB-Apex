@@ -49,6 +49,7 @@ import { PlayerRecordPage } from "./player-record-page";
 import { SiteSearchPage } from "./site-search-page";
 import { SourceMeta } from "./SourceMeta";
 import { StadiumDetail, StadiumDirectory } from "./stadium-pages";
+import { NoNamesPage, HeismanPage, NILWatchPage, AIPanelPage } from "./feature-dashboards";
 import { BroadcastFooter } from "./broadcast/footer";
 import { BroadcastHeader } from "./broadcast/header";
 import { BroadcastHomepage } from "./broadcast/homepage";
@@ -1546,6 +1547,10 @@ export function HubApp({ path = "/" }: { path?: string }) {
   }
   else if (root === "playoff-predictor") content = <PlayoffPage />;
   else if (root === "playoff-bracket") content = <CFPBracketPage />;
+  else if (root === "no-names") content = <NoNamesPage />;
+  else if (root === "heisman") content = <HeismanPage />;
+  else if (root === "nil") content = <NILWatchPage />;
+  else if (root === "panel") content = <AIPanelPage />;
   else if (root === "coaching-carousel") content = <CoachingLedger coaches={coaches} teams={teams} />;
   else if (root === "coaches") {
     content = parts[1] ? (
