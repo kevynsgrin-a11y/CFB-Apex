@@ -2,12 +2,14 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  broadcastAsOf,
+  broadcastNote,
   coaches,
   dfsPlayers,
-  games,
   fantasyNotes,
   fantasyNotesAsOf,
   fantasyNotesContext,
+  games,
   getCoachBySlug,
   getGame,
   getPreseasonRating,
@@ -17,12 +19,6 @@ import {
   getTeam,
   getTeamBySlug,
   modelEstimatesAvailable,
-  broadcastAsOf,
-  broadcastNote,
-  timeEtLabel,
-  tvRows,
-  tvRowsForWeek,
-  tvWeeks,
   pollTables,
   pollsStatusNote,
   portalAsOf,
@@ -37,22 +33,21 @@ import {
   seasonRules,
   stadiums,
   teams,
+  tvRows,
+  tvWeeks,
 } from "@/lib/cfb-dataset";
-import {
-  brand,
-  disclosureVersion,
-} from "@/lib/config";
+import { brand, disclosureVersion } from "@/lib/config";
 import { calculateBuyout } from "@/lib/contracts";
-import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
-import type { DfsPlayer, Game, Provenance, Team } from "@/lib/types";
-import { ticketAffiliatesConfigured, ticketLinksForTeam } from "@/lib/affiliates";
-import { SourceMeta } from "./SourceMeta";
-import { BroadcastHeader } from "./broadcast/header";
-import { ScoreTicker } from "./broadcast/score-ticker";
-import { BroadcastFooter } from "./broadcast/footer";
-import { BroadcastHomepage } from "./broadcast/homepage";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
+import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import { getTeamHubData } from "@/lib/team-hub";
+import type { DfsPlayer, Game, Provenance, Team } from "@/lib/types";
+import { SourceMeta } from "./SourceMeta";
+import { BroadcastFooter } from "./broadcast/footer";
+import { BroadcastHeader } from "./broadcast/header";
+import { BroadcastHomepage } from "./broadcast/homepage";
+import { ScoreTicker } from "./broadcast/score-ticker";
+import { WatchPage } from "./broadcast/watch-page";
 import { TeamHub } from "./team-hub/team-hub";
 
 type Mode = "clean" | "analysis";
@@ -1358,131 +1353,6 @@ function RankingsPage() {
   );
 }
 
-function WatchPage() {
-  const [week, setWeek] = useState(() => {
-    const now = Date.now();
-    const upcoming = tvRows.find((row) => Date.parse(`${row.date}T23:59:59Z`) >= now);
-    return upcoming?.week ?? tvRows[tvRows.length - 1]?.week ?? 1;
-  });
-  const weeks = tvWeeks();
-  const rows = tvRowsForWeek(week);
-  const networks = [...new Set(rows.map((row) => row.tv).filter(Boolean))].sort();
-  const athleticsSites = stadiums
-    .map((stadium) => ({ slug: stadium.slug, name: getTeamBySlug(stadium.slug)?.shortName ?? stadium.slug, url: stadium.sources?.[0] ?? null }))
-    .filter((site) => site.url && site.url.startsWith("http"));
-  const [radioTeam, setRadioTeam] = useState("alabama");
-
-  return (
-    <>
-      <PageHeading
-        eyebrow="AUTHORIZED DESTINATIONS"
-        title="Know where the game is. Never fake the stream."
-        description={`National TV designations come from the research compilation dated ${broadcastAsOf ?? "—"}. Radio and tickets stay with the schools — this site embeds, retransmits, or invents none of it.`}
-      />
-      <section className="content-section">
-        <div className="table-tools">
-          <div>
-            <label>Week
-              <select value={week} onChange={(event) => setWeek(Number(event.target.value))}>
-                {weeks.map((item) => <option key={item} value={item}>{item === 0 ? "Week 0" : `Week ${item}`}</option>)}
-              </select>
-            </label>
-          </div>
-          <span>{rows.length} televised games{networks.length ? ` · ${networks.join(" · ")}` : ""}</span>
-        </div>
-        {rows.length ? (
-          <section className="data-table-wrap" tabIndex={0} aria-label={`Week ${week} broadcast schedule`}>
-            <table className="data-table">
-              <thead>
-                <tr><th>Date</th><th>Kickoff</th><th>Matchup</th><th>Network</th></tr>
-              </thead>
-              <tbody>
-                {rows.map((row) => (
-                  <tr key={`${row.date}-${row.away}-at-${row.home}`}>
-                    <td>{row.date}</td>
-                    <td>{timeEtLabel(row.time_et) ?? (row.status === "time_tbd" ? "TBD" : "—")}</td>
-                    <td><a href={`/teams/${row.away}`}>{getTeamBySlug(row.away)?.shortName ?? row.away}</a> at <a href={`/teams/${row.home}`}>{getTeamBySlug(row.home)?.shortName ?? row.home}</a></td>
-                    <td>{row.tv ?? <span className="portal-status portal-status--withdrawn">unassigned</span>}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
-        ) : (
-          <article className="win-model-card">
-            <div><span className="eyebrow">NO DESIGNATIONS YET</span><strong>Week {week}</strong></div>
-            <p>Later weeks sit inside the 6–12 day selection windows and appear here once networks announce them.</p>
-          </article>
-        )}
-        <p className="table-caption">{broadcastNote}</p>
-      </section>
-      <section className="content-section provider-cards" id="radio">
-        <article>
-          <span className={`provider-state ${radioForTeam(radioTeam) ? "provider-state--on" : "provider-state--research"}`}>
-            {radioForTeam(radioTeam) ? "RESEARCH VERIFIED" : "RESEARCH GAP"}
-          </span>
-          <h2>Local radio</h2>
-          {(() => {
-            const station = radioForTeam(radioTeam);
-            if (station) {
-              return (
-                <div className="portal-list">
-                  <div className="portal-row">
-                    <span className="portal-status portal-status--committed">FM/AM</span>
-                    <span><strong>{station.station ?? "Flagship not published"}{station.frequency ? ` · ${station.frequency}` : ""}</strong><small>{station.market ?? "Market not published"}{station.network ? ` · ${station.network}` : ""}</small></span>
-                  </div>
-                  {station.satellite ? (
-                    <div className="portal-row">
-                      <span className="portal-status portal-status--available">SAT</span>
-                      <span><strong>{station.satellite}</strong><small>national carriage</small></span>
-                    </div>
-                  ) : null}
-                  {station.notes ? <p className="panel-note">{station.notes}</p> : null}
-                  {station.sources.length ? (
-                    <p className="panel-note">Sources: {station.sources.map((source, index) => (
-                      <span key={source}>{index > 0 ? " · " : ""}<a href={source} rel="nofollow noreferrer noopener" target="_blank">{new URL(source).hostname.replace(/^www\./, "")}</a></span>
-                    ))}</p>
-                  ) : null}
-                  <p className="panel-note">Affiliate facts compiled {radioAsOf ?? "—"} · confidence {station.confidence ?? "—"}. Full affiliate lists live on the official athletics site:</p>
-                </div>
-              );
-            }
-            return <p>Radio affiliates are not part of the research dataset, and only station-authorized listings may appear. Each program publishes its affiliate network on its official athletics site:</p>;
-          })()}
-          <label>Team
-            <select value={radioTeam} onChange={(event) => setRadioTeam(event.target.value)}>
-              {athleticsSites.map((site) => <option key={site.slug} value={site.slug}>{site.name}</option>)}
-            </select>
-          </label>{" "}
-          <a className="button button--ghost" href={athleticsSites.find((site) => site.slug === radioTeam)?.url ?? "#"} rel="nofollow noreferrer noopener" target="_blank">Open official athletics site →</a>
-        </article>
-        <article>
-          <span className={`provider-state ${ticketAffiliatesConfigured ? "provider-state--on" : "provider-state--research"}`}>
-            {ticketAffiliatesConfigured ? "PARTNER ACTIVE" : "NO PARTNER BY DESIGN"}
-          </span>
-          <h2>Ticket inventory</h2>
-          <p>Schools and their athletics departments are the only ticket sources this site points to. No resale marketplace, pricing, or availability is shown, and none is invented.</p>
-          {(() => {
-            const team = getTeamBySlug(radioTeam);
-            const links = team ? ticketLinksForTeam(team.name) : [];
-            return links.length ? (
-              <p>
-                {links.map((link) => (
-                  <a key={link.partner} className="button button--ghost" href={link.url} rel="sponsored nofollow noreferrer noopener" target="_blank" style={{ marginRight: 8 }}>
-                    Compare on {link.partner} →
-                  </a>
-                ))}
-                <small className="portal-note">Sponsored links · see the <a href="/affiliate-disclosure">affiliate disclosure</a>.</small>
-              </p>
-            ) : null;
-          })()}
-          <a href="/data-sources">Review dependency policy →</a>
-        </article>
-      </section>
-    </>
-  );
-}
-
 function SearchPage() {
   const [query, setQuery] = useState("");
   const normalized = query.trim().toLowerCase();
@@ -1901,7 +1771,20 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else if (root === "players" && parts[1]) content = <PlayerPage slug={parts[1]} />;
   else if (root === "conferences") content = <GenericDirectory kind="conferences" conferenceSlug={parts[1]} />;
   else if (root === "stadiums") content = <StadiumsPage stadiumSlug={parts[1]} />;
-  else if (root === "watch") content = <WatchPage />;
+  else if (root === "watch") {
+    content = (
+      <WatchPage
+        tvRows={tvRows}
+        tvWeeks={tvWeeks}
+        broadcastAsOf={broadcastAsOf}
+        broadcastNote={broadcastNote}
+        radioForTeam={radioForTeam}
+        radioAsOf={radioAsOf}
+        stadiums={stadiums}
+        teams={teams}
+      />
+    );
+  }
   else if (root === "rankings") content = <RankingsPage />;
   else if (root === "search") content = <SearchPage />;
   else if (root === "newsletter") content = <NewsletterPage />;
