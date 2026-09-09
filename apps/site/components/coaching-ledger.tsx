@@ -1,7 +1,8 @@
 "use client";
 
+import * as Dialog from "@radix-ui/react-dialog";
 import { useMemo, useState } from "react";
-import { ArrowRight, Calculator, ExternalLink, Filter, Scale } from "lucide-react";
+import { ArrowRight, Calculator, ChevronDown, ExternalLink, Filter, Scale, X } from "lucide-react";
 import { calculateBuyout } from "@/lib/contracts";
 import type { Coach, Team } from "@/lib/types";
 import {
@@ -65,6 +66,7 @@ export function CoachingLedger({
     sortedCoaches.find((coach) => coach.slug === initialCoachSlug) ?? sortedCoaches[0];
   const [selectedId, setSelectedId] = useState(initialCoach?.id ?? "");
   const [conference, setConference] = useState("All conferences");
+  const [pickerOpen, setPickerOpen] = useState(false);
   const [guaranteed, setGuaranteed] = useState(initialCoach?.guaranteedRemaining ?? 0);
   const [offset, setOffset] = useState(initialCoach?.offsetEstimate ?? 0);
   const selectedCoach =
@@ -98,6 +100,7 @@ export function CoachingLedger({
           <DataBoardEmpty
             title="Contracts not published"
             description="No coaching contract records are available in this release."
+            action={<a href="/teams">Browse team hubs</a>}
           />
         </section>
       </div>
@@ -167,6 +170,106 @@ export function CoachingLedger({
       />
 
       <section className="apex-container db-coaching-layout">
+        <Dialog.Root open={pickerOpen} onOpenChange={setPickerOpen}>
+          <Dialog.Trigger asChild>
+            <button className="db-coach-picker" type="button">
+              <CoachAvatar name={selectedCoach.name} />
+              <span>
+                <small>COACH INDEX</small>
+                <strong>{selectedCoach.name}</strong>
+                <em>{team?.shortName ?? selectedCoach.teamId} · {selectedCoach.record}</em>
+              </span>
+              <ChevronDown aria-hidden="true" />
+            </button>
+          </Dialog.Trigger>
+          <Dialog.Portal>
+            <Dialog.Overlay className="polish-sheet-overlay" />
+            <Dialog.Content className="polish-sheet db-coach-sheet">
+              <div className="polish-sheet__handle" aria-hidden="true" />
+              <header className="polish-sheet__header">
+                <div>
+                  <Dialog.Title>Choose a coach</Dialog.Title>
+                  <Dialog.Description>
+                    Compare the published contract record without losing your place.
+                  </Dialog.Description>
+                </div>
+                <Dialog.Close asChild>
+                  <button type="button" aria-label="Close coach index">
+                    <X aria-hidden="true" />
+                  </button>
+                </Dialog.Close>
+              </header>
+              <label className="db-coach-sheet__filter" htmlFor="coach-conference-filter-mobile">
+                <span>
+                  <Filter aria-hidden="true" />
+                  Conference
+                </span>
+                <select
+                  id="coach-conference-filter-mobile"
+                  value={conference}
+                  onChange={(event) => changeConference(event.target.value)}
+                >
+                  {conferences.map((item) => (
+                    <option key={item}>{item}</option>
+                  ))}
+                </select>
+              </label>
+              <div className="db-coach-sheet__list">
+                {visibleCoaches.map((coach) => {
+                  const coachTeam = teamBySlug.get(coach.teamId);
+                  const term = coach.contractEnd
+                    ? coach.contractStart
+                      ? `${coach.contractStart} → ${coach.contractEnd}`
+                      : `Through ${coach.contractEnd}`
+                    : "Not published";
+                  return (
+                    <details
+                      className="db-coach-card"
+                      data-selected={selectedCoach.id === coach.id || undefined}
+                      key={coach.id}
+                    >
+                      <summary>
+                        <CoachAvatar name={coach.name} />
+                        <span>
+                          <strong>{coach.name}</strong>
+                          <small>{coachTeam?.shortName ?? coach.teamId}</small>
+                        </span>
+                        <b>{coach.record}</b>
+                        <ChevronDown aria-hidden="true" />
+                      </summary>
+                      <div>
+                        <dl>
+                          <div>
+                            <dt>Term</dt>
+                            <dd>{term}</dd>
+                          </div>
+                          <div>
+                            <dt>Annual salary</dt>
+                            <dd>{publishedMoney(coach.annualSalary)}</dd>
+                          </div>
+                          <div>
+                            <dt>Guarantee</dt>
+                            <dd>{publishedMoney(coach.guaranteedRemaining)}</dd>
+                          </div>
+                        </dl>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            selectCoach(coach);
+                            setPickerOpen(false);
+                          }}
+                        >
+                          View full ledger
+                          <ArrowRight aria-hidden="true" />
+                        </button>
+                      </div>
+                    </details>
+                  );
+                })}
+              </div>
+            </Dialog.Content>
+          </Dialog.Portal>
+        </Dialog.Root>
         <aside className="db-coach-index" aria-label="Coach index">
           <div className="db-coach-index__filter">
             <label htmlFor="coach-conference-filter">

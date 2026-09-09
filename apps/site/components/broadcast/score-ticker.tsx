@@ -110,7 +110,10 @@ export function ScoreTicker({
           aria-label="Scrollable game results and upcoming games"
         >
           {games.length === 0 && (
-            <p className="apex-empty">Games not published.</p>
+            <div className="apex-ticker-empty">
+              <p>Games are not published for this window.</p>
+              <a href="/schedule">Open the full schedule</a>
+            </div>
           )}
           {games.map((game) => {
             const away = bySlug.get(game.awayTeamId);

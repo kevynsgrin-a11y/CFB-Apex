@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, ChevronRight, ShieldCheck } from "lucide-react";
 import type { TeamHubProps } from "@/lib/team-hub";
+import { FavoriteButton } from "@/components/polish/favorites";
 import { ScheduleSection } from "./schedule";
 import { RosterSection } from "./roster";
 import {
@@ -117,6 +118,14 @@ export function TeamHub(props: TeamHubProps) {
     };
   }, [team.slug]);
 
+  useEffect(() => {
+    if (!window.matchMedia("(max-width: 720px)").matches) return;
+    const active = railRef.current?.querySelector<HTMLElement>(
+      `.hub-rail-links a[href="#${activeSection}"]`,
+    );
+    active?.scrollIntoView({ behavior: "auto", block: "nearest", inline: "center" });
+  }, [activeSection]);
+
   return (
     <div
       className="team-hub font-sans"
@@ -143,6 +152,7 @@ export function TeamHub(props: TeamHubProps) {
             <div className="hub-hero-kicker">
               <span className="hub-team-chip">{team.conference}</span>
               <span className="hub-eyebrow">{season} SEASON</span>
+              <FavoriteButton teamId={team.slug} teamName={team.shortName} />
               {team.rank != null ? (
                 <span
                   className="hub-rank-chip"

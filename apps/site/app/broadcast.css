@@ -269,3 +269,195 @@ body { overscroll-behavior-y: none; }
 @media (max-width: 800px) { .apex-marquee-copy h2 { font-size: 56px; } .apex-marquee-main { min-height: 315px; padding: 26px; } .apex-marquee-matchup { gap: 10px; } .apex-team-mark--hero { width: 94px; height: 94px; } .apex-versus { font-size: 22px; } .apex-marquee-team-name { font-size: 17px; } .apex-marquee-team > span { font-size: 14px; } .apex-marquee-bottom { padding-inline: 20px; } .apex-intelligence-grid { grid-template-columns: 1fr; gap: 0; } .apex-portal-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } .apex-portal-card { padding: 14px; } .apex-portal-top { flex-direction: column; align-items: flex-start; gap: 8px; } .apex-portal-top h3 { font-size: 14px; } .apex-portal-top span:not(.apex-team-mark) { font-size: 14px; } .apex-portal-counts strong { font-size: 30px; } .apex-portal-counts span svg { display: none; } .apex-fantasy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .apex-week-heading { align-items: center; } .apex-week-tools { gap: 8px; } .apex-week-tools .apex-scroll-buttons { display: none; } .apex-week-heading .apex-lane-heading > a { display: none; } .apex-day-tabs button { padding-inline: 10px; } .apex-gameday-copy { padding: 24px; } .apex-gameday-copy h3 { font-size: 30px; } .apex-conference-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .apex-footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; } }
 @media (max-width: 600px) { .apex-ticker { top: 73px; } :root { --space-lane: 2.1rem; } .apex-header-inner { min-height: 72px; padding-block: 0; gap: 12px; flex-wrap: nowrap; } .apex-header .apex-logo-word { font-size: 32px; } .apex-header-actions { gap: 3px; } .apex-primary-nav { display: none; } .apex-mobile-menu-button { display: inline-flex; } .apex-clean-control { gap: 6px; } .apex-clean-control label span { font-family: var(--display-family); font-size: 14px; } .apex-header-actions .apex-icon-button { width: 34px; } .apex-ticker-label { flex-basis: 106px; } .apex-ticker-label > a { font-size: 19px; gap: 2px; } .apex-ticker-label .apex-eyebrow { font-size: 14px; letter-spacing: .2px; } .apex-ticker-game { flex-basis: 172px; padding: 10px 14px; min-height: 108px; } .apex-ticker-all { display: none; } .apex-home { padding-top: 24px; } .apex-home-intro { align-items: flex-start; margin-bottom: 20px; } .apex-home-intro h1 { font-size: 30px; } .apex-home-intro p { max-width: 240px; } .apex-season-label { font-size: 14px; } .apex-season-label .apex-season-word { display: none; } .apex-marquee-main { flex-direction: column; align-items: stretch; padding: 23px 21px; min-height: unset; gap: 28px; } .apex-marquee-copy h2 { font-size: 61px; margin-block: 19px; } .apex-marquee-copy h2 > span { display: inline; } .apex-marquee-copy h2 > span:last-child { display: block; } .apex-marquee-matchup { padding: 0; gap: 30px; } .apex-team-mark--hero { width: 84px; height: 84px; } .apex-marquee-team > a { gap: 8px; } .apex-marquee-team-name { font-size: 18px; } .apex-marquee-team { gap: 2px; } .apex-versus { margin-bottom: 48px; } .apex-marquee::before { background: linear-gradient(180deg, color-mix(in srgb, var(--background) 85%, transparent), color-mix(in srgb, var(--background) 35%, transparent)); } .apex-marquee-actions { gap: 8px; margin-top: 20px; } .apex-button { padding-inline: 12px; gap: 10px; } .apex-marquee-bottom { flex-wrap: wrap; gap: 10px; padding: 12px 18px; } .apex-marquee-bottom > span { font-size: 14px; } .apex-marquee-bottom a { display: none; } .apex-lane-heading h2 { font-size: 28px; } .apex-week-heading { flex-direction: column; align-items: stretch; } .apex-week-heading .apex-lane-heading > a { display: inline-flex; } .apex-week-tools { margin: 0 0 16px; } .apex-day-tabs { width: 100%; } .apex-day-tabs button { flex: 1; } .apex-game-card { min-width: 245px; } .apex-portal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .apex-portal-top { flex-direction: row; align-items: center; } .apex-portal-counts span svg { display: inline; } .apex-fantasy-grid { grid-template-columns: 1fr; } .apex-player-card { padding: 14px; } .apex-player-info { gap: 2px; } .apex-fantasy-notice { align-items: flex-start; flex-direction: column; } .apex-gameday-card { flex-direction: column; } .apex-gameday-image { width: 100%; min-height: 215px; } .apex-gameday-copy { padding: 24px; } .apex-footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 18px; } .apex-footer-bottom > div { flex-wrap: wrap; gap: 10px 18px; } .apex-menu-panel, .apex-menu-panel--search { top: 0; bottom: 0; left: auto; right: 0; transform: none; max-height: 100dvh; width: min(420px, 100%); padding: 22px; border-radius: 0; border-block: 0; } .apex-conference-grid, .apex-menu-panel--search .apex-conference-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; } .apex-menu-heading h2 { font-size: 32px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .apex-enter, .apex-crossfade { animation: none; } .apex-home *, .apex-header *, .apex-switch-thumb, .apex-ticker * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Mobile broadcast interactions */
+.apex-ticker-rail {
+  scroll-snap-type: x mandatory;
+  touch-action: pan-x pinch-zoom;
+}
+
+.apex-ticker-game {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.apex-ticker-empty {
+  align-items: center;
+  color: var(--muted-foreground);
+  display: flex;
+  flex: 1;
+  gap: 14px;
+  justify-content: center;
+  min-width: 260px;
+  padding: 18px;
+}
+
+.apex-ticker-empty p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.apex-ticker-empty a {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.apex-game-card--actions {
+  position: relative;
+}
+
+.apex-game-card__link {
+  color: inherit;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.apex-game-card--actions .apex-game-card-bottom {
+  padding-right: 54px;
+}
+
+.apex-game-card-more {
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  bottom: 5px;
+  color: var(--muted-foreground);
+  display: inline-flex;
+  height: 36px;
+  justify-content: center;
+  min-width: 40px;
+  padding: 0;
+  position: absolute;
+  right: 6px;
+}
+
+.apex-game-card-more svg {
+  height: 18px;
+  width: 18px;
+}
+
+.apex-game-card-more .game-actions-trigger__label {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .apex-ticker-label > div {
+    display: none;
+  }
+
+  .apex-ticker-status b {
+    max-width: 54px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .apex-ticker-team {
+    gap: 6px;
+  }
+
+  .apex-ticker-team > span:not(.apex-team-mark) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .apex-game-card {
+    flex-basis: min(84vw, 300px);
+    scroll-snap-align: center;
+  }
+
+  .apex-game-card-more {
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .apex-game-card--actions .apex-game-card-bottom {
+    min-height: 54px;
+    padding-right: 58px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apex-ticker-rail {
+    scroll-behavior: auto !important;
+  }
+}
+
+.apex-footer-accordion {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .apex-footer-main {
+    gap: 26px;
+    padding-block: 36px 26px;
+  }
+
+  .apex-footer-columns--desktop {
+    display: none;
+  }
+
+  .apex-footer-accordion {
+    border-bottom: 1px solid var(--border);
+    display: block;
+    width: 100%;
+  }
+
+  .apex-footer-accordion details {
+    border-top: 1px solid var(--border);
+  }
+
+  .apex-footer-accordion summary {
+    align-items: center;
+    color: var(--foreground);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--display-family);
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: space-between;
+    letter-spacing: 0.06em;
+    list-style: none;
+    min-height: 52px;
+    text-transform: uppercase;
+  }
+
+  .apex-footer-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .apex-footer-accordion summary svg {
+    color: var(--primary);
+    height: 18px;
+    transition: transform var(--duration-fast) var(--ease-out);
+    width: 18px;
+  }
+
+  .apex-footer-accordion details[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  .apex-footer-accordion details > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 0 14px;
+  }
+
+  .apex-footer-accordion a {
+    align-items: center;
+    color: var(--muted-foreground);
+    display: flex;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .apex-footer-bottom > div {
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+}

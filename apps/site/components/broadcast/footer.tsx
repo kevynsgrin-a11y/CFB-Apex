@@ -1,4 +1,4 @@
-import { ArrowUpRight, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ShieldCheck } from "lucide-react";
 import { ApexLogo } from "./primitives";
 
 const columns = [
@@ -60,7 +60,7 @@ export function BroadcastFooter() {
               Independent. Source-aware. Fan-first.
             </span>
           </div>
-          <div className="apex-footer-columns">
+          <div className="apex-footer-columns apex-footer-columns--desktop">
             {columns.map((column) => (
               <div key={column.title}>
                 <h2>{column.title}</h2>
@@ -70,6 +70,23 @@ export function BroadcastFooter() {
                   </a>
                 ))}
               </div>
+            ))}
+          </div>
+          <div className="apex-footer-accordion">
+            {columns.map((column) => (
+              <details key={column.title}>
+                <summary>
+                  <span>{column.title}</span>
+                  <ChevronDown aria-hidden="true" />
+                </summary>
+                <div>
+                  {column.links.map(([label, href]) => (
+                    <a key={href} href={href}>
+                      {label}
+                    </a>
+                  ))}
+                </div>
+              </details>
             ))}
           </div>
         </div>

@@ -61,15 +61,20 @@ export function DataBoardSummary({
 export function DataBoardEmpty({
   title,
   description,
+  action,
 }: {
   title: string;
   description: string;
+  action?: ReactNode;
 }) {
   return (
     <section className="db-empty" aria-live="polite">
-      <Database size={24} aria-hidden="true" />
+      <span className="db-empty__icon" aria-hidden="true">
+        <Database size={24} />
+      </span>
       <h2 className="font-display">{title}</h2>
       <p>{description}</p>
+      {action ? <div className="db-empty__action">{action}</div> : null}
     </section>
   );
 }

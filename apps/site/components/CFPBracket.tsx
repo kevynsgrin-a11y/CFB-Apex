@@ -1,3 +1,4 @@
+import * as Dialog from '@radix-ui/react-dialog';
 import { useState, useCallback, useMemo } from 'react';
 import { Trophy, RotateCcw, Share2, Check, X } from 'lucide-react';
 
@@ -209,6 +210,7 @@ export default function CFPBracket({ teams = DEFAULT_TEAMS }: CFPBracketProps) {
 
             <div className="flex items-center gap-2 sm:gap-3">
               <button
+                type="button"
                 onClick={resetBracket}
                 className="group flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white/70 transition-all hover:border-[#22D3EE]/40 hover:bg-[#22D3EE]/10 hover:text-[#22D3EE] sm:px-4"
               >
@@ -217,6 +219,7 @@ export default function CFPBracket({ teams = DEFAULT_TEAMS }: CFPBracketProps) {
                 <span className="sm:hidden">Reset</span>
               </button>
               <button
+                type="button"
                 onClick={generateShareText}
                 className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#F5B942] to-[#e0a836] px-3 py-2 text-sm font-bold text-[#0A0F1A] shadow-lg shadow-[#F5B942]/20 transition-all hover:shadow-[#F5B942]/40 hover:brightness-110 sm:px-4"
               >
@@ -356,12 +359,14 @@ function MatchupCard({
         const isLoser = game.winner && team && game.winner.seed !== team.seed;
 
         return (
-          <div
+          <button
+            type="button"
             key={sIdx}
-            className={`relative flex items-center gap-2.5 px-3 py-2.5 transition-all duration-200 ${
+            disabled={!canClick}
+            className={`relative flex w-full items-center gap-2.5 bg-transparent px-3 py-2.5 text-left transition-all duration-200 ${
               sIdx === 0 ? 'border-b border-white/5' : ''
             } ${canClick ? 'cursor-pointer hover:bg-white/[0.04]' : 'opacity-50'}`}
-            onClick={() => canClick && team && onAdvance(game.id, team)}
+            onClick={() => team && onAdvance(game.id, team)}
           >
             {/* Seed number */}
             <div
@@ -418,7 +423,7 @@ function MatchupCard({
             {canClick && !isWinner && (
               <div className="pointer-events-none absolute inset-0 rounded-[inherit] border border-transparent transition-all duration-200 hover:border-[#F5B942]/40 hover:shadow-[0_0_12px_rgba(245,185,66,0.15)]" />
             )}
-          </div>
+          </button>
         );
       })}
 
@@ -655,24 +660,28 @@ function ShareModal({
   onClose: () => void;
 }) {
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <div
-        className="animate-fade-up w-full max-w-lg overflow-hidden rounded-2xl border border-[#F5B942]/20 bg-[#0D1424] shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-3">
-          <h3 className="font-condensed text-lg font-semibold uppercase tracking-wide text-[#F5B942]">
-            Share Your Picks
-          </h3>
-          <button
-            onClick={onClose}
-            className="rounded-lg p-1 text-white/50 transition-colors hover:bg-white/10 hover:text-white"
-          >
-            <X className="h-5 w-5" />
-          </button>
+    <Dialog.Root open onOpenChange={(open) => {
+      if (!open) onClose();
+    }}>
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm" />
+        <Dialog.Content className="animate-fade-up fixed left-1/2 top-1/2 z-50 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-[#F5B942]/20 bg-[#0D1424] shadow-2xl">
+          <div className="flex items-center justify-between border-b border-white/10 px-5 py-3">
+            <Dialog.Title className="font-condensed text-lg font-semibold uppercase tracking-wide text-[#F5B942]">
+              Share Your Picks
+            </Dialog.Title>
+            <Dialog.Description className="sr-only">
+              Copy a text summary of your playoff bracket picks.
+            </Dialog.Description>
+            <Dialog.Close asChild>
+              <button
+                type="button"
+                className="rounded-lg p-1 text-white/50 transition-colors hover:bg-white/10 hover:text-white"
+                aria-label="Close share dialog"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </Dialog.Close>
         </div>
 
         <div className="p-5">
@@ -681,13 +690,16 @@ function ShareModal({
           </pre>
 
           <div className="mt-4 flex justify-end gap-2">
+            <Dialog.Close asChild>
+              <button
+                type="button"
+                className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/60 transition-all hover:border-white/20 hover:text-white"
+              >
+                Close
+              </button>
+            </Dialog.Close>
             <button
-              onClick={onClose}
-              className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white/60 transition-all hover:border-white/20 hover:text-white"
-            >
-              Close
-            </button>
-            <button
+              type="button"
               onClick={onCopy}
               className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#F5B942] to-[#e0a836] px-4 py-2 text-sm font-bold text-[#0A0F1A] transition-all hover:brightness-110"
             >
@@ -702,9 +714,9 @@ function ShareModal({
               )}
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 }
 

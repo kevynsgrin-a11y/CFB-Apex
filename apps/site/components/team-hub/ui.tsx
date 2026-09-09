@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import { ArrowRight, FileQuestion } from "lucide-react";
 import type { HubTeam } from "@/lib/team-hub";
+import { useFavoriteGesture } from "@/components/polish/favorites";
 
 export const NOT_PUBLISHED = "Not published";
 
@@ -35,14 +36,16 @@ export function HubMark({
   team,
   hero = false,
 }: {
-  team: Pick<HubTeam, "shortName" | "logo">;
+  team: Pick<HubTeam, "shortName" | "logo"> & Partial<Pick<HubTeam, "slug">>;
   hero?: boolean;
 }) {
   const [failedLogo, setFailedLogo] = useState<string | null>(null);
+  const favoriteGesture = useFavoriteGesture(team.slug, team.shortName);
   return (
     <span
       className={hero ? "hub-mark hub-mark--hero" : "hub-mark"}
       aria-hidden="true"
+      {...favoriteGesture}
     >
       {team.logo && failedLogo !== team.logo ? (
         <Image
