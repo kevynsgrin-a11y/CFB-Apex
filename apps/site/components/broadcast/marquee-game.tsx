@@ -32,7 +32,8 @@ export function MarqueeGame({
         alt=""
         fill
         sizes="(max-width: 600px) 100vw, (max-width: 1400px) 92vw, 1320px"
-        preload
+        priority
+        unoptimized
       />
       <div className="apex-field-stripes" aria-hidden="true" />
       <div className="apex-marquee-main">

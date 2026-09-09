@@ -387,7 +387,7 @@ h2 {
 
 main {
   min-height: 70vh;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .hero {

@@ -114,11 +114,28 @@ export function GameActionSheet({
   matchupHref: string;
   guideHref: string;
 }) {
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="polish-sheet-overlay" />
-        <Dialog.Content className="polish-sheet game-action-sheet">
+        <Dialog.Content
+          className="polish-sheet game-action-sheet"
+          onOpenAutoFocus={() => {
+            const activeElement = document.activeElement;
+            if (activeElement instanceof HTMLElement && activeElement !== document.body) {
+              returnFocusRef.current = activeElement;
+            }
+          }}
+          onCloseAutoFocus={(event) => {
+            const returnTarget = returnFocusRef.current;
+            if (!returnTarget) return;
+            event.preventDefault();
+            returnTarget.focus({ preventScroll: true });
+            returnFocusRef.current = null;
+          }}
+        >
           <div className="polish-sheet__handle" aria-hidden="true" />
           <header className="polish-sheet__header">
             <div>

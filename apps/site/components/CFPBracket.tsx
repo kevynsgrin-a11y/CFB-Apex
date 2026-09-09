@@ -714,6 +714,7 @@ function ShareModal({
               )}
             </button>
           </div>
+        </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
