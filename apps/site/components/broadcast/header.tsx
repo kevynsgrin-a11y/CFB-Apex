@@ -23,6 +23,7 @@ const navigation = [
   { label: "Fantasy", href: "/dfs" },
   { label: "Coaches", href: "/coaches" },
   { label: "Stadiums", href: "/stadiums" },
+  { label: "More Sports ↗", href: "https://sports-always.com", external: true },
 ];
 
 interface HeaderProps {
@@ -83,6 +84,16 @@ export function BroadcastHeader({
                   Teams
                   <ChevronDown size={14} aria-hidden="true" />
                 </button>
+              ) : "external" in item && item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--primary)" }}
+                >
+                  {item.label}
+                </a>
               ) : (
                 <a
                   key={item.href}
@@ -184,7 +195,13 @@ export function BroadcastHeader({
             {panel === "menu" && (
               <nav className="apex-drawer-nav" aria-label="All navigation">
                 {navigation.map((item) => (
-                  <a href={item.href} key={item.href}>
+                  <a
+                    href={item.href}
+                    key={item.href}
+                    {...("external" in item && item.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                  >
                     {item.label}
                     <ArrowRight size={16} aria-hidden="true" />
                   </a>

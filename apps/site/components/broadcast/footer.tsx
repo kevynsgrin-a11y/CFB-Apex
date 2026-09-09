@@ -32,6 +32,14 @@ const columns = [
     ],
   },
   {
+    title: "More Sports",
+    links: [
+      ["🏈 Sports Always — every game, every sport", "https://sports-always.com"],
+      ["College Football on Sports Always", "https://sports-always.com/sport/ncaaf/"],
+      ["Printable weekly sports agenda", "https://sports-always.com/print/"],
+    ],
+  },
+  {
     title: "Contact",
     links: [
       ["hello@cfbapex.com", "mailto:hello@cfbapex.com"],
