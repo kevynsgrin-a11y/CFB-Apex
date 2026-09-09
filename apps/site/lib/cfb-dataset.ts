@@ -250,6 +250,95 @@ const logoColorBySlug = new Map<string, string>(
   Object.entries((bundle.logoColors as Record<string, string>) ?? {}),
 );
 
+/* ------------------------------------------------ conference hub pages */
+
+export interface ConferenceHub {
+  slug: string;
+  name: string;
+  shortName: string;
+  teams: Team[];
+  scheduledGames: Game[];
+  topSPPlus: Array<{ team: Team; rank: number; overall: number }>;
+  playoffContenders: Array<{ team: Team; odds: string; outlet: string }>;
+  tvGamesThisWeek: Array<{ game: Game; network: string }>;
+}
+
+const conferenceHubCache = new Map<string, ConferenceHub>();
+
+export function getConferenceHub(slug: string): ConferenceHub | null {
+  if (conferenceHubCache.has(slug)) return conferenceHubCache.get(slug)!;
+
+  const conferenceTeams = teams.filter((team) => {
+    const datasetTeam = datasetTeams.find((dt) => dt.slug === team.slug);
+    return datasetTeam?.conference_slug === slug;
+  });
+  if (conferenceTeams.length === 0) return null;
+
+  const name = conferenceTeams[0].conference;
+  const teamIds = new Set(conferenceTeams.map((team) => team.id));
+  const scheduledGames = games
+    .filter((game) => teamIds.has(game.homeTeamId) || teamIds.has(game.awayTeamId))
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const topSPPlus = conferenceTeams
+    .map((team) => {
+      const rating = preseasonRatings[team.slug];
+      return rating?.sp ? { team, rank: rating.sp.rank, overall: rating.sp.overall } : null;
+    })
+    .filter((row): row is { team: Team; rank: number; overall: number } => row !== null)
+    .sort((a, b) => a.rank - b.rank)
+    .slice(0, 5);
+
+  const playoffContenders = conferenceTeams
+    .map((team) => {
+      const rating = preseasonRatings[team.slug];
+      return rating?.playoff?.value
+        ? { team, odds: rating.playoff.value, outlet: rating.playoff.outlet }
+        : null;
+    })
+    .filter((row): row is { team: Team; odds: string; outlet: string } => row !== null)
+    .sort((a, b) => parseFloat(b.odds) - parseFloat(a.odds))
+    .slice(0, 5);
+
+  const now = Date.now();
+  const tvGamesThisWeek = scheduledGames
+    .filter(
+      (game) =>
+        game.broadcast &&
+        Date.parse(game.date) >= now - 86400000 * 3 &&
+        Date.parse(game.date) <= now + 86400000 * 10,
+    )
+    .map((game) => ({ game, network: game.broadcast ?? "" }))
+    .slice(0, 6);
+
+  const shortNameMap: Record<string, string> = {
+    sec: "SEC", "big-ten": "Big Ten", big12: "Big 12", acc: "ACC", pac12: "Pac-12",
+    aac: "American", cusa: "C-USA", mac: "MAC", "mountain-west": "Mountain West",
+    "sun-belt": "Sun Belt", independents: "Independents",
+  };
+
+  const hub: ConferenceHub = {
+    slug,
+    name,
+    shortName: shortNameMap[slug] ?? name,
+    teams: conferenceTeams.sort((a, b) => a.shortName.localeCompare(b.shortName)),
+    scheduledGames,
+    topSPPlus,
+    playoffContenders,
+    tvGamesThisWeek,
+  };
+  conferenceHubCache.set(slug, hub);
+  return hub;
+}
+
+export function conferenceHubSlugs() {
+  const slugs = new Set<string>();
+  for (const team of datasetTeams) {
+    if (team.conference_slug) slugs.add(team.conference_slug);
+  }
+  return [...slugs].sort();
+}
+
 export const teams: Team[] = datasetTeams.map((team) => {
   const strength = strengthFor(team.slug);
   const rank = apRankBySlug.get(team.slug);

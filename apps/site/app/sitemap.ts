@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { coaches, teams } from "@/lib/cfb-dataset";
+import { coaches, conferenceHubSlugs, teams } from "@/lib/cfb-dataset";
 
 /**
  * Detail routes are enumerated from the vendored 2026 dataset (138 real FBS
@@ -20,10 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly",
     priority: 0.4,
   }));
-  const conferenceSlugs = new Set(
-    teams.map((team) => team.conference.toLowerCase().replaceAll(" ", "-")),
-  );
-  const conferenceRoutes: MetadataRoute.Sitemap = [...conferenceSlugs].map((slug) => ({
+  const conferenceRoutes: MetadataRoute.Sitemap = conferenceHubSlugs().map((slug) => ({
     url: `/conferences/${slug}`,
     lastModified: now,
     changeFrequency: "weekly",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { HubApp } from "@/components/HubApp";
-import { coaches, dfsPlayers, fantasyPlayerSlugs, games, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
+import { coaches, dfsPlayers, fantasyPlayerSlugs, games, getConferenceHub, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
 
 const staticRoots = new Set([
   "scores",
@@ -39,7 +39,7 @@ function isKnownPath(parts: string[]) {
     if (root === "teams" || root === "transfer-portal") return teams.some((team) => team.slug === id);
     if (root === "coaches") return coaches.some((coach) => coach.slug === id);
     if (root === "stadiums") return stadiums.some((stadium) => stadium.slug === id);
-    if (root === "conferences") return teams.some((team) => team.conference.toLowerCase().replaceAll(" ", "-") === id);
+    if (root === "conferences") return getConferenceHub(id) != null;
     return false;
   }
   if (root === "games") return games.some((game) => game.id === id);
