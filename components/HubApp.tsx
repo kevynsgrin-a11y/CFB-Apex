@@ -11,6 +11,8 @@ import {
   fantasyNotesContext,
   games,
   getCoachBySlug,
+  getConferenceHub,
+  conferenceHubSlugs,
   getGame,
   getPreseasonRating,
   getSchemes,
@@ -1619,19 +1621,119 @@ function CommercialPage({ kind }: { kind: "advertise" | "partnerships" | "media-
   );
 }
 
+function ConferenceHubPage({ slug }: { slug: string }) {
+  const hub = getConferenceHub(slug);
+  if (!hub) return <NotFoundPage />;
+  return (
+    <>
+      <div className="apex-home" style={{ paddingTop: 32 }}>
+        <div className="apex-container">
+          <div className="apex-home-intro">
+            <div>
+              <span className="apex-eyebrow">CONFERENCE HUB · 2026 SEASON</span>
+              <h1>{hub.name}</h1>
+              <p>{hub.teams.length} programs · {hub.scheduledGames.filter((g) => g.status === "final").length} games played · {hub.scheduledGames.filter((g) => g.status === "scheduled").length} scheduled</p>
+            </div>
+            <span className="apex-season-label"><span /><span className="apex-season-word">2026</span> SEASON</span>
+          </div>
+          {hub.topSPPlus.length > 0 ? (
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div><span className="apex-eyebrow">PRESEASON RATINGS</span><h2>Top SP+ in the {hub.shortName}</h2></div>
+                <a className="apex-text-link" href="/rankings">Full board →</a>
+              </div>
+              <div className="apex-rating-strip">
+                {hub.topSPPlus.map(({ team, rank, overall }) => (
+                  <a key={team.id} href={`/teams/${team.slug}`} className="apex-rating-item">
+                    <span>#{rank}</span>
+                    <div><strong>{overall > 0 ? `+${overall.toFixed(1)}` : overall.toFixed(1)}</strong><small>{team.shortName}</small></div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          {hub.playoffContenders.length > 0 ? (
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div><span className="apex-eyebrow">PLAYOFF OUTLOOK</span><h2>Reported playoff odds</h2></div>
+              </div>
+              <div className="apex-portal-grid" style={{ gridTemplateColumns: `repeat(${Math.min(hub.playoffContenders.length, 5)}, minmax(0, 1fr))` }}>
+                {hub.playoffContenders.map(({ team, odds, outlet }) => (
+                  <a key={team.id} href={`/teams/${team.slug}`} className="apex-portal-card">
+                    <div className="apex-portal-top"><Monogram team={team} /><div><h3>{team.shortName}</h3><span>{outlet}</span></div></div>
+                    <div className="apex-portal-counts"><div><strong>{odds}</strong><span>playoff odds</span></div></div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          {hub.tvGamesThisWeek.length > 0 ? (
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div><span className="apex-eyebrow">ON TV</span><h2>Upcoming televised games</h2></div>
+                <a className="apex-text-link" href="/watch">Full TV board →</a>
+              </div>
+              <div className="apex-horizontal">
+                {hub.tvGamesThisWeek.map(({ game, network }) => (
+                  <a key={game.id} href={`/games/${game.id}`} className="apex-game-card">
+                    <div className="apex-game-card-main">
+                      <div className="apex-game-card-top"><span>{game.kickoffLabel}</span><span className="apex-badge apex-badge--gold">{network}</span></div>
+                      <div className="apex-card-team"><Monogram team={teamFor(game.awayTeamId)} size="sm" /><span>{teamFor(game.awayTeamId).shortName}</span></div>
+                      <div className="apex-card-team"><Monogram team={teamFor(game.homeTeamId)} size="sm" /><span>{teamFor(game.homeTeamId).shortName}</span></div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          <div className="apex-lane">
+            <div className="apex-lane-heading">
+              <div><span className="apex-eyebrow">MEMBER PROGRAMS</span><h2>All {hub.teams.length} teams</h2></div>
+            </div>
+            <div className="apex-portal-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))" }}>
+              {hub.teams.map((team) => (
+                <a key={team.id} href={`/teams/${team.slug}`} className="apex-portal-card">
+                  <div className="apex-portal-top"><Monogram team={team} /><div><h3>{team.shortName}</h3><span>{team.record}</span></div></div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "conferences" | "players"; conferenceSlug?: string }) {
   if (kind === "coaches") return <CoachingPage />;
   if (kind === "conferences") {
-    const conferences = [...new Set(teams.map((team) => team.conference))].filter(
-      (conference) =>
-        !conferenceSlug || conference.toLowerCase().replaceAll(" ", "-") === conferenceSlug,
-    );
+    const conferenceMap = new Map<string, { teams: Team[]; slug: string }>();
+    for (const team of teams) {
+      const entry = conferenceMap.get(team.conference);
+      if (entry) entry.teams.push(team);
+      else {
+        const dt = teams.find((t) => t.shortName === team.shortName);
+        conferenceMap.set(team.conference, { teams: [team], slug: "" });
+      }
+    }
+    // Build slug from the dataset's conference_slug field
+    const slugMap = new Map<string, string>();
+    for (const team of teams) {
+      const dsTeam = teams.find((t) => t.id === team.id);
+    }
+    // Use conferenceHubSlugs to get valid slugs
+    const hubSlugs = conferenceHubSlugs();
     return (
       <>
         <PageHeading eyebrow="SEASON-AWARE STRUCTURE" title="Conference membership is data, not a constant." description="Conference affiliation is versioned to the 2026 dataset, not hardcoded." />
-        <section className="conference-grid content-section">{conferences.map((conference) => {
-          const members = teams.filter((team) => team.conference === conference);
-          return <article key={conference}><span className="eyebrow">{members.length} members</span><h2>{conference}</h2><div>{members.map((team) => <a href={`/teams/${team.slug}`} key={team.id}>{team.shortName}<b>{team.record}</b></a>)}</div></article>;
+        <section className="conference-grid content-section">{hubSlugs.map((cs) => {
+          const hub = getConferenceHub(cs);
+          if (!hub) return null;
+          return <article key={cs}>
+            <span className="eyebrow">{hub.teams.length} members</span>
+            <h2><a href={`/conferences/${cs}`} style={{ color: "inherit", textDecoration: "none" }}>{hub.name}</a></h2>
+            <div>{hub.teams.map((team) => <a href={`/teams/${team.slug}`} key={team.id}>{team.shortName}<b>{team.record}</b></a>)}</div>
+          </article>;
         })}</section>
       </>
     );
@@ -1769,7 +1871,8 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else if (root === "dfs") content = <DfsPage mode={mode} onModeRequest={() => setModeDialogOpen(true)} />;
   else if (root === "teams") content = <TeamsPage teamSlug={parts[1]} />;
   else if (root === "players" && parts[1]) content = <PlayerPage slug={parts[1]} />;
-  else if (root === "conferences") content = <GenericDirectory kind="conferences" conferenceSlug={parts[1]} />;
+  else if (root === "conferences" && parts[1]) content = <ConferenceHubPage slug={parts[1]} />;
+  else if (root === "conferences") content = <GenericDirectory kind="conferences" />;
   else if (root === "stadiums") content = <StadiumsPage stadiumSlug={parts[1]} />;
   else if (root === "watch") {
     content = (
