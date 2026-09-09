@@ -1,21 +1,22 @@
 /**
  * Ticket-affiliate partner configuration (TicketNetwork primary, TicketSmarter
- * secondary — both via CJ Affiliate).
+ * secondary).
  *
- * FAIL-CLOSED BY DESIGN: `cjUrl` is null until the CJ account is approved and
- * the advertiser-specific click URL is issued. While it is null,
- * ticketLinksForTeam() returns nothing and the site renders its no-partner
- * ticket card. The templates below contain no secrets — CJ tracking URLs are
- * public destination links — they are simply not yet issued.
+ * LINK-FIRST BY DESIGN: partner links are ALWAYS rendered — users get a
+ * working path to ticket inventory whether or not our commission paperwork
+ * has cleared. While `trackedUrl` is null the link points directly at the
+ * partner's public search results (no tracking, no commission). The moment
+ * the affiliate click URL is issued, filling `trackedUrl` flips every link
+ * on every surface to the tracked wrapper with zero component changes.
  *
- * To activate a partner once CJ approves:
- *   1. Fill `cjUrl` with the CJ click link, e.g.
- *      "https://www.dpbolvw.net/click-<siteid>-<adid>?url={url}"
+ * To activate a partner once approved:
+ *   1. Fill `trackedUrl` with the network click link, e.g.
+ *      "https://<impact-or-cj-host>/click-<ids>?url={url}"
  *      ({url} is replaced with the percent-encoded destination).
  *   2. Verify the destination template resolves to that partner's live
- *      search results for a college team.
+ *      search results.
  *   3. Rendered links carry rel="sponsored nofollow" and sit beside the
- *      /affiliate-disclosure page, which is already live.
+ *      /affiliate-disclosure page, which describes the pending state.
  */
 
 export interface TicketPartnerConfig {
@@ -23,8 +24,8 @@ export interface TicketPartnerConfig {
   name: string;
   /** Destination search URL; {query} is replaced with the team display name. */
   destTemplate: string;
-  /** CJ click URL wrapping the destination; null until the account is live. */
-  cjUrl: string | null;
+  /** Network click URL wrapping the destination; null until tracking is live. */
+  trackedUrl: string | null;
   commissionNote: string;
 }
 
@@ -33,14 +34,14 @@ export const ticketPartners: TicketPartnerConfig[] = [
     id: "ticketnetwork",
     name: "TicketNetwork",
     destTemplate: "https://www.ticketnetwork.com/en/search?q={query}",
-    cjUrl: null,
-    commissionNote: "12.5–14.5% per sale",
+    trackedUrl: null,
+    commissionNote: "12.5-14.5% per sale (via Impact)",
   },
   {
     id: "ticketsmarter",
     name: "TicketSmarter",
     destTemplate: "https://www.ticketsmarter.com/search?q={query}",
-    cjUrl: null,
+    trackedUrl: null,
     commissionNote: "8% per sale",
   },
 ];
@@ -49,24 +50,38 @@ export interface TicketLink {
   partner: string;
   url: string;
   commissionNote: string;
+  /** True only when the link passes through the affiliate network wrapper. */
+  tracked: boolean;
 }
 
-/** Affiliate ticket links for a team, or [] while no partner is configured. */
+/**
+ * Ticket partner links for a team. ALWAYS returns a link per partner —
+ * direct while tracking is pending, wrapped once the network URL is set.
+ */
 export function ticketLinksForTeam(displayName: string): TicketLink[] {
-  const links: TicketLink[] = [];
-  for (const partner of ticketPartners) {
-    if (!partner.cjUrl) continue;
+  return ticketPartners.map((partner) => {
     const destination = partner.destTemplate.replace(
       "{query}",
       encodeURIComponent(`${displayName} football tickets`),
     );
-    links.push({
+    if (partner.trackedUrl) {
+      return {
+        partner: partner.name,
+        url: partner.trackedUrl.replace("{url}", encodeURIComponent(destination)),
+        commissionNote: partner.commissionNote,
+        tracked: true,
+      };
+    }
+    return {
       partner: partner.name,
-      url: partner.cjUrl.replace("{url}", encodeURIComponent(destination)),
+      url: destination,
       commissionNote: partner.commissionNote,
-    });
-  }
-  return links;
+      tracked: false,
+    };
+  });
 }
 
-export const ticketAffiliatesConfigured = ticketPartners.some((partner) => partner.cjUrl != null);
+/** True once any partner's commission tracking is live. */
+export const ticketAffiliatesConfigured = ticketPartners.some(
+  (partner) => partner.trackedUrl != null,
+);

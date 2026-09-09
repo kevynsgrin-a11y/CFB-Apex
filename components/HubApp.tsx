@@ -1279,8 +1279,8 @@ function PolicyPage({ kind }: { kind: string }) {
     "affiliate-disclosure": {
       eyebrow: "COMMERCIAL TRANSPARENCY",
       title: "Affiliate disclosure",
-      intro: "No affiliate program or paid referral is active in this preview.",
-      sections: [["Future links", "Eligible commercial links will be labeled near the action, use sponsored/nofollow attributes, and pass through an auditable allowlist."], ["Editorial firewall", "Commercial compensation will never determine model probabilities, editorial ranking, source verification, or correction outcomes."]],
+      intro: "Ticket partner links (TicketNetwork, TicketSmarter) are live across the watch guide, team pages, and stadium guides. Affiliate approval is pending: until it clears, links go directly to the partners' public ticket searches and we earn no commission. Once approved, the same links convert to tracked referrals automatically.",
+      sections: [["How links are labeled", "Partner links carry sponsored/nofollow attributes and are labeled near the action. Tracked and pending states are labeled honestly — a pending link is marked as such."], ["Editorial firewall", "Commercial compensation will never determine model probabilities, editorial ranking, source verification, or correction outcomes."], ["Partner swaps", "If a partner is denied or retired, its links are removed or swapped without touching editorial content — the affiliate layer is a single configuration module."]],
     },
     "responsible-gaming": {
       eyebrow: "INFORMATIONAL MODELS ONLY",

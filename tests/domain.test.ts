@@ -188,13 +188,18 @@ test("fantasy notes are reported-only, slug-clean, and never invent projections"
 });
 
 test("affiliate and radio seams stay fail-closed until configured", async () => {
-  const { ticketLinksForTeam, ticketAffiliatesConfigured } = await import("../lib/affiliates.ts");
-  if (!ticketAffiliatesConfigured) {
-    assert.deepEqual(ticketLinksForTeam("Alabama Crimson Tide"), []);
-  } else {
-    for (const link of ticketLinksForTeam("Alabama Crimson Tide")) {
-      assert.match(link.url, /^https:\/\//);
-      assert.ok(link.url.includes("url="), "CJ wrapper must encode the destination");
+  const { ticketLinksForTeam, ticketAffiliatesConfigured, ticketPartners } = await import("../lib/affiliates.ts");
+  // LINK-FIRST: every partner always yields a working https link; tracked
+  // links must wrap the encoded destination, pending links go direct.
+  const links = ticketLinksForTeam("Alabama Crimson Tide");
+  assert.equal(links.length, ticketPartners.length);
+  for (const link of links) {
+    assert.match(link.url, /^https:\/\//, link.partner);
+    if (ticketAffiliatesConfigured && link.tracked) {
+      assert.ok(link.url.includes("url="), "wrapper must encode the destination");
+    } else {
+      assert.equal(link.tracked, false, `${link.partner}: untracked must be direct`);
+      assert.match(link.url, /ticketnetwork|ticketsmarter/, link.partner);
     }
   }
   const { radioStations } = await import("../lib/cfb-dataset.ts");

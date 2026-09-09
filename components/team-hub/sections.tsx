@@ -10,6 +10,7 @@ import {
   TrainFront,
   Trophy,
 } from "lucide-react";
+import { ticketLinksForTeam } from "@/lib/affiliates";
 import type { HubTransfer, TeamHubProps } from "@/lib/team-hub";
 import {
   dateLabel,
@@ -138,7 +139,9 @@ export function GamedaySection({
   stadium,
   radio,
   radioAsOf,
-}: Pick<TeamHubProps, "stadium" | "radio" | "radioAsOf">) {
+  teamName,
+}: Pick<TeamHubProps, "stadium" | "radio" | "radioAsOf"> & { teamName?: string }) {
+  const ticketLinks = teamName ? ticketLinksForTeam(teamName) : [];
   return (
     <HubSection id="gameday">
       <HubHeading eyebrow="MAKE A SATURDAY OF IT" title="Your gameday, covered">
@@ -160,6 +163,22 @@ export function GamedaySection({
             </strong>
             <span>STADIUM CAPACITY</span>
           </div>
+          {ticketLinks.length ? (
+            <div className="hub-tickets">
+              <span className="hub-eyebrow">TICKETS</span>
+              {ticketLinks.map((link) => (
+                <a
+                  key={link.partner}
+                  href={link.url}
+                  target="_blank"
+                  rel="sponsored nofollow noreferrer noopener"
+                >
+                  {link.partner}
+                  <span>{link.tracked ? "Official partner" : "Partner · approval pending"}</span>
+                </a>
+              ))}
+            </div>
+          ) : null}
           {stadium ? (
             <>
               <HubLink href={`/stadiums/${stadium.slug}`}>

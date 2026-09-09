@@ -15,6 +15,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import type { Stadium, Team } from "@/lib/types";
+import { ticketLinksForTeam } from "@/lib/affiliates";
 import { TeamMark } from "./broadcast/primitives";
 
 interface StadiumDirectoryProps {
@@ -210,7 +211,27 @@ export function StadiumDetail({ stadium, team }: StadiumDetailProps) {
             </span>
           </div>
         </div>
-      </header>
+      
+      <aside className="lt-tickets" aria-label="Ticket partner links">
+        <span className="lt-eyebrow">TICKETS</span>
+        {ticketLinksForTeam(team.name).map((link) => (
+          <a
+            key={link.partner}
+            href={link.url}
+            target="_blank"
+            rel="sponsored nofollow noreferrer noopener"
+          >
+            <strong>{link.partner}</strong>
+            <span>{link.tracked ? "Official partner" : "Partner · approval pending"}</span>
+          </a>
+        ))}
+        <p>
+          Links point to our ticket partners' searches. Commissions activate
+          once partnerships are approved — see the{" "}
+          <a href="/affiliate-disclosure">affiliate disclosure</a>.
+        </p>
+      </aside>
+</header>
 
       <section className="lt-section" aria-labelledby="venue-guide-title">
         <div className="lt-section-heading">
