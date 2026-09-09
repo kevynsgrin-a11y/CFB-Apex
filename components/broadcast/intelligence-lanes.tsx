@@ -306,6 +306,7 @@ export function GamedayLane({
                 width={1024}
                 height={1024}
                 loading="lazy"
+                unoptimized
                 decoding="async"
               />
             )}

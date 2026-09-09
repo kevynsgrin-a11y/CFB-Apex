@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { ChevronLeft, ChevronRight, CircleOff, RefreshCw } from "lucide-react";
 import {
   broadcastAsOf,
   broadcastNote,
@@ -36,6 +37,11 @@ import {
 import { brand, disclosureVersion } from "@/lib/config";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
 import { getRosterPlayerBySlug } from "@/lib/player-records";
+import {
+  continuousWeeks,
+  defaultScoreboardWeek,
+  gamesForWeek,
+} from "@/lib/scoreboard";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import { getTeamHubData } from "@/lib/team-hub";
 import type { Game, Provenance, Team } from "@/lib/types";
@@ -52,6 +58,14 @@ import { CoachingLedger } from "./coaching-ledger";
 import { FantasyNotesBoard } from "./fantasy-notes-board";
 import { TeamHub } from "./team-hub/team-hub";
 import { TransferPortalBoard } from "./transfer-portal-board";
+import { FavoritesProvider, useFavoriteGesture } from "./polish/favorites";
+import {
+  GameActionSheet,
+  GameActionsButton,
+  useGameActionSheet,
+} from "./polish/game-actions";
+import { BoardSkeleton } from "./polish/skeletons";
+import { MobileDataCard, MobileDataCardStack } from "./polish/mobile-data-card";
 import CFPBracket from "./CFPBracket";
 import GamedayPlannerCard from "./GamedayPlannerCard";
 
@@ -141,11 +155,13 @@ function ModeDialog({
 }
 
 function Monogram({ team, size = "md" }: { team: Team; size?: "sm" | "md" | "lg" }) {
+  const favoriteGesture = useFavoriteGesture(team.id, team.shortName);
   return (
     <span
       className={`monogram monogram--${size}${team.logo ? " monogram--img" : ""}`}
       style={{ "--team-color": team.color } as React.CSSProperties}
       aria-hidden="true"
+      {...favoriteGesture}
     >
       {team.logo ? (
         <img src={team.logo} alt="" loading="lazy" decoding="async" />
@@ -184,67 +200,83 @@ function GameCard({
   const away = teamFor(game.awayTeamId);
   const home = teamFor(game.homeTeamId);
   const isFavorite = favoriteIds.has(away.id) || favoriteIds.has(home.id);
+  const actions = useGameActionSheet();
+  const gameLabel = `${away.shortName} at ${home.shortName}`;
 
   return (
-    <article className="game-card">
-      <div className="game-card__topline">
-        <span className={`status status--${game.status}`}>{game.statusDetail}</span>
-        <span>{game.kickoffLabel}</span>
-        <button
-          className="favorite-button"
-          type="button"
-          onClick={() => onFavorite(home.id)}
-          aria-pressed={isFavorite}
-          aria-label={`${isFavorite ? "Remove" : "Add"} ${home.shortName} as a favorite`}
-        >
-          {isFavorite ? "★" : "☆"}
-        </button>
-      </div>
-      <a className="game-card__matchup" href={`/games/${game.id}`}>
-        <div className="team-line">
-          <Monogram team={away} />
+    <>
+      <article className="game-card" {...actions.longPressProps}>
+        <div className="game-card__topline">
+          <span className={`status status--${game.status}`}>{game.statusDetail}</span>
+          <span>{game.kickoffLabel}</span>
+          <button
+            className="favorite-button"
+            type="button"
+            onClick={() => onFavorite(home.id)}
+            aria-pressed={isFavorite}
+            aria-label={`${isFavorite ? "Remove" : "Add"} ${home.shortName} as a favorite`}
+          >
+            {isFavorite ? "★" : "☆"}
+          </button>
+        </div>
+        <a className="game-card__matchup" href={`/games/${game.id}`}>
+          <div className="team-line">
+            <Monogram team={away} />
+            <span>
+              <small>{away.rank ? `#${away.rank}` : away.conference}</small>
+              <strong>{away.shortName}</strong>
+              <em>{away.record}</em>
+            </span>
+            <b>{game.awayScore ?? "—"}</b>
+          </div>
+          <div className="team-line">
+            <Monogram team={home} />
+            <span>
+              <small>{home.rank ? `#${home.rank}` : home.conference}</small>
+              <strong>{home.shortName}</strong>
+              <em>{home.record}</em>
+            </span>
+            <b>{game.homeScore ?? "—"}</b>
+          </div>
+        </a>
+        <div className="game-card__meta">
+          <span>{game.venue}</span>
           <span>
-            <small>{away.rank ? `#${away.rank}` : away.conference}</small>
-            <strong>{away.shortName}</strong>
-            <em>{away.record}</em>
+            {game.broadcast
+              ? game.broadcast
+              : game.weather
+                ? `${game.weather.temperature}° · ${game.weather.summary}`
+                : "Network not assigned"}
           </span>
-          <b>{game.awayScore ?? "—"}</b>
         </div>
-        <div className="team-line">
-          <Monogram team={home} />
-          <span>
-            <small>{home.rank ? `#${home.rank}` : home.conference}</small>
-            <strong>{home.shortName}</strong>
-            <em>{home.record}</em>
-          </span>
-          <b>{game.homeScore ?? "—"}</b>
+        <div className="game-card__actions">
+          <a href={`/games/${game.id}`}>Preview</a>
+          <a href="/watch">Watch status</a>
+          <a href={`/stadiums/${game.venueSlug}`}>Gameday guide</a>
+          <GameActionsButton
+            className="game-card__more"
+            label={`More actions for ${gameLabel}`}
+            onClick={() => actions.setOpen(true)}
+          />
         </div>
-      </a>
-      <div className="game-card__meta">
-        <span>{game.venue}</span>
-        <span>
-          {game.broadcast
-            ? game.broadcast
-            : game.weather
-              ? `${game.weather.temperature}° · ${game.weather.summary}`
-              : "Network not assigned"}
-        </span>
-      </div>
-      <div className="game-card__actions">
-        <a href={`/games/${game.id}`}>Preview</a>
-        <a href="/watch">Watch status</a>
-        <a href={`/stadiums/${game.venueSlug}`}>Gameday guide</a>
-      </div>
-      {mode === "analysis" && game.line ? (
-        <div className="odds-strip">
-          <span>MARKET</span>
-          <strong>
-            {home.abbreviation} {game.line.home}
-          </strong>
-          <small>Market context · no operator actions</small>
-        </div>
-      ) : null}
-    </article>
+        {mode === "analysis" && game.line ? (
+          <div className="odds-strip">
+            <span>MARKET</span>
+            <strong>
+              {home.abbreviation} {game.line.home}
+            </strong>
+            <small>Market context · no operator actions</small>
+          </div>
+        ) : null}
+      </article>
+      <GameActionSheet
+        open={actions.open}
+        onOpenChange={actions.setOpen}
+        gameLabel={gameLabel}
+        matchupHref={`/games/${game.id}`}
+        guideHref={`/stadiums/${game.venueSlug}`}
+      />
+    </>
   );
 }
 
@@ -304,8 +336,20 @@ interface HomeProps {
 }
 
 function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
+  const publishedWeeks = useMemo(
+    () => [...new Set(games.map((game) => game.week))].sort((a, b) => a - b),
+    [],
+  );
+  const weeks = useMemo(() => continuousWeeks(publishedWeeks), [publishedWeeks]);
+  const [week, setWeek] = useState(() => defaultScoreboardWeek(games, broadcastAsOf));
   const [filter, setFilter] = useState<ScoreFilter>("All");
-  const filtered = games.filter((game) => {
+  const [isPending, startTransition] = useTransition();
+  const [pullDistance, setPullDistance] = useState(0);
+  const [refreshMessage, setRefreshMessage] = useState("");
+  const weekRail = useRef<HTMLFieldSetElement>(null);
+  const gesture = useRef({ active: false, x: 0, y: 0 });
+  const weekGames = gamesForWeek(games, week);
+  const filtered = weekGames.filter((game) => {
     const away = teamFor(game.awayTeamId);
     const home = teamFor(game.homeTeamId);
     if (filter === "All") return true;
@@ -313,6 +357,48 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
     if (filter === "Favorites") return favorites.has(away.id) || favorites.has(home.id);
     return away.subdivision === filter || home.subdivision === filter;
   });
+  const weekIndex = weeks.indexOf(week);
+  const previousWeek = weekIndex > 0 ? weeks[weekIndex - 1] : undefined;
+  const nextWeek = weekIndex >= 0 && weekIndex < weeks.length - 1 ? weeks[weekIndex + 1] : undefined;
+
+  const updateWeek = (value: number | undefined) => {
+    if (value == null || value === week) return;
+    startTransition(() => setWeek(value));
+  };
+
+  useEffect(() => {
+    const active = weekRail.current?.querySelector<HTMLElement>(`[data-week="${week}"]`);
+    active?.scrollIntoView({ behavior: "auto", block: "nearest", inline: "center" });
+  }, [week]);
+
+  const onPointerDown = (event: React.PointerEvent<HTMLElement>) => {
+    if (!event.isPrimary || event.pointerType === "mouse") return;
+    const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest("a, button, input, select, textarea, summary, fieldset")) return;
+    gesture.current = { active: true, x: event.clientX, y: event.clientY };
+  };
+
+  const onPointerMove = (event: React.PointerEvent<HTMLElement>) => {
+    if (!gesture.current.active) return;
+    const deltaX = event.clientX - gesture.current.x;
+    const deltaY = event.clientY - gesture.current.y;
+    if (window.scrollY <= 1 && deltaY > 0 && Math.abs(deltaY) > Math.abs(deltaX)) {
+      setPullDistance(Math.min(64, deltaY * 0.45));
+    }
+  };
+
+  const finishGesture = (event: React.PointerEvent<HTMLElement>) => {
+    if (!gesture.current.active) return;
+    const deltaX = event.clientX - gesture.current.x;
+    const deltaY = event.clientY - gesture.current.y;
+    gesture.current.active = false;
+    if (pullDistance >= 46) {
+      setRefreshMessage(`Week ${week} is current in the published dataset.`);
+    } else if (Math.abs(deltaX) > 62 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
+      updateWeek(deltaX < 0 ? nextWeek : previousWeek);
+    }
+    setPullDistance(0);
+  };
 
   return (
     <>
@@ -322,13 +408,46 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
         description={`Scheduled, final, delayed, and postponed game states with assigned TV networks where locked (${broadcastAsOf ?? "—"} compilation; unlisted games sit on conference plus-networks or await the 6–12 day flex).`}
         actions={<Freshness provenance={games[0].provenance} />}
       />
-      <div className="sticky-tools">
-        <fieldset className="date-switcher">
-          <legend className="sr-only">Score date</legend>
-          <button type="button" disabled title="One scoreboard window is available" aria-label="Previous scoreboard window unavailable">←</button>
-          <span><small>2026 SEASON</small><strong>{games.length} games tracked</strong></span>
-          <button type="button" disabled title="One scoreboard window is available" aria-label="Next scoreboard window unavailable">→</button>
-        </fieldset>
+      <div className="sticky-tools scoreboard-tools">
+        <div className="scoreboard-week-tools">
+          <fieldset className="date-switcher">
+            <legend className="sr-only">Change scoreboard week</legend>
+            <button
+              type="button"
+              disabled={previousWeek == null}
+              onClick={() => updateWeek(previousWeek)}
+              aria-label={previousWeek == null ? "Previous week unavailable" : `View week ${previousWeek}`}
+            >
+              <ChevronLeft aria-hidden="true" />
+            </button>
+            <span>
+              <small>2026 · WEEK {week}</small>
+              <strong>{weekGames.length} games published</strong>
+            </span>
+            <button
+              type="button"
+              disabled={nextWeek == null}
+              onClick={() => updateWeek(nextWeek)}
+              aria-label={nextWeek == null ? "Next week unavailable" : `View week ${nextWeek}`}
+            >
+              <ChevronRight aria-hidden="true" />
+            </button>
+          </fieldset>
+          <fieldset className="scoreboard-week-rail" ref={weekRail}>
+            <legend className="sr-only">Select scoreboard week</legend>
+            {weeks.map((item) => (
+              <button
+                type="button"
+                key={item}
+                data-week={item}
+                aria-pressed={week === item}
+                onClick={() => updateWeek(item)}
+              >
+                W{item}
+              </button>
+            ))}
+          </fieldset>
+        </div>
         <fieldset className="filter-chips">
           <legend className="sr-only">Score filters</legend>
           {(["All", "P4", "G5", "FCS", "Top 25", "Favorites"] as ScoreFilter[]).map((item) => (
@@ -336,23 +455,49 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
               type="button"
               key={item}
               aria-pressed={filter === item}
-              onClick={() => setFilter(item)}
+              onClick={() => startTransition(() => setFilter(item))}
             >
               {item}
             </button>
           ))}
         </fieldset>
       </div>
-      <section className="content-section">
+      <section
+        className="content-section scoreboard-touch-zone"
+        aria-busy={isPending}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={finishGesture}
+        onPointerCancel={() => {
+          gesture.current.active = false;
+          setPullDistance(0);
+        }}
+      >
+        <div
+          className="scoreboard-pull-cue"
+          data-ready={pullDistance >= 46 || undefined}
+          style={{ "--pull-distance": `${pullDistance}px` } as React.CSSProperties}
+          aria-hidden="true"
+        >
+          <RefreshCw />
+          <span>{pullDistance >= 46 ? "Release to check" : "Pull to refresh"}</span>
+        </div>
+        <span className="sr-only" aria-live="polite" aria-atomic="true">
+          {refreshMessage || `Week ${week}. ${filtered.length} games shown${filter === "All" ? "" : ` for ${filter}`}.`}
+        </span>
         <div className="scoreboard-summary">
-          <div><span>{games.length}</span><small>GAMES</small></div>
-          <div><span>{games.filter((game) => game.status === "final").length}</span><small>FINAL</small></div>
-          <div><span>{games.filter((game) => game.status === "scheduled").length}</span><small>SCHEDULED</small></div>
+          <div><span>{weekGames.length}</span><small>WEEK {week} GAMES</small></div>
+          <div><span>{weekGames.filter((game) => game.status === "final").length}</span><small>FINAL</small></div>
+          <div><span>{weekGames.filter((game) => game.status === "scheduled").length}</span><small>SCHEDULED</small></div>
           <div><span>{teams.length}</span><small>PROGRAMS</small></div>
           <a href="/schedule">Full schedule →</a>
         </div>
-        {filtered.length ? (
-          <div className="game-grid game-grid--two">
+        {isPending ? (
+          <div role="status" aria-label="Updating scoreboard">
+            <BoardSkeleton />
+          </div>
+        ) : filtered.length ? (
+          <div className="game-grid game-grid--two scoreboard-results" key={`${week}-${filter}`}>
             {filtered.map((game) => (
               <GameCard
                 key={game.id}
@@ -365,10 +510,11 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
           </div>
         ) : (
           <EmptyState
-            title="No favorite teams on this season board yet."
-            copy="Add a favorite from any game card, then return to this filter."
-            href="/teams"
-            action="Browse teams"
+            icon={<CircleOff aria-hidden="true" />}
+            title={weekGames.length ? "No games match this view." : `Week ${week} is not published yet.`}
+            copy={weekGames.length ? "Choose another filter or add a team to My Teams from any game card." : "Move to another week or open the full season schedule."}
+            href={weekGames.length ? "/teams" : "/schedule"}
+            action={weekGames.length ? "Browse teams" : "Open full schedule"}
           />
         )}
       </section>
@@ -728,6 +874,7 @@ function TeamDetail({ team }: { team: Team }) {
 
 function RankingsPage() {
   const [pollId, setPollId] = useState("ap");
+  const [isPending, startTransition] = useTransition();
   const table = pollTables.find((poll) => poll.poll === pollId) ?? pollTables[0];
   const ratingsRows = [...teams]
     .map((team) => ({ team, rating: getPreseasonRating(team.slug) }))
@@ -746,11 +893,11 @@ function RankingsPage() {
           <fieldset className="filter-chips">
             <legend className="sr-only">Board</legend>
             {pollTables.map((poll) => (
-              <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => setPollId(poll.poll)}>
+              <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => startTransition(() => setPollId(poll.poll))}>
                 {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
               </button>
             ))}
-            <button type="button" aria-pressed={true} onClick={() => setPollId("ratings")}>SP+ / FPI board</button>
+            <button type="button" aria-pressed={true} onClick={() => startTransition(() => setPollId("ratings"))}>SP+ / FPI board</button>
           </fieldset>
         </div>
         <section className="content-section">
@@ -759,8 +906,12 @@ function RankingsPage() {
             <div><span>{ratingsRows.filter((r) => r.rating?.fpi).length}</span><small>WITH FPI</small></div>
             <div><span>{ratingsRows.filter((r) => r.rating?.wins?.line != null).length}</span><small>WIN TOTALS PUBLISHED</small></div>
           </div>
-          <section className="data-table-wrap" tabIndex={0} aria-label="Preseason ratings board">
-            <table className="data-table">
+          {isPending ? (
+            <BoardSkeleton rows={3} />
+          ) : (
+            <>
+              <section className="data-table-wrap mobile-data-table-desktop" tabIndex={0} aria-label="Preseason ratings board">
+                <table className="data-table">
               <thead>
                 <tr>
                   <th>SP+</th><th>Team</th><th>SP+ rating</th><th>Off.</th><th>Def.</th><th>FPI</th><th>Win total</th><th>Proj. wins</th><th>Playoff odds*</th>
@@ -781,8 +932,32 @@ function RankingsPage() {
                   </tr>
                 ))}
               </tbody>
-            </table>
-          </section>
+                </table>
+              </section>
+              <MobileDataCardStack label="Preseason ratings">
+                {ratingsRows.map(({ team, rating }) => (
+                  <MobileDataCard
+                    key={`mobile-rating-${team.id}`}
+                    title={team.shortName}
+                    subtitle={team.conference}
+                    summary={[
+                      { label: "SP+ rank", value: rating?.sp ? `#${rating.sp.rank}` : "—" },
+                      { label: "SP+ rating", value: rating?.sp ? signed(rating.sp.overall) : "—" },
+                      { label: "FPI", value: rating?.fpi ? `#${rating.fpi.rank}` : "—" },
+                    ]}
+                    details={[
+                      { label: "Offense", value: rating?.sp ? signed(rating.sp.offense - 20) : "—" },
+                      { label: "Defense", value: rating?.sp ? signed(20 - rating.sp.defense) : "—" },
+                      { label: "Win total", value: rating?.wins?.line != null ? rating.wins.line.toFixed(1) : "—" },
+                      { label: "Projected wins", value: rating?.wins?.projected != null ? rating.wins.projected.toFixed(1) : "—" },
+                      { label: "Playoff odds", value: rating?.playoff ? `${rating.playoff.value} · ${rating.playoff.outlet}` : "—" },
+                    ]}
+                    action={<a href={`/teams/${team.slug}`}>Open team ratings <ChevronRight aria-hidden="true" /></a>}
+                  />
+                ))}
+              </MobileDataCardStack>
+            </>
+          )}
           <p className="table-caption">*Playoff odds are the outlet's reported number (ESPN FPI simulations or The Athletic model), not this site's simulation. SP+ offense/defense columns are adjusted for readability; raw figures sit on each team page.</p>
         </section>
       </>
@@ -808,11 +983,11 @@ function RankingsPage() {
         <fieldset className="filter-chips">
           <legend className="sr-only">Poll</legend>
           {pollTables.map((poll) => (
-            <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => setPollId(poll.poll)}>
+            <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => startTransition(() => setPollId(poll.poll))}>
               {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
             </button>
           ))}
-          <button type="button" aria-pressed={pollId === "ratings"} onClick={() => setPollId("ratings")}>SP+ / FPI board</button>
+          <button type="button" aria-pressed={pollId === "ratings"} onClick={() => startTransition(() => setPollId("ratings"))}>SP+ / FPI board</button>
         </fieldset>
       </div>
       <section className="content-section">
@@ -821,8 +996,12 @@ function RankingsPage() {
           <div><span>{table.rankings[0]?.first_place_votes ?? "—"}</span><small>FIRST-PLACE VOTES (NO. 1)</small></div>
           <div><span>{table.others.length}</span><small>OTHERS RECEIVING VOTES</small></div>
         </div>
-        <section className="data-table-wrap" tabIndex={0} aria-label={`${table.name} top 25 table`}>
-          <table className="data-table">
+        {isPending ? (
+          <BoardSkeleton rows={3} />
+        ) : (
+          <>
+            <section className="data-table-wrap mobile-data-table-desktop" tabIndex={0} aria-label={`${table.name} top 25 table`}>
+              <table className="data-table">
             <thead>
               <tr>
                 <th>Rank</th><th>Team</th><th>Record</th><th>Points</th><th>First votes</th><th>Prev.</th>
@@ -850,8 +1029,40 @@ function RankingsPage() {
                 );
               })}
             </tbody>
-          </table>
-        </section>
+              </table>
+            </section>
+            <MobileDataCardStack label={`${table.name} rankings`}>
+              {table.rankings.map((entry) => {
+                const team = entry.team_slug ? getTeamBySlug(entry.team_slug) : undefined;
+                const movement = entry.previous_rank == null ? null : entry.rank - entry.previous_rank;
+                const movementLabel = movement == null || movement === 0
+                  ? "No change published"
+                  : movement < 0
+                    ? `Up ${-movement}`
+                    : `Down ${movement}`;
+                return (
+                  <MobileDataCard
+                    key={`mobile-poll-${entry.rank}-${entry.team_slug}`}
+                    title={team?.name ?? entry.team}
+                    subtitle={team?.conference ?? table.name}
+                    summary={[
+                      { label: "Rank", value: `${entry.tied ? "T" : ""}${entry.rank}` },
+                      { label: "Record", value: entry.record ?? "—" },
+                      { label: "Points", value: entry.points?.toLocaleString() ?? "—" },
+                    ]}
+                    details={[
+                      { label: "First-place votes", value: entry.first_place_votes ?? "—" },
+                      { label: "Previous rank", value: entry.previous_rank ?? "—" },
+                      { label: "Movement", value: movementLabel },
+                      { label: "Poll", value: table.name },
+                    ]}
+                    action={<a href={team ? `/teams/${team.slug}` : "/rankings"}>Open team context <ChevronRight aria-hidden="true" /></a>}
+                  />
+                );
+              })}
+            </MobileDataCardStack>
+          </>
+        )}
         {table.others.length ? (
           <>
             <SectionHeading eyebrow="OTHERS RECEIVING VOTES" title="Just outside the Top 25" />
@@ -1237,10 +1448,24 @@ function GenericDirectory({ kind, conferenceSlug }: { kind: "coaches" | "confere
   );
 }
 
-function EmptyState({ title, copy, href, action }: { title: string; copy: string; href?: string; action?: string }) {
+function EmptyState({
+  title,
+  copy,
+  href,
+  action,
+  icon = <CircleOff aria-hidden="true" />,
+}: {
+  title: string;
+  copy: string;
+  href?: string;
+  action?: string;
+  icon?: React.ReactNode;
+}) {
   return (
     <div className="empty-state">
-      <span aria-hidden="true">—</span><h2>{title}</h2><p>{copy}</p>
+      <span className="empty-state__icon" aria-hidden="true">{icon}</span>
+      <h2>{title}</h2>
+      <p>{copy}</p>
       {href ? <a className="button button--ghost" href={href}>{action}</a> : null}
     </div>
   );
@@ -1391,17 +1616,19 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else content = <NotFoundPage />;
 
   return (
-    <div className={root === "teams" && parts[1] ? "app-shell app-shell--team" : "app-shell"}>
-      <BroadcastHeader
-        teams={teams}
-        activePath={normalizedPath}
-        cleanMode={mode === "clean"}
-        onCleanModeChange={(enabled) => enabled ? enableClean() : setModeDialogOpen(true)}
-      />
-      <ScoreTicker games={tickerGames} teams={teams} />
-      <main id="main-content">{content}</main>
-      <BroadcastFooter />
-      <ModeDialog open={modeDialogOpen} onClose={() => setModeDialogOpen(false)} onConfirm={enableAnalysis} />
-    </div>
+    <FavoritesProvider favorites={favorites} onToggle={toggleFavorite}>
+      <div className={root === "teams" && parts[1] ? "app-shell app-shell--team" : "app-shell"}>
+        <BroadcastHeader
+          teams={teams}
+          activePath={normalizedPath}
+          cleanMode={mode === "clean"}
+          onCleanModeChange={(enabled) => enabled ? enableClean() : setModeDialogOpen(true)}
+        />
+        <ScoreTicker games={tickerGames} teams={teams} />
+        <main id="main-content" className="route-frame" key={normalizedPath}>{content}</main>
+        <BroadcastFooter />
+        <ModeDialog open={modeDialogOpen} onClose={() => setModeDialogOpen(false)} onConfirm={enableAnalysis} />
+      </div>
+    </FavoritesProvider>
   );
 }

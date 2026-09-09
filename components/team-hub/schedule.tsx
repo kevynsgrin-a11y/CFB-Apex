@@ -5,6 +5,11 @@ import { ArrowRight, CalendarDays, MapPin, Minus, Tv } from "lucide-react";
 import { getTeamBySlug } from "@/lib/cfb-dataset";
 import type { TeamHubProps } from "@/lib/team-hub";
 import {
+  GameActionSheet,
+  GameActionsButton,
+  useGameActionSheet,
+} from "@/components/polish/game-actions";
+import {
   dateLabel,
   HubEmpty,
   HubHeading,
@@ -13,6 +18,136 @@ import {
   HubSection,
   published,
 } from "./ui";
+
+type ScheduleGame = NonNullable<TeamHubProps["schedule"]>[number];
+
+function ScheduleGameRow({
+  game,
+  nextGameId,
+  referenceDate,
+}: {
+  game: ScheduleGame;
+  nextGameId?: string;
+  referenceDate: string;
+}) {
+  const opponent = game.opponentSlug ? getTeamBySlug(game.opponentSlug) : null;
+  const isNext = game.id === nextGameId;
+  const actions = useGameActionSheet();
+  const gameLabel = `${game.homeAway === "away" ? "At" : "Vs"} ${game.opponent ?? "opponent"}`;
+
+  return (
+    <>
+      <article
+        className="hub-game"
+        data-bye={game.isBye}
+        data-next={isNext}
+        {...(!game.isBye ? actions.longPressProps : {})}
+      >
+        <div className="hub-game-date">
+          <span className="hub-eyebrow">
+            {game.week != null ? `WEEK ${game.week}` : "WEEK TBD"}
+          </span>
+          <strong>{dateLabel(game.date, false)}</strong>
+        </div>
+        {game.isBye ? (
+          <div className="hub-game-opponent">
+            <span className="hub-bye-mark">
+              <Minus size={20} aria-hidden="true" />
+            </span>
+            <div>
+              <h3>Bye week</h3>
+              <p>A week to reset.</p>
+            </div>
+          </div>
+        ) : (
+          <div className="hub-game-opponent">
+            <HubMark
+              team={{
+                shortName: opponent?.shortName ?? game.opponent ?? "TBD",
+                logo: opponent?.logo,
+                slug: opponent?.slug,
+              }}
+            />
+            <div>
+              <div className="hub-matchup-title">
+                <span className="hub-muted">
+                  {game.homeAway === "away"
+                    ? "at"
+                    : game.homeAway === "home"
+                      ? "vs"
+                      : game.homeAway === "neutral"
+                        ? "vs"
+                        : ""}
+                </span>
+                <h3>
+                  {opponent?.rank != null ? <small>#{opponent.rank} </small> : null}
+                  {opponent ? (
+                    <a href={`/teams/${opponent.slug}`}>{opponent.shortName}</a>
+                  ) : (
+                    published(game.opponent)
+                  )}
+                </h3>
+                {isNext ? <span className="hub-chip hub-chip--gold">UP NEXT</span> : null}
+              </div>
+              <p>
+                <MapPin size={14} aria-hidden="true" />
+                {game.venue ?? "Venue not published"}
+                {game.homeAway === "neutral" ? " · Neutral site" : ""}
+              </p>
+            </div>
+          </div>
+        )}
+        <div className="hub-game-result">
+          {game.isBye ? (
+            <span className="hub-muted">OPEN WEEK</span>
+          ) : game.result ? (
+            <strong className="font-display" data-outcome={game.result[0]}>
+              {game.result}
+              <small>FINAL</small>
+            </strong>
+          ) : (
+            <>
+              <strong>
+                {game.date && game.date < referenceDate
+                  ? "Result not published"
+                  : (game.kickoffLabel ?? "Kickoff not published")}
+              </strong>
+              <span className="hub-tv">
+                <Tv size={14} aria-hidden="true" />
+                {game.broadcast ?? "TV not published"}
+              </span>
+            </>
+          )}
+          {game.href ? (
+            <a
+              className="hub-game-link"
+              href={game.href}
+              aria-label={`${game.opponent} game details`}
+            >
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          ) : null}
+          {!game.isBye ? (
+            <GameActionsButton
+              className="hub-game-more"
+              label={`More actions for ${gameLabel}`}
+              onClick={() => actions.setOpen(true)}
+            />
+          ) : null}
+        </div>
+      </article>
+      {!game.isBye ? (
+        <GameActionSheet
+          open={actions.open}
+          onOpenChange={actions.setOpen}
+          gameLabel={gameLabel}
+          matchupHref={game.href ?? "/schedule"}
+          guideHref="/stadiums"
+        />
+      ) : null}
+    </>
+  );
+}
 
 export function ScheduleSection({
   schedule,
@@ -94,117 +229,14 @@ export function ScheduleSection({
               {visible.length} schedule entries shown
               {selectedWeek != null ? ` for week ${selectedWeek}` : ""}.
             </div>
-            {visible.map((game) => {
-              const opponent = game.opponentSlug
-                ? getTeamBySlug(game.opponentSlug)
-                : null;
-              const isNext = game.id === nextGame?.id;
-              return (
-                <article
-                  key={game.id}
-                  className="hub-game"
-                  data-bye={game.isBye}
-                  data-next={isNext}
-                >
-                  <div className="hub-game-date">
-                    <span className="hub-eyebrow">
-                      {game.week != null ? `WEEK ${game.week}` : "WEEK TBD"}
-                    </span>
-                    <strong>{dateLabel(game.date, false)}</strong>
-                  </div>
-                  {game.isBye ? (
-                    <div className="hub-game-opponent">
-                      <span className="hub-bye-mark">
-                        <Minus size={20} aria-hidden="true" />
-                      </span>
-                      <div>
-                        <h3>Bye week</h3>
-                        <p>A week to reset.</p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="hub-game-opponent">
-                      <HubMark
-                        team={{
-                          shortName:
-                            opponent?.shortName ?? game.opponent ?? "TBD",
-                          logo: opponent?.logo,
-                        }}
-                      />
-                      <div>
-                        <div className="hub-matchup-title">
-                          <span className="hub-muted">
-                            {game.homeAway === "away"
-                              ? "at"
-                              : game.homeAway === "home"
-                                ? "vs"
-                                : game.homeAway === "neutral"
-                                  ? "vs"
-                                  : ""}
-                          </span>
-                          <h3>
-                            {opponent?.rank != null ? (
-                              <small>#{opponent.rank} </small>
-                            ) : null}
-                            {opponent ? (
-                              <a href={`/teams/${opponent.slug}`}>
-                                {opponent.shortName}
-                              </a>
-                            ) : (
-                              published(game.opponent)
-                            )}
-                          </h3>
-                          {isNext ? (
-                            <span className="hub-chip hub-chip--gold">
-                              UP NEXT
-                            </span>
-                          ) : null}
-                        </div>
-                        <p>
-                          <MapPin size={14} aria-hidden="true" />
-                          {game.venue ?? "Venue not published"}
-                          {game.homeAway === "neutral" ? " · Neutral site" : ""}
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                  <div className="hub-game-result">
-                    {game.isBye ? (
-                      <span className="hub-muted">OPEN WEEK</span>
-                    ) : game.result ? (
-                      <strong
-                        className="font-display"
-                        data-outcome={game.result[0]}
-                      >
-                        {game.result}
-                        <small>FINAL</small>
-                      </strong>
-                    ) : (
-                      <>
-                        <strong>
-                          {game.date && game.date < referenceDate
-                            ? "Result not published"
-                            : (game.kickoffLabel ?? "Kickoff not published")}
-                        </strong>
-                        <span className="hub-tv">
-                          <Tv size={14} aria-hidden="true" />
-                          {game.broadcast ?? "TV not published"}
-                        </span>
-                      </>
-                    )}
-                    {game.href ? (
-                      <a
-                        className="hub-game-link"
-                        href={game.href}
-                        aria-label={`${game.opponent} game details`}
-                      >
-                        <ArrowRight size={18} aria-hidden="true" />
-                      </a>
-                    ) : null}
-                  </div>
-                </article>
-              );
-            })}
+            {visible.map((game) => (
+              <ScheduleGameRow
+                key={game.id}
+                game={game}
+                nextGameId={nextGame?.id}
+                referenceDate={referenceDate}
+              />
+            ))}
             {selectedWeek == null && filtered.length > 5 ? (
               <button
                 className="hub-expand-button"

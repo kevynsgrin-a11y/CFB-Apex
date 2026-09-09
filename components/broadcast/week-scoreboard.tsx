@@ -10,6 +10,78 @@ import {
   type BroadcastTeam,
 } from "@/lib/homepage";
 import { BroadcastBadge, LaneHeading, TeamMark } from "./primitives";
+import {
+  GameActionSheet,
+  GameActionsButton,
+  useGameActionSheet,
+} from "@/components/polish/game-actions";
+
+function WeekGameCard({
+  game,
+  away,
+  home,
+}: {
+  game: BroadcastGame;
+  away: BroadcastTeam;
+  home: BroadcastTeam;
+}) {
+  const actions = useGameActionSheet();
+  const hasScore = game.status === "final" || game.status === "live";
+  const gameLabel = `${away.shortName} at ${home.shortName}`;
+
+  return (
+    <>
+      <article className="apex-game-card apex-game-card--actions" {...actions.longPressProps}>
+        <a className="apex-game-card__link" href={`/games/${game.id}`}>
+          <div className="apex-game-card-main">
+            <div className="apex-game-card-top">
+              <span>{dateLabel(game.date)}</span>
+              <BroadcastBadge tone={game.status === "live" ? "cyan" : "neutral"}>
+                {hasScore ? game.status : game.broadcast || "TV: Not published"}
+              </BroadcastBadge>
+            </div>
+            {[away, home].map((team, index) => (
+              <div className="apex-card-team" key={team.slug}>
+                <TeamMark team={team} size="sm" />
+                <span>
+                  {team.rank != null && <small>{team.rank}</small>}
+                  {team.shortName}
+                </span>
+                {hasScore ? (
+                  <strong>{published(index === 0 ? game.awayScore : game.homeScore)}</strong>
+                ) : (
+                  <strong className="apex-record">{team.record || "Not published"}</strong>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="apex-game-card-bottom">
+            <span>
+              {hasScore
+                ? game.statusDetail || game.status
+                : kickoffTime(game) === "Not published"
+                  ? "Kickoff: Not published"
+                  : kickoffTime(game)}
+            </span>
+            <ChevronRight size={16} aria-hidden="true" />
+          </div>
+        </a>
+        <GameActionsButton
+          className="apex-game-card-more"
+          label={`More actions for ${gameLabel}`}
+          onClick={() => actions.setOpen(true)}
+        />
+      </article>
+      <GameActionSheet
+        open={actions.open}
+        onOpenChange={actions.setOpen}
+        gameLabel={gameLabel}
+        matchupHref={`/games/${game.id}`}
+        guideHref="/stadiums"
+      />
+    </>
+  );
+}
 
 export function WeekScoreboard({
   games,
@@ -129,57 +201,7 @@ export function WeekScoreboard({
           const away = bySlug.get(game.awayTeamId);
           const home = bySlug.get(game.homeTeamId);
           if (!away || !home) return null;
-          const hasScore = game.status === "final" || game.status === "live";
-          return (
-            <a
-              className="apex-game-card"
-              href={`/games/${game.id}`}
-              key={game.id}
-            >
-              <div className="apex-game-card-main">
-                <div className="apex-game-card-top">
-                  <span>{dateLabel(game.date)}</span>
-                  <BroadcastBadge
-                    tone={game.status === "live" ? "cyan" : "neutral"}
-                  >
-                    {hasScore
-                      ? game.status
-                      : game.broadcast || "TV: Not published"}
-                  </BroadcastBadge>
-                </div>
-                {[away, home].map((team, index) => (
-                  <div className="apex-card-team" key={team.slug}>
-                    <TeamMark team={team} size="sm" />
-                    <span>
-                      {team.rank != null && <small>{team.rank}</small>}
-                      {team.shortName}
-                    </span>
-                    {hasScore ? (
-                      <strong>
-                        {published(
-                          index === 0 ? game.awayScore : game.homeScore,
-                        )}
-                      </strong>
-                    ) : (
-                      <strong className="apex-record">
-                        {team.record || "Not published"}
-                      </strong>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="apex-game-card-bottom">
-                <span>
-                  {hasScore
-                    ? game.statusDetail || game.status
-                    : kickoffTime(game) === "Not published"
-                      ? "Kickoff: Not published"
-                      : kickoffTime(game)}
-                </span>
-                <ChevronRight size={16} aria-hidden="true" />
-              </div>
-            </a>
-          );
+          return <WeekGameCard key={game.id} game={game} away={away} home={home} />;
         })}
       </section>
       <p className="apex-data-note">

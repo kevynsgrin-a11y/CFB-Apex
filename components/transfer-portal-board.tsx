@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, useMemo, useState, useTransition } from "react";
 import {
   ArrowDownLeft,
   ArrowRight,
@@ -16,6 +16,8 @@ import {
   DataBoardSummary,
   formatDataDate,
 } from "./data-board-primitives";
+import { MobileDataCard, MobileDataCardStack } from "./polish/mobile-data-card";
+import { BoardSkeleton } from "./polish/skeletons";
 
 interface PortalCounts {
   incoming: number;
@@ -210,6 +212,7 @@ export function TransferPortalBoard({
 }: TransferPortalBoardProps) {
   const [position, setPosition] = useState("All positions");
   const [status, setStatus] = useState("All statuses");
+  const [isPending, startTransition] = useTransition();
   const teamBySlug = useMemo(
     () => new Map(teams.map((team) => [team.slug, team])),
     [teams],
@@ -356,7 +359,7 @@ export function TransferPortalBoard({
                 <SlidersHorizontal size={18} aria-hidden="true" />
                 <label>
                   <span>Position</span>
-                  <select value={position} onChange={(event) => setPosition(event.target.value)}>
+                  <select value={position} onChange={(event) => startTransition(() => setPosition(event.target.value))}>
                     {positions.map((item) => (
                       <option key={item}>{item}</option>
                     ))}
@@ -364,7 +367,7 @@ export function TransferPortalBoard({
                 </label>
                 <label>
                   <span>Status</span>
-                  <select value={status} onChange={(event) => setStatus(event.target.value)}>
+                  <select value={status} onChange={(event) => startTransition(() => setStatus(event.target.value))}>
                     {statuses.map((item) => (
                       <option key={item}>{item}</option>
                     ))}
@@ -375,7 +378,13 @@ export function TransferPortalBoard({
             <p className="db-result-count" aria-live="polite">
               Showing <strong>{filteredEvents.length}</strong> of {events.length} verified records
             </p>
-            <section className="db-table-wrap" tabIndex={0} aria-label="Scrollable portal movement table">
+            {isPending ? <BoardSkeleton rows={3} /> : null}
+            <section
+              className="db-table-wrap db-desktop-data-table"
+              hidden={isPending}
+              tabIndex={0}
+              aria-label="Scrollable portal movement table"
+            >
               <table className="db-table db-table--portal">
                 <caption>
                   Transfer events compiled {formatDataDate(asOf)}. Notes expand in place; team names link to program pages.
@@ -460,6 +469,42 @@ export function TransferPortalBoard({
                 </tbody>
               </table>
             </section>
+            {!isPending ? (
+              <MobileDataCardStack label="Transfer portal records">
+                {filteredEvents.map((event) => {
+                const origin = teamBySlug.get(event.fromTeamId);
+                const destination = event.toTeamId
+                  ? teamBySlug.get(event.toTeamId)
+                  : undefined;
+                const originLabel = origin?.shortName ?? fallbackTeamLabel(event.fromTeamId);
+                const destinationLabel = destination?.shortName ?? (event.toTeamId ? fallbackTeamLabel(event.toTeamId) : "Open");
+                return (
+                  <MobileDataCard
+                    key={`mobile-${event.id}`}
+                    title={event.player}
+                    subtitle={event.status}
+                    summary={[
+                      { label: "Position", value: event.position },
+                      { label: "Origin", value: originLabel },
+                      { label: "Destination", value: destinationLabel },
+                    ]}
+                    details={[
+                      { label: "Date", value: <time dateTime={event.eventDate}>{formatDataDate(event.eventDate)}</time> },
+                      { label: "Confidence", value: event.confidence },
+                      { label: "Status", value: event.status },
+                      { label: "Source note", value: event.notes ?? "No additional note published." },
+                    ]}
+                    action={
+                      <a href={`/players/${event.playerSlug}`}>
+                        Open player record
+                        <ArrowRight aria-hidden="true" />
+                      </a>
+                    }
+                  />
+                );
+                })}
+              </MobileDataCardStack>
+            ) : null}
           </section>
         </>
       ) : (
@@ -467,6 +512,7 @@ export function TransferPortalBoard({
           <DataBoardEmpty
             title="Portal data not published"
             description="The full ledger will appear when verified portal records join the dataset."
+            action={<a href="/teams">Browse all teams</a>}
           />
         </section>
       )}

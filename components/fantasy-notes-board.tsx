@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { ArrowRight, ChevronDown, ShieldCheck, SlidersHorizontal } from "lucide-react";
 import type { FantasyNote } from "@/lib/cfb-dataset";
 import type { Team } from "@/lib/types";
@@ -10,6 +10,8 @@ import {
   DataBoardSummary,
   formatDataDate,
 } from "./data-board-primitives";
+import { MobileDataCard, MobileDataCardStack } from "./polish/mobile-data-card";
+import { BoardSkeleton } from "./polish/skeletons";
 
 interface FantasyNotesBoardProps {
   cleanMode: boolean;
@@ -81,6 +83,7 @@ export function FantasyNotesBoard({
 }: FantasyNotesBoardProps) {
   const [position, setPosition] = useState("All positions");
   const [teamFilter, setTeamFilter] = useState("All teams");
+  const [isPending, startTransition] = useTransition();
   const teamBySlug = useMemo(
     () => new Map(teams.map((team) => [team.slug, team])),
     [teams],
@@ -148,7 +151,7 @@ export function FantasyNotesBoard({
             <SlidersHorizontal size={18} aria-hidden="true" />
             <label>
               <span>Position</span>
-              <select value={position} onChange={(event) => setPosition(event.target.value)}>
+              <select value={position} onChange={(event) => startTransition(() => setPosition(event.target.value))}>
                 {positions.map((item) => (
                   <option key={item}>{item}</option>
                 ))}
@@ -156,7 +159,7 @@ export function FantasyNotesBoard({
             </label>
             <label>
               <span>Team</span>
-              <select value={teamFilter} onChange={(event) => setTeamFilter(event.target.value)}>
+              <select value={teamFilter} onChange={(event) => startTransition(() => setTeamFilter(event.target.value))}>
                 <option value="All teams">All teams</option>
                 {representedTeams.map((team) => (
                   <option key={team.slug} value={team.slug}>
@@ -171,8 +174,11 @@ export function FantasyNotesBoard({
           Showing <strong>{filteredNotes.length}</strong> of {notes.length} player notes
         </p>
 
-        {filteredNotes.length ? (
-          <section className="db-table-wrap" tabIndex={0} aria-label="Scrollable Week 1 fantasy notes table">
+        {isPending ? (
+          <BoardSkeleton rows={3} />
+        ) : filteredNotes.length ? (
+          <>
+            <section className="db-table-wrap db-desktop-data-table" tabIndex={0} aria-label="Scrollable Week 1 fantasy notes table">
             <table className="db-table db-table--fantasy">
               <caption>{context ?? "Compilation context not published."}</caption>
               <thead>
@@ -229,10 +235,56 @@ export function FantasyNotesBoard({
               </tbody>
             </table>
           </section>
+          <MobileDataCardStack label="Fantasy player notes">
+            {filteredNotes.map((note) => {
+              const team = teamBySlug.get(note.team);
+              return (
+                <MobileDataCard
+                  key={`mobile-${note.id}`}
+                  title={note.player}
+                  subtitle={note.class ?? "Class not published"}
+                  summary={[
+                    { label: "Position", value: note.position ?? "—" },
+                    { label: "Team", value: team?.shortName ?? note.team },
+                    { label: "Availability", value: note.availability ?? "Not published" },
+                  ]}
+                  details={[
+                    { label: "Reported role", value: note.role ?? "Not published" },
+                    { label: "Usage note", value: note.usage ?? "Not published" },
+                    { label: "Injury note", value: note.injury ?? "None published" },
+                    {
+                      label: "Analyst projection",
+                      value: note.projection
+                        ? `${note.projection.value} · ${note.projection.outlet}`
+                        : "Not published",
+                    },
+                  ]}
+                  action={team ? (
+                    <a href={`/teams/${team.slug}`}>
+                      Open team hub
+                      <ArrowRight aria-hidden="true" />
+                    </a>
+                  ) : undefined}
+                />
+              );
+            })}
+          </MobileDataCardStack>
+          </>
         ) : (
           <DataBoardEmpty
             title="No notes match"
             description="Change the position or team filter to return to the published board."
+            action={
+              <button
+                type="button"
+                onClick={() => startTransition(() => {
+                  setPosition("All positions");
+                  setTeamFilter("All teams");
+                })}
+              >
+                Clear filters
+              </button>
+            }
           />
         )}
 
