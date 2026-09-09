@@ -24,6 +24,7 @@ const navigation = [
   { label: "Fantasy", href: "/dfs" },
   { label: "No Names", href: "/no-names" },
   { label: "Heisman", href: "/heisman" },
+  { label: "Highlight", href: "/highlight" },
   { label: "NIL", href: "/nil" },
   { label: "The Panel", href: "/panel" },
   { label: "Coaches", href: "/coaches" },

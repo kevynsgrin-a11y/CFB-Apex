@@ -10,6 +10,51 @@
 
 import bundle from "./cfb-2026.generated.ts";
 
+/* --------------------------------------------- athlete highlight & panel --- */
+
+export interface HighlightEntry {
+  player: string;
+  team_slug: string;
+  position: string;
+  class: string;
+  stat_line: string;
+  opponent_slug: string;
+  result: string;
+  why: string;
+  video_url?: string | null;
+  sources?: string[];
+}
+
+export interface AthleteHighlight {
+  as_of: string | null;
+  week: number | null;
+  window: string | null;
+  athlete_of_the_week: HighlightEntry | null;
+  runners_up: HighlightEntry[];
+  honorable_mentions: HighlightEntry[];
+  criteria_note: string | null;
+  source_engines?: string | null;
+}
+
+export interface PanelTopic {
+  id: string;
+  question: string;
+  traditionalist: string;
+  analyst: string;
+  evaluator: string;
+  what_settles_it: string;
+  sources: string[];
+}
+
+export interface PanelBrief {
+  as_of: string | null;
+  week: number | null;
+  topics: PanelTopic[];
+  also_on_the_desk: Array<{ question: string; one_liner: string }>;
+  notes: string | null;
+  source_engines?: string | null;
+}
+
 export type WatchConfidence = "high" | "medium" | "low";
 
 export interface HeismanContender {
@@ -68,6 +113,8 @@ export interface NilWatch {
 
 const heismanDoc = (bundle as Record<string, unknown>).heismanWatch as HeismanWatch | null;
 const nilDoc = (bundle as Record<string, unknown>).nilWatch as NilWatch | null;
+const highlightDoc = (bundle as Record<string, unknown>).athleteHighlight as AthleteHighlight | null;
+const panelDoc = (bundle as Record<string, unknown>).panelBrief as PanelBrief | null;
 
 export const heismanWatch: HeismanWatch = heismanDoc
   ? {
@@ -101,6 +148,40 @@ export const nilWatch: NilWatch = nilDoc
       valuation_methodology: null,
       notes: null,
     };
+
+export const athleteHighlight: AthleteHighlight = highlightDoc
+  ? {
+      as_of: highlightDoc.as_of ?? null,
+      week: highlightDoc.week ?? null,
+      window: highlightDoc.window ?? null,
+      athlete_of_the_week: highlightDoc.athlete_of_the_week ?? null,
+      runners_up: Array.isArray(highlightDoc.runners_up) ? highlightDoc.runners_up : [],
+      honorable_mentions: Array.isArray(highlightDoc.honorable_mentions)
+        ? highlightDoc.honorable_mentions
+        : [],
+      criteria_note: highlightDoc.criteria_note ?? null,
+      source_engines: highlightDoc.source_engines ?? null,
+    }
+  : {
+      as_of: null,
+      week: null,
+      window: null,
+      athlete_of_the_week: null,
+      runners_up: [],
+      honorable_mentions: [],
+      criteria_note: null,
+    };
+
+export const panelBrief: PanelBrief = panelDoc
+  ? {
+      as_of: panelDoc.as_of ?? null,
+      week: panelDoc.week ?? null,
+      topics: Array.isArray(panelDoc.topics) ? panelDoc.topics : [],
+      also_on_the_desk: Array.isArray(panelDoc.also_on_the_desk) ? panelDoc.also_on_the_desk : [],
+      notes: panelDoc.notes ?? null,
+      source_engines: panelDoc.source_engines ?? null,
+    }
+  : { as_of: null, week: null, topics: [], also_on_the_desk: [], notes: null };
 
 /** Best (shortest) reported odds as a positive-integer number, for ordering. */
 export function oddsRank(contender: HeismanContender): number {

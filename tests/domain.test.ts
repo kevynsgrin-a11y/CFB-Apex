@@ -89,8 +89,20 @@ test("injury desk: ESPN base maps to dataset teams, long-term rule holds, cadenc
   const fromFriday = injury.nextInjurySlot(friday);
   assert.ok(fromFriday.at.getTime() > friday.getTime());
   assert.equal(fromFriday.slot.id, "saturday-morning");
-  assert.equal(injury.injuryResearch.ledger.length, 0);
-  assert.equal(injury.injuryResearch.watch.length, 0);
+  // Week 2 research staged via the ingest pipeline (2026-09-09): the editorial
+  // layer must be present, schema-clean, and fully slug-validated.
+  assert.ok(injury.injuryResearch.ledger.length >= 15, `expected staged ledger, got ${injury.injuryResearch.ledger.length}`);
+  assert.ok(injury.injuryResearch.watch.length >= 40, `expected staged watch, got ${injury.injuryResearch.watch.length}`);
+  assert.equal(injury.injuryResearch.week, 2);
+  for (const entry of injury.injuryResearch.ledger) {
+    assert.ok(slugs.has(entry.teamSlug), `research ledger: unknown team ${entry.teamSlug}`);
+    assert.ok(entry.sources.length >= 1, entry.player);
+    if (entry.status === "OUT") assert.ok(entry.weeksOut == null || entry.weeksOut >= 3, entry.player);
+  }
+  for (const entry of injury.injuryResearch.watch) {
+    assert.ok(slugs.has(entry.teamSlug), `research watch: unknown team ${entry.teamSlug}`);
+    assert.ok(entry.sources.length + entry.social.length >= 1, entry.player);
+  }
 });
 
 test("transfer portal ledger is complete, sourced, and slug-clean", () => {

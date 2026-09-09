@@ -17,6 +17,7 @@ const required = [
   "/coaching-carousel",
   "/dfs",
   "/injuries",
+  "/highlight",
   "/stadiums",
   "/watch",
   "/methodology",

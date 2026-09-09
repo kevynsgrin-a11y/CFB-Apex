@@ -80,6 +80,8 @@ test("critical product routes render dataset-backed content", async () => {
     ["/injuries", /The injury report, on the record/],
     ["/injuries", /LONG-TERM LEDGER/],
     ["/injuries", /Next scheduled update/],
+    ["/injuries", /Fonoti/],
+    ["/injuries", /Sione Moa/],
     ["/api/injuries", /"source": ?"ESPN college football injuries feed/],
     ["/watch", /WFFN/],
     ["/watch", /Crimson Tide Sports Network/],

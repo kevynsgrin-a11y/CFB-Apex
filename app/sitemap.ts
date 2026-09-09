@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const featureRoutes: MetadataRoute.Sitemap = [
     { url: "/injuries", lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: "/highlight", lastModified: now, changeFrequency: "weekly", priority: 0.7 },
   ];
   return [...teamRoutes, ...coachRoutes, ...conferenceRoutes, ...featureRoutes];
 }

@@ -13,6 +13,7 @@ const staticRoots = new Set([
   "no-names",
   "heisman",
   "injuries",
+  "highlight",
   "nil",
   "panel",
   "coaches",
@@ -112,6 +113,20 @@ export async function generateMetadata({
       description: team
         ? `Verified incoming and outgoing transfer movement for ${team.name}.`
         : "Track verified college football transfers by player, position, program, status, date, and source confidence.",
+    };
+  }
+  if (root === "highlight") {
+    return {
+      title: "Athlete Highlight of the Week — College Football's Top Performance",
+      description:
+        "One winner, four runners-up, and the criteria that picked them — compiled from verified box scores and licensed highlight footage, weighted for opponent quality and game-deciding execution.",
+    };
+  }
+  if (root === "panel") {
+    return {
+      title: "The Panel — Three Analysts, Zero Agreement",
+      description:
+        "Three fixed football philosophies — traditionalist, analyst, talent evaluator — debate the week's biggest questions with sourced facts. The personas argue; the numbers are real.",
     };
   }
   if (root === "injuries") {

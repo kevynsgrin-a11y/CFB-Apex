@@ -26,7 +26,7 @@ const LEDGER_STATUS = new Set(["IR", "OUT"]);
 
 function teamSlugs() {
   // Read the generated bundle for the canonical slug list (no TS import needed).
-  const generated = readFileSync(join(root, "lib", "nfl-generated.ts"), "utf8");
+  const generated = readFileSync(join(root, "lib", "cfb-2026.generated.ts"), "utf8");
   const slugs = new Set();
   for (const m of generated.matchAll(/"slug":"([a-z0-9-]+)"/g)) slugs.add(m[1]);
   if (slugs.size === 0) throw new Error("could not read team slugs from lib/cfb-2026.generated.ts");
@@ -61,8 +61,11 @@ function validate(doc, slugs) {
     }
     if (entry.likelihood && !LIKELIHOODS.has(entry.likelihood)) fail(`bad likelihood ${entry.likelihood}`, entry, index);
     if (!entry.confidence || !CONFIDENCE.has(entry.confidence)) fail("watch entries need a confidence", entry, index);
-    if (!entry.likelihood && !entry.practice?.wed && !entry.practice?.thu && !entry.practice?.fri && !entry.practice?.sat) {
-      fail("watch entries need practice status or a likelihood", entry, index);
+    // A watch row may carry only a dated note — practice designations and
+    // likelihood grades stay null when nothing was verified. The page renders
+    // "Not graded" rather than inventing one.
+    if (!entry.likelihood && !entry.practice?.wed && !entry.practice?.thu && !entry.practice?.fri && !entry.practice?.sat && !entry.note) {
+      fail("watch entries need practice status, a likelihood, or a dated note", entry, index);
     }
     const allSources = [...(entry.sources ?? []), ...(entry.social ?? [])];
     if (allSources.length === 0) fail("at least one source or verified social link required", entry, index);
