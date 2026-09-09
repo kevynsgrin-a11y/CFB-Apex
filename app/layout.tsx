@@ -5,6 +5,7 @@ import { brand, environment } from "@/lib/config";
 import "./globals.css";
 import "./broadcast.css";
 import "./watch.css";
+import "./data-boards.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
