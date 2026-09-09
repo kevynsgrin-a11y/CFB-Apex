@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { HubApp } from "@/components/HubApp";
 import { coaches, dfsPlayers, fantasyPlayerSlugs, games, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
@@ -48,11 +49,25 @@ function isKnownPath(parts: string[]) {
   return false;
 }
 
-export default async function RoutePage({
-  params,
-}: {
+interface RoutePageProps {
   params: Promise<{ slug: string[] }>;
-}) {
+}
+
+export async function generateMetadata({
+  params,
+}: RoutePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  if (slug[0] === "watch") {
+    return {
+      title: "Where to Watch College Football",
+      description:
+        "Find weekly college football TV windows, verified local radio flagships, and official team ticket destinations.",
+    };
+  }
+  return {};
+}
+
+export default async function RoutePage({ params }: RoutePageProps) {
   const { slug } = await params;
   if (!isKnownPath(slug)) notFound();
   return <HubApp path={`/${slug.join("/")}`} />;

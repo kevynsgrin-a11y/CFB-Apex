@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import { brand, environment } from "@/lib/config";
 import "./globals.css";
 import "./broadcast.css";
+import "./watch.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,9 +59,12 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export const viewport = {
-  themeColor: "#07131f",
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0A0F1A",
   colorScheme: "dark",
+  userScalable: true,
 };
 
 export default async function RootLayout({
@@ -86,9 +90,9 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="en" data-environment="dataset">
+    <html lang="en" data-environment="dataset" className="bg-background">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <script type="application/ld+json">
           {JSON.stringify(structuredData).replaceAll("<", "\\u003c")}

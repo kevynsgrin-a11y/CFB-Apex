@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-background: var(--ink);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-display: var(--font-geist-mono), monospace;
+}
+
 :root {
-  --ink: #07131f;
+  --ink: #0a0f1a;
   --ink-2: #0a1a28;
   --surface: #0d2030;
   --surface-2: #142b3d;
@@ -23,6 +31,25 @@
   --radius-sm: 6px;
   --radius: 10px;
   --radius-lg: 14px;
+  --background: var(--ink);
+  --foreground: var(--text);
+  --card: var(--surface);
+  --secondary: var(--surface-2);
+  --muted-foreground: var(--muted);
+  --primary: var(--gold);
+  --primary-foreground: var(--ink);
+  --accent: var(--blue);
+  --body-family: var(--font-geist-sans), Arial, sans-serif;
+  --display-family: var(--font-geist-mono), monospace;
+  --space-page: clamp(1.125rem, 4vw, 2.25rem);
+  --space-lane: 3rem;
+  --type-display: clamp(3.5rem, 7vw, 6rem);
+  --duration-fast: 160ms;
+  --duration-normal: 260ms;
+  --duration-entrance: 520ms;
+  --stagger: 70ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-overlay: 0 24px 70px rgba(0, 0, 0, 0.42);
 }
 
 * {
