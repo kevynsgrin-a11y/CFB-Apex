@@ -93,6 +93,16 @@ export default async function RootLayout({
 
   return (
     <html lang="en" data-environment="dataset" className="bg-background">
+      <head>
+        {/* Travelpayouts Drive (marker 775855, source 572310). Functionalities
+            stay disabled in Travelpayouts → Drive → Advanced settings, so the
+            script loads but never auto-converts links or injects offers. */}
+        <script
+          async
+          data-cmp-ab="2"
+          src="https://tpembars.com/NTcyMzEw.js?t=572310"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
