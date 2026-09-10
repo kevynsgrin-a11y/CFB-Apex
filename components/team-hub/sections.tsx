@@ -169,9 +169,10 @@ export function GamedaySection({
               <span className="hub-eyebrow">PLAN THE TRIP</span>
               {travelLinksForQuery(`hotels near ${stadium.name} ${stadium.city}`, "hotels")
                 .concat(travelLinksForQuery(`${stadium.city} car rental`, "cars"))
+                .concat(travelLinksForQuery(`flights to ${stadium.city}`, "flights"))
                 .map((link) => (
                   <a key={`travel-${link.partner}`} href={link.url} target="_blank" rel="sponsored nofollow noreferrer noopener">
-                    {link.category === "hotels" ? "Hotels" : "Car rental"} · {link.partner}
+                    {link.category === "hotels" ? "Hotels" : link.category === "cars" ? "Car rental" : "Flights"} · {link.partner}
                     <span>{link.tracked ? "Official partner" : "Partner · approval pending"}</span>
                   </a>
                 ))}
