@@ -102,6 +102,14 @@ export default async function RootLayout({
           data-cmp-ab="2"
           src="https://tpembars.com/NTcyMzEw.js?t=572310"
         />
+        {/* Stay22 LetMeAllez (lmaID 6aa23f525191d7967c10372e) — monetizes
+            accommodation links/maps on gameday travel surfaces. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function (s, t, a, y, twenty, two) {s.Stay22 = s.Stay22 || {};s.Stay22.params = { lmaID: '6aa23f525191d7967c10372e' };twenty = t.createElement(a);two = t.getElementsByTagName(a)[0];twenty.async = 1;twenty.src = y;two.parentNode.insertBefore(twenty, two);})(window, document, 'script', 'https://scripts.stay22.com/letmeallez.js');",
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
