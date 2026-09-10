@@ -68,7 +68,7 @@ const template = `${url.origin}${url.pathname}?${param}={url}`;
 // Sanity: tracking hosts are short-hostname redirects (pxf.io, brand hosts),
 // never the partner's own storefront.
 const destHost = partnerArg === "ticketnetwork" ? "ticketnetwork.com" : "ticketsmarter.com";
-if (url.hostname.includes(destHost)) {
+if (url.hostname === `www.${destHost}` || url.hostname === destHost) {
   console.error("That looks like the partner's storefront URL, not a tracking link. Copy the link from the network's Ads & Links tab instead.");
   process.exit(1);
 }

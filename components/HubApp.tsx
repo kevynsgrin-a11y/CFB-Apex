@@ -1279,7 +1279,7 @@ function PolicyPage({ kind }: { kind: string }) {
     "affiliate-disclosure": {
       eyebrow: "COMMERCIAL TRANSPARENCY",
       title: "Affiliate disclosure",
-      intro: "Ticket partner links (TicketNetwork, TicketSmarter) are live across the watch guide, team pages, and stadium guides. Affiliate approval is pending: until it clears, links go directly to the partners' public ticket searches and we earn no commission. Once approved, the same links convert to tracked referrals automatically.",
+      intro: "TicketNetwork links are TRACKED AND EARNING - every click carries our Impact campaign attribution (12.5-14.5% per sale). TicketSmarter’s approval is still pending: its links go directly to its public ticket searches until activated, then convert to tracked referrals automatically.",
       sections: [["How links are labeled", "Partner links carry sponsored/nofollow attributes and are labeled near the action. Tracked and pending states are labeled honestly — a pending link is marked as such."], ["Editorial firewall", "Commercial compensation will never determine model probabilities, editorial ranking, source verification, or correction outcomes."], ["Partner swaps", "If a partner is denied or retired, its links are removed or swapped without touching editorial content — the affiliate layer is a single configuration module."]],
     },
     "responsible-gaming": {

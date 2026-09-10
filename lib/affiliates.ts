@@ -33,8 +33,8 @@ export const ticketPartners: TicketPartnerConfig[] = [
   {
     id: "ticketnetwork",
     name: "TicketNetwork",
-    destTemplate: "https://www.ticketnetwork.com/en/search?q={query}",
-    trackedUrl: null,
+    destTemplate: "https://www.ticketnetwork.com/search?q={query}",
+    trackedUrl: "https://goto.ticketnetwork.com/c/7746757/120057/2322?url={url}",
     commissionNote: "12.5-14.5% per sale (via Impact)",
   },
   {
