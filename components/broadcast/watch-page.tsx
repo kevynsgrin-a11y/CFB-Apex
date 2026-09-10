@@ -14,6 +14,7 @@ import {
 	ticketAffiliatesConfigured,
 	ticketLinksForTeam,
 } from "@/lib/affiliates";
+import { travelLinksForQuery, travelAffiliatesConfigured } from "@/lib/travel-affiliates";
 import { timeEtLabel, type RadioStation, type TvRow } from "@/lib/cfb-dataset";
 import type { Stadium, Team } from "@/lib/types";
 import { TeamMark } from "./primitives";
@@ -614,6 +615,21 @@ export function WatchPage({
 								</p>
 							)}
 						</article>
+						{travelAffiliatesConfigured && selectedStadium ? (
+							<div className="watch-sponsored-links watch-travel">
+								<span>TRAVEL FOR THE GAME</span>
+								<div>
+									{travelLinksForQuery(`hotels near ${selectedStadium.name} ${selectedStadium.city}`, "hotels")
+										.concat(travelLinksForQuery(`${selectedStadium.city} car rental`, "cars"))
+										.map((link) => (
+											<a href={link.url} key={`travel-${link.partner}`} target="_blank" rel="sponsored nofollow noreferrer noopener">
+												{link.category === "hotels" ? "Hotels" : "Cars"} · {link.partner}
+												<ExternalLink size={14} aria-hidden="true" />
+											</a>
+										))}
+								</div>
+							</div>
+						) : null}
 					</div>
 				</section>
 			</div>

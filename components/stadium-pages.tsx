@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import type { Stadium, Team } from "@/lib/types";
 import { ticketLinksForTeam } from "@/lib/affiliates";
+import { travelLinksForQuery, travelAffiliatesConfigured } from "@/lib/travel-affiliates";
 import { TeamMark } from "./broadcast/primitives";
 
 interface StadiumDirectoryProps {
@@ -212,6 +213,32 @@ export function StadiumDetail({ stadium, team }: StadiumDetailProps) {
           </div>
         </div>
       
+      {travelAffiliatesConfigured ? (
+          <aside className="lt-tickets lt-trip" aria-label="Plan your trip">
+            <span className="lt-eyebrow">PLAN YOUR TRIP</span>
+            {[
+              { category: "hotels" as const, label: "Hotels near the stadium", query: `hotels near ${stadium.name} ${stadium.address}` },
+              { category: "cars" as const, label: "Rental cars", query: `${stadium.city} car rental` },
+              { category: "flights" as const, label: "Flights", query: `flights to ${stadium.city}` },
+            ].map((slot) =>
+              travelLinksForQuery(slot.query, slot.category).map((link) => (
+                <a
+                  key={`${slot.category}-${link.partner}`}
+                  href={link.url}
+                  target="_blank"
+                  rel="sponsored nofollow noreferrer noopener"
+                >
+                  <strong>{slot.label}</strong>
+                  <span>{link.partner}{link.tracked ? "" : " · pending"}</span>
+                </a>
+              )),
+            )}
+            <p>
+              Travel partner links for the gameday trip. See the{" "}
+              <a href="/affiliate-disclosure">affiliate disclosure</a>.
+            </p>
+          </aside>
+        ) : null}
       <aside className="lt-tickets" aria-label="Ticket partner links">
         <span className="lt-eyebrow">TICKETS</span>
         {ticketLinksForTeam(team.name).map((link) => (

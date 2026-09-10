@@ -17,6 +17,30 @@ import {
 } from "../lib/cfb-dataset.ts";
 import { normalizeForcedOutcomes, runPlayoffSimulation } from "../lib/simulation.ts";
 
+
+test("travel affiliates: config integrity and fail-closed placement", async () => {
+  const { travelPartners, activeTravelPartners, travelLinksForQuery, travelAffiliatesConfigured } =
+    await import("../lib/travel-affiliates.ts");
+  const categories = { hotels: 0, flights: 0, cars: 0 };
+  for (const partner of travelPartners) {
+    categories[partner.category] += 1;
+    assert.match(partner.id, /^[a-z0-9-]+$/);
+    assert.ok(partner.commissionNote.length > 3, partner.id);
+  }
+  // 2-3 partners per category per the strategy doc
+  for (const [category, count] of Object.entries(categories)) {
+    assert.ok(count >= 2 && count <= 3, `${category}: expected 2-3 partners, got ${count}`);
+  }
+  // Pre-activation: nothing renders anywhere (fail-closed placement surfaces).
+  if (!travelAffiliatesConfigured) {
+    assert.equal(activeTravelPartners().length, 0);
+    assert.deepEqual(travelLinksForQuery("hotels near Bryant-Denny Stadium", "hotels"), []);
+  } else {
+    for (const link of travelLinksForQuery("Tuscaloosa car rental", "cars")) {
+      assert.match(link.url, /^https:/, link.partner);
+    }
+  }
+});
 test("Heisman watch: every contender maps to a dataset team, odds carry outlets, sources exist", async () => {
   const { heismanWatch, heismanBoard, oddsRank } = await import("../lib/awards-watch.ts");
   assert.ok(heismanWatch.contenders.length >= 15, `expected a real watch board, got ${heismanWatch.contenders.length}`);

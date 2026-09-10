@@ -11,6 +11,7 @@ import {
   Trophy,
 } from "lucide-react";
 import { ticketLinksForTeam } from "@/lib/affiliates";
+import { travelLinksForQuery, travelAffiliatesConfigured } from "@/lib/travel-affiliates";
 import type { HubTransfer, TeamHubProps } from "@/lib/team-hub";
 import {
   dateLabel,
@@ -163,6 +164,19 @@ export function GamedaySection({
             </strong>
             <span>STADIUM CAPACITY</span>
           </div>
+          {travelAffiliatesConfigured && stadium ? (
+            <div className="hub-tickets hub-travel">
+              <span className="hub-eyebrow">PLAN THE TRIP</span>
+              {travelLinksForQuery(`hotels near ${stadium.name} ${stadium.city}`, "hotels")
+                .concat(travelLinksForQuery(`${stadium.city} car rental`, "cars"))
+                .map((link) => (
+                  <a key={`travel-${link.partner}`} href={link.url} target="_blank" rel="sponsored nofollow noreferrer noopener">
+                    {link.category === "hotels" ? "Hotels" : "Car rental"} · {link.partner}
+                    <span>{link.tracked ? "Official partner" : "Partner · approval pending"}</span>
+                  </a>
+                ))}
+            </div>
+          ) : null}
           {ticketLinks.length ? (
             <div className="hub-tickets">
               <span className="hub-eyebrow">TICKETS</span>
