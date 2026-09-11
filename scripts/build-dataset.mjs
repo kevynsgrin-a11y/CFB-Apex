@@ -560,6 +560,131 @@ try {
   console.warn(`ESPN injury feed unavailable — shipping empty base (${error.message})`);
 }
 
+/* Live poll refresh — the dist's preseason bake goes stale the moment the
+   first regular-season AP Top 25 drops. ESPN's rankings endpoint carries the
+   current AP + AFCA Coaches tables (site.web.api host; the plain site.api
+   host is Worker-throttled — see the Sep 2026 egress notes). On failure the
+   dist tables ship unchanged with their honest status note. */
+let pollsNote = pollsStatus;
+const ESPN_RANKINGS_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/rankings";
+try {
+  const res = await fetch(ESPN_RANKINGS_URL, { headers: { accept: "application/json" } });
+  if (!res.ok) throw new Error(`${res.status}`);
+  const doc = await res.json();
+  const espnToTables = (doc.rankings ?? [])
+    .filter((board) => /AP Top 25|AFCA Coaches Poll/i.test(board.name ?? ""))
+    .map((board) => ({
+      poll: /AP Top 25/i.test(board.name) ? "ap" : "coaches",
+      name: /AP Top 25/i.test(board.name) ? "AP Top 25" : "AFCA Coaches Poll",
+      release_date: (board.lastUpdated ?? board.ranks?.[0]?.date ?? "").slice(0, 10) || null,
+      rankings: (board.ranks ?? []).map((entry) => {
+        const t = entry.team ?? {};
+        const name = t.location || t.nickname || t.name || "Unknown";
+        const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim().toLowerCase();
+        return {
+          rank: entry.current ?? null,
+          team_slug: teamByDisplayName.get(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null,
+          team: name,
+          record: entry.recordSummary ?? null,
+          points: entry.points ?? null,
+          first_place_votes: entry.firstPlaceVotes ?? null,
+          previous_rank: entry.previous ?? null,
+          tied: false,
+        };
+      }).filter((e) => e.rank != null),
+      others: [],
+    }));
+  if (espnToTables.length === 2) {
+    /* Composite = average of the two polls' ranks; a team ranked in only one
+       poll is counted as 26 in the other so unranked-ness is penalized, not
+       ignored. Sorted by average, ties broken by AP rank. */
+    const ap = espnToTables.find((t) => t.poll === "ap");
+    const co = espnToTables.find((t) => t.poll === "coaches");
+    const names = new Map();
+    for (const table of [ap, co]) {
+      for (const e of table.rankings) {
+        const row = names.get(e.team) ?? { team: e.team, team_slug: e.team_slug, record: e.record, ranks: {} };
+        row.ranks[table.poll] = e.rank;
+        if (!row.team_slug && e.team_slug) row.team_slug = e.team_slug;
+        names.set(e.team, row);
+      }
+    }
+    const compositeRows = [...names.values()]
+      .map((row) => ({ ...row, avg: ((row.ranks.ap ?? 26) + (row.ranks.coaches ?? 26)) / 2 }))
+      .sort((a, b) => a.avg - b.avg || (a.ranks.ap ?? 26) - (b.ranks.ap ?? 26));
+    const composite = {
+      poll: "composite",
+      name: "CFB Apex Composite",
+      release_date: ap.release_date,
+      rankings: compositeRows.map((row, i) => ({
+        rank: i + 1,
+        team_slug: row.team_slug ?? null,
+        team: row.team,
+        record: row.record ?? null,
+        points: null,
+        first_place_votes: null,
+        previous_rank: null,
+        tied: false,
+      })),
+      others: [],
+    };
+    polls.length = 0;
+    polls.push(...espnToTables, composite);
+    pollsNote = `AP Top 25 and AFCA Coaches Poll refreshed live from ESPN at build time (${new Date().toISOString().slice(0, 10)}). The CFB Apex Composite averages the two polls; a team ranked in only one poll is counted as 26 in the other. The AP releases its regular-season Top 25 Sundays at 2 p.m. ET.`;
+    console.log(`Live polls: AP ${ap.rankings.length} + Coaches ${co.rankings.length} entries; composite ${composite.rankings.length} teams`);
+  } else {
+    console.warn(`ESPN rankings returned ${espnToTables.length}/2 boards — keeping dist polls`);
+  }
+} catch (error) {
+  console.warn(`ESPN rankings unavailable — shipping dist (preseason) polls (${error.message})`);
+}
+
+/* Conference standings — the race tracker under /rankings. Same host as the
+   polls (site.web.api). ESPN returns one child per FBS conference; each team
+   is mapped to OUR conference_slug via our own teams table so the module
+   matches the site's conference hubs. Fail-closed: a failed fetch ships an
+   empty array and the section simply does not render. */
+const conferenceStandings = [];
+try {
+  const res = await fetch("https://site.web.api.espn.com/apis/v2/sports/football/college-football/standings", { headers: { accept: "application/json" } });
+  if (!res.ok) throw new Error(`${res.status}`);
+  const doc = await res.json();
+  for (const child of doc.children ?? []) {
+    const entries = child?.standings?.entries ?? [];
+    const rows = [];
+    let confSlug = null;
+    for (const entry of entries) {
+      const t = entry.team ?? {};
+      const name = t.location || t.nickname || t.name;
+      if (!name) continue;
+      const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim().toLowerCase();
+      const ourSlug = teamByDisplayName.get(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null;
+      const ourTeam = ourSlug ? teams.find((tm) => tm.slug === ourSlug) : null;
+      if (!confSlug && ourTeam) confSlug = ourTeam.conference_slug;
+      const stat = (n) => (entry.stats ?? []).find((s) => s.name === n)?.displayValue ?? null;
+      rows.push({
+        team: name,
+        team_slug: ourSlug,
+        w: stat("wins") ?? "0",
+        l: stat("losses") ?? "0",
+        t: stat("ties") ?? "0",
+        pct: stat("winPercent") ?? "—",
+      });
+    }
+    if (confSlug && rows.length) {
+      conferenceStandings.push({
+        slug: confSlug,
+        name: child.name || child.displayName || confSlug,
+        short: teams.find((tm) => tm.conference_slug === confSlug)?.conference_short ?? confSlug.toUpperCase(),
+        rows: rows.slice(0, 20),
+      });
+    }
+  }
+  console.log(`Conference standings: ${conferenceStandings.length} conferences, ${conferenceStandings.reduce((n, c) => n + c.rows.length, 0)} teams`);
+} catch (error) {
+  console.warn(`ESPN conference standings unavailable — conference race section ships empty (${error.message})`);
+}
+
 /* ------------------------------------------------- awards & NIL watches ----- */
 // Two-engine research compilations, cross-verified. Fail-closed when absent.
 // Research engines sometimes emit mascot-style slugs ("lsu-tigers",
@@ -635,7 +760,7 @@ if (existsSync(RESEARCH_PATH)) {
   console.log("No injury research staged yet — editorial layer ships empty (fail-closed).");
 }
 
-const payload = { teams, conferences, polls, pollsStatus, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief };
+const payload = { teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief };
 
 const body = `// GENERATED by scripts/build-dataset.mjs from data/cfb-2026 — do not edit.
 // biome-ignore lint: generated file

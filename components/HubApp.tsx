@@ -18,6 +18,7 @@ import {
   getTeamBySlug,
   modelEstimatesAvailable,
   pollTables,
+  conferenceStandings,
   pollsStatusNote,
   portalAsOf,
   portalCountsFor,
@@ -979,14 +980,14 @@ function RankingsPage() {
       <PageHeading
         eyebrow="2026 PRESEASON RANKINGS"
         title="AP and Coaches, straight from the release."
-        description={`${table.name}${table.release_date ? ` · released ${table.release_date}` : ""}. Every row cites the poll; no composite is invented.`}
+        description={`${table.name}${table.release_date ? ` · released ${table.release_date}` : ""}. AP and Coaches rows cite the release directly; the CFB Apex Composite averages the two polls.`}
       />
       <div className="sticky-tools">
         <fieldset className="filter-chips">
           <legend className="sr-only">Poll</legend>
           {pollTables.map((poll) => (
             <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => startTransition(() => setPollId(poll.poll))}>
-              {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
+              {poll.name}
             </button>
           ))}
           <button type="button" aria-pressed={pollId === "ratings"} onClick={() => startTransition(() => setPollId("ratings"))}>SP+ / FPI board</button>
@@ -1081,6 +1082,38 @@ function RankingsPage() {
         ) : null}
         {pollsStatusNote ? <p className="panel-note">{pollsStatusNote}</p> : null}
       </section>
+      {conferenceStandings.length ? (
+        <section className="content-section">
+          <SectionHeading eyebrow="CONFERENCE RACES" title="Who leads every league" />
+          <p className="panel-note">
+            Live standings from ESPN, refreshed on every build. Conference leaders lead each table; rows link to team hubs.
+          </p>
+          <div className="conf-race-grid">
+            {conferenceStandings.map((conf) => (
+              <div className="conf-race-card" key={conf.slug}>
+                <h3>
+                  <a href={`/conferences/${conf.slug}`}>{conf.name}</a>
+                </h3>
+                <table className="data-table conf-race-table">
+                  <thead>
+                    <tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th></tr>
+                  </thead>
+                  <tbody>
+                    {conf.rows.map((row, i) => (
+                      <tr className={i === 0 ? "conf-race-leader" : undefined} key={row.team_slug ?? row.team}>
+                        <td>
+                          {row.team_slug ? <a href={`/teams/${row.team_slug}`}>{row.team}</a> : row.team}
+                        </td>
+                        <td>{row.w}</td><td>{row.l}</td><td>{row.t}</td><td>{row.pct}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section className="content-section">
         <SectionHeading eyebrow="STRENGTH OF SCHEDULE" title="Published SOS ratings" />
         <p className="panel-note">

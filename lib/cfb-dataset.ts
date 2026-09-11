@@ -901,6 +901,22 @@ export interface PollTable {
 }
 
 export const pollTables = bundle.polls as PollTable[];
+
+export interface ConferenceStandingRow {
+  team: string;
+  team_slug: string | null;
+  w: string;
+  l: string;
+  t: string;
+  pct: string;
+}
+export interface ConferenceStanding {
+  slug: string;
+  name: string;
+  short: string;
+  rows: ConferenceStandingRow[];
+}
+export const conferenceStandings = (bundle.conferenceStandings ?? []) as ConferenceStanding[];
 export const pollsStatusNote = (bundle.pollsStatus as string | null) ?? null;
 
 /* -------------------------------------------------- coaching staff & players */
