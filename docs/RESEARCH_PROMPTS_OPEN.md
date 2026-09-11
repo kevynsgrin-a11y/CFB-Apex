@@ -298,6 +298,65 @@ OUTPUT: one JSON code block, nothing else:
 
 ---
 
+## PROMPT 9 — Upset Watch (run Thursdays during the season)
+
+```
+==================== PROMPT START ====================
+Compile the CFBApex Upset Watch for Week [N] of the 2026 college football
+season as of [THURSDAY DATE]. Scope: the weekend's FBS slate. Pick 3-5
+games where a genuine upset case exists — defined as: the underdog is
+getting 6+ points per the prevailing market line (cite the line and its
+source), AND at least one concrete on-field reason (turnover margin,
+ QB run game vs. a weak contain, weather if verified, lookahead spot for
+the favorite).
+
+For each: away/home teams, the line with source, the upset case in two
+sentences (scheme- or usage-specific, not vibes), a confidence tag
+(coin-flip / live dog / long fuse), and what the result does to each
+team's conference race. Then one "market trap" — a game the crowd thinks
+is an upset spot but the matchup data says otherwise.
+
+Rules: no invented lines — if a line is not published, the game is
+ineligible. Two sources per game. Null means not published.
+
+OUTPUT: one JSON code block, nothing else:
+{"as_of": "YYYY-MM-DD", "week": N, "picks": [{"away_slug": "",
+"home_slug": "", "line": null, "line_source": "", "case": "",
+"confidence": "coin_flip|live_dog|long_fuse", "race_effect": "",
+"sources": [""]}], "trap": {"away_slug": "", "home_slug": "", "why": ""}}
+==================== PROMPT END ====================
+```
+
+## PROMPT 10 — Road to the Playoff, weekly resume audit (run Sundays once Week 3 begins)
+
+```
+==================== PROMPT START ====================
+Compile the CFBApex Road to the Playoff audit for Week [N] of the 2026
+college football season (games through [SUNDAY DATE]). Scope: every team
+that can realistically reach the 12-team CFP — roughly the top 25 of the
+CFB Apex Composite plus any unbeaten from a non-power league.
+
+For each contender: record, current Composite rank, remaining schedule
+strength (cite the metric source or mark null), the loss count that ends
+their at-large case (0, 1, or 2 depending on league and profile), one-line
+resume state (best win, worst blemish), and a tag — controls destiny /
+needs help / win-out-or-out. Then three storylines: the weekend's result
+that moved the needle most, the race angle to watch next week, and one
+team whose case is weaker than its record.
+
+Rules: bracket mechanics must follow the published 12-team format (five
+highest-ranked conference champions + seven at-larges). Two sources per
+factual claim. Null means not published.
+
+OUTPUT: one JSON code block, nothing else:
+{"as_of": "YYYY-MM-DD", "week": N, "contenders": [{"team_slug": "",
+"record": "", "composite_rank": null, "remaining_sos": null,
+"losses_that_end_case": 1, "resume_state": "", "tag":
+"controls_destiny|needs_help|win_out_or_out"}], "storylines":
+{"mover": "", "watch_next_week": "", "weaker_than_record": ""}}
+==================== PROMPT END ====================
+```
+
 ## After results arrive
 
 Drop each research output JSON into `data/injury-research/inbox/` (injuries)
