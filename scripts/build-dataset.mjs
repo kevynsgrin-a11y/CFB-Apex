@@ -685,6 +685,82 @@ try {
   console.warn(`ESPN conference standings unavailable — conference race section ships empty (${error.message})`);
 }
 
+/* Completed-game results — merges the live ESPN scoreboard for every played
+   week into playedGames. The curated files under stats/2026/games/ carry the
+   full editorial layer (narrative, leaders, stats) and WIN any collision; the
+   ESPN rows exist so weeks without curated files still show honest result
+   lines (teams + points + TV), with editorial fields explicitly absent. */
+try {
+  const today = new Date();
+  const ymd = (d) => d.toISOString().slice(0, 10).replaceAll("-", "");
+  /* per-day windows — the CFB scoreboard 400s on multi-day ranges (soccer
+     accepts them; football does not), so walk the season-to-date one day at a
+     time in small parallel batches */
+  const days = [];
+  for (let d = new Date(Date.UTC(2026, 7, 23)); d <= today; d = new Date(d.getTime() + 86400000)) days.push(ymd(d));
+  const espnResults = new Map();
+  const parseDoc = (doc) => {
+    for (const ev of doc.events ?? []) {
+      const comp = (ev.competitions && ev.competitions[0]) || {};
+      const cs = comp.competitors || [];
+      if (ev.status?.type?.state !== "post" || !ev.status?.type?.completed) continue;
+      const home = cs.find((c) => c.homeAway === "home");
+      const away = cs.find((c) => c.homeAway === "away");
+      if (!home || !away) continue;
+      const mapTeam = (c) => {
+        const t = c.team ?? {};
+        const fullName = t.displayName ?? `${t.location ?? ""} ${t.name ?? ""}`.trim();
+        return { slug: teamByDisplayName.get(String(fullName).toLowerCase()) ?? null, name: t.shortDisplayName || t.location || fullName, points: c.score != null ? Number(c.score) : null };
+      };
+      const h = mapTeam(home), a = mapTeam(away);
+      if (!h.slug || !a.slug) continue;
+      espnResults.set(`${ev.date.slice(0, 10)}-${a.slug}-at-${h.slug}`, {
+        away_slug: a.slug,
+        date: ev.date.slice(0, 10),
+        kickoff_utc: ev.date,
+        game_id: `${ev.date.slice(0, 10)}-${a.slug}-at-${h.slug}`,
+        home_slug: h.slug,
+        leaders: {},
+        line_score: [],
+        meta: {
+          as_of: new Date().toISOString().slice(0, 10),
+          dataset: "game",
+          notes: ["Result line from the live ESPN scoreboard. Editorial layers (narrative, team stats, leaders) not yet published for this game."],
+          schema_version: "1.0.0",
+          sources: ["ESPN college football scoreboard"],
+        },
+        neutral_site: Boolean(comp.neutralSite),
+        season: 2026,
+        site: (comp.venue && comp.venue.fullName) || null,
+        teams: [
+          { name: h.name, points: h.points, slug: h.slug },
+          { name: a.name, points: a.points, slug: a.slug },
+        ],
+        title: ev.shortName || `${a.name} at ${h.name}`,
+        tv: (comp.broadcasts && comp.broadcasts[0] && comp.broadcasts[0].names && comp.broadcasts[0].names[0]) || null,
+      });
+    }
+  };
+  for (let i = 0; i < days.length; i += 5) {
+    const batch = days.slice(i, i + 5);
+    const docs = await Promise.all(batch.map(async (day) => {
+      const res = await fetch(`https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}`, { headers: { accept: "application/json" } });
+      if (!res.ok) throw new Error(`${res.status} on ${day}`);
+      return res.json();
+    }));
+    for (const doc of docs) parseDoc(doc);
+  }
+  const curated = new Set(playedGames.map((g) => g.game_id));
+  let added = 0;
+  for (const [id, row] of espnResults) {
+    if (!curated.has(id)) { playedGames.push(row); added += 1; }
+  }
+  playedGames.sort((a, b) => a.date.localeCompare(b.date));
+  console.log(`ESPN results merged: ${added} games added, ${curated.size} curated kept, ${playedGames.length} total played`);
+} catch (error) {
+  console.warn(`ESPN results merge unavailable — playedGames stays curated-only (${error.message})`);
+}
+
 /* ------------------------------------------------- awards & NIL watches ----- */
 // Two-engine research compilations, cross-verified. Fail-closed when absent.
 // Research engines sometimes emit mascot-style slugs ("lsu-tigers",

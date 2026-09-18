@@ -381,6 +381,17 @@ function kickoffLabel(date: string) {
   return `${day} · ${date}`;
 }
 
+/* Live ESPN result rows carry the true kickoff instant; render it in ET so
+ * played games keep the same "Sat · 2026-09-12 · 3:30 PM ET" label shape the
+ * scheduled side produces from the researched TV guide. */
+function playedKickoffLabel(date: string, kickoffUtc?: string) {
+  if (!kickoffUtc) return kickoffLabel(date);
+  const parsed = new Date(kickoffUtc);
+  const day = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "America/New_York" }).format(parsed);
+  const time = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/New_York" }).format(parsed);
+  return `${day} · ${date} · ${time} ET`;
+}
+
 const playedGameIds = new Set(playedGames.map((game) => game.game_id));
 const teamSlugs = new Set(datasetTeams.map((team) => team.slug));
 /* Only games between two of the 138 FBS programs render; FBS-vs-FCS results
@@ -516,8 +527,8 @@ export const games: Game[] = [
     return {
       id,
       week: seasonWeek(game.date),
-      date: `${game.date}T17:00:00.000Z`,
-      kickoffLabel: kickoffLabel(game.date),
+      date: (game as { kickoff_utc?: string }).kickoff_utc ?? `${game.date}T17:00:00.000Z`,
+      kickoffLabel: playedKickoffLabel(game.date, (game as { kickoff_utc?: string }).kickoff_utc),
       status: "final" as const,
       statusDetail: game.title,
       awayTeamId: game.away_slug,
