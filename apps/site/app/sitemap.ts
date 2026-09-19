@@ -1,27 +1,34 @@
 import type { MetadataRoute } from "next";
 import { coaches, conferenceHubSlugs, teams } from "@/lib/cfb-dataset";
+import { environment } from "@/lib/config";
 
 /**
  * Detail routes are enumerated from the vendored 2026 dataset (138 real FBS
  * programs, their head coaches, and their conferences) so the sitemap can
  * never claim a page the data cannot fill.
+ *
+ * Every url must be ABSOLUTE: Next emits MetadataRoute.Sitemap entries
+ * verbatim (metadataBase does not apply to the sitemap endpoint), and until
+ * 2026-09-19 all 290 entries were bare paths — invalid per the sitemap spec,
+ * which Search Console reported as ~289 errors.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const origin = environment.siteUrl.replace(/\/$/, "");
   const teamRoutes: MetadataRoute.Sitemap = teams.map((team) => ({
-    url: `/teams/${team.slug}`,
+    url: `${origin}/teams/${team.slug}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.6,
   }));
   const coachRoutes: MetadataRoute.Sitemap = coaches.map((coach) => ({
-    url: `/coaches/${coach.slug}`,
+    url: `${origin}/coaches/${coach.slug}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.4,
   }));
   const conferenceRoutes: MetadataRoute.Sitemap = conferenceHubSlugs().map((slug) => ({
-    url: `/conferences/${slug}`,
+    url: `${origin}/conferences/${slug}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.5,
