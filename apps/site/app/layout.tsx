@@ -96,6 +96,9 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
+        {/* ga4: portfolio measurement stream (React hoists to head) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CRGEH5DN9E" />
+        <script dangerouslySetInnerHTML={{ __html: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CRGEH5DN9E');" }} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData).replaceAll("<", "\\u003c")}
         </script>
