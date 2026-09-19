@@ -177,7 +177,7 @@ export function HeismanPage() {
             <h1>The most outstanding player in college football</h1>
             <p>
               {hasBoard
-                ? `Week ${heismanWatch.week ?? 2} watch list — ${board.length} contenders, every stat line sourced, every odds figure as reported by the named book. Compiled ${heismanWatch.as_of ?? ""} from a two-engine research pass, cross-verified against live reporting.`
+                ? `Week ${heismanWatch.week ?? 2} watch list — ${board.length} contenders, every stat line sourced, every odds figure as reported by the named book. Compiled ${heismanWatch.as_of ?? ""} from a sourced research pass (see compilation note).`
                 : "Our top-10 ranking debuts after Week 3. Until then, here's the methodology."}
             </p>
           </div>

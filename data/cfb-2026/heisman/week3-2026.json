@@ -1,0 +1,286 @@
+{
+ "as_of": "2026-09-19",
+ "week": 3,
+ "source_engines": "Kimi API (Moonshot kimi-k3) compilation from ESPN box-score leader payloads (Weeks 1-2 completed games) and odds as reported by named outlets (DK Network, FOX Sports, NBC Sports, FanDuel; Sept 15-19 windows), cross-checked 2026-09-19. Players without published lines in these sources are dropped, not guessed.",
+ "contenders": [
+  {
+   "player": "Darian Mensah",
+   "team_slug": "miami-fl",
+   "position": "QB",
+   "class": "R-Jr",
+   "stat_line": "27/30, 401 YDS, 5 TD | 14/15, 252 YDS, 3 TD",
+   "odds_as_reported": [
+    {
+     "outlet": "DraftKings (via DK Network)",
+     "value": "+550"
+    },
+    {
+     "outlet": "FOX Sports",
+     "value": "+550"
+    },
+    {
+     "outlet": "FanDuel",
+     "value": "+650"
+    }
+   ],
+   "case_for": "Mensah opened with 27/30, 401 YDS, 5 TD and followed with 14/15, 252 YDS, 3 TD, the most dominant two-game passing start on the board. He also holds the shortest reported odds (+550 at DraftKings via DK Network and FOX Sports, +650 at FanDuel).",
+   "case_against": "No team results were provided, so there is no verified context on whether Miami's wins strengthen his candidacy.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard",
+    "https://dknetwork.draftkings.com",
+    "https://www.foxsports.com",
+    "https://www.fanduel.com"
+   ],
+   "confidence": "high"
+  },
+  {
+   "player": "Jeremiah Smith",
+   "team_slug": "ohio-state",
+   "position": "WR",
+   "class": "Jr",
+   "stat_line": "8 REC, 151 YDS, 2 TD | 8 REC, 164 YDS, 1 TD",
+   "odds_as_reported": [
+    {
+     "outlet": "DraftKings (via DK Network)",
+     "value": "+700"
+    },
+    {
+     "outlet": "FOX Sports",
+     "value": "+650"
+    },
+    {
+     "outlet": "NBC Sports (DraftKings)",
+     "value": "+700"
+    }
+   ],
+   "case_for": "Smith has been a model of consistency with 8 REC, 151 YDS, 2 TD in Week 1 and 8 REC, 164 YDS, 1 TD in Week 2. He carries odds from three outlets: +650 at FOX Sports and +700 at DraftKings (via DK Network) and NBC Sports (DraftKings).",
+   "case_against": "As a wide receiver with only one receiving touchdown in Week 2, his case depends on continued high-volume production behind Ohio State's quarterback play.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard",
+    "https://dknetwork.draftkings.com",
+    "https://www.foxsports.com",
+    "https://www.nbcsports.com"
+   ],
+   "confidence": "high"
+  },
+  {
+   "player": "Jayden Maiava",
+   "team_slug": "usc",
+   "position": "QB",
+   "class": "Sr",
+   "stat_line": "25/29, 286 YDS, 2 TD | 23/25, 349 YDS, 3 TD | 19/29, 261 YDS, 5 TD, 1 INT",
+   "odds_as_reported": null,
+   "case_for": "Maiava has the deepest body of work on the board with three published lines: 25/29, 286 YDS, 2 TD; 23/25, 349 YDS, 3 TD; and 19/29, 261 YDS, 5 TD, 1 INT. His combination of volume, accuracy, and a five-touchdown game gives him the strongest case among players without reported odds.",
+   "case_against": "He has no reported odds from any outlet, indicating he has not yet registered with oddsmakers as a leading candidate.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Gunner Stockton",
+   "team_slug": "georgia",
+   "position": "QB",
+   "class": "Sr",
+   "stat_line": "15/16, 202 YDS, 3 TD | 13/16, 234 YDS, 5 TD",
+   "odds_as_reported": null,
+   "case_for": "Stockton has been nearly perfect, completing 15/16 for 202 YDS and 3 TD in Week 1 and 13/16 for 234 YDS and 5 TD in Week 2. Eight passing touchdowns against minimal incompletions is elite efficiency through two games.",
+   "case_against": "His yardage totals (202 and 234) are modest compared to the board's top passers, and he has no reported odds.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "CJ Carr",
+   "team_slug": "notre-dame",
+   "position": "QB",
+   "class": "R-So",
+   "stat_line": "19/29, 239 YDS, 2 TD | 16/20, 253 YDS, 4 TD",
+   "odds_as_reported": null,
+   "case_for": "Carr improved sharply from 19/29, 239 YDS, 2 TD in Week 1 to 16/20, 253 YDS, 4 TD in Week 2 with no interceptions on record. Six touchdowns across two games with an 80% completion game gives him a strong trajectory.",
+   "case_against": "His yardage totals are modest and he has no reported odds to validate market support.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Malachi Toney",
+   "team_slug": "miami-fl",
+   "position": "WR",
+   "class": "So",
+   "stat_line": "12 REC, 234 YDS, 3 TD | 4 REC, 96 YDS, 1 TD",
+   "odds_as_reported": null,
+   "case_for": "Toney's 12 REC, 234 YDS, 3 TD opener is the biggest single receiving game on the board, and he added 4 REC, 96 YDS, 1 TD in Week 2. Four touchdowns in two games gives him elite scoring production.",
+   "case_against": "His Week 2 line of 4 REC, 96 YDS shows heavy dependence on his quarterback, and he has no reported odds.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Trinidad Chambliss",
+   "team_slug": "ole-miss",
+   "position": "QB",
+   "class": "Sr",
+   "stat_line": "21/36, 336 YDS, 3 TD, 1 INT | 23/26, 225 YDS, 2 TD",
+   "odds_as_reported": null,
+   "case_for": "Chambliss produced 21/36, 336 YDS, 3 TD in Week 1 and a highly efficient 23/26, 225 YDS, 2 TD in Week 2. Five touchdowns with strong yardage across two games keeps him in the mix.",
+   "case_against": "The Week 1 line of 21/36 with an interception shows inefficiency that holds him back from the top tier.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Julian Sayin",
+   "team_slug": "ohio-state",
+   "position": "QB",
+   "class": "R-So",
+   "stat_line": "21/25, 320 YDS, 3 TD | 17/32, 278 YDS, 1 TD, 1 INT",
+   "odds_as_reported": null,
+   "case_for": "Sayin opened with an excellent 21/25, 320 YDS, 3 TD and followed with 278 yards in Week 2. Nearly 600 passing yards across two games gives him solid volume production.",
+   "case_against": "His Week 2 line of 17/32, 1 TD, 1 INT was a clear step back in accuracy and scoring output.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Sam Leavitt",
+   "team_slug": "lsu",
+   "position": "QB",
+   "class": "Jr",
+   "stat_line": "16/28, 230 YDS, 1 TD, 1 INT | 12 CAR, 113 YDS, 2 TD | 25/38, 344 YDS, 1 TD, 3 INT",
+   "odds_as_reported": null,
+   "case_for": "Leavitt showed dual-threat ability with 12 CAR, 113 YDS, 2 TD on the ground and a 344-yard passing game. His versatility across three published lines demonstrates multi-dimensional production.",
+   "case_against": "The 25/38, 344 YDS, 1 TD, 3 INT line is a serious red flag, with three interceptions in a single game.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Josh Hoover",
+   "team_slug": "indiana",
+   "position": "QB",
+   "class": "Sr",
+   "stat_line": "13/16, 231 YDS, 4 TD | 6/11, 145 YDS, 4 TD",
+   "odds_as_reported": null,
+   "case_for": "Hoover has eight passing touchdowns in two games: 13/16, 231 YDS, 4 TD and 6/11, 145 YDS, 4 TD. His touchdown rate per attempt is the best on the board.",
+   "case_against": "The 6/11, 145 YDS Week 2 line shows extremely low volume, suggesting limited opportunity rather than sustained dominance.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "John Mateer",
+   "team_slug": "oklahoma",
+   "position": "QB",
+   "class": "Sr",
+   "stat_line": "11/17, 225 YDS, 3 TD | 17/33, 189 YDS, 1 TD, 1 INT",
+   "odds_as_reported": null,
+   "case_for": "Mateer's Week 1 line of 11/17, 225 YDS, 3 TD was an efficient, explosive debut. He has four passing touchdowns through two games.",
+   "case_against": "His Week 2 line of 17/33, 189 YDS, 1 TD, 1 INT was a major regression in completion rate and production.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Keelon Russell",
+   "team_slug": "alabama",
+   "position": "QB",
+   "class": "So",
+   "stat_line": "18/30, 256 YDS | 13 CAR, 86 YDS, 1 TD | 16/23, 188 YDS, 1 TD, 2 INT",
+   "odds_as_reported": null,
+   "case_for": "Russell has shown dual-threat ability with 13 CAR, 86 YDS, 1 TD rushing alongside 256 and 188 passing yards in his two passing lines. His mobility adds a dimension most pocket passers on this board lack.",
+   "case_against": "His first passing line shows zero passing touchdowns, and his second includes 2 INT, leaving his scoring production thin.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "player": "Arch Manning",
+   "team_slug": "texas",
+   "position": "QB",
+   "class": "R-Jr",
+   "stat_line": "20/27, 305 YDS, 4 TD, 1 INT",
+   "odds_as_reported": [
+    {
+     "outlet": "DraftKings (via DK Network)",
+     "value": "+1000"
+    }
+   ],
+   "case_for": "Manning's lone published line of 20/27, 305 YDS, 4 TD, 1 INT is a strong single-game performance, and he carries reported odds of +1000 from DraftKings (via DK Network). Market support keeps him on the board despite limited data.",
+   "case_against": "He has only one published stat line, so there is no verified body of work to compare against multi-game contenders.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard",
+    "https://dknetwork.draftkings.com"
+   ],
+   "confidence": "low"
+  },
+  {
+   "player": "Dante Moore",
+   "team_slug": "oregon",
+   "position": "QB",
+   "class": "Jr",
+   "stat_line": "28/37, 378 YDS, 3 TD",
+   "odds_as_reported": null,
+   "case_for": "Moore's single published line of 28/37, 378 YDS, 3 TD is an impressive high-volume performance with no interceptions. The yardage total ranks among the best single games on the board.",
+   "case_against": "With only one published line and no reported odds, his case rests on a single data point.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "low"
+  },
+  {
+   "player": "Marcel Reed",
+   "team_slug": "texas-am",
+   "position": "QB",
+   "class": "Jr",
+   "stat_line": "21/30, 233 YDS, 2 TD",
+   "odds_as_reported": null,
+   "case_for": "Reed's 21/30, 233 YDS, 2 TD is a clean, efficient single-game line with no turnovers. He completed 70% of his passes in his one published outing.",
+   "case_against": "A single modest line with no reported odds gives him the thinnest verified case on the board.",
+   "deciding_game": "No team results were provided in the input, so no next contender result can be named.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "notes": "Board as of Saturday Sep 19, through completed Week 2 games only. All stat lines quoted verbatim from ESPN box-score leader payloads; no lines were averaged or projected. Team results and AP ranks were null for every contender, so the deciding_game field could not name a next contender result from the input for any player. Odds are null where no outlet-reported numbers were provided and were never estimated. Confidence follows the stated rule: high requires multiple stat lines plus odds from 2+ outlets (Mensah, Smith); low applies to single published lines (Manning, Moore, Reed); all others are medium. Ordering reflects strength of case based on production quality, volume, turnover avoidance, and reported odds support."
+}

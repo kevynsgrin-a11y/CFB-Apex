@@ -207,3 +207,38 @@ export function formatValuation(amount: number | null): string {
   }
   return `$${(amount / 1000).toFixed(0)}K`;
 }
+
+/* ------------------------------------------------------------- upset watch --- */
+
+export type UpsetConfidence = "coin_flip" | "live_dog" | "long_fuse";
+
+export interface UpsetPick {
+  away_slug: string;
+  home_slug: string;
+  line: number | string | null; // as carried by the cited provider — never computed
+  line_source: string | null;
+  case: string | null;
+  confidence: UpsetConfidence | null;
+  race_effect: string | null;
+  sources: string[];
+}
+
+export interface UpsetWatch {
+  as_of: string | null;
+  week: number | null;
+  picks: UpsetPick[];
+  trap: { away_slug: string; home_slug: string; why: string } | null;
+  notes: string | null;
+}
+
+const upsetDoc = (bundle as Record<string, unknown>).upsetWatch as UpsetWatch | null;
+
+export const upsetWatch: UpsetWatch = upsetDoc
+  ? {
+      as_of: upsetDoc.as_of ?? null,
+      week: upsetDoc.week ?? null,
+      picks: Array.isArray(upsetDoc.picks) ? upsetDoc.picks : [],
+      trap: upsetDoc.trap ?? null,
+      notes: upsetDoc.notes ?? null,
+    }
+  : { as_of: null, week: null, picks: [], trap: null, notes: null };
