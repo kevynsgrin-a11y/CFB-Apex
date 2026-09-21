@@ -1,4 +1,4 @@
-const siteUrl = process.env.SITE_URL ?? "https://cfbapex.com";
+const siteUrl = process.env.SITE_URL || "https://cfbapex.com";
 
 /**
  * Routes that exist as real, static destinations today.
