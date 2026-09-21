@@ -41,7 +41,7 @@ export const environment = {
   dataMode: "dataset",
   isDemo: false,
   season: 2026,
-  siteUrl: process.env.SITE_URL ?? "https://cfbapex.com",
+  siteUrl: process.env.SITE_URL || "https://cfbapex.com",
 } as const;
 
 export const disclosureVersion = "2026-09-05";
