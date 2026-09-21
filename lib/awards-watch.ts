@@ -12,16 +12,23 @@ import bundle from "./cfb-2026.generated.ts";
 
 /* --------------------------------------------- athlete highlight & panel --- */
 
+export interface HighlightPhoto {
+  url: string;
+  alt: string;
+  source: string;
+}
+
 export interface HighlightEntry {
   player: string;
   team_slug: string;
   position: string;
-  class: string;
+  class?: string | null;
   stat_line: string;
   opponent_slug: string;
   result: string;
   why: string;
   video_url?: string | null;
+  photo?: HighlightPhoto | null;
   sources?: string[];
 }
 
@@ -30,9 +37,12 @@ export interface AthleteHighlight {
   week: number | null;
   window: string | null;
   athlete_of_the_week: HighlightEntry | null;
+  spotlights: HighlightEntry[];
   runners_up: HighlightEntry[];
   honorable_mentions: HighlightEntry[];
   criteria_note: string | null;
+  verified_on?: string | null;
+  verification_note?: string | null;
   source_engines?: string | null;
 }
 
@@ -155,11 +165,16 @@ export const athleteHighlight: AthleteHighlight = highlightDoc
       week: highlightDoc.week ?? null,
       window: highlightDoc.window ?? null,
       athlete_of_the_week: highlightDoc.athlete_of_the_week ?? null,
+      spotlights: Array.isArray((highlightDoc as { spotlights?: HighlightEntry[] }).spotlights)
+        ? (highlightDoc as { spotlights: HighlightEntry[] }).spotlights
+        : [],
       runners_up: Array.isArray(highlightDoc.runners_up) ? highlightDoc.runners_up : [],
       honorable_mentions: Array.isArray(highlightDoc.honorable_mentions)
         ? highlightDoc.honorable_mentions
         : [],
       criteria_note: highlightDoc.criteria_note ?? null,
+      verified_on: (highlightDoc as { verified_on?: string | null }).verified_on ?? null,
+      verification_note: (highlightDoc as { verification_note?: string | null }).verification_note ?? null,
       source_engines: highlightDoc.source_engines ?? null,
     }
   : {
@@ -167,6 +182,7 @@ export const athleteHighlight: AthleteHighlight = highlightDoc
       week: null,
       window: null,
       athlete_of_the_week: null,
+      spotlights: [],
       runners_up: [],
       honorable_mentions: [],
       criteria_note: null,

@@ -340,16 +340,29 @@ function HighlightCard({
       }}
     >
       <header style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "flex-start" }}>
-        <div>
-          {rank ? (
-            <span style={{ fontFamily: "var(--display-family)", fontSize: 12, fontWeight: 700, letterSpacing: 2, color: "var(--primary)" }}>{rank}</span>
+        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+          {entry.photo?.url || team?.logo ? (
+            <img
+              src={entry.photo?.url ?? team?.logo}
+              alt={entry.photo?.alt ?? `${team?.name ?? entry.team_slug} mark`}
+              width={56}
+              height={56}
+              loading="lazy"
+              style={{ borderRadius: 999, objectFit: "cover", background: "var(--muted)", boxShadow: `0 0 0 2px ${team?.color ?? "var(--border)"}` }}
+            />
           ) : null}
-          <h3 style={{ fontSize: emphasis ? 24 : 18, fontWeight: 800, margin: rank ? "4px 0 0" : 0 }}>{entry.player}</h3>
-          <div style={{ marginTop: 4, fontSize: 13, color: "var(--muted-foreground)" }}>
-            {team ? <a href={`/teams/${team.slug}`} style={{ color: "inherit", textDecoration: "none" }}>{team.name}</a> : entry.team_slug}
-            {" · "}
-            {entry.position} · {entry.class}
+          <div>
+            {rank ? (
+              <span style={{ fontFamily: "var(--display-family)", fontSize: 12, fontWeight: 700, letterSpacing: 2, color: "var(--primary)" }}>{rank}</span>
+            ) : null}
+            <h3 style={{ fontSize: emphasis ? 24 : 18, fontWeight: 800, margin: rank ? "4px 0 0" : 0 }}>{entry.player}</h3>
+            <div style={{ marginTop: 4, fontSize: 13, color: "var(--muted-foreground)" }}>
+              {team ? <a href={`/teams/${team.slug}`} style={{ color: "inherit", textDecoration: "none" }}>{team.name}</a> : entry.team_slug}
+              {" · "}
+              {entry.position}
+              {entry.class ? ` · ${entry.class}` : ""}
           </div>
+        </div>
         </div>
         {emphasis ? <Star size={20} style={{ color: "var(--primary)" }} aria-hidden /> : null}
       </header>
@@ -387,7 +400,7 @@ export function HighlightPage() {
             <h1>One week. One player. The tape decides.</h1>
             <p>
               {hasHighlight
-                ? `Week ${athleteHighlight.week} — compiled from a three-engine research pass, cross-checked against the box scores of record (${athleteHighlight.window ?? ""}). Selections weight dominance versus real opponents and the plays that decided consequential games.`
+                ? `Week ${athleteHighlight.week} — compiled from a sourced research pass, cross-checked against the box scores of record (${athleteHighlight.window ?? ""}). Selections weight dominance versus real opponents and the plays that decided consequential games.`
                 : "The first highlight publishes after Week 1 concludes. Selections are compiled from verified box scores and licensed highlight footage only."}
             </p>
           </div>
@@ -407,6 +420,22 @@ export function HighlightPage() {
                 <HighlightCard entry={winner} rank="WEEK 1 CHAMPION" emphasis />
               </div>
             </div>
+
+            {athleteHighlight.spotlights.length ? (
+              <div className="apex-lane">
+                <div className="apex-lane-heading">
+                  <div>
+                    <span className="apex-eyebrow">WEEK {athleteHighlight.week} · SPOTLIGHTS</span>
+                    <h2>The week&apos;s other game-wreckers</h2>
+                  </div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(420px, 100%), 1fr))", gap: 14 }}>
+                  {athleteHighlight.spotlights.map((entry) => (
+                    <HighlightCard key={entry.player} entry={entry} rank="SPOTLIGHT" />
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
             <div className="apex-lane">
               <div className="apex-lane-heading">
@@ -448,6 +477,11 @@ export function HighlightPage() {
             {athleteHighlight.criteria_note ? (
               <p style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.7 }}>
                 <strong>How the pick was made:</strong> {athleteHighlight.criteria_note}
+              </p>
+            ) : null}
+            {athleteHighlight.verification_note ? (
+              <p style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.7 }}>
+                <strong>Accuracy check:</strong> {athleteHighlight.verification_note}
               </p>
             ) : null}
           </>
