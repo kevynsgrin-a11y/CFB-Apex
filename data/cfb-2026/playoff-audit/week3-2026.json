@@ -1,0 +1,347 @@
+{
+ "as_of": "2026-09-20",
+ "week": 3,
+ "source_engines": "Kimi API (Moonshot kimi-k3) compilation from ESPN Weeks 1-3 finals, the post-Week-3 AP + AFCA Coaches polls (ESPN rankings endpoint, 2026-09-20), CFB Hub SOS dataset (ESPN FPI remaining-SOS), and CFB Hub schedules. Composite = average of AP + Coaches ranks (unranked = 26). Number-verification gate applied to all prose; failures replaced with fact templates.",
+ "contenders": [
+  {
+   "team_slug": "texas",
+   "record": "3-0",
+   "composite_rank": 1,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #2",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: Ohio State Buckeyes (AP #7) 24-23 vs Ohio State; closest call: 24-23 vs Ohio State (1-pt margin) vs Ohio State Buckeyes",
+   "tag": "controls_destiny",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "georgia",
+   "record": "3-0",
+   "composite_rank": 2,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #21",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: Western Kentucky Hilltoppers 70-20 vs Western KY; closest call: 45-17 @ Arkansas (28-pt margin) vs Arkansas Razorbacks",
+   "tag": "controls_destiny",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "notre-dame",
+   "record": "3-0",
+   "composite_rank": 3,
+   "remaining_sos": null,
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Wisconsin Badgers 41-13 vs Wisconsin; closest call: 27-10 vs Michigan St (17-pt margin) vs Michigan State Spartans",
+   "tag": "controls_destiny",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings"
+   ]
+  },
+  {
+   "team_slug": "indiana",
+   "record": "3-0",
+   "composite_rank": 4,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #39",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: North Texas Mean Green 52-16 vs North Texas; closest call: 52-16 vs North Texas (36-pt margin) vs North Texas Mean Green",
+   "tag": "controls_destiny",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "ole-miss",
+   "record": "3-0",
+   "composite_rank": 5,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #7",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: LSU Tigers (AP #10) 32-24 vs LSU; closest call: 41-38 vs Louisville (3-pt margin) vs Louisville Cardinals",
+   "tag": "controls_destiny",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "ohio-state",
+   "record": "2-1",
+   "composite_rank": 6,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #12",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Ball State Cardinals 56-3 vs Ball State; blemish: Texas Longhorns 23-24 @ Texas",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "alabama",
+   "record": "3-0",
+   "composite_rank": 7,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #15",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: East Carolina Pirates 48-10 vs East Carolina; closest call: 50-36 vs Florida St (14-pt margin) vs Florida State Seminoles",
+   "tag": "controls_destiny",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "byu",
+   "record": "3-0",
+   "composite_rank": 8,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #53",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Arizona Wildcats 28-17 vs Arizona; closest call: 28-17 vs Arizona (11-pt margin) vs Arizona Wildcats",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "lsu",
+   "record": "2-1",
+   "composite_rank": 9,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #11",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Clemson Tigers 51-10 vs Clemson; blemish: Ole Miss Rebels 24-32 @ Ole Miss",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "texas-tech",
+   "record": "3-0",
+   "composite_rank": 10,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #70",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Houston Cougars (AP #25) 28-26 vs Houston; closest call: 28-26 vs Houston (2-pt margin) vs Houston Cougars",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "usc",
+   "record": "4-0",
+   "composite_rank": 11,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #16",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: San José State Spartans 42-26 vs San José St; closest call: 42-35 @ Rutgers (7-pt margin) vs Rutgers Scarlet Knights",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "penn-state",
+   "record": "3-0",
+   "composite_rank": 12,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #64",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Marshall Thundering Herd 45-0 vs Marshall; closest call: 27-9 @ Temple (18-pt margin) vs Temple Owls",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "tennessee",
+   "record": "3-0",
+   "composite_rank": 13,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #13",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Georgia Tech Yellow Jackets 45-24 @ Georgia Tech; closest call: 45-24 @ Georgia Tech (21-pt margin) vs Georgia Tech Yellow Jackets",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "utah",
+   "record": "3-0",
+   "composite_rank": 14,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #62",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Arkansas Razorbacks 43-10 vs Arkansas; closest call: 43-10 vs Arkansas (33-pt margin) vs Arkansas Razorbacks",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "iowa",
+   "record": "3-0",
+   "composite_rank": 15,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #38",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Northern Illinois Huskies 40-0 vs N Illinois; closest call: 16-13 vs Iowa State (3-pt margin) vs Iowa State Cyclones",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "louisville",
+   "record": "2-1",
+   "composite_rank": 16,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #59",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: SMU Mustangs (AP #22) 41-31 vs SMU; blemish: Ole Miss Rebels 38-41 @ Ole Miss",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "michigan",
+   "record": "3-0",
+   "composite_rank": 17,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #17",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Western Michigan Broncos 13-12 vs W Michigan; closest call: 13-12 vs W Michigan (1-pt margin) vs Western Michigan Broncos",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "oregon",
+   "record": "2-1",
+   "composite_rank": 18,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #30",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Boise State Broncos 34-27 vs Boise St; blemish: Oklahoma State Cowboys 31-39 @ Oklahoma St",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "missouri",
+   "record": "3-0",
+   "composite_rank": 19,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #4",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Kansas Jayhawks 38-21 @ Kansas; closest call: 27-17 vs Troy (10-pt margin) vs Troy Trojans",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "texas-am",
+   "record": "2-1",
+   "composite_rank": 20,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #10",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Missouri State Bears 50-0 vs Missouri St; blemish: Kentucky Wildcats 21-31 vs Kentucky",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "smu",
+   "record": "2-1",
+   "composite_rank": 21,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #52",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Florida State Seminoles 27-24 @ Florida St; blemish: Louisville Cardinals 31-41 @ Louisville",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "washington",
+   "record": "3-0",
+   "composite_rank": 22,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #26",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Washington State Cougars 24-10 vs Washington St; closest call: 16-14 vs Utah State (2-pt margin) vs Utah State Aggies",
+   "tag": "needs_help",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "oklahoma",
+   "record": "2-1",
+   "composite_rank": 23,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #3",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: UTEP Miners 51-0 vs UTEP; blemish: Michigan Wolverines 10-17 @ Michigan",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  },
+  {
+   "team_slug": "houston",
+   "record": "2-1",
+   "composite_rank": 24,
+   "remaining_sos": "ESPN FPI remaining-SOS rank #57",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: Oregon State Beavers 33-20 vs Oregon St; blemish: Texas Tech Red Raiders 26-28 @ Texas Tech",
+   "tag": "win_out_or_out",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub SOS dataset (ESPN FPI remaining-SOS ranks, as-of 2026-09-05)"
+   ]
+  }
+ ],
+ "storylines": {
+  "mover": "ole-miss beat LSU Tigers (AP #10) 32-24, the weekend's highest-ranked win and the Rebels' signature result.",
+  "watch_next_week": "texas (AP #1) vs tennessee (AP #14) — the week's top ranked-versus-ranked showdown.",
+  "weaker_than_record": "michigan is 3-0, but the record flatters them: closest call: 13-12 vs W Michigan (1-pt margin) vs Western Michigan Broncos — that one-point escape is also their best win."
+ }
+}

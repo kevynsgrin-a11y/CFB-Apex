@@ -13,6 +13,7 @@ const staticRoots = new Set([
   "no-names",
   "heisman",
   "upset-watch",
+  "playoff-audit",
   "injuries",
   "highlight",
   "nil",

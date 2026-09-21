@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/injuries", lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: "/highlight", lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: "/upset-watch", lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: "/playoff-audit", lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
   return [...teamRoutes, ...coachRoutes, ...conferenceRoutes, ...featureRoutes];
 }

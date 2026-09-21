@@ -52,6 +52,7 @@ import { SourceMeta } from "./SourceMeta";
 import { StadiumDetail, StadiumDirectory } from "./stadium-pages";
 import { NoNamesPage, HeismanPage, NILWatchPage, AIPanelPage, HighlightPage } from "./feature-dashboards";
 import { UpsetWatchPage } from "./upset-watch-page";
+import { PlayoffAuditPage } from "./playoff-audit-page";
 import { InjuryReportPage } from "./injury-report-page";
 import { BroadcastFooter } from "./broadcast/footer";
 import { BroadcastHeader } from "./broadcast/header";
@@ -1587,6 +1588,7 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else if (root === "highlight") content = <HighlightPage />;
   else if (root === "heisman") content = <HeismanPage />;
   else if (root === "upset-watch") content = <UpsetWatchPage />;
+  else if (root === "playoff-audit") content = <PlayoffAuditPage />;
   else if (root === "nil") content = <NILWatchPage />;
   else if (root === "panel") content = <AIPanelPage />;
   else if (root === "coaching-carousel") content = <CoachingLedger coaches={coaches} teams={teams} />;

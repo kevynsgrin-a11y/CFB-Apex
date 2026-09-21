@@ -242,3 +242,38 @@ export const upsetWatch: UpsetWatch = upsetDoc
       notes: upsetDoc.notes ?? null,
     }
   : { as_of: null, week: null, picks: [], trap: null, notes: null };
+
+/* --------------------------------------------------------- playoff audit --- */
+
+export type ContenderTag = "controls_destiny" | "needs_help" | "win_out_or_out";
+
+export interface PlayoffContender {
+  team_slug: string;
+  record: string | null;
+  composite_rank: number | null;
+  remaining_sos: string | null;
+  losses_that_end_case: number | null;
+  resume_state: string | null;
+  tag: ContenderTag | null;
+  sources: string[];
+}
+
+export interface PlayoffAudit {
+  as_of: string | null;
+  week: number | null;
+  contenders: PlayoffContender[];
+  storylines: { mover: string | null; watch_next_week: string | null; weaker_than_record: string | null } | null;
+  source_engines?: string | null;
+}
+
+const playoffDoc = (bundle as Record<string, unknown>).playoffAudit as PlayoffAudit | null;
+
+export const playoffAudit: PlayoffAudit = playoffDoc
+  ? {
+      as_of: playoffDoc.as_of ?? null,
+      week: playoffDoc.week ?? null,
+      contenders: Array.isArray(playoffDoc.contenders) ? playoffDoc.contenders : [],
+      storylines: playoffDoc.storylines ?? null,
+      source_engines: playoffDoc.source_engines ?? null,
+    }
+  : { as_of: null, week: null, contenders: [], storylines: null };
