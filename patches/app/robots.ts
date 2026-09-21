@@ -1,6 +1,6 @@
 import { isProductionLaunchReady } from "../lib/release-readiness";
 
-const siteUrl = process.env.SITE_URL ?? "https://cfbapex.com";
+const siteUrl = process.env.SITE_URL || "https://cfbapex.com";
 
 /**
  * Serves /robots.txt.
