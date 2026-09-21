@@ -813,9 +813,9 @@ function readWatchLatest(dir) {
   return files.length ? readWatch(`${dir}/${files[files.length - 1]}`) : null;
 }
 const heismanWatch = readWatchLatest("heisman") ?? readWatch("heisman/week2-2026.json");
-const nilWatch = readWatch("nil/week2-2026.json");
-const athleteHighlight = readWatch("highlight/week1-2026.json");
-const panelBrief = readWatch("panel/week2-2026.json");
+const nilWatch = readWatchLatest("nil") ?? readWatch("nil/week2-2026.json");
+const athleteHighlight = readWatchLatest("highlight") ?? readWatch("highlight/week1-2026.json");
+const panelBrief = readWatchLatest("panel") ?? readWatch("panel/week2-2026.json");
 const upsetWatch = readWatchLatest("upset");
 const playoffAudit = readWatchLatest("playoff-audit");
 console.log(`Athlete highlight: ${athleteHighlight ? "week " + athleteHighlight.week + " — " + athleteHighlight.athlete_of_the_week.player : "not staged (fail-closed)"}`);

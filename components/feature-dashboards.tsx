@@ -3,7 +3,7 @@
  * All use the broadcast design system (apex-* classes).
  */
 import { useMemo, useState } from "react";
-import { Trophy, Star, GraduationCap, DollarSign, Brain, Users, TrendingUp, ShieldAlert, ExternalLink } from "lucide-react";
+import { Trophy, Star, GraduationCap, Brain, Users, TrendingUp, ShieldAlert, ExternalLink } from "lucide-react";
 import { noNames, noNamesByPosition, noNamesTeamCounts, type NoNamePlayer } from "@/lib/no-names";
 import { teams, getTeamBySlug } from "@/lib/cfb-dataset";
 import {
@@ -488,7 +488,6 @@ export function NILWatchPage() {
         </div>
 
         {hasDeals ? (
-          <>
             <div className="apex-lane">
               <div className="apex-lane-heading">
                 <div>
@@ -553,6 +552,14 @@ export function NILWatchPage() {
                 })}
               </div>
             </div>
+            ) : nilWatch.as_of ? (
+              <div className="apex-lane" style={{ textAlign: "center", padding: "40px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
+                <h2 style={{ fontSize: 22, textTransform: "uppercase", marginBottom: 8 }}>Week {nilWatch.week}: no verified in-window deals</h2>
+                <p style={{ color: "var(--muted-foreground)", maxWidth: 620, margin: "0 auto", lineHeight: 1.6 }}>
+                  {nilWatch.notes ?? "No deals met the verification bar inside this window."} Window: {nilWatch.window ?? ""}. The ledger ships empty rather than guessing — policy and valuation coverage below remain live.
+                </p>
+              </div>
+            ) : null}
 
             {nilWatch.policy_notes.length ? (
               <div className="apex-lane">
@@ -625,17 +632,6 @@ export function NILWatchPage() {
             {nilWatch.notes ? (
               <p style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.6 }}>{nilWatch.notes}</p>
             ) : null}
-          </>
-        ) : (
-          <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
-            <DollarSign size={48} style={{ color: "var(--accent)", marginBottom: 16 }} aria-hidden />
-            <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>Building the Database</h2>
-            <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
-              We're compiling verified NIL deals from official announcements, brand press releases, and major outlet reporting.
-              Each deal links to its primary news source. Deals without disclosed values are listed without values — we never estimate.
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );

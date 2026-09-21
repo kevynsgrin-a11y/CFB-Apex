@@ -1,0 +1,82 @@
+{
+ "as_of": "2026-09-20",
+ "week": 3,
+ "athlete_of_the_week": {
+  "player": "Trinidad Chambliss",
+  "team_slug": "ole-miss",
+  "position": "QB",
+  "class": "Sr",
+  "stat_line": "33/48, 363 pass yds, 2 pass TD, 1 INT",
+  "opponent_slug": "lsu",
+  "result": "W 32-24 vs No. 10 LSU (AP)",
+  "why": "Chambliss went 33/48 for 363 pass yds and 2 pass TD against 1 INT to power a 32-24 win over No. 10 LSU (AP). The Sr. Ole Miss QB claims his second board of the season after winning Week 1 honors with 336 yds, 3 pass TD, and a rushing TD in a 41-38 win over No. 24 Louisville.",
+  "video_url": null,
+  "sources": [
+   "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+   "https://www.espn.com/college-football/scoreboard"
+  ]
+ },
+ "runners_up": [
+  {
+   "player": "Kendrick Raphael",
+   "team_slug": "smu",
+   "position": "RB",
+   "class": "Sr",
+   "stat_line": "24 CAR, 197 RUSH YDS, 3 TD",
+   "opponent_slug": "louisville",
+   "result": "L 41-31 at Louisville",
+   "why": "Raphael racked up 24 CAR for 197 RUSH YDS and 3 TD, but SMU fell 41-31 at Louisville, keeping the Sr. back behind the winner under the team-success criterion.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ]
+  },
+  {
+   "player": "Malachi Toney",
+   "team_slug": "miami-fl",
+   "position": "WR",
+   "class": "SO",
+   "stat_line": "12 REC, 114 YDS, 1 TD",
+   "opponent_slug": "wake-forest",
+   "result": "W 33-20 vs Wake Forest",
+   "why": "Toney posted 12 REC for 114 YDS and 1 TD in Miami's 33-20 win over Wake Forest, a strong outing that lacked the winner's opponent pedigree.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ]
+  },
+  {
+   "player": "Nolan James Jr.",
+   "team_slug": "notre-dame",
+   "position": "RB",
+   "stat_line": "26 CAR, 121 YDS, 1 TD",
+   "opponent_slug": "michigan-state",
+   "result": "W 27-10 vs Michigan State",
+   "why": "James Jr. logged 26 CAR for 121 YDS and 1 TD as Notre Dame won 27-10 over Michigan State, a workhorse day that fell short of the top statistical bar.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ]
+  },
+  {
+   "player": "Darian Mensah",
+   "team_slug": "miami-fl",
+   "position": "QB",
+   "class": "R-Jr",
+   "stat_line": "30/34, 220 YDS, 3 TD",
+   "opponent_slug": "wake-forest",
+   "result": "W 33-20 vs Wake Forest",
+   "why": "Completed 30 of 34 for 220 yards and three scores in the 33-20 win over Wake Forest.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ]
+  }
+ ],
+ "criteria_note": "Board applies: (1) statistical dominance versus a legitimate opponent, (2) a performance that decided a consequential game, (3) team success that week. Chambliss led all three tests — the biggest line, against No. 10 LSU (AP), in a win — while Raphael's 197 RUSH YDS came in a loss, dropping him under criterion (3).",
+ "source_engines": "Kimi API (Moonshot kimi-k3) compilation from ESPN Week 3 game-summary leader payloads (finals only); number-verification gate applied; video_url null throughout — no licensed highlight links verified."
+}
