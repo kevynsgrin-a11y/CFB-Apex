@@ -235,3 +235,36 @@ test("dataset records are provenance-tagged and never claim live status", () => 
     "not_configured",
   );
 });
+import { stadiumPageTitle, staticRootTitle, teamPageTitle } from "../lib/seo-titles.ts";
+
+test("seo titles are unique, intent-bearing, and <=60 chars with the brand suffix", () => {
+  const suffix = " | CFB Apex";
+  const titles: string[] = [];
+  for (const team of teams) {
+    const title = teamPageTitle(team.shortName);
+    assert.ok(title.length + suffix.length <= 60, `${team.shortName}: "${title}" runs long`);
+    assert.match(title, /Schedule/);
+    titles.push(title);
+  }
+  let bagPolicy = 0;
+  const sharedNames = new Set(
+    stadiums.map((stadium) => stadium.name).filter((name, index, all) => all.indexOf(name) !== index),
+  );
+  for (const stadium of stadiums) {
+    const team = teams.find((candidate) => candidate.id === stadium.teamId);
+    const title = stadiumPageTitle(stadium.name, team?.shortName, {
+      disambiguate: sharedNames.has(stadium.name),
+    });
+    assert.ok(title.length + suffix.length <= 60, `${stadium.name}: "${title}" runs long`);
+    if (title.includes("Bag Policy")) bagPolicy += 1;
+    titles.push(title);
+  }
+  // Most stadiums fit the intent-bearing bag-policy shape; the long corporate
+  // names fall back rather than truncate.
+  assert.ok(bagPolicy > stadiums.length / 2, `expected most stadium titles to carry bag policy, got ${bagPolicy}/${stadiums.length}`);
+  assert.equal(new Set(titles).size, titles.length, "team and stadium titles must not collide");
+  // Every static root covered by the router earns its own title.
+  for (const root of ["scores", "schedule", "rankings", "heisman", "nil", "teams", "conferences"]) {
+    assert.ok(staticRootTitle(root), `static root /${root} lost its title`);
+  }
+});

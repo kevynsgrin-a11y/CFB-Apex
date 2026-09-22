@@ -3,6 +3,15 @@ import { notFound } from "next/navigation";
 import { HubApp } from "@/components/HubApp";
 import { coaches, fantasyNotes, games, getConferenceHub, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
 import { getRosterPlayerBySlug, playerSlugForName } from "@/lib/player-records";
+import { stadiumPageTitle, staticRootTitle, teamPageTitle } from "@/lib/seo-titles";
+
+// Stadium names shared by multiple programs (e.g. "Memorial Stadium" x3) get
+// team-qualified titles so they never collide in SERPs.
+const sharedStadiumNames = new Set(
+  stadiums
+    .map((stadium) => stadium.name)
+    .filter((name, index, all) => all.indexOf(name) !== index),
+);
 
 const staticRoots = new Set([
   "scores",
@@ -72,10 +81,22 @@ export async function generateMetadata({
     const stadium = detail ? stadiums.find((candidate) => candidate.slug === detail) : undefined;
     const team = stadium ? teams.find((candidate) => candidate.id === stadium.teamId) : undefined;
     return {
-      title: stadium ? `${stadium.name} Gameday Guide` : "College Football Stadium Gameday Guides",
+      title: stadium
+        ? stadiumPageTitle(stadium.name, team?.shortName, {
+            disambiguate: sharedStadiumNames.has(stadium.name),
+          })
+        : "College Football Stadium Gameday Guides",
       description: stadium
         ? `Parking, transit, bag policy, tailgating, visitor seating, and accessibility guidance for ${stadium.name}, home of ${team?.name ?? "its FBS program"}.`
         : "Verified gameday guides for all 138 FBS stadiums, including parking, transit, bag policy, tailgating, visitor seating, and accessibility.",
+    };
+  }
+  if (root === "teams") {
+    const team = detail ? teams.find((candidate) => candidate.slug === detail) : undefined;
+    if (!team) return {};
+    return {
+      title: teamPageTitle(team.shortName),
+      description: `${team.name} 2026 football schedule, roster, and transfer portal movement in one place.`,
     };
   }
   if (root === "players" && detail) {
@@ -127,6 +148,10 @@ export async function generateMetadata({
       description:
         "Compare verified college football coaching contracts, source notes, and explainable buyout estimates.",
     };
+  }
+  const fallbackTitle = staticRootTitle(root);
+  if (fallbackTitle) {
+    return { title: fallbackTitle };
   }
   return {};
 }
