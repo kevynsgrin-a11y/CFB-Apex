@@ -76,6 +76,12 @@ export async function generateMetadata({
   params,
 }: RoutePageProps): Promise<Metadata> {
   const { slug } = await params;
+  // Self-canonical on every catch-all page (2026-09-22): GSC was carrying
+  // http://, https:// and leading-space variants of the same pages as
+  // separate rows because nothing declared the canonical form. metadataBase
+  // in the root layout resolves these relative paths to absolute URLs.
+  const selfCanonical = { alternates: { canonical: `/${slug.join("/")}` } };
+  const buildMeta = async (): Promise<Metadata> => {
   const [root, detail] = slug;
   if (root === "stadiums") {
     const stadium = detail ? stadiums.find((candidate) => candidate.slug === detail) : undefined;
@@ -154,6 +160,8 @@ export async function generateMetadata({
     return { title: fallbackTitle };
   }
   return {};
+  };
+  return { ...(await buildMeta()), ...selfCanonical };
 }
 
 export default async function RoutePage({ params }: RoutePageProps) {

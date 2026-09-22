@@ -17,6 +17,7 @@ export function teamPageTitle(shortName: string): string {
 }
 
 const STADIUM_BAG_TAIL = ": Bag Policy, Parking & Seating";
+const STADIUM_COMPACT_BAG_TAIL = " Bag Policy & Parking";
 const STADIUM_GUIDE_TAIL = " Gameday Guide";
 const STADIUM_TEAM_FALLBACK = " Stadium Guide: Bag Policy & Parking";
 
@@ -32,6 +33,12 @@ export function stadiumPageTitle(
   }
   const withBag = `${stadiumName}${STADIUM_BAG_TAIL}`;
   if (withBag.length + BRAND_SUFFIX.length <= 60) return withBag;
+  // 2026-09-22: long-named stadiums (Dowdy-Ficklen et al.) were falling to
+  // the generic "Gameday Guide" tail even though the bag-policy cluster is
+  // the demand (GSC: "dowdy ficklen stadium bag policy"). Keep the query
+  // words in play with a compact tail before giving up on them.
+  const compact = `${stadiumName}${STADIUM_COMPACT_BAG_TAIL}`;
+  if (compact.length + BRAND_SUFFIX.length <= 60) return compact;
   const guide = `${stadiumName}${STADIUM_GUIDE_TAIL}`;
   if (guide.length + BRAND_SUFFIX.length <= 60) return guide;
   // Long corporate stadium names: the team brand carries the query intent.
