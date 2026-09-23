@@ -2563,3 +2563,170 @@
     transition: none !important;
   }
 }
+
+/* WeekGames — live "This Week's Games" card on team hub pages. */
+
+.week-games {
+  background: color-mix(in srgb, var(--primary) 5%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--border));
+  border-radius: var(--radius);
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.week-games-heading {
+  align-items: flex-end;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.week-games-heading h2 {
+  font-size: clamp(1.35rem, 3.4vw, 1.9rem);
+  line-height: 1.05;
+  margin: 5px 0 0;
+  text-transform: uppercase;
+}
+
+.week-games-meta {
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-align: right;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.week-games-sub {
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  margin: 2px 0 -4px;
+  text-transform: uppercase;
+}
+
+.week-games-list {
+  display: grid;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-game {
+  align-items: center;
+  border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 46px 1fr auto;
+  padding: 10px 12px;
+}
+
+.week-games-list li:first-child {
+  border-top: none;
+}
+
+.week-game[data-highlight="true"] {
+  background: color-mix(in srgb, var(--team-color, var(--primary)) 8%, transparent);
+  border-left: 3px solid var(--team-color, var(--primary));
+  border-radius: 0 6px 6px 0;
+  padding-left: 10px;
+}
+
+.week-game-day {
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.week-game-matchup {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.week-game-matchup p {
+  display: flex;
+  font-size: 0.92rem;
+  font-weight: 600;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.week-game-winner {
+  color: var(--foreground);
+}
+
+.week-game-matchup strong {
+  font-family: var(--display-family);
+  font-variant-numeric: tabular-nums;
+}
+
+.week-game-venue {
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+}
+
+.week-game-status {
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.week-game[data-state="live"] .week-game-status,
+.week-game[data-state="halftime"] .week-game-status {
+  color: color-mix(in srgb, var(--primary) 82%, var(--foreground));
+}
+
+.week-games-note {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.week-games-link {
+  align-items: center;
+  color: var(--foreground);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.week-games-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .week-games {
+    padding: 14px;
+  }
+
+  .week-games-heading {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .week-games-meta {
+    text-align: left;
+  }
+
+  .week-game {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .week-game-status {
+    grid-column: 2;
+    justify-self: start;
+  }
+}

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, ChevronRight, ShieldCheck } from "lucide-react";
 import type { TeamHubProps } from "@/lib/team-hub";
 import { FavoriteButton } from "@/components/polish/favorites";
+import { WeekGames } from "@/components/WeekGames";
 import { ScheduleSection } from "./schedule";
 import { RosterSection } from "./roster";
 import {
@@ -262,6 +263,7 @@ export function TeamHub(props: TeamHubProps) {
             <ArrowRight size={18} aria-hidden="true" />
           </a>
         ) : null}
+        <WeekGames school={team.shortName} displayName={team.name} />
         <ScheduleSection
           key={`schedule-${team.slug}`}
           schedule={props.schedule}
