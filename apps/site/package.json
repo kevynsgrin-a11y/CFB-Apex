@@ -13,6 +13,7 @@
     "pretest": "node scripts/build-dataset.mjs",
     "dev": "vinext dev",
     "build": "vinext build",
+    "postbuild": "node scripts/fix-font-urls.mjs",
     "start": "vinext start",
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/domain.test.ts tests/live-data.test.ts tests/ncaaf-scoreboard.test.ts",
