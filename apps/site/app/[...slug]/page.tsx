@@ -4,6 +4,7 @@ import { HubApp } from "@/components/HubApp";
 import { coaches, fantasyNotes, games, getConferenceHub, portalEvents, stadiums, teams } from "@/lib/cfb-dataset";
 import { getRosterPlayerBySlug, playerSlugForName } from "@/lib/player-records";
 import { stadiumPageTitle, staticRootTitle, teamPageTitle } from "@/lib/seo-titles";
+import { STATIC_ROOTS } from "@/lib/static-roots";
 
 // Stadium names shared by multiple programs (e.g. "Memorial Stadium" x3) get
 // team-qualified titles so they never collide in SERPs.
@@ -13,39 +14,7 @@ const sharedStadiumNames = new Set(
     .filter((name, index, all) => all.indexOf(name) !== index),
 );
 
-const staticRoots = new Set([
-  "scores",
-  "schedule",
-  "transfer-portal",
-  "playoff-predictor",
-  "playoff-bracket",
-  "no-names",
-  "heisman",
-  "nil",
-  "panel",
-  "coaches",
-  "coaching-carousel",
-  "dfs",
-  "teams",
-  "conferences",
-  "stadiums",
-  "watch",
-  "rankings",
-  "search",
-  "newsletter",
-  "methodology",
-  "data-sources",
-  "corrections",
-  "about",
-  "advertise",
-  "partnerships",
-  "media-kit",
-  "privacy",
-  "terms",
-  "affiliate-disclosure",
-  "responsible-gaming",
-  "design-system",
-]);
+const staticRoots: ReadonlySet<string> = new Set(STATIC_ROOTS);
 
 function isKnownPath(parts: string[]) {
   const [root, id] = parts;
