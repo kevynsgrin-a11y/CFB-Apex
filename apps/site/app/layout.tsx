@@ -99,6 +99,12 @@ export default async function RootLayout({
         {/* ga4: per-site + portfolio streams, configured in /ga4.js (React hoists to head) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBM2K5GD33" />
         <script src="/ga4.js" />
+        {/* Travelpayouts Drive (marker 775855, source 572310). Functionalities
+            stay disabled in Travelpayouts Drive settings, so the script loads
+            but never auto-converts links or injects offers. */}
+        <script async data-cmp-ab="2" src="https://tpembars.com/NTcyMzEw.js?t=572310" />
+        {/* Stay22 LetMeAllez — hotels monetization on gameday travel surfaces. */}
+        <script src="/travel-partners.js" />
         <script type="application/ld+json">
           {JSON.stringify(structuredData).replaceAll("<", "\\u003c")}
         </script>

@@ -1,0 +1,377 @@
+{
+ "as_of": "2026-09-28",
+ "week": 5,
+ "source_engines": "ZCode (GLM) weekly pipeline compilation from live ESPN endpoints (Weeks 1-4 finals, Week 5 scoreboard, post-Week-4 AP + AFCA Coaches polls, ESPN core season leaders, and the CFB Hub schedules dataset). Every number traces to those payloads; nothing is guessed. Composite = average of AP + Coaches ranks (unranked = 26). Remaining-SOS is a CFB Apex computed metric: average current win percentage of remaining FBS opponents (through Week 4 results), rank 1 = hardest.",
+ "contenders": [
+  {
+   "team_slug": "texas",
+   "record": "4-0",
+   "composite_rank": 1,
+   "remaining_sos": "CFB Apex remaining-SOS rank #44 (avg opponent win pct 0.611 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 24-23 vs Ohio State Buckeyes (AP #5); closest call: W 24-23 vs Ohio State Buckeyes (AP #5)",
+   "tag": "needs_help",
+   "week5_game": "@ Florida Atlantic Owls Sat Sat, 10/3, 3:00 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "georgia",
+   "record": "4-0",
+   "composite_rank": 2,
+   "remaining_sos": "CFB Apex remaining-SOS rank #107 (avg opponent win pct 0.438 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 63-3 vs Tennessee State Tigers; closest call: W 45-17 at Arkansas Razorbacks",
+   "tag": "needs_help",
+   "week5_game": "Vanderbilt Commodores Sat Sat, 10/3, 9:45 AM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "notre-dame",
+   "record": "4-0",
+   "composite_rank": 3,
+   "remaining_sos": "CFB Apex remaining-SOS rank #37 (avg opponent win pct 0.631 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 52-0 vs Rice Owls; closest call: W 27-10 vs Michigan State Spartans",
+   "tag": "needs_help",
+   "week5_game": "@ North Carolina Tar Heels Sat Sat, 10/3, 9:00 AM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "miami-fl",
+   "record": "4-0",
+   "composite_rank": 4,
+   "remaining_sos": "CFB Apex remaining-SOS rank #19 (avg opponent win pct 0.714 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 77-7 vs Florida A&M Rattlers; closest call: W 33-20 at Wake Forest Demon Deacons",
+   "tag": "needs_help",
+   "week5_game": "@ Clemson Tigers Sat Sat, 10/3, 4:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "ohio-state",
+   "record": "3-1",
+   "composite_rank": 5,
+   "remaining_sos": "CFB Apex remaining-SOS rank #7 (avg opponent win pct 0.781 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 59-3 vs Kent State Golden Flashes; closest call: L 23-24 at Texas Longhorns (AP #1)",
+   "tag": "win_out_or_out",
+   "week5_game": "@ Iowa Hawkeyes (#14) Sat Sat, 10/3, 12:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "indiana",
+   "record": "4-0",
+   "composite_rank": 6,
+   "remaining_sos": "CFB Apex remaining-SOS rank #16 (avg opponent win pct 0.721 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 55-0 vs Howard Bison; closest call: W 29-23 vs Northwestern Wildcats",
+   "tag": "needs_help",
+   "week5_game": "@ Rutgers Scarlet Knights Sat Sat, 10/3, 5:00 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "alabama",
+   "record": "4-0",
+   "composite_rank": 7,
+   "remaining_sos": "CFB Apex remaining-SOS rank #18 (avg opponent win pct 0.714 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 45-17 at Kentucky Wildcats (AP #24); closest call: W 50-36 vs Florida State Seminoles",
+   "tag": "needs_help",
+   "week5_game": "@ Mississippi State Bulldogs (#16) Sat Sat, 10/3, 9:00 AM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "florida",
+   "record": "4-0",
+   "composite_rank": 8,
+   "remaining_sos": "CFB Apex remaining-SOS rank #51 (avg opponent win pct 0.594 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 52-28 vs Ole Miss Rebels (AP #9); closest call: W 44-39 at Auburn Tigers",
+   "tag": "needs_help",
+   "week5_game": "@ Missouri Tigers (#25) Sat Sat, 10/3, 12:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "byu",
+   "record": "3-0",
+   "composite_rank": 9,
+   "remaining_sos": "CFB Apex remaining-SOS rank #38 (avg opponent win pct 0.625 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 63-7 vs Utah Tech Trailblazers; closest call: W 28-17 vs Arizona Wildcats",
+   "tag": "needs_help",
+   "week5_game": "@ TCU Horned Frogs Sat Sat, 10/3, 4:00 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "ole-miss",
+   "record": "3-1",
+   "composite_rank": 10,
+   "remaining_sos": "CFB Apex remaining-SOS rank #26 (avg opponent win pct 0.688 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 32-24 vs LSU Tigers (AP #11); closest call: W 41-38 vs Louisville Cardinals",
+   "tag": "win_out_or_out",
+   "week5_game": "(bye week)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "lsu",
+   "record": "3-1",
+   "composite_rank": 11,
+   "remaining_sos": "CFB Apex remaining-SOS rank #62 (avg opponent win pct 0.563 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 51-10 vs Clemson Tigers; closest call: L 24-32 at Ole Miss Rebels (AP #9)",
+   "tag": "win_out_or_out",
+   "week5_game": "McNeese Cowboys Sat Sat, 10/3, 4:45 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "texas-tech",
+   "record": "4-0",
+   "composite_rank": 12,
+   "remaining_sos": "CFB Apex remaining-SOS rank #14 (avg opponent win pct 0.738 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 28-26 vs Houston Cougars (AP #20); closest call: W 28-26 vs Houston Cougars (AP #20)",
+   "tag": "needs_help",
+   "week5_game": "@ Colorado Buffaloes Sat Sat, 10/3, 4:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "utah",
+   "record": "4-0",
+   "composite_rank": 13,
+   "remaining_sos": "CFB Apex remaining-SOS rank #47 (avg opponent win pct 0.604 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 66-14 vs Idaho Vandals; closest call: W 31-17 at Iowa State Cyclones",
+   "tag": "needs_help",
+   "week5_game": "(bye week)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "iowa",
+   "record": "4-0",
+   "composite_rank": 14,
+   "remaining_sos": "CFB Apex remaining-SOS rank #12 (avg opponent win pct 0.738 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 55-0 vs Northern Iowa Panthers; closest call: W 20-19 at Michigan Wolverines",
+   "tag": "needs_help",
+   "week5_game": "Ohio State Buckeyes (#5) Sat Sat, 10/3, 12:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "oregon",
+   "record": "3-1",
+   "composite_rank": 15,
+   "remaining_sos": "CFB Apex remaining-SOS rank #3 (avg opponent win pct 0.802 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 41-27 at USC Trojans (AP #18); closest call: W 34-27 vs Boise State Broncos (AP #22)",
+   "tag": "needs_help",
+   "week5_game": "(bye week)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "mississippi-state",
+   "record": "4-0",
+   "composite_rank": 16,
+   "remaining_sos": "CFB Apex remaining-SOS rank #59 (avg opponent win pct 0.571 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 31-24 vs Missouri Tigers (AP #25); closest call: W 41-34 at South Carolina Gamecocks",
+   "tag": "needs_help",
+   "week5_game": "Alabama Crimson Tide (#7) Sat Sat, 10/3, 9:00 AM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "tennessee",
+   "record": "3-1",
+   "composite_rank": 17,
+   "remaining_sos": "CFB Apex remaining-SOS rank #85 (avg opponent win pct 0.5 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 56-9 vs Furman Paladins; closest call: L 17-20 vs Texas Longhorns (AP #1)",
+   "tag": "needs_help",
+   "week5_game": "Auburn Tigers Sat Sat, 10/3, 12:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "usc",
+   "record": "4-1",
+   "composite_rank": 18,
+   "remaining_sos": "CFB Apex remaining-SOS rank #4 (avg opponent win pct 0.792 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 39-0 vs Fresno State Bulldogs; closest call: W 42-35 at Rutgers Scarlet Knights",
+   "tag": "needs_help",
+   "week5_game": "Washington Huskies Sat Sat, 10/3, 4:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "houston",
+   "record": "3-1",
+   "composite_rank": 19,
+   "remaining_sos": "CFB Apex remaining-SOS rank #33 (avg opponent win pct 0.643 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 77-6 vs Southern Jaguars; closest call: L 26-28 at Texas Tech Red Raiders (AP #12)",
+   "tag": "needs_help",
+   "week5_game": "UCF Knights Sat Sat, 10/3, 9:00 AM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "smu",
+   "record": "3-1",
+   "composite_rank": 20,
+   "remaining_sos": "CFB Apex remaining-SOS rank #25 (avg opponent win pct 0.69 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 56-10 vs UC Davis Aggies; closest call: W 27-24 at Florida State Seminoles",
+   "tag": "needs_help",
+   "week5_game": "Boston College Eagles Sat Sat, 10/3, 9:00 AM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "oklahoma-state",
+   "record": "3-1",
+   "composite_rank": 21,
+   "remaining_sos": "CFB Apex remaining-SOS rank #64 (avg opponent win pct 0.563 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 39-31 vs Oregon Ducks (AP #15); closest call: W 39-31 vs Oregon Ducks (AP #15)",
+   "tag": "needs_help",
+   "week5_game": "(bye week)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "ucla",
+   "record": "4-0",
+   "composite_rank": 22,
+   "remaining_sos": "CFB Apex remaining-SOS rank #24 (avg opponent win pct 0.694 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 54-3 at Maryland Terrapins; closest call: W 52-38 vs Purdue Boilermakers",
+   "tag": "needs_help",
+   "week5_game": "(bye week)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "duke",
+   "record": "4-0",
+   "composite_rank": 23,
+   "remaining_sos": "CFB Apex remaining-SOS rank #60 (avg opponent win pct 0.563 through Week 4)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: W 62-7 vs William & Mary Tribe; closest call: W 31-27 at Illinois Fighting Illini",
+   "tag": "needs_help",
+   "week5_game": "(bye week)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  },
+  {
+   "team_slug": "boise-state",
+   "record": "3-1",
+   "composite_rank": 24,
+   "remaining_sos": "CFB Apex remaining-SOS rank #98 (avg opponent win pct 0.458 through Week 4)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: W 32-7 at Western Michigan Broncos; closest call: L 27-34 at Oregon Ducks (AP #15)",
+   "tag": "needs_help",
+   "week5_game": "Utah State Aggies Sat Sat, 10/3, 4:30 PM PDT",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "CFB Hub schedules dataset"
+   ]
+  }
+ ],
+ "storylines": {
+  "mover": "florida-gators moved to 4-0 with a 52-28 dismantling of then-No. 9 Ole Miss — the weekend's most lopsided ranked-vs-ranked result — and now sit AP #8 with a chance to keep climbing at No. 25 Missouri.",
+  "watch_next_week": "ohio-state-buckeyes (AP #5, 3-1) at iowa-hawkeyes (AP #14, 4-0) — the week's top ranked-versus-ranked showdown; the loser's playoff margin is close to gone before mid-October.",
+  "weaker_than_record": "georgia-bulldogs are 4-0 and No. 2, but the resume is soft so far: no ranked win, a 45-17 escape marked as the closest call, and a CFB Apex remaining-SOS rank of #107 — the softest remaining slate among the top ten."
+ },
+ "outside_reference": {
+  "fpi_top5": "ESPN FPI (post-Week-4 table reported by Yahoo Sports, Sept 27): 1 Georgia, 2 Notre Dame, 3 Ohio State, 4 Texas, 5 Miami (FL). Note: FPI's No. 1 (Georgia) differs from the polls' No. 1 (Texas).",
+  "championship_futures": "DraftKings futures as carried by ESPN (no same-day timestamp exposed, treat as current snapshot): Ohio State +600, Notre Dame +700, Indiana +750, Texas +750, Oregon +800.",
+  "field_convergence": "Early post-Week-4 CFP projections converge on Texas, Georgia, Notre Dame, Miami, Ohio State, Indiana, Alabama, Florida, BYU and Boise State as the core field, with material disagreement on the final SEC and Big Ten slots (ESPN/FOX/Athletic projections via the Sept 27-28 research pass)."
+ }
+}

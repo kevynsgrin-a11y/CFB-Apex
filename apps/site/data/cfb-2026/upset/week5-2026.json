@@ -1,0 +1,243 @@
+{
+ "as_of": "2026-09-28",
+ "week": 5,
+ "source_engines": "ZCode (GLM) weekly pipeline compilation from live ESPN endpoints (Weeks 1-4 finals, Week 5 scoreboard, post-Week-4 AP + AFCA Coaches polls, ESPN core season leaders, and the CFB Hub schedules dataset). Every number traces to those payloads; nothing is guessed. Candidate pool generated structurally from the Week 5 slate and Week 5 polls. Betting lines were NOT yet carried on the ESPN scoreboard as of Monday Sep 28; every pick below is pending a sourced line before publication (DraftKings/FanDuel as carried by ESPN, or named outlets). Lines, openers, and movement from the Sept 27-28 Perplexity research pass over VegasInsider, FOX Sports, VSiN, Covers, and CBS boards.",
+ "picks": [
+  {
+   "away_slug": "alabama",
+   "home_slug": "mississippi-state",
+   "line": "Alabama -6",
+   "line_source": "DraftKings via VegasInsider (Sept 27, 9:24 p.m. ET); FanDuel -5.5; Circa opened -6.5",
+   "case": "Mississippi State is 4-0 straight up and 4-0 ATS and just erased a 24-17 fourth-quarter deficit to beat then-No. 25 Missouri 31-24, while Alabama's first true road pressure point comes against an unbeaten ranked opponent. The market agrees this is not a conventional two-score Alabama spot: Circa opened -6.5 and the number has been bet down to -6/-5.5.",
+   "confidence": "live_dog",
+   "race_effect": "The winner exits in control of the SEC West conversation; Alabama losing would hand its first conference loss to a division rival in Week 5.",
+   "sources": [
+    "https://www.vegasinsider.com/college-football/odds/las-vegas/",
+    "https://www.espn.com/college-football/game/_/gameId/401869941"
+   ]
+  },
+  {
+   "away_slug": "florida",
+   "home_slug": "missouri",
+   "line": "Florida -4.5",
+   "line_source": "DraftKings and FanDuel via VegasInsider (Sept 27, 9:24 p.m. ET); Circa reference opener -3.5",
+   "case": "The classic sell-the-emotional-peak spot, with facts behind it: Florida is coming off a 52-28 emotional peak over No. 9 Ole Miss (35 second-half points), while Missouri led Mississippi State 24-17 into the fourth quarter before losing 31-24 — a closer team than its 3-1 record suggests. Missouri QB Austin Simmons produced nearly 300 yards and three touchdowns in that defeat (CBS).",
+   "confidence": "live_dog",
+   "race_effect": "A Missouri win re-tangles the SEC East and snaps Florida's playoff momentum a week after its signature win.",
+   "sources": [
+    "https://www.vegasinsider.com/college-football/odds/las-vegas/",
+    "https://www.cbssports.com/college-football/"
+   ]
+  },
+  {
+   "away_slug": "ohio-state",
+   "home_slug": "iowa",
+   "line": "Ohio State -13.5",
+   "line_source": "DraftKings and FanDuel via VegasInsider (Sept 27, 9:24 p.m. ET); Circa opened -14.5 and was bet to -13 within 10 minutes — the board's clearest early sharp-resistance signal",
+   "case": "Iowa is 4-0, 3-1 ATS, and just won 20-19 at Michigan on a walk-off touchdown catch. The total sits at 45.5 — the slate's lowest among marquee games — and fewer projected possessions make Kinnick variance (turnovers, special teams, field position) disproportionately valuable. CBS notes Iowa has not lost by 14-plus since 2024 and not at home since 2021.",
+   "confidence": "live_dog",
+   "race_effect": "The loser of this top-14 game is effectively out of margin for error before mid-October; an Iowa win blows the Big Ten race open.",
+   "sources": [
+    "https://www.vegasinsider.com/college-football/odds/las-vegas/",
+    "https://www.cbssports.com/college-football/"
+   ]
+  },
+  {
+   "away_slug": "miami-fl",
+   "home_slug": "clemson",
+   "line": "Miami -17.5",
+   "line_source": "DraftKings via VegasInsider (Sept 27, 9:24 p.m. ET); FanDuel -16.5; total fell from 50.5 opener to 49/49.5",
+   "case": "The price treats an improving 3-1 home team that has won three straight since Week 1 as essentially noncompetitive. Miami's 4-0 start is real (33.7-point average FBS margin) but the 52-3 statement came against Central Michigan, not a peer — and the falling total makes laying 17-plus harder, not easier.",
+   "confidence": "live_dog",
+   "race_effect": "A Clemson win would re-race the ACC and knock Miami from the unbeaten ranks; Miami winning in Death Valley would all but close the ACC regular-season conversation.",
+   "sources": [
+    "https://www.vegasinsider.com/college-football/odds/las-vegas/",
+    "https://www.cbssports.com/college-football/"
+   ]
+  },
+  {
+   "away_slug": "kentucky",
+   "home_slug": "south-carolina",
+   "line": "South Carolina -3",
+   "line_source": "FOX board Sept 28; DraftKings Sept 27 snapshot was Kentucky +3.5 — the hook has been shaved",
+   "case": "The honest case is the number: a road underdog of one field goal against an opponent ESPN's FPI ranks only 21st nationally (Kentucky 47th) — closer than public perception of an unranked road team. The market moving from +3.5 to +3 reads more like a genuine toss-up than an obvious home win.",
+   "confidence": "live_dog",
+   "race_effect": "Both teams enter with conference losses already; the winner stays on the SEC East undercard, the loser falls two back.",
+   "sources": [
+    "https://www.foxsports.com/stories/college-football",
+    "https://www.espn.com/college-football/"
+   ]
+  }
+ ],
+ "candidate_pool": [
+  {
+   "away_slug": "penn-state",
+   "home_slug": "northwestern",
+   "away": "Penn State Nittany Lions",
+   "home": "Northwestern Wildcats",
+   "kickoff_pt": "Fri, 10/2, 5:00 PM PDT",
+   "tv": "FOX",
+   "angle": "No. C22 Penn State Nittany Lions goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "notre-dame",
+   "home_slug": "north-carolina",
+   "away": "Notre Dame Fighting Irish",
+   "home": "North Carolina Tar Heels",
+   "kickoff_pt": "Sat, 10/3, 9:00 AM PDT",
+   "tv": "ESPN",
+   "angle": "No. 3 Notre Dame Fighting Irish goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "alabama",
+   "home_slug": "mississippi-state",
+   "away": "Alabama Crimson Tide",
+   "home": "Mississippi State Bulldogs",
+   "kickoff_pt": "Sat, 10/3, 9:00 AM PDT",
+   "tv": "ABC",
+   "angle": "ranked-vs-ranked: No. 7 at No. 16 — loser's margin for error shrinks"
+  },
+  {
+   "away_slug": "ucf",
+   "home_slug": "houston",
+   "away": "UCF Knights",
+   "home": "Houston Cougars",
+   "kickoff_pt": "Sat, 10/3, 9:00 AM PDT",
+   "tv": "ESPN2",
+   "angle": "No. 20 Houston Cougars hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": "boston-college",
+   "home_slug": "smu",
+   "away": "Boston College Eagles",
+   "home": "SMU Mustangs",
+   "kickoff_pt": "Sat, 10/3, 9:00 AM PDT",
+   "tv": "CW",
+   "angle": "No. 21 SMU Mustangs hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": "michigan",
+   "home_slug": "minnesota",
+   "away": "Michigan Wolverines",
+   "home": "Minnesota Golden Gophers",
+   "kickoff_pt": "Sat, 10/3, 9:00 AM PDT",
+   "tv": "FOX",
+   "angle": "No. C24 Michigan Wolverines goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "vanderbilt",
+   "home_slug": "georgia",
+   "away": "Vanderbilt Commodores",
+   "home": "Georgia Bulldogs",
+   "kickoff_pt": "Sat, 10/3, 9:45 AM PDT",
+   "tv": "SEC Network",
+   "angle": "No. 2 Georgia Bulldogs hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": "ohio-state",
+   "home_slug": "iowa",
+   "away": "Ohio State Buckeyes",
+   "home": "Iowa Hawkeyes",
+   "kickoff_pt": "Sat, 10/3, 12:30 PM PDT",
+   "tv": "CBS",
+   "angle": "ranked-vs-ranked: No. 5 at No. 14 — loser's margin for error shrinks"
+  },
+  {
+   "away_slug": "florida",
+   "home_slug": "missouri",
+   "away": "Florida Gators",
+   "home": "Missouri Tigers",
+   "kickoff_pt": "Sat, 10/3, 12:30 PM PDT",
+   "tv": "ABC",
+   "angle": "ranked-vs-ranked: No. 8 at No. 25 — loser's margin for error shrinks"
+  },
+  {
+   "away_slug": "auburn",
+   "home_slug": "tennessee",
+   "away": "Auburn Tigers",
+   "home": "Tennessee Volunteers",
+   "kickoff_pt": "Sat, 10/3, 12:30 PM PDT",
+   "tv": null,
+   "angle": "No. 17 Tennessee Volunteers hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": "kentucky",
+   "home_slug": "south-carolina",
+   "away": "Kentucky Wildcats",
+   "home": "South Carolina Gamecocks",
+   "kickoff_pt": "Sat, 10/3, 1:15 PM PDT",
+   "tv": "SEC Network",
+   "angle": "No. 24 Kentucky Wildcats goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "byu",
+   "home_slug": "tcu",
+   "away": "BYU Cougars",
+   "home": "TCU Horned Frogs",
+   "kickoff_pt": "Sat, 10/3, 4:00 PM PDT",
+   "tv": "ESPN",
+   "angle": "No. 10 BYU Cougars goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "miami-fl",
+   "home_slug": "clemson",
+   "away": "Miami Hurricanes",
+   "home": "Clemson Tigers",
+   "kickoff_pt": "Sat, 10/3, 4:30 PM PDT",
+   "tv": "ABC",
+   "angle": "No. 4 Miami Hurricanes goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "texas-tech",
+   "home_slug": "colorado",
+   "away": "Texas Tech Red Raiders",
+   "home": "Colorado Buffaloes",
+   "kickoff_pt": "Sat, 10/3, 4:30 PM PDT",
+   "tv": "FOX",
+   "angle": "No. 12 Texas Tech Red Raiders goes on the road to an unbeaten-or-live underdog"
+  },
+  {
+   "away_slug": "washington",
+   "home_slug": "usc",
+   "away": "Washington Huskies",
+   "home": "USC Trojans",
+   "kickoff_pt": "Sat, 10/3, 4:30 PM PDT",
+   "tv": "NBC",
+   "angle": "No. 18 USC Trojans hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": "utah-state",
+   "home_slug": "boise-state",
+   "away": "Utah State Aggies",
+   "home": "Boise State Broncos",
+   "kickoff_pt": "Sat, 10/3, 4:30 PM PDT",
+   "tv": "CBSSN",
+   "angle": "No. 22 Boise State Broncos hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": null,
+   "home_slug": "lsu",
+   "away": "McNeese Cowboys",
+   "home": "LSU Tigers",
+   "kickoff_pt": "Sat, 10/3, 4:45 PM PDT",
+   "tv": "SEC Network",
+   "angle": "No. 11 LSU Tigers hosts a live dog with nothing to lose"
+  },
+  {
+   "away_slug": "indiana",
+   "home_slug": "rutgers",
+   "away": "Indiana Hoosiers",
+   "home": "Rutgers Scarlet Knights",
+   "kickoff_pt": "Sat, 10/3, 5:00 PM PDT",
+   "tv": "BTN",
+   "angle": "No. 6 Indiana Hoosiers goes on the road to an unbeaten-or-live underdog"
+  }
+ ],
+ "pending_research": null,
+ "trap": {
+  "away_slug": "miami-fl",
+  "home_slug": "clemson",
+  "why": "The public-facing upset story — Death Valley, Clemson's three straight wins, Miami hasn't won there since 2010 — is irresistible, but the evidence backs the favorite: Miami is 4-0 beating FBS opponents by 33.7 points per game, while Clemson's recovery has not erased its 52-10 Week 1 loss to LSU. Circa opened Miami -16, briefly went to -17.5, settled -16.5, and DraftKings later showed -17.5 — the market accepting Miami's class, not buying a Clemson renaissance. Lay the points rather than chase the atmosphere."
+ },
+ "notes": "Lines were not yet carried on the ESPN scoreboard Monday morning; all numbers above come from the Sept 27-28 VegasInsider/FOX/VSiN boards via the Perplexity research pass (38 sources), including Circa openers and movement. Near-misses left off the board: TCU +6.5 vs BYU (insufficient verified recent-form detail), Washington +9.5 at USC (USC 4-0, Maiava 1,173 yds/12 TD/1 INT entering Week 4 per the ESPN summary), Colorado +13.5 vs Texas Tech, Rutgers +23.5 vs Indiana, Utah State +20.5 at Boise State — each is a cover discussion, not a responsibly sourced outright call."
+}

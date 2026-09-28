@@ -10,6 +10,8 @@ import {
   TrainFront,
   Trophy,
 } from "lucide-react";
+import { ticketLinksForTeam } from "@/lib/affiliates";
+import { travelLinksForQuery, travelAffiliatesConfigured } from "@/lib/travel-affiliates";
 import type { HubTransfer, TeamHubProps } from "@/lib/team-hub";
 import {
   dateLabel,
@@ -138,7 +140,9 @@ export function GamedaySection({
   stadium,
   radio,
   radioAsOf,
-}: Pick<TeamHubProps, "stadium" | "radio" | "radioAsOf">) {
+  teamName,
+}: Pick<TeamHubProps, "stadium" | "radio" | "radioAsOf"> & { teamName?: string }) {
+  const ticketLinks = teamName ? ticketLinksForTeam(teamName) : [];
   return (
     <HubSection id="gameday">
       <HubHeading eyebrow="MAKE A SATURDAY OF IT" title="Your gameday, covered">
@@ -176,6 +180,36 @@ export function GamedaySection({
             </p>
           )}
         </div>
+          {travelAffiliatesConfigured && stadium ? (
+            <div className="hub-tickets hub-travel">
+              <span className="hub-eyebrow">PLAN THE TRIP</span>
+              {travelLinksForQuery(`hotels near ${stadium.name} ${stadium.city}`, "hotels")
+                .concat(travelLinksForQuery(`${stadium.city} car rental`, "cars"))
+                .concat(travelLinksForQuery(`flights to ${stadium.city}`, "flights"))
+                .map((link) => (
+                  <a key={`travel-${link.partner}`} href={link.url} target="_blank" rel="sponsored nofollow noreferrer noopener">
+                    {link.category === "hotels" ? "Hotels" : link.category === "cars" ? "Car rental" : "Flights"} · {link.partner}
+                    <span>{link.tracked ? "Official partner" : "Partner · approval pending"}</span>
+                  </a>
+                ))}
+            </div>
+          ) : null}
+          {ticketLinks.length ? (
+            <div className="hub-tickets">
+              <span className="hub-eyebrow">TICKETS</span>
+              {ticketLinks.map((link) => (
+                <a
+                  key={link.partner}
+                  href={link.url}
+                  target="_blank"
+                  rel="sponsored nofollow noreferrer noopener"
+                >
+                  {link.partner}
+                  <span>{link.tracked ? "Official partner" : "Partner · approval pending"}</span>
+                </a>
+              ))}
+            </div>
+          ) : null}
         <div className="hub-card hub-gameday-facts">
           <div className="hub-fact">
             <ShieldCheck size={20} aria-hidden="true" />
