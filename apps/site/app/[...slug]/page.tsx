@@ -14,6 +14,7 @@ const sharedStadiumNames = new Set(
     .filter((name, index, all) => all.indexOf(name) !== index),
 );
 
+
 const staticRoots: ReadonlySet<string> = new Set(STATIC_ROOTS);
 
 function isKnownPath(parts: string[]) {
@@ -107,6 +108,13 @@ export async function generateMetadata({
       description: team
         ? `Verified incoming and outgoing transfer movement for ${team.name}.`
         : "Track verified college football transfers by player, position, program, status, date, and source confidence.",
+    };
+  }
+  if (root === "injuries") {
+    return {
+      title: "College Football Injury Report",
+      description:
+        "Weekly college football injury report: ESPN-sourced statuses, long-term ledger, and week-to-week availability watch across every FBS team.",
     };
   }
   if (root === "dfs") {

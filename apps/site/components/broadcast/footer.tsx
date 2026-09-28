@@ -9,6 +9,7 @@ const columns = [
       ["All teams", "/teams"],
       ["Rankings", "/rankings"],
       ["Transfer portal", "/transfer-portal"],
+      ["Injury report", "/injuries"],
       ["Newsletter", "/newsletter"],
     ],
   },
