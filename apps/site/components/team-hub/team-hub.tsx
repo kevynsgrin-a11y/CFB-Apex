@@ -285,6 +285,7 @@ export function TeamHub(props: TeamHubProps) {
           stadium={props.stadium}
           radio={props.radio}
           radioAsOf={props.radioAsOf}
+          teamName={props.team.name}
         />
         <NumbersSection
           preseason={preseason}

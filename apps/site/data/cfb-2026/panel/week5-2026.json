@@ -1,0 +1,75 @@
+{
+ "as_of": "2026-09-28",
+ "week": 5,
+ "source_engines": "ZCode (GLM) weekly pipeline compilation from live ESPN endpoints (Weeks 1-4 finals, Week 5 scoreboard, post-Week-4 AP + AFCA Coaches polls, ESPN core season leaders, and the CFB Hub schedules dataset). Every number traces to those payloads; nothing is guessed. Persona argumentation drafted from Week 4 fact cards (ESPN finals, post-Week-4 AP + Coaches polls, CFB Apex computed remaining-SOS) and the Week 5 slate. Every number traces to those cards; only the argumentation belongs to the personas. Injury/availability items from the Sept 28 Perplexity pass over official conference hubs and named outlets.",
+ "topics": [
+  {
+   "id": "florida-ole-miss-fallout",
+   "question": "Is Florida a legitimate national contender after shredding No. 9 Ole Miss 52-28?",
+   "traditionalist": "Beat a ranked SEC rival by four scores and you have earned the conversation. The Gators are 4-0 with a 52-28 statement over No. 9 Ole Miss, and Aaron Philo ran the offense efficiently at 16/23 for 196 yards without a turnover. Style points against good teams are the oldest currency in this sport.",
+   "analyst": "The market and the polls agree for once: Florida jumped to AP #8 with the weekend's best ranked win, and the underlying numbers — 52 points on a Top-10 defense, a 44-39 escape at Auburn the week before — say a real offense. The caution flag is variance: this is still a team that needed a late stop in Auburn. No. 25 Missouri on the road Saturday is a classic letdown spot.",
+   "evaluator": "The development story is Aaron Philo: 16/23, 196 yards, a touchdown and no interceptions against No. 9. If he keeps playing clean football, the ceiling conversation is real; if Auburn (39 points allowed) was the outlier rather than Ole Miss, this is a very good SEC contender and nothing more.",
+   "what_settles_it": "Beat No. 25 Missouri in Columbia on Saturday, then beat No. 2 Georgia on October 31. Two top-ten wins end the debate.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings"
+   ]
+  },
+  {
+   "id": "texas-tightrope",
+   "question": "Texas is No. 1 at 4-0 — but after a 20-17 escape at Tennessee, how worried should Longhorns fans be?",
+   "traditionalist": "Winning at Neyland Stadium by three is a badge, not a blemish. Texas already owns the season's best single win — 24-23 over No. 5 Ohio State — and championship teams win ugly on the road in September. The 2019-and-earlier eye test still says this is the most complete roster in the country.",
+   "analyst": "Two one-score wins (Ohio State by 1, Tennessee by 3) against one blowout sheet means Texas keeps winning the leverage games but isn't separating. Arch Manning's 14/19, 201-yard, zero-touchdown line at Tennessee was game-manager football. The remaining schedule is the soft spot in both directions: CFB Apex remaining-SOS rank #44 with FAU this week, so the margin for a bad night is thin but the runway to 12-0 is real.",
+   "evaluator": "The concern isn't the results, it's the passing-game ceiling: 201 yards and no touchdowns from the quarterback position at Tennessee. If defenses can keep this offense under 25, someone in the playoff bracket will.",
+   "what_settles_it": "A road win at Georgia or a dominant SEC title game. Until then, the No. 1 ranking is a receipt for September, not November.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings"
+   ]
+  },
+  {
+   "id": "ohio-state-iowa-elimination",
+   "question": "Saturday's Ohio State at Iowa game — is the loser effectively out of the playoff?",
+   "traditionalist": "A two-loss team has made the twelve-team field before, but nobody plans for the back door. No. 5 Ohio State at No. 14 Iowa with both carrying conference-title paths means the loser spends November needing help. These are the games the expanded playoff was supposed to make less existential — it made them more.",
+   "analyst": "Iowa is quietly 4-0 with a CFB Apex remaining-SOS rank of #12 and the state's usual formula: the Hawkeyes won 20-19 at Michigan. Ohio State's only loss is by one at No. 1 Texas, which ages well. Win and Iowa has a top-five road win plus a soft back half; win and Ohio State is right back to controls-destiny. The market will price Ohio State, but Iowa's path to stealing it is the same one Tennessee nearly used.",
+   "evaluator": "Watch the line of scrimmage arithmetic: Iowa's defensive front versus Ohio State's offensive tackles. The Buckeyes have not been tested by a defense this disciplined since Texas, and that game went to the wire.",
+   "what_settles_it": "Saturday's final score, full stop — the loser needs two other contenders to lose twice.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings"
+   ]
+  },
+  {
+   "id": "big-12-logjam",
+   "question": "The Big 12 has three unbeatens — BYU, Texas Tech, Utah — and none is ranked above No. 9. Who survives?",
+   "traditionalist": "Conference cannibalization is the oldest Big 12 tradition. BYU (3-0, No. 10 composite) already survived Arizona 28-17; Texas Tech (4-0) beat No. 20 Houston 28-26; Utah (4-0) hasn't been touched. Only one can win the league, and the November slate will sort it the way it always does — painfully.",
+   "analyst": "The composite board has BYU #9, Texas Tech #12, Utah #13 — a three-way band with title-game leverage. The differentiator is schedule: BYU travels to TCU this week, Texas Tech to Colorado, and Utah's remaining-SOS sits at #47. The Big 12 champion is functionally guaranteed a top-four seed and a bye; a second bid needs a one-loss runner-up with a name-brand win.",
+   "evaluator": "Texas Tech's 28-26 win over Houston is the best intra-league result so far. But the Red Raiders allow 26 points a game to good offenses — that number loses a shootout league.",
+   "what_settles_it": "Head-to-heads: whichever of the three wins the tiebreaker games in November hosts the title game.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings"
+   ]
+  },
+  {
+   "id": "georgia-schedule-soft",
+   "question": "Georgia is No. 2 at 4-0 without playing a ranked team — does the soft September matter?",
+   "traditionalist": "Nobody in Athens is apologizing. But the voters' patience has a limit: the closest game was 45-17 against Arkansas, and CFB Apex ranks the remaining slate #107 — softest among the top ten. At some point the Bulldogs have to beat somebody, and the schedule says that point is late October.",
+   "analyst": "The composite formula loves Georgia (No. 2 in both polls) but the resume lags: zero ranked wins through four weeks while Florida, Texas, and Alabama all own one. The market still prices the roster, which is why the ranking holds — but a one-loss Georgia with no signature win is the exact profile the twelve-team field punishes with a road seed.",
+   "evaluator": "The 63-3 and 52-0 score sheets say the floor is national-championship level. The problem is the ceiling is unverified, and Vanderbilt at home Saturday verifies nothing.",
+   "what_settles_it": "The Florida game on October 31 (neutral site) and the November gauntlet — Missouri on Nov 14 — after it.",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings"
+   ]
+  }
+ ],
+ "also_on_the_desk": [
+  "Notre Dame at North Carolina: the Irish are 4-0 with a No. 3 composite rank and a soft remaining slate (#37) — but no ranked win yet either.",
+  "Miami's Darian Mensah is 94/106, 1,211 yards, 14 TD, 0 INT through four games — the cleanest quarterback board in the country going into Death Valley.",
+  "Houston's 77-6 and Ole Miss's 77-7: two of the three highest single-game outputs of the season both came against overmatched September slates.",
+  "Miami will be without WR Joshua Moore and RB CharMar Brown (season-ending, announced by Mario Cristobal on radio Sept 21 via Yahoo Sports) for the Death Valley trip — a real caveat under the 17.5-point line.",
+  "Mississippi State is without Trevion Williams (leg, out indefinitely) for the Alabama game; the SEC and Big Ten official availability reports land Wednesday-Thursday and will move these boards."
+ ],
+ "notes": "All persona claims trace to the Week 4/5 fact cards; the October 24 Florida-Georgia date and title-game references are schedule facts from the CFB Hub schedules dataset."
+}

@@ -18,6 +18,7 @@ import {
   getTeamBySlug,
   modelEstimatesAvailable,
   pollTables,
+  conferenceStandings,
   pollsStatusNote,
   portalAsOf,
   portalCountsFor,
@@ -49,7 +50,9 @@ import { PlayerRecordPage } from "./player-record-page";
 import { SiteSearchPage } from "./site-search-page";
 import { SourceMeta } from "./SourceMeta";
 import { StadiumDetail, StadiumDirectory } from "./stadium-pages";
-import { NoNamesPage, HeismanPage, NILWatchPage, AIPanelPage } from "./feature-dashboards";
+import { NoNamesPage, HeismanPage, NILWatchPage, AIPanelPage, HighlightPage } from "./feature-dashboards";
+import { UpsetWatchPage } from "./upset-watch-page";
+import { PlayoffAuditPage } from "./playoff-audit-page";
 import { InjuryReportPage } from "./injury-report-page";
 import { BroadcastFooter } from "./broadcast/footer";
 import { BroadcastHeader } from "./broadcast/header";
@@ -979,14 +982,14 @@ function RankingsPage() {
       <PageHeading
         eyebrow="2026 PRESEASON RANKINGS"
         title="AP and Coaches, straight from the release."
-        description={`${table.name}${table.release_date ? ` · released ${table.release_date}` : ""}. Every row cites the poll; no composite is invented.`}
+        description={`${table.name}${table.release_date ? ` · released ${table.release_date}` : ""}. AP and Coaches rows cite the release directly; the CFB Apex Composite averages the two polls.`}
       />
       <div className="sticky-tools">
         <fieldset className="filter-chips">
           <legend className="sr-only">Poll</legend>
           {pollTables.map((poll) => (
             <button type="button" key={poll.poll} aria-pressed={poll.poll === pollId} onClick={() => startTransition(() => setPollId(poll.poll))}>
-              {poll.poll === "ap" ? "AP Top 25" : "Coaches Poll"}
+              {poll.name}
             </button>
           ))}
           <button type="button" aria-pressed={pollId === "ratings"} onClick={() => startTransition(() => setPollId("ratings"))}>SP+ / FPI board</button>
@@ -1082,6 +1085,38 @@ function RankingsPage() {
         {pollsStatusNote ? <p className="panel-note">{pollsStatusNote}</p> : null}
       </section>
       <section className="content-section">
+      {conferenceStandings.length ? (
+        <section className="content-section">
+          <SectionHeading eyebrow="CONFERENCE RACES" title="Who leads every league" />
+          <p className="panel-note">
+            Live standings from ESPN, refreshed on every build. Conference leaders lead each table; rows link to team hubs.
+          </p>
+          <div className="conf-race-grid">
+            {conferenceStandings.map((conf) => (
+              <div className="conf-race-card" key={conf.slug}>
+                <h3>
+                  <a href={`/conferences/${conf.slug}`}>{conf.name}</a>
+                </h3>
+                <table className="data-table conf-race-table">
+                  <thead>
+                    <tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th></tr>
+                  </thead>
+                  <tbody>
+                    {conf.rows.map((row, i) => (
+                      <tr className={i === 0 ? "conf-race-leader" : undefined} key={row.team_slug ?? row.team}>
+                        <td>
+                          {row.team_slug ? <a href={`/teams/${row.team_slug}`}>{row.team}</a> : row.team}
+                        </td>
+                        <td>{row.w}</td><td>{row.l}</td><td>{row.t}</td><td>{row.pct}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
         <SectionHeading eyebrow="STRENGTH OF SCHEDULE" title="Published SOS ratings" />
         <p className="panel-note">
           Composite strength index derived from Phil Steele and ESPN FPI SOS ratings — not SP+, FPI, or a committee ranking.
@@ -1279,8 +1314,8 @@ function PolicyPage({ kind }: { kind: string }) {
     "affiliate-disclosure": {
       eyebrow: "COMMERCIAL TRANSPARENCY",
       title: "Affiliate disclosure",
-      intro: "No affiliate program or paid referral is active in this preview.",
-      sections: [["Future links", "Eligible commercial links will be labeled near the action, use sponsored/nofollow attributes, and pass through an auditable allowlist."], ["Editorial firewall", "Commercial compensation will never determine model probabilities, editorial ranking, source verification, or correction outcomes."]],
+      intro: "TicketNetwork links are TRACKED AND EARNING — every click carries our Impact campaign attribution (12.5-14.5% per sale). TicketSmarter's approval is still pending: its links go directly to its public ticket searches until activated, then convert to tracked referrals automatically.",
+      sections: [["How links are labeled", "Partner links carry sponsored/nofollow attributes and are labeled near the action. Tracked and pending states are labeled honestly — a pending link is marked as such."], ["Editorial firewall", "Commercial compensation will never determine model probabilities, editorial ranking, source verification, or correction outcomes."], ["Partner swaps", "If a partner is denied or retired, its links are removed or swapped without touching editorial content — the affiliate layer is a single configuration module."]],
     },
     "responsible-gaming": {
       eyebrow: "INFORMATIONAL MODELS ONLY",
@@ -1549,8 +1584,12 @@ export function HubApp({ path = "/" }: { path?: string }) {
   else if (root === "playoff-predictor") content = <PlayoffPage />;
   else if (root === "playoff-bracket") content = <CFPBracketPage />;
   else if (root === "injuries") content = <InjuryReportPage teams={teams} />;
+
   else if (root === "no-names") content = <NoNamesPage />;
+  else if (root === "highlight") content = <HighlightPage />;
   else if (root === "heisman") content = <HeismanPage />;
+  else if (root === "upset-watch") content = <UpsetWatchPage />;
+  else if (root === "playoff-audit") content = <PlayoffAuditPage />;
   else if (root === "nil") content = <NILWatchPage />;
   else if (root === "panel") content = <AIPanelPage />;
   else if (root === "coaching-carousel") content = <CoachingLedger coaches={coaches} teams={teams} />;

@@ -14,6 +14,7 @@ import {
 	ticketAffiliatesConfigured,
 	ticketLinksForTeam,
 } from "@/lib/affiliates";
+import { travelLinksForQuery, travelAffiliatesConfigured } from "@/lib/travel-affiliates";
 import { timeEtLabel, type RadioStation, type TvRow } from "@/lib/cfb-dataset";
 import type { Stadium, Team } from "@/lib/types";
 import { TeamMark } from "./primitives";
@@ -525,6 +526,21 @@ export function WatchPage({
 								) : null}
 							</div>
 						</article>
+						{travelAffiliatesConfigured && selectedStadium ? (
+							<div className="watch-sponsored-links watch-travel">
+								<span>TRAVEL FOR THE GAME</span>
+								<div>
+									{travelLinksForQuery(`hotels near ${selectedStadium.name} ${selectedStadium.city}`, "hotels")
+										.concat(travelLinksForQuery(`${selectedStadium.city} car rental`, "cars"))
+										.map((link) => (
+											<a href={link.url} key={`travel-${link.partner}`} target="_blank" rel="sponsored nofollow noreferrer noopener">
+												{link.category === "hotels" ? "Hotels" : "Cars"} · {link.partner}
+												<ExternalLink size={14} aria-hidden="true" />
+											</a>
+										))}
+								</div>
+							</div>
+						) : null}
 
 						<article
 							className="watch-ticket-card"
@@ -538,7 +554,7 @@ export function WatchPage({
 								>
 									{ticketAffiliatesConfigured
 										? "PARTNER ACTIVE"
-										: "NO PARTNER BY DESIGN"}
+										: "LINKS LIVE · COMMISSION PENDING"}
 								</span>
 							</div>
 
@@ -586,7 +602,7 @@ export function WatchPage({
 
 							{affiliateLinks.length ? (
 								<div className="watch-sponsored-links">
-									<span>SPONSORED OPTIONS</span>
+									<span>{affiliateLinks.some((link) => link.tracked) ? "SPONSORED OPTIONS" : "TICKET PARTNERS"}</span>
 									<div>
 										{affiliateLinks.map((link) => (
 											<a
@@ -601,7 +617,9 @@ export function WatchPage({
 										))}
 									</div>
 									<p>
-										CFB Apex may earn a commission. See the{" "}
+										{affiliateLinks.some((link) => link.tracked)
+							? "CFB Apex may earn a commission. See the "
+							: "Affiliate approval pending — these links go straight to our ticket partners searches; commissions activate once partnerships are approved. See the "}
 										<a href="/affiliate-disclosure">affiliate disclosure</a>.
 									</p>
 								</div>

@@ -117,6 +117,34 @@ export async function generateMetadata({
         "Weekly college football injury report: ESPN-sourced statuses, long-term ledger, and week-to-week availability watch across every FBS team.",
     };
   }
+  if (root === "highlight") {
+    return {
+      title: "Athlete Highlight of the Week — College Football's Top Performance",
+      description:
+        "One winner, four runners-up, and the criteria that picked them — compiled from verified box scores, weighted for opponent quality and game-deciding execution.",
+    };
+  }
+  if (root === "panel") {
+    return {
+      title: "The Panel — Three Analysts, Zero Agreement",
+      description:
+        "Three fixed football philosophies — traditionalist, analyst, talent evaluator — debate the week's biggest questions with sourced facts. The personas argue; the numbers are real.",
+    };
+  }
+  if (root === "upset-watch") {
+    return {
+      title: "Upset Watch — Week 5 Board",
+      description:
+        "Three-to-five sourced upset picks with live betting lines, the trap game the public will chase, and the honest counter-argument for every pick.",
+    };
+  }
+  if (root === "playoff-audit") {
+    return {
+      title: "Road to the Playoff — 12-Team Resume Audit",
+      description:
+        "The weekly 12-team College Football Playoff resume audit: composite ranks, remaining strength of schedule, best wins, closest calls, and what ends each contender's case.",
+    };
+  }
   if (root === "dfs") {
     return {
       title: "College Fantasy Notes Board",
