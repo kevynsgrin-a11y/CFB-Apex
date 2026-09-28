@@ -14,44 +14,8 @@ const sharedStadiumNames = new Set(
     .filter((name, index, all) => all.indexOf(name) !== index),
 );
 
-<<<<<<< HEAD
+
 const staticRoots: ReadonlySet<string> = new Set(STATIC_ROOTS);
-=======
-const staticRoots = new Set([
-  "scores",
-  "schedule",
-  "transfer-portal",
-  "injuries",
-  "playoff-predictor",
-  "playoff-bracket",
-  "no-names",
-  "heisman",
-  "nil",
-  "panel",
-  "coaches",
-  "coaching-carousel",
-  "dfs",
-  "teams",
-  "conferences",
-  "stadiums",
-  "watch",
-  "rankings",
-  "search",
-  "newsletter",
-  "methodology",
-  "data-sources",
-  "corrections",
-  "about",
-  "advertise",
-  "partnerships",
-  "media-kit",
-  "privacy",
-  "terms",
-  "affiliate-disclosure",
-  "responsible-gaming",
-  "design-system",
-]);
->>>>>>> fe8d934 (feat(injuries): restore the weekly injury report — port from c101d47 into apps/site)
 
 function isKnownPath(parts: string[]) {
   const [root, id] = parts;
