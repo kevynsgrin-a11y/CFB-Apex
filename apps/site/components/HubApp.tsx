@@ -980,7 +980,14 @@ function RankingsPage() {
   return (
     <>
       <PageHeading
-        eyebrow="2026 PRESEASON RANKINGS"
+        // Truthful to the dataset: August releases are preseason ballots;
+        // anything later is the in-season poll. The eyebrow previously
+        // hardcoded PRESEASON and went stale the first week of the season.
+        eyebrow={
+          table.release_date && table.release_date >= "2026-09"
+            ? "2026 SEASON RANKINGS"
+            : "2026 PRESEASON RANKINGS"
+        }
         title="AP and Coaches, straight from the release."
         description={`${table.name}${table.release_date ? ` · released ${table.release_date}` : ""}. AP and Coaches rows cite the release directly; the CFB Apex Composite averages the two polls.`}
       />

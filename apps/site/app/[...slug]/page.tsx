@@ -160,6 +160,13 @@ export async function generateMetadata({
         "Compare verified college football coaching contracts, source notes, and explainable buyout estimates.",
     };
   }
+  if (root === "rankings") {
+    return {
+      title: "College Football Rankings — AP Top 25, Coaches Poll & Composite",
+      description:
+        "The current AP Top 25 and Coaches Poll, plus the CFB Apex composite board — every row cited to its release, updated as the polls publish.",
+    };
+  }
   const fallbackTitle = staticRootTitle(root);
   if (fallbackTitle) {
     return { title: fallbackTitle };
