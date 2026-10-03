@@ -57,11 +57,50 @@ async function fetchFeed(
   }
 }
 
-async function fetchScoreboard(key: string, nowMs: number): Promise<NcaafScoreboardPayload> {
+/**
+ * TrueAPI ingest first (ingest.oakandmain.dev): the portfolio's KV cache holds
+ * the last-good league feeds, so when TheSportsDB's live endpoint drops
+ * results mid-Saturday churn (observed 2026-10-03: direct past-league served
+ * ~1 event while the cached copy held 15 scored finals) the board keeps its
+ * finals instead of going hollow. A cold/failed ingest read falls back to the
+ * direct key call per feed. Envelope shape: { data: { events: [...] } }.
+ */
+const INGEST_BASE =
+  process.env.TRUEAPI_INGEST_BASE || "https://ingest.oakandmain.dev";
+
+async function fetchIngestFeed(endpoint: string): Promise<TsdbRawEvent[] | null> {
+  try {
+    const response = await fetch(
+      `${INGEST_BASE}/data/thesportsdb${endpoint}`,
+      { signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS) },
+    );
+    if (!response.ok) return null;
+    const body: unknown = await response.json();
+    const events = (body as { data?: { events?: unknown } } | null)?.data
+      ?.events;
+    if (!Array.isArray(events)) return null;
+    return events.filter(
+      (event): event is TsdbRawEvent => typeof event === "object" && event !== null,
+    );
+  } catch {
+    return null;
+  }
+}
+
+async function resolveFeed(
+  key: string,
+  endpoint: string,
+): Promise<TsdbRawEvent[] | null> {
+  const cached = await fetchIngestFeed(endpoint);
+  if (cached && cached.length > 0) return cached;
   const baseUrl = `https://www.thesportsdb.com/api/v1/json/${key}`;
+  return fetchFeed(baseUrl, endpoint);
+}
+
+async function fetchScoreboard(key: string, nowMs: number): Promise<NcaafScoreboardPayload> {
   const [next, past] = await Promise.all([
-    fetchFeed(baseUrl, `/eventsnextleague.php?id=${TSDB_LEAGUE_NCAAF}`),
-    fetchFeed(baseUrl, `/eventspastleague.php?id=${TSDB_LEAGUE_NCAAF}`),
+    resolveFeed(key, `/eventsnextleague.php?id=${TSDB_LEAGUE_NCAAF}`),
+    resolveFeed(key, `/eventspastleague.php?id=${TSDB_LEAGUE_NCAAF}`),
   ]);
   if (!next && !past) return degradedPayload(nowMs);
   const events = windowThisWeek(mergeNcaafFeeds(next ?? [], past ?? []), nowMs);
