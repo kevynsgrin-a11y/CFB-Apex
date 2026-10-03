@@ -3,9 +3,19 @@
  * All use the broadcast design system (apex-* classes).
  */
 import { useMemo, useState } from "react";
-import { Trophy, Star, GraduationCap, DollarSign, Brain, Users, TrendingUp, ShieldAlert, ExternalLink } from "lucide-react";
+import { Trophy, Star, GraduationCap, Brain, Users, TrendingUp, ShieldAlert, ExternalLink } from "lucide-react";
 import { noNames, noNamesByPosition, noNamesTeamCounts, type NoNamePlayer } from "@/lib/no-names";
 import { teams, getTeamBySlug } from "@/lib/cfb-dataset";
+import {
+  heismanBoard,
+  heismanWatch,
+  nilWatch,
+  athleteHighlight,
+  panelBrief,
+  formatValuation,
+  type HeismanContender,
+  type HighlightEntry,
+} from "@/lib/awards-watch";
 
 /* ================================================================ No Names */
 
@@ -127,7 +137,37 @@ const HEISMAN_METHODOLOGY = [
   { component: "Public Sentiment", weight: "15%", description: "Betting odds movement, social volume, Google Trends. The Heisman is partly a narrative award." },
 ];
 
+function OddsChips({ contender }: { contender: HeismanContender }) {
+  if (!contender.odds_as_reported || contender.odds_as_reported.length === 0) {
+    return <span style={{ fontSize: 12, color: "var(--muted-foreground)" }}>Unlisted — no major book posts odds</span>;
+  }
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+      {contender.odds_as_reported.map((odds) => (
+        <span
+          key={`${contender.player}-${odds.outlet}`}
+          style={{
+            fontSize: 12,
+            fontWeight: 600,
+            fontFamily: "var(--display-family)",
+            padding: "3px 9px",
+            borderRadius: 999,
+            border: "1px solid color-mix(in srgb, var(--primary) 35%, transparent)",
+            color: "var(--primary)",
+            background: "color-mix(in srgb, var(--primary) 8%, transparent)",
+          }}
+        >
+          {odds.outlet} {odds.value}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export function HeismanPage() {
+  const board = heismanBoard();
+  const hasBoard = board.length > 0;
+
   return (
     <div className="apex-home" style={{ paddingTop: 32 }}>
       <div className="apex-container">
@@ -135,48 +175,326 @@ export function HeismanPage() {
           <div>
             <span className="apex-eyebrow">HEISMAN TROPHY WATCH</span>
             <h1>The most outstanding player in college football</h1>
-            <p>Our top-10 ranking debuts after Week 3. Until then, here's the methodology.</p>
+            <p>
+              {hasBoard
+                ? `Week ${heismanWatch.week ?? 2} watch list — ${board.length} contenders, every stat line sourced, every odds figure as reported by the named book. Compiled ${heismanWatch.as_of ?? ""} from a sourced research pass (see compilation note).`
+                : "Our top-10 ranking debuts after Week 3. Until then, here's the methodology."}
+            </p>
           </div>
           <span className="apex-season-label"><span /><span className="apex-season-word">2026</span> SEASON</span>
         </div>
 
-        <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
-          <Trophy size={48} style={{ color: "var(--primary)", marginBottom: 16 }} aria-hidden />
-          <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>Watch List Pending</h2>
-          <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
-            The first data-driven Heisman Watch ranking publishes after Week 3 concludes (September 19).
-            Three weeks of film, stats, and results give every candidate a real sample size.
-          </p>
-          <div style={{ marginTop: 20, display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 10, background: "color-mix(in srgb, var(--primary) 10%, transparent)", border: "1px solid color-mix(in srgb, var(--primary) 25%, transparent)" }}>
-            <span style={{ fontSize: 14, fontWeight: 600, color: "var(--primary)", fontFamily: "var(--display-family)", letterSpacing: 1 }}>LAUNCHES SEP 20</span>
-          </div>
-        </div>
-
-        <div className="apex-lane">
-          <div className="apex-lane-heading">
-            <div>
-              <span className="apex-eyebrow">METHODOLOGY</span>
-              <h2>How we rank</h2>
-            </div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
-            {HEISMAN_METHODOLOGY.map((m, i) => (
-              <div key={m.component} className="apex-portal-card" style={{ padding: 20 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                  <h3 style={{ fontSize: 16, fontWeight: 700 }}>{m.component}</h3>
-                  <span style={{ fontSize: 22, fontFamily: "var(--display-family)", fontWeight: 700, color: "var(--accent)" }}>{m.weight}</span>
-                </div>
-                <p style={{ fontSize: 13, color: "var(--muted-foreground)", lineHeight: 1.5 }}>{m.description}</p>
-                <div style={{ marginTop: 12, height: 4, borderRadius: 2, background: "var(--secondary)" }}>
-                  <div style={{ height: "100%", borderRadius: 2, background: "var(--primary)", width: m.weight }} />
+        {hasBoard ? (
+          <>
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div>
+                  <span className="apex-eyebrow">THE BOARD · ORDERED BY SHORTEST REPORTED ODDS</span>
+                  <h2>{board.length} contenders</h2>
                 </div>
               </div>
-            ))}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(420px, 100%), 1fr))", gap: 14 }}>
+                {board.map((contender, index) => {
+                  const team = getTeamBySlug(contender.team_slug);
+                  return (
+                    <article
+                      key={contender.player}
+                      className="apex-portal-card"
+                      style={{ padding: 18, display: "flex", flexDirection: "column", gap: 10, borderLeft: `3px solid ${team?.color ?? "var(--border)"}` }}
+                    >
+                      <header style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "flex-start" }}>
+                        <div>
+                          <span style={{ fontFamily: "var(--display-family)", fontSize: 13, fontWeight: 700, color: "var(--muted-foreground)" }}>
+                            {String(index + 1).padStart(2, "0")}
+                          </span>{" "}
+                          <h3 style={{ display: "inline", fontSize: 18, fontWeight: 800 }}>{contender.player}</h3>
+                          <div style={{ marginTop: 4, fontSize: 13, color: "var(--muted-foreground)" }}>
+                            {team ? (
+                              <a href={`/teams/${team.slug}`} style={{ color: "var(--muted-foreground)", textDecoration: "none" }}>
+                                {team.name}
+                              </a>
+                            ) : (
+                              contender.team_slug
+                            )} · {contender.position} · {contender.class}
+                          </div>
+                        </div>
+                        <span
+                          role="img"
+                          aria-label={`${contender.confidence} confidence`}
+                          style={{
+                            fontSize: 11,
+                            fontWeight: 700,
+                            letterSpacing: "0.08em",
+                            textTransform: "uppercase",
+                            padding: "3px 8px",
+                            borderRadius: 999,
+                            color:
+                              contender.confidence === "high"
+                                ? "var(--green)"
+                                : contender.confidence === "medium"
+                                  ? "var(--gold)"
+                                  : "var(--red)",
+                            border: "1px solid currentColor",
+                          }}
+                        >
+                          {contender.confidence} conf
+                        </span>
+                      </header>
+
+                      <p style={{ fontSize: 13, fontFamily: "var(--display-family)", color: "var(--foreground)", margin: 0 }}>{contender.stat_line}</p>
+
+                      <OddsChips contender={contender} />
+
+                      <div style={{ display: "grid", gap: 6, fontSize: 13, lineHeight: 1.5 }}>
+                        <p style={{ margin: 0 }}><strong style={{ color: "var(--green)" }}>Case for:</strong> <span style={{ color: "var(--muted-foreground)" }}>{contender.case_for}</span></p>
+                        <p style={{ margin: 0 }}><strong style={{ color: "var(--red)" }}>Case against:</strong> <span style={{ color: "var(--muted-foreground)" }}>{contender.case_against}</span></p>
+                        <p style={{ margin: 0 }}><strong>Next test:</strong> <span style={{ color: "var(--muted-foreground)" }}>{contender.next_test}</span></p>
+                      </div>
+
+                      <footer style={{ marginTop: "auto", display: "flex", gap: 10, fontSize: 12, color: "var(--muted-foreground)" }}>
+                        <a href={contender.sources[0]} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+                          Source <ExternalLink size={11} aria-hidden />
+                        </a>
+                        {contender.sources[1] ? (
+                          <a href={contender.sources[1]} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+                            Second source <ExternalLink size={11} aria-hidden />
+                          </a>
+                        ) : null}
+                      </footer>
+                    </article>
+                  );
+                })}
+              </div>
+              {heismanWatch.notes ? (
+                <p style={{ marginTop: 16, fontSize: 13, color: "var(--muted-foreground)", lineHeight: 1.6 }}>{heismanWatch.notes}</p>
+              ) : null}
+            </div>
+
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div>
+                  <span className="apex-eyebrow">METHODOLOGY</span>
+                  <h2>How this board is built</h2>
+                </div>
+              </div>
+              <p style={{ fontSize: 13, color: "var(--muted-foreground)", lineHeight: 1.6, marginTop: 0 }}>
+                Two research engines compile the week independently; discrepancies are resolved against the box score of
+                record before anything publishes. Odds are always the named outlet&apos;s published number — we never
+                compute, average, or estimate them. Confidence is high only when stats and odds carry at least two
+                independent sources; a contender that failed cross-verification (see Marcel Reed) is flagged low, not
+                dropped silently.
+              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
+                {HEISMAN_METHODOLOGY.map((m) => (
+                  <div key={m.component} className="apex-portal-card" style={{ padding: 20 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+                      <h3 style={{ fontSize: 16, fontWeight: 700 }}>{m.component}</h3>
+                      <span style={{ fontSize: 22, fontFamily: "var(--display-family)", fontWeight: 700, color: "var(--accent)" }}>{m.weight}</span>
+                    </div>
+                    <p style={{ fontSize: 13, color: "var(--muted-foreground)", lineHeight: 1.5 }}>{m.description}</p>
+                    <div style={{ marginTop: 12, height: 4, borderRadius: 2, background: "var(--secondary)" }}>
+                      <div style={{ height: "100%", borderRadius: 2, background: "var(--primary)", width: m.weight }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
+            <Trophy size={48} style={{ color: "var(--primary)", marginBottom: 16 }} aria-hidden />
+            <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>Watch List Pending</h2>
+            <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
+              The first data-driven Heisman Watch ranking publishes after Week 3 concludes (September 19).
+              Three weeks of film, stats, and results give every candidate a real sample size.
+            </p>
           </div>
-          <p style={{ marginTop: 16, fontSize: 13, color: "var(--muted-foreground)" }}>
-            Every score is justifiable by a cited source or public data. Components without published data are scored null — never estimated.
-          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ==================================================== Athlete Highlight */
+
+function HighlightCard({
+  entry,
+  rank,
+  emphasis,
+}: {
+  entry: HighlightEntry;
+  rank?: string;
+  emphasis?: boolean;
+}) {
+  const team = getTeamBySlug(entry.team_slug);
+  const opponent = getTeamBySlug(entry.opponent_slug);
+  return (
+    <article
+      className="apex-portal-card"
+      style={{
+        padding: 20,
+        display: "flex",
+        flexDirection: "column",
+        gap: 10,
+        borderLeft: `3px solid ${team?.color ?? "var(--border)"}`,
+        ...(emphasis ? { background: "linear-gradient(135deg, color-mix(in srgb, var(--primary) 8%, var(--card)), var(--card))", border: "1px solid color-mix(in srgb, var(--primary) 35%, var(--border))" } : {}),
+      }}
+    >
+      <header style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "flex-start" }}>
+        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+          {entry.photo?.url || team?.logo ? (
+            <img
+              src={entry.photo?.url ?? team?.logo}
+              alt={entry.photo?.alt ?? `${team?.name ?? entry.team_slug} mark`}
+              width={56}
+              height={56}
+              loading="lazy"
+              style={{ borderRadius: 999, objectFit: "cover", background: "var(--muted)", boxShadow: `0 0 0 2px ${team?.color ?? "var(--border)"}` }}
+            />
+          ) : null}
+          <div>
+            {rank ? (
+              <span style={{ fontFamily: "var(--display-family)", fontSize: 12, fontWeight: 700, letterSpacing: 2, color: "var(--primary)" }}>{rank}</span>
+            ) : null}
+            <h3 style={{ fontSize: emphasis ? 24 : 18, fontWeight: 800, margin: rank ? "4px 0 0" : 0 }}>{entry.player}</h3>
+            <div style={{ marginTop: 4, fontSize: 13, color: "var(--muted-foreground)" }}>
+              {team ? <a href={`/teams/${team.slug}`} style={{ color: "inherit", textDecoration: "none" }}>{team.name}</a> : entry.team_slug}
+              {" · "}
+              {entry.position}
+              {entry.class ? ` · ${entry.class}` : ""}
+          </div>
         </div>
+        </div>
+        {emphasis ? <Star size={20} style={{ color: "var(--primary)" }} aria-hidden /> : null}
+      </header>
+      <p style={{ margin: 0, fontSize: 13.5, fontFamily: "var(--display-family)" }}>{entry.stat_line}</p>
+      <p style={{ margin: 0, fontSize: 13, color: "var(--muted-foreground)" }}>
+        {entry.result} — vs. {opponent?.shortName ?? entry.opponent_slug}
+      </p>
+      <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.6 }}>{entry.why}</p>
+      <footer style={{ marginTop: "auto", display: "flex", gap: 12, fontSize: 12, flexWrap: "wrap" }}>
+        {entry.video_url ? (
+          <a href={entry.video_url} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--primary)" }}>
+            Licensed highlights <ExternalLink size={11} aria-hidden />
+          </a>
+        ) : null}
+        {entry.sources?.[0] ? (
+          <a href={entry.sources[0]} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--muted-foreground)" }}>
+            Source <ExternalLink size={11} aria-hidden />
+          </a>
+        ) : null}
+      </footer>
+    </article>
+  );
+}
+
+export function HighlightPage() {
+  const hasHighlight = athleteHighlight.athlete_of_the_week !== null;
+  const winner = athleteHighlight.athlete_of_the_week;
+
+  return (
+    <div className="apex-home" style={{ paddingTop: 32 }}>
+      <div className="apex-container">
+        <div className="apex-home-intro">
+          <div>
+            <span className="apex-eyebrow">ATHLETE HIGHLIGHT OF THE WEEK</span>
+            <h1>One week. One player. The tape decides.</h1>
+            <p>
+              {hasHighlight
+                ? `Week ${athleteHighlight.week} — compiled from a sourced research pass, cross-checked against the box scores of record (${athleteHighlight.window ?? ""}). Selections weight dominance versus real opponents and the plays that decided consequential games.`
+                : "The first highlight publishes after Week 1 concludes. Selections are compiled from verified box scores and licensed highlight footage only."}
+            </p>
+          </div>
+          <span className="apex-season-label"><span /><span className="apex-season-word">2026</span> SEASON</span>
+        </div>
+
+        {hasHighlight && winner ? (
+          <>
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div>
+                  <span className="apex-eyebrow">WEEK {athleteHighlight.week} · ATHLETE OF THE WEEK</span>
+                  <h2>The pick</h2>
+                </div>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(480px, 100%), 1fr))", gap: 14 }}>
+                <HighlightCard entry={winner} rank="WEEK 1 CHAMPION" emphasis />
+              </div>
+            </div>
+
+            {athleteHighlight.spotlights.length ? (
+              <div className="apex-lane">
+                <div className="apex-lane-heading">
+                  <div>
+                    <span className="apex-eyebrow">WEEK {athleteHighlight.week} · SPOTLIGHTS</span>
+                    <h2>The week&apos;s other game-wreckers</h2>
+                  </div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(420px, 100%), 1fr))", gap: 14 }}>
+                  {athleteHighlight.spotlights.map((entry) => (
+                    <HighlightCard key={entry.player} entry={entry} rank="SPOTLIGHT" />
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div>
+                  <span className="apex-eyebrow">RUNNERS-UP · IN ORDER</span>
+                  <h2>Right behind him</h2>
+                </div>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(400px, 100%), 1fr))", gap: 14 }}>
+                {athleteHighlight.runners_up.map((entry, index) => (
+                  <HighlightCard key={entry.player} entry={entry} rank={`No. ${index + 2}`} />
+                ))}
+              </div>
+            </div>
+
+            {athleteHighlight.honorable_mentions.length ? (
+              <div className="apex-lane">
+                <div className="apex-lane-heading">
+                  <div>
+                    <span className="apex-eyebrow">HONORABLE MENTIONS</span>
+                    <h2>Also on the ballot</h2>
+                  </div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))", gap: 12 }}>
+                  {athleteHighlight.honorable_mentions.map((entry) => (
+                    <article key={entry.player} className="apex-portal-card" style={{ padding: 16, display: "flex", flexDirection: "column", gap: 6 }}>
+                      <h3 style={{ fontSize: 15, fontWeight: 800, margin: 0 }}>{entry.player}</h3>
+                      <div style={{ fontSize: 12.5, color: "var(--muted-foreground)" }}>
+                        {getTeamBySlug(entry.team_slug)?.shortName ?? entry.team_slug} · {entry.position} · {entry.result}
+                      </div>
+                      <p style={{ margin: 0, fontSize: 12.5, fontFamily: "var(--display-family)" }}>{entry.stat_line}</p>
+                      <p style={{ margin: 0, fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.5 }}>{entry.why}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {athleteHighlight.criteria_note ? (
+              <p style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.7 }}>
+                <strong>How the pick was made:</strong> {athleteHighlight.criteria_note}
+              </p>
+            ) : null}
+            {athleteHighlight.verification_note ? (
+              <p style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.7 }}>
+                <strong>Accuracy check:</strong> {athleteHighlight.verification_note}
+              </p>
+            ) : null}
+          </>
+        ) : (
+          <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
+            <Trophy size={48} style={{ color: "var(--primary)", marginBottom: 16 }} aria-hidden />
+            <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>First Highlight Publishes After Week 1</h2>
+            <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
+              One winner, four runners-up, and the criteria that picked them — compiled from verified box scores, never a vibe.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -185,6 +503,9 @@ export function HeismanPage() {
 /* ================================================================ NIL Watch */
 
 export function NILWatchPage() {
+  const hasDeals = nilWatch.week_deals.length > 0;
+  const hasValuations = nilWatch.watch_valuations.length > 0;
+
   return (
     <div className="apex-home" style={{ paddingTop: 32 }}>
       <div className="apex-container">
@@ -192,43 +513,161 @@ export function NILWatchPage() {
           <div>
             <span className="apex-eyebrow">NIL DEAL TRACKER</span>
             <h1>Verified deals, sourced and linked</h1>
-            <p>Every NIL deal in our tracker is verified by a news source. No rumors, no estimates, no speculation.</p>
+            <p>
+              {hasDeals
+                ? `Week ${nilWatch.week ?? ""} ledger — ${nilWatch.week_deals.length} verified developments from ${nilWatch.window ?? "the past week"}, every entry attributed. No rumors, no estimates, no speculation.`
+                : "Every NIL deal in our tracker is verified by a news source. No rumors, no estimates, no speculation."}
+            </p>
           </div>
           <span className="apex-season-label"><span /><span className="apex-season-word">2026</span> SEASON</span>
         </div>
 
-        <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
-          <DollarSign size={48} style={{ color: "var(--accent)", marginBottom: 16 }} aria-hidden />
-          <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>Building the Database</h2>
-          <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
-            We're compiling verified NIL deals from official announcements, brand press releases, and major outlet reporting.
-            Each deal links to its primary news source. Deals without disclosed values are listed without values — we never estimate.
-          </p>
-        </div>
-
-        <div className="apex-lane">
-          <div className="apex-lane-heading">
-            <div>
-              <span className="apex-eyebrow">WHAT WE TRACK</span>
-              <h2>Deal categories</h2>
-            </div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
-            {[
-              { label: "Brand Partnerships", desc: "Endorsement deals with companies" },
-              { label: "Collectives", desc: "Booster-funded NIL collectives" },
-              { label: "Group Licensing", desc: "Team-wide licensing agreements" },
-              { label: "Appearances", desc: "Paid events, camps, autographs" },
-              { label: "Social Influence", desc: "Content creation, influencer deals" },
-              { label: "Camp Instructors", desc: "Youth camp coaching deals" },
-            ].map((cat) => (
-              <div key={cat.label} style={{ padding: 16, border: "1px solid var(--border)", borderRadius: 12, background: "var(--card)" }}>
-                <h3 style={{ fontSize: 14, fontWeight: 700, marginBottom: 4 }}>{cat.label}</h3>
-                <p style={{ fontSize: 12, color: "var(--muted-foreground)" }}>{cat.desc}</p>
+        {hasDeals ? (
+            <div className="apex-lane">
+              <div className="apex-lane-heading">
+                <div>
+                  <span className="apex-eyebrow">THE WEEK IN NIL · {nilWatch.window ?? ""}</span>
+                  <h2>Verified deal ledger</h2>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(400px, 100%), 1fr))", gap: 14 }}>
+                {nilWatch.week_deals.map((deal) => {
+                  const team = getTeamBySlug(deal.team_slug);
+                  return (
+                    <article
+                      key={`${deal.player}-${deal.parties}`}
+                      className="apex-portal-card"
+                      style={{ padding: 18, display: "flex", flexDirection: "column", gap: 8, borderLeft: `3px solid ${team?.color ?? "var(--border)"}` }}
+                    >
+                      <header style={{ display: "flex", justifyContent: "space-between", gap: 8, alignItems: "flex-start" }}>
+                        <div>
+                          <h3 style={{ fontSize: 16, fontWeight: 800, margin: 0 }}>{deal.player}</h3>
+                          <div style={{ marginTop: 3, fontSize: 12.5, color: "var(--muted-foreground)" }}>
+                            {team ? (
+                              <a href={`/teams/${team.slug}`} style={{ color: "inherit", textDecoration: "none" }}>{team.name}</a>
+                            ) : (
+                              deal.team_slug
+                            )}
+                            {deal.position ? ` · ${deal.position}` : ""}
+                          </div>
+                        </div>
+                        <span
+                          role="img"
+                          aria-label={`${deal.confidence} confidence`}
+                          style={{
+                            fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
+                            padding: "3px 8px", borderRadius: 999,
+                            color: deal.confidence === "high" ? "var(--green)" : deal.confidence === "medium" ? "var(--gold)" : "var(--red)",
+                            border: "1px solid currentColor", whiteSpace: "nowrap",
+                          }}
+                        >
+                          {deal.confidence} conf
+                        </span>
+                      </header>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55 }}>{deal.deal_summary}</p>
+                      <div style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.5 }}>
+                        <div><strong>Parties:</strong> {deal.parties}</div>
+                        <div>
+                          <strong>Announced value:</strong>{" "}
+                          <span style={{ fontFamily: "var(--display-family)", color: deal.announced_value != null ? "var(--primary)" : "var(--muted-foreground)" }}>
+                            {deal.announced_value != null ? formatValuation(deal.announced_value) : "Not disclosed"}
+                          </span>
+                          {deal.announced_value != null ? " (as reported)" : " — we never estimate"}
+                        </div>
+                        <div><strong>Announced by:</strong> {deal.announced_by}</div>
+                      </div>
+                      <footer style={{ marginTop: "auto", display: "flex", gap: 10, fontSize: 12 }}>
+                        {deal.sources.map((source, index) => (
+                          <a key={source} href={source} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--muted-foreground)" }}>
+                            {index === 0 ? "Source" : "Second source"} <ExternalLink size={11} aria-hidden />
+                          </a>
+                        ))}
+                      </footer>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+            ) : nilWatch.as_of ? (
+              <div className="apex-lane" style={{ textAlign: "center", padding: "40px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
+                <h2 style={{ fontSize: 22, textTransform: "uppercase", marginBottom: 8 }}>Week {nilWatch.week}: no verified in-window deals</h2>
+                <p style={{ color: "var(--muted-foreground)", maxWidth: 620, margin: "0 auto", lineHeight: 1.6 }}>
+                  {nilWatch.notes ?? "No deals met the verification bar inside this window."} Window: {nilWatch.window ?? ""}. The ledger ships empty rather than guessing — policy and valuation coverage below remain live.
+                </p>
+              </div>
+            ) : null}
+
+            {nilWatch.policy_notes.length ? (
+              <div className="apex-lane">
+                <div className="apex-lane-heading">
+                  <div>
+                    <span className="apex-eyebrow">POLICY & LANDSCAPE</span>
+                    <h2>The rules around the money</h2>
+                  </div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(360px, 100%), 1fr))", gap: 14 }}>
+                  {nilWatch.policy_notes.map((note) => (
+                    <article key={note.title} className="apex-portal-card" style={{ padding: 18 }}>
+                      <h3 style={{ fontSize: 15, fontWeight: 700, margin: "0 0 8px" }}>{note.title}</h3>
+                      <p style={{ margin: 0, fontSize: 13, color: "var(--muted-foreground)", lineHeight: 1.6 }}>{note.body}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {hasValuations ? (
+              <div className="apex-lane">
+                <div className="apex-lane-heading">
+                  <div>
+                    <span className="apex-eyebrow">VALUATION BOARD · AS REPORTED BY ON3 (DEAL-BASED MODEL)</span>
+                    <h2>Most-covered players, priced by the market</h2>
+                  </div>
+                </div>
+                <div className="db-table-wrap db-desktop-data-table">
+                  <table className="db-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Player</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Reported valuation</th>
+                        <th scope="col">Reported by</th>
+                        <th scope="col">As of</th>
+                        <th scope="col">Confidence</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {nilWatch.watch_valuations.map((entry, index) => {
+                        const team = getTeamBySlug(entry.team_slug);
+                        return (
+                          <tr key={`${entry.player}-valuation`}>
+                            <td>{index + 1}</td>
+                            <td><strong>{entry.player}</strong></td>
+                            <td>{team?.shortName ?? entry.team_slug}</td>
+                            <td style={{ fontFamily: "var(--display-family)", color: "var(--primary)" }}>
+                              {formatValuation(entry.valuation.amount_reported)}
+                            </td>
+                            <td>{entry.valuation.reported_by}</td>
+                            <td>{entry.valuation.reported_on}</td>
+                            <td style={{ color: entry.confidence === "high" ? "var(--green)" : "var(--gold)" }}>{entry.confidence}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                {nilWatch.valuation_methodology ? (
+                  <p style={{ marginTop: 12, fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.6 }}>
+                    {nilWatch.valuation_methodology}
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
+
+            {nilWatch.notes ? (
+              <p style={{ fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.6 }}>{nilWatch.notes}</p>
+            ) : null}
       </div>
     </div>
   );
@@ -279,14 +718,82 @@ export function AIPanelPage() {
           <span className="apex-season-label"><span /><span className="apex-season-word">2026</span> SEASON</span>
         </div>
 
-        <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
-          <Brain size={48} style={{ color: "var(--accent)", marginBottom: 16 }} aria-hidden />
-          <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>First Debate Drops After Week 1 Results</h2>
-          <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
-            The panel analyzes the AP Top 10 teams and the five biggest games each week, using real stats from our dataset.
-            Each analyst produces independent picks and rebuttals from their own philosophy.
-          </p>
-        </div>
+        {panelBrief.topics.length ? (
+          <div className="apex-lane">
+            <div className="apex-lane-heading">
+              <div>
+                <span className="apex-eyebrow">WEEK {panelBrief.week} DEBATE BRIEF · {panelBrief.as_of}</span>
+                <h2>This week&apos;s arguments</h2>
+              </div>
+            </div>
+            <div style={{ display: "grid", gap: 18 }}>
+              {panelBrief.topics.map((topic, index) => (
+                <article
+                  key={topic.id}
+                  className="apex-portal-card"
+                  style={{ padding: 22, display: "flex", flexDirection: "column", gap: 12 }}
+                >
+                  <header>
+                    <span style={{ fontFamily: "var(--display-family)", fontSize: 12, fontWeight: 700, color: "var(--muted-foreground)", letterSpacing: 2 }}>
+                      DEBATE {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 style={{ fontSize: 19, fontWeight: 800, margin: "6px 0 0", lineHeight: 1.4 }}>{topic.question}</h3>
+                  </header>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: 12 }}>
+                    <div style={{ padding: 14, borderRadius: 12, border: "1px solid color-mix(in srgb, #67E8F9 30%, transparent)", background: "color-mix(in srgb, #67E8F9 6%, transparent)" }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "#67E8F9", marginBottom: 8 }}>🛡️ The Bulwark — Traditionalist</div>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6 }}>{topic.traditionalist}</p>
+                    </div>
+                    <div style={{ padding: 14, borderRadius: 12, border: "1px solid color-mix(in srgb, var(--primary) 30%, transparent)", background: "color-mix(in srgb, var(--primary) 6%, transparent)" }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--primary)", marginBottom: 8 }}>📊 The Quant — Analyst</div>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6 }}>{topic.analyst}</p>
+                    </div>
+                    <div style={{ padding: 14, borderRadius: 12, border: "1px solid color-mix(in srgb, #FDA4AF 30%, transparent)", background: "color-mix(in srgb, #FDA4AF 6%, transparent)" }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "#FDA4AF", marginBottom: 8 }}>🔍 The Scout — Talent Evaluator</div>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6 }}>{topic.evaluator}</p>
+                    </div>
+                  </div>
+                  <div style={{ padding: 14, borderRadius: 12, border: "1px dashed var(--border)", display: "flex", gap: 10, alignItems: "flex-start" }}>
+                    <ShieldAlert size={16} style={{ color: "var(--accent)", flexShrink: 0, marginTop: 2 }} aria-hidden />
+                    <div>
+                      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--accent)", marginBottom: 4 }}>What settles it</div>
+                      <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: "var(--muted-foreground)" }}>{topic.what_settles_it}</p>
+                    </div>
+                  </div>
+                  <footer style={{ display: "flex", gap: 12, fontSize: 12, flexWrap: "wrap" }}>
+                    {topic.sources.slice(0, 3).map((source) => (
+                      <a key={source} href={source} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--muted-foreground)" }}>
+                        Source <ExternalLink size={11} aria-hidden />
+                      </a>
+                    ))}
+                  </footer>
+                </article>
+              ))}
+            </div>
+            {panelBrief.also_on_the_desk.length ? (
+              <div style={{ marginTop: 16, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(320px, 100%), 1fr))", gap: 12 }}>
+                {panelBrief.also_on_the_desk.map((item) => (
+                  <div key={item.question} style={{ padding: 14, borderRadius: 12, border: "1px solid var(--border)" }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 4 }}>{item.question}</div>
+                    <p style={{ margin: 0, fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.55 }}>{item.one_liner}</p>
+                  </div>
+                ))}
+              </div>
+            ) : null}
+            {panelBrief.notes ? (
+              <p style={{ marginTop: 14, fontSize: 12.5, color: "var(--muted-foreground)", lineHeight: 1.6 }}>{panelBrief.notes}</p>
+            ) : null}
+          </div>
+        ) : (
+          <div className="apex-lane" style={{ textAlign: "center", padding: "48px 24px", border: "1px solid var(--border)", borderRadius: 16, background: "var(--card)" }}>
+            <Brain size={48} style={{ color: "var(--accent)", marginBottom: 16 }} aria-hidden />
+            <h2 style={{ fontSize: 28, textTransform: "uppercase", marginBottom: 8 }}>First Debate Drops After Week 1 Results</h2>
+            <p style={{ color: "var(--muted-foreground)", maxWidth: 480, margin: "0 auto" }}>
+              The panel analyzes the AP Top 10 teams and the five biggest games each week, using real stats from our dataset.
+              Each analyst produces independent picks and rebuttals from their own philosophy.
+            </p>
+          </div>
+        )}
 
         <div className="apex-lane">
           <div className="apex-lane-heading">

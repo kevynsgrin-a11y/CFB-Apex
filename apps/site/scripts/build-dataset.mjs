@@ -543,7 +543,323 @@ const fantasyNotes = fantasyDoc.players.map((row, index) => ({
   as_of: row.as_of ?? null,
 }));
 
-const payload = { teams, conferences, polls, pollsStatus, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes } };
+/* ------------------------------------------------- ESPN injury base feed -- */
+const ESPN_INJURY_URL = "https://site.api.espn.com/apis/site/v2/sports/football/college-football/injuries";
+const STATUS_MAP = { "Injured Reserve": "IR", "Out": "OUT", "Questionable": "QUESTIONABLE", "Doubtful": "DOUBTFUL", "Suspension": "SUSPENSION", "Active": "ACTIVE" };
+const espnInjuries = { asOf: null, entries: [] };
+const teamByDisplayName = new Map(teams.map((t) => [t.display_name.toLowerCase(), t.slug]));
+try {
+  const res = await fetch(ESPN_INJURY_URL, { headers: { accept: "application/json" } });
+  if (!res.ok) throw new Error(`${res.status}`);
+  const doc = await res.json();
+  espnInjuries.asOf = doc.timestamp ? doc.timestamp.slice(0, 10) : new Date().toISOString().slice(0, 10);
+  for (const block of doc.injuries ?? []) {
+    const teamSlug = teamByDisplayName.get(String(block.displayName ?? "").toLowerCase()) ?? null;
+    for (const row of block.injuries ?? []) {
+      const status = STATUS_MAP[row.status] ?? "QUESTIONABLE";
+      if (status === "ACTIVE") continue;
+      espnInjuries.entries.push({
+        player: row.athlete?.displayName ?? "Unknown",
+        team_slug: teamSlug,
+        position: row.athlete?.position?.abbreviation ?? null,
+        status,
+        detail: row.shortComment ?? row.longComment ?? null,
+        as_of: row.date ? row.date.slice(0, 10) : null,
+      });
+    }
+  }
+  console.log(`ESPN injury base: ${espnInjuries.entries.length} entries across ${doc.injuries?.length ?? 0} team blocks`);
+} catch (error) {
+  console.warn(`ESPN injury feed unavailable — shipping empty base (${error.message})`);
+}
+
+/* Live poll refresh — the dist's preseason bake goes stale the moment the
+   first regular-season AP Top 25 drops. ESPN's rankings endpoint carries the
+   current AP + AFCA Coaches tables (site.web.api host; the plain site.api
+   host is Worker-throttled — see the Sep 2026 egress notes). On failure the
+   dist tables ship unchanged with their honest status note. */
+let pollsNote = pollsStatus;
+const ESPN_RANKINGS_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/rankings";
+try {
+  const res = await fetch(ESPN_RANKINGS_URL, { headers: { accept: "application/json" } });
+  if (!res.ok) throw new Error(`${res.status}`);
+  const doc = await res.json();
+  const espnToTables = (doc.rankings ?? [])
+    .filter((board) => /AP Top 25|AFCA Coaches Poll/i.test(board.name ?? ""))
+    .map((board) => ({
+      poll: /AP Top 25/i.test(board.name) ? "ap" : "coaches",
+      name: /AP Top 25/i.test(board.name) ? "AP Top 25" : "AFCA Coaches Poll",
+      release_date: (board.lastUpdated ?? board.ranks?.[0]?.date ?? "").slice(0, 10) || null,
+      rankings: (board.ranks ?? []).map((entry) => {
+        const t = entry.team ?? {};
+        const name = t.location || t.nickname || t.name || "Unknown";
+        const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim().toLowerCase();
+        return {
+          rank: entry.current ?? null,
+          team_slug: teamByDisplayName.get(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null,
+          team: name,
+          record: entry.recordSummary ?? null,
+          points: entry.points ?? null,
+          first_place_votes: entry.firstPlaceVotes ?? null,
+          previous_rank: entry.previous ?? null,
+          tied: false,
+        };
+      }).filter((e) => e.rank != null),
+      others: [],
+    }));
+  if (espnToTables.length === 2) {
+    /* Composite = average of the two polls' ranks; a team ranked in only one
+       poll is counted as 26 in the other so unranked-ness is penalized, not
+       ignored. Sorted by average, ties broken by AP rank. */
+    const ap = espnToTables.find((t) => t.poll === "ap");
+    const co = espnToTables.find((t) => t.poll === "coaches");
+    const names = new Map();
+    for (const table of [ap, co]) {
+      for (const e of table.rankings) {
+        const row = names.get(e.team) ?? { team: e.team, team_slug: e.team_slug, record: e.record, ranks: {} };
+        row.ranks[table.poll] = e.rank;
+        if (!row.team_slug && e.team_slug) row.team_slug = e.team_slug;
+        names.set(e.team, row);
+      }
+    }
+    const compositeRows = [...names.values()]
+      .map((row) => ({ ...row, avg: ((row.ranks.ap ?? 26) + (row.ranks.coaches ?? 26)) / 2 }))
+      .sort((a, b) => a.avg - b.avg || (a.ranks.ap ?? 26) - (b.ranks.ap ?? 26));
+    const composite = {
+      poll: "composite",
+      name: "CFB Apex Composite",
+      release_date: ap.release_date,
+      rankings: compositeRows.map((row, i) => ({
+        rank: i + 1,
+        team_slug: row.team_slug ?? null,
+        team: row.team,
+        record: row.record ?? null,
+        points: null,
+        first_place_votes: null,
+        previous_rank: null,
+        tied: false,
+      })),
+      others: [],
+    };
+    polls.length = 0;
+    polls.push(...espnToTables, composite);
+    pollsNote = `AP Top 25 and AFCA Coaches Poll refreshed live from ESPN at build time (${new Date().toISOString().slice(0, 10)}). The CFB Apex Composite averages the two polls; a team ranked in only one poll is counted as 26 in the other. The AP releases its regular-season Top 25 Sundays at 2 p.m. ET.`;
+    console.log(`Live polls: AP ${ap.rankings.length} + Coaches ${co.rankings.length} entries; composite ${composite.rankings.length} teams`);
+  } else {
+    console.warn(`ESPN rankings returned ${espnToTables.length}/2 boards — keeping dist polls`);
+  }
+} catch (error) {
+  console.warn(`ESPN rankings unavailable — shipping dist (preseason) polls (${error.message})`);
+}
+
+/* Conference standings — the race tracker under /rankings. Same host as the
+   polls (site.web.api). ESPN returns one child per FBS conference; each team
+   is mapped to OUR conference_slug via our own teams table so the module
+   matches the site's conference hubs. Fail-closed: a failed fetch ships an
+   empty array and the section simply does not render. */
+const conferenceStandings = [];
+try {
+  const res = await fetch("https://site.web.api.espn.com/apis/v2/sports/football/college-football/standings", { headers: { accept: "application/json" } });
+  if (!res.ok) throw new Error(`${res.status}`);
+  const doc = await res.json();
+  for (const child of doc.children ?? []) {
+    const entries = child?.standings?.entries ?? [];
+    const rows = [];
+    let confSlug = null;
+    for (const entry of entries) {
+      const t = entry.team ?? {};
+      const name = t.location || t.nickname || t.name;
+      if (!name) continue;
+      const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim().toLowerCase();
+      const ourSlug = teamByDisplayName.get(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null;
+      const ourTeam = ourSlug ? teams.find((tm) => tm.slug === ourSlug) : null;
+      if (!confSlug && ourTeam) confSlug = ourTeam.conference_slug;
+      const stat = (n) => (entry.stats ?? []).find((s) => s.name === n)?.displayValue ?? null;
+      rows.push({
+        team: name,
+        team_slug: ourSlug,
+        w: stat("wins") ?? "0",
+        l: stat("losses") ?? "0",
+        t: stat("ties") ?? "0",
+        pct: stat("winPercent") ?? "—",
+      });
+    }
+    if (confSlug && rows.length) {
+      conferenceStandings.push({
+        slug: confSlug,
+        name: child.name || child.displayName || confSlug,
+        short: teams.find((tm) => tm.conference_slug === confSlug)?.conference_short ?? confSlug.toUpperCase(),
+        rows: rows.slice(0, 20),
+      });
+    }
+  }
+  console.log(`Conference standings: ${conferenceStandings.length} conferences, ${conferenceStandings.reduce((n, c) => n + c.rows.length, 0)} teams`);
+} catch (error) {
+  console.warn(`ESPN conference standings unavailable — conference race section ships empty (${error.message})`);
+}
+
+/* Completed-game results — merges the live ESPN scoreboard for every played
+   week into playedGames. The curated files under stats/2026/games/ carry the
+   full editorial layer (narrative, leaders, stats) and WIN any collision; the
+   ESPN rows exist so weeks without curated files still show honest result
+   lines (teams + points + TV), with editorial fields explicitly absent. */
+try {
+  const today = new Date();
+  const ymd = (d) => d.toISOString().slice(0, 10).replaceAll("-", "");
+  /* per-day windows — the CFB scoreboard 400s on multi-day ranges (soccer
+     accepts them; football does not), so walk the season-to-date one day at a
+     time in small parallel batches */
+  const days = [];
+  for (let d = new Date(Date.UTC(2026, 7, 23)); d <= today; d = new Date(d.getTime() + 86400000)) days.push(ymd(d));
+  const espnResults = new Map();
+  const parseDoc = (doc) => {
+    for (const ev of doc.events ?? []) {
+      const comp = (ev.competitions && ev.competitions[0]) || {};
+      const cs = comp.competitors || [];
+      if (ev.status?.type?.state !== "post" || !ev.status?.type?.completed) continue;
+      const home = cs.find((c) => c.homeAway === "home");
+      const away = cs.find((c) => c.homeAway === "away");
+      if (!home || !away) continue;
+      const mapTeam = (c) => {
+        const t = c.team ?? {};
+        const fullName = t.displayName ?? `${t.location ?? ""} ${t.name ?? ""}`.trim();
+        return { slug: teamByDisplayName.get(String(fullName).toLowerCase()) ?? null, name: t.shortDisplayName || t.location || fullName, points: c.score != null ? Number(c.score) : null };
+      };
+      const h = mapTeam(home), a = mapTeam(away);
+      if (!h.slug || !a.slug) continue;
+      espnResults.set(`${ev.date.slice(0, 10)}-${a.slug}-at-${h.slug}`, {
+        away_slug: a.slug,
+        date: ev.date.slice(0, 10),
+        kickoff_utc: ev.date,
+        game_id: `${ev.date.slice(0, 10)}-${a.slug}-at-${h.slug}`,
+        home_slug: h.slug,
+        leaders: {},
+        line_score: [],
+        meta: {
+          as_of: new Date().toISOString().slice(0, 10),
+          dataset: "game",
+          notes: ["Result line from the live ESPN scoreboard. Editorial layers (narrative, team stats, leaders) not yet published for this game."],
+          schema_version: "1.0.0",
+          sources: ["ESPN college football scoreboard"],
+        },
+        neutral_site: Boolean(comp.neutralSite),
+        season: 2026,
+        site: (comp.venue && comp.venue.fullName) || null,
+        teams: [
+          { name: h.name, points: h.points, slug: h.slug },
+          { name: a.name, points: a.points, slug: a.slug },
+        ],
+        title: ev.shortName || `${a.name} at ${h.name}`,
+        tv: (comp.broadcasts && comp.broadcasts[0] && comp.broadcasts[0].names && comp.broadcasts[0].names[0]) || null,
+      });
+    }
+  };
+  for (let i = 0; i < days.length; i += 5) {
+    const batch = days.slice(i, i + 5);
+    const docs = await Promise.all(batch.map(async (day) => {
+      const res = await fetch(`https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}`, { headers: { accept: "application/json" } });
+      if (!res.ok) throw new Error(`${res.status} on ${day}`);
+      return res.json();
+    }));
+    for (const doc of docs) parseDoc(doc);
+  }
+  const curated = new Set(playedGames.map((g) => g.game_id));
+  let added = 0;
+  for (const [id, row] of espnResults) {
+    if (!curated.has(id)) { playedGames.push(row); added += 1; }
+  }
+  playedGames.sort((a, b) => a.date.localeCompare(b.date));
+  console.log(`ESPN results merged: ${added} games added, ${curated.size} curated kept, ${playedGames.length} total played`);
+} catch (error) {
+  console.warn(`ESPN results merge unavailable — playedGames stays curated-only (${error.message})`);
+}
+
+/* ------------------------------------------------- awards & NIL watches ----- */
+// Two-engine research compilations, cross-verified. Fail-closed when absent.
+// Research engines sometimes emit mascot-style slugs ("lsu-tigers",
+// "miami-hurricanes", "pittsburgh-panthers"). Normalize onto canonical
+// dataset slugs: strip the mascot, then resolve special cases (both Miamis).
+const MASCOT_SLUG_ALIASES = {
+  miami: "miami-fl",
+  miamihurricanes: "miami-fl",
+  "miami-hurricanes": "miami-fl",
+  "miami-fl-hurricanes": "miami-fl",
+  "miami-oh-redhawks": "miami-oh",
+  miamiredhawks: "miami-oh",
+  "miami-redhawks": "miami-oh",
+};
+function readWatch(relativePath) {
+  const path = join(root, relativePath);
+  if (!existsSync(path)) return null;
+  try {
+    const raw = JSON.parse(readFileSync(path, "utf8"));
+    // Normalize research slugs onto the dataset's canonical ones.
+    const normalize = (slug) => {
+      if (!slug) return slug;
+      if (datasetTeamSlugs.has(slug)) return slug;
+      const mapped = MASCOT_SLUG_ALIASES[slug] ?? TV_ALIASES[slug] ?? slug;
+      if (datasetTeamSlugs.has(mapped)) return mapped;
+      // "lsu-tigers" -> try "lsu" when the stripped form is a real team.
+      const stripped = slug.replace(/-(tigers|hurricanes|panthers|rebels|ducks|broncos|cardinals|wolverines|longhorns|buckeyes|mustangs|blue-devils|green-wave|seminoles|aggies|sooners|mountaineers|cougars|red-wolves|golden-hurricanes|chippewas|owls|knights|bulls|midshipmen|black-knights|green-wave)$/, "");
+      if (datasetTeamSlugs.has(stripped)) return stripped;
+      return slug;
+    };
+    if (Array.isArray(raw.contenders)) {
+      raw.contenders = raw.contenders.map((entry) => ({ ...entry, team_slug: normalize(entry.team_slug) }));
+    }
+    if (Array.isArray(raw.week_deals)) {
+      raw.week_deals = raw.week_deals.map((entry) => ({ ...entry, team_slug: normalize(entry.team_slug) }));
+    }
+    if (Array.isArray(raw.watch_valuations)) {
+      raw.watch_valuations = raw.watch_valuations.map((entry) => ({ ...entry, team_slug: normalize(entry.team_slug) }));
+    }
+    return raw;
+  } catch (error) {
+    console.warn(`${relativePath} present but unreadable — skipping (${error.message})`);
+    return null;
+  }
+}
+// Weekly watches: latest staged week file wins (week3-2026.json over week2-*.json);
+// fail-closed when nothing is staged.
+function readWatchLatest(dir) {
+  const files = readdirSync(join(projectRoot, "data", "cfb-2026", dir)).filter((f) => /^week\d+-\d{4}\.json$/.test(f)).sort((a, b) => parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]));
+  return files.length ? readWatch(`${dir}/${files[files.length - 1]}`) : null;
+}
+const heismanWatch = readWatchLatest("heisman") ?? readWatch("heisman/week2-2026.json");
+const nilWatch = readWatchLatest("nil") ?? readWatch("nil/week2-2026.json");
+const athleteHighlight = readWatchLatest("highlight") ?? readWatch("highlight/week1-2026.json");
+const panelBrief = readWatchLatest("panel") ?? readWatch("panel/week2-2026.json");
+const upsetWatch = readWatchLatest("upset");
+const playoffAudit = readWatchLatest("playoff-audit");
+console.log(`Athlete highlight: ${athleteHighlight ? "week " + athleteHighlight.week + " — " + athleteHighlight.athlete_of_the_week.player : "not staged (fail-closed)"}`);
+console.log(`Panel brief: ${panelBrief ? panelBrief.topics.length + " topics" : "not staged (fail-closed)"}`);
+console.log(`Heisman watch: ${heismanWatch ? heismanWatch.contenders.length + " contenders" : "not staged (fail-closed)"}`);
+console.log(`NIL watch: ${nilWatch ? nilWatch.week_deals.length + " deals, " + nilWatch.watch_valuations.length + " valuations" : "not staged (fail-closed)"}`);
+console.log(`Upset watch: ${upsetWatch ? "week " + upsetWatch.week + " — " + upsetWatch.picks.length + " picks" : "not staged (fail-closed)"}`);
+console.log(`Playoff audit: ${playoffAudit ? "week " + playoffAudit.week + " — " + playoffAudit.contenders.length + " contenders" : "not staged (fail-closed)"}`);
+
+/* ------------------------------------------- editorial injury research ----- */
+// data/injury-research/current.json is written by scripts/ingest-injury-research.mjs
+// from the weekly research run. Absent file = nothing published.
+const RESEARCH_PATH = join(projectRoot, "data", "injury-research", "current.json");
+let injuryResearch = { week: null, as_of: null, ledger: [], watch: [] };
+if (existsSync(RESEARCH_PATH)) {
+  try {
+    const raw = JSON.parse(readFileSync(RESEARCH_PATH, "utf8"));
+    injuryResearch = {
+      week: typeof raw.week === "number" ? raw.week : null,
+      as_of: raw.as_of ?? null,
+      ledger: Array.isArray(raw.ledger) ? raw.ledger : [],
+      watch: Array.isArray(raw.watch) ? raw.watch : [],
+    };
+  } catch (error) {
+    console.warn(`injury research present but unreadable — skipping (${error.message})`);
+  }
+} else {
+  console.log("No injury research staged yet — editorial layer ships empty (fail-closed).");
+}
+
+const payload = { teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief, upsetWatch, playoffAudit };
 
 const body = `// GENERATED by scripts/build-dataset.mjs from data/cfb-2026 — do not edit.
 // biome-ignore lint: generated file

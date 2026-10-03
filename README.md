@@ -11,6 +11,21 @@ Two things live here:
 
 ---
 
+## Status — updated 2026-09-28
+
+The repository has moved past the two caveats below. **The application source now lives
+here** under `apps/site` (imported 2026-09-06, closing audit Issue 9), and **the site is
+live**: the twelve release gates in `apps/site/lib/release-readiness.ts` were flipped to
+ready mode with owner sign-off on 2026-09-05/06, `cfbapex.com` now serves the real 2026
+FBS dataset (Route A build-time integration), and crawler gates are open
+(robots `Allow: /`, no `X-Robots-Tag: noindex`, populated sitemap). The deploy lane is
+vinext build -> `wrangler deploy` to the `cfb-apex` Worker (see
+`apps/site/wrangler.deploy.jsonc`); the dataset API remains CI-deployed as the separate
+`cfb-apex-data` Worker. Everything below this banner is retained as the historical
+record of the 28 August 2026 audit state and its remediation bundle.
+
+---
+
 ## The 2026 dataset
 
 `cfbapex.com` currently serves `fixture-pack-2026.07.31` — a fictional universe
@@ -49,7 +64,9 @@ never zero, never "unknown by omission" — so a player with no recruiting ratin
 is "Not listed", not a zero-star recruit. And **every artifact names the source
 documents it came from**, so any figure on the site can be traced back to one.
 
-> **Merging this does not by itself change what `cfbapex.com` renders.** The
+> **Merging this does not by itself change what `cfbapex.com` renders.** *(Superseded
+> 2026-09-06: launch gates were flipped to live mode with owner sign-off; the live site
+> now renders the real dataset.)* The
 > site's source is not in this repository (audit Issue 9, below) and the site is
 > still gated by `DEMO_MODE=true`. [`docs/INTEGRATION.md`](./docs/INTEGRATION.md)
 > has the steps and is direct about which of them are legal decisions rather than
@@ -76,7 +93,8 @@ that needs the local source tree, the Cloudflare dashboard, or a human decision.
 
 ## ⚠️ Read this first — why the fixes are here and not applied in place
 
-**The application source is not in this repository.** When the audit bundle was
+**The application source is not in this repository.** *(Superseded 2026-09-06: the
+source was imported under `apps/site`.)* When the audit bundle was
 written this repository was empty; it now holds the dataset above, but still no
 app code.
 

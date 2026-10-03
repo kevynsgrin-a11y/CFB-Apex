@@ -1,0 +1,149 @@
+{
+ "as_of": "2026-09-20",
+ "week": 3,
+ "athlete_of_the_week": {
+  "player": "Trinidad Chambliss",
+  "team_slug": "ole-miss",
+  "position": "QB",
+  "class": "Sr",
+  "stat_line": "33/48, 363 pass yds, 2 pass TD, 1 INT",
+  "opponent_slug": "lsu",
+  "result": "W 32-24 vs No. 10 LSU (AP)",
+  "why": "Chambliss went 33/48 for 363 pass yds and 2 pass TD against 1 INT to power a 32-24 win over No. 10 LSU (AP). The Sr. Ole Miss QB claims his second board of the season after winning Week 1 honors with 336 yds, 3 pass TD, and a rushing TD in a 41-38 win over No. 24 Louisville.",
+  "video_url": null,
+  "sources": [
+   "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+   "https://www.espn.com/college-football/scoreboard"
+  ],
+  "photo": {
+   "url": "https://a.espncdn.com/i/headshots/college-football/players/full/4911529.png",
+   "alt": "Trinidad Chambliss headshot",
+   "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+  }
+ },
+ "runners_up": [
+  {
+   "player": "Kendrick Raphael",
+   "team_slug": "smu",
+   "position": "RB",
+   "class": "Sr",
+   "stat_line": "24 CAR, 197 RUSH YDS, 3 TD",
+   "opponent_slug": "louisville",
+   "result": "L 41-31 at Louisville",
+   "why": "Raphael racked up 24 CAR for 197 RUSH YDS and 3 TD, but SMU fell 41-31 at Louisville, keeping the Sr. back behind the winner under the team-success criterion.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "photo": {
+    "url": "https://a.espncdn.com/i/headshots/college-football/players/full/4899368.png",
+    "alt": "Kendrick Raphael headshot",
+    "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+   }
+  },
+  {
+   "player": "Malachi Toney",
+   "team_slug": "miami-fl",
+   "position": "WR",
+   "class": "SO",
+   "stat_line": "12 REC, 114 YDS, 1 TD",
+   "opponent_slug": "wake-forest",
+   "result": "W 33-20 vs Wake Forest",
+   "why": "Toney posted 12 REC for 114 YDS and 1 TD in Miami's 33-20 win over Wake Forest, a strong outing that lacked the winner's opponent pedigree.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "photo": {
+    "url": "https://a.espncdn.com/i/headshots/college-football/players/full/5159175.png",
+    "alt": "Malachi Toney headshot",
+    "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+   }
+  },
+  {
+   "player": "Nolan James Jr.",
+   "team_slug": "notre-dame",
+   "position": "RB",
+   "stat_line": "26 CAR, 121 YDS, 1 TD",
+   "opponent_slug": "michigan-state",
+   "result": "W 27-10 vs Michigan State",
+   "why": "James Jr. logged 26 CAR for 121 YDS and 1 TD as Notre Dame won 27-10 over Michigan State, a workhorse day that fell short of the top statistical bar.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "photo": {
+    "url": "https://a.espncdn.com/i/headshots/college-football/players/full/5189515.png",
+    "alt": "Nolan James Jr. headshot",
+    "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+   }
+  },
+  {
+   "player": "Darian Mensah",
+   "team_slug": "miami-fl",
+   "position": "QB",
+   "class": "R-Jr",
+   "stat_line": "30/34, 220 YDS, 3 TD",
+   "opponent_slug": "wake-forest",
+   "result": "W 33-20 vs Wake Forest",
+   "why": "Completed 30 of 34 for 220 yards and three scores in the 33-20 win over Wake Forest.",
+   "video_url": null,
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ],
+   "photo": {
+    "url": "https://a.espncdn.com/i/headshots/college-football/players/full/5121169.png",
+    "alt": "Darian Mensah headshot",
+    "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+   }
+  }
+ ],
+ "criteria_note": "Board applies: (1) statistical dominance versus a legitimate opponent, (2) a performance that decided a consequential game, (3) team success that week. Chambliss led all three tests — the biggest line, against No. 10 LSU (AP), in a win — while Raphael's 197 RUSH YDS came in a loss, dropping him under criterion (3).",
+ "source_engines": "Kimi API (Moonshot kimi-k3) compilation from ESPN Week 3 game-summary leader payloads (finals only); number-verification gate applied; video_url null throughout — no licensed highlight links verified.",
+ "verified_on": "2026-09-21",
+ "verification_note": "All published stat lines re-verified against ESPN game summaries re-pulled 2026-09-21 — no stat corrections posted.",
+ "spotlights": [
+  {
+   "player": "Raylen Wilson",
+   "team_slug": "georgia",
+   "position": "LB",
+   "stat_line": "2.0 sacks",
+   "opponent_slug": "arkansas",
+   "result": "W 45-17 at Arkansas",
+   "why": "Two sacks headlined the defensive day in the 45-17 road win at Arkansas.",
+   "video_url": null,
+   "photo": {
+    "url": "https://a.espncdn.com/i/headshots/college-football/players/full/4871074.png",
+    "alt": "Georgia linebacker Raylen Wilson celebrates a sack against Arkansas",
+    "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+   },
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ]
+  },
+  {
+   "player": "Santana Banner",
+   "team_slug": "missouri",
+   "position": "S",
+   "stat_line": "16 tackles",
+   "opponent_slug": "troy",
+   "result": "W 27-17 vs Troy",
+   "why": "Santana Banner piled up 16 tackles for Missouri against Troy. That production anchored a W 27-17 vs Troy.",
+   "video_url": null,
+   "photo": {
+    "url": "https://a.espncdn.com/i/headshots/college-football/players/full/5121688.png",
+    "alt": "Missouri safety Santana Banner makes a tackle against Troy",
+    "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+   },
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://www.espn.com/college-football/scoreboard"
+   ]
+  }
+ ]
+}

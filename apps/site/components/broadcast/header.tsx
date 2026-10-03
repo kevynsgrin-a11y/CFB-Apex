@@ -19,6 +19,7 @@ const navigation = [
   { label: "Teams", href: "/teams" },
   { label: "Rankings", href: "/rankings" },
   { label: "Portal", href: "/transfer-portal" },
+  { label: "Injuries", href: "/injuries" },
   { label: "Watch", href: "/watch" },
   { label: "Fantasy", href: "/dfs" },
   { label: "No Names", href: "/no-names" },

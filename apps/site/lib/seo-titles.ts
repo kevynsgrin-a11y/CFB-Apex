@@ -52,6 +52,7 @@ export const STATIC_ROOT_TITLES: Record<string, string> = {
   "transfer-portal": "College Football Transfer Portal Board",
   "playoff-predictor": "College Football Playoff Predictor",
   "playoff-bracket": "College Football Playoff Bracket",
+  injuries: "College Football Injury Report",
   "no-names": "The Names Behind the Numbers",
   heisman: "Heisman Trophy Race",
   nil: "NIL Deals & Valuations",

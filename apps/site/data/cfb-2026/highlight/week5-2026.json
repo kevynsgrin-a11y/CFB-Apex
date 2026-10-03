@@ -1,0 +1,51 @@
+{
+ "as_of": "2026-09-28",
+ "week": 5,
+ "source_engines": "Gamecast extraction from the 22 marquee Week 4 games plus the Perplexity verification pass (official school box scores, ESPN game pages, Rotowire, Saturday Down South). Winner criteria: winning side, ranked opponent, verified line.",
+ "athlete_of_the_week": {
+  "player": "Kamario Taylor",
+  "team_slug": "mississippi-state",
+  "position": "QB",
+  "class": "So",
+  "stat_line": "27/38, 360 YDS, 3 TD, 1 INT, 85.1 QBR",
+  "opponent_slug": "missouri",
+  "result": "W 31-24 vs Missouri Tigers",
+  "why": "The sophomore from Macon went 27/38 for 360 yards and 3 touchdowns in the 31-24 win over No. 25 Missouri — Mississippi State's first ranked win of the season and the performance that moved him from 25-1 to +550 on the Heisman board in two weeks. No FBS quarterback threw for 400 yards in Week 4 (closest: Davis Warren, 396 vs Georgia Tech), which makes this the week's cleanest passing performance on a winning side against a ranked opponent.",
+  "video_url": null,
+  "sources": [
+   "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+   "https://cdn.espn.com/core/college-football/boxscore?xhr=1"
+  ],
+  "photo": {
+   "url": "https://a.espncdn.com/i/headshots/college-football/players/full/5177084.png",
+   "alt": "Kamario Taylor headshot",
+   "source": "ESPN public CDN headshot (same pipeline as the site's team logos)"
+  },
+  "bio": "6-4, 230 pounds; Macon, Mississippi (Noxubee County HS). Mississippi State lists him as a sophomore with no redshirt designation — the school roster is the primary source over ESPN's 'FR' snippet.",
+  "verification": "Line verified against the official Missouri box score and ESPN's game page — 27/38, 360 YDS, 3 TD, 1 INT, all five figures aligned (Sept 28 check)."
+ },
+ "runners_up": [
+  {
+   "player": "Julian Sayin",
+   "team_slug": "ohio-state",
+   "stat_line": "27/36, 367 YDS, 4 TD, 0 INT",
+   "result": "W 42-19 vs Illinois",
+   "why": "Four touchdowns without a turnover in a ranked team's blowout — held back only because the opponent is unranked."
+  },
+  {
+   "player": "Keelon Russell",
+   "team_slug": "alabama",
+   "stat_line": "21/27, 365 YDS, 4 TD, 0 INT (400 total yards)",
+   "result": "W 49-18 vs South Carolina",
+   "why": "Accounted for 400 total yards; the passing line alone misses the 400-yard cutoff by 35 yards."
+  },
+  {
+   "player": "Jeffrey Overton Jr.",
+   "team_slug": "virginia-tech",
+   "stat_line": "25 CAR, 209 RUSH YDS, 1 TD",
+   "result": "W 21-14 vs Boston College",
+   "why": "The week's biggest verified rushing day (76-yard go-ahead touchdown), per the Boston College official box score."
+  }
+ ],
+ "pending_research": null
+}

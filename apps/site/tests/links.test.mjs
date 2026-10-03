@@ -13,6 +13,7 @@ const required = [
   "/scores",
   "/schedule",
   "/transfer-portal",
+  "/injuries",
   "/playoff-predictor",
   "/coaching-carousel",
   "/dfs",
