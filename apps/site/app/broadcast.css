@@ -462,3 +462,85 @@ body { overscroll-behavior-y: none; }
     gap: 10px 18px;
   }
 }
+
+/* === GAMEDAY CENTRAL (Week 5 visual additions) === */
+
+/* SP+ duel panel inside the marquee */
+.apex-sp-duel { display: flex; align-items: stretch; gap: 0; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; background: color-mix(in srgb, var(--background) 78%, transparent); backdrop-filter: blur(6px); }
+.apex-sp-duel-head { writing-mode: vertical-rl; transform: rotate(180deg); font-family: var(--display-family); font-size: 11px; font-weight: 700; letter-spacing: 2px; padding: 8px 6px; background: color-mix(in srgb, var(--primary) 16%, transparent); color: var(--foreground); display: flex; align-items: center; }
+.apex-sp-duel-side { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 18px; gap: 2px; }
+.apex-sp-duel-side + .apex-sp-duel-side { border-left: 1px solid var(--border); }
+.apex-sp-duel-side strong { font-family: var(--display-family); font-size: clamp(26px, 3.2vw, 38px); font-weight: 800; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+.apex-sp-duel-side span { font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted-foreground); }
+
+/* Saturday board — four wave columns */
+.apex-gdc-waves { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.apex-gdc-wave { min-width: 0; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in srgb, var(--secondary) 55%, transparent); overflow: hidden; }
+.apex-gdc-wave-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 10px 12px 8px; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--primary) 9%, transparent); }
+.apex-gdc-wave-head strong { font-family: var(--display-family); font-size: 14px; font-weight: 800; letter-spacing: 1.4px; }
+.apex-gdc-wave-head span { font-size: 10px; color: var(--muted-foreground); letter-spacing: .4px; }
+.apex-gdc-wave ul { list-style: none; margin: 0; padding: 6px 0; }
+.apex-gdc-row { display: flex; flex-direction: column; gap: 3px; padding: 8px 12px; border-top: 1px solid color-mix(in srgb, var(--border) 55%, transparent); }
+.apex-gdc-row:first-child { border-top: 0; }
+.apex-gdc-time { font-size: 10px; letter-spacing: 1px; color: var(--muted-foreground); font-variant-numeric: tabular-nums; }
+.apex-gdc-matchup { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 13.5px; line-height: 1.25; flex-wrap: wrap; }
+.apex-gdc-at { color: var(--muted-foreground); font-size: 11px; font-style: italic; }
+.apex-gdc-rank { font-style: normal; font-size: 10px; font-weight: 800; color: var(--primary); border: 1px solid color-mix(in srgb, var(--primary) 45%, transparent); border-radius: 3px; padding: 0 3px; margin-right: 2px; font-variant-numeric: tabular-nums; }
+.apex-gdc-tv { font-family: var(--display-family); font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--foreground); }
+.apex-gdc-tv--none { color: var(--muted-foreground); font-weight: 500; }
+.apex-gdc-empty { padding: 14px 12px; margin: 0; font-size: 12px; color: var(--muted-foreground); }
+.apex-gdc-byes { margin: 14px 0 0; font-size: 12px; color: var(--muted-foreground); }
+.apex-gdc-byes strong { color: var(--foreground); font-family: var(--display-family); letter-spacing: 1px; font-size: 11px; }
+
+/* Finals strip */
+.apex-gdc-finals { display: grid; grid-template-columns: minmax(260px, 1.1fr) 1.6fr; gap: 14px; align-items: stretch; }
+.apex-gdc-upset { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 18px 20px; border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent); border-radius: 6px; background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 14%, transparent), transparent 65%); }
+.apex-gdc-upset-tag { font-family: var(--display-family); font-size: 10px; font-weight: 800; letter-spacing: 2.4px; color: var(--primary); }
+.apex-gdc-upset-matchup { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 15px; font-weight: 600; }
+.apex-gdc-upset-score { font-family: var(--display-family); font-size: clamp(30px, 3.4vw, 42px); font-weight: 800; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+.apex-gdc-winner { color: var(--foreground); }
+.apex-gdc-final-rail { list-style: none; margin: 0; padding: 6px 0; display: flex; flex-direction: column; justify-content: center; }
+.apex-gdc-final-rail li { display: flex; align-items: center; gap: 10px; padding: 7px 4px; border-top: 1px solid color-mix(in srgb, var(--border) 50%, transparent); font-size: 13px; }
+.apex-gdc-final-rail li:first-child { border-top: 0; }
+.apex-gdc-final-rail li > span { color: var(--muted-foreground); font-variant-numeric: tabular-nums; }
+.apex-gdc-final-rail .apex-gdc-winner { color: var(--foreground); font-weight: 600; }
+
+/* Polls vs machines */
+.apex-gdc-pvm { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: stretch; }
+.apex-gdc-pvm-side { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 18px 16px; border: 1px solid var(--border); border-radius: 6px; background: color-mix(in srgb, var(--secondary) 55%, transparent); }
+.apex-gdc-pvm-side[data-side="machines"] { border-color: color-mix(in srgb, var(--primary) 38%, transparent); background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 10%, transparent), transparent 70%); }
+.apex-gdc-pvm-eyebrow { font-family: var(--display-family); font-size: 10px; font-weight: 800; letter-spacing: 2.2px; color: var(--muted-foreground); }
+.apex-gdc-pvm-team { font-family: var(--display-family); font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; letter-spacing: -.5px; }
+.apex-gdc-pvm-side ul { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.apex-gdc-pvm-side li { font-size: 12.5px; color: var(--muted-foreground); font-variant-numeric: tabular-nums; }
+.apex-gdc-pvm-vs { display: flex; align-items: center; padding: 0 4px; font-family: var(--display-family); font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: 1px; color: var(--primary); }
+
+/* Responsive: tablet stacks board waves 2x2; mobile full stack */
+@media (max-width: 1000px) {
+  .apex-gdc-waves { grid-template-columns: repeat(2, 1fr); }
+  .apex-gdc-finals { grid-template-columns: 1fr; }
+  .apex-gdc-pvm { grid-template-columns: 1fr; }
+  .apex-gdc-pvm-vs { justify-content: center; padding: 2px 0; }
+}
+@media (max-width: 620px) {
+  .apex-gdc-waves { grid-template-columns: 1fr; }
+  .apex-sp-duel-side strong { font-size: 24px; }
+}
+
+/* === GDC REFRESH: Lovable-harvested treatment (network colors, upset panel, wave indices) === */
+.apex-gdc-wave-head { gap: 10px; align-items: center; }
+.apex-gdc-wave-index { font-family: var(--display-family); font-size: 22px; font-weight: 800; font-style: italic; color: color-mix(in srgb, var(--primary) 65%, transparent); line-height: 1; }
+.apex-gdc-tv[data-net] { border: 1px solid currentColor; border-radius: 3px; padding: 1px 5px; width: fit-content; }
+.apex-gdc-tv[data-net="ABC"], .apex-gdc-tv[data-net="CBS"] { color: #8fc5ff; }
+.apex-gdc-tv[data-net="ESPN"], .apex-gdc-tv[data-net="ESPN2"], .apex-gdc-tv[data-net="ESPNU"] { color: #ff7a70; }
+.apex-gdc-tv[data-net="FOX"], .apex-gdc-tv[data-net="FS1"] { color: #86b7ff; }
+.apex-gdc-tv[data-net="NBC"], .apex-gdc-tv[data-net="USA"] { color: #ffd866; }
+.apex-gdc-tv[data-net="TNT"] { color: #c9cdd4; }
+.apex-gdc-tv[data-net="BTN"] { color: #b9a0e8; }
+.apex-gdc-tv[data-net="SECN"], .apex-gdc-tv[data-net="ACCN"] { color: #9fd0c0; }
+.apex-gdc-tv[data-net="TheCW"], .apex-gdc-tv[data-net="CW"] { color: #d4c5a0; }
+
+/* Upset-anchor panel — crimson broadcast treatment for the week's biggest final */
+.apex-gdc-upset { border-color: color-mix(in srgb, #e0534a 55%, transparent); background: linear-gradient(135deg, color-mix(in srgb, #e0534a 22%, transparent), color-mix(in srgb, #e0534a 4%, transparent) 65%); }
+.apex-gdc-upset-tag { color: #ff8d84; text-shadow: 0 1px 0 color-mix(in srgb, #000 40%, transparent); }
+.apex-gdc-upset-score { color: var(--foreground); }

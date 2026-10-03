@@ -3,6 +3,9 @@
 import { featuredGame, weekGames, type HomepageData } from "@/lib/homepage";
 import { MarqueeGame } from "./marquee-game";
 import { WeekScoreboard } from "./week-scoreboard";
+import { SaturdayBoard } from "./saturday-board";
+import { FinalsStrip } from "./finals-strip";
+import { PollsVsMachines } from "./polls-vs-machines";
 import {
   FantasyLane,
   GamedayLane,
@@ -60,11 +63,17 @@ export function BroadcastHomepage({
           </p>
         </section>
       )}
+      <SaturdayBoard
+        games={slate}
+        teams={data.teams}
+        pollTables={data.pollTables}
+      />
       <WeekScoreboard
         games={slate}
         teams={data.teams}
         referenceDate={data.referenceDate}
       />
+      <FinalsStrip referenceDate={data.referenceDate} />
       <div className="apex-intelligence-grid">
         <RankingsLane pollTables={data.pollTables} teams={data.teams} />
         <PortalLane
@@ -73,6 +82,11 @@ export function BroadcastHomepage({
           portalAsOf={data.portalAsOf}
         />
       </div>
+      <PollsVsMachines
+        pollTables={data.pollTables}
+        preseasonRatings={data.preseasonRatings}
+        teams={data.teams}
+      />
       <FantasyLane
         fantasyNotes={data.fantasyNotes}
         teams={data.teams}
