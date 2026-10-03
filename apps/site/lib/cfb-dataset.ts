@@ -27,10 +27,10 @@ import type {
   Team,
 } from "./types";
 
-const asOf = "2026-09-05";
+const asOf = "2026-10-03";
 const datasetProvenanceRoot = {
   provider: "CFB Apex 2026 research dataset",
-  sourceDocumentId: "cfb-2026-master-package (data/dist 2026-09-05)",
+  sourceDocumentId: "cfb-2026-master-package (data/dist 2026-10-03)",
   sourceAsOf: asOf,
   fetchedAt: asOf,
   verifiedAt: asOf,
@@ -436,7 +436,7 @@ function broadcastKey(date: string, a: string, b: string) {
 /* ------------------------------------------------ preseason ratings board */
 
 export interface PreseasonRating {
-  sp: { overall: number; rank: number; offense: number; defense: number; source: string } | null;
+  sp: { overall: number; rank: number; offense: number | null; defense: number | null; source: string } | null;
   fpi: { value: number | null; rank: number; source: string } | null;
   wins: { projected: number | null; line: number | null; source: string } | null;
   playoff: { outlet: string; value: string | null; source: string } | null;

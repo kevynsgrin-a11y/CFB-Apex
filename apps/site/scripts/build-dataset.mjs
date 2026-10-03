@@ -45,8 +45,9 @@ const coaching = perTeam("coaching", (doc) => ({
     : null,
 }));
 
-/* Full poll tables: AP and Coaches top 25 plus others receiving votes. */
-const pollsSource = read("polls/2026-preseason.json");
+/* Full poll tables: AP and Coaches top 25 plus others receiving votes.
+   polls/latest.json is the freshest snapshot; the preseason file stays archived. */
+const pollsSource = read("polls/latest.json");
 const polls = (pollsSource.polls ?? []).map((poll) => ({
   poll: poll.poll,
   name: poll.name,
@@ -461,13 +462,18 @@ for (const week of tvDoc.weeks ?? []) {
 }
 tvRows.sort((a, b) => a.date.localeCompare(b.date) || (a.time_et ?? "").localeCompare(b.time_et ?? ""));
 
-/* Preseason ratings (SP+, FPI, win totals, playoff odds as reported). */
+/* Ratings (SP+, FPI, win totals, playoff odds as reported). Prefer the
+   newest ratings file; fall back to the preseason archive. */
+const ratingsPath = existsSync(join(root, "ratings/2026-week5.json"))
+  ? "ratings/2026-week5.json"
+  : "ratings/preseason-2026.json";
+const ratingsAsOfRow = read(ratingsPath).find((row) => row.as_of)?.as_of ?? "2026-09-05";
 const preseasonRatings = {};
-for (const row of read("ratings/preseason-2026.json")) {
+for (const row of read(ratingsPath)) {
   const slug = TV_ALIASES[row.team_slug] ?? row.team_slug;
   preseasonRatings[slug] = {
     sp: row.sp_plus
-      ? { overall: row.sp_plus.overall, rank: row.sp_plus.rank, offense: row.sp_plus.offense, defense: row.sp_plus.defense, source: row.sp_plus.source }
+      ? { overall: row.sp_plus.overall, rank: row.sp_plus.rank, offense: row.sp_plus.offense ?? null, defense: row.sp_plus.defense ?? null, source: row.sp_plus.source }
       : null,
     fpi: row.fpi ? { value: row.fpi.value, rank: row.fpi.rank, source: row.fpi.source } : null,
     wins: row.win_total
@@ -479,6 +485,13 @@ for (const row of read("ratings/preseason-2026.json")) {
     notes: row.notes ?? null,
     as_of: row.as_of,
   };
+}
+/* Every team carries a ratings record; unrated teams are honest nulls so the
+   "not published" rendering never silently drops a team. */
+for (const team of teams) {
+  if (!preseasonRatings[team.slug]) {
+    preseasonRatings[team.slug] = { sp: null, fpi: null, wins: null, playoff: null, notes: null, as_of: ratingsAsOfRow };
+  }
 }
 
 /* Week-1 fantasy/DFS notes: reported roles, usage, availability, and analyst

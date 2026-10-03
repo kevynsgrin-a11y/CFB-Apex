@@ -206,7 +206,7 @@ export function WeekScoreboard({
       </section>
       <p className="apex-data-note">
         Week of {dateLabel(referenceDate)} · All times Eastern · Rankings
-        reflect the AP preseason poll.
+        reflect the latest AP poll (September 27, 2026).
       </p>
     </section>
   );

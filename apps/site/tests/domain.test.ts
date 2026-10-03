@@ -65,9 +65,11 @@ test("preseason ratings cover all 138 with honest nulls, TV times attach to game
     if (rating.playoff?.value) assert.match(rating.playoff.value, /^\d+(\.\d+)?%$/, team.slug);
   }
   const alabama = preseasonRatings.alabama;
-  assert.equal(alabama.sp?.rank, 13);
-  assert.equal(alabama.sp?.overall, 17.6);
-  assert.equal(alabama.playoff?.outlet, "ESPN");
+  assert.equal(alabama.sp?.rank, 6);
+  assert.equal(alabama.sp?.overall, 23.0);
+  const ucla = preseasonRatings.ucla;
+  assert.equal(ucla.playoff?.outlet, "ESPN");
+  assert.equal(ucla.playoff?.value, "32.4%");
 
   const withBroadcast = games.filter((game) => game.broadcast);
   assert.ok(withBroadcast.length >= 140, `expected TV designations, got ${withBroadcast.length}`);

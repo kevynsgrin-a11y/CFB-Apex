@@ -22,6 +22,7 @@ export function RankingsLane({
   teams,
 }: Pick<HomepageData, "pollTables" | "teams">) {
   const poll = pollTables.find((table) => table.poll === "ap");
+  const releaseLabel = poll?.release_date?.match(/[A-Z][a-z]+ \d{1,2}/)?.[0] ?? "Latest";
   const bySlug = new Map(teams.map((team) => [team.slug, team]));
   const rows = [...(poll?.rankings ?? [])]
     .sort((a, b) => a.rank - b.rank)
@@ -38,7 +39,7 @@ export function RankingsLane({
       <div className="apex-rank-board">
         <div className="apex-rank-board-top">
           <strong>AP TOP 25</strong>
-          <span>Preseason · Points</span>
+          <span>{releaseLabel} · Points</span>
         </div>
         {rows.length === 0 && (
           <p className="apex-empty">Rankings not published.</p>
@@ -236,7 +237,7 @@ export function PreseasonLane({
       <LaneHeading
         id="preseason-title"
         eyebrow="BEYOND THE POLL"
-        title="Preseason numbers"
+        title="SP+ & FPI"
         href="/rankings"
         linkLabel="All ratings"
       />

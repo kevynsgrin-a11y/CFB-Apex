@@ -13,10 +13,10 @@ import {
 import { weekGames, type HomepageData } from "./homepage";
 
 const datasetAsOf =
-  [broadcastAsOf, portalAsOf, fantasyNotesAsOf, "2026-09-05"]
+  [broadcastAsOf, portalAsOf, fantasyNotesAsOf, "2026-10-03"]
     .filter((date): date is string => Boolean(date))
     .sort()
-    .at(-1) ?? "2026-09-05";
+    .at(-1) ?? "2026-10-03";
 
 export const homepageData: HomepageData = {
   teams,

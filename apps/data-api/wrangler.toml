@@ -28,14 +28,14 @@ enabled = true
 [vars]
 # Tighten to the site's origins once the front end consumes this API.
 ALLOWED_ORIGINS = "*"
-DATASET_VERSION = "2026.09.05"
+DATASET_VERSION = "2026.10.03"
 
 [env.production]
 name = "cfb-apex-data"
 
 [env.production.vars]
 ALLOWED_ORIGINS = "*"
-DATASET_VERSION = "2026.09.05"
+DATASET_VERSION = "2026.10.03"
 
 [env.production.assets]
 directory = "./public"
@@ -52,7 +52,7 @@ name = "cfb-apex-data-staging"
 
 [env.staging.vars]
 ALLOWED_ORIGINS = "*"
-DATASET_VERSION = "2026.09.05-staging"
+DATASET_VERSION = "2026.10.03-staging"
 
 [env.staging.assets]
 directory = "./public"

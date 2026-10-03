@@ -66,7 +66,7 @@ test("critical product routes render dataset-backed content", async () => {
     ["/games/2026-09-12-oklahoma-at-michigan", /FOX/],
     ["/games/2026-09-12-oklahoma-at-michigan", /12:00 PM ET/],
     ["/teams/alabama", /SP\+/],
-    ["/teams/alabama", /32\.7%/],
+    ["/teams/alabama", /23\.0/],
     ["/playoff-predictor", /You call the Saturdays/],
     ["/coaching-carousel", /Separate the contract/],
     ["/dfs", /Fantasy context, when you ask for it/],

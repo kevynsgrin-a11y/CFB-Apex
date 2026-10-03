@@ -886,9 +886,9 @@ function RankingsPage() {
     return (
       <>
         <PageHeading
-          eyebrow="2026 PRESEASON RATINGS"
+          eyebrow="2026 RATINGS"
           title="SP+ and FPI, as published."
-          description={`Bill Connelly's final preseason SP+ and ESPN's FPI, plus win totals and playoff odds exactly as each outlet reported them${ratingsAsOf ? ` · compiled through ${ratingsAsOf}` : ""}. Blank means the number was not published.`}
+          description={`Bill Connelly's latest SP+ (after Week 4) and ESPN's FPI, plus playoff odds exactly as each outlet reported them${ratingsAsOf ? ` · compiled through ${ratingsAsOf}` : ""}. Blank means the number was not published.`}
         />
         <div className="sticky-tools">
           <fieldset className="filter-chips">
@@ -924,8 +924,8 @@ function RankingsPage() {
                     <td><b>{rating?.sp?.rank}</b></td>
                     <td><a href={`/teams/${team.slug}`}>{team.shortName}</a><small> {team.conference}</small></td>
                     <td>{rating?.sp ? signed(rating.sp.overall) : "—"}</td>
-                    <td>{rating?.sp ? signed(rating.sp.offense - 20) : "—"}</td>
-                    <td>{rating?.sp ? signed(20 - rating.sp.defense) : "—"}</td>
+                    <td>{rating?.sp?.offense != null ? signed(rating.sp.offense - 20) : "—"}</td>
+                    <td>{rating?.sp?.defense != null ? signed(20 - rating.sp.defense) : "—"}</td>
                     <td>{rating?.fpi ? `#${rating.fpi.rank}` : "—"}</td>
                     <td>{rating?.wins?.line != null ? rating.wins.line.toFixed(1) : "—"}</td>
                     <td>{rating?.wins?.projected != null ? rating.wins.projected.toFixed(1) : "—"}</td>
@@ -947,8 +947,8 @@ function RankingsPage() {
                       { label: "FPI", value: rating?.fpi ? `#${rating.fpi.rank}` : "—" },
                     ]}
                     details={[
-                      { label: "Offense", value: rating?.sp ? signed(rating.sp.offense - 20) : "—" },
-                      { label: "Defense", value: rating?.sp ? signed(20 - rating.sp.defense) : "—" },
+                      { label: "Offense", value: rating?.sp?.offense != null ? signed(rating.sp.offense - 20) : "—" },
+                      { label: "Defense", value: rating?.sp?.defense != null ? signed(20 - rating.sp.defense) : "—" },
                       { label: "Win total", value: rating?.wins?.line != null ? rating.wins.line.toFixed(1) : "—" },
                       { label: "Projected wins", value: rating?.wins?.projected != null ? rating.wins.projected.toFixed(1) : "—" },
                       { label: "Playoff odds", value: rating?.playoff ? `${rating.playoff.value} · ${rating.playoff.outlet}` : "—" },
