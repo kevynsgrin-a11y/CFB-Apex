@@ -1,17 +1,27 @@
 /** Calendar dates on the football site are Eastern; instants remain UTC. */
+// Reuse ICU formatters: constructing one for every matchup scan exceeded
+// Cloudflare's startup CPU limit. Bound the cache for long-lived isolates.
+const dateFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit",
+});
+const offsetFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: "America/New_York", timeZoneName: "shortOffset",
+});
+const dateCache = new Map<string, string>();
+
 export function easternDate(value: string): string {
   if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const cached = dateCache.get(value);
+  if (cached !== undefined) return cached;
   const instant = new Date(value);
   if (!Number.isFinite(instant.getTime())) return "";
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/New_York",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(instant);
+  const parts = dateFormatter.formatToParts(instant);
   const part = (type: string) =>
     parts.find((item) => item.type === type)?.value;
-  return `${part("year")}-${part("month")}-${part("day")}`;
+  const result = `${part("year")}-${part("month")}-${part("day")}`;
+  if (dateCache.size >= 4096) dateCache.clear();
+  dateCache.set(value, result);
+  return result;
 }
 
 export function weekStart(value: string): string {
@@ -40,10 +50,7 @@ export function gameKey(date: string, away: string, home: string): string {
 export function easternKickoff(date: string, time: string | null): string {
   if (!time) return `${date}T17:00:00.000Z`; // date-only placeholder; UI says time unpublished
   const probe = new Date(`${date}T12:00:00Z`);
-  const zone = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/New_York",
-    timeZoneName: "shortOffset",
-  })
+  const zone = offsetFormatter
     .formatToParts(probe)
     .find((part) => part.type === "timeZoneName")?.value;
   const offset = Number(zone?.match(/GMT([+-]\d+)/)?.[1] ?? -5);
