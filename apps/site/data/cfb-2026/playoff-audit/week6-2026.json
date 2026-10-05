@@ -1,0 +1,507 @@
+{
+ "as_of": "2026-10-05",
+ "week": 6,
+ "source_engines": "ZCode (GLM) weekly pipeline compilation from the verified Oct 5 snapshot (October 4 AP + AFCA Coaches polls, team records, Week 1–5 finals, site schedules) plus the Gemini P6 research pass (FPI Oct 4 via The Big Lead; Athlon and Dinich/ESPN bracketology Oct 4; FanDuel + BetMGM futures Oct 4–5). Composite = average of AP + Coaches ranks (unranked = 26). Remaining-SOS is a CFB Apex computed metric: average current win percentage of remaining FBS opponents (through Week 5 results), rank 1 = hardest.",
+ "contenders": [
+  {
+   "team_slug": "texas",
+   "record": "4–0",
+   "composite_rank": 1,
+   "remaining_sos": "CFB Apex remaining-SOS rank #38 (avg opponent win pct 0.681 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: 24–23 over ohio state (composite #5); closest call: 24–23 vs ohio state",
+   "tag": "controls_destiny",
+   "week6_game": "@oklahoma — 2026-10-10 (neutral), ABC",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "georgia",
+   "record": "5–0",
+   "composite_rank": 2,
+   "remaining_sos": "CFB Apex remaining-SOS rank #46 (avg opponent win pct 0.657 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 38–14 vs vanderbilt",
+   "tag": "controls_destiny",
+   "week6_game": "@alabama — 2026-10-10, ABC",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "notre-dame",
+   "record": "5–0",
+   "composite_rank": 3,
+   "remaining_sos": "CFB Apex remaining-SOS rank #57 (avg opponent win pct 0.621 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 37–26 vs north carolina",
+   "tag": "controls_destiny",
+   "week6_game": "vs stanford — 2026-10-10, NBC",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "miami-fl",
+   "record": "5–0",
+   "composite_rank": 4,
+   "remaining_sos": "CFB Apex remaining-SOS rank #11 (avg opponent win pct 0.757 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 41–13 vs clemson",
+   "tag": "controls_destiny",
+   "week6_game": "Bye (AP-ranked idle)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "ohio-state",
+   "record": "4–1",
+   "composite_rank": 5,
+   "remaining_sos": "CFB Apex remaining-SOS rank #10 (avg opponent win pct 0.762 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 31–14 over iowa (composite #19); closest call: 31–14 vs iowa",
+   "tag": "win_out_or_out",
+   "week6_game": "vs maryland — 2026-10-10, BTN",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "indiana",
+   "record": "5–0",
+   "composite_rank": 6,
+   "remaining_sos": "CFB Apex remaining-SOS rank #24 (avg opponent win pct 0.719 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 29–23 vs northwestern",
+   "tag": "controls_destiny",
+   "week6_game": "@nebraska — 2026-10-10, FOX",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "alabama",
+   "record": "5–0",
+   "composite_rank": 7,
+   "remaining_sos": "CFB Apex remaining-SOS rank #19 (avg opponent win pct 0.733 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: 56–23 over mississippi state (composite #18); closest call: 50–36 vs florida state",
+   "tag": "controls_destiny",
+   "week6_game": "vs georgia — 2026-10-10, ABC",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "byu",
+   "record": "4–0",
+   "composite_rank": 8,
+   "remaining_sos": "CFB Apex remaining-SOS rank #22 (avg opponent win pct 0.725 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 17–10 vs tcu",
+   "tag": "controls_destiny",
+   "week6_game": "vs iowa state — 2026-10-09, ESPN",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "ole-miss",
+   "record": "3–1",
+   "composite_rank": 9,
+   "remaining_sos": "CFB Apex remaining-SOS rank #12 (avg opponent win pct 0.757 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 32–24 over lsu (composite #10); closest call: 41–38 vs louisville",
+   "tag": "win_out_or_out",
+   "week6_game": "@vanderbilt — 2026-10-10, ESPN",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "lsu",
+   "record": "4–1",
+   "composite_rank": 10,
+   "remaining_sos": "CFB Apex remaining-SOS rank #5 (avg opponent win pct 0.771 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 35–6 vs texas am",
+   "tag": "win_out_or_out",
+   "week6_game": "@kentucky — 2026-10-10, ESPN",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "texas-tech",
+   "record": "5–0",
+   "composite_rank": 11,
+   "remaining_sos": "CFB Apex remaining-SOS rank #44 (avg opponent win pct 0.664 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: 28–26 over houston (composite #20); closest call: 28–26 vs houston",
+   "tag": "win_out_or_out",
+   "week6_game": "Bye (AP-ranked idle)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "utah",
+   "record": "4–0",
+   "composite_rank": 12,
+   "remaining_sos": "CFB Apex remaining-SOS rank #45 (avg opponent win pct 0.662 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 31–17 vs iowa state",
+   "tag": "win_out_or_out",
+   "week6_game": "vs kansas — 2026-10-10, ESPN",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "oregon",
+   "record": "3–1",
+   "composite_rank": 13,
+   "remaining_sos": "CFB Apex remaining-SOS rank #32 (avg opponent win pct 0.694 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 41–27 over usc (composite #17); closest call: 34–27 vs boise state",
+   "tag": "needs_help",
+   "week6_game": "vs ucla — 2026-10-10, CBS",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "tennessee",
+   "record": "4–1",
+   "composite_rank": 14,
+   "remaining_sos": "CFB Apex remaining-SOS rank #47 (avg opponent win pct 0.657 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 24–14 vs auburn",
+   "tag": "needs_help",
+   "week6_game": "@arkansas — 2026-10-10, SEC Network",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "missouri",
+   "record": "4–1",
+   "composite_rank": 15,
+   "remaining_sos": "CFB Apex remaining-SOS rank #23 (avg opponent win pct 0.721 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 45–17 over florida (composite #16); closest call: 27–17 vs troy",
+   "tag": "needs_help",
+   "week6_game": "vs texas am — 2026-10-10, ABC",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "florida",
+   "record": "4–1",
+   "composite_rank": 16,
+   "remaining_sos": "CFB Apex remaining-SOS rank #31 (avg opponent win pct 0.700 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 52–28 over ole miss (composite #9); closest call: 44–39 vs auburn",
+   "tag": "needs_help",
+   "week6_game": "vs south carolina — 2026-10-10, SEC Network",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "usc",
+   "record": "5–1",
+   "composite_rank": 17,
+   "remaining_sos": "CFB Apex remaining-SOS rank #6 (avg opponent win pct 0.767 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 25–21 vs washington",
+   "tag": "needs_help",
+   "week6_game": "@penn state — 2026-10-10, NBC",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "mississippi-state",
+   "record": "4–1",
+   "composite_rank": 18,
+   "remaining_sos": "CFB Apex remaining-SOS rank #28 (avg opponent win pct 0.708 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 31–24 over missouri (composite #15); closest call: 41–34 vs south carolina",
+   "tag": "needs_help",
+   "week6_game": "Bye (AP-ranked idle)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "iowa",
+   "record": "4–1",
+   "composite_rank": 19,
+   "remaining_sos": "CFB Apex remaining-SOS rank #39 (avg opponent win pct 0.679 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 20–19 vs michigan",
+   "tag": "needs_help",
+   "week6_game": "@washington — 2026-10-09",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "houston",
+   "record": "4–1",
+   "composite_rank": 20,
+   "remaining_sos": "CFB Apex remaining-SOS rank #20 (avg opponent win pct 0.729 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 27–17 vs ucf",
+   "tag": "needs_help",
+   "week6_game": "@kansas state — 2026-10-10, FOX",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "ucla",
+   "record": "4–0",
+   "composite_rank": 21,
+   "remaining_sos": "CFB Apex remaining-SOS rank #61 (avg opponent win pct 0.604 through Week 5)",
+   "losses_that_end_case": 2,
+   "resume_state": "Best win: none over a ranked team; closest call: 52–38 vs purdue",
+   "tag": "win_out_or_out",
+   "week6_game": "@oregon — 2026-10-10, CBS",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "oklahoma-state",
+   "record": "3–1",
+   "composite_rank": 22,
+   "remaining_sos": "CFB Apex remaining-SOS rank #52 (avg opponent win pct 0.644 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: 39–31 over oregon (composite #13); closest call: 39–31 vs oregon",
+   "tag": "needs_help",
+   "week6_game": "vs ucf — 2026-10-10, ESPN2",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "smu",
+   "record": "4–1",
+   "composite_rank": 23,
+   "remaining_sos": "CFB Apex remaining-SOS rank #53 (avg opponent win pct 0.643 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 27–24 vs florida state",
+   "tag": "needs_help",
+   "week6_game": "Bye (AP-ranked idle)",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  },
+  {
+   "team_slug": "boise-state",
+   "record": "4–1",
+   "composite_rank": 24,
+   "remaining_sos": "CFB Apex remaining-SOS rank #107 (avg opponent win pct 0.467 through Week 5)",
+   "losses_that_end_case": 1,
+   "resume_state": "Best win: none over a ranked team; closest call: 38–20 vs memphis",
+   "tag": "needs_help",
+   "week6_game": "@fresno state — 2026-10-10, CW",
+   "sources": [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "CFB Hub schedules dataset",
+    "Gemini P6 research pass (content/research/P6-playoff.md)"
+   ]
+  }
+ ],
+ "storylines": {
+  "mover": "missouri-tigers swung the weekend: a 45–17 dismantling of then-No. 8 Florida in Columbia lifted the Tigers AP 25→14 and crashed Florida's title price from +2000 to +3500 at FanDuel — while setting up next week's former-flavor showdown with Texas A&M.",
+  "watch_next_week": "georgia-bulldogs (#2 composite) at alabama-crimson-tide (#6) in Tuscaloosa, Sat 7:30 PM ET on ABC — College GameDay site, the first meeting of the season between top-six composite teams. The loser's path reroutes through the SEC title game.",
+  "weaker_than_record": "pittsburgh-panthers are 5–0 and ranked for the first time since 2022, but the anchor is gone: QB Mason Heintschel (13 TD, 1 INT) tore his ACL on Oct 2 and fifth-year transfer Holden Geriner makes his first start vs North Carolina. The composite rank (25) already prices the downgrade.",
+  "conference_notes": "SEC: Florida's 45–17 loss at Missouri narrows the league's realistic bid ceiling behind Texas, Georgia, and Alabama (Dinich still projects six SEC bids — the head-to-head math gets hostile from here). Big Ten: Ohio State's 31–14 win at Iowa re-established the Buckeyes as the league's team to beat; Indiana (5–0, defending champion) keeps winning without style questions being asked yet. Big 12: three unbeatens — BYU, Texas Tech, idle Utah — none ranked above No. 9 composite; Iowa State rebounded with a 45–42 shootout win over West Virginia. ACC: Miami's 41–13 demolition of Clemson plus Pitt's QB loss makes the Hurricanes a prohibitive favorite for the ACC's automatic bye; SMU (4–1) is the primary challenger. Group of 5: North Dakota State — 5–0 in its first FBS season after a 28–0 shutout of Wyoming — is positioned to challenge Boise State for the Mountain West crown and the G5's automatic bid."
+ },
+ "outside_reference": {
+  "fpi": {
+   "as_of": "2026-10-04",
+   "top_10": [
+    "Ohio State",
+    "Georgia",
+    "Notre Dame",
+    "Texas",
+    "Miami (FL)",
+    "Alabama",
+    "Indiana",
+    "LSU",
+    "Oregon",
+    "Tennessee"
+   ],
+   "note": "ESPN FPI as reported by The Big Lead (Josh Sanchez, Oct 4, 2026). FPI remaining-SOS top five was not published in the syndicated update; isolated figures: Miami 38th, Notre Dame 51st, Louisville 61st (Yardbarker/247Sports).",
+   "source": "https://www.thebiglead.com/updated-espn-fpi-college-football-top-25-rankings-after-week-5/"
+  },
+  "bracket_projections": [
+   {
+    "outlet": "Athlon Sports",
+    "date": "2026-10-04",
+    "byes": [
+     "Texas",
+     "Georgia",
+     "Notre Dame",
+     "Indiana"
+    ],
+    "field_12": "Texas, Georgia, Notre Dame, Indiana, Ohio State, Miami, Alabama, Ole Miss, LSU, Oregon, BYU, Boise State",
+    "note": "Straight-seeding model (ignores conference-champion bye bylaws); Boise State takes the fifth-champion bid at No. 12; Florida eliminated.",
+    "source": "https://athlonsports.com/college-football/2026-bowl-projections-after-week-5-sec-chaos-shakes-up-playoff-field"
+   },
+   {
+    "outlet": "Heather Dinich / ESPN",
+    "date": "2026-10-04",
+    "byes": [
+     "Texas",
+     "Ohio State",
+     "Georgia",
+     "Miami (FL)"
+    ],
+    "field_12": "Texas, Ohio State, Georgia, Miami, Alabama, Notre Dame, Indiana, BYU, Florida, Ole Miss, LSU, Oregon",
+    "note": "Applies conference-champion bye bylaws: independent Notre Dame seeded No. 6 (first-round campus game); six SEC bids with Florida retained at No. 9 on head-to-head chains.",
+    "source": "https://www.espn.com/college-football/story/_/id/50091118/projecting-2026-college-football-playoff-top-12-week-5"
+   }
+  ],
+  "national_championship_odds": [
+   {
+    "team": "Ohio State",
+    "fanduel": "+400/+410",
+    "betmgm": "+450",
+    "consensus": "+400 to +450"
+   },
+   {
+    "team": "Notre Dame",
+    "fanduel": "+550",
+    "betmgm": "+550",
+    "consensus": "+550"
+   },
+   {
+    "team": "Georgia",
+    "fanduel": "+550",
+    "betmgm": "+550",
+    "consensus": "+550"
+   },
+   {
+    "team": "Texas",
+    "fanduel": "+700",
+    "betmgm": "+550",
+    "consensus": "+550 to +700"
+   },
+   {
+    "team": "Miami (FL)",
+    "fanduel": "+800",
+    "betmgm": "+700",
+    "consensus": "+700 to +800"
+   },
+   {
+    "team": "Alabama",
+    "fanduel": "+900",
+    "betmgm": "+1200",
+    "consensus": "+900 to +1200"
+   },
+   {
+    "team": "Indiana",
+    "fanduel": "+1000",
+    "betmgm": "+900",
+    "consensus": "+900 to +1000"
+   },
+   {
+    "team": "LSU",
+    "fanduel": "+1600",
+    "betmgm": "+1200",
+    "consensus": "+1200 to +1600"
+   },
+   {
+    "team": "Oregon",
+    "fanduel": "+2200",
+    "betmgm": "+2000",
+    "consensus": "+2000 to +2200"
+   },
+   {
+    "team": "Florida",
+    "fanduel": "+3500",
+    "betmgm": "+3000",
+    "consensus": "+3000 to +3500"
+   }
+  ],
+  "odds_note": "FanDuel (Oct 4–5, 2026, FanDuel Research) and BetMGM via VegasInsider composite (Oct 4, 2026). Florida tumbled from +2000 to +3500 at FanDuel after being outgained 560–302 at Missouri."
+ }
+}

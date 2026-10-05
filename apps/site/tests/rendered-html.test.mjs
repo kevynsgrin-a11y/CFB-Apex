@@ -91,7 +91,8 @@ test("critical product routes render dataset-backed content", async () => {
     ["/api/injuries", /source/],
     ["/injuries", /The injury report, on the record/],
     ["/injuries", /LONG-TERM LEDGER/],
-    ["/injuries", /report not yet published/],
+    ["/injuries", /Research as of/],
+    ["/injuries", /Heintschel/],
     ["/api/injuries", /"source": ?"ESPN college football injuries feed/],
     ["/watch", /televised games/],
     ["/watch", /WFFN/],
@@ -184,6 +185,7 @@ test("audit week 6: forbidden stale strings never ship; verified additions rende
     /No change published/,
     /\bmiami fl\b/i,
     /Live standings from ESPN, refreshed on every build/,
+    /refreshes live on every page load/,
   ];
   const pages = await Promise.all(
     [
@@ -228,7 +230,11 @@ test("audit week 6: forbidden stale strings never ship; verified additions rende
   assert.match(byPath.get("/rankings") ?? "", /NEW/);
   assert.match(byPath.get("/rankings") ?? "", /Sun Belt/);
   assert.match(byPath.get("/rankings") ?? "", /dropped out/);
-  assert.match(byPath.get("/injuries") ?? "", /last editorial update/);
+  // The Week 6 report shipped Oct 5: the staleness banner is gone and the
+  // sourced desk (ledger + watch) renders instead of the collapsed table.
+  assert.match(byPath.get("/injuries") ?? "", /Research as of 2026-10-05/); // collapsed-text match
+  assert.match(byPath.get("/injuries") ?? "", /Heintschel/);
+  assert.doesNotMatch(byPath.get("/injuries") ?? "", /report not yet published/);
   assert.match(byPath.get("/data-sources") ?? "", /VERIFIED SNAPSHOT/);
   assert.match(byPath.get("/data-sources") ?? "", /Open holds/);
 });

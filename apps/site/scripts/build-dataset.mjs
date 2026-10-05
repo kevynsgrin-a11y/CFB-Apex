@@ -475,9 +475,8 @@ tvRows.sort((a, b) => a.date.localeCompare(b.date) || (a.time_et ?? "").localeCo
 
 /* Ratings (SP+, FPI, win totals, playoff odds as reported). Prefer the
    newest ratings file; fall back to the preseason archive. */
-const ratingsPath = existsSync(join(root, "ratings/2026-week5.json"))
-  ? "ratings/2026-week5.json"
-  : "ratings/preseason-2026.json";
+const ratingsFiles = readdirSync(join(root, "ratings")).filter((f) => /^2026-week\d+\.json$/.test(f)).sort((a, b) => parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]));
+const ratingsPath = ratingsFiles.length ? `ratings/${ratingsFiles[ratingsFiles.length - 1]}` : "ratings/preseason-2026.json";
 const ratingsAsOfRow = read(ratingsPath).find((row) => row.as_of)?.as_of ?? "2026-09-05";
 const preseasonRatings = {};
 for (const row of read(ratingsPath)) {
