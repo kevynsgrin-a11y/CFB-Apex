@@ -99,8 +99,9 @@ export function PollsVsMachines({
         />
       </div>
       <p className="apex-data-note">
-        October 4 polls compared with retained SP+ &amp; FPI after Week 4 ·
-        AP/Coaches polls released Sept 27.
+        Published polls released {ap?.release_date ?? "Not published"} · Retained
+        SP+ &amp; FPI snapshot {preseasonRatings[spTop]?.as_of ?? "Not published"}.
+        Current-week ratings refresh not verified.
       </p>
     </section>
   );
