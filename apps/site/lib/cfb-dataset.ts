@@ -35,15 +35,66 @@ export interface CurrentMetrics {
   verified_at: string;
   categories: Array<{ name: string; unit: string; rows: Array<{ name: string; team: string; value: number }> }>;
 }
+export interface BroadcastEventRow {
+  type: string;
+  game_provider_id: string;
+  site: string;
+  date: string;
+  network: string | null;
+  announced: string | null;
+  badge: string;
+  note: string | null;
+  sources: string[];
+}
+export interface StorylineRow {
+  id: string;
+  headline: string;
+  body: string;
+  game_provider_id: string | null;
+  sources: string[];
+}
+interface PollNoteMove { team: string; team_slug: string; from: number; to: number; move: number }
+interface PollGapSide { team: string; team_slug: string; ap: number | null; coaches: number | null; ap_points?: number | null; coaches_points?: number | null }
 interface VerifiedRefresh {
+  week?: number;
+  polls?: Array<{ poll: string; name: string; release_date: string }>;
   reference_date: string;
   requested_cutoff: string;
   retrieved_at: string;
   teamRecords: Record<string, string>;
   metrics: CurrentMetrics;
+  playedGames?: unknown[];
   scheduledGames: Array<{ provider_id: string; source_url: string; kickoff_utc: string; week: number; date: string; away: string; home: string; tv: string | null; time_et: string; site: string | null; neutral_site: boolean }>;
+  excludedGames?: Array<{ provider_id: string; name: string; reason: string; date: string; espn_conference_ids?: { home: number; away: number } }>;
+  source_urls?: string[];
+  holds?: string[];
+  audit_applied_at?: string;
+  broadcast_events?: BroadcastEventRow[];
+  storylines?: StorylineRow[];
+  ranked_matchups?: Array<{ game_id: string; matchup: string; polls: string[] }>;
+  poll_notes?: {
+    as_of: string;
+    movers_ap: PollNoteMove[];
+    debuts_ap: Array<{ team: string; team_slug: string; rank: number }>;
+    dropped_out: { ap: Array<{ team: string; team_slug: string; others_points: number | null }>; coaches: Array<{ team: string; team_slug: string; others_points: number | null }> };
+    poll_gaps: { ap_only: PollGapSide[]; coaches_only: PollGapSide[]; biggest_splits: PollGapSide[] };
+    sources: string[];
+  };
+  retainedBaseline?: { conferenceStandings: ConferenceStanding[]; espnInjuries: { asOf: string | null; entries: unknown[] } | null; as_of: string; note: string };
 }
 export const verifiedRefresh = (bundle as unknown as { refreshData?: VerifiedRefresh }).refreshData ?? null;
+export const broadcastEvents = verifiedRefresh?.broadcast_events ?? [];
+export const refreshStorylines = verifiedRefresh?.storylines ?? [];
+/** Match a site Game to a verified broadcast event (e.g. College GameDay) by date + team pair. */
+export function broadcastEventForGame(game: Pick<Game, "date" | "awayTeamId" | "homeTeamId">): BroadcastEventRow | null {
+  for (const event of broadcastEvents) {
+    if (easternDate(game.date) !== event.date) continue;
+    const row = verifiedRefresh?.scheduledGames.find((g) => g.provider_id === event.game_provider_id);
+    if (!row) continue;
+    if ([row.away, row.home].sort().join(":") === [game.awayTeamId, game.homeTeamId].sort().join(":")) return event;
+  }
+  return null;
+}
 const datasetProvenanceRoot = {
   provider: "CFB Apex 2026 research dataset",
   sourceDocumentId: "cfb-2026-master-package (data/dist 2026-10-03)",
@@ -978,6 +1029,7 @@ export interface ConferenceStandingRow {
   l: string;
   t: string;
   pct: string;
+  overall?: string | null;
 }
 export interface ConferenceStanding {
   slug: string;
@@ -987,6 +1039,7 @@ export interface ConferenceStanding {
 }
 export const conferenceStandings = (bundle.conferenceStandings ?? []) as ConferenceStanding[];
 export const pollsStatusNote = (bundle.pollsStatus as string | null) ?? null;
+export const sosAsOf = (bundle.sosAsOf as string | null) ?? null;
 
 /* -------------------------------------------------- coaching staff & players */
 
@@ -1062,9 +1115,9 @@ export const providerHealth: ProviderHealth[] = [
     label: "CFB Apex 2026 research dataset",
     mode: "production",
     status: "operational",
-    lastSuccess: asOf,
-    cadence: "Per research package release",
-    note: "Vendored at build time from data/dist (138 FBS teams, schedules, polls, coaching, SOS, week-0 results).",
+    lastSuccess: verifiedRefresh?.retrieved_at.slice(0, 10) ?? asOf,
+    cadence: "Per verified snapshot release",
+    note: `Vendored at build time (138 FBS teams, schedules, polls, coaching, SOS, season results). Current snapshot: week ${verifiedRefresh?.week ?? "—"} retrieved ${verifiedRefresh?.retrieved_at ?? asOf}.`,
   },
   {
     id: "production-sports",
@@ -1073,7 +1126,7 @@ export const providerHealth: ProviderHealth[] = [
     status: "not_configured",
     lastSuccess: null,
     cadence: "Not applicable",
-    note: "No live in-season provider is wired; scores update with each dataset release.",
+    note: "No live in-season provider is wired; scores update with each verified snapshot release (see the manifest above for the current one).",
   },
 ];
 

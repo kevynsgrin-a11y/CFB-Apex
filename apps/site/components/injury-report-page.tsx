@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { CalendarClock, RefreshCw, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import type { BroadcastTeam } from "@/lib/homepage";
 import { DataBoardHero, DataBoardSummary } from "./data-board-primitives";
 import {
-  INJURY_CADENCE,
   INJURY_METHOD,
   type EspnInjuryEntry,
   type InjuryStatus,
@@ -15,18 +14,8 @@ import {
   espnWatchEntries,
   injuryResearch,
   likelihoodFromPractice,
-  nextInjurySlot,
 } from "@/lib/injury-report";
-
-const WEEKDAY_LABEL = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-function formatSlotTime(minuteOfDay: number): string {
-  const hours24 = Math.floor(minuteOfDay / 60);
-  const minutes = minuteOfDay % 60;
-  const ampm = hours24 >= 12 ? "PM" : "AM";
-  const hours12 = hours24 % 12 === 0 ? 12 : hours24 % 12;
-  return `${hours12}:${String(minutes).padStart(2, "0")} ${ampm} PT`;
-}
+import { verifiedRefresh } from "@/lib/cfb-dataset";
 
 function StatusPill({ status }: { status: InjuryStatus }) {
   const cls =
@@ -184,8 +173,13 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
     );
   }, [baseWatch, teamFilter]);
 
-  const next = nextInjurySlot();
   const researchLive = injuryResearch.watch.length > 0 || injuryResearch.ledger.length > 0;
+  // The editorial layer is stale when it predates the dataset's reference
+  // week — its rows describe games that have already been played.
+  const researchStale =
+    researchLive && injuryResearch.asOf != null && verifiedRefresh != null
+      ? injuryResearch.asOf < verifiedRefresh.reference_date
+      : false;
 
   return (
     <div className="db-page inj-page">
@@ -193,12 +187,6 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
         eyebrow="Injury desk · Verified weekly"
         title="The injury report, on the record."
         description="A long-term ledger of every college player out for the season or more than two weeks, plus a week-to-week watch with verified practice status and likelihood to play — graded on beat reporting, team releases, and verified player accounts."
-        action={
-          <a className="db-hero-link" href="#inj-cadence">
-            Publishing schedule
-            <CalendarClock size={16} aria-hidden="true" />
-          </a>
-        }
       />
       <DataBoardSummary
         label="Injury desk summary"
@@ -212,38 +200,16 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
         ]}
       />
 
-      <section className="apex-container db-section inj-cadence" id="inj-cadence" aria-labelledby="inj-cadence-title">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">PUBLISHING CADENCE</span>
-            <h2 id="inj-cadence-title">When this board updates</h2>
-          </div>
+      {researchStale ? (
+        <div className="apex-container inj-stale-banner" role="status">
+          <strong>
+            Week {verifiedRefresh?.week} report not yet published; last editorial update{" "}
+            {injuryResearch.asOf}.
+          </strong>{" "}
+          The watch calls below are from that earlier report and describe games that have already
+          been played — treat them as a sample of the desk&apos;s format, not current availability.
         </div>
-        <div className="inj-cadence-next">
-          <CalendarClock size={18} aria-hidden="true" />
-          <div>
-            <strong>Next scheduled update: {next.slot.label}</strong>
-            <span>
-              {WEEKDAY_LABEL[next.at.getDay()]} ·{" "}
-              {next.at.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })} PT — {next.slot.scope}
-            </span>
-          </div>
-        </div>
-        <div className="inj-cadence-grid">
-          {INJURY_CADENCE.map((slot) => (
-            <article key={slot.id} className={slot.id === next.slot.id ? "inj-cadence-slot is-next" : "inj-cadence-slot"}>
-              <span className="db-eyebrow">{WEEKDAY_LABEL[slot.weekday]}</span>
-              <strong>{formatSlotTime(slot.minuteOfDay)}</strong>
-              <span>{slot.label}</span>
-              <p>{slot.scope}</p>
-            </article>
-          ))}
-        </div>
-        <p className="apex-data-note">
-          <RefreshCw size={12} aria-hidden="true" /> The ESPN base layer refreshes live on every page load; the
-          editorial layer (practice status, likelihood, sentiment) publishes on the slots above.
-        </p>
-      </section>
+      ) : null}
 
       <section className="apex-container db-section" aria-labelledby="inj-ledger-title">
         <div className="section-heading">
@@ -327,7 +293,14 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
             <h2 id="inj-watch-title">Game-time decisions, graded</h2>
           </div>
         </div>
-        {researchLive ? (
+        {researchStale ? (
+          <p className="inj-watch-note">
+            Editorial watch calls (practice participation, likelihood with confidence, sentiment from beat
+            reports and verified accounts) publish with the weekly research. The current research file is from{" "}
+            {injuryResearch.asOf} (Week {injuryResearch.week}); the next report publishes when the desk is
+            staffed for it — no schedule is promised until then.
+          </p>
+        ) : researchLive ? (
           <p className="inj-watch-note">{INJURY_METHOD.sentiment}</p>
         ) : (
           <p className="inj-watch-note">
@@ -337,6 +310,12 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
           </p>
         )}
         {watchRows.length ? (
+          <details className="inj-watch-details" open={!researchStale}>
+            <summary>
+              {researchStale
+                ? `Show the Week ${injuryResearch.week} watch table (${watchRows.length} rows, last editorial update ${injuryResearch.asOf})`
+                : `Watch table — ${watchRows.length} graded rows`}
+            </summary>
           <div className="db-table-wrap db-desktop-data-table">
             <table className="db-table inj-table inj-table--watch">
               <thead>
@@ -393,6 +372,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
               </tbody>
             </table>
           </div>
+          </details>
         ) : (
           <p className="db-empty">No week-to-week entries published{teamFilter ? " for this team" : ""}.</p>
         )}

@@ -16,12 +16,18 @@ export function MarqueeGame({
   away,
   home,
   venue,
+  gameday,
 }: {
   game: BroadcastGame;
   away: BroadcastTeam;
   home: BroadcastTeam;
   venue?: string;
+  gameday?: { badge: string; note: string | null } | null;
 }) {
+  const spRow = preseasonRatings[away.slug]?.sp ? preseasonRatings[away.slug] : preseasonRatings[home.slug];
+  const spAsOf = spRow?.as_of
+    ? new Date(`${spRow.as_of}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric" })
+    : null;
   return (
     <section
       className="apex-marquee apex-enter"
@@ -44,6 +50,9 @@ export function MarqueeGame({
               <Radio size={13} aria-hidden="true" />
               GAME OF THE WEEK
             </BroadcastBadge>
+            {gameday ? (
+              <BroadcastBadge tone="gold">{gameday.badge}</BroadcastBadge>
+            ) : null}
             <span>{game.neutralSite ? "NEUTRAL SITE" : "MARQUEE MATCHUP"}</span>
           </div>
           <h2 id="marquee-title" className="text-balance">
@@ -105,7 +114,7 @@ export function MarqueeGame({
           ))}
         </div>
         <div className="apex-sp-duel">
-          <span className="apex-sp-duel-head">SP+ CONTRAST</span>
+          <span className="apex-sp-duel-head">SP+ CONTRAST{spAsOf ? ` · AS OF ${spAsOf}` : ""}</span>
           {[away, home].map((team) => {
             const sp = preseasonRatings[team.slug]?.sp;
             return (

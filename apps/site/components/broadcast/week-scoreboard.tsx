@@ -10,6 +10,7 @@ import {
   type BroadcastTeam,
 } from "@/lib/homepage";
 import { BroadcastBadge, LaneHeading, TeamMark } from "./primitives";
+import { broadcastEventForGame } from "@/lib/cfb-dataset";
 import { easternDate, weekStart } from "@/lib/game-calendar";
 import {
   GameActionSheet,
@@ -28,23 +29,34 @@ function WeekGameCard({
 }) {
   const actions = useGameActionSheet();
   const hasScore = game.status === "final" || game.status === "live";
-  const gameLabel = `${away.shortName} at ${home.shortName}`;
+  const gameLabel = game.neutralSite
+    ? `${away.shortName} vs ${home.shortName}`
+    : `${away.shortName} at ${home.shortName}`;
+  const gameday = broadcastEventForGame(game);
+  const rankedBoth = away.rank != null && home.rank != null;
 
   return (
     <>
       <article
-        className="apex-game-card apex-game-card--actions"
+        className={`apex-game-card apex-game-card--actions${rankedBoth ? " apex-game-card--ranked" : ""}${gameday ? " apex-game-card--gameday" : ""}`}
         {...actions.longPressProps}
       >
         <a className="apex-game-card__link" href={`/games/${game.id}`}>
           <div className="apex-game-card-main">
             <div className="apex-game-card-top">
-              <span>{dateLabel(game.date)}</span>
-              <BroadcastBadge
-                tone={game.status === "live" ? "cyan" : "neutral"}
-              >
-                {hasScore ? game.status : game.broadcast || "TV: Not published"}
-              </BroadcastBadge>
+              <span>
+                {dateLabel(game.date)}
+                {game.neutralSite && game.venue ? " · Neutral" : null}
+              </span>
+              {gameday ? (
+                <BroadcastBadge tone="gold">{gameday.badge}</BroadcastBadge>
+              ) : (
+                <BroadcastBadge
+                  tone={game.status === "live" ? "cyan" : "neutral"}
+                >
+                  {hasScore ? game.status : game.broadcast || "TV: Not published"}
+                </BroadcastBadge>
+              )}
             </div>
             {[away, home].map((team, index) => (
               <div className="apex-card-team" key={team.slug}>
@@ -67,6 +79,9 @@ function WeekGameCard({
           </div>
           <div className="apex-game-card-bottom">
             <span>
+              {game.neutralSite && game.venue
+                ? `${game.venue} (neutral) · `
+                : ""}
               {hasScore
                 ? game.statusDetail || game.status
                 : kickoffTime(game) === "Not published"

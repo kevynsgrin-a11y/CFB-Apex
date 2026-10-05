@@ -25,3 +25,11 @@
 - Poll records are October 4 release snapshots; current team records are separate provider fields. Two programs without a published record remain “Not published.”
 - Current Week 6 SP+, FPI, same-minute sportsbook odds, and a complete availability ledger were not verified. Retained modules keep their dates.
 - Production publish credentials are unavailable in the working session. A tested source patch is not a production release.
+
+## October 5, 2026 audit-correction assumptions
+
+- The audit's claim set was re-verified independently against ESPN endpoints on October 5: 58 FBS-vs-FBS games for October 6–10, both restored games' kickoffs/TV/venues, October 4 poll rows, others-receiving-votes, and dropouts all matched.
+- College GameDay (Tuscaloosa, Oct 10) is confirmed by the show's October 3 announcement (per On3/Saturday Down South, as cited in the audit) and the public GameDay location listing; the air-time window is single-outlet and is NOT printed.
+- Standings rows are ESPN league records with the overall record shown beside them; the ESPN injury base retains its September 29 cutoff and is labeled as such.
+- The editorial injury layer remains Week 2 (September 9): the page now says so in a banner and collapses its watch table instead of implying live refresh.
+- Fantasy notes remain Week 1 (September 7) and are retitled accordingly.

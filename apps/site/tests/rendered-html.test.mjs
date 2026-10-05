@@ -91,7 +91,7 @@ test("critical product routes render dataset-backed content", async () => {
     ["/api/injuries", /source/],
     ["/injuries", /The injury report, on the record/],
     ["/injuries", /LONG-TERM LEDGER/],
-    ["/injuries", /Next scheduled update/],
+    ["/injuries", /report not yet published/],
     ["/api/injuries", /"source": ?"ESPN college football injuries feed/],
     ["/watch", /televised games/],
     ["/watch", /WFFN/],
@@ -171,4 +171,64 @@ test("simulation API rejects invalid scenario participants and caps work", async
     body: JSON.stringify({ forced: { "scenario-1": "clemson" }, iterations: 100_000 }),
   });
   assert.equal(unknownTeam.status, 400);
+});
+
+test("audit week 6: forbidden stale strings never ship; verified additions render", async () => {
+  // The Oct 5 verification audit found these strings on production pages.
+  // They must never come back; the checks run on visible text, not markup.
+  const FORBIDDEN = [
+    /Demonstration records/i,
+    /fictional/i,
+    /Pending 2026 season data/,
+    /\b0\s+others receiving votes/i,
+    /No change published/,
+    /\bmiami fl\b/i,
+    /Live standings from ESPN, refreshed on every build/,
+  ];
+  const pages = await Promise.all(
+    [
+      "/",
+      "/rankings",
+      "/injuries",
+      "/data-sources",
+      "/games/2026-10-10-georgia-at-alabama",
+      "/scores",
+    ].map(async (path) => {
+      const response = await fetchRoute(path);
+      assert.equal(response.status, 200, path);
+      const html = await response.text();
+      // Strip scripts, then tags (HTML comments included); React inserts
+      // comment nodes between adjacent text segments, so collapse runs of
+      // whitespace before pattern-matching visible copy.
+      const text = html
+        .replace(/<script[\s\S]*?<\/script>/g, " ")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/\s+/g, " ");
+      return [path, text];
+    }),
+  );
+  for (const [path, text] of pages) {
+    for (const pattern of FORBIDDEN) {
+      assert.doesNotMatch(text, pattern, `${path} ships forbidden stale copy: ${pattern}`);
+    }
+  }
+
+  // Verified additions from the same audit must render where promised.
+  const byPath = new Map(pages);
+  assert.match(byPath.get("/") ?? "", /College GameDay · Tuscaloosa · Sat Oct 10 · ESPN/);
+  assert.match(byPath.get("/") ?? "", /WEEK 6 · OCT 6–10 · AS OF 2026-10-05/);
+  assert.match(byPath.get("/") ?? "", /SNAPSHOT 07:24 UTC/);
+  assert.match(byPath.get("/") ?? "", /POLLS RELEASED 2026-10-04/);
+  assert.match(byPath.get("/") ?? "", /SP\+ CONTRAST · AS OF Sep 27/);
+  assert.match(byPath.get("/") ?? "", /North Dakota State/);
+  assert.match(byPath.get("/") ?? "", /Byes:[\s\S]*?Miami \(FL\)/);
+  assert.match(byPath.get("/") ?? "", /Texas[\s\S]*?vs\.? Oklahoma|Oklahoma[\s\S]*?Cotton Bowl \(neutral site\)/);
+  assert.match(byPath.get("/games/2026-10-10-georgia-at-alabama") ?? "", /College GameDay · Tuscaloosa · Sat Oct 10 · ESPN/);
+  assert.match(byPath.get("/rankings") ?? "", /OTHERS RECEIVING VOTES[\s\S]*?Kentucky/);
+  assert.match(byPath.get("/rankings") ?? "", /NEW/);
+  assert.match(byPath.get("/rankings") ?? "", /Sun Belt/);
+  assert.match(byPath.get("/rankings") ?? "", /dropped out/);
+  assert.match(byPath.get("/injuries") ?? "", /last editorial update/);
+  assert.match(byPath.get("/data-sources") ?? "", /VERIFIED SNAPSHOT/);
+  assert.match(byPath.get("/data-sources") ?? "", /Open holds/);
 });

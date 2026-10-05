@@ -1,9 +1,12 @@
 "use client";
 
 import { featuredGame, weekGames, type HomepageData } from "@/lib/homepage";
+import { broadcastEventForGame, refreshStorylines, verifiedRefresh } from "@/lib/cfb-dataset";
+import { WeekHeaderStrip } from "./primitives";
 import { MarqueeGame } from "./marquee-game";
 import { WeekScoreboard } from "./week-scoreboard";
 import { SaturdayBoard } from "./saturday-board";
+import { LaneHeading } from "./primitives";
 import { FinalsStrip } from "./finals-strip";
 import { PollsVsMachines } from "./polls-vs-machines";
 import { CurrentMetricsLane } from "./current-metrics";
@@ -25,6 +28,18 @@ export function BroadcastHomepage({
   onModeRequest: () => void;
 }) {
   const slate = weekGames(data.games, data.referenceDate);
+  const storylines = refreshStorylines;
+  // Shared weekly-header grammar, derived from the verified snapshot so it can
+  // never advertise a stale week. Hidden entirely when no snapshot ships.
+  const weekEyebrow = verifiedRefresh
+    ? `WEEK ${verifiedRefresh.week} · OCT 6–10 · AS OF ${verifiedRefresh.reference_date}`
+    : null;
+  const weekChips = verifiedRefresh
+    ? [
+        `SNAPSHOT ${verifiedRefresh.retrieved_at.slice(11, 16)} UTC`,
+        `POLLS RELEASED ${verifiedRefresh.polls?.[0]?.release_date ?? "—"}`,
+      ]
+    : [];
   const featured = featuredGame(slate, data.teams);
   const away = data.teams.find((team) => team.slug === featured?.awayTeamId);
   const home = data.teams.find((team) => team.slug === featured?.homeTeamId);
@@ -48,6 +63,7 @@ export function BroadcastHomepage({
           <span className="apex-season-word"> SEASON</span>
         </div>
       </div>
+      <WeekHeaderStrip eyebrow={weekEyebrow} chips={weekChips} />
       {featured && away && home ? (
         <MarqueeGame
           game={featured}
@@ -56,6 +72,7 @@ export function BroadcastHomepage({
           venue={
             data.stadiums.find((venue) => venue.teamId === home.slug)?.name
           }
+          gameday={broadcastEventForGame(featured)}
         />
       ) : (
         <section className="apex-marquee">
@@ -69,6 +86,40 @@ export function BroadcastHomepage({
         teams={data.teams}
         pollTables={data.pollTables}
       />
+      {storylines.length > 0 ? (
+        <section className="apex-lane" aria-labelledby="storyline-title">
+          <LaneHeading
+            id="storyline-title"
+            eyebrow="THE WEEK'S STORY"
+            title="Worth a callout"
+            href="/scores"
+            linkLabel="Full slate"
+          />
+          {storylines.map((story) => {
+            const row = verifiedRefresh?.scheduledGames.find((g) => g.provider_id === story.game_provider_id);
+            const gameId = row ? `${row.date}-${row.away}-at-${row.home}` : null;
+            return (
+              <article className="apex-storyline" key={story.id}>
+                <h3>{story.headline}</h3>
+                <p>{story.body}</p>
+                <p className="apex-data-note">
+                  {gameId ? (
+                    <a href={`/games/${gameId}`}>On the board this week</a>
+                  ) : null}
+                  {story.sources[0] ? (
+                    <>
+                      {" · "}
+                      <a href={story.sources[0]} target="_blank" rel="noopener noreferrer">
+                        Source
+                      </a>
+                    </>
+                  ) : null}
+                </p>
+              </article>
+            );
+          })}
+        </section>
+      ) : null}
       <WeekScoreboard
         games={slate}
         teams={data.teams}

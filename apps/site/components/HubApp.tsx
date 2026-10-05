@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { ChevronLeft, ChevronRight, CircleOff, RefreshCw } from "lucide-react";
 import {
   broadcastAsOf,
+  broadcastEventForGame,
   broadcastNote,
   coaches,
   fantasyNotes,
@@ -30,10 +31,12 @@ import {
   scenarioGames,
   searchPlayers,
   seasonRules,
+  sosAsOf,
   stadiums,
   teams,
   tvRows,
   tvWeeks,
+  verifiedRefresh,
 } from "@/lib/cfb-dataset";
 import { brand, disclosureVersion } from "@/lib/config";
 import { homepageData, tickerGames } from "@/lib/homepage-data";
@@ -554,6 +557,7 @@ function GamePage({ gameId, mode, favorites, onFavorite }: HomeProps & { gameId:
   const game = getGame(gameId) ?? games[0];
   const away = teamFor(game.awayTeamId);
   const home = teamFor(game.homeTeamId);
+  const gameday = broadcastEventForGame(game);
   const homeEdge = Math.round(game.modelHomeWinProbability * 100);
   const metrics = [
     ["Play value / drive", away.strength - 65, home.strength - 65],
@@ -568,6 +572,11 @@ function GamePage({ gameId, mode, favorites, onFavorite }: HomeProps & { gameId:
       <div className="game-hero">
         <div className="game-hero__meta">
           <span className={`status status--${game.status}`}>{game.statusDetail}</span>
+          {gameday ? (
+            <span className="status status--gameday" title={gameday.note ?? undefined}>
+              {gameday.badge}
+            </span>
+          ) : null}
           <Freshness provenance={game.provenance} />
         </div>
         <div className="game-hero__matchup">
@@ -637,16 +646,10 @@ function GamePage({ gameId, mode, favorites, onFavorite }: HomeProps & { gameId:
               </article>
             </>
           ) : (
-            <article className="win-model-card">
-              <div>
-                <span className="eyebrow">MATCHUP MODEL</span>
-                <strong>Pending 2026 season data</strong>
-              </div>
-              <p>
-                Win probabilities and matchup edges resume once in-season results accumulate.
-                Schedules, results, and poll data below are live from the 2026 dataset.
-              </p>
-            </article>
+            <p className="panel-note">
+              No matchup model yet this season — win probabilities resume once in-season results
+              accumulate. Everything below is the verified {verifiedRefresh ? `snapshot of ${verifiedRefresh.retrieved_at.slice(0, 10)}` : "2026 dataset"}.
+            </p>
           )}
 
           {modelEstimatesAvailable && (
@@ -1006,7 +1009,11 @@ function RankingsPage() {
         <div className="scoreboard-summary">
           <div><span>{table.rankings.length}</span><small>RANKED</small></div>
           <div><span>{table.rankings[0]?.first_place_votes ?? "—"}</span><small>FIRST-PLACE VOTES (NO. 1)</small></div>
-          <div><span>{table.others.length}</span><small>OTHERS RECEIVING VOTES</small></div>
+          {table.poll === "composite" ? (
+            <div><span>{new Set(table.rankings.map((row) => row.team_slug)).size}</span><small>TEAMS ACROSS BOTH POLLS</small></div>
+          ) : (
+            <div><span>{table.others.length}</span><small>OTHERS RECEIVING VOTES</small></div>
+          )}
         </div>
         {isPending ? (
           <BoardSkeleton rows={3} />
@@ -1035,7 +1042,13 @@ function RankingsPage() {
                     <td>{entry.points?.toLocaleString() ?? "—"}</td>
                     <td>{entry.first_place_votes ?? "—"}</td>
                     <td>
-                      {movement == null ? "—" : movement === 0 ? "—" : movement < 0 ? `▲ ${-movement}` : `▼ ${movement}`}
+                      {movement == null
+                        ? <span className="poll-badge poll-badge--new">NEW</span>
+                        : movement === 0
+                          ? "—"
+                          : movement < 0
+                            ? `▲ ${-movement}`
+                            : `▼ ${movement}`}
                     </td>
                   </tr>
                 );
@@ -1047,11 +1060,13 @@ function RankingsPage() {
               {table.rankings.map((entry) => {
                 const team = entry.team_slug ? getTeamBySlug(entry.team_slug) : undefined;
                 const movement = entry.previous_rank == null ? null : entry.rank - entry.previous_rank;
-                const movementLabel = movement == null || movement === 0
-                  ? "No change published"
-                  : movement < 0
-                    ? `Up ${-movement}`
-                    : `Down ${movement}`;
+                const movementLabel = movement == null
+                  ? "New to the poll"
+                  : movement === 0
+                    ? "No change"
+                    : movement < 0
+                      ? `Up ${-movement}`
+                      : `Down ${movement}`;
                 return (
                   <MobileDataCard
                     key={`mobile-poll-${entry.rank}-${entry.team_slug}`}
@@ -1089,6 +1104,51 @@ function RankingsPage() {
             </div>
           </>
         ) : null}
+        {pollId === "ap" && verifiedRefresh?.poll_notes ? (
+          <section aria-labelledby="poll-notes-title" className="poll-notes">
+            <SectionHeading eyebrow={`WEEK MOVEMENT · AP, ${verifiedRefresh.poll_notes.as_of}`} title="Who moved, who split, who fell out" />
+            <div className="poll-notes-grid">
+              <article>
+                <h3>Biggest movers</h3>
+                <ul>
+                  {verifiedRefresh.poll_notes.movers_ap.slice(0, 5).map((row) => (
+                    <li key={row.team_slug}>
+                      <a href={`/teams/${row.team_slug}`}>{row.team}</a> {row.from} → {row.to}{" "}
+                      <b className={row.move < 0 ? "poll-move poll-move--up" : "poll-move"}>{row.move < 0 ? `▲ ${-row.move}` : `▼ ${row.move}`}</b>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+              <article>
+                <h3>AP vs. Coaches gaps</h3>
+                <ul>
+                  {[
+                    ...verifiedRefresh.poll_notes.poll_gaps.ap_only.map((g) => ({ team: g.team, slug: g.team_slug, left: `AP No. ${g.ap}`, right: `Coaches RV${g.coaches_points != null ? ` (${g.coaches_points} pts)` : ""}` })),
+                    ...verifiedRefresh.poll_notes.poll_gaps.coaches_only.map((g) => ({ team: g.team, slug: g.team_slug, left: `Coaches No. ${g.coaches}`, right: `AP RV${g.ap_points != null ? ` (${g.ap_points} pts)` : ""}` })),
+                  ].map((row) => (
+                    <li key={row.slug}>
+                      <a href={`/teams/${row.slug}`}>{row.team}</a> — {row.left} · {row.right}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+              <article>
+                <h3>In and out</h3>
+                <ul>
+                  {verifiedRefresh.poll_notes.debuts_ap.map((row) => (
+                    <li key={`in-${row.team_slug}`}><a href={`/teams/${row.team_slug}`}>{row.team}</a> <span className="poll-badge poll-badge--new">NEW</span> at No. {row.rank}</li>
+                  ))}
+                  {verifiedRefresh.poll_notes.dropped_out.ap.map((row) => (
+                    <li key={`out-ap-${row.team_slug}`}><a href={`/teams/${row.team_slug}`}>{row.team}</a> dropped out{row.others_points != null ? ` (${row.others_points} RV pts)` : ""}</li>
+                  ))}
+                  {verifiedRefresh.poll_notes.dropped_out.coaches.map((row) => (
+                    <li key={`out-co-${row.team_slug}`}><a href={`/teams/${row.team_slug}`}>{row.team}</a> dropped from the Coaches Poll</li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+          </section>
+        ) : null}
         {pollsStatusNote ? <p className="panel-note">{pollsStatusNote}</p> : null}
       </section>
       <section className="content-section">
@@ -1096,7 +1156,7 @@ function RankingsPage() {
         <section className="content-section">
           <SectionHeading eyebrow="CONFERENCE RACES" title="Who leads every league" />
           <p className="panel-note">
-            Live standings from ESPN, refreshed on every build. Conference leaders lead each table; rows link to team hubs.
+            Conference records from ESPN{verifiedRefresh?.retainedBaseline?.as_of ? `, as of ${verifiedRefresh.retainedBaseline.as_of}` : ""} — the overall record sits beside each league mark. Conference leaders lead each table; rows link to team hubs.
           </p>
           <div className="conf-race-grid">
             {conferenceStandings.map((conf) => (
@@ -1106,7 +1166,7 @@ function RankingsPage() {
                 </h3>
                 <table className="data-table conf-race-table">
                   <thead>
-                    <tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th></tr>
+                    <tr><th>Team</th><th>W</th><th>L</th><th>T</th><th>PCT</th><th>Ovr</th></tr>
                   </thead>
                   <tbody>
                     {conf.rows.map((row, i) => (
@@ -1114,7 +1174,7 @@ function RankingsPage() {
                         <td>
                           {row.team_slug ? <a href={`/teams/${row.team_slug}`}>{row.team}</a> : row.team}
                         </td>
-                        <td>{row.w}</td><td>{row.l}</td><td>{row.t}</td><td>{row.pct}</td>
+                        <td>{row.w}</td><td>{row.l}</td><td>{row.t}</td><td>{row.pct}</td><td>{row.overall ?? "—"}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -1126,7 +1186,7 @@ function RankingsPage() {
       ) : null}
         <SectionHeading eyebrow="STRENGTH OF SCHEDULE" title="Published SOS ratings" />
         <p className="panel-note">
-          Composite strength index derived from Phil Steele and ESPN FPI SOS ratings — not SP+, FPI, or a committee ranking.
+          Composite strength index derived from Phil Steele and ESPN FPI SOS ratings{sosAsOf ? `, as published ${sosAsOf}` : ""} — not SP+, FPI, or a committee ranking, and not refreshed weekly.
         </p>
         <div className="rankings-list">
           {[...teams].sort((a, b) => b.strength - a.strength).slice(0, 25).map((team, index) => (
@@ -1284,6 +1344,50 @@ function DataSourcesPage() {
   return (
     <>
       <PageHeading eyebrow="PROVENANCE & PROVIDER HEALTH" title="No source, no silent claim." description="Production providers fail closed. The site never swaps data invisibly after an outage." />
+      {verifiedRefresh ? (
+        <section className="content-section" aria-labelledby="snapshot-manifest-title">
+          <SectionHeading
+            eyebrow={`VERIFIED SNAPSHOT · WEEK ${verifiedRefresh.week}`}
+            title="What shipped, from where"
+          />
+          <p className="panel-note">
+            Snapshot retrieved {verifiedRefresh.retrieved_at.replace("T", " ").replace(/\.\d+Z$/, " UTC")}
+            {verifiedRefresh.audit_applied_at ? `, audit corrections applied ${verifiedRefresh.audit_applied_at.replace("T", " ").replace(/\.\d+Z$/, " UTC")}` : ""}.
+            {verifiedRefresh.scheduledGames?.length ?? 0} scheduled FBS-vs-FBS games and{" "}
+            {verifiedRefresh.playedGames?.length ?? 0} played results are on the board.
+          </p>
+          <div className="portal-list">
+            {(verifiedRefresh.source_urls ?? []).map((url) => (
+              <a className="portal-row" href={url} key={url}>
+                <span className="status status--scheduled">SRC</span>
+                <span><strong>{url.replace("https://", "").split("?")[0]}</strong></span>
+              </a>
+            ))}
+          </div>
+          {(verifiedRefresh.excludedGames ?? []).length ? (
+            <>
+              <h3>Excluded from the board, with evidence</h3>
+              <ul className="manifest-holds">
+                {(verifiedRefresh.excludedGames ?? []).map((row) => (
+                  <li key={row.provider_id}>
+                    <strong>{row.name}</strong> ({row.date}) — {row.reason}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+          {(verifiedRefresh.holds ?? []).length ? (
+            <>
+              <h3>Open holds</h3>
+              <ul className="manifest-holds">
+                {(verifiedRefresh.holds ?? []).map((hold) => (
+                  <li key={hold}>{hold}</li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+        </section>
+      ) : null}
       <section className="content-section provider-table">
         {providerHealth.map((provider) => (
           <article key={provider.id}>

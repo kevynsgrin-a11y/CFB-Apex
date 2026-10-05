@@ -36,10 +36,6 @@ export function SourceMeta({
             <strong>{provenance.modelVersion}</strong>
           </div>
         ) : null}
-        <p>
-          Demonstration records are deterministic, fictional, and isolated from any production
-          provider.
-        </p>
       </div>
     </details>
   );

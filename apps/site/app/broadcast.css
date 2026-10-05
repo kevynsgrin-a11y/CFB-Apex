@@ -592,3 +592,20 @@ body { overscroll-behavior-y: none; }
 .conf-race-table tbody tr:hover { background: rgba(255, 255, 255, 0.04); }
 .conf-race-leader { background: rgba(212, 175, 55, 0.07); }
 .conf-race-leader td:first-child a { color: var(--gold, #d4af37); font-weight: 700; }
+
+/* ---- Week 6 audit additions ---- */
+.apex-gdc-neutral { display: block; width: 100%; margin-top: 2px; font-size: 10px; letter-spacing: 0.04em; color: var(--muted-foreground); text-transform: uppercase; }
+.apex-storyline { border: 1px solid var(--border, #27272a); border-left: 3px solid var(--gold, #d4af37); border-radius: 10px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); }
+.apex-storyline h3 { font-size: 1rem; margin: 0 0 6px; }
+.apex-storyline p { margin: 0 0 6px; font-size: 0.9rem; color: var(--muted-foreground); }
+.apex-storyline .apex-data-note { margin: 0; font-size: 0.75rem; }
+
+/* ---- Week header strip (shared weekly-update grammar) ---- */
+.apex-week-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 2px; }
+.apex-week-strip__eyebrow { font-family: var(--display-family); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold, #d4af37); }
+.apex-week-strip__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.apex-week-chip { font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); border: 1px solid var(--border, #27272a); border-radius: 999px; padding: 3px 9px; background: rgba(255, 255, 255, 0.02); font-variant-numeric: tabular-nums; }
+
+/* ---- Tracker card accents (ranked + GameDay) ---- */
+.apex-game-card--ranked { border-left: 3px solid rgba(212, 175, 55, 0.55); }
+.apex-game-card--gameday { border-color: rgba(212, 175, 55, 0.45); }

@@ -36,3 +36,12 @@
 | Rebuild preserves reviewed results | `scripts/build-dataset.mjs` + verified JSON | Deterministic snapshot build; no provider outage rollback |
 | Source honesty | module-specific dates, unpublished records, snapshot labels | Retained portal date and null pregame scores tests |
 | Production update | `npm run deploy:production` in `apps/site` | Pending Cloudflare owner credentials and release verification |
+
+| Requirement | Implementation | Evidence |
+|---|---|---|
+| Full FBS board coverage | audit patch + coverage check in `scripts/build-dataset.mjs` | `tests/refresh.test.ts`: 58 scheduled, both restored games; live check fetched 7/7 days |
+| No free-text FCS exclusions | `espn_conference_ids` evidence on every excludedGames row | hermetic build check throws otherwise |
+| Poll completeness | others_receiving_votes filled from Oct 4 releases | `tests/refresh.test.ts`: AP 10 / Coaches 15, movers, debuts, gaps, dropouts |
+| No stale copy on production pages | forbidden-strings test | `tests/rendered-html.test.mjs` audit test across 6 routes |
+| Verified additions render | GameDay badge, storyline, byes names, neutral label | rendered assertions on `/`, game page, `/rankings` |
+| Post-deploy multi-surface freshness | `deploy-site.yml` check across home, /rankings, game page | workflow step "Check production Week 6 snapshot across surfaces" |
