@@ -64,6 +64,34 @@ export function BroadcastBadge({
   return <span className={`apex-badge apex-badge--${tone}`}>{children}</span>;
 }
 
+
+/* One shared grammar for week-scoped modules: gold week eyebrow on the left,
+   freshness chips on the right. Data-driven by the caller; renders nothing
+   without an eyebrow (fail-closed against stale hardcoded weeks). */
+export function WeekHeaderStrip({
+  eyebrow,
+  chips = [],
+}: {
+  eyebrow: string | null;
+  chips?: readonly string[];
+}) {
+  if (!eyebrow) return null;
+  return (
+    <div className="apex-week-strip" role="group" aria-label="Weekly update header">
+      <span className="apex-week-strip__eyebrow">{eyebrow}</span>
+      {chips.length > 0 ? (
+        <span className="apex-week-strip__chips">
+          {chips.map((chip) => (
+            <span className="apex-week-chip" key={chip}>
+              {chip}
+            </span>
+          ))}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 export function LaneHeading({
   eyebrow,
   title,

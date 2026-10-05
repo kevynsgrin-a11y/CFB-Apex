@@ -216,6 +216,9 @@ test("audit week 6: forbidden stale strings never ship; verified additions rende
   // Verified additions from the same audit must render where promised.
   const byPath = new Map(pages);
   assert.match(byPath.get("/") ?? "", /College GameDay · Tuscaloosa · Sat Oct 10 · ESPN/);
+  assert.match(byPath.get("/") ?? "", /WEEK 6 · OCT 6–10 · AS OF 2026-10-05/);
+  assert.match(byPath.get("/") ?? "", /SNAPSHOT 07:24 UTC/);
+  assert.match(byPath.get("/") ?? "", /POLLS RELEASED 2026-10-04/);
   assert.match(byPath.get("/") ?? "", /SP\+ CONTRAST · AS OF Sep 27/);
   assert.match(byPath.get("/") ?? "", /North Dakota State/);
   assert.match(byPath.get("/") ?? "", /Byes:[\s\S]*?Miami \(FL\)/);

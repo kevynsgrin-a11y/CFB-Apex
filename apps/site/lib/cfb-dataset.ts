@@ -57,6 +57,7 @@ interface PollNoteMove { team: string; team_slug: string; from: number; to: numb
 interface PollGapSide { team: string; team_slug: string; ap: number | null; coaches: number | null; ap_points?: number | null; coaches_points?: number | null }
 interface VerifiedRefresh {
   week?: number;
+  polls?: Array<{ poll: string; name: string; release_date: string }>;
   reference_date: string;
   requested_cutoff: string;
   retrieved_at: string;

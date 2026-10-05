@@ -2,6 +2,7 @@
 
 import { featuredGame, weekGames, type HomepageData } from "@/lib/homepage";
 import { broadcastEventForGame, refreshStorylines, verifiedRefresh } from "@/lib/cfb-dataset";
+import { WeekHeaderStrip } from "./primitives";
 import { MarqueeGame } from "./marquee-game";
 import { WeekScoreboard } from "./week-scoreboard";
 import { SaturdayBoard } from "./saturday-board";
@@ -28,6 +29,17 @@ export function BroadcastHomepage({
 }) {
   const slate = weekGames(data.games, data.referenceDate);
   const storylines = refreshStorylines;
+  // Shared weekly-header grammar, derived from the verified snapshot so it can
+  // never advertise a stale week. Hidden entirely when no snapshot ships.
+  const weekEyebrow = verifiedRefresh
+    ? `WEEK ${verifiedRefresh.week} · OCT 6–10 · AS OF ${verifiedRefresh.reference_date}`
+    : null;
+  const weekChips = verifiedRefresh
+    ? [
+        `SNAPSHOT ${verifiedRefresh.retrieved_at.slice(11, 16)} UTC`,
+        `POLLS RELEASED ${verifiedRefresh.polls?.[0]?.release_date ?? "—"}`,
+      ]
+    : [];
   const featured = featuredGame(slate, data.teams);
   const away = data.teams.find((team) => team.slug === featured?.awayTeamId);
   const home = data.teams.find((team) => team.slug === featured?.homeTeamId);
@@ -51,6 +63,7 @@ export function BroadcastHomepage({
           <span className="apex-season-word"> SEASON</span>
         </div>
       </div>
+      <WeekHeaderStrip eyebrow={weekEyebrow} chips={weekChips} />
       {featured && away && home ? (
         <MarqueeGame
           game={featured}
