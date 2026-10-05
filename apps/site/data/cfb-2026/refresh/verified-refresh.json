@@ -11421,10 +11421,10 @@
   "https://rolltide.com/sports/football/schedule/2026"
  ],
  "holds": [
-  "Current Week 6 SP+ and FPI not independently verified; retained ratings show their own cutoff",
-  "Same-book timestamped odds and line movement not verified",
-  "Week 6 fantasy/injury availability not fully verified (editorial layer last updated Sep 9)",
-  "No live in-season scores feed is wired: Saturday results stay 'scheduled' until the next verified snapshot ships"
+  "Week 6 SP+ not independently verified; retained ratings show their own Sep 27 cutoff. FPI verified Oct 4, 2026 (The Big Lead).",
+  "Same-book minute-timestamped odds and line movement not verified: the content lane carries VegasInsider/Action Network lines as of Oct 4-5 (content/research/P1-lines.md) and the gated odds mode stays closed until a timestamped book feed is wired.",
+  "Week 6 injury report published Oct 5 (Gemini research pass): 6 ledger + 33 watch rows sourced. Practice-participation statuses (Wed-Fri) arrive with the conference availability filings Oct 7-8.",
+  "No live in-season scores feed is wired: Saturday results stay 'scheduled' until the next verified snapshot ships."
  ],
  "retainedBaseline": {
   "conferenceStandings": [
@@ -13069,5 +13069,6 @@
    ]
   }
  ],
- "audit_applied_at": "2026-10-05T10:01:57.669Z"
+ "audit_applied_at": "2026-10-05T10:01:57.669Z",
+ "research_ingested_at": "2026-10-05T11:55:00Z"
 }
