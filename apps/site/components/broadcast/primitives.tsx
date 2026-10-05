@@ -77,7 +77,7 @@ export function WeekHeaderStrip({
 }) {
   if (!eyebrow) return null;
   return (
-    <div className="apex-week-strip" role="group" aria-label="Weekly update header">
+    <div className="apex-week-strip">
       <span className="apex-week-strip__eyebrow">{eyebrow}</span>
       {chips.length > 0 ? (
         <span className="apex-week-strip__chips">
