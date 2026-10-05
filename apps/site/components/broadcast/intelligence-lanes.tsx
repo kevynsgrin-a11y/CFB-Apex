@@ -167,11 +167,17 @@ export function FantasyLane({
     <section className="apex-lane" aria-labelledby="fantasy-title">
       <LaneHeading
         id="fantasy-title"
-        eyebrow="YOUR LINEUP. YOUR EDGE."
+        eyebrow={fantasyAsOf ? `WEEK 1 NOTES · AS OF ${fantasyAsOf}` : "YOUR LINEUP. YOUR EDGE."}
         title="Fantasy starts"
         href="/dfs"
         linkLabel="Fantasy hub"
       />
+      {fantasyAsOf ? (
+        <p className="apex-data-note">
+          These are opening-week notes published {fantasyAsOf} — they are kept for reference, not
+          refreshed weekly, until a new research package ships.
+        </p>
+      ) : null}
       <div className="apex-fantasy-grid">
         {notes.length === 0 && (
           <p className="apex-empty">Player notes not published.</p>

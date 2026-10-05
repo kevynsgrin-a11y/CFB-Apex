@@ -4392,3 +4392,17 @@ body {
     transition: none !important;
   }
 }
+
+/* ---- Week 6 audit additions: poll movement badges, notes, manifest ---- */
+.poll-badge { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; }
+.poll-badge--new { background: rgba(212, 175, 55, 0.16); color: var(--gold, #d4af37); border: 1px solid rgba(212, 175, 55, 0.4); }
+.poll-move { font-variant-numeric: tabular-nums; }
+.poll-move--up { color: #4ade80; }
+.poll-notes { margin-top: 22px; }
+.poll-notes-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.poll-notes-grid article { border: 1px solid var(--border, #27272a); border-radius: 10px; padding: 12px 14px; background: rgba(255, 255, 255, 0.02); }
+.poll-notes-grid h3 { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); margin: 0 0 8px; }
+.poll-notes-grid ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 0.85rem; }
+.poll-notes-grid li b { font-variant-numeric: tabular-nums; }
+.manifest-holds { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: 0.85rem; color: var(--muted-foreground); }
+.status--gameday { background: rgba(212, 175, 55, 0.18); color: var(--gold, #d4af37); border: 1px solid rgba(212, 175, 55, 0.45); font-weight: 700; letter-spacing: 0.04em; }

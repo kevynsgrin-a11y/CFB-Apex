@@ -592,3 +592,10 @@ body { overscroll-behavior-y: none; }
 .conf-race-table tbody tr:hover { background: rgba(255, 255, 255, 0.04); }
 .conf-race-leader { background: rgba(212, 175, 55, 0.07); }
 .conf-race-leader td:first-child a { color: var(--gold, #d4af37); font-weight: 700; }
+
+/* ---- Week 6 audit additions ---- */
+.apex-gdc-neutral { display: block; width: 100%; margin-top: 2px; font-size: 10px; letter-spacing: 0.04em; color: var(--muted-foreground); text-transform: uppercase; }
+.apex-storyline { border: 1px solid var(--border, #27272a); border-left: 3px solid var(--gold, #d4af37); border-radius: 10px; padding: 14px 16px; background: rgba(255, 255, 255, 0.02); }
+.apex-storyline h3 { font-size: 1rem; margin: 0 0 6px; }
+.apex-storyline p { margin: 0 0 6px; font-size: 0.9rem; color: var(--muted-foreground); }
+.apex-storyline .apex-data-note { margin: 0; font-size: 0.75rem; }

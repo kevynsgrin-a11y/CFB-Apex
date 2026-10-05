@@ -26,7 +26,8 @@ async function providerFetch(...args) {
 
 const teams = read("teams.json").teams;
 const conferences = read("conferences.json").conferences;
-const sos = read("sos/2026.json").teams.map((row) => ({
+const sosDoc = read("sos/2026.json");
+const sos = sosDoc.teams.map((row) => ({
   slug: row.slug,
   phil_steele_rank: row.phil_steele_rank ?? null,
   espn_fpi_sos_rank: row.espn_fpi_sos_rank ?? null,
@@ -558,13 +559,34 @@ const ESPN_INJURY_URL = "https://site.api.espn.com/apis/site/v2/sports/football/
 const STATUS_MAP = { "Injured Reserve": "IR", "Out": "OUT", "Questionable": "QUESTIONABLE", "Doubtful": "DOUBTFUL", "Suspension": "SUSPENSION", "Active": "ACTIVE" };
 const espnInjuries = { asOf: null, entries: [] };
 const teamByDisplayName = new Map(teams.map((t) => [t.display_name.toLowerCase(), t.slug]));
+/* ESPN names teams differently from our display_name in a handful of places
+   ("App State Mountaineers" vs "Appalachian State Mountaineers", "Miami
+   Hurricanes" vs "Miami (FL) Hurricanes"). Without these aliases the refresh
+   dropped two real FBS games and left four standings rows unlinked (Oct 5
+   audit); every ESPN name must resolve or the coverage check fails. */
+const teamBySchool = new Map(teams.map((t) => [t.school.toLowerCase(), t.slug]));
+for (const [school, slug] of teamBySchool) if (!teamByDisplayName.has(school)) teamByDisplayName.set(school, slug);
+const ESPN_NAME_ALIASES = {
+  "miami hurricanes": "miami-fl",
+  "florida international panthers": "fiu",
+  "app state mountaineers": "appalachian-state",
+  "delaware blue hens": "delaware",
+  "massachusetts minutemen": "umass",
+  "umass minutemen": "umass",
+  "ul monroe warhawks": "ulm",
+  "louisiana-monroe warhawks": "ulm",
+};
+const espnSlugFor = (raw) => {
+  const key = String(raw ?? "").toLowerCase().trim();
+  return teamByDisplayName.get(key) ?? ESPN_NAME_ALIASES[key] ?? null;
+};
 try {
   const res = await providerFetch(ESPN_INJURY_URL, { headers: { accept: "application/json" } });
   if (!res.ok) throw new Error(`${res.status}`);
   const doc = await res.json();
   espnInjuries.asOf = doc.timestamp ? doc.timestamp.slice(0, 10) : new Date().toISOString().slice(0, 10);
   for (const block of doc.injuries ?? []) {
-    const teamSlug = teamByDisplayName.get(String(block.displayName ?? "").toLowerCase()) ?? null;
+    const teamSlug = espnSlugFor(block.displayName) ?? null;
     for (const row of block.injuries ?? []) {
       const status = STATUS_MAP[row.status] ?? "QUESTIONABLE";
       if (status === "ACTIVE") continue;
@@ -606,7 +628,7 @@ try {
         const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim().toLowerCase();
         return {
           rank: entry.current ?? null,
-          team_slug: teamByDisplayName.get(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null,
+          team_slug: espnSlugFor(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null,
           team: name,
           record: entry.recordSummary ?? null,
           points: entry.points ?? null,
@@ -673,15 +695,18 @@ try {
   if (!res.ok) throw new Error(`${res.status}`);
   const doc = await res.json();
   for (const child of doc.children ?? []) {
-    const entries = child?.standings?.entries ?? [];
+    /* ESPN nests two-division leagues (Sun Belt) as sub-children whose
+       parent carries no entries — flatten or the league table never renders. */
+    const flatten = (node) => [...(node?.standings?.entries ?? []), ...(node?.children ?? []).flatMap(flatten)];
+    const entries = flatten(child);
     const rows = [];
     let confSlug = null;
     for (const entry of entries) {
       const t = entry.team ?? {};
       const name = t.location || t.nickname || t.name;
       if (!name) continue;
-      const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim().toLowerCase();
-      const ourSlug = teamByDisplayName.get(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null;
+      const fullName = `${t.location ?? ""} ${t.name ?? ""}`.trim();
+      const ourSlug = espnSlugFor(t.displayName) ?? espnSlugFor(fullName) ?? teamByDisplayName.get(String(t.nickname ?? "").toLowerCase()) ?? null;
       const ourTeam = ourSlug ? teams.find((tm) => tm.slug === ourSlug) : null;
       if (!confSlug && ourTeam) confSlug = ourTeam.conference_slug;
       const stat = (n) => (entry.stats ?? []).find((s) => s.name === n)?.displayValue ?? null;
@@ -733,7 +758,7 @@ try {
       const mapTeam = (c) => {
         const t = c.team ?? {};
         const fullName = t.displayName ?? `${t.location ?? ""} ${t.name ?? ""}`.trim();
-        return { slug: teamByDisplayName.get(String(fullName).toLowerCase()) ?? null, name: t.shortDisplayName || t.location || fullName, points: c.score != null ? Number(c.score) : null };
+        return { slug: espnSlugFor(fullName) ?? null, name: t.shortDisplayName || t.location || fullName, points: c.score != null ? Number(c.score) : null };
       };
       const h = mapTeam(home), a = mapTeam(away);
       if (!h.slug || !a.slug) continue;
@@ -869,7 +894,7 @@ if (existsSync(RESEARCH_PATH)) {
   console.log("No injury research staged yet — editorial layer ships empty (fail-closed).");
 }
 
-const payload = { teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief, upsetWatch, playoffAudit };
+const payload = { teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, sosAsOf: sosDoc.meta?.as_of ?? null, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief, upsetWatch, playoffAudit };
 
 if (refreshSnapshot) {
   payload.polls = refreshSnapshot.polls;
@@ -891,6 +916,74 @@ if (refreshSnapshot) {
     note: `Week ${refreshSnapshot.week} verified ${refreshSnapshot.retrieved_at}; other weeks retain their original assignment dates. FBS vs FBS display coverage.`,
   };
   payload.refreshData = refreshSnapshot;
+
+  /* Coverage check (Oct 5 audit), two layers:
+     1. Hermetic: an excludedGames entry is only legitimate when at least one
+        of its teams does NOT resolve into the 138-team list (a true FCS
+        opponent) AND carries ESPN conference-id evidence. This is the exact
+        rule whose absence let New Mexico State at FIU and Old Dominion at
+        App State drop off the board tagged "FBS–FCS".
+     2. Live (network required): every ESPN game in the snapshot week whose
+        both teams resolve into the list must be on the board. Enforced in CI
+        (CI=true); offline local builds warn instead of failing. */
+  const teamNameSet = new Set(teams.map((t) => t.display_name.toLowerCase()));
+  for (const t of teams) teamNameSet.add(t.school.toLowerCase());
+  for (const name of Object.keys(ESPN_NAME_ALIASES)) teamNameSet.add(name);
+  const fbsConfIds = new Set([1, 4, 5, 8, 9, 12, 15, 17, 18, 37, 151]); // ESPN FBS conference ids (group 80)
+  for (const row of refreshSnapshot.excludedGames ?? []) {
+    if (row.espn_conference_ids == null) {
+      throw new Error(`excludedGames entry carries no ESPN conference-id evidence: ${row.name}`);
+    }
+    const ids = row.espn_conference_ids;
+    if (fbsConfIds.has(ids.home) && fbsConfIds.has(ids.away)) {
+      throw new Error(`excludedGames entry ${row.name} lists two FBS conference ids (${ids.away}/${ids.home}) — it belongs on the board`);
+    }
+  }
+  const playedPairs = new Set(payload.playedGames.map((g) => `${g.date.slice(0, 10)}:${[g.away_slug, g.home_slug].sort().join(":")}`));
+  const scheduledPairs = new Set(refreshSnapshot.scheduledGames.map((g) => `${g.date}:${[g.away, g.home].sort().join(":")}`));
+  const weekStartMs = Date.parse(`${refreshSnapshot.reference_date}T00:00:00Z`);
+  const weekDays = Array.from({ length: 7 }, (_, i) => new Date(weekStartMs + i * 86400000).toISOString().slice(0, 10).replaceAll("-", ""));
+  const missing = [];
+  const fcsSkipped = [];
+  let daysFetched = 0;
+  const etDate = (iso) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
+  for (const day of weekDays) {
+    let doc;
+    try {
+      const res = await fetch(`https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}`, { headers: { accept: "application/json" } });
+      if (!res.ok) throw new Error(`${res.status}`);
+      doc = await res.json();
+      daysFetched += 1;
+    } catch (error) {
+      console.warn(`Coverage live-check skipped for ${day} (ESPN unreachable: ${error.message})`);
+      continue;
+    }
+    for (const ev of doc.events ?? []) {
+      const comp = (ev.competitions && ev.competitions[0]) || {};
+      const cs = comp.competitors || [];
+      const home = cs.find((c) => c.homeAway === "home");
+      const away = cs.find((c) => c.homeAway === "away");
+      if (!home || !away) continue;
+      const homeName = home.team.displayName ?? `${home.team.location ?? ""} ${home.team.name ?? ""}`.trim();
+      const awayName = away.team.displayName ?? `${away.team.location ?? ""} ${away.team.name ?? ""}`.trim();
+      const bothFbs = teamNameSet.has(String(homeName).toLowerCase()) && teamNameSet.has(String(awayName).toLowerCase());
+      if (!bothFbs) { fcsSkipped.push(`${ev.date.slice(0, 10)} ${awayName} at ${homeName}`); continue; }
+      const hSlug = espnSlugFor(homeName);
+      const aSlug = espnSlugFor(awayName);
+      const date = etDate(ev.date); // board keys use the Eastern date; late games roll UTC+1
+      const key = `${date}:${[aSlug, hSlug].sort().join(":")}`;
+      if (!scheduledPairs.has(key) && !playedPairs.has(key)) {
+        missing.push(`${date} ${awayName} at ${homeName} → ${aSlug} @ ${hSlug}`);
+      }
+    }
+  }
+  if (missing.length) {
+    throw new Error(`FBS coverage check FAILED — ESPN lists ${missing.length} FBS-vs-FBS game(s) missing from the board:\n${missing.join("\n")}`);
+  }
+  if (daysFetched === 0 && process.env.CI === "true") {
+    throw new Error("Coverage live-check could not reach ESPN on any day of the snapshot week (CI build)");
+  }
+  console.log(`Coverage check: hermetic exclusion evidence OK; live board covers ${scheduledPairs.size} scheduled + ${playedPairs.size} played pairs across ${daysFetched}/7 days (${fcsSkipped.length} FCS-opponent entries skipped)`);
 }
 
 const body = `// GENERATED by scripts/build-dataset.mjs from data/cfb-2026 — do not edit.

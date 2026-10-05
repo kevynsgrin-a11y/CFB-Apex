@@ -34,11 +34,14 @@ function BoardRow({
           {away.rank != null && <em className="apex-gdc-rank">{away.rank}</em>}
           {away.shortName}
         </span>
-        <span className="apex-gdc-at">at</span>
+        <span className="apex-gdc-at">{game.neutralSite ? "vs" : "at"}</span>
         <span className="apex-gdc-team">
           {home.rank != null && <em className="apex-gdc-rank">{home.rank}</em>}
           {home.shortName}
         </span>
+        {game.neutralSite && game.venue ? (
+          <span className="apex-gdc-neutral">{game.venue} (neutral site)</span>
+        ) : null}
       </div>
       {game.broadcast ? (
         <span className="apex-gdc-tv" data-net={game.broadcast.replace(/\s+/g, "")}>
@@ -126,7 +129,12 @@ export function SaturdayBoard({
       {byes.length > 0 && (
         <p className="apex-gdc-byes">
           <strong>Byes:</strong>{" "}
-          {byes.map((entry) => `No. ${entry.rank} ${entry.team_slug?.replace(/-/g, " ")}`).join(" · ")}
+          {byes
+            .map((entry) => {
+              const team = bySlug.get(entry.team_slug ?? "");
+              return `No. ${entry.rank} ${team?.shortName ?? entry.team_slug}`;
+            })
+            .join(" · ")}
         </p>
       )}
       <p className="apex-data-note">
