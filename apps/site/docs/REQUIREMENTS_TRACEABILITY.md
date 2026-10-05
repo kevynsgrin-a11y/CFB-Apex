@@ -23,3 +23,16 @@
 | Replay/shadow pilot | Contracted provider replay and live comparison | Future provider adapters, D1/R2/Queue bindings, pilot artifacts | Blocked: contract/credentials |
 | Public fixture URL | CFB Apex branding, Cloudflare Worker config, apex/`www` routes, noindex and live kill switches | `wrangler.deploy.jsonc`, Worker redirect, `docs/DEPLOYMENT_EVIDENCE.md` | Complete |
 | Public live-data URL | Licensed, tested, staffed, legal-approved, explicitly authorized release | Public launch runbook and final release evidence | Not authorized |
+
+## October 5 Week 6 refresh
+
+| Requirement | Implementation | Evidence |
+|---|---|---|
+| Consistent current week | `lib/homepage-data.ts`, verified scoreboard snapshot | `tests/refresh.test.ts`: 56 scheduled and completed Week 5 results, shared ticker |
+| Eastern rollover and DST | `lib/game-calendar.ts`, `lib/homepage.ts`, `lib/scoreboard.ts` | Friday UTC rollover and November offset regressions |
+| No scheduled duplicate of a final | matchup/week reconciliation in `lib/cfb-dataset.ts` | Penn State–Northwestern and Fresno–Washington State regressions |
+| Poll date and Miami entity mapping | reviewed AP/Coaches source boards, ranking copy | October 4 release + Miami ACC test |
+| Confirmed cumulative metrics | `components/broadcast/current-metrics.tsx` | NCAA through October 3; 1,851 Atkinson yards |
+| Rebuild preserves reviewed results | `scripts/build-dataset.mjs` + verified JSON | Deterministic snapshot build; no provider outage rollback |
+| Source honesty | module-specific dates, unpublished records, snapshot labels | Retained portal date and null pregame scores tests |
+| Production update | `npm run deploy:production` in `apps/site` | Pending Cloudflare owner credentials and release verification |

@@ -1,4 +1,5 @@
 import type { Game, Team } from "@/lib/types";
+import { easternDate } from "./game-calendar.ts";
 
 export type ScoreboardFilter =
   | "all"
@@ -33,13 +34,13 @@ export function defaultScoreboardWeek(
     (a, b) => a - b,
   );
   if (sortedWeeks.length === 0) return 0;
-  const reference = asOf && !Number.isNaN(Date.parse(asOf)) ? asOf : "0000-00-00";
+  const reference =
+    asOf && !Number.isNaN(Date.parse(asOf)) ? asOf : "0000-00-00";
   const nextSaturday = source
     .filter((game) => {
-      const date = game.date.slice(0, 10);
+      const date = easternDate(game.date);
       return (
-        date >= reference &&
-        new Date(`${date}T12:00:00Z`).getUTCDay() === 6
+        date >= reference && new Date(`${date}T12:00:00Z`).getUTCDay() === 6
       );
     })
     .sort((a, b) => a.date.localeCompare(b.date))[0];
@@ -85,7 +86,7 @@ export function filterScoreboardGames({
 export function groupGamesByDate(source: readonly Game[]) {
   const groups = new Map<string, Game[]>();
   for (const game of source) {
-    const date = game.date.slice(0, 10);
+    const date = easternDate(game.date);
     const group = groups.get(date) ?? [];
     group.push(game);
     groups.set(date, group);

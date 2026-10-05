@@ -9,14 +9,18 @@ import {
   preseasonRatings,
   stadiums,
   teams,
-} from "./cfb-dataset";
-import { weekGames, type HomepageData } from "./homepage";
+  verifiedRefresh,
+} from "./cfb-dataset.ts";
+import { weekGames, type HomepageData } from "./homepage.ts";
 
-const datasetAsOf =
-  [broadcastAsOf, portalAsOf, fantasyNotesAsOf, "2026-10-03"]
+const legacyAsOf =
+  [broadcastAsOf, portalAsOf, fantasyNotesAsOf, "2026-09-05"]
     .filter((date): date is string => Boolean(date))
     .sort()
-    .at(-1) ?? "2026-10-03";
+    .at(-1) ?? "2026-09-05";
+// Select the scoreboard's week from its own snapshot, independently of portal/fantasy.
+const referenceDate = verifiedRefresh?.reference_date ?? legacyAsOf;
+const datasetAsOf = verifiedRefresh?.reference_date ?? legacyAsOf;
 
 export const homepageData: HomepageData = {
   teams,
@@ -40,18 +44,20 @@ export const homepageData: HomepageData = {
     image: "/images/saturday-lights.png",
     imageIsIllustration: true,
   })),
-  referenceDate: datasetAsOf,
+  referenceDate,
   datasetAsOf,
   portalAsOf,
   fantasyAsOf: fantasyNotesAsOf,
+  metrics: verifiedRefresh?.metrics ?? null,
+  verifiedAt: verifiedRefresh?.retrieved_at ?? null,
 };
 
 export const tickerGames = [
-  ...games
+  ...weekGames(games, referenceDate)
     .filter((game) => game.status === "final")
     .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 4),
-  ...weekGames(games, datasetAsOf)
+    .slice(0, 8),
+  ...weekGames(games, referenceDate)
     .filter((game) => game.status !== "final")
     .slice(0, 8),
 ];

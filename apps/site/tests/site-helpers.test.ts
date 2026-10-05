@@ -100,24 +100,24 @@ function fixtureTeam(overrides: Partial<Team> = {}): Team {
 
 // --- week window boundaries (Monday-start) --------------------------------
 
-test("weekGames opens on Monday 00:00Z and closes the following Monday", () => {
+test("weekGames opens on Monday 00:00 Eastern and closes the following Monday", () => {
   // 2026-10-03 is a Saturday, so the week window is Mon 2026-09-28 .. Mon 2026-10-05.
   const slate: BroadcastGame[] = [
-    fixtureGame({ id: "prev-sunday", date: "2026-09-27T23:59:00.000Z" }),
-    fixtureGame({ id: "monday-open", date: "2026-09-28T00:00:00.000Z" }),
-    fixtureGame({ id: "sunday-late", date: "2026-10-04T23:59:00.000Z" }),
-    fixtureGame({ id: "next-monday", date: "2026-10-05T00:00:00.000Z" }),
+    fixtureGame({ id: "prev-sunday", date: "2026-09-28T03:59:00.000Z" }),
+    fixtureGame({ id: "monday-open", date: "2026-09-28T04:00:00.000Z" }),
+    fixtureGame({ id: "sunday-late", date: "2026-10-05T03:59:00.000Z" }),
+    fixtureGame({ id: "next-monday", date: "2026-10-05T04:00:00.000Z" }),
   ];
   assert.deepEqual(
     weekGames(slate, "2026-10-03").map((game) => game.id),
     ["monday-open", "sunday-late"],
-    "the window is [Monday 00:00Z, next Monday 00:00Z) and results are date-sorted",
+    "the window is [Monday 00:00 Eastern, next Monday 00:00 Eastern) and results are date-sorted",
   );
 });
 
 test("weekGames anchors a Monday reference date to itself", () => {
   const slate: BroadcastGame[] = [
-    fixtureGame({ id: "monday", date: "2026-09-28T00:00:00.000Z" }),
+    fixtureGame({ id: "monday", date: "2026-09-28T04:00:00.000Z" }),
     fixtureGame({ id: "sunday", date: "2026-10-04T12:00:00.000Z" }),
     fixtureGame({ id: "tuesday-after", date: "2026-10-05T12:00:00.000Z" }),
   ];
@@ -170,8 +170,8 @@ test("dateLabel and scoreboardDateLabel agree on published dates", () => {
   // Full ISO timestamps are pinned to their own UTC day, never rolled over.
   assert.equal(dateLabel("2026-09-12T23:30:00.000Z"), "Sat, Sep 12");
   assert.equal(scoreboardDateLabel("2026-09-12T23:30:00.000Z"), "Sat, Sep 12");
-  // A midnight-spanning roll-over stays on the published day.
-  assert.equal(dateLabel("2026-01-01T00:00:00.000Z"), "Thu, Jan 1");
+  // UTC midnight still belongs to the previous Eastern day.
+  assert.equal(dateLabel("2026-01-01T00:00:00.000Z"), "Wed, Dec 31");
 });
 
 test("unparseable dates surface honest fallbacks, never Invalid Date", () => {

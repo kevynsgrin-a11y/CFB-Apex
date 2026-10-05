@@ -37,6 +37,17 @@ test("server-renders the finished home utility", async () => {
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 
+test("the reviewed Week 6 refresh renders current games and sourced metrics", async () => {
+  const response = await fetchRoute("/");
+  const html = (await response.text()).replace(/<!--[\s\S]*?-->/g, "");
+  assert.match(html, /Georgia/);
+  assert.match(html, /Alabama/);
+  assert.match(html, /Week of Mon, Oct 5/);
+  assert.match(html, /Season leaders/);
+  assert.match(html, /1,851/);
+  assert.doesNotMatch(html, /Rankings: AP preseason|reflect the AP preseason poll|Preseason · Points/);
+});
+
 test("www canonicalizes to the apex domain without losing the request target", async () => {
   const response = await worker.fetch(
     new Request("https://www.cfbapex.com/scores?week=1"),

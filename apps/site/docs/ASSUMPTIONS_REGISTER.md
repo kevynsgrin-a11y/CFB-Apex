@@ -16,3 +16,12 @@
 | A-012 | Sportradar and SportsDataIO are RFP candidates, not selected vendors. | No signed order form, SLA, credentials, or pilot evidence was supplied. | Compare identical written rights/coverage responses and measured replay/live results. |
 | A-013 | An external persistent-stream relay may not be necessary. | Current Workers docs allow unlimited HTTP wall time while connected; lifecycle reliability still needs testing. | Prototype on Cloudflare first and add a minimal relay only on measured need. |
 | A-014 | Public live-data launch remains explicitly unauthorized. | Domain deployment approval does not supply rights, entity crosswalk, shadow pilot, drills, staffing, or legal approval. | Deny-by-default environment gates, noindex lock, fixture beta, and public live-launch runbook. |
+
+## October 5, 2026 refresh assumptions
+
+- The user moved the target to Week 6, October 5–11. The old October 3 cutoff is superseded. Source retrieval: October 5, 2026, 07:24 UTC / 00:24 PDT.
+- Previously committed historical records are retained inputs, not newly independently verified metrics.
+- Queries supply 54 October 3 events and 58 October 6–10 events. The UI supports FBS vs FBS: 51 newly confirmed Saturday finals and 56 upcoming matchups. Five FCS-opponent games across the queried dates are recorded separately.
+- Poll records are October 4 release snapshots; current team records are separate provider fields. Two programs without a published record remain “Not published.”
+- Current Week 6 SP+, FPI, same-minute sportsbook odds, and a complete availability ledger were not verified. Retained modules keep their dates.
+- Production publish credentials are unavailable in the working session. A tested source patch is not a production release.

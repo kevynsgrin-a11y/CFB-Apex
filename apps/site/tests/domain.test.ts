@@ -184,10 +184,17 @@ test("different seeds vary and probabilities stay bounded", () => {
 });
 
 test("forced outcomes improve the selected team's path", () => {
-  const scenario = scenarioGames[2];
-  const team = teams.find((candidate) => candidate.id === scenario.homeTeamId)!;
-  const opponent = teams.find((candidate) => candidate.id === scenario.awayTeamId)!;
   const baseline = runPlayoffSimulation("force-test", {}, 20_000);
+  // Pick a participant with room to improve; changing weekly data changes ordering.
+  const eligible = (id: string) => {
+    const chance = baseline.results.find((result) => result.teamId === id)?.playoff ?? 0;
+    return chance > 0.01 && chance < 0.99;
+  };
+  const scenario = scenarioGames.find((game) => eligible(game.homeTeamId) || eligible(game.awayTeamId));
+  assert.ok(scenario, "expected a scenario participant with a nontrivial baseline chance");
+  const winnerId = eligible(scenario.homeTeamId) ? scenario.homeTeamId : scenario.awayTeamId;
+  const team = teams.find((candidate) => candidate.id === winnerId)!;
+  const opponent = teams.find((candidate) => candidate.id === (winnerId === scenario.homeTeamId ? scenario.awayTeamId : scenario.homeTeamId))!;
   const forced = runPlayoffSimulation("force-test", { [scenario.id]: team.id }, 20_000);
   const before = baseline.results.find((result) => result.teamId === team.id)!;
   const after = forced.results.find((result) => result.teamId === team.id)!;
@@ -379,4 +386,3 @@ test("NIL watch: ledger is sourced, valuations stay single-source medium, no est
   assert.equal(formatValuation(225000), "$225K");
   assert.equal(formatValuation(null), "Not disclosed");
 });
-

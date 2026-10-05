@@ -6,6 +6,7 @@ import { WeekScoreboard } from "./week-scoreboard";
 import { SaturdayBoard } from "./saturday-board";
 import { FinalsStrip } from "./finals-strip";
 import { PollsVsMachines } from "./polls-vs-machines";
+import { CurrentMetricsLane } from "./current-metrics";
 import {
   FantasyLane,
   GamedayLane,
@@ -87,6 +88,7 @@ export function BroadcastHomepage({
         preseasonRatings={data.preseasonRatings}
         teams={data.teams}
       />
+      {data.metrics ? <CurrentMetricsLane metrics={data.metrics} /> : null}
       <FantasyLane
         fantasyNotes={data.fantasyNotes}
         teams={data.teams}
@@ -100,8 +102,8 @@ export function BroadcastHomepage({
       />
       <GamedayLane stadium={stadium} team={stadiumTeam} />
       <p className="apex-data-note">
-        Independent college football intelligence · Dataset compiled through{" "}
-        {data.datasetAsOf} ·{" "}
+        Independent college football intelligence · Scoreboard snapshot{" "}
+        {data.datasetAsOf} · Retrieved {data.verifiedAt ?? "Not published"} · Module source dates shown separately ·{" "}
         <a href="/data-sources" className="underline underline-offset-4">
           Sources & data status
         </a>
