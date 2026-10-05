@@ -105,3 +105,14 @@ test("source dates and unknown records remain honest while Miami resolves to ACC
     "Not published",
   );
 });
+
+test("editorial composite follows the documented mean-rank and AP tie break without poll votes", () => {
+  const ap = pollTables.find((poll) => poll.poll === "ap")!;
+  const coaches = pollTables.find((poll) => poll.poll === "coaches")!;
+  const composite = pollTables.find((poll) => poll.poll === "composite")!;
+  const rank = (poll: typeof ap, slug: string | null) => poll.rankings.find((row) => row.team_slug === slug)?.rank ?? 26;
+  const expected = [...new Set([...ap.rankings, ...coaches.rankings].map((row) => row.team_slug))]
+    .sort((a, b) => (rank(ap, a) + rank(coaches, a)) - (rank(ap, b) + rank(coaches, b)) || rank(ap, a) - rank(ap, b));
+  assert.deepEqual(composite.rankings.map((row) => row.team_slug), expected);
+  assert.ok(composite.rankings.every((row) => row.points == null && row.first_place_votes == null));
+});
