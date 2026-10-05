@@ -533,13 +533,20 @@ function buildScheduledGames(): Game[] {
       });
     }
   }
+  // Index once instead of rescanning every schedule for every reviewed matchup.
+  const scheduledByWeekPair = new Map<string, string[]>();
+  for (const [key, game] of byKey) {
+    const pair = gameKey(weekStart(game.date), game.awayTeamId, game.homeTeamId);
+    const keys = scheduledByWeekPair.get(pair) ?? [];
+    keys.push(key);
+    scheduledByWeekPair.set(pair, keys);
+  }
   // Official snapshot additions also cover matchups missing from the old schedules.
   for (const row of verifiedRefresh?.scheduledGames ?? []) {
     const key = gameKey(row.kickoff_utc, row.away, row.home);
     if (playedGameKeys.has(key)) continue;
-    for (const [existingKey, existing] of byKey) {
-      if (gameKey(weekStart(existing.date), existing.awayTeamId, existing.homeTeamId) === gameKey(weekStart(row.date), row.away, row.home)) byKey.delete(existingKey);
-    }
+    const pair = gameKey(weekStart(row.date), row.away, row.home);
+    for (const existingKey of scheduledByWeekPair.get(pair) ?? []) byKey.delete(existingKey);
     const id = `${row.date}-${row.away}-at-${row.home}`;
     byKey.set(key, {
       id, week: row.week, date: row.kickoff_utc,
