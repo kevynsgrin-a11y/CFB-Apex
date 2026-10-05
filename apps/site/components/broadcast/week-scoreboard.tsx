@@ -10,6 +10,7 @@ import {
   type BroadcastTeam,
 } from "@/lib/homepage";
 import { BroadcastBadge, LaneHeading, TeamMark } from "./primitives";
+import { easternDate, weekStart } from "@/lib/game-calendar";
 import {
   GameActionSheet,
   GameActionsButton,
@@ -31,12 +32,17 @@ function WeekGameCard({
 
   return (
     <>
-      <article className="apex-game-card apex-game-card--actions" {...actions.longPressProps}>
+      <article
+        className="apex-game-card apex-game-card--actions"
+        {...actions.longPressProps}
+      >
         <a className="apex-game-card__link" href={`/games/${game.id}`}>
           <div className="apex-game-card-main">
             <div className="apex-game-card-top">
               <span>{dateLabel(game.date)}</span>
-              <BroadcastBadge tone={game.status === "live" ? "cyan" : "neutral"}>
+              <BroadcastBadge
+                tone={game.status === "live" ? "cyan" : "neutral"}
+              >
                 {hasScore ? game.status : game.broadcast || "TV: Not published"}
               </BroadcastBadge>
             </div>
@@ -48,9 +54,13 @@ function WeekGameCard({
                   {team.shortName}
                 </span>
                 {hasScore ? (
-                  <strong>{published(index === 0 ? game.awayScore : game.homeScore)}</strong>
+                  <strong>
+                    {published(index === 0 ? game.awayScore : game.homeScore)}
+                  </strong>
                 ) : (
-                  <strong className="apex-record">{team.record || "Not published"}</strong>
+                  <strong className="apex-record">
+                    {team.record || "Not published"}
+                  </strong>
                 )}
               </div>
             ))}
@@ -96,10 +106,10 @@ export function WeekScoreboard({
   const [rankedOnly, setRankedOnly] = useState(false);
   const rail = useRef<HTMLElement>(null);
   const bySlug = new Map(teams.map((team) => [team.slug, team]));
-  const dates = [...new Set(games.map((game) => game.date.slice(0, 10)))];
+  const dates = [...new Set(games.map((game) => easternDate(game.date)))];
   const filtered = games.filter(
     (game) =>
-      (day === "all" || game.date.startsWith(day)) &&
+      (day === "all" || easternDate(game.date) === day) &&
       (!rankedOnly ||
         bySlug.get(game.awayTeamId)?.rank ||
         bySlug.get(game.homeTeamId)?.rank),
@@ -201,12 +211,15 @@ export function WeekScoreboard({
           const away = bySlug.get(game.awayTeamId);
           const home = bySlug.get(game.homeTeamId);
           if (!away || !home) return null;
-          return <WeekGameCard key={game.id} game={game} away={away} home={home} />;
+          return (
+            <WeekGameCard key={game.id} game={game} away={away} home={home} />
+          );
         })}
       </section>
       <p className="apex-data-note">
-        Week of {dateLabel(referenceDate)} · All times Eastern · Rankings
-        reflect the latest AP poll (September 27, 2026).
+        Week of {dateLabel(weekStart(referenceDate))} · All times Eastern · FBS
+        vs FBS · Rankings reflect the latest published AP poll. Scheduled games
+        are a verified snapshot.
       </p>
     </section>
   );

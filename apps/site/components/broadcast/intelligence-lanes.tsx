@@ -39,7 +39,7 @@ export function RankingsLane({
       <div className="apex-rank-board">
         <div className="apex-rank-board-top">
           <strong>AP TOP 25</strong>
-          <span>{releaseLabel} · Points</span>
+          <span>{poll?.release_date ?? "Not published"} · Points</span>
         </div>
         {rows.length === 0 && (
           <p className="apex-empty">Rankings not published.</p>
@@ -71,7 +71,8 @@ export function RankingsLane({
         })}
       </div>
       <p className="apex-data-note">
-        Released {poll?.release_date ?? "Not published"}.
+        Released {poll?.release_date ?? "Not published"}. Records shown at poll
+        release.
       </p>
     </section>
   );
@@ -266,8 +267,8 @@ export function PreseasonLane({
         ))}
       </div>
       <p className="apex-data-note">
-        Published preseason SP+ · Bill Connelly / ESPN · Not an in-season
-        forecast.
+        Retained SP+ and FPI snapshot · {rows[0]?.rating.as_of ?? "Not published"}
+        {" "}· Week 6 ratings refresh not verified.
       </p>
     </section>
   );

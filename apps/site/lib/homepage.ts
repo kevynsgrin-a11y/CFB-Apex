@@ -1,6 +1,12 @@
 import type { CSSProperties } from "react";
-import type { FantasyNote, PollTable, PreseasonRating } from "./cfb-dataset";
+import type {
+  CurrentMetrics,
+  FantasyNote,
+  PollTable,
+  PreseasonRating,
+} from "./cfb-dataset";
 import type { Game, Stadium, Team } from "./types";
+import { easternDate, weekStart } from "./game-calendar.ts";
 
 export type BroadcastTeam = Pick<
   Team,
@@ -51,6 +57,8 @@ export interface HomepageData {
   datasetAsOf: string;
   portalAsOf: string | null;
   fantasyAsOf: string | null;
+  metrics?: CurrentMetrics | null;
+  verifiedAt?: string | null;
 }
 
 export function conferenceLabel(conference: string): string {
@@ -90,7 +98,7 @@ export function dateLabel(
     weekday,
     month: "short",
     day: "numeric",
-    timeZone: "UTC",
+    timeZone: date.length === 10 ? "UTC" : "America/New_York",
   }).format(value);
 }
 
@@ -98,13 +106,16 @@ export function weekGames(
   games: readonly BroadcastGame[],
   referenceDate: string,
 ): BroadcastGame[] {
-  const start = new Date(`${referenceDate.slice(0, 10)}T00:00:00Z`);
-  if (!Number.isFinite(start.getTime())) return [];
-  start.setUTCDate(start.getUTCDate() - ((start.getUTCDay() + 6) % 7));
-  const end = new Date(start);
+  const start = weekStart(referenceDate);
+  if (!start) return [];
+  const end = new Date(`${start}T12:00:00Z`);
   end.setUTCDate(end.getUTCDate() + 7);
+  const endDate = end.toISOString().slice(0, 10);
   return games
-    .filter((game) => new Date(game.date) >= start && new Date(game.date) < end)
+    .filter(
+      (game) =>
+        easternDate(game.date) >= start && easternDate(game.date) < endDate,
+    )
     .sort((a, b) => a.date.localeCompare(b.date));
 }
 

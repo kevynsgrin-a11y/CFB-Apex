@@ -88,7 +88,7 @@ export function MarqueeGame({
                   <span className="apex-marquee-team-name">
                     {team.rank != null && (
                       <small>
-                        <span className="sr-only">AP rank </span>
+                        <span className="sr-only">Published AP rank </span>
                         {team.rank}
                       </small>
                     )}
@@ -104,7 +104,7 @@ export function MarqueeGame({
             </div>
           ))}
         </div>
-        <div className="apex-sp-duel" aria-label="SP+ rating comparison">
+        <div className="apex-sp-duel">
           <span className="apex-sp-duel-head">SP+ CONTRAST</span>
           {[away, home].map((team) => {
             const sp = preseasonRatings[team.slug]?.sp;
@@ -123,7 +123,7 @@ export function MarqueeGame({
           {venue || game.venue || "Venue not published"}
         </span>
         <a href="/rankings">
-          Rankings: AP Top 25
+          Rankings: latest published AP poll
           <ArrowUpRight size={15} aria-hidden="true" />
         </a>
       </div>

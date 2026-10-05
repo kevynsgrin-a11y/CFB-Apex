@@ -15,6 +15,14 @@ const root = fileURLToPath(new URL("../data/cfb-2026", import.meta.url));
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
 
 const read = (path) => JSON.parse(readFileSync(join(root, path), "utf8"));
+const refreshPath = join(root, "refresh/verified-refresh.json");
+const refreshSnapshot = existsSync(refreshPath) ? JSON.parse(readFileSync(refreshPath, "utf8")) : null;
+// A reviewed snapshot makes builds reproducible and prevents provider outages
+// from replacing current polls/results with the original preseason inputs.
+async function providerFetch(...args) {
+  if (refreshSnapshot) throw new Error("using reviewed source snapshot");
+  return fetch(...args);
+}
 
 const teams = read("teams.json").teams;
 const conferences = read("conferences.json").conferences;
@@ -217,6 +225,8 @@ const playedGames = readdirSync(join(root, "stats/2026/games"))
   .map((doc) => ({
     game_id: doc.game_id,
     date: doc.date,
+    kickoff_utc: doc.kickoff_utc ?? null,
+    week: doc.week ?? null,
     home_slug: doc.home_slug,
     away_slug: doc.away_slug,
     site: doc.site ?? null,
@@ -549,7 +559,7 @@ const STATUS_MAP = { "Injured Reserve": "IR", "Out": "OUT", "Questionable": "QUE
 const espnInjuries = { asOf: null, entries: [] };
 const teamByDisplayName = new Map(teams.map((t) => [t.display_name.toLowerCase(), t.slug]));
 try {
-  const res = await fetch(ESPN_INJURY_URL, { headers: { accept: "application/json" } });
+  const res = await providerFetch(ESPN_INJURY_URL, { headers: { accept: "application/json" } });
   if (!res.ok) throw new Error(`${res.status}`);
   const doc = await res.json();
   espnInjuries.asOf = doc.timestamp ? doc.timestamp.slice(0, 10) : new Date().toISOString().slice(0, 10);
@@ -570,7 +580,7 @@ try {
   }
   console.log(`ESPN injury base: ${espnInjuries.entries.length} entries across ${doc.injuries?.length ?? 0} team blocks`);
 } catch (error) {
-  console.warn(`ESPN injury feed unavailable — shipping empty base (${error.message})`);
+  if (!refreshSnapshot) console.warn(`ESPN injury feed unavailable — shipping empty base (${error.message})`);
 }
 
 /* Live poll refresh — the dist's preseason bake goes stale the moment the
@@ -581,7 +591,7 @@ try {
 let pollsNote = pollsStatus;
 const ESPN_RANKINGS_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/rankings";
 try {
-  const res = await fetch(ESPN_RANKINGS_URL, { headers: { accept: "application/json" } });
+  const res = await providerFetch(ESPN_RANKINGS_URL, { headers: { accept: "application/json" } });
   if (!res.ok) throw new Error(`${res.status}`);
   const doc = await res.json();
   const espnToTables = (doc.rankings ?? [])
@@ -649,7 +659,7 @@ try {
     console.warn(`ESPN rankings returned ${espnToTables.length}/2 boards — keeping dist polls`);
   }
 } catch (error) {
-  console.warn(`ESPN rankings unavailable — shipping dist (preseason) polls (${error.message})`);
+  if (!refreshSnapshot) console.warn(`ESPN rankings unavailable — shipping dist (preseason) polls (${error.message})`);
 }
 
 /* Conference standings — the race tracker under /rankings. Same host as the
@@ -659,7 +669,7 @@ try {
    empty array and the section simply does not render. */
 const conferenceStandings = [];
 try {
-  const res = await fetch("https://site.web.api.espn.com/apis/v2/sports/football/college-football/standings", { headers: { accept: "application/json" } });
+  const res = await providerFetch("https://site.web.api.espn.com/apis/v2/sports/football/college-football/standings", { headers: { accept: "application/json" } });
   if (!res.ok) throw new Error(`${res.status}`);
   const doc = await res.json();
   for (const child of doc.children ?? []) {
@@ -695,7 +705,7 @@ try {
   }
   console.log(`Conference standings: ${conferenceStandings.length} conferences, ${conferenceStandings.reduce((n, c) => n + c.rows.length, 0)} teams`);
 } catch (error) {
-  console.warn(`ESPN conference standings unavailable — conference race section ships empty (${error.message})`);
+  if (!refreshSnapshot) console.warn(`ESPN conference standings unavailable — conference race section ships empty (${error.message})`);
 }
 
 /* Completed-game results — merges the live ESPN scoreboard for every played
@@ -757,7 +767,7 @@ try {
   for (let i = 0; i < days.length; i += 5) {
     const batch = days.slice(i, i + 5);
     const docs = await Promise.all(batch.map(async (day) => {
-      const res = await fetch(`https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}`, { headers: { accept: "application/json" } });
+      const res = await providerFetch(`https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}`, { headers: { accept: "application/json" } });
       if (!res.ok) throw new Error(`${res.status} on ${day}`);
       return res.json();
     }));
@@ -771,7 +781,7 @@ try {
   playedGames.sort((a, b) => a.date.localeCompare(b.date));
   console.log(`ESPN results merged: ${added} games added, ${curated.size} curated kept, ${playedGames.length} total played`);
 } catch (error) {
-  console.warn(`ESPN results merge unavailable — playedGames stays curated-only (${error.message})`);
+  if (!refreshSnapshot) console.warn(`ESPN results merge unavailable — playedGames stays curated-only (${error.message})`);
 }
 
 /* ------------------------------------------------- awards & NIL watches ----- */
@@ -861,6 +871,28 @@ if (existsSync(RESEARCH_PATH)) {
 
 const payload = { teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief, upsetWatch, playoffAudit };
 
+if (refreshSnapshot) {
+  payload.polls = refreshSnapshot.polls;
+  payload.pollsStatus = refreshSnapshot.pollsStatus;
+  payload.playedGames = refreshSnapshot.playedGames;
+  payload.conferenceStandings = refreshSnapshot.retainedBaseline.conferenceStandings;
+  payload.espnInjuries = refreshSnapshot.retainedBaseline.espnInjuries;
+  const rows = [...payload.broadcasts.rows];
+  const byPair = { ...payload.broadcasts.byPair };
+  for (const row of refreshSnapshot.scheduledGames) {
+    const key = `${row.date}:${[row.away, row.home].sort().join(":")}`;
+    byPair[key] = { tv: row.tv, time_et: row.time_et, status: row.status, week: row.week };
+    const index = rows.findIndex((existing) => existing.date === row.date && existing.away === row.away && existing.home === row.home);
+    if (index >= 0) rows[index] = row;
+    else rows.push(row);
+  }
+  payload.broadcasts = { ...payload.broadcasts, rows, byPair, games: rows.length,
+    asOf: refreshSnapshot.reference_date,
+    note: `Week ${refreshSnapshot.week} verified ${refreshSnapshot.retrieved_at}; other weeks retain their original assignment dates. FBS vs FBS display coverage.`,
+  };
+  payload.refreshData = refreshSnapshot;
+}
+
 const body = `// GENERATED by scripts/build-dataset.mjs from data/cfb-2026 — do not edit.
 // biome-ignore lint: generated file
 export default ${JSON.stringify(payload)};
@@ -871,5 +903,5 @@ writeFileSync(target, body, "utf8");
 console.log(
   `Wrote ${target} (${(body.length / 1024).toFixed(0)} KiB): ` +
     `${teams.length} teams, ${Object.keys(schedules).length} schedules, ` +
-    `${Object.keys(coaching).length} staffs, ${playedGames.length} played games`,
+    `${Object.keys(coaching).length} staffs, ${payload.playedGames.length} played games`,
 );

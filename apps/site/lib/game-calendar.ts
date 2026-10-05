@@ -1,0 +1,53 @@
+/** Calendar dates on the football site are Eastern; instants remain UTC. */
+export function easternDate(value: string): string {
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const instant = new Date(value);
+  if (!Number.isFinite(instant.getTime())) return "";
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(instant);
+  const part = (type: string) =>
+    parts.find((item) => item.type === type)?.value;
+  return `${part("year")}-${part("month")}-${part("day")}`;
+}
+
+export function weekStart(value: string): string {
+  const date = easternDate(value);
+  if (!date) return "";
+  const start = new Date(`${date}T12:00:00Z`);
+  start.setUTCDate(start.getUTCDate() - ((start.getUTCDay() + 6) % 7));
+  return start.toISOString().slice(0, 10);
+}
+
+export function seasonWeek(value: string): number {
+  const start = weekStart(value);
+  // Week 1 spans the opening holiday weekend; Week 2 starts Sept. 7.
+  return Math.max(
+    0,
+    Math.floor((Date.parse(start) - Date.parse("2026-08-31")) / 604_800_000) +
+      1,
+  );
+}
+
+export function gameKey(date: string, away: string, home: string): string {
+  return `${easternDate(date)}:${[away, home].sort().join(":")}`;
+}
+
+/** Resolve a published Eastern wall time using the date's actual DST offset. */
+export function easternKickoff(date: string, time: string | null): string {
+  if (!time) return `${date}T17:00:00.000Z`; // date-only placeholder; UI says time unpublished
+  const probe = new Date(`${date}T12:00:00Z`);
+  const zone = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    timeZoneName: "shortOffset",
+  })
+    .formatToParts(probe)
+    .find((part) => part.type === "timeZoneName")?.value;
+  const offset = Number(zone?.match(/GMT([+-]\d+)/)?.[1] ?? -5);
+  return new Date(
+    Date.parse(`${date}T${time}:00Z`) - offset * 3_600_000,
+  ).toISOString();
+}

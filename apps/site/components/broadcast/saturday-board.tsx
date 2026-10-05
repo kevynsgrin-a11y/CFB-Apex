@@ -1,3 +1,4 @@
+import { easternDate } from "@/lib/game-calendar";
 import { LaneHeading, TeamMark } from "./primitives";
 import { kickoffTime, type BroadcastGame, type BroadcastTeam } from "@/lib/homepage";
 
@@ -64,6 +65,7 @@ export function SaturdayBoard({
 }) {
   const bySlug = new Map(teams.map((team) => [team.slug, team]));
   const rows = games
+    .filter((game) => new Date(`${easternDate(game.date)}T12:00:00Z`).getUTCDay() === 6 && game.status !== "final")
     .map((game) => {
       const away = bySlug.get(game.awayTeamId);
       const home = bySlug.get(game.homeTeamId);
@@ -74,7 +76,7 @@ export function SaturdayBoard({
     .filter((row): row is NonNullable<typeof row> => row != null);
   if (rows.length === 0) return null;
 
-  const playingSlugs = new Set(rows.flatMap((row) => [row.away.slug, row.home.slug]));
+  const playingSlugs = new Set(games.flatMap((game) => [game.awayTeamId, game.homeTeamId]));
   const ap = pollTables.find((table) => table.poll === "ap");
   const byes =
     ap?.rankings

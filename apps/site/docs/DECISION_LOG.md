@@ -55,3 +55,9 @@ Production readiness is represented by explicit evidence gates in `lib/release-r
 ## D-014 — Public fixture beta on CFB Apex
 
 Deploy the verified fixture application to the Cloudflare Worker custom domains `cfbapex.com` and `www.cfbapex.com`, with the latter returning a permanent redirect to the apex. The public URL authorization changes hosting scope only: fixture labels, global noindex, live-provider and commercial kill switches, and the live-launch evidence gates remain enforced. Wrangler deployment uses the reproducible `wrangler.deploy.jsonc` artifact configuration; Cloudflare creates the custom-domain DNS records and certificates.
+
+## D-2026-10-05 — Reviewed Week 6 source snapshot
+
+Use `data/cfb-2026/refresh/verified-refresh.json` for Week 6 (October 5–11). It includes 51 newly confirmed Saturday finals, 56 upcoming FBS-vs-FBS games, October 4 AP/Coaches polls, an editorial composite recomputed from those polls, and NCAA leaders through October 3. Five FBS-vs-FCS games across the queried dates are recorded separately because the current UI supports FBS vs FBS. Retain historical results and archived standings/injuries with their original dates. Builds use this reviewed snapshot deterministically; replace it after source review for the next refresh.
+
+Reconcile with main fb81b49 to preserve the independently published Saturday board, ratings comparison and ingest-first scoreboard. Current ratings are retained with their own cutoff; their Week 6 accuracy has not been independently confirmed. Production deployment requires the existing Cloudflare account credentials.

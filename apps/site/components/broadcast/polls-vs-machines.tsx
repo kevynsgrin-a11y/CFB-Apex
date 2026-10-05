@@ -99,7 +99,7 @@ export function PollsVsMachines({
         />
       </div>
       <p className="apex-data-note">
-        The polls and the computers disagree at the top. SP+ &amp; FPI after Week 4 ·
+        October 4 polls compared with retained SP+ &amp; FPI after Week 4 ·
         AP/Coaches polls released Sept 27.
       </p>
     </section>

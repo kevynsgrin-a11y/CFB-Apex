@@ -15,6 +15,7 @@
  *     network or the filesystem at request time.
  */
 import bundle from "./cfb-2026.generated.ts";
+import { easternDate, easternKickoff, gameKey, seasonWeek, weekStart } from "./game-calendar.ts";
 import type {
   Coach,
   DfsPlayer,
@@ -27,7 +28,22 @@ import type {
   Team,
 } from "./types";
 
-const asOf = "2026-10-03";
+const asOf = "2026-09-05";
+export interface CurrentMetrics {
+  source_url: string;
+  through_games: string;
+  verified_at: string;
+  categories: Array<{ name: string; unit: string; rows: Array<{ name: string; team: string; value: number }> }>;
+}
+interface VerifiedRefresh {
+  reference_date: string;
+  requested_cutoff: string;
+  retrieved_at: string;
+  teamRecords: Record<string, string>;
+  metrics: CurrentMetrics;
+  scheduledGames: Array<{ provider_id: string; source_url: string; kickoff_utc: string; week: number; date: string; away: string; home: string; tv: string | null; time_et: string; site: string | null; neutral_site: boolean }>;
+}
+export const verifiedRefresh = (bundle as unknown as { refreshData?: VerifiedRefresh }).refreshData ?? null;
 const datasetProvenanceRoot = {
   provider: "CFB Apex 2026 research dataset",
   sourceDocumentId: "cfb-2026-master-package (data/dist 2026-10-03)",
@@ -195,6 +211,11 @@ interface PlayedGame {
   neutral_site: boolean;
   title: string;
   teams: Array<{ name: string; slug: string; points: number }>;
+  kickoff_utc?: string | null;
+  week?: number | null;
+  source_url?: string;
+  verified_at?: string;
+  meta?: { as_of?: string };
 }
 
 const playedGames = bundle.playedGames as PlayedGame[];
@@ -218,6 +239,7 @@ for (const game of playedGames) {
 }
 
 function recordFor(slug: string) {
+  if (verifiedRefresh) return verifiedRefresh.teamRecords[slug]?.replace("-", "–") ?? "Not published";
   const wins = winsBySlug.get(slug) ?? 0;
   const losses = lossesBySlug.get(slug) ?? 0;
   return `${wins}–${losses}`;
@@ -369,12 +391,6 @@ export const teams: Team[] = datasetTeams.map((team) => {
 
 /* ---------------------------------------------------------------- games */
 
-function seasonWeek(date: string) {
-  const start = Date.parse("2026-08-29");
-  const days = (Date.parse(date) - start) / 86_400_000;
-  return Math.max(0, Math.floor(days / 7));
-}
-
 function kickoffLabel(date: string) {
   const parsed = new Date(`${date}T17:00:00Z`);
   const day = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "UTC" }).format(parsed);
@@ -392,7 +408,8 @@ function playedKickoffLabel(date: string, kickoffUtc?: string) {
 }
 
 
-const playedGameIds = new Set(playedGames.map((game) => game.game_id));
+const playedGameKeys = new Set(playedGames.map((game) => gameKey(game.kickoff_utc ?? game.date, game.away_slug, game.home_slug)));
+const playedWeekPairs = new Set(playedGames.map((game) => gameKey(weekStart(game.kickoff_utc ?? game.date), game.away_slug, game.home_slug)));
 const teamSlugs = new Set(datasetTeams.map((team) => team.slug));
 /* Only games between two of the 138 FBS programs render; FBS-vs-FCS results
    still count toward the records above. */
@@ -490,7 +507,7 @@ function buildScheduledGames(): Game[] {
       const homeTeam = isNeutral ? parts[1] : homeSlug;
       const awayTeam = isNeutral ? parts[0] : row.opponent_slug;
       const id = `${row.date}-${awayTeam}-at-${homeTeam}`;
-      if (playedGameIds.has(id)) continue;
+      if (playedGameKeys.has(key) || playedWeekPairs.has(gameKey(weekStart(row.date), awayTeam, homeTeam))) continue;
       const venue =
         row.site ?? `${teams.find((team) => team.slug === homeTeam)?.shortName ?? "Home"} home stadium`;
       const tv = broadcastFor(row.date, awayTeam, homeTeam);
@@ -498,7 +515,7 @@ function buildScheduledGames(): Game[] {
       byKey.set(key, {
         id,
         week: row.week ?? seasonWeek(row.date),
-        date: `${row.date}T17:00:00.000Z`,
+        date: easternKickoff(row.date, tv?.time_et ?? null),
         kickoffLabel: timeLabel ? `${kickoffLabel(row.date)} · ${timeLabel}` : kickoffLabel(row.date),
         status: "scheduled" as const,
         statusDetail: row.type === "conference" ? "Conference game" : "Kickoff scheduled",
@@ -516,6 +533,35 @@ function buildScheduledGames(): Game[] {
       });
     }
   }
+  // Official snapshot additions also cover matchups missing from the old schedules.
+  for (const row of verifiedRefresh?.scheduledGames ?? []) {
+    const key = gameKey(row.kickoff_utc, row.away, row.home);
+    if (playedGameKeys.has(key)) continue;
+    for (const [existingKey, existing] of byKey) {
+      if (gameKey(weekStart(existing.date), existing.awayTeamId, existing.homeTeamId) === gameKey(weekStart(row.date), row.away, row.home)) byKey.delete(existingKey);
+    }
+    const id = `${row.date}-${row.away}-at-${row.home}`;
+    byKey.set(key, {
+      id, week: row.week, date: row.kickoff_utc,
+      kickoffLabel: playedKickoffLabel(row.date, row.kickoff_utc),
+      status: "scheduled", statusDetail: "Scheduled · verified source snapshot",
+      awayTeamId: row.away, homeTeamId: row.home, venueSlug: row.home,
+      venue: row.site ?? "Not published", city: "", broadcast: row.tv,
+      weather: null, neutralSite: row.neutral_site,
+      modelHomeWinProbability: 0.5, modelUncertainty: 0,
+      provenance: { ...derivedProvenance(id), sourceUrl: row.source_url,
+        sourceAsOf: verifiedRefresh?.requested_cutoff ?? row.date,
+        fetchedAt: verifiedRefresh?.retrieved_at ?? row.date,
+        verifiedAt: verifiedRefresh?.retrieved_at ?? row.date },
+    });
+  }
+  if (verifiedRefresh) {
+    const currentWeek = weekStart(verifiedRefresh.reference_date);
+    const verifiedKeys = new Set(verifiedRefresh.scheduledGames.map((row) => gameKey(row.kickoff_utc, row.away, row.home)));
+    for (const [key, game] of byKey) {
+      if (weekStart(game.date) === currentWeek && !verifiedKeys.has(key)) byKey.delete(key);
+    }
+  }
   return [...byKey.values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
@@ -526,9 +572,9 @@ export const games: Game[] = [
     const id = game.game_id;
     return {
       id,
-      week: seasonWeek(game.date),
+      week: game.week ?? seasonWeek(game.kickoff_utc ?? game.date),
       date: (game as { kickoff_utc?: string }).kickoff_utc ?? `${game.date}T17:00:00.000Z`,
-      kickoffLabel: playedKickoffLabel(game.date, (game as { kickoff_utc?: string }).kickoff_utc),
+      kickoffLabel: playedKickoffLabel(easternDate(game.kickoff_utc ?? game.date), game.kickoff_utc ?? undefined),
       status: "final" as const,
       statusDetail: game.title,
       awayTeamId: game.away_slug,
@@ -538,12 +584,18 @@ export const games: Game[] = [
       venueSlug: game.home_slug,
       venue: game.site ?? `${home?.name ?? "Home"} stadium`,
       city: "",
-      broadcast: broadcastFor(game.date, game.away_slug, game.home_slug)?.tv ?? game.tv ?? null,
+      broadcast: broadcastFor(easternDate(game.kickoff_utc ?? game.date), game.away_slug, game.home_slug)?.tv ?? game.tv ?? null,
       weather: null,
       neutralSite: game.neutral_site,
       modelHomeWinProbability: 0.5,
       modelUncertainty: 0,
-      provenance: derivedProvenance(id),
+      provenance: {
+        ...derivedProvenance(id),
+        sourceUrl: game.source_url,
+        sourceAsOf: game.meta?.as_of ?? asOf,
+        fetchedAt: game.verified_at ?? game.meta?.as_of ?? asOf,
+        verifiedAt: game.verified_at ?? game.meta?.as_of ?? asOf,
+      },
     };
   }),
   ...buildScheduledGames(),
@@ -988,7 +1040,7 @@ export const seasonRules: SeasonRules = {
 };
 
 export const scenarioGames: ScenarioGame[] = games
-  .filter((game) => game.status === "scheduled")
+  .filter((game) => game.status === "scheduled" && easternDate(game.date) >= (verifiedRefresh?.reference_date ?? "2026-09-05"))
   .slice(0, 24)
   .map((game) => ({
     id: game.id,
