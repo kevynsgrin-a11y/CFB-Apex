@@ -1,0 +1,57 @@
+{
+ "as_of": "2026-10-05",
+ "week": 6,
+ "source_engines": "ZCode (GLM) ingestion of the Gemini P5 verification pass. Selection criterion unchanged: individual dominance weighted by team result and opponent quality; every line box-score-sourced (OPB/AP, SI, Oregon State Athletics, hokiesports.com, utsports.com) and cross-checked against the verified ESPN finals.",
+ "athlete_of_the_week": {
+  "player": "Braden Atkinson",
+  "team_slug": "oregon-state",
+  "position": "QB",
+  "class": "So",
+  "stat_line": "31/31-of-34 (91.2%), 428 PASS YDS, 5 PASS TD, 0 INT — plus a school-record 16 consecutive completions",
+  "opponent_slug": "colorado-state",
+  "result": "W 56–26 at Colorado State (Pac-12 opener)",
+  "why": "The most efficient volume game of the season anywhere in the FBS: 31-of-34 for 428 and five scores with a school-record 16 straight completions (touchdown connections of 50, 38, and 53 yards to Jesse Legree, two more to TE Eric Olsen), on the road, in a conference opener the Beavers won by 30. The FCS-Mercer transfer now leads the FBS with 1,851 passing yards (1,423 through four games + 428 — reconciles exactly with the NCAA leader board through Oct 3).",
+  "video_url": null,
+  "sources": [
+   "https://www.opb.org/article/2026/10/03/atkinson-and-legree-team-for-big-passing-day-in-oregon-state-s-56-26-win-in-pac-12-opener/",
+   "https://www.si.com/college/oregon-state/football/oregon-state-begins-pac-12-play-with-record-breaking-win-at-colorado-state-56-26-01m41wm69k16",
+   "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
+  ],
+  "photo": null
+ },
+ "runners_up": [
+  {
+   "player": "Jamal Roberts",
+   "team_slug": "missouri",
+   "stat_line": "24 CAR, 211 RUSH YDS, 3 TD (8.8 YPC)",
+   "opponent_slug": "florida",
+   "result": "W 45–17 vs No. 8 Florida",
+   "why": "Broke a 10–10 tie almost single-handedly in the homecoming rout of a top-ten team."
+  },
+  {
+   "player": "DeSean Bishop",
+   "team_slug": "tennessee",
+   "stat_line": "34 CAR, 220 RUSH YDS, 3 TD",
+   "opponent_slug": "auburn",
+   "result": "W 24–14 vs Auburn",
+   "why": "Turned a 7–3 halftime deficit into a workhorse road win — 34 carries against an SEC front."
+  },
+  {
+   "player": "Ethan Grunkemeyer",
+   "team_slug": "virginia-tech",
+   "stat_line": "30/41, 434 PASS YDS, 3 TD, 1 INT + 1 RUSH TD",
+   "opponent_slug": "pittsburgh",
+   "result": "L 33–35 vs Pittsburgh (Fri)",
+   "why": "Second-most passing yards in Virginia Tech history (behind Bryan Randall's 504 in 2002) — in a loss, which keeps him off the top slot."
+  },
+  {
+   "player": "Jesse Legree",
+   "team_slug": "oregon-state",
+   "stat_line": "5 REC, 157 YDS, 3 TD (31.4 YPC)",
+   "opponent_slug": "colorado-state",
+   "result": "W 56–26 at Colorado State",
+   "why": "Fifth consecutive 100-yard game — only Mike Haas (2005) and Brandin Cooks (2013) had done it at Oregon State."
+  }
+ ],
+ "pending_research": "none — class year (So) per the report's roster citation; verify against Oregon State's official roster page at next snapshot."
+}
