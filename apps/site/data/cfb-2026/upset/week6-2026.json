@@ -1,0 +1,148 @@
+{
+ "as_of": "2026-10-05",
+ "week": 6,
+ "source_engines": "ZCode (GLM) ingestion of the Gemini P8 research pass (Oct 4-5 window; every price carries a named reporting outlet and an eligible date: AgentBets-reported FanDuel at Oct 5 10:01 UTC, DraftKings via Boise State on SI/Yahoo at Oct 4 20:00 UTC, DraftKings via Blue Chip Analytics updated Oct 5, VSiN Oct 4). Not a live sportsbook feed. All team records and recent-form scores verified against the site's Oct 5 snapshot.",
+ "picks": [
+  {
+   "away_slug": "houston",
+   "home_slug": "kansas-state",
+   "line": "Houston +2.5",
+   "line_source": "AgentBets reporting FanDuel; Oct 5, 2026, 10:01 UTC (Action Network carried Kansas State -2.5 in the same window)",
+   "case": "The matchup the number misses: Houston's run defense (65.4 rushing yards allowed per game) meets a Kansas State offense that wants to run it (240.8), and Kansas State on SI documented seven plays of 20+ yards allowed in the Cincinnati loss — the explosive-play vulnerability Houston's defense can force the game away from. Houston arrives 4-1 having won three straight.",
+   "confidence": "live_dog",
+   "race_effect": "A Houston road win reshuffles the Big 12 middle and drops Kansas State to 3-2 with the Cincinnati loss already on the sheet.",
+   "sources": [
+    "https://agentbets.ai/odds/fanduel/ncaaf/",
+    "https://ca.sports.yahoo.com/news/kansas-state-squares-off-against-194453983.html"
+   ]
+  },
+  {
+   "away_slug": "wake-forest",
+   "home_slug": "nc-state",
+   "line": "NC State +3.5",
+   "line_source": "AgentBets reporting FanDuel; Oct 5, 2026, 10:01 UTC (Action Network carried Wake Forest -3 in the same window)",
+   "case": "Third-down arithmetic: NC State converts 53.4% of its third downs against a Wake defense letting opponents convert 42.5% — and the common-opponent check shows essentially no separation (each beat Louisville by three: Wake 30-27, State 31-28). Wake's 84.8 penalty yards per game is the other free yardage source.",
+   "confidence": "live_dog",
+   "race_effect": "Both enter 4-1/3-2 in the ACC pecking order behind Miami and SMU; the winner stays on the conference-title undercard.",
+   "sources": [
+    "https://agentbets.ai/odds/fanduel/ncaaf/",
+    "https://abc11.com/post/acc-matchup-features-wake-forest-taking-nc-state/19907914/"
+   ]
+  },
+  {
+   "away_slug": "iowa",
+   "home_slug": "washington",
+   "line": "Iowa +2.5",
+   "line_source": "AgentBets reporting FanDuel; Oct 5, 2026, 10:01 UTC (Friday game, Oct 9)",
+   "case": "Iowa's 12.6 points allowed per game against a Washington offense converting just 29.0% of third downs and drawing 77.8 penalty yards a game — the recipe for the low-possession game Iowa wants on a Friday night. The Huskies' +5 turnover margin is the counterweight that keeps this a field-goal number.",
+   "confidence": "live_dog",
+   "race_effect": "Washington has already lost to USC at home; a second home loss effectively ends the Big Ten at-large conversation at 3-3.",
+   "sources": [
+    "https://agentbets.ai/odds/fanduel/ncaaf/",
+    "https://ca.sports.yahoo.com/news/washington-no-20-iowa-meet-194515520.html"
+   ]
+  },
+  {
+   "away_slug": "boise-state",
+   "home_slug": "fresno-state",
+   "line": "Fresno State +7.5",
+   "line_source": "DraftKings via Boise State on SI / Bob Lundeberg (Yahoo); Oct 4, 2026, 20:00 UTC — DK opened Boise -9.5 and fell to -7.5, a documented move toward Fresno",
+   "case": "Fresno is 4-1 with a +8 turnover margin and just held Washington State to six points behind five sacks and two takeaways (Fresno Bee) — and Boise's pass defense allows 258.2 yards per game. The books felt the disruption case first: the number dropped two points off the open.",
+   "confidence": "live_dog",
+   "race_effect": "The Mountain West race runs through this game and the NDSU crossover — a Fresno win puts the conference's automatic-bid leverage in play with the Bison also unbeaten in league play.",
+   "sources": [
+    "https://sports.yahoo.com/articles/point-spread-betting-odds-no-200002745.html",
+    "https://ca.sports.yahoo.com/news/pac-12-matchup-features-no-194457410.html"
+   ]
+  },
+  {
+   "away_slug": "ucla",
+   "home_slug": "oregon",
+   "line": "UCLA +11.5",
+   "line_source": "AgentBets reporting FanDuel; Oct 5, 2026, 10:01 UTC — Ducks Wire reported FanDuel -12.5 at open moving to -11.5, a same-book move toward UCLA",
+   "case": "The trench mismatch is real even at two touchdowns: UCLA rushes for 281.5 a game (No. 4 in the FBS) against 91.3 allowed, holds a +8 turnover margin, and the Ducks' quarterback is in concussion protocol with Dylan Raiola possible — the report's own documented line move toward UCLA happened BECAUSE of the Moore uncertainty.",
+   "confidence": "live_dog",
+   "race_effect": "A 5-0 UCLA exit from Eugene with a ranked win would be the Bruins' first statement result and crashes the Pac-12's (and Oregon's at-large) margin.",
+   "sources": [
+    "https://agentbets.ai/odds/fanduel/ncaaf/",
+    "https://abc7.com/post/no-13-oregon-hosts-21-ucla/19907903/"
+   ]
+  }
+ ],
+ "candidate_pool": [
+  {
+   "away_slug": "lsu",
+   "home_slug": "kentucky",
+   "line": "LSU -10 (DraftKings via A Sea of Blue, Oct 5)",
+   "angle": "RESERVE — injury dependent: Kentucky's availability filings decide whether the five OUTs shrink the gap"
+  },
+  {
+   "away_slug": "texas-am",
+   "home_slug": "missouri",
+   "line": "Missouri -3.5 (FanDuel via AgentBets)",
+   "angle": "RESERVE — the metrics-contradicted line (A&M rated higher) is undercut by the Aggies' recent losses"
+  },
+  {
+   "away_slug": "ucf",
+   "home_slug": "oklahoma-state",
+   "line": "Oklahoma State -9.5 (FanDuel via AgentBets)",
+   "angle": "RESERVE — near-identical power ratings (68.0 vs 65.5) under a 9.5 number; takeaways and OSU QB uncertainty"
+  },
+  {
+   "away_slug": "georgia",
+   "home_slug": "alabama",
+   "line": "HELD — Georgia -2.5 (DraftKings/Blue Chip Oct 5) vs Alabama -1.5 (VegasInsider/Action Network Oct 4-5): dated sources disagree on the favorite",
+   "angle": "HOLD — no pick while the books split on the favorite"
+  },
+  {
+   "away_slug": "north-dakota-state",
+   "home_slug": "unlv",
+   "line": "VSiN market report NDSU -3, DK opened -4 (Oct 4, 22:30 ET); no DK/FD/ESPN BET spread published",
+   "angle": "PASS — the 5-0 Bison are the reported favorite, not the underdog"
+  },
+  {
+   "away_slug": "texas",
+   "home_slug": "oklahoma",
+   "line": "Texas -7.5 (neutral, Cotton Bowl)",
+   "angle": "PASS — Oklahoma's offensive line losses and turnover exposure point the wrong way for an underdog"
+  },
+  {
+   "away_slug": "south-carolina",
+   "home_slug": "florida",
+   "line": "Florida -14.5 (FanDuel via AgentBets)",
+   "angle": "PASS — turnover exposure under two touchdowns"
+  },
+  {
+   "away_slug": "ole-miss",
+   "home_slug": "vanderbilt",
+   "line": "Ole Miss -10.5 (FanDuel via AgentBets)",
+   "angle": "PASS — Vanderbilt quarterback uncertainty"
+  },
+  {
+   "away_slug": "virginia-tech",
+   "home_slug": "california",
+   "line": "Virginia Tech -9.5 (FanDuel via AgentBets)",
+   "angle": "PASS — Cal is the underdog here, not the side"
+  },
+  {
+   "away_slug": "tulane",
+   "home_slug": "army",
+   "line": "Army -3.5 (FanDuel via AgentBets; Action Network same)",
+   "angle": "PASS — run-defense mismatch"
+  },
+  {
+   "away_slug": "stanford",
+   "home_slug": "notre-dame",
+   "line": "Notre Dame -37.5",
+   "angle": "PASS — no verified outright case"
+  }
+ ],
+ "pending_research": null,
+ "trap": {
+  "away_slug": "usc",
+  "home_slug": "penn-state",
+  "line": "Penn State -1.5 (DraftKings via Blue Chip Analytics, updated Oct 5; VSiN reported DK opened USC -2.5 before the reversal)",
+  "why": "The trap writes itself: a 5-1 USC team getting points from a Penn State side on consecutive losses (24-20 Wisconsin, 13-34 Northwestern), with the winning-record narrative pulling public money to the underdog. The evidence says lay the wood anyway: Penn State's pass defense allows 119.6 yards per game — aimed directly at USC's 311.7-yards-per-game passing identity — and the Trojans carry a negative turnover margin against the Nittany Lions' +6. VSiN documented DraftKings opening USC -2.5 and REVERSING to Penn State -1.5: the market already did the trap analysis. Take the favorite, not the story."
+ },
+ "notes": "Every price carries a named reporting outlet and an eligible Oct 4-5 date (AgentBets-reported FanDuel; DraftKings via Boise State on SI/Yahoo and Blue Chip Analytics; VSiN). ESPN BET quotes were not published in the window — a theScore Bet result is not silently reclassified. Public ticket/handle percentages: not published. Georgia-Alabama held on conflicting side reports. Slate correction riding this pass: Tulane at Army is Army -3.5 (the earlier P1 ingestion misread the fragmented favorite column)."
+}
