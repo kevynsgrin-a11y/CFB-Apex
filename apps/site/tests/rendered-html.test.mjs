@@ -220,7 +220,11 @@ test("audit week 6: forbidden stale strings never ship; verified additions rende
   const byPath = new Map(pages);
   assert.match(byPath.get("/") ?? "", /College GameDay · Tuscaloosa · Sat Oct 10 · ESPN/);
   assert.match(byPath.get("/") ?? "", /WEEK 6 · OCT 6–10 · AS OF 2026-10-05/);
-  assert.match(byPath.get("/") ?? "", /SNAPSHOT 07:24 UTC/);
+  assert.match(byPath.get("/") ?? "", /SNAPSHOT 2026-10-05 07:24 UTC/);
+  assert.match(byPath.get("/") ?? "", /FINALS VERIFIED 2026-10-09 \d\d:\d\d UTC/);
+  assert.match(byPath.get("/") ?? "", /Thursday finals: Liberty, Western Kentucky, UTSA and South Alabama win/);
+  assert.match(byPath.get("/") ?? "", /games? played since then (is|are) not yet included/);
+  assert.doesNotMatch(byPath.get("/") ?? "", /These are season totals, updated after completed games/);
   assert.match(byPath.get("/") ?? "", /POLLS RELEASED 2026-10-04/);
   assert.match(byPath.get("/") ?? "", /SP\+ CONTRAST · AS OF Sep 27/);
   assert.match(byPath.get("/") ?? "", /North Dakota State/);
@@ -238,4 +242,29 @@ test("audit week 6: forbidden stale strings never ship; verified additions rende
   assert.doesNotMatch(byPath.get("/injuries") ?? "", /report not yet published/);
   assert.match(byPath.get("/data-sources") ?? "", /VERIFIED SNAPSHOT/);
   assert.match(byPath.get("/data-sources") ?? "", /Open holds/);
+});
+
+test("Oct 9 refresh: midweek finals render as finals, not as upcoming games", async () => {
+  const visible = async (path) =>
+    (await (await fetchRoute(path)).text())
+      .replace(/<script[\s\S]*?<\/script>/g, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ");
+  const home = await visible("/");
+  // Homepage week board: Tue-Thu rows are finals with scores, no kickoff times.
+  assert.match(home, /Tue, Oct 6 final Southern Miss 34 Troy 55 Final/);
+  assert.match(home, /Thu, Oct 8 final Sam Houston 3 Liberty 35 Final/);
+  // Every Tue-Thu board row is a final; no midweek row carries a kickoff/TV slot.
+  assert.doesNotMatch(home, /(Tue, Oct 6|Wed, Oct 7|Thu, Oct 8) (?!final\b)/);
+  assert.match(home, /Hawai.i at Arizona State FS1|10:30 PM ET Hawai/);
+  const game = await visible("/games/2026-10-08-south-florida-at-utsa");
+  assert.match(game, /South Florida Bulls at UTSA Roadrunners final/);
+  assert.doesNotMatch(game, /South Florida Bulls at UTSA Roadrunners game preview/);
+  assert.match(game, /Thu · 2026-10-08 · 7:30 PM ET/);
+  const troy = await visible("/teams/troy");
+  assert.match(troy, /Oct 6 vs Southern Miss[\s\S]{0,80}W 55–34 FINAL/);
+  const rankings = await visible("/rankings");
+  assert.match(rankings, /as of 2026-10-09/);
+  assert.match(rankings, /UTSA 2 0 0 1\.000 5-1/);
+  assert.match(rankings, /South Florida 1 2 0 0\.333 4-2/);
 });

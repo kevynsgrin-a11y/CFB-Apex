@@ -1,6 +1,7 @@
 "use client";
 
 import { featuredGame, weekGames, type HomepageData } from "@/lib/homepage";
+import { easternDate } from "@/lib/game-calendar";
 import { broadcastEventForGame, refreshStorylines, verifiedRefresh } from "@/lib/cfb-dataset";
 import { WeekHeaderStrip } from "./primitives";
 import { MarqueeGame } from "./marquee-game";
@@ -34,12 +35,24 @@ export function BroadcastHomepage({
   const weekEyebrow = verifiedRefresh
     ? `WEEK ${verifiedRefresh.week} · OCT 6–10 · AS OF ${verifiedRefresh.reference_date}`
     : null;
+  // Each chip names its own cutoff: the base snapshot, any later results
+  // verification, and the poll release are separate facts.
   const weekChips = verifiedRefresh
     ? [
-        `SNAPSHOT ${verifiedRefresh.retrieved_at.slice(11, 16)} UTC`,
+        `SNAPSHOT ${verifiedRefresh.retrieved_at.slice(0, 10)} ${verifiedRefresh.retrieved_at.slice(11, 16)} UTC`,
+        ...(verifiedRefresh.results_verified_at
+          ? [`FINALS VERIFIED ${verifiedRefresh.results_verified_at.slice(0, 10)} ${verifiedRefresh.results_verified_at.slice(11, 16)} UTC`]
+          : []),
         `POLLS RELEASED ${verifiedRefresh.polls?.[0]?.release_date ?? "—"}`,
       ]
     : [];
+  // Finals on the board that post-date the stats cutoff are not in the leader totals.
+  const metricsThrough = data.metrics?.through_games ?? null;
+  const finalsAfterMetrics = metricsThrough
+    ? data.games.filter(
+        (game) => game.status === "final" && easternDate(game.date) > metricsThrough,
+      ).length
+    : 0;
   const featured = featuredGame(slate, data.teams);
   const away = data.teams.find((team) => team.slug === featured?.awayTeamId);
   const home = data.teams.find((team) => team.slug === featured?.homeTeamId);
@@ -98,6 +111,7 @@ export function BroadcastHomepage({
           {storylines.map((story) => {
             const row = verifiedRefresh?.scheduledGames.find((g) => g.provider_id === story.game_provider_id);
             const gameId = row ? `${row.date}-${row.away}-at-${row.home}` : null;
+            const isRecap = (story.result_provider_ids?.length ?? 0) > 0;
             return (
               <article className="apex-storyline" key={story.id}>
                 <h3>{story.headline}</h3>
@@ -105,15 +119,18 @@ export function BroadcastHomepage({
                 <p className="apex-data-note">
                   {gameId ? (
                     <a href={`/games/${gameId}`}>On the board this week</a>
+                  ) : isRecap ? (
+                    <a href="/scores">Finals on the scoreboard</a>
                   ) : null}
-                  {story.sources[0] ? (
-                    <>
+                  {story.as_of ? ` · As of ${story.as_of}` : null}
+                  {story.sources.map((source, index) => (
+                    <span key={source}>
                       {" · "}
-                      <a href={story.sources[0]} target="_blank" rel="noopener noreferrer">
-                        Source
+                      <a href={source} target="_blank" rel="noopener noreferrer">
+                        {story.sources.length > 1 ? `Source ${index + 1}` : "Source"}
                       </a>
-                    </>
-                  ) : null}
+                    </span>
+                  ))}
                 </p>
               </article>
             );
@@ -139,7 +156,7 @@ export function BroadcastHomepage({
         preseasonRatings={data.preseasonRatings}
         teams={data.teams}
       />
-      {data.metrics ? <CurrentMetricsLane metrics={data.metrics} /> : null}
+      {data.metrics ? <CurrentMetricsLane metrics={data.metrics} finalsSince={finalsAfterMetrics} /> : null}
       <FantasyLane
         fantasyNotes={data.fantasyNotes}
         teams={data.teams}

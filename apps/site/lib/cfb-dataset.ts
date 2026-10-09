@@ -51,6 +51,9 @@ export interface StorylineRow {
   headline: string;
   body: string;
   game_provider_id: string | null;
+  /** Finals a results recap covers (provider ids in playedGames). */
+  result_provider_ids?: string[];
+  as_of?: string;
   sources: string[];
 }
 interface PollNoteMove { team: string; team_slug: string; from: number; to: number; move: number }
@@ -64,11 +67,14 @@ interface VerifiedRefresh {
   teamRecords: Record<string, string>;
   metrics: CurrentMetrics;
   playedGames?: unknown[];
-  scheduledGames: Array<{ provider_id: string; source_url: string; kickoff_utc: string; week: number; date: string; away: string; home: string; tv: string | null; time_et: string; site: string | null; neutral_site: boolean }>;
+  scheduledGames: Array<{ provider_id: string; source_url: string; kickoff_utc: string; week: number; date: string; away: string; home: string; tv: string | null; time_et: string; site: string | null; neutral_site: boolean; verified_at?: string; game_status?: string }>;
   excludedGames?: Array<{ provider_id: string; name: string; reason: string; date: string; espn_conference_ids?: { home: number; away: number } }>;
   source_urls?: string[];
   holds?: string[];
   audit_applied_at?: string;
+  /** When the latest incremental results refresh verified finals (not the base snapshot time). */
+  results_verified_at?: string;
+  refresh_log?: Array<{ applied_at: string; script: string; scope: string }>;
   broadcast_events?: BroadcastEventRow[];
   storylines?: StorylineRow[];
   ranked_matchups?: Array<{ game_id: string; matchup: string; polls: string[] }>;
@@ -80,7 +86,7 @@ interface VerifiedRefresh {
     poll_gaps: { ap_only: PollGapSide[]; coaches_only: PollGapSide[]; biggest_splits: PollGapSide[] };
     sources: string[];
   };
-  retainedBaseline?: { conferenceStandings: ConferenceStanding[]; espnInjuries: { asOf: string | null; entries: unknown[] } | null; as_of: string; note: string };
+  retainedBaseline?: { conferenceStandings: ConferenceStanding[]; espnInjuries: { asOf: string | null; entries: unknown[] } | null; as_of: string; note: string; verified_at?: string };
 }
 export const verifiedRefresh = (bundle as unknown as { refreshData?: VerifiedRefresh }).refreshData ?? null;
 export const broadcastEvents = verifiedRefresh?.broadcast_events ?? [];
@@ -607,10 +613,11 @@ function buildScheduledGames(): Game[] {
       venue: row.site ?? "Not published", city: "", broadcast: row.tv,
       weather: null, neutralSite: row.neutral_site,
       modelHomeWinProbability: 0.5, modelUncertainty: 0,
+      // Each row carries its own last verification; fall back to the base snapshot.
       provenance: { ...derivedProvenance(id), sourceUrl: row.source_url,
-        sourceAsOf: verifiedRefresh?.requested_cutoff ?? row.date,
-        fetchedAt: verifiedRefresh?.retrieved_at ?? row.date,
-        verifiedAt: verifiedRefresh?.retrieved_at ?? row.date },
+        sourceAsOf: row.verified_at ?? verifiedRefresh?.requested_cutoff ?? row.date,
+        fetchedAt: row.verified_at ?? verifiedRefresh?.retrieved_at ?? row.date,
+        verifiedAt: row.verified_at ?? verifiedRefresh?.retrieved_at ?? row.date },
     });
   }
   if (verifiedRefresh) {
@@ -1186,7 +1193,8 @@ export function getTeamSchedule(slug: string): TeamScheduleGame[] | null {
     const broadcast = row.date && row.opponent_slug ? broadcastFor(row.date, slug, row.opponent_slug) : null;
     const displayGame = games.find(
       (game) =>
-        game.date.startsWith(row.date ?? "not-published") &&
+        // Compare Eastern calendar dates: a Tuesday 8 PM ET kickoff is Wednesday in UTC.
+        easternDate(game.date) === (row.date ?? "not-published") &&
         ((game.homeTeamId === slug && game.awayTeamId === row.opponent_slug) ||
           (game.awayTeamId === slug && game.homeTeamId === row.opponent_slug)),
     );

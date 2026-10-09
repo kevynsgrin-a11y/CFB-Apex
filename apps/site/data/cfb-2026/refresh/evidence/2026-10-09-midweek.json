@@ -1,0 +1,72 @@
+{
+ "schema_version": 1,
+ "scope": "Week 6 midweek finals (Tue Oct 6 - Thu Oct 8, 2026) and the remaining Oct 9-10 slate",
+ "note": "Second-source checks made by hand from the verification session. ESPN checks are re-run and timestamped by scripts/apply-week6-midweek-finals.mjs at apply time. checked_at is the UTC time the page was read: 11:03:54Z is exact (clock read immediately after the re-check); values ending in :00 are approximate to within about 5 minutes.",
+ "official_checks": [
+  {
+   "source": "Conference USA official standings",
+   "url": "https://conferenceusa.com/standings.aspx?path=football",
+   "checked_at": "2026-10-09T11:03:54Z",
+   "first_checked_at": "2026-10-09T10:41:00Z",
+   "finding": "Conference / overall: Jax State 2-0 / 4-2; Liberty 2-0 / 5-1; FIU 1-0 / 3-2; NM State 1-1 / 2-4; WKU 1-1 / 2-4; Sam Houston 0-1 / 1-4; Missouri State 0-1 / 1-4; Kennesaw State 0-1 / 1-4. Consistent with the four CUSA finals (Oct 7 x2, Oct 8 x2). Page carries no as-of stamp.",
+   "corroborates": ["401871051", "401871066", "401870766", "401871052"]
+  },
+  {
+   "source": "Sun Belt Conference official standings",
+   "url": "https://sunbeltsports.org/standings.aspx?path=football",
+   "checked_at": "2026-10-09T10:39:00Z",
+   "finding": "Conference / overall: South Alabama 2-0 / 4-2; Troy 1-0 / 3-2; Arkansas State 0-2 / 2-4; Southern Miss 0-1 / 1-4. Consistent with Troy 55-34 Southern Miss (Oct 6) and South Alabama 56-49 Arkansas State (Oct 8). The apply script re-reads this page and stamps its own time.",
+   "corroborates": ["401871090", "401869933"]
+  },
+  {
+   "source": "American Conference official standings",
+   "url": "https://theamerican.org/standings.aspx?path=football",
+   "checked_at": "2026-10-09T11:03:54Z",
+   "first_checked_at": "2026-10-09T10:41:00Z",
+   "finding": "NOT YET UPDATED at check time: UTSA 1-0 / 4-1 and South Florida 1-1 / 4-1 (pre-game records). UTSA 31-24 South Florida is therefore single-sourced to ESPN (STATUS_FINAL, completed, quarter line score sums to the final).",
+   "corroborates": []
+  },
+  {
+   "source": "UTSA Athletics football schedule",
+   "url": "https://goutsa.com/sports/football/schedule",
+   "checked_at": "2026-10-09T11:03:54Z",
+   "finding": "No result posted for Oct 8 vs South Florida at check time (kickoff 6:30 PM CDT shown).",
+   "corroborates": []
+  },
+  {
+   "source": "USF Athletics football schedule",
+   "url": "https://gousfbulls.com/sports/football/schedule",
+   "checked_at": "2026-10-09T10:42:00Z",
+   "finding": "No result posted for Oct 8 at UTSA at check time (7:30 p.m. listed).",
+   "corroborates": []
+  },
+  {
+   "source": "Arizona State Athletics football schedule",
+   "url": "https://thesundevils.com/sports/football/schedule",
+   "checked_at": "2026-10-09T10:58:00Z",
+   "finding": "Hawai'i at Arizona State, Oct 10: 7:30 PM MST, FS1, Mountain America Stadium. 7:30 PM MST = 2026-10-11T02:30Z = 10:30 PM ET. The Oct 5 snapshot carried 01:30Z (9:30 PM ET); ESPN now lists 02:30Z.",
+   "corrects": "401856808"
+  },
+  {
+   "source": "Big Ten Conference Week 6 football release",
+   "url": "https://bigten.org/news/2026/10/7/2026-week-6-football-release.aspx",
+   "checked_at": "2026-10-09T11:01:00Z",
+   "finding": "Released 10/7/2026 4:44:33 PM. UCLA at Oregon: 3:30 PM ET Saturday, CBS, Autzen Stadium. Indiana at Nebraska: noon ET, FOX. Both match the snapshot. The release does not mention availability reports or any player status.",
+   "corroborates": ["401858484", "401858481"]
+  },
+  {
+   "source": "Washington Athletics football schedule",
+   "url": "https://gohuskies.com/sports/football/schedule",
+   "checked_at": "2026-10-09T10:58:00Z",
+   "finding": "Iowa at Washington, Fri Oct 9: 6:00 p.m. PT (= 2026-10-10T01:00Z, matches snapshot). TV shown only as 'FOX or FS1' - not a final assignment, so the snapshot keeps tv null.",
+   "corroborates": ["401858487"]
+  },
+  {
+   "source": "Big Ten availability reports (BigTen.org)",
+   "url": "https://bigten.org/news/2026/8/28/big-ten-announces-changes-to-football-availability-reporting-process.aspx",
+   "checked_at": "2026-10-09T11:00:00Z",
+   "finding": "Policy confirmed: four reports per game, due 8 p.m. ET three, two and one day before kickoff, plus gameday. The Oregon-UCLA report pages could not be retrieved from the verification environment (HTTP 403 / fetch error), so no player designation (including Dante Moore) is recorded or changed.",
+   "corroborates": []
+  }
+ ]
+}

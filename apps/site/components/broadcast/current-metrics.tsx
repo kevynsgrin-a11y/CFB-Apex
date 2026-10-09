@@ -1,14 +1,23 @@
 import type { CurrentMetrics } from "@/lib/cfb-dataset";
 
-export function CurrentMetricsLane({ metrics }: { metrics: CurrentMetrics }) {
+export function CurrentMetricsLane({
+  metrics,
+  finalsSince = 0,
+}: {
+  metrics: CurrentMetrics;
+  /** Finals on the board played after the stats cutoff (not in these totals). */
+  finalsSince?: number;
+}) {
   return (
     <section className="apex-lane" aria-labelledby="season-leaders-title">
       <h2 id="season-leaders-title" className="font-display">
         Season leaders
       </h2>
       <p className="apex-data-note">
-        NCAA FBS totals through {metrics.through_games}. These are season
-        totals, updated after completed games.
+        NCAA FBS season totals through games of {metrics.through_games}.
+        {finalsSince > 0
+          ? ` ${finalsSince} game${finalsSince === 1 ? "" : "s"} played since then ${finalsSince === 1 ? "is" : "are"} not yet included; leaders refresh when NCAA publishes newer totals.`
+          : " Leaders refresh when NCAA publishes newer totals."}
       </p>
       <div className="apex-intelligence-grid">
         {metrics.categories.map((category) => (
