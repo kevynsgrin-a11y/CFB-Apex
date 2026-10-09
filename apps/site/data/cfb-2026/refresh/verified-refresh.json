@@ -10058,9 +10058,7 @@
      "https://www.espn.com/college-football/game/_/gameId/401864513"
     ]
    }
-  }
- ],
- "scheduledGames": [
+  },
   {
    "provider_id": "401871090",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401871090",
@@ -10072,12 +10070,43 @@
    "site": "Veterans Memorial Stadium (AL)",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "southern-miss",
-   "home": "troy",
-   "time_et": "20:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-09T11:07:58.253Z",
+   "game_id": "2026-10-06-southern-miss-at-troy",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "troy",
+     "name": "Troy",
+     "points": 55
+    },
+    {
+     "slug": "southern-miss",
+     "name": "Southern Miss",
+     "points": 34
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401871090",
+     "https://sunbeltsports.org/standings.aspx?path=football"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "southern-miss": [
+      0,
+      7,
+      20,
+      7
+     ],
+     "troy": [
+      17,
+      14,
+      10,
+      14
+     ]
+    }
+   }
   },
   {
    "provider_id": "401871051",
@@ -10090,12 +10119,43 @@
    "site": "Walens Family Field at Fifth Third Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "jacksonville-state",
-   "home": "kennesaw-state",
-   "time_et": "19:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-09T11:07:58.390Z",
+   "game_id": "2026-10-07-jacksonville-state-at-kennesaw-state",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "kennesaw-state",
+     "name": "Kennesaw St",
+     "points": 26
+    },
+    {
+     "slug": "jacksonville-state",
+     "name": "Jax State",
+     "points": 27
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401871051",
+     "https://conferenceusa.com/standings.aspx?path=football"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "jacksonville-state": [
+      0,
+      14,
+      7,
+      6
+     ],
+     "kennesaw-state": [
+      3,
+      13,
+      7,
+      3
+     ]
+    }
+   }
   },
   {
    "provider_id": "401871066",
@@ -10108,13 +10168,44 @@
    "site": "Pitbull Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-05T10:01:57.669Z",
-   "away": "new-mexico-state",
-   "home": "fiu",
-   "time_et": "19:30",
-   "status": "announced",
-   "game_status": "scheduled",
-   "correction": "Restored from excludedGames: the Oct 5 snapshot tagged New Mexico State Aggies at Florida International Panthers as FBS–FCS, but ESPN lists both schools in FBS conferences (ids 12/12)."
+   "verified_at": "2026-10-09T11:07:58.530Z",
+   "game_id": "2026-10-07-new-mexico-state-at-fiu",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "fiu",
+     "name": "FIU",
+     "points": 22
+    },
+    {
+     "slug": "new-mexico-state",
+     "name": "New Mexico St",
+     "points": 3
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401871066",
+     "https://conferenceusa.com/standings.aspx?path=football"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "new-mexico-state": [
+      0,
+      3,
+      0,
+      0
+     ],
+     "fiu": [
+      7,
+      3,
+      6,
+      6
+     ]
+    },
+    "espn_listed_start_utc": "2026-10-08T00:04Z"
+   }
   },
   {
    "provider_id": "401870766",
@@ -10127,12 +10218,43 @@
    "site": "Williams Stadium (VA)",
    "tv": "ESPNU",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "sam-houston",
-   "home": "liberty",
-   "time_et": "19:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-09T11:07:58.575Z",
+   "game_id": "2026-10-08-sam-houston-at-liberty",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "liberty",
+     "name": "Liberty",
+     "points": 35
+    },
+    {
+     "slug": "sam-houston",
+     "name": "Sam Houston",
+     "points": 3
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401870766",
+     "https://conferenceusa.com/standings.aspx?path=football"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "sam-houston": [
+      0,
+      3,
+      0,
+      0
+     ],
+     "liberty": [
+      7,
+      7,
+      7,
+      14
+     ]
+    }
+   }
   },
   {
    "provider_id": "401871052",
@@ -10145,12 +10267,43 @@
    "site": "Houchens Industries-L.T. Smith Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "missouri-state",
-   "home": "western-kentucky",
-   "time_et": "19:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-09T11:07:58.647Z",
+   "game_id": "2026-10-08-missouri-state-at-western-kentucky",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "western-kentucky",
+     "name": "Western KY",
+     "points": 34
+    },
+    {
+     "slug": "missouri-state",
+     "name": "Missouri St",
+     "points": 13
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401871052",
+     "https://conferenceusa.com/standings.aspx?path=football"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "missouri-state": [
+      3,
+      3,
+      7,
+      0
+     ],
+     "western-kentucky": [
+      7,
+      14,
+      3,
+      10
+     ]
+    }
+   }
   },
   {
    "provider_id": "401862794",
@@ -10163,12 +10316,42 @@
    "site": "Alamodome",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "south-florida",
-   "home": "utsa",
-   "time_et": "19:30",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-09T11:07:58.685Z",
+   "game_id": "2026-10-08-south-florida-at-utsa",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "utsa",
+     "name": "UTSA",
+     "points": 31
+    },
+    {
+     "slug": "south-florida",
+     "name": "South Florida",
+     "points": 24
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401862794"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "south-florida": [
+      14,
+      3,
+      0,
+      7
+     ],
+     "utsa": [
+      7,
+      3,
+      10,
+      11
+     ]
+    }
+   }
   },
   {
    "provider_id": "401869933",
@@ -10181,13 +10364,46 @@
    "site": "Centennial Bank Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "south-alabama",
-   "home": "arkansas-state",
-   "time_et": "19:30",
-   "status": "announced",
-   "game_status": "scheduled"
-  },
+   "verified_at": "2026-10-09T11:07:58.725Z",
+   "game_id": "2026-10-08-south-alabama-at-arkansas-state",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "arkansas-state",
+     "name": "Arkansas St",
+     "points": 49
+    },
+    {
+     "slug": "south-alabama",
+     "name": "South Alabama",
+     "points": 56
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-09",
+    "sources": [
+     "https://www.espn.com/college-football/game/_/gameId/401869933",
+     "https://sunbeltsports.org/standings.aspx?path=football"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "south-alabama": [
+      14,
+      20,
+      15,
+      7
+     ],
+     "arkansas-state": [
+      7,
+      21,
+      7,
+      14
+     ]
+    }
+   }
+  }
+ ],
+ "scheduledGames": [
   {
    "provider_id": "401858254",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401858254",
@@ -10199,7 +10415,7 @@
    "site": "L&N Federal Credit Union Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.262Z",
    "away": "florida-state",
    "home": "louisville",
    "time_et": "19:00",
@@ -10217,7 +10433,7 @@
    "site": "Husky Stadium",
    "tv": null,
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.262Z",
    "away": "iowa",
    "home": "washington",
    "time_et": "21:00",
@@ -10235,7 +10451,7 @@
    "site": "Maverik Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.262Z",
    "away": "washington-state",
    "home": "utah-state",
    "time_et": "21:00",
@@ -10253,7 +10469,7 @@
    "site": "CEFCU Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.262Z",
    "away": "wyoming",
    "home": "san-jose-state",
    "time_et": "21:00",
@@ -10271,7 +10487,7 @@
    "site": "LaVell Edwards Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.262Z",
    "away": "iowa-state",
    "home": "byu",
    "time_et": "22:15",
@@ -10289,7 +10505,7 @@
    "site": "Memorial Stadium (Lincoln, NE)",
    "tv": "FOX",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "indiana",
    "home": "nebraska",
    "time_et": "12:00",
@@ -10307,7 +10523,7 @@
    "site": "Memorial Stadium",
    "tv": "ABC",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "texas-am",
    "home": "missouri",
    "time_et": "12:00",
@@ -10325,7 +10541,7 @@
    "site": "Boone Pickens Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "ucf",
    "home": "oklahoma-state",
    "time_et": "12:00",
@@ -10343,7 +10559,7 @@
    "site": "Acrisure Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "north-carolina",
    "home": "pittsburgh",
    "time_et": "12:00",
@@ -10361,7 +10577,7 @@
    "site": "Milan Puskar Stadium",
    "tv": "TNT",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "arizona",
    "home": "west-virginia",
    "time_et": "12:00",
@@ -10379,7 +10595,7 @@
    "site": "Carter-Finley Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "wake-forest",
    "home": "nc-state",
    "time_et": "12:00",
@@ -10397,7 +10613,7 @@
    "site": "Michie Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "tulane",
    "home": "army",
    "time_et": "12:00",
@@ -10415,7 +10631,7 @@
    "site": "Doyt L. Perry Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "sacramento-state",
    "home": "bowling-green",
    "time_et": "12:00",
@@ -10433,7 +10649,7 @@
    "site": "Ryan Field",
    "tv": "BTN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "ball-state",
    "home": "northwestern",
    "time_et": "12:30",
@@ -10451,7 +10667,7 @@
    "site": "Ben Hill Griffin Stadium",
    "tv": "SEC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "south-carolina",
    "home": "florida",
    "time_et": "12:45",
@@ -10469,7 +10685,7 @@
    "site": "Kidd Brewer Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T10:01:57.669Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "old-dominion",
    "home": "appalachian-state",
    "time_et": "13:00",
@@ -10488,7 +10704,7 @@
    "site": "Warren McGuirk Alumni Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "miami-oh",
    "home": "umass",
    "time_et": "14:00",
@@ -10506,7 +10722,7 @@
    "site": "Cotton Bowl",
    "tv": "ABC",
    "neutral_site": true,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "texas",
    "home": "oklahoma",
    "time_et": "15:30",
@@ -10524,7 +10740,7 @@
    "site": "Notre Dame Stadium",
    "tv": "NBC",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "stanford",
    "home": "notre-dame",
    "time_et": "15:30",
@@ -10542,7 +10758,7 @@
    "site": "FirstBank Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "ole-miss",
    "home": "vanderbilt",
    "time_et": "15:30",
@@ -10560,7 +10776,7 @@
    "site": "Autzen Stadium",
    "tv": "CBS",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "ucla",
    "home": "oregon",
    "time_et": "15:30",
@@ -10578,7 +10794,7 @@
    "site": "Bill Snyder Family Stadium",
    "tv": "FOX",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "houston",
    "home": "kansas-state",
    "time_et": "15:30",
@@ -10596,7 +10812,7 @@
    "site": "Bobby Dodd Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "duke",
    "home": "georgia-tech",
    "time_et": "15:30",
@@ -10614,7 +10830,7 @@
    "site": "California Memorial Stadium",
    "tv": "ACC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "virginia-tech",
    "home": "california",
    "time_et": "15:30",
@@ -10632,7 +10848,7 @@
    "site": "Spartan Stadium",
    "tv": "FS1",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "illinois",
    "home": "michigan-state",
    "time_et": "15:30",
@@ -10650,7 +10866,7 @@
    "site": "DATCU Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "charlotte",
    "home": "north-texas",
    "time_et": "15:30",
@@ -10668,7 +10884,7 @@
    "site": "Navy-Marine Corps Memorial Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "tulsa",
    "home": "navy",
    "time_et": "15:30",
@@ -10686,7 +10902,7 @@
    "site": "InfoCision Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "eastern-michigan",
    "home": "akron",
    "time_et": "15:30",
@@ -10704,7 +10920,7 @@
    "site": "Glass Bowl",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "buffalo",
    "home": "toledo",
    "time_et": "15:30",
@@ -10722,7 +10938,7 @@
    "site": "Peden Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "central-michigan",
    "home": "ohio",
    "time_et": "15:30",
@@ -10740,7 +10956,7 @@
    "site": "Waldo Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "kent-state",
    "home": "western-michigan",
    "time_et": "15:30",
@@ -10758,7 +10974,7 @@
    "site": "Lincoln Financial Field",
    "tv": "ESPNU",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "uconn",
    "home": "temple",
    "time_et": "15:45",
@@ -10776,7 +10992,7 @@
    "site": "Dowdy-Ficklen Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "rice",
    "home": "east-carolina",
    "time_et": "16:00",
@@ -10794,7 +11010,7 @@
    "site": "Ohio Stadium",
    "tv": "BTN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "maryland",
    "home": "ohio-state",
    "time_et": "16:15",
@@ -10812,7 +11028,7 @@
    "site": "Donald W. Reynolds Razorback Stadium",
    "tv": "SEC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "tennessee",
    "home": "arkansas",
    "time_et": "16:15",
@@ -10830,7 +11046,7 @@
    "site": "Reser Stadium",
    "tv": "USA Net",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "san-diego-state",
    "home": "oregon-state",
    "time_et": "18:00",
@@ -10848,7 +11064,7 @@
    "site": "Kroger Field",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "lsu",
    "home": "kentucky",
    "time_et": "19:00",
@@ -10866,7 +11082,7 @@
    "site": "Simmons Bank Liberty Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "uab",
    "home": "memphis",
    "time_et": "19:00",
@@ -10884,7 +11100,7 @@
    "site": "Sun Bowl",
    "tv": "FS1",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "nevada",
    "home": "utep",
    "time_et": "19:00",
@@ -10902,7 +11118,7 @@
    "site": "Allegiant Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "north-dakota-state",
    "home": "unlv",
    "time_et": "19:00",
@@ -10920,7 +11136,7 @@
    "site": "Joan C. Edwards Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "coastal-carolina",
    "home": "marshall",
    "time_et": "19:00",
@@ -10938,7 +11154,7 @@
    "site": "Bryant-Denny Stadium",
    "tv": "ABC",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "georgia",
    "home": "alabama",
    "time_et": "19:30",
@@ -10956,7 +11172,7 @@
    "site": "Beaver Stadium",
    "tv": "NBC",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "usc",
    "home": "penn-state",
    "time_et": "19:30",
@@ -10974,7 +11190,7 @@
    "site": "Scott Stadium",
    "tv": "ACC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "syracuse",
    "home": "virginia",
    "time_et": "19:30",
@@ -10992,7 +11208,7 @@
    "site": "Huskie Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "air-force",
    "home": "northern-illinois",
    "time_et": "19:30",
@@ -11010,7 +11226,7 @@
    "site": "Allen E. Paulson Stadium",
    "tv": "ESPNU",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "james-madison",
    "home": "georgia-southern",
    "time_et": "19:30",
@@ -11028,7 +11244,7 @@
    "site": "Joe Aillet Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "louisiana",
    "home": "louisiana-tech",
    "time_et": "19:30",
@@ -11046,28 +11262,10 @@
    "site": "Ross-Ade Stadium",
    "tv": "BTN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "minnesota",
    "home": "purdue",
    "time_et": "20:00",
-   "status": "announced",
-   "game_status": "scheduled"
-  },
-  {
-   "provider_id": "401856808",
-   "source_url": "https://www.espn.com/college-football/game/_/gameId/401856808",
-   "date": "2026-10-10",
-   "kickoff_utc": "2026-10-11T01:30Z",
-   "week": 6,
-   "home_slug": "arizona-state",
-   "away_slug": "hawaii",
-   "site": "Mountain America Stadium",
-   "tv": "FS1",
-   "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
-   "away": "hawaii",
-   "home": "arizona-state",
-   "time_et": "21:30",
    "status": "announced",
    "game_status": "scheduled"
   },
@@ -11082,12 +11280,35 @@
    "site": "Rice-Eccles Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "kansas",
    "home": "utah",
    "time_et": "22:15",
    "status": "announced",
    "game_status": "scheduled"
+  },
+  {
+   "provider_id": "401856808",
+   "source_url": "https://www.espn.com/college-football/game/_/gameId/401856808",
+   "date": "2026-10-10",
+   "kickoff_utc": "2026-10-11T02:30Z",
+   "week": 6,
+   "home_slug": "arizona-state",
+   "away_slug": "hawaii",
+   "site": "Mountain America Stadium",
+   "tv": "FS1",
+   "neutral_site": false,
+   "verified_at": "2026-10-09T11:07:59.329Z",
+   "away": "hawaii",
+   "home": "arizona-state",
+   "time_et": "22:30",
+   "status": "announced",
+   "game_status": "scheduled",
+   "correction": "Oct 9 refresh: Kickoff corrected from 01:30Z (9:30 PM ET) to 02:30Z: Arizona State lists 7:30 PM MST (Arizona does not observe DST) and ESPN agrees.",
+   "correction_sources": [
+    "https://thesundevils.com/sports/football/schedule",
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261010&groups=80&limit=200"
+   ]
   },
   {
    "provider_id": "401860901",
@@ -11100,7 +11321,7 @@
    "site": "Valley Children's Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-05T07:24:21.400874Z",
+   "verified_at": "2026-10-09T11:07:59.329Z",
    "away": "boise-state",
    "home": "fresno-state",
    "time_et": "22:30",
@@ -11170,8 +11391,8 @@
  "teamRecords": {
   "florida-atlantic": "4-1",
   "memphis": "4-1",
-  "utsa": "4-1",
-  "south-florida": "4-1",
+  "utsa": "5-1",
+  "south-florida": "4-2",
   "north-texas": "3-2",
   "uab": "3-2",
   "tulsa": "3-2",
@@ -11233,15 +11454,15 @@
   "maryland": "2-3",
   "michigan-state": "2-3",
   "rutgers": "1-4",
-  "liberty": "4-1",
-  "jacksonville-state": "3-2",
-  "new-mexico-state": "2-3",
+  "liberty": "5-1",
+  "jacksonville-state": "4-2",
+  "new-mexico-state": "2-4",
   "delaware": "2-3",
   "middle-tennessee": "2-3",
-  "kennesaw-state": "1-3",
-  "missouri-state": "1-3",
-  "sam-houston": "1-3",
-  "western-kentucky": "1-4",
+  "kennesaw-state": "1-4",
+  "missouri-state": "1-4",
+  "sam-houston": "1-4",
+  "western-kentucky": "2-4",
   "notre-dame": "5-0",
   "uconn": "2-3",
   "toledo": "4-1",
@@ -11297,15 +11518,15 @@
   "marshall": "3-2",
   "coastal-carolina": "1-4",
   "georgia-southern": "2-3",
-  "south-alabama": "3-2",
+  "south-alabama": "4-2",
   "ulm": "0-5",
   "louisiana-tech": "2-2",
   "louisiana": "4-1",
-  "arkansas-state": "2-3",
-  "troy": "2-2",
-  "southern-miss": "1-3",
+  "arkansas-state": "2-4",
+  "troy": "3-2",
+  "southern-miss": "1-4",
   "appalachian-state": "3-1",
-  "fiu": "2-2"
+  "fiu": "3-2"
  },
  "metrics": {
   "source_url": "https://www.ncaa.com/stats/football/fbs",
@@ -11418,13 +11639,29 @@
   "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
   "https://lsusports.net/news/2026/10/4/oct-4-2026-football-national-rankings",
   "https://www.ncaa.com/stats/football/fbs",
-  "https://rolltide.com/sports/football/schedule/2026"
+  "https://rolltide.com/sports/football/schedule/2026",
+  "https://conferenceusa.com/standings.aspx?path=football",
+  "https://sunbeltsports.org/standings.aspx?path=football",
+  "https://theamerican.org/standings.aspx?path=football",
+  "https://goutsa.com/sports/football/schedule",
+  "https://gousfbulls.com/sports/football/schedule",
+  "https://thesundevils.com/sports/football/schedule",
+  "https://bigten.org/news/2026/10/7/2026-week-6-football-release.aspx",
+  "https://gohuskies.com/sports/football/schedule",
+  "https://bigten.org/news/2026/8/28/big-ten-announces-changes-to-football-availability-reporting-process.aspx",
+  "https://www.espn.com/college-football/game/_/gameId/401871090",
+  "https://www.espn.com/college-football/game/_/gameId/401871051",
+  "https://www.espn.com/college-football/game/_/gameId/401871066",
+  "https://www.espn.com/college-football/game/_/gameId/401870766",
+  "https://www.espn.com/college-football/game/_/gameId/401871052",
+  "https://www.espn.com/college-football/game/_/gameId/401862794",
+  "https://www.espn.com/college-football/game/_/gameId/401869933"
  ],
  "holds": [
   "Week 6 SP+ not independently verified; retained ratings show their own Sep 27 cutoff. FPI verified Oct 4, 2026 (The Big Lead).",
   "Same-book minute-timestamped odds and line movement not verified: the content lane carries VegasInsider/Action Network lines as of Oct 4-5 (content/research/P1-lines.md) and the gated odds mode stays closed until a timestamped book feed is wired.",
-  "Week 6 injury report published Oct 5 (Gemini research pass): 6 ledger + 33 watch rows sourced. Practice-participation statuses (Wed-Fri) arrive with the conference availability filings Oct 7-8.",
-  "No live in-season scores feed is wired: Saturday results stay 'scheduled' until the next verified snapshot ships."
+  "Week 6 injury report published Oct 5 (Gemini research pass): 6 ledger + 33 watch rows sourced. Conference availability filings due Oct 7-9 were not re-verified in the Oct 9 refresh (BigTen.org report pages unreachable from the verification environment); injury rows keep their Oct 5 cutoff.",
+  "No live in-season scores feed is wired: games move to final only through a verified snapshot refresh. The Oct 6-8 midweek finals were added Oct 9; Friday Oct 9 and Saturday Oct 10 games stay scheduled until the next verified refresh."
  ],
  "retainedBaseline": {
   "conferenceStandings": [
@@ -11434,9 +11671,18 @@
     "short": "AAC",
     "rows": [
      {
+      "team": "UTSA",
+      "team_slug": "utsa",
+      "w": "2",
+      "l": "0",
+      "t": "0",
+      "pct": "1.000",
+      "overall": "5-1"
+     },
+     {
       "team": "Florida Atlantic",
       "team_slug": "florida-atlantic",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11445,16 +11691,7 @@
      {
       "team": "Memphis",
       "team_slug": "memphis",
-      "w": "4",
-      "l": "0",
-      "t": "0",
-      "pct": "1.000",
-      "overall": "4-1"
-     },
-     {
-      "team": "UTSA",
-      "team_slug": "utsa",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11463,16 +11700,16 @@
      {
       "team": "South Florida",
       "team_slug": "south-florida",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "2",
       "t": "0",
-      "pct": "0.500",
-      "overall": "4-1"
+      "pct": "0.333",
+      "overall": "4-2"
      },
      {
       "team": "North Texas",
       "team_slug": "north-texas",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11481,7 +11718,7 @@
      {
       "team": "UAB",
       "team_slug": "uab",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11490,8 +11727,8 @@
      {
       "team": "Tulsa",
       "team_slug": "tulsa",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -11499,8 +11736,8 @@
      {
       "team": "Army",
       "team_slug": "army",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-2"
@@ -11508,7 +11745,7 @@
      {
       "team": "East Carolina",
       "team_slug": "east-carolina",
-      "w": "2",
+      "w": "0",
       "l": "0",
       "t": "0",
       "pct": "0.000",
@@ -11517,7 +11754,7 @@
      {
       "team": "Tulane",
       "team_slug": "tulane",
-      "w": "2",
+      "w": "0",
       "l": "0",
       "t": "0",
       "pct": "0.000",
@@ -11526,8 +11763,8 @@
      {
       "team": "Temple",
       "team_slug": "temple",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-3"
@@ -11535,8 +11772,8 @@
      {
       "team": "Navy",
       "team_slug": "navy",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "1-3"
@@ -11544,8 +11781,8 @@
      {
       "team": "Rice",
       "team_slug": "rice",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -11554,7 +11791,7 @@
       "team": "Charlotte",
       "team_slug": "charlotte",
       "w": "0",
-      "l": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "0-5"
@@ -11569,7 +11806,7 @@
      {
       "team": "Miami (FL)",
       "team_slug": "miami-fl",
-      "w": "5",
+      "w": "3",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11578,7 +11815,7 @@
      {
       "team": "Pittsburgh",
       "team_slug": "pittsburgh",
-      "w": "5",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11587,7 +11824,7 @@
      {
       "team": "Duke",
       "team_slug": "duke",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11596,8 +11833,8 @@
      {
       "team": "SMU",
       "team_slug": "smu",
-      "w": "4",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "4-1"
@@ -11605,8 +11842,8 @@
      {
       "team": "Wake Forest",
       "team_slug": "wake-forest",
-      "w": "4",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "4-1"
@@ -11614,8 +11851,8 @@
      {
       "team": "Virginia Tech",
       "team_slug": "virginia-tech",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -11623,8 +11860,8 @@
      {
       "team": "Clemson",
       "team_slug": "clemson",
-      "w": "3",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "3-2"
@@ -11632,8 +11869,8 @@
      {
       "team": "Florida State",
       "team_slug": "florida-state",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-2"
@@ -11641,8 +11878,8 @@
      {
       "team": "Virginia",
       "team_slug": "virginia",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-2"
@@ -11650,8 +11887,8 @@
      {
       "team": "NC State",
       "team_slug": "nc-state",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-2"
@@ -11659,8 +11896,8 @@
      {
       "team": "North Carolina",
       "team_slug": "north-carolina",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-2"
@@ -11668,8 +11905,8 @@
      {
       "team": "Syracuse",
       "team_slug": "syracuse",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-2"
@@ -11677,8 +11914,8 @@
      {
       "team": "California",
       "team_slug": "california",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-3"
@@ -11686,8 +11923,8 @@
      {
       "team": "Louisville",
       "team_slug": "louisville",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "2",
       "t": "0",
       "pct": "0.333",
       "overall": "2-3"
@@ -11695,8 +11932,8 @@
      {
       "team": "Stanford",
       "team_slug": "stanford",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "3",
       "t": "0",
       "pct": "0.250",
       "overall": "2-3"
@@ -11704,8 +11941,8 @@
      {
       "team": "Boston College",
       "team_slug": "boston-college",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -11713,8 +11950,8 @@
      {
       "team": "Georgia Tech",
       "team_slug": "georgia-tech",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-3"
@@ -11729,7 +11966,7 @@
      {
       "team": "Texas Tech",
       "team_slug": "texas-tech",
-      "w": "5",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11738,7 +11975,7 @@
      {
       "team": "BYU",
       "team_slug": "byu",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11747,7 +11984,7 @@
      {
       "team": "Utah",
       "team_slug": "utah",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11756,7 +11993,7 @@
      {
       "team": "Baylor",
       "team_slug": "baylor",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11765,8 +12002,8 @@
      {
       "team": "Arizona",
       "team_slug": "arizona",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -11774,8 +12011,8 @@
      {
       "team": "Houston",
       "team_slug": "houston",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -11783,8 +12020,8 @@
      {
       "team": "Cincinnati",
       "team_slug": "cincinnati",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -11792,7 +12029,7 @@
      {
       "team": "Oklahoma State",
       "team_slug": "oklahoma-state",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11801,8 +12038,8 @@
      {
       "team": "Kansas State",
       "team_slug": "kansas-state",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "3-1"
@@ -11810,8 +12047,8 @@
      {
       "team": "Iowa State",
       "team_slug": "iowa-state",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-2"
@@ -11819,8 +12056,8 @@
      {
       "team": "UCF",
       "team_slug": "ucf",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-2"
@@ -11828,8 +12065,8 @@
      {
       "team": "West Virginia",
       "team_slug": "west-virginia",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -11837,8 +12074,8 @@
      {
       "team": "Arizona State",
       "team_slug": "arizona-state",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-2"
@@ -11846,8 +12083,8 @@
      {
       "team": "Kansas",
       "team_slug": "kansas",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-2"
@@ -11855,8 +12092,8 @@
      {
       "team": "Colorado",
       "team_slug": "colorado",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -11864,8 +12101,8 @@
      {
       "team": "TCU",
       "team_slug": "tcu",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -11880,7 +12117,7 @@
      {
       "team": "Indiana",
       "team_slug": "indiana",
-      "w": "5",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11889,7 +12126,7 @@
      {
       "team": "Nebraska",
       "team_slug": "nebraska",
-      "w": "5",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11898,7 +12135,7 @@
      {
       "team": "UCLA",
       "team_slug": "ucla",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11907,8 +12144,8 @@
      {
       "team": "USC",
       "team_slug": "usc",
-      "w": "5",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "5-1"
@@ -11916,7 +12153,7 @@
      {
       "team": "Minnesota",
       "team_slug": "minnesota",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11925,7 +12162,7 @@
      {
       "team": "Ohio State",
       "team_slug": "ohio-state",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11934,7 +12171,7 @@
      {
       "team": "Wisconsin",
       "team_slug": "wisconsin",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11943,8 +12180,8 @@
      {
       "team": "Iowa",
       "team_slug": "iowa",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -11952,7 +12189,7 @@
      {
       "team": "Oregon",
       "team_slug": "oregon",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -11961,8 +12198,8 @@
      {
       "team": "Northwestern",
       "team_slug": "northwestern",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-1"
@@ -11970,8 +12207,8 @@
      {
       "team": "Michigan",
       "team_slug": "michigan",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -11979,8 +12216,8 @@
      {
       "team": "Penn State",
       "team_slug": "penn-state",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -11988,8 +12225,8 @@
      {
       "team": "Washington",
       "team_slug": "washington",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -11997,8 +12234,8 @@
      {
       "team": "Purdue",
       "team_slug": "purdue",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-3"
@@ -12006,8 +12243,8 @@
      {
       "team": "Illinois",
       "team_slug": "illinois",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12015,8 +12252,8 @@
      {
       "team": "Maryland",
       "team_slug": "maryland",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12024,8 +12261,8 @@
      {
       "team": "Michigan State",
       "team_slug": "michigan-state",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12033,8 +12270,8 @@
      {
       "team": "Rutgers",
       "team_slug": "rutgers",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12049,44 +12286,35 @@
      {
       "team": "Liberty",
       "team_slug": "liberty",
-      "w": "4",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
-      "overall": "4-1"
+      "overall": "5-1"
      },
      {
       "team": "Jacksonville State",
       "team_slug": "jacksonville-state",
-      "w": "3",
+      "w": "2",
+      "l": "0",
+      "t": "0",
+      "pct": "1.000",
+      "overall": "4-2"
+     },
+     {
+      "team": "FIU",
+      "team_slug": "fiu",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
       "overall": "3-2"
      },
      {
-      "team": "FIU",
-      "team_slug": "fiu",
-      "w": "2",
-      "l": "0",
-      "t": "0",
-      "pct": "0.000",
-      "overall": "2-2"
-     },
-     {
-      "team": "New Mexico State",
-      "team_slug": "new-mexico-state",
-      "w": "2",
-      "l": "0",
-      "t": "0",
-      "pct": "1.000",
-      "overall": "2-3"
-     },
-     {
       "team": "Delaware",
       "team_slug": "delaware",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12094,44 +12322,53 @@
      {
       "team": "Middle Tennessee",
       "team_slug": "middle-tennessee",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
      },
      {
-      "team": "Kennesaw State",
-      "team_slug": "kennesaw-state",
+      "team": "New Mexico State",
+      "team_slug": "new-mexico-state",
       "w": "1",
-      "l": "0",
+      "l": "1",
       "t": "0",
-      "pct": "0.000",
-      "overall": "1-3"
-     },
-     {
-      "team": "Missouri State",
-      "team_slug": "missouri-state",
-      "w": "1",
-      "l": "0",
-      "t": "0",
-      "pct": "0.000",
-      "overall": "1-3"
-     },
-     {
-      "team": "Sam Houston",
-      "team_slug": "sam-houston",
-      "w": "1",
-      "l": "0",
-      "t": "0",
-      "pct": "0.000",
-      "overall": "1-3"
+      "pct": "0.500",
+      "overall": "2-4"
      },
      {
       "team": "Western Kentucky",
       "team_slug": "western-kentucky",
       "w": "1",
-      "l": "0",
+      "l": "1",
+      "t": "0",
+      "pct": "0.500",
+      "overall": "2-4"
+     },
+     {
+      "team": "Kennesaw State",
+      "team_slug": "kennesaw-state",
+      "w": "0",
+      "l": "1",
+      "t": "0",
+      "pct": "0.000",
+      "overall": "1-4"
+     },
+     {
+      "team": "Missouri State",
+      "team_slug": "missouri-state",
+      "w": "0",
+      "l": "1",
+      "t": "0",
+      "pct": "0.000",
+      "overall": "1-4"
+     },
+     {
+      "team": "Sam Houston",
+      "team_slug": "sam-houston",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12146,7 +12383,7 @@
      {
       "team": "Notre Dame",
       "team_slug": "notre-dame",
-      "w": "5",
+      "w": "0",
       "l": "0",
       "t": "0",
       "pct": "0.000",
@@ -12155,7 +12392,7 @@
      {
       "team": "UConn",
       "team_slug": "uconn",
-      "w": "2",
+      "w": "0",
       "l": "0",
       "t": "0",
       "pct": "0.000",
@@ -12171,7 +12408,7 @@
      {
       "team": "Toledo",
       "team_slug": "toledo",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12180,8 +12417,8 @@
      {
       "team": "UMass",
       "team_slug": "umass",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -12189,7 +12426,7 @@
      {
       "team": "Central Michigan",
       "team_slug": "central-michigan",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12198,7 +12435,7 @@
      {
       "team": "Ohio",
       "team_slug": "ohio",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12207,7 +12444,7 @@
      {
       "team": "Western Michigan",
       "team_slug": "western-michigan",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12216,7 +12453,7 @@
      {
       "team": "Eastern Michigan",
       "team_slug": "eastern-michigan",
-      "w": "3",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12225,8 +12462,8 @@
      {
       "team": "Kent State",
       "team_slug": "kent-state",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-3"
@@ -12234,8 +12471,8 @@
      {
       "team": "Buffalo",
       "team_slug": "buffalo",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12243,8 +12480,8 @@
      {
       "team": "Miami (OH)",
       "team_slug": "miami-oh",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12261,8 +12498,8 @@
      {
       "team": "Akron",
       "team_slug": "akron",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12270,8 +12507,8 @@
      {
       "team": "Ball State",
       "team_slug": "ball-state",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12279,8 +12516,8 @@
      {
       "team": "Sacramento State",
       "team_slug": "sacramento-state",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12295,7 +12532,7 @@
      {
       "team": "North Dakota State",
       "team_slug": "north-dakota-state",
-      "w": "5",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12304,7 +12541,7 @@
      {
       "team": "New Mexico",
       "team_slug": "new-mexico",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12313,8 +12550,8 @@
      {
       "team": "Air Force",
       "team_slug": "air-force",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-1"
@@ -12322,7 +12559,7 @@
      {
       "team": "San José State",
       "team_slug": "san-jose-state",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12331,7 +12568,7 @@
      {
       "team": "UNLV",
       "team_slug": "unlv",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12340,8 +12577,8 @@
      {
       "team": "Wyoming",
       "team_slug": "wyoming",
-      "w": "2",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "2-3"
@@ -12349,8 +12586,8 @@
      {
       "team": "Nevada",
       "team_slug": "nevada",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-3"
@@ -12358,8 +12595,8 @@
      {
       "team": "UTEP",
       "team_slug": "utep",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12367,8 +12604,8 @@
      {
       "team": "Hawai'i",
       "team_slug": "hawaii",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "3",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12392,7 +12629,7 @@
      {
       "team": "Boise State",
       "team_slug": "boise-state",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12401,7 +12638,7 @@
      {
       "team": "Fresno State",
       "team_slug": "fresno-state",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12410,7 +12647,7 @@
      {
       "team": "Oregon State",
       "team_slug": "oregon-state",
-      "w": "3",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12419,7 +12656,7 @@
      {
       "team": "San Diego State",
       "team_slug": "san-diego-state",
-      "w": "2",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12428,8 +12665,8 @@
      {
       "team": "Colorado State",
       "team_slug": "colorado-state",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12437,8 +12674,8 @@
      {
       "team": "Texas State",
       "team_slug": "texas-state",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12446,8 +12683,8 @@
      {
       "team": "Utah State",
       "team_slug": "utah-state",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12455,8 +12692,8 @@
      {
       "team": "Washington State",
       "team_slug": "washington-state",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12471,7 +12708,7 @@
      {
       "team": "Alabama",
       "team_slug": "alabama",
-      "w": "5",
+      "w": "3",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12480,7 +12717,7 @@
      {
       "team": "Georgia",
       "team_slug": "georgia",
-      "w": "5",
+      "w": "3",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12489,7 +12726,7 @@
      {
       "team": "Texas",
       "team_slug": "texas",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12498,8 +12735,8 @@
      {
       "team": "Florida",
       "team_slug": "florida",
-      "w": "4",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "4-1"
@@ -12507,8 +12744,8 @@
      {
       "team": "Kentucky",
       "team_slug": "kentucky",
-      "w": "4",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "4-1"
@@ -12516,8 +12753,8 @@
      {
       "team": "Mississippi State",
       "team_slug": "mississippi-state",
-      "w": "4",
-      "l": "0",
+      "w": "2",
+      "l": "1",
       "t": "0",
       "pct": "0.667",
       "overall": "4-1"
@@ -12525,8 +12762,8 @@
      {
       "team": "LSU",
       "team_slug": "lsu",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -12534,8 +12771,8 @@
      {
       "team": "Missouri",
       "team_slug": "missouri",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -12543,8 +12780,8 @@
      {
       "team": "Tennessee",
       "team_slug": "tennessee",
-      "w": "4",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "4-1"
@@ -12552,8 +12789,8 @@
      {
       "team": "Ole Miss",
       "team_slug": "ole-miss",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "1",
       "t": "0",
       "pct": "0.500",
       "overall": "3-1"
@@ -12561,8 +12798,8 @@
      {
       "team": "Auburn",
       "team_slug": "auburn",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "2",
       "t": "0",
       "pct": "0.333",
       "overall": "3-2"
@@ -12570,8 +12807,8 @@
      {
       "team": "Texas A&M",
       "team_slug": "texas-am",
-      "w": "3",
-      "l": "0",
+      "w": "1",
+      "l": "2",
       "t": "0",
       "pct": "0.333",
       "overall": "3-2"
@@ -12579,8 +12816,8 @@
      {
       "team": "Vanderbilt",
       "team_slug": "vanderbilt",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -12588,8 +12825,8 @@
      {
       "team": "Oklahoma",
       "team_slug": "oklahoma",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "2-2"
@@ -12597,8 +12834,8 @@
      {
       "team": "Arkansas",
       "team_slug": "arkansas",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12606,8 +12843,8 @@
      {
       "team": "South Carolina",
       "team_slug": "south-carolina",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "3",
       "t": "0",
       "pct": "0.000",
       "overall": "2-3"
@@ -12622,7 +12859,7 @@
      {
       "team": "James Madison",
       "team_slug": "james-madison",
-      "w": "5",
+      "w": "2",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12631,7 +12868,7 @@
      {
       "team": "Georgia State",
       "team_slug": "georgia-state",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12640,7 +12877,7 @@
      {
       "team": "Appalachian State",
       "team_slug": "appalachian-state",
-      "w": "3",
+      "w": "0",
       "l": "0",
       "t": "0",
       "pct": "0.000",
@@ -12649,8 +12886,8 @@
      {
       "team": "Marshall",
       "team_slug": "marshall",
-      "w": "3",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "3-2"
@@ -12658,7 +12895,7 @@
      {
       "team": "Georgia Southern",
       "team_slug": "georgia-southern",
-      "w": "2",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12667,8 +12904,8 @@
      {
       "team": "Coastal Carolina",
       "team_slug": "coastal-carolina",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12676,8 +12913,8 @@
      {
       "team": "Old Dominion",
       "team_slug": "old-dominion",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
       "overall": "1-4"
@@ -12685,7 +12922,7 @@
      {
       "team": "Louisiana",
       "team_slug": "louisiana",
-      "w": "4",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12694,7 +12931,16 @@
      {
       "team": "South Alabama",
       "team_slug": "south-alabama",
-      "w": "3",
+      "w": "2",
+      "l": "0",
+      "t": "0",
+      "pct": "1.000",
+      "overall": "4-2"
+     },
+     {
+      "team": "Troy",
+      "team_slug": "troy",
+      "w": "1",
       "l": "0",
       "t": "0",
       "pct": "1.000",
@@ -12703,16 +12949,7 @@
      {
       "team": "Louisiana Tech",
       "team_slug": "louisiana-tech",
-      "w": "2",
-      "l": "0",
-      "t": "0",
-      "pct": "0.000",
-      "overall": "2-2"
-     },
-     {
-      "team": "Troy",
-      "team_slug": "troy",
-      "w": "2",
+      "w": "0",
       "l": "0",
       "t": "0",
       "pct": "0.000",
@@ -12721,26 +12958,26 @@
      {
       "team": "Arkansas State",
       "team_slug": "arkansas-state",
-      "w": "2",
-      "l": "0",
+      "w": "0",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
-      "overall": "2-3"
+      "overall": "2-4"
      },
      {
       "team": "Southern Miss",
       "team_slug": "southern-miss",
-      "w": "1",
-      "l": "0",
+      "w": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
-      "overall": "1-3"
+      "overall": "1-4"
      },
      {
       "team": "ULM",
       "team_slug": "ulm",
       "w": "0",
-      "l": "0",
+      "l": "1",
       "t": "0",
       "pct": "0.000",
       "overall": "0-5"
@@ -12761,8 +12998,9 @@
     }
    ]
   },
-  "as_of": "2026-10-05",
-  "note": "Conference standings re-pulled from ESPN on 2026-10-05 (Sun Belt divisions flattened; every row slug-linked). ESPN injury base retained at its previous 2026-09-29 cutoff."
+  "as_of": "2026-10-09",
+  "note": "Conference standings re-read from ESPN at 2026-10-09T11:07:58.991Z using each team's conference split (W/L/T) and league win percentage; overall records match teamRecords. Replaces the 2026-10-05 pull, which carried overall wins in the W column and 0 in L. ESPN injury base retained at its previous 2026-09-29 cutoff.",
+  "verified_at": "2026-10-09T11:07:58.991Z"
  },
  "poll_notes": {
   "as_of": "2026-10-04",
@@ -13059,6 +13297,33 @@
  ],
  "storylines": [
   {
+   "id": "week6-thursday-finals",
+   "headline": "Thursday finals: Liberty, Western Kentucky, UTSA and South Alabama win",
+   "body": "Oct 8 results: Liberty 35, Sam Houston 3 (Liberty 5–1, 2–0 CUSA); Western Kentucky 34, Missouri State 13 (Western Kentucky 2–4, 1–1 CUSA); UTSA 31, South Florida 24 (UTSA 5–1, 2–0 AAC); South Alabama 56, Arkansas State 49 (on the road; South Alabama 4–2, 2–0 Sun Belt). Earlier in Week 6: Troy 55, Southern Miss 34 (Tue); Jacksonville State 27, Kennesaw State 26 (Wed, on the road); FIU 22, New Mexico State 3 (Wed). Scores and records per ESPN game pages, verified 2026-10-09 11:07 UTC; Conference USA and Sun Belt standings pages agree. The American's standings page had not posted UTSA–South Florida at check time.",
+   "game_provider_id": null,
+   "result_provider_ids": [
+    "401871090",
+    "401871051",
+    "401871066",
+    "401870766",
+    "401871052",
+    "401862794",
+    "401869933"
+   ],
+   "as_of": "2026-10-09",
+   "sources": [
+    "https://www.espn.com/college-football/game/_/gameId/401870766",
+    "https://www.espn.com/college-football/game/_/gameId/401871052",
+    "https://www.espn.com/college-football/game/_/gameId/401862794",
+    "https://www.espn.com/college-football/game/_/gameId/401869933",
+    "https://www.espn.com/college-football/game/_/gameId/401871090",
+    "https://www.espn.com/college-football/game/_/gameId/401871051",
+    "https://www.espn.com/college-football/game/_/gameId/401871066",
+    "https://conferenceusa.com/standings.aspx?path=football",
+    "https://sunbeltsports.org/standings.aspx?path=football"
+   ]
+  },
+  {
    "id": "ndsu-first-fbs-season",
    "headline": "North Dakota State's first FBS season is 5–0 with the nation's co-lead in scoring defense",
    "body": "The Bison (5–0), tied for the FBS lead in scoring defense at 9.8 points allowed per game (NCAA, through Oct 3), receive votes in both polls (AP 7, Coaches 29). They visit UNLV on Saturday, Oct 10 — 7 PM ET on The CW.",
@@ -13070,5 +13335,350 @@
   }
  ],
  "audit_applied_at": "2026-10-05T10:01:57.669Z",
- "research_ingested_at": "2026-10-05T11:55:00Z"
+ "research_ingested_at": "2026-10-05T11:55:00Z",
+ "results_verified_at": "2026-10-09T11:07:58.049Z",
+ "refresh_log": [
+  {
+   "applied_at": "2026-10-09T11:07:58.049Z",
+   "script": "scripts/apply-week6-midweek-finals.mjs",
+   "scope": "Week 6 midweek finals (Tue Oct 6 - Thu Oct 8, 2026) and the remaining Oct 9-10 slate",
+   "finals_added": [
+    {
+     "provider_id": "401871090",
+     "game_id": "2026-10-06-southern-miss-at-troy",
+     "date_et": "2026-10-06",
+     "kickoff_utc": "2026-10-07T00:00Z",
+     "score": "southern-miss 34, troy 55",
+     "verified_at": "2026-10-09T11:07:58.253Z"
+    },
+    {
+     "provider_id": "401871051",
+     "game_id": "2026-10-07-jacksonville-state-at-kennesaw-state",
+     "date_et": "2026-10-07",
+     "kickoff_utc": "2026-10-07T23:00Z",
+     "score": "jacksonville-state 27, kennesaw-state 26",
+     "verified_at": "2026-10-09T11:07:58.390Z"
+    },
+    {
+     "provider_id": "401871066",
+     "game_id": "2026-10-07-new-mexico-state-at-fiu",
+     "date_et": "2026-10-07",
+     "kickoff_utc": "2026-10-07T23:30Z",
+     "score": "new-mexico-state 3, fiu 22",
+     "verified_at": "2026-10-09T11:07:58.530Z"
+    },
+    {
+     "provider_id": "401870766",
+     "game_id": "2026-10-08-sam-houston-at-liberty",
+     "date_et": "2026-10-08",
+     "kickoff_utc": "2026-10-08T23:00Z",
+     "score": "sam-houston 3, liberty 35",
+     "verified_at": "2026-10-09T11:07:58.575Z"
+    },
+    {
+     "provider_id": "401871052",
+     "game_id": "2026-10-08-missouri-state-at-western-kentucky",
+     "date_et": "2026-10-08",
+     "kickoff_utc": "2026-10-08T23:00Z",
+     "score": "missouri-state 13, western-kentucky 34",
+     "verified_at": "2026-10-09T11:07:58.647Z"
+    },
+    {
+     "provider_id": "401862794",
+     "game_id": "2026-10-08-south-florida-at-utsa",
+     "date_et": "2026-10-08",
+     "kickoff_utc": "2026-10-08T23:30Z",
+     "score": "south-florida 24, utsa 31",
+     "verified_at": "2026-10-09T11:07:58.685Z"
+    },
+    {
+     "provider_id": "401869933",
+     "game_id": "2026-10-08-south-alabama-at-arkansas-state",
+     "date_et": "2026-10-08",
+     "kickoff_utc": "2026-10-08T23:30Z",
+     "score": "south-alabama 56, arkansas-state 49",
+     "verified_at": "2026-10-09T11:07:58.725Z"
+    }
+   ],
+   "records_changed": [
+    {
+     "team_slug": "troy",
+     "before": "2-2",
+     "after": "3-2",
+     "conference": "1-0"
+    },
+    {
+     "team_slug": "southern-miss",
+     "before": "1-3",
+     "after": "1-4",
+     "conference": "0-1"
+    },
+    {
+     "team_slug": "kennesaw-state",
+     "before": "1-3",
+     "after": "1-4",
+     "conference": "0-1"
+    },
+    {
+     "team_slug": "jacksonville-state",
+     "before": "3-2",
+     "after": "4-2",
+     "conference": "2-0"
+    },
+    {
+     "team_slug": "fiu",
+     "before": "2-2",
+     "after": "3-2",
+     "conference": "1-0"
+    },
+    {
+     "team_slug": "new-mexico-state",
+     "before": "2-3",
+     "after": "2-4",
+     "conference": "1-1"
+    },
+    {
+     "team_slug": "liberty",
+     "before": "4-1",
+     "after": "5-1",
+     "conference": "2-0"
+    },
+    {
+     "team_slug": "sam-houston",
+     "before": "1-3",
+     "after": "1-4",
+     "conference": "0-1"
+    },
+    {
+     "team_slug": "western-kentucky",
+     "before": "1-4",
+     "after": "2-4",
+     "conference": "1-1"
+    },
+    {
+     "team_slug": "missouri-state",
+     "before": "1-3",
+     "after": "1-4",
+     "conference": "0-1"
+    },
+    {
+     "team_slug": "utsa",
+     "before": "4-1",
+     "after": "5-1",
+     "conference": "2-0"
+    },
+    {
+     "team_slug": "south-florida",
+     "before": "4-1",
+     "after": "4-2",
+     "conference": "1-2"
+    },
+    {
+     "team_slug": "arkansas-state",
+     "before": "2-3",
+     "after": "2-4",
+     "conference": "0-2"
+    },
+    {
+     "team_slug": "south-alabama",
+     "before": "3-2",
+     "after": "4-2",
+     "conference": "2-0"
+    }
+   ],
+   "schedule_changes": [
+    {
+     "provider_id": "401856808",
+     "matchup": "hawaii at arizona-state",
+     "before": {
+      "kickoff_utc": "2026-10-11T01:30Z",
+      "time_et": "21:30"
+     },
+     "after": {
+      "kickoff_utc": "2026-10-11T02:30Z",
+      "time_et": "22:30"
+     },
+     "source": "https://thesundevils.com/sports/football/schedule"
+    }
+   ],
+   "remaining_rechecked": 51,
+   "left_open": [],
+   "untouched_cutoffs": {
+    "polls_released": [
+     "ap 2026-10-04",
+     "coaches 2026-10-04",
+     "composite 2026-10-04"
+    ],
+    "metrics_through_games": "2026-10-03",
+    "injuries_as_of": "2026-09-29",
+    "base_snapshot_retrieved_at": "2026-10-05T07:24:21.400874Z"
+   },
+   "evidence": [
+    {
+     "source": "ESPN FBS scoreboard",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261006&groups=80&limit=200",
+     "checked_at": "2026-10-09T11:07:58.337Z",
+     "finding": "1 events"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871090",
+     "checked_at": "2026-10-09T11:07:58.253Z",
+     "finding": "Final: southern-miss 34, troy 55"
+    },
+    {
+     "source": "ESPN FBS scoreboard",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261007&groups=80&limit=200",
+     "checked_at": "2026-10-09T11:07:58.480Z",
+     "finding": "2 events"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871051",
+     "checked_at": "2026-10-09T11:07:58.390Z",
+     "finding": "Final: jacksonville-state 27, kennesaw-state 26"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871066",
+     "checked_at": "2026-10-09T11:07:58.530Z",
+     "finding": "Final: new-mexico-state 3, fiu 22"
+    },
+    {
+     "source": "ESPN FBS scoreboard",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261008&groups=80&limit=200",
+     "checked_at": "2026-10-09T11:07:58.609Z",
+     "finding": "4 events"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401870766",
+     "checked_at": "2026-10-09T11:07:58.575Z",
+     "finding": "Final: sam-houston 3, liberty 35"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401871052",
+     "checked_at": "2026-10-09T11:07:58.647Z",
+     "finding": "Final: missouri-state 13, western-kentucky 34"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401862794",
+     "checked_at": "2026-10-09T11:07:58.685Z",
+     "finding": "Final: south-florida 24, utsa 31"
+    },
+    {
+     "source": "ESPN game summary",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401869933",
+     "checked_at": "2026-10-09T11:07:58.725Z",
+     "finding": "Final: south-alabama 56, arkansas-state 49"
+    },
+    {
+     "source": "ESPN conference standings",
+     "url": "https://site.web.api.espn.com/apis/v2/sports/football/college-football/standings",
+     "checked_at": "2026-10-09T11:07:58.991Z",
+     "finding": "re-read for all FBS conferences (vs. Conf. split)"
+    },
+    {
+     "source": "ESPN FBS scoreboard",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261009&groups=80&limit=200",
+     "checked_at": "2026-10-09T11:07:59.262Z",
+     "finding": "5 events"
+    },
+    {
+     "source": "ESPN FBS scoreboard",
+     "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20261010&groups=80&limit=200",
+     "checked_at": "2026-10-09T11:07:59.329Z",
+     "finding": "46 events"
+    },
+    {
+     "source": "Sun Belt Conference official standings (re-read at apply time)",
+     "url": "https://sunbeltsports.org/standings.aspx?path=football",
+     "checked_at": "2026-10-09T11:07:59.206Z",
+     "http_status": 200,
+     "finding": "South Alabama 2-0 / 4-2: matches; Troy 1-0 / 3-2: matches; Arkansas State 0-2 / 2-4: matches; Southern Miss 0-1 / 1-4: matches"
+    },
+    {
+     "source": "Conference USA official standings",
+     "url": "https://conferenceusa.com/standings.aspx?path=football",
+     "checked_at": "2026-10-09T11:03:54Z",
+     "first_checked_at": "2026-10-09T10:41:00Z",
+     "finding": "Conference / overall: Jax State 2-0 / 4-2; Liberty 2-0 / 5-1; FIU 1-0 / 3-2; NM State 1-1 / 2-4; WKU 1-1 / 2-4; Sam Houston 0-1 / 1-4; Missouri State 0-1 / 1-4; Kennesaw State 0-1 / 1-4. Consistent with the four CUSA finals (Oct 7 x2, Oct 8 x2). Page carries no as-of stamp.",
+     "corroborates": [
+      "401871051",
+      "401871066",
+      "401870766",
+      "401871052"
+     ]
+    },
+    {
+     "source": "Sun Belt Conference official standings",
+     "url": "https://sunbeltsports.org/standings.aspx?path=football",
+     "checked_at": "2026-10-09T10:39:00Z",
+     "finding": "Conference / overall: South Alabama 2-0 / 4-2; Troy 1-0 / 3-2; Arkansas State 0-2 / 2-4; Southern Miss 0-1 / 1-4. Consistent with Troy 55-34 Southern Miss (Oct 6) and South Alabama 56-49 Arkansas State (Oct 8). The apply script re-reads this page and stamps its own time.",
+     "corroborates": [
+      "401871090",
+      "401869933"
+     ]
+    },
+    {
+     "source": "American Conference official standings",
+     "url": "https://theamerican.org/standings.aspx?path=football",
+     "checked_at": "2026-10-09T11:03:54Z",
+     "first_checked_at": "2026-10-09T10:41:00Z",
+     "finding": "NOT YET UPDATED at check time: UTSA 1-0 / 4-1 and South Florida 1-1 / 4-1 (pre-game records). UTSA 31-24 South Florida is therefore single-sourced to ESPN (STATUS_FINAL, completed, quarter line score sums to the final).",
+     "corroborates": []
+    },
+    {
+     "source": "UTSA Athletics football schedule",
+     "url": "https://goutsa.com/sports/football/schedule",
+     "checked_at": "2026-10-09T11:03:54Z",
+     "finding": "No result posted for Oct 8 vs South Florida at check time (kickoff 6:30 PM CDT shown).",
+     "corroborates": []
+    },
+    {
+     "source": "USF Athletics football schedule",
+     "url": "https://gousfbulls.com/sports/football/schedule",
+     "checked_at": "2026-10-09T10:42:00Z",
+     "finding": "No result posted for Oct 8 at UTSA at check time (7:30 p.m. listed).",
+     "corroborates": []
+    },
+    {
+     "source": "Arizona State Athletics football schedule",
+     "url": "https://thesundevils.com/sports/football/schedule",
+     "checked_at": "2026-10-09T10:58:00Z",
+     "finding": "Hawai'i at Arizona State, Oct 10: 7:30 PM MST, FS1, Mountain America Stadium. 7:30 PM MST = 2026-10-11T02:30Z = 10:30 PM ET. The Oct 5 snapshot carried 01:30Z (9:30 PM ET); ESPN now lists 02:30Z.",
+     "corrects": "401856808"
+    },
+    {
+     "source": "Big Ten Conference Week 6 football release",
+     "url": "https://bigten.org/news/2026/10/7/2026-week-6-football-release.aspx",
+     "checked_at": "2026-10-09T11:01:00Z",
+     "finding": "Released 10/7/2026 4:44:33 PM. UCLA at Oregon: 3:30 PM ET Saturday, CBS, Autzen Stadium. Indiana at Nebraska: noon ET, FOX. Both match the snapshot. The release does not mention availability reports or any player status.",
+     "corroborates": [
+      "401858484",
+      "401858481"
+     ]
+    },
+    {
+     "source": "Washington Athletics football schedule",
+     "url": "https://gohuskies.com/sports/football/schedule",
+     "checked_at": "2026-10-09T10:58:00Z",
+     "finding": "Iowa at Washington, Fri Oct 9: 6:00 p.m. PT (= 2026-10-10T01:00Z, matches snapshot). TV shown only as 'FOX or FS1' - not a final assignment, so the snapshot keeps tv null.",
+     "corroborates": [
+      "401858487"
+     ]
+    },
+    {
+     "source": "Big Ten availability reports (BigTen.org)",
+     "url": "https://bigten.org/news/2026/8/28/big-ten-announces-changes-to-football-availability-reporting-process.aspx",
+     "checked_at": "2026-10-09T11:00:00Z",
+     "finding": "Policy confirmed: four reports per game, due 8 p.m. ET three, two and one day before kickoff, plus gameday. The Oregon-UCLA report pages could not be retrieved from the verification environment (HTTP 403 / fetch error), so no player designation (including Dante Moore) is recorded or changed.",
+     "corroborates": []
+    }
+   ],
+   "overall_record_disagreements_outside_scope": []
+  }
+ ]
 }

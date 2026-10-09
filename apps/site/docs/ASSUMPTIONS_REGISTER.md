@@ -33,3 +33,10 @@
 - Standings rows are ESPN league records with the overall record shown beside them; the ESPN injury base retains its September 29 cutoff and is labeled as such.
 - The editorial injury layer remains Week 2 (September 9): the page now says so in a banner and collapses its watch table instead of implying live refresh.
 - Fantasy notes remain Week 1 (September 7) and are retitled accordingly.
+
+## October 9, 2026 midweek-refresh assumptions
+
+- ESPN's completed game summary is the primary results source, as in prior refreshes. Conference USA and Sun Belt official standings corroborate their five finals; the American's standings page and both school schedule pages had not posted UTSA 31–24 South Florida at check time, so that result is single-sourced to ESPN (completed status, quarter line score sums to the final).
+- Iowa at Washington stays without a TV designation: Washington's schedule shows "FOX or FS1", which is not an assignment.
+- Big Ten availability report pages could not be retrieved from the verification environment. No player designation was changed; the panel topic on Dante Moore's status remains a pre-report framing dated Oct 5.
+- No other FBS games were played between the Oct 5 snapshot and the Oct 9 refresh, so the re-read standings equal the Oct 5 state plus the seven midweek results (all 138 overall records match teamRecords).
