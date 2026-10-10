@@ -114,7 +114,7 @@ export async function generateMetadata({
     return {
       title: "College Football Injury Report",
       description:
-        "Weekly college football injury report: ESPN-sourced statuses, long-term ledger, and week-to-week availability watch across every FBS team.",
+        "Dated official game-availability snapshots for tracked players on selected teams, plus sourced historical injury context. Coverage is limited.",
     };
   }
   if (root === "highlight") {

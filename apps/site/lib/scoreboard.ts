@@ -146,3 +146,22 @@ export function kickoffTimeLabel(game: Game) {
 export function broadcastLabel(game: Game) {
   return game.broadcast ?? "Network not assigned";
 }
+
+
+/** A week-scoped source label; a fresh release never restamps other weeks. */
+export function scoreboardSourceLabel(week: number, snapshot: {
+  week?: number;
+  schedule_verified_at?: string;
+  results_verified_at?: string;
+} | null): { badge: string; detail: string } {
+  if (!snapshot || snapshot.week !== week) {
+    return { badge: "Published snapshot", detail: `Week ${week} retains its original source dates. This board does not provide continuous live scoring.` };
+  }
+  const stamp = (value: string | undefined) => value && Number.isFinite(Date.parse(value))
+    ? `${new Date(value).toISOString().slice(0, 16).replace("T", " ")} UTC`
+    : "not published";
+  return {
+    badge: "Verified snapshot",
+    detail: `Week ${week} schedule checked ${stamp(snapshot.schedule_verified_at)}; finals verified ${stamp(snapshot.results_verified_at)}. Status changes require a newer verified release.`,
+  };
+}

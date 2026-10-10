@@ -1,3 +1,5 @@
+import { execFileSync } from "node:child_process";
+import { sourceDateLabel } from "../lib/game-calendar.ts";
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
@@ -18,6 +20,7 @@ import {
   groupGamesByDate,
   kickoffTimeLabel,
   scoreboardDateLabel,
+  scoreboardSourceLabel,
   type ScoreboardFilter,
 } from "../lib/scoreboard.ts";
 import { stadiumPageTitle, staticRootTitle, STATIC_ROOT_TITLES, teamPageTitle } from "../lib/seo-titles.ts";
@@ -374,4 +377,32 @@ test("sitemap exclusions cover only roots the site actually serves", () => {
     STATIC_ROOTS.filter((root) => !SITEMAP_EXCLUDED_ROOTS.has(root)).length,
     STATIC_ROOTS.length - SITEMAP_EXCLUDED_ROOTS.size,
   );
+});
+
+
+test("scoreboard labels are week-specific snapshots with distinct schedule and finals dates", () => {
+  const snapshot = { week: 6, schedule_verified_at: "2026-10-10T09:09:11.286Z", results_verified_at: "2026-10-09T11:07:00Z" };
+  const current = scoreboardSourceLabel(6, snapshot);
+  assert.equal(staticRootTitle("scores"), "College Football Scores");
+  assert.equal(current.badge, "Verified snapshot");
+  assert.match(current.detail, /schedule checked 2026-10-10 09:09 UTC; finals verified 2026-10-09 11:07 UTC/);
+  for (const week of [1, 7]) {
+    const other = scoreboardSourceLabel(week, snapshot);
+    assert.equal(other.badge, "Published snapshot");
+    assert.match(other.detail, /retains its original source dates/);
+    assert.doesNotMatch(other.detail, /2026-10-10|2026-10-09/);
+  }
+  assert.equal(scoreboardSourceLabel(6, null).badge, "Published snapshot");
+  assert.match(scoreboardSourceLabel(6, { week: 6 }).detail, /schedule checked not published; finals verified not published/);
+});
+
+test("civil verification dates agree across server and browser time zones", () => {
+  const moduleUrl = new URL("../lib/game-calendar.ts", import.meta.url).href;
+  const source = `import { sourceDateLabel } from ${JSON.stringify(moduleUrl)}; process.stdout.write(sourceDateLabel("2026-09-07"));`;
+  for (const TZ of ["UTC", "America/Los_Angeles", "America/Denver", "Pacific/Honolulu", "Pacific/Auckland"]) {
+    const label = execFileSync(process.execPath, ["--experimental-strip-types", "--input-type=module", "-e", source], { env: { ...process.env, TZ }, encoding: "utf8" });
+    assert.equal(label, "Sep 7, 2026", TZ);
+  }
+  assert.equal(sourceDateLabel("2026-02-30"), "Not published");
+  assert.equal(sourceDateLabel("bad date"), "Not published");
 });

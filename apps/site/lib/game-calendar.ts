@@ -58,3 +58,15 @@ export function easternKickoff(date: string, time: string | null): string {
     Date.parse(`${date}T${time}:00Z`) - offset * 3_600_000,
   ).toISOString();
 }
+
+
+const sourceDateFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC", month: "short", day: "numeric", year: "numeric",
+});
+/** A published civil date is not an instant to shift into the browser's zone. */
+export function sourceDateLabel(value: string): string {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return "Not published";
+  const date = new Date(`${value}T12:00:00Z`);
+  if (!Number.isFinite(date.getTime()) || date.toISOString().slice(0, 10) !== value) return "Not published";
+  return sourceDateFormatter.format(date);
+}

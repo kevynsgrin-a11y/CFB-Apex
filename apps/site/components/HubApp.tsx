@@ -47,6 +47,7 @@ import {
   continuousWeeks,
   defaultScoreboardWeek,
   gamesForWeek,
+  scoreboardSourceLabel,
 } from "@/lib/scoreboard";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import { getTeamHubData } from "@/lib/team-hub";
@@ -359,6 +360,7 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
   const weekRail = useRef<HTMLFieldSetElement>(null);
   const gesture = useRef({ active: false, x: 0, y: 0 });
   const weekGames = gamesForWeek(games, week);
+  const sourceLabel = scoreboardSourceLabel(week, verifiedRefresh);
   const filtered = weekGames.filter((game) => {
     const away = teamFor(game.awayTeamId);
     const home = teamFor(game.homeTeamId);
@@ -403,7 +405,7 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
     const deltaY = event.clientY - gesture.current.y;
     gesture.current.active = false;
     if (pullDistance >= 46) {
-      setRefreshMessage(`Week ${week} is current in the published dataset.`);
+      setRefreshMessage(`Week ${week} is shown from the published snapshot. Reload for a newer release.`);
     } else if (Math.abs(deltaX) > 62 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
       updateWeek(deltaX < 0 ? nextWeek : previousWeek);
     }
@@ -415,8 +417,8 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
       <PageHeading
         eyebrow="PRIORITY 01 · SCOREBOARD"
         title="The slate, without the scavenger hunt."
-        description={`Scheduled, final, delayed, and postponed game states with assigned TV networks where locked (${broadcastAsOf ?? "—"} compilation; unlisted games sit on conference plus-networks or await the 6–12 day flex).`}
-        actions={<Freshness provenance={games[0].provenance} />}
+        description={`Scores and assigned TV networks from reviewed source snapshots. ${sourceLabel.detail}`}
+        actions={<span className="freshness">{sourceLabel.badge}</span>}
       />
       <div className="sticky-tools scoreboard-tools">
         <div className="scoreboard-week-tools">

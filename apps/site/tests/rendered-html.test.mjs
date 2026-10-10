@@ -326,3 +326,26 @@ test("Available Jake Maikkula keeps explicitly dated ledger history without a cu
   assert.match(text, /Historical editorial note \(2026-10-05\): Knee\. Expected to miss multiple consecutive weeks/);
   assert.doesNotMatch(jakeRows[0], /inj-pill--out/);
 });
+
+
+test("scores metadata and hero disclose the current verified snapshot without restamping history", async () => {
+  const html = (await (await fetchRoute("/scores")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  assert.match(html, /<title>College Football Scores \| CFB Apex<\/title>/);
+  assert.doesNotMatch(html, /Live College Football Scores/);
+  const hero = html.match(/<header class="page-heading">[\s\S]*?<\/header>/)?.[0] ?? "";
+  const text = hero.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  assert.match(text, /Verified snapshot/);
+  assert.match(text, /schedule checked 2026-10-10 09:09 UTC; finals verified 2026-10-10 09:09 UTC/);
+  assert.doesNotMatch(text, /Dataset.*Sep 5|is current/);
+  const game = (await (await fetchRoute("/games/2026-10-10-north-dakota-state-at-unlv")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  assert.match(game, /Verified Sep 7, 2026/);
+  assert.doesNotMatch(game, /Verified Sep 6, 2026/);
+  assert.match(game, /Broadcast slot 7:00 PM ET; both schools announce kickoff at 7:10 PM ET/);
+});
+
+
+test("injury search metadata states limited tracked-player coverage", async () => {
+  const html = await (await fetchRoute("/injuries")).text();
+  assert.match(html, /name="description" content="Dated official game-availability snapshots for tracked players on selected teams, plus sourced historical injury context\. Coverage is limited\."/);
+  assert.doesNotMatch(html, /availability watch across every FBS team/);
+});

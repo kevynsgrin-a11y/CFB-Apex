@@ -47,7 +47,7 @@ export function stadiumPageTitle(
 
 /** Titles for static roots that previously inherited the layout default. */
 export const STATIC_ROOT_TITLES: Record<string, string> = {
-  scores: "Live College Football Scores",
+  scores: "College Football Scores",
   schedule: "2026 College Football Schedule",
   "transfer-portal": "College Football Transfer Portal Board",
   "playoff-predictor": "College Football Playoff Predictor",
