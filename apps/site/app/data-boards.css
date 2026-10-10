@@ -2259,3 +2259,56 @@
 .inj-watch-details { margin-top: 10px; }
 .inj-watch-details summary { cursor: pointer; font-size: 0.85rem; color: var(--muted-foreground); padding: 8px 0; }
 .inj-watch-details[open] summary { margin-bottom: 6px; }
+
+/* Injury reports retain semantic, horizontally scrollable tables on mobile.
+   The generic board-to-card transform needs data-label cells; these reports
+   instead keep their visible column headings and keyboard-focusable wrapper. */
+@media (max-width: 679px) {
+  .inj-page .db-section,
+  .inj-page .inj-watch-details {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .inj-page .db-table-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .inj-page .inj-table {
+    display: table;
+    min-width: 1060px;
+  }
+
+  .inj-page .inj-table thead {
+    display: table-header-group;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+  }
+
+  .inj-page .inj-table tbody {
+    display: table-row-group;
+  }
+
+  .inj-page .inj-table tr {
+    display: table-row;
+  }
+
+  .inj-page .inj-table td {
+    display: table-cell;
+    overflow-wrap: anywhere;
+  }
+
+  .inj-page .inj-table td::before {
+    display: none;
+    content: none;
+  }
+}

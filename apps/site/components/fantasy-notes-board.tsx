@@ -116,7 +116,7 @@ export function FantasyNotesBoard({
     <div className="db-page db-page--fantasy">
       <DataBoardHero
         eyebrow="Data board · Fantasy notes"
-        title="Roles, usage, and availability—as reported."
+        title="Historical Week 1 fantasy notes."
         description={`Week 1 college-fantasy notes compiled ${formatDataDate(asOf)} from analyst boards, official depth charts, and beat reporting. Every projection retains its outlet label.`}
         action={
           <a className="db-hero-link" href="/responsible-gaming">
@@ -132,12 +132,13 @@ export function FantasyNotesBoard({
           { label: "Programs", value: new Set(notes.map((note) => note.team)).size },
           { label: "Analyst ranks", value: notes.filter((note) => note.projection).length },
           {
-            label: "Not fully available",
+            label: "Week 1 availability flags",
             value: notes.filter((note) => note.availability !== "active").length,
           },
         ]}
       />
 
+      <p className="apex-container inj-stale-banner" role="status">Archived Week 1 roles, availability and projections, dated {asOf ?? "not published"}. These are historical values, not current game availability. <a href="/injuries">Read the dated official availability snapshot</a>.</p>
       <section className="apex-container db-section db-section--table" aria-labelledby="fantasy-table-title">
         <div className="db-table-toolbar">
           <div>
@@ -188,7 +189,7 @@ export function FantasyNotesBoard({
                   <th scope="col">Team</th>
                   <th scope="col">Reported role</th>
                   <th scope="col">Usage note</th>
-                  <th scope="col">Availability</th>
+                  <th scope="col">Week 1 availability</th>
                   <th scope="col">Analyst projection</th>
                 </tr>
               </thead>
@@ -220,7 +221,7 @@ export function FantasyNotesBoard({
                       <td data-label="Usage note">
                         <ExpandableData value={note.usage} />
                       </td>
-                      <td data-label="Availability">
+                      <td data-label="Week 1 availability">
                         <span className={`db-availability db-availability--${availabilityTone(note.availability)}`}>
                           {note.availability ?? "Not published"}
                         </span>
@@ -246,7 +247,7 @@ export function FantasyNotesBoard({
                   summary={[
                     { label: "Position", value: note.position ?? "—" },
                     { label: "Team", value: team?.shortName ?? note.team },
-                    { label: "Availability", value: note.availability ?? "Not published" },
+                    { label: "Week 1 availability", value: note.availability ?? "Not published" },
                   ]}
                   details={[
                     { label: "Reported role", value: note.role ?? "Not published" },

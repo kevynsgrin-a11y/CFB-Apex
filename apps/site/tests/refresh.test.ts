@@ -379,7 +379,7 @@ test("weather-related kickoff changes propagate to games, team schedules and bro
   assert.equal(getTeamSchedule("utah")?.find(g => g.date === "2026-10-10")?.href, "/games/2026-10-10-kansas-at-utah");
   assert.ok(verifiedRefresh?.scheduledGames.every(g => g.verified_at?.startsWith("2026-10-10")));
   assert.ok(verifiedRefresh?.schedule_verified_at?.startsWith("2026-10-10"));
-  assert.match(verifiedRefresh?.availability_review?.note ?? "", /not.*fully retrieved/);
+  assert.match(verifiedRefresh?.availability_review?.note ?? "", /not complete Saturday coverage/);
   assert.equal(verifiedRefresh?.retrieved_at, "2026-10-05T07:24:21.400874Z");
   assert.equal(verifiedRefresh?.polls?.[0].release_date, "2026-10-04");
 });

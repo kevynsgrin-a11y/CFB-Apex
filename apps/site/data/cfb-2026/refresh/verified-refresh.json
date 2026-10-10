@@ -11291,7 +11291,13 @@
    "home": "unlv",
    "time_et": "19:00",
    "status": "announced",
-   "game_status": "scheduled"
+   "game_status": "scheduled",
+   "announced_kickoff_utc": "2026-10-10T23:10Z",
+   "timing_note": "Broadcast slot 7:00 PM ET; both schools announce kickoff at 7:10 PM ET.",
+   "timing_sources": [
+    "https://gobison.com/sports/football/schedule",
+    "https://unlvrebels.com/news/2026/10/6/football-game-6-bison-here-for-homecoming.aspx"
+   ]
   },
   {
    "provider_id": "401869943",
@@ -13971,12 +13977,17 @@
     "metrics_through_games": "2026-10-03",
     "injuries_as_of": "2026-09-29"
    }
+  },
+  {
+   "applied_at": "2026-10-10T14:31:21.972853+00:00",
+   "script": "October 10 accuracy containment",
+   "scope": "Tracked official availability overlay, four verified identity corrections, source-age containment, and canonical supplemental scoreboard reconciliation. Historical category cutoffs preserved."
   }
  ],
  "schedule_verified_at": "2026-10-10T09:09:11.286Z",
  "availability_review": {
-  "checked_at": "2026-10-10T09:08:00Z",
-  "scope": "Partial follow-up only",
-  "note": "Dante Moore is reported out and Dylan Raiola the reported starter against UCLA (AP, October 8; checked October 10). Official SEC and Big Ten availability filings could not be fully retrieved. Other injury rows retain their own earlier cutoffs; no all-clear or full Saturday injury refresh is implied."
+  "checked_at": "2026-10-10T14:31:21.972853+00:00",
+  "scope": "Limited official availability snapshot",
+  "note": "87 tracked players from 19 teams, with exact game-specific designations and separate publication/retrieval times. SEC Texas A&M–Missouri, two Big 12 matchups and three earlier Big Ten/ACC matchups have Game Day updates; other included reports remain Friday Update 2. This is not complete Saturday coverage; missing players are unknown, not cleared."
  }
 }

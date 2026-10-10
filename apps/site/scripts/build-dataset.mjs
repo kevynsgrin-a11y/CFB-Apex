@@ -10,6 +10,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { inflateSync } from "node:zlib";
+import { isCurrentEspnInjury } from "../lib/injury-freshness.mjs";
 
 const root = fileURLToPath(new URL("../data/cfb-2026", import.meta.url));
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
@@ -583,12 +584,12 @@ try {
   const res = await providerFetch(ESPN_INJURY_URL, { headers: { accept: "application/json" } });
   if (!res.ok) throw new Error(`${res.status}`);
   const doc = await res.json();
-  espnInjuries.asOf = doc.timestamp ? doc.timestamp.slice(0, 10) : new Date().toISOString().slice(0, 10);
+  espnInjuries.asOf = doc.timestamp ? doc.timestamp.slice(0, 10) : null;
   for (const block of doc.injuries ?? []) {
     const teamSlug = espnSlugFor(block.displayName) ?? null;
     for (const row of block.injuries ?? []) {
       const status = STATUS_MAP[row.status] ?? "QUESTIONABLE";
-      if (status === "ACTIVE") continue;
+      if (status === "ACTIVE" || !isCurrentEspnInjury(row.date, Date.now())) continue;
       espnInjuries.entries.push({
         player: row.athlete?.displayName ?? "Unknown",
         team_slug: teamSlug,
@@ -893,14 +894,36 @@ if (existsSync(RESEARCH_PATH)) {
   console.log("No injury research staged yet — editorial layer ships empty (fail-closed).");
 }
 
-const payload = { teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, sosAsOf: sosDoc.meta?.as_of ?? null, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief, upsetWatch, playoffAudit };
+const officialPath = join(projectRoot, "data", "injury-research", "official-availability.json");
+const officialAvailability = existsSync(officialPath) ? JSON.parse(readFileSync(officialPath, "utf8")) : null;
+
+if (officialAvailability) {
+  const statuses = new Set(["Available", "Out", "Doubtful", "Questionable", "Probable", "Game Time Decision", "Exempt"]);
+  const knownSlugs = new Set(teams.map((team) => team.slug));
+  const seen = new Set();
+  for (const row of officialAvailability.entries) {
+    const key = `${row.game_date}:${row.team_slug}:${row.player}`;
+    if (seen.has(key) || !knownSlugs.has(row.team_slug) || !statuses.has(row.status) || !row.source_url || !row.report_id || !row.report_type ||
+        !Number.isFinite(Date.parse(row.published_at)) || !Number.isFinite(Date.parse(row.retrieved_at)) || Date.parse(row.published_at) > Date.parse(row.retrieved_at)) {
+      throw new Error(`Invalid official availability row: ${key}`);
+    }
+    seen.add(key);
+  }
+}
+
+const payload = { officialAvailability, teams, conferences, polls, pollsStatus: pollsNote, conferenceStandings, sos, sosAsOf: sosDoc.meta?.as_of ?? null, schedules, coaching, playedGames, rosters, depthCharts, injuries, historical, teamRatings, teamLeaders, playerIndex, logoSlugs, logoColors, portal: { asOf: portalDoc.meta.as_of, statusNote: portalDoc.meta.completeness, events: portalEvents }, coachContracts, stadiumGuides, broadcasts: { asOf: tvDoc.as_of, note: tvDoc.notes, byPair: tvByPair, games: tvGameCount, rows: tvRows }, preseasonRatings, radio: radioDoc, fantasy: { asOf: fantasyDoc.as_of, context: fantasyDoc.week_context, notes: fantasyNotes }, espnInjuries, injuryResearch, heismanWatch, nilWatch, athleteHighlight, panelBrief, upsetWatch, playoffAudit };
 
 if (refreshSnapshot) {
   payload.polls = refreshSnapshot.polls;
   payload.pollsStatus = refreshSnapshot.pollsStatus;
   payload.playedGames = refreshSnapshot.playedGames;
   payload.conferenceStandings = refreshSnapshot.retainedBaseline.conferenceStandings;
-  payload.espnInjuries = refreshSnapshot.retainedBaseline.espnInjuries;
+  const injuryBase = refreshSnapshot.retainedBaseline.espnInjuries;
+  const injuryCutoff = Date.parse(refreshSnapshot.schedule_verified_at ?? refreshSnapshot.retrieved_at);
+  payload.espnInjuries = injuryBase ? { ...injuryBase,
+    entries: injuryBase.entries.filter((row) => isCurrentEspnInjury(row.as_of, injuryCutoff)),
+    excludedCount: injuryBase.entries.filter((row) => !isCurrentEspnInjury(row.as_of, injuryCutoff)).length,
+  } : { asOf: null, entries: [], excludedCount: 0 };
   const rows = [...payload.broadcasts.rows];
   const byPair = { ...payload.broadcasts.byPair };
   const weekStart = Date.parse(`${refreshSnapshot.week_start}T00:00:00Z`);
