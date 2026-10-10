@@ -1,12 +1,12 @@
 "use client";
 
 /**
- * "This Week's Games" live scoreboard card for team pages. Fetches the
+ * "This Week's Games" verified-snapshot card for team pages. Fetches the
  * site's own /api/ncaaf-scoreboard route after mount (same-origin, so the
  * worker CSP holds) and renders the week's NCAAF fixtures and finals with
  * the page team's games pinned first.
  *
- * Degrades to nothing: any fetch failure, degraded payload, or empty week
+ * Degrades to nothing: any fetch failure or empty reconciled week
  * renders no section at all — team pages never show an error state.
  */
 
@@ -93,7 +93,7 @@ export function WeekGames({ school, displayName }: { school: string; displayName
     fetch("/api/ncaaf-scoreboard", { signal: controller.signal })
       .then((response) => (response.ok ? response.json() : null))
       .then((body: NcaafScoreboardPayload | null) => {
-        if (body && Array.isArray(body.events) && !body.degraded) {
+        if (body && Array.isArray(body.events) ) {
           setPayload(body);
         }
       })
@@ -110,7 +110,7 @@ export function WeekGames({ school, displayName }: { school: string; displayName
 
   const shownOthers = otherGames.slice(0, OTHER_GAMES_CAP);
   const hiddenOthers = otherGames.length - shownOthers.length;
-  const updated = new Date(payload.asOf);
+  const updated = new Date(payload.fetchedAt);
   const updatedLabel = Number.isNaN(updated.getTime())
     ? null
     : timeFormatter.format(updated);
@@ -119,11 +119,11 @@ export function WeekGames({ school, displayName }: { school: string; displayName
     <section className="week-games" aria-label="This week's games">
       <header className="week-games-heading">
         <div>
-          <span className="hub-eyebrow">LIVE SCOREBOARD</span>
+          <span className="hub-eyebrow">VERIFIED SNAPSHOT</span>
           <h2 className="font-display">This Week&apos;s Games</h2>
         </div>
         <span className="week-games-meta">
-          NCAAF · TheSportsDB{updatedLabel ? ` · updated ${updatedLabel} ET` : ""}
+          Partial NCAAF feed{updatedLabel ? ` · fetched ${updatedLabel} ET` : ""}
         </span>
       </header>
       {teamGames.length > 0 ? (
@@ -149,11 +149,12 @@ export function WeekGames({ school, displayName }: { school: string; displayName
           {hiddenOthers > 0 ? (
             <p className="week-games-note">
               Showing {shownOthers.length} of {otherGames.length} games on this
-              week&apos;s slate.
+              partial feed.
             </p>
           ) : null}
         </>
       ) : null}
+      <p className="week-games-note">Matched games use the reviewed snapshot. Schedule checked {payload.canonicalAsOf ?? "unknown"}; finals checked {payload.finalsAsOf ?? "unknown"}. Upstream observation time is unknown. Fetched once on page load; not continuous live scoring.</p>
       <a className="week-games-link" href="/scores">
         Full 2026 scoreboard
         <ArrowRight size={14} aria-hidden="true" />

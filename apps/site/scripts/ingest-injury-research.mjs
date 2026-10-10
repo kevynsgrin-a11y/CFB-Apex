@@ -19,7 +19,7 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const INBOX = join(root, "data", "injury-research", "inbox");
 const CURRENT = join(root, "data", "injury-research", "current.json");
 
-const LIKELIHOODS = new Set(["likely", "questionable", "doubtful", "unlikely"]);
+const LIKELIHOODS = new Set(["likely", "questionable", "doubtful", "unlikely", "out"]);
 const CONFIDENCE = new Set(["high", "medium", "low"]);
 const PRACTICE = new Set(["DNP", "LP", "FP", null]);
 const LEDGER_STATUS = new Set(["IR", "OUT"]);

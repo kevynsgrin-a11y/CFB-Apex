@@ -67,7 +67,7 @@ interface VerifiedRefresh {
   teamRecords: Record<string, string>;
   metrics: CurrentMetrics;
   playedGames?: unknown[];
-  scheduledGames: Array<{ provider_id: string; source_url: string; kickoff_utc: string; week: number; date: string; away: string; home: string; tv: string | null; time_et: string; site: string | null; neutral_site: boolean; verified_at?: string; game_status?: string }>;
+  scheduledGames: Array<{ provider_id: string; source_url: string; kickoff_utc: string; week: number; date: string; away: string; home: string; tv: string | null; time_et: string; site: string | null; neutral_site: boolean; verified_at?: string; game_status?: string; announced_kickoff_utc?: string; timing_note?: string; timing_sources?: string[] }>;
   excludedGames?: Array<{ provider_id: string; name: string; reason: string; date: string; espn_conference_ids?: { home: number; away: number } }>;
   source_urls?: string[];
   holds?: string[];
@@ -610,7 +610,7 @@ function buildScheduledGames(): Game[] {
     byKey.set(key, {
       id, week: row.week, date: row.kickoff_utc,
       kickoffLabel: playedKickoffLabel(row.date, row.kickoff_utc),
-      status: "scheduled", statusDetail: "Scheduled · verified source snapshot",
+      status: "scheduled", statusDetail: row.timing_note ?? "Scheduled · verified source snapshot",
       awayTeamId: row.away, homeTeamId: row.home, venueSlug: row.home,
       venue: row.site ?? "Not published", city: "", broadcast: row.tv,
       weather: null, neutralSite: row.neutral_site,
@@ -1130,12 +1130,12 @@ export const providerHealth: ProviderHealth[] = [
   },
   {
     id: "production-sports",
-    label: "In-season live scores feed",
+    label: "Supplemental scoreboard snapshot",
     mode: "production",
-    status: "not_configured",
+    status: "degraded",
     lastSuccess: null,
-    cadence: "Not applicable",
-    note: "No live in-season provider is wired; scores update with each verified snapshot release (see the manifest above for the current one).",
+    cadence: "Fetched once per page load; per-isolate cache",
+    note: "The main scoreboard uses verified snapshots. Supplemental widgets read a partial TrueAPI/TheSportsDB feed, reconcile unique game identities to verified kickoff/venue/final facts, and withhold unverified scores. Upstream observation age is unknown; this is not continuous live scoring.",
   },
 ];
 

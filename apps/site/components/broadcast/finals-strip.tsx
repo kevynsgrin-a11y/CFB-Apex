@@ -5,7 +5,7 @@ import { LaneHeading } from "./primitives";
 /**
  * Thursday/Friday finals rail for the homepage. Reads the same
  * /api/ncaaf-scoreboard feed the team pages use; degrades to nothing
- * (hidden) when the feed is missing, degraded, or has no finals yet —
+ * (hidden) when the feed is missing or has no reconciled finals yet —
  * the homepage never shows an error surface for live data.
  */
 export function FinalsStrip({ referenceDate }: { referenceDate: string }) {
@@ -21,7 +21,7 @@ export function FinalsStrip({ referenceDate }: { referenceDate: string }) {
   }, []);
 
   const finals = useMemo(() => {
-    if (!payload || payload.degraded) return [];
+    if (!payload) return [];
     const start = new Date(`${referenceDate.slice(0, 10)}T00:00:00Z`);
     start.setUTCDate(start.getUTCDate() - ((start.getUTCDay() + 6) % 7));
     const end = new Date(start);
@@ -96,8 +96,7 @@ export function FinalsStrip({ referenceDate }: { referenceDate: string }) {
         )}
       </div>
       <p className="apex-data-note">
-        Finals feed: TheSportsDB via the site scoreboard API · scores as reported ·
-        refreshes with the live board.
+        Partial supplemental feed reconciled to snapshot finals verified {payload?.finalsAsOf ?? "at an unknown time"}. Fetched once on page load; upstream observation time unknown. New unverified scores are withheld.
       </p>
     </section>
   );

@@ -1,0 +1,1214 @@
+{
+  "scope": "Tracked injury players and newly changed game-day designations only; not a complete roster or all-game availability report.",
+  "checked_at": "2026-10-10T14:31:21.972853+00:00",
+  "changes": [
+    {
+      "conference": "SEC",
+      "endpoint": "https://app.hdintelligence.com/api/get-publish-public",
+      "request_fields": {
+        "sport": "Football",
+        "organization": "SEC",
+        "conference": "SEC"
+      },
+      "retrieved_at": "2026-10-10T14:31:21.972853+00:00",
+      "http_status": 200,
+      "sha256_raw": "9700bffeceb0457c67f9f2e36d31d8e7b712f75b745179df7edb42bd94521359",
+      "reports": [
+        {
+          "report_id": "3067",
+          "prior_report_id": "3066",
+          "teams": [
+            "Texas A&M",
+            "Missouri"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Columbia, MO",
+              "time": "11:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-10",
+            "postedTime": "9:30:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Columbia, MO",
+              "time": "11:00:00"
+            }
+          },
+          "metadata_changed": true,
+          "status_changes": [
+            {
+              "team": "Texas A&M",
+              "name": "WR #1 Mario Craver",
+              "before": "Questionable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "Missouri",
+              "name": "LB #0 Robert Woodyard Jr.",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "WR #3 DaMarion Fowlkes",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "S #7 Kensley Louidor-Faustin",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "EDG #11 Langden Kitchen",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "EDG #13 Jaden Jones",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "S #15 Santana Banner",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "LB #16 Bobby Washington Jr.",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "EDG #19 Darris Smith",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "CB #21 Jahlil Florence",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "OL #70 Cayden Green",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Missouri",
+              "name": "TE #87 Brett Norfleet",
+              "before": "Probable",
+              "after": "Available"
+            }
+          ],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3089",
+          "prior_report_id": "3089",
+          "teams": [
+            "South Carolina",
+            "Florida"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Gainesville, FL",
+              "time": "11:45:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Gainesville, FL",
+              "time": "11:45:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3094",
+          "prior_report_id": "3094",
+          "teams": [
+            "Texas",
+            "Oklahoma"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Dallas, TX",
+              "time": "14:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Dallas, TX",
+              "time": "14:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3098",
+          "prior_report_id": "3098",
+          "teams": [
+            "Ole Miss",
+            "Vanderbilt"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Nashville, TN",
+              "time": "14:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Nashville, TN",
+              "time": "14:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3134",
+          "prior_report_id": "3134",
+          "teams": [
+            "Tennessee",
+            "Arkansas"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Fayetteville, AR",
+              "time": "15:15:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Fayetteville, AR",
+              "time": "15:15:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3138",
+          "prior_report_id": "3138",
+          "teams": [
+            "LSU",
+            "Kentucky"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Lexington, KY",
+              "time": "18:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Lexington, KY",
+              "time": "18:00:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3143",
+          "prior_report_id": "3143",
+          "teams": [
+            "Georgia",
+            "Alabama"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Tuscaloosa, AL",
+              "time": "18:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:10:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Tuscaloosa, AL",
+              "time": "18:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        }
+      ],
+      "join_note": "Reports matched on exact team pair and game date; publication-stage IDs change. Player statuses matched on exact team and full report name.",
+      "sha256_clean": "b71129af766c9066617dbb8dba75723a6c39560e2f7173aa1bb3f2f7991c5eba"
+    },
+    {
+      "conference": "B10",
+      "endpoint": "https://app.hdintelligence.com/api/get-publish-public",
+      "request_fields": {
+        "sport": "Football",
+        "organization": "B10",
+        "conference": "B10"
+      },
+      "retrieved_at": "2026-10-10T14:05:12.507566+00:00",
+      "http_status": 200,
+      "sha256_raw": "b453eca06e5b01f62c91f03bc0684f328ab74f82dd5a38f692c8f8d670bf5a9a",
+      "reports": [
+        {
+          "report_id": "3055",
+          "prior_report_id": "3055",
+          "teams": [
+            "Iowa",
+            "Washington"
+          ],
+          "before_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-09",
+            "postedTime": "18:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-09",
+              "location": "Seattle, WA",
+              "time": "20:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-09",
+            "postedTime": "18:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-09",
+              "location": "Seattle, WA",
+              "time": "20:00:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3063",
+          "prior_report_id": "3062",
+          "teams": [
+            "Indiana",
+            "Nebraska"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Lincoln, NE",
+              "time": "11:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-10",
+            "postedTime": "9:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Lincoln, NE",
+              "time": "11:00:00"
+            }
+          },
+          "metadata_changed": true,
+          "status_changes": [
+            {
+              "team": "Nebraska",
+              "name": "TE #29 Carter Nelson",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Nebraska",
+              "name": "DL #44 Riley Van Poppel",
+              "before": "Questionable",
+              "after": "Out"
+            },
+            {
+              "team": "Nebraska",
+              "name": "LB #47 Gage Stenger",
+              "before": "Questionable",
+              "after": "Available"
+            }
+          ],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3102",
+          "prior_report_id": "3102",
+          "teams": [
+            "UCLA",
+            "Oregon"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Eugene, OR",
+              "time": "14:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Eugene, OR",
+              "time": "14:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3118",
+          "prior_report_id": "3118",
+          "teams": [
+            "Illinois",
+            "Michigan St."
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "East Lansing, MI",
+              "time": "14:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "East Lansing, MI",
+              "time": "14:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3130",
+          "prior_report_id": "3130",
+          "teams": [
+            "Maryland",
+            "Ohio St."
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Columbus, OH",
+              "time": "15:15:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Columbus, OH",
+              "time": "15:15:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3147",
+          "prior_report_id": "3147",
+          "teams": [
+            "Southern California",
+            "Penn St."
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "State College, PA",
+              "time": "18:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "State College, PA",
+              "time": "18:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3155",
+          "prior_report_id": "3155",
+          "teams": [
+            "Minnesota",
+            "Purdue"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "West Lafayette, IN",
+              "time": "19:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "West Lafayette, IN",
+              "time": "19:00:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        }
+      ],
+      "join_note": "Reports matched on exact team pair and game date; publication-stage IDs change. Player statuses matched on exact team and full report name.",
+      "sha256_clean": "ecdbf3413ca7aadb25b0a2f4f44c2e2915115fc14ed344663308f85c77937ace"
+    },
+    {
+      "conference": "ACC",
+      "endpoint": "https://app.hdintelligence.com/api/get-publish-public",
+      "request_fields": {
+        "sport": "Football",
+        "organization": "ACC",
+        "conference": "ACC"
+      },
+      "retrieved_at": "2026-10-10T14:05:13.923057+00:00",
+      "http_status": 200,
+      "sha256_raw": "9ecfaafa98e3ef122c3befe5dd72146fa58f1ab4ec802eec82235d9c5edd7686",
+      "reports": [
+        {
+          "report_id": "3051",
+          "prior_report_id": "3051",
+          "teams": [
+            "Florida St.",
+            "Louisville"
+          ],
+          "before_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-09",
+            "postedTime": "17:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-09",
+              "location": "Louisville, KY",
+              "time": "19:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-09",
+            "postedTime": "17:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-09",
+              "location": "Louisville, KY",
+              "time": "19:00:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3075",
+          "prior_report_id": "3074",
+          "teams": [
+            "North Carolina",
+            "Pittsburgh"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "20:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Pittsburgh, PA",
+              "time": "12:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-10",
+            "postedTime": "10:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Pittsburgh, PA",
+              "time": "12:00:00"
+            }
+          },
+          "metadata_changed": true,
+          "status_changes": [
+            {
+              "team": "North Carolina",
+              "name": "DL #0 Isaiah Johnson",
+              "before": "Questionable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "North Carolina",
+              "name": "WR #1 Jordan Shipp",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "North Carolina",
+              "name": "DB #3 Ade Willie",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "North Carolina",
+              "name": "DL #5 Donovan Hoilette Jr.",
+              "before": "Questionable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "North Carolina",
+              "name": "DB #7 Peyton Waters",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "North Carolina",
+              "name": "DL #11 Jaylen Harvey",
+              "before": "Doubtful",
+              "after": "Out"
+            },
+            {
+              "team": "North Carolina",
+              "name": "OL #66 Jordan Hall",
+              "before": "Doubtful",
+              "after": "Out"
+            },
+            {
+              "team": "North Carolina",
+              "name": "TE #85 Dream Rashad",
+              "before": "Doubtful",
+              "after": "Out"
+            },
+            {
+              "team": "North Carolina",
+              "name": "DL #91 Leroy Jackson",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Pittsburgh",
+              "name": "DL #5 Zach Crothers",
+              "before": "Questionable",
+              "after": "Out"
+            },
+            {
+              "team": "Pittsburgh",
+              "name": "DB #6 Raion Strader",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "Pittsburgh",
+              "name": "WR #7 Malik Knight",
+              "before": "Probable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "Pittsburgh",
+              "name": "LB #10 Alex Sanford Jr.",
+              "before": "Probable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "Pittsburgh",
+              "name": "DB #14 Josh Guerrier",
+              "before": "Questionable",
+              "after": "Game Time Decision"
+            }
+          ],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3083",
+          "prior_report_id": "3082",
+          "teams": [
+            "Wake Forest",
+            "NC State"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "20:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Raleigh, NC",
+              "time": "12:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-10",
+            "postedTime": "10:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Raleigh, NC",
+              "time": "12:00:00"
+            }
+          },
+          "metadata_changed": true,
+          "status_changes": [
+            {
+              "team": "NC State",
+              "name": "WR #2 Joshisa \"Jojo\" Trader",
+              "before": "Questionable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "NC State",
+              "name": "DL #47 Adrian Farrow",
+              "before": "Questionable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "NC State",
+              "name": "OL #62 Jimarion McCrimon",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "NC State",
+              "name": "OT #79 Kamen Smith",
+              "before": "Questionable",
+              "after": "Out"
+            }
+          ],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3110",
+          "prior_report_id": "3110",
+          "teams": [
+            "Duke",
+            "Georgia Tech"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "20:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Atlanta, GA",
+              "time": "15:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "20:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Atlanta, GA",
+              "time": "15:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3114",
+          "prior_report_id": "3114",
+          "teams": [
+            "Virginia Tech",
+            "California"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "23:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Berkeley, CA",
+              "time": "15:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "23:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Berkeley, CA",
+              "time": "15:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3151",
+          "prior_report_id": "3151",
+          "teams": [
+            "Syracuse",
+            "Virginia"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "20:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Charlottesville, VA",
+              "time": "19:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "20:00:00",
+            "conferenceTimeZone": "ET",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Charlottesville, VA",
+              "time": "19:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        }
+      ],
+      "join_note": "Reports matched on exact team pair and game date; publication-stage IDs change. Player statuses matched on exact team and full report name.",
+      "sha256_clean": "c8a1b70be906bc5dcd39b60b11765b4c0d841e257b8fcf73ec23c3a1ab4a6eac"
+    },
+    {
+      "conference": "B12",
+      "endpoint": "https://app.hdintelligence.com/api/get-publish-public",
+      "request_fields": {
+        "sport": "Football",
+        "organization": "B12",
+        "conference": "B12"
+      },
+      "retrieved_at": "2026-10-10T14:30:17.452947+00:00",
+      "http_status": 200,
+      "sha256_raw": "b9edd173666e1c9aeee39b85289558059e67d5eae97a7c59143ac87c4271df95",
+      "reports": [
+        {
+          "report_id": "3059",
+          "prior_report_id": "3059",
+          "teams": [
+            "Iowa St.",
+            "BYU"
+          ],
+          "before_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:45:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-09",
+              "location": "Provo, UT",
+              "time": "21:15:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-09",
+            "postedTime": "19:45:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-09",
+              "location": "Provo, UT",
+              "time": "21:15:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3071",
+          "prior_report_id": "3070",
+          "teams": [
+            "UCF",
+            "Oklahoma St."
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "21:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Stillwater, OK",
+              "time": "11:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-10",
+            "postedTime": "9:30:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Stillwater, OK",
+              "time": "11:00:00"
+            }
+          },
+          "metadata_changed": true,
+          "status_changes": [
+            {
+              "team": "UCF",
+              "name": "TE #0 Dylan Wade",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "UCF",
+              "name": "WR #3 Jonathan Bibbs",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "UCF",
+              "name": "WR #5 Josh Derry",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "UCF",
+              "name": "WR #7 Duane Thomas Jr.",
+              "before": "Doubtful",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "UCF",
+              "name": "QB #12 Keyone Jenkins",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "UCF",
+              "name": "LB #34 Jahleel Culbreath",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "UCF",
+              "name": "LB #38 Jayden Jennings",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "UCF",
+              "name": "TE #83 Dylan Burk",
+              "before": "Questionable",
+              "after": "Available"
+            },
+            {
+              "team": "Oklahoma St.",
+              "name": "WR #10 Wyatt Young",
+              "before": "Probable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "Oklahoma St.",
+              "name": "OL #54 Johnny Dickson III",
+              "before": "Probable",
+              "after": "Game Time Decision"
+            },
+            {
+              "team": "Oklahoma St.",
+              "name": "OL #67 Braydon Nelson",
+              "before": "Probable",
+              "after": "Game Time Decision"
+            }
+          ],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3079",
+          "prior_report_id": "3078",
+          "teams": [
+            "Arizona",
+            "West Virginia"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "21:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Morgantown, WV",
+              "time": "11:00:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Game Day",
+            "publishDate": "2026-10-10",
+            "postedTime": "9:30:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Morgantown, WV",
+              "time": "11:00:00"
+            }
+          },
+          "metadata_changed": true,
+          "status_changes": [
+            {
+              "team": "West Virginia",
+              "name": "TE #10 Cam Ball",
+              "before": "Doubtful",
+              "after": "Out"
+            },
+            {
+              "team": "West Virginia",
+              "name": "DB #36 Jason Chambers",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "West Virginia",
+              "name": "EDG #50 Harper Holloman",
+              "before": "Probable",
+              "after": "Available"
+            },
+            {
+              "team": "West Virginia",
+              "name": "WR #80 John Neider",
+              "before": "Probable",
+              "after": "Available"
+            }
+          ],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3106",
+          "prior_report_id": "3106",
+          "teams": [
+            "Houston",
+            "Kansas St."
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "21:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Manhattan, KS",
+              "time": "14:30:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "21:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Manhattan, KS",
+              "time": "14:30:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        },
+        {
+          "report_id": "3159",
+          "prior_report_id": "3159",
+          "teams": [
+            "Kansas",
+            "Utah"
+          ],
+          "before_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "21:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Salt Lake City, UT",
+              "time": "21:15:00"
+            }
+          },
+          "after_meta": {
+            "ReportType": "Update 2",
+            "publishDate": "2026-10-09",
+            "postedTime": "21:00:00",
+            "conferenceTimeZone": "CT",
+            "footer": {
+              "date": "2026-10-10",
+              "location": "Salt Lake City, UT",
+              "time": "21:15:00"
+            }
+          },
+          "metadata_changed": false,
+          "status_changes": [],
+          "removed_rows": [],
+          "added_rows": []
+        }
+      ],
+      "join_note": "Reports matched on exact team pair and game date; publication-stage IDs change. Player statuses matched on exact team and full report name.",
+      "sha256_clean": "e673a5a7278680fa38e7b12bcdb2c1b1b213f738d526fce9247ed918f0ff8e8c"
+    }
+  ]
+}

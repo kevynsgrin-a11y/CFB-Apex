@@ -290,7 +290,27 @@ test("October 10 pregame corrections and partial availability caveat render", as
   assert.match(watch, /ESPN App · linear network TBD/);
   assert.match(watch, /Iowa[\s\S]{0,80}Washington/);
   const injuries = await visible("/injuries");
-  assert.match(injuries, /Partial follow-up only · 2026-10-10/);
+  assert.match(injuries, /Limited official availability snapshot · 2026-10-10/);
   assert.match(injuries, /AP reported October 8 that Dante Moore is out/);
   assert.match(injuries, /Research as of 2026-10-05/);
+});
+
+test("official availability containment renders literal designations and historical context", async () => {
+  const html = (await (await fetchRoute("/injuries")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  const text = html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  assert.doesNotMatch(text, /Kahleil Jackson|Jamariun Morrow|Tre Harris/);
+  assert.match(text, /87 tracked players from 19 teams/);
+  assert.match(text, /Jayden Gibson[\s\S]*?South Carolina/);
+  assert.match(text, /Zahir Mathis[\s\S]*?Maryland/);
+  assert.match(text, /Jamarion Morrow[\s\S]*?Available/);
+  assert.match(text, /Trell Harris[\s\S]*?Out/);
+  assert.match(text, /Mario Craver[\s\S]*?Game Time Decision/);
+  assert.match(text, /Exempt is not Available/);
+  assert.match(text, /Historical editorial notes: 2026-10-05/);
+  assert.match(text, /Published 2026-10-10T09:30:00-05:00; retrieved 2026-10-10T14:31/);
+  assert.doesNotMatch(html, /class="db-table-wrap db-desktop-data-table"/);
+  const player = (await (await fetchRoute("/players/dante-moore")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  assert.match(player, /Historical Week 1 availability/);
+  assert.match(player, /This Week 1 note retains its original date/);
+  assert.match(player, /UCLA vs Oregon: Out|Oregon vs UCLA: Out/);
 });

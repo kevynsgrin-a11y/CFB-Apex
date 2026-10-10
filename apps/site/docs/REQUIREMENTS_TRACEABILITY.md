@@ -54,3 +54,14 @@
 | Official kickoff changes appear across surfaces | schedule and broadcast snapshot overrides | Rice–ECU 17:00Z; Kansas–Utah 00:00Z next UTC day; rendered game tests |
 | Do not imply full data freshness | distinct results/schedule timestamps, retained poll/stat/research cutoffs | source-date tests and visible partial injury-review banner |
 | Complete week coverage | all 58 provider ids reviewed, 138 records reconcile | normalized evidence + apply assertions + existing live coverage build check |
+
+## October 10 accuracy containment
+
+| Requirement | Implementation | Evidence |
+|---|---|---|
+| Dated, limited official designations | `data/injury-research/official-availability.json`, `lib/injury-report.ts`, injury page | 87 exact source rows; report IDs, stages, publication/retrieval dates; `tests/injury-accuracy.test.ts` |
+| Identity and availability separation | Four corrected roster identities; explicit Available/Exempt/GTD and editorial long-term label | source URLs plus runtime and rendered regressions |
+| Stale ESPN containment | `lib/injury-freshness.mjs`, build filter and `lib/espn-injuries.ts`, API fallback | old/undated/future/invalid rows, last-known-good merge and empty feed tests |
+| Canonical supplemental scoreboard | `reconcileNcaafEvents`, server adapter and honest widget labels | incorrect Kansas/Hawai'i dates, AOT, blank score, false 0–0 final, protected final and ambiguous identity tests |
+| Historical category honesty | dated fantasy labels and source context; unchanged baseline dates | preserved fantasy/poll/metric cutoffs and rendered player context |
+| Dual kickoff meaning | NDSU–UNLV timing note plus separate announced kickoff field | retained 23:00 slot, explicit 23:10 kickoff regression |

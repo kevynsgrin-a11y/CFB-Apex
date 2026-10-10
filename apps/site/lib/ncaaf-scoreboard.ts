@@ -1,11 +1,6 @@
-/**
- * Live NCAAF scoreboard normalization for TheSportsDB league 4479.
- *
- * Pure module: the API route performs the fetches, this file maps the raw
- * provider events onto the compact shape the WeekGames widget renders.
- * TheSportsDB is the only live upstream the site consumes; on any upstream
- * failure the route degrades to an empty event list and the widget hides
- * itself (no error surface on team pages).
+/** Partial TheSportsDB normalization and reviewed-snapshot reconciliation.
+ * The API adapter fetches once for each uncached request; no request timestamp
+ * establishes event observation age or authorizes unverified scores.
  */
 
 export type NcaafGameState =
@@ -33,9 +28,16 @@ export interface NcaafGameEvent {
 
 export interface NcaafScoreboardPayload {
   events: NcaafGameEvent[];
-  asOf: string;
+  /** Upstream observation timestamp; null when the feed does not establish it. */
+  asOf: string | null;
+  fetchedAt: string;
+  upstreamFetchedAt: string[];
+  canonicalAsOf: string | null;
+  finalsAsOf: string | null;
+  coverage: "partial";
+  withheldCount: number;
   source: "thesportsdb" | "none";
-  /** True when an upstream feed failed or the key is absent — callers hide. */
+  /** True when upstream coverage failed or a key is absent; valid matched rows remain usable. */
   degraded: boolean;
 }
 
@@ -61,6 +63,8 @@ export interface TsdbRawEvent {
  */
 const SCHOOL_ALIAS_GROUPS: ReadonlyArray<ReadonlyArray<string>> = [
   ["southern california", "usc"],
+  ["texas a m", "texas a and m"],
+  ["sam houston", "sam houston state"],
   ["connecticut", "uconn"],
   ["louisiana monroe", "ulm", "louisiana-monroe"],
   ["louisiana lafayette", "louisiana", "ul lafayette"],
@@ -119,7 +123,7 @@ export function mapTsdbStatus(
   if (upper === "" || upper === "NS" || upper === "TBD") {
     return { state: "scheduled", statusLabel: null };
   }
-  if (upper === "FT" || upper === "AET" || upper === "PEN") {
+  if (upper === "FT" || upper === "AET" || upper === "AOT" || upper === "PEN") {
     return { state: "final", statusLabel: null };
   }
   if (upper === "HT") return { state: "halftime", statusLabel: null };
@@ -136,7 +140,7 @@ export function mapTsdbStatus(
 }
 
 function parseScore(value: string | number | null | undefined): number | null {
-  if (value == null) return null;
+  if (value == null || (typeof value === "string" && value.trim() === "")) return null;
   const parsed = Number(value);
   return Number.isInteger(parsed) && parsed >= 0 ? parsed : null;
 }
@@ -222,4 +226,32 @@ export function splitTeamWeek(
     else otherGames.push(event);
   }
   return { teamGames, otherGames };
+}
+
+/** Reconcile a partial provider list without treating fetched-at as observed-at.
+ * All displayed facts come from a unique reviewed snapshot event. Unknown or
+ * ambiguous identities are withheld; unverified live scores never advance it.
+ */
+export function reconcileNcaafEvents(
+  events: ReadonlyArray<NcaafGameEvent>,
+  canonical: ReadonlyArray<NcaafGameEvent>,
+): { events: NcaafGameEvent[]; withheldCount: number } {
+  const result = new Map<string, NcaafGameEvent>();
+  let withheldCount = 0;
+  for (const event of events) {
+    const candidates = canonical.filter((game) =>
+      eventInvolvesSchool(event, game.home) && eventInvolvesSchool(event, game.away) &&
+      Math.abs(Date.parse(game.utc) - Date.parse(event.utc)) <= 7 * 86_400_000,
+    );
+    if (candidates.length !== 1) { withheldCount += 1; continue; }
+    const game = candidates[0];
+    if (game.state === "final" && (game.homeScore == null || game.awayScore == null)) {
+      withheldCount += 1; continue;
+    }
+    result.set(game.id, { ...game,
+      homeScore: game.state === "final" ? game.homeScore : null,
+      awayScore: game.state === "final" ? game.awayScore : null,
+    });
+  }
+  return { events: [...result.values()].sort((a, b) => a.utc.localeCompare(b.utc)), withheldCount };
 }

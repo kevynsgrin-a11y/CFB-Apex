@@ -1,3 +1,4 @@
+import { officialAvailabilityFor, officialAvailabilityNote } from "@/lib/injury-report";
 import {
   ArrowRight,
   CalendarDays,
@@ -177,11 +178,13 @@ export function PlayerRecordPage({
                   </dd>
                 </div>
                 <div>
-                  <dt>Availability</dt>
+                  <dt>Historical Week 1 availability</dt>
                   <dd>{fantasyNote.availability ?? "Not reported"}</dd>
                 </div>
               </dl>
 
+              <p className="inj-stale-banner">This Week 1 note retains its original date and is not current availability. <a href="/injuries">Read the dated official reports</a>.</p>
+              {officialAvailabilityFor(fantasyNote.player, fantasyNote.team) ? <p className="inj-stale-banner">{officialAvailabilityNote(officialAvailabilityFor(fantasyNote.player, fantasyNote.team)!)}</p> : null}
               <div className="lt-fantasy-copy">
                 <section>
                   <span>Role</span>

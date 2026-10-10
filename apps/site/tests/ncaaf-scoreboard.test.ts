@@ -44,6 +44,8 @@ test("alias groups match dataset schools to provider naming without cross-team l
   assert.equal(eventInvolvesSchool({ home: "Miami (OH)", away: "Clemson" }, "Miami (FL)"), false);
   assert.equal(eventInvolvesSchool({ home: "Louisiana Monroe", away: "Texas" }, "ULM"), true);
   assert.equal(eventInvolvesSchool({ home: "Ohio State", away: "Marshall" }, "Ohio"), false);
+  assert.equal(eventInvolvesSchool({ home: "Texas A and M", away: "Missouri" }, "Texas A&M"), true);
+  assert.equal(eventInvolvesSchool({ home: "Liberty", away: "Sam Houston State" }, "Sam Houston"), true);
   assert.equal(eventInvolvesSchool({ home: "Hawaii", away: "UCLA" }, "Hawai'i"), true);
   assert.equal(eventInvolvesSchool({ home: "San Jose State", away: "Air Force" }, "San José State"), true);
 });
@@ -124,4 +126,27 @@ test("windows the week around now and splits team games from the slate", () => {
     otherGames.map((event) => event.id),
     ["recent-final"],
   );
+});
+
+test("AOT is final and blank score strings remain unknown", () => {
+  assert.equal(mapTsdbStatus("AOT", null).state, "final");
+  assert.equal(tsdbEventToNcaafEvent(fixture({ intHomeScore: "", intAwayScore: " " }))?.homeScore, null);
+});
+
+test("reconciliation fixes known times and protects verified finals from stale feed values", async () => {
+  const { reconcileNcaafEvents } = await import("../lib/ncaaf-scoreboard.ts");
+  const base: NcaafGameEvent = { id: "kansas-utah", home: "Utah", away: "Kansas", utc: "2026-10-11T00:00:00Z", state: "scheduled", homeScore: null, awayScore: null, venue: "Rice-Eccles Stadium", statusLabel: null };
+  const hawaii = { ...base, id: "hawaii-asu", home: "Arizona State", away: "Hawai'i", utc: "2026-10-11T02:30:00Z" };
+  const final = { ...base, id: "wyoming-sjsu", home: "San José State", away: "Wyoming", state: "final" as const, homeScore: 13, awayScore: 16, utc: "2026-10-10T02:00:00Z" };
+  const result = reconcileNcaafEvents([
+    { ...base, id: "provider-one", utc: "2026-10-10T04:00:00Z", state: "final", homeScore: 0, awayScore: 0, venue: "Wrong" },
+    { ...hawaii, id: "provider-two", away: "Hawaii", utc: "2026-10-10T00:00:00Z" },
+    { ...final, home: "San Jose State", id: "provider-three", state: "scheduled", homeScore: null, awayScore: null },
+    { ...base, id: "fcs", home: "Unknown FCS", away: "Other FCS" },
+  ], [base, hawaii, final]);
+  assert.equal(result.withheldCount, 1);
+  assert.deepEqual(result.events.find((row) => row.id === base.id), base);
+  assert.deepEqual(result.events.find((row) => row.id === hawaii.id), hawaii);
+  assert.deepEqual(result.events.find((row) => row.id === final.id), final);
+  assert.deepEqual(reconcileNcaafEvents([base], [base, { ...base, id: "ambiguous" }]).events, []);
 });

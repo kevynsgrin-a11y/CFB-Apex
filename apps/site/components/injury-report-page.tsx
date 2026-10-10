@@ -14,8 +14,13 @@ import {
   espnWatchEntries,
   injuryResearch,
   likelihoodFromPractice,
+  officialAvailability,
+  officialAvailabilityFor,
+  officialAvailabilityNote,
+  type OfficialAvailabilityEntry,
 } from "@/lib/injury-report";
 import { verifiedRefresh } from "@/lib/cfb-dataset";
+import { editorialResearchIsHistorical } from "@/lib/injury-freshness.mjs";
 
 function StatusPill({ status }: { status: InjuryStatus }) {
   const cls =
@@ -47,23 +52,23 @@ interface LiveInjury {
   position: string | null;
   status: string;
   detail: string | null;
+  asOf: string | null;
 }
 
 export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] }) {
   const teamBySlug = useMemo(() => new Map(teams.map((team) => [team.slug, team])), [teams]);
   const [teamFilter, setTeamFilter] = useState<string>("");
   const [live, setLive] = useState<LiveInjury[] | null>(null);
-  const [liveAsOf, setLiveAsOf] = useState<string | null>(espnInjuriesAsOf);
+  const [liveAsOf, setLiveAsOf] = useState<string | null>(null);
 
-  // Live refresh from the Worker feed — the posting slots stay honest because
-  // the page upgrades itself whenever a visitor loads it after a slot time.
+  // Supplemental IR refresh only. It never advances the build-time watch date.
   useEffect(() => {
     let cancelled = false;
     fetch("/api/injuries", { headers: { accept: "application/json" } })
       .then((response) => (response.ok ? response.json() : null))
       .then((doc) => {
         if (!cancelled && doc && Array.isArray(doc.entries)) {
-          setLive(doc.entries as LiveInjury[]);
+          if (!doc.degraded) setLive(doc.entries as LiveInjury[]);
           setLiveAsOf(doc.asOf ?? null);
         }
       })
@@ -128,7 +133,8 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
         confidence: entry.confidence,
       });
     }
-    const filtered = teamFilter ? rows.filter((row) => row.teamSlug === teamFilter) : rows;
+    const eligible = rows.filter((row) => officialAvailabilityFor(row.player, row.teamSlug)?.status !== "Available");
+    const filtered = teamFilter ? eligible.filter((row) => row.teamSlug === teamFilter) : eligible;
     return filtered.sort(
       (a, b) => (a.teamSlug ?? "").localeCompare(b.teamSlug ?? "") || a.player.localeCompare(b.player),
     );
@@ -147,6 +153,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
       note: entry.detail,
       sources: [] as string[],
       social: [] as string[],
+      official: null as OfficialAvailabilityEntry | null,
     }));
     const researchRows = injuryResearch.watch.map((entry) => {
       const model = likelihoodFromPractice(entry.practice);
@@ -162,11 +169,20 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
         note: entry.note ?? model.basis,
         sources: entry.sources,
         social: entry.social,
+        official: null as OfficialAvailabilityEntry | null,
       };
     });
     // Research rows outrank their ESPN twin; ESPN-only rows fill the board.
     const researchKeys = new Set(researchRows.map((row) => `${row.player}:${row.teamSlug}`));
-    const rows = [...researchRows, ...espnRows.filter((row) => !researchKeys.has(`${row.player}:${row.teamSlug}`))];
+    const priorRows = [...researchRows, ...espnRows.filter((row) => !researchKeys.has(`${row.player}:${row.teamSlug}`))];
+    const officialRows = (officialAvailability?.entries ?? []).map((official) => {
+      const prior = priorRows.find((row) => row.player === official.player && row.teamSlug === official.team_slug);
+      return { kind: "research" as const, player: official.player, teamSlug: official.team_slug,
+        position: official.position, injury: null, practice: null, likelihood: null, confidence: null,
+        note: `${officialAvailabilityNote(official)}${prior?.note ? ` Historical editorial note (${injuryResearch.asOf}): ${prior.note}` : ""}`,
+        sources: [official.source_url], social: [] as string[], official };
+    });
+    const rows = [...officialRows, ...priorRows.filter((row) => !officialAvailabilityFor(row.player, row.teamSlug))];
     const filtered = teamFilter ? rows.filter((row) => row.teamSlug === teamFilter) : rows;
     return filtered.sort(
       (a, b) => (a.teamSlug ?? "").localeCompare(b.teamSlug ?? "") || a.player.localeCompare(b.player),
@@ -174,26 +190,24 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
   }, [baseWatch, teamFilter]);
 
   const researchLive = injuryResearch.watch.length > 0 || injuryResearch.ledger.length > 0;
-  // The editorial layer is stale when it predates the dataset's reference
-  // week — its rows describe games that have already been played.
+  // The date of the old editorial file must not validate itself through the
+  // equally old scoreboard reference date. Official game reports stay separate.
   const researchStale =
-    researchLive && injuryResearch.asOf != null && verifiedRefresh != null
-      ? injuryResearch.asOf < verifiedRefresh.reference_date
-      : false;
+    researchLive && editorialResearchIsHistorical(injuryResearch.asOf, Date.now());
 
   return (
     <div className="db-page inj-page">
       <DataBoardHero
         eyebrow="Injury desk · Verified weekly"
         title="The injury report, on the record."
-        description="A long-term ledger of every college player out for the season or more than two weeks, plus a week-to-week watch with verified practice status and likelihood to play — graded on beat reporting, team releases, and verified player accounts."
+        description="A limited, dated snapshot of official game availability alongside sourced long-term injury history. Missing players and teams are unknown; this is not a complete college-football injury list."
       />
       <DataBoardSummary
         label="Injury desk summary"
-        caption={`${INJURY_METHOD.schedule} ESPN base as of ${liveAsOf ?? "not published"}.`}
+        caption={`${INJURY_METHOD.schedule} ESPN build snapshot date: ${espnInjuriesAsOf ?? "unknown"}. Supplemental IR source date: ${liveAsOf ?? "unknown"}.`}
         items={[
           { label: "Long-term ledger", value: ledgerRows.length, emphasis: true },
-          { label: "Week-to-week watch", value: watchRows.length },
+          { label: "Tracked game designations", value: officialAvailability?.entries.length ?? 0 },
           { label: "Research entries", value: injuryResearch.ledger.length + injuryResearch.watch.length },
           { label: "Research as of", value: injuryResearch.asOf ?? "Not published" },
           { label: "Teams covered", value: new Set([...ledgerRows, ...watchRows].map((row) => row.teamSlug)).size },
@@ -210,11 +224,10 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
       {researchStale ? (
         <div className="apex-container inj-stale-banner" role="status">
           <strong>
-            Week {verifiedRefresh?.week} report not yet published; last editorial update{" "}
-            {injuryResearch.asOf}.
+            Historical editorial notes: {injuryResearch.asOf}.
           </strong>{" "}
-          The watch calls below are from that earlier report and describe games that have already
-          been played — treat them as a sample of the desk&apos;s format, not current availability.
+          Official designations below are dated to their specific game and take precedence over older notes.
+          Earlier editorial notes are retained as history, not a fresh availability assessment.
         </div>
       ) : null}
 
@@ -244,7 +257,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
           </div>
         </div>
         {ledgerRows.length ? (
-          <div className="db-table-wrap db-desktop-data-table">
+          <section className="db-table-wrap" tabIndex={0} aria-label="Scrollable injury report table">
             <table className="db-table inj-table">
               <thead>
                 <tr>
@@ -270,9 +283,13 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
                       <td>{row.position ?? "—"}</td>
                       <td>
                         <StatusPill status={row.status} />
+                        <small className="inj-conf">Editorial long-term category</small>
                       </td>
                       <td>{row.weeksOut != null ? `${row.weeksOut}+` : row.status === "IR" ? "Indefinite" : "—"}</td>
-                      <td className="inj-detail">{row.injury ?? row.detail ?? "Not published"}</td>
+                      <td className="inj-detail">
+                        {row.detail ?? row.injury ?? "Not published"}
+                        {officialAvailabilityFor(row.player, row.teamSlug) ? <p>{officialAvailabilityNote(officialAvailabilityFor(row.player, row.teamSlug)!)}</p> : null}
+                      </td>
                       <td>
                         {row.sources.length ? (
                           <a href={row.sources[0]} target="_blank" rel="noopener noreferrer">
@@ -287,7 +304,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
                 })}
               </tbody>
             </table>
-          </div>
+          </section>
         ) : (
           <p className="db-empty">No long-term injuries published{teamFilter ? " for this team" : ""}.</p>
         )}
@@ -296,34 +313,17 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
       <section className="apex-container db-section" aria-labelledby="inj-watch-title">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">WEEK-TO-WEEK WATCH · PRACTICE STATUS & LIKELIHOOD</span>
-            <h2 id="inj-watch-title">Game-time decisions, graded</h2>
+            <span className="eyebrow">GAME AVAILABILITY · DATED OFFICIAL DESIGNATIONS</span>
+            <h2 id="inj-watch-title">Tracked game availability</h2>
           </div>
         </div>
-        {researchStale ? (
-          <p className="inj-watch-note">
-            Editorial watch calls (practice participation, likelihood with confidence, sentiment from beat
-            reports and verified accounts) publish with the weekly research. The current research file is from{" "}
-            {injuryResearch.asOf} (Week {injuryResearch.week}); the next report publishes when the desk is
-            staffed for it — no schedule is promised until then.
-          </p>
-        ) : researchLive ? (
-          <p className="inj-watch-note">{INJURY_METHOD.sentiment}</p>
-        ) : (
-          <p className="inj-watch-note">
-            Editorial watch calls (practice participation, likelihood with confidence, sentiment from beat reports
-            and verified accounts) publish with the weekly research — until then this board shows the ESPN base
-            only, clearly labeled. Nothing is invented to fill the gap.
-          </p>
-        )}
+        <p className="inj-watch-note">{officialAvailability?.scope} {officialAvailability?.note}</p>
         {watchRows.length ? (
-          <details className="inj-watch-details" open={!researchStale}>
+          <details className="inj-watch-details" open={Boolean(officialAvailability?.entries.length) || !researchStale}>
             <summary>
-              {researchStale
-                ? `Show the Week ${injuryResearch.week} watch table (${watchRows.length} rows, last editorial update ${injuryResearch.asOf})`
-                : `Watch table — ${watchRows.length} graded rows`}
+              {`Tracked availability table — ${watchRows.length} rows; official snapshot ${officialAvailability?.as_of ?? "not published"}` }
             </summary>
-          <div className="db-table-wrap db-desktop-data-table">
+          <section className="db-table-wrap" tabIndex={0} aria-label="Scrollable injury report table">
             <table className="db-table inj-table inj-table--watch">
               <thead>
                 <tr>
@@ -334,7 +334,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
                   <th scope="col">Thu</th>
                   <th scope="col">Fri</th>
                   <th scope="col">Sat</th>
-                  <th scope="col">Likelihood</th>
+                  <th scope="col">Game designation / older likelihood</th>
                   <th scope="col">Note</th>
                 </tr>
               </thead>
@@ -355,7 +355,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
                       <td><PracticeCell status={practice ? practice.fri : null} /></td>
                       <td><PracticeCell status={practice ? practice.sat : null} /></td>
                       <td>
-                        <LikelihoodPill likelihood={row.likelihood} confidence={row.confidence} />
+                        {row.official ? <><span className="inj-pill">{row.official.status}</span><small className="inj-conf">Official · {row.official.game_date}</small></> : <><LikelihoodPill likelihood={row.likelihood} confidence={row.confidence} /><small className="inj-conf">Historical · {injuryResearch.asOf}</small></>}
                       </td>
                       <td className="inj-detail">
                         {row.note ?? "Not published"}
@@ -378,7 +378,7 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
                 })}
               </tbody>
             </table>
-          </div>
+          </section>
           </details>
         ) : (
           <p className="db-empty">No week-to-week entries published{teamFilter ? " for this team" : ""}.</p>

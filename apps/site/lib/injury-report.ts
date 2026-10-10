@@ -15,6 +15,7 @@
  */
 
 import bundle from "./cfb-2026.generated.ts";
+import { isCurrentEspnInjury } from "./injury-freshness.mjs";
 import { teams } from "./cfb-dataset.ts";
 import type { Team } from "./types";
 
@@ -85,11 +86,12 @@ const researchDoc = ((bundle as Record<string, unknown>).injuryResearch ?? {}) a
 function mapPractice(row: Record<string, unknown>): InjuryWatchEntry["practice"] {
   const norm = (value: unknown): PracticeStatus | null =>
     value === "DNP" || value === "LP" || value === "FP" ? value : null;
+  const practice = (row.practice ?? {}) as Record<string, unknown>;
   return {
-    wed: norm(row.practice_wed),
-    thu: norm(row.practice_thu),
-    fri: norm(row.practice_fri),
-    sat: norm(row.practice_sat),
+    wed: norm(practice.wed ?? row.practice_wed),
+    thu: norm(practice.thu ?? row.practice_thu),
+    fri: norm(practice.fri ?? row.practice_fri),
+    sat: norm(practice.sat ?? row.practice_sat),
   };
 }
 
@@ -162,13 +164,13 @@ export function isLongTerm(entry: {
 
 /** ESPN base entries that qualify for the long-term ledger on their own. */
 export function espnLedgerEntries(): EspnInjuryEntry[] {
-  return espnInjuries.filter((entry) => entry.status === "IR");
+  return espnInjuries.filter((entry) => entry.status === "IR" && isCurrentEspnInjury(entry.asOf, Date.now()));
 }
 
 /** ESPN base entries for the week-to-week board (uncertain statuses only). */
 export function espnWatchEntries(): EspnInjuryEntry[] {
   return espnInjuries.filter(
-    (entry) => entry.status === "QUESTIONABLE" || entry.status === "DOUBTFUL" || entry.status === "OUT",
+    (entry) => isCurrentEspnInjury(entry.asOf, Date.now()) && (entry.status === "QUESTIONABLE" || entry.status === "DOUBTFUL" || entry.status === "OUT"),
   );
 }
 
@@ -255,7 +257,27 @@ export function injuryCounts() {
 
 export const INJURY_METHOD = {
   ledger: "The long-term ledger lists players out for the season or expected out more than 2 weeks — game-time decisions never belong here.",
-  watch: "The watch carries verified practice participation and availability notes plus likelihood to play, graded with a stated confidence and sourced from beat reporting, team releases, and verified player social accounts (X, Instagram).",
+  watch: "The tracked watch reproduces dated official game designations literally. Available is not a medical prognosis, Exempt is not Available, and missing players are unknown. Older editorial likelihoods are labeled as history rather than current game status.",
   sentiment: "Sentiment is evidence, not vibes: a likelihood call must cite a beat report, team release, or verified-account post. Unverified aggregators and speculation accounts are never sources.",
-  schedule: "The ESPN base refreshes with every scheduled rebuild; the editorial layer publishes on the posted schedule and is locked once Saturday kickoffs begin.",
+  schedule: "Official game designations are a limited reviewed snapshot. Historical editorial notes retain their dates. ESPN rows older than 14 days or without a valid date are withheld; an empty feed is not an all-clear.",
 } as const;
+
+/** Limited, dated official report snapshot; absence never implies Available. */
+export type OfficialAvailabilityStatus = "Available" | "Out" | "Doubtful" | "Questionable" | "Probable" | "Game Time Decision" | "Exempt";
+export interface OfficialAvailabilityEntry {
+  player: string; team_slug: string; position: string; jersey: string | null;
+  status: OfficialAvailabilityStatus; exempt_status: string; conference: string;
+  game_date: string; matchup: string; report_id: string; report_type: string;
+  published_at: string; retrieved_at: string; source_url: string;
+}
+export interface OfficialAvailabilitySnapshot {
+  as_of: string; checked_at: string; scope: string; note: string;
+  entries: OfficialAvailabilityEntry[];
+}
+export const officialAvailability = (bundle as unknown as { officialAvailability: OfficialAvailabilitySnapshot | null }).officialAvailability;
+export function officialAvailabilityFor(player: string, teamSlug: string | null): OfficialAvailabilityEntry | null {
+  return officialAvailability?.entries.find((row) => row.player === player && row.team_slug === teamSlug) ?? null;
+}
+export function officialAvailabilityNote(row: OfficialAvailabilityEntry): string {
+  return `${row.game_date} ${row.matchup}: ${row.status}. ${row.conference} ${row.report_type}, report ${row.report_id}. Published ${row.published_at}; retrieved ${row.retrieved_at}.`;
+}

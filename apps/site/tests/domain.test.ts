@@ -245,7 +245,7 @@ test("dataset records are provenance-tagged and never claim live status", () => 
   assert.ok(games.every((game) => !fixtureNames.test(game.statusDetail)));
   assert.equal(
     providerHealth.find((provider) => provider.id === "production-sports")?.status,
-    "not_configured",
+    "degraded",
   );
 });
 import { stadiumPageTitle, staticRootTitle, teamPageTitle } from "../lib/seo-titles.ts";
