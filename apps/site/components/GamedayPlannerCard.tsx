@@ -1,3 +1,4 @@
+import { sourceDateLabel } from "@/lib/game-calendar";
 import {
   CloudSun,
   Tv,
@@ -161,14 +162,7 @@ export default function GamedayPlannerCard({
     });
   };
 
-  const verifiedLabel = (dateStr: string) => {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  };
+
 
   return (
     <div
@@ -344,7 +338,7 @@ export default function GamedayPlannerCard({
               }}
             >
               <CheckCircle2 className="h-3 w-3" />
-              Verified {verifiedLabel(parking.lastVerified)}
+              Verified {sourceDateLabel(parking.lastVerified)}
             </span>
           </div>
         ) : (
