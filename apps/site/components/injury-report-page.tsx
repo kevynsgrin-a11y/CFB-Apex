@@ -177,9 +177,11 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
     const priorRows = [...researchRows, ...espnRows.filter((row) => !researchKeys.has(`${row.player}:${row.teamSlug}`))];
     const officialRows = (officialAvailability?.entries ?? []).map((official) => {
       const prior = priorRows.find((row) => row.player === official.player && row.teamSlug === official.team_slug);
+      const priorLedger = injuryResearch.ledger.find((row) => row.player === official.player && row.teamSlug === official.team_slug);
+      const historicalNote = prior?.note ?? [priorLedger?.injury, priorLedger?.detail].filter(Boolean).join(". ");
       return { kind: "research" as const, player: official.player, teamSlug: official.team_slug,
         position: official.position, injury: null, practice: null, likelihood: null, confidence: null,
-        note: `${officialAvailabilityNote(official)}${prior?.note ? ` Historical editorial note (${injuryResearch.asOf}): ${prior.note}` : ""}`,
+        note: `${officialAvailabilityNote(official)}${historicalNote ? ` Historical editorial note (${injuryResearch.asOf}): ${historicalNote}` : ""}`,
         sources: [official.source_url], social: [] as string[], official };
     });
     const rows = [...officialRows, ...priorRows.filter((row) => !officialAvailabilityFor(row.player, row.teamSlug))];

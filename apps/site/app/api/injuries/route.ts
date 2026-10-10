@@ -1,7 +1,7 @@
 import { teams } from "@/lib/cfb-dataset";
 import { ESPN_INJURY_FEED, espnInjuries, espnInjuriesAsOf, type EspnInjuryEntry } from "@/lib/injury-report";
 import { isCurrentEspnInjury } from "@/lib/injury-freshness.mjs";
-import { parseEspnInjuryFeed, mergeValidatedEspnInjuries } from "@/lib/espn-injuries";
+import { parseEspnInjuryFeed, mergeValidatedEspnInjuries, espnInjuryCachePolicy } from "@/lib/espn-injuries";
 
 export const revalidate = 0;
 const teamSlugs = new Map(teams.flatMap((team) => [[team.name.toLowerCase(), team.slug], [team.shortName.toLowerCase(), team.slug]]));
@@ -15,7 +15,12 @@ interface Feed {
   detail: string;
 }
 let cache: { at: number; feed: Feed } | null = null;
-const TTL_MS = 10 * 60 * 1000;
+function injuryResponse(feed: Feed) {
+  return Response.json(
+    { requestId: crypto.randomUUID(), source: "ESPN college football injuries feed", buildSnapshotAsOf: espnInjuriesAsOf, count: feed.entries.length, ...feed },
+    { headers: { "Cache-Control": espnInjuryCachePolicy(feed.degraded).cacheControl } },
+  );
+}
 function validatedFallback(nowMs: number, detail: string): Feed {
   const prior = cache?.feed;
   return {
@@ -30,9 +35,9 @@ function validatedFallback(nowMs: number, detail: string): Feed {
 }
 export async function GET() {
   const nowMs = Date.now();
-  if (cache && nowMs - cache.at < TTL_MS) {
+  if (cache && nowMs - cache.at < espnInjuryCachePolicy(cache.feed.degraded).ttlMs) {
     const feed = { ...cache.feed, entries: cache.feed.entries.filter((row) => isCurrentEspnInjury(row.asOf, nowMs)) };
-    return Response.json({ requestId: crypto.randomUUID(), source: "ESPN college football injuries feed", buildSnapshotAsOf: espnInjuriesAsOf, count: feed.entries.length, ...feed }, { headers: { "Cache-Control": "public, max-age=300" } });
+    return injuryResponse(feed);
   }
   let feed: Feed;
   try {
@@ -50,5 +55,5 @@ export async function GET() {
     feed = validatedFallback(nowMs, error instanceof Error ? error.message : "Live fetch failed.");
   }
   cache = { at: nowMs, feed };
-  return Response.json({ requestId: crypto.randomUUID(), source: "ESPN college football injuries feed", buildSnapshotAsOf: espnInjuriesAsOf, count: feed.entries.length, ...feed }, { headers: { "Cache-Control": "public, max-age=300" } });
+  return injuryResponse(feed);
 }

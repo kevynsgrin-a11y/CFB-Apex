@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { isCurrentEspnInjury, editorialResearchIsHistorical } from "../lib/injury-freshness.mjs";
-import { parseEspnInjuryFeed, mergeValidatedEspnInjuries } from "../lib/espn-injuries.ts";
+import { parseEspnInjuryFeed, mergeValidatedEspnInjuries, espnInjuryCachePolicy } from "../lib/espn-injuries.ts";
 import { espnInjuries, espnWatchEntries, injuryResearch, officialAvailability, officialAvailabilityFor } from "../lib/injury-report.ts";
 import { fantasyNotesAsOf, verifiedRefresh, games } from "../lib/cfb-dataset.ts";
 const NOW = Date.parse("2026-10-10T14:31:21Z");
@@ -90,4 +90,19 @@ test("mobile injury tables explicitly override the generic unlabeled card transf
   assert.match(css, /\.inj-page \.inj-table tbody\s*\{[^}]*display: table-row-group;/);
   assert.match(css, /\.inj-page \.inj-table td\s*\{[^}]*display: table-cell;/);
   assert.match(css, /\.inj-page \.inj-table td::before\s*\{[^}]*content: none;/);
+});
+
+
+test("degraded injury responses retry after one minute and are never browser cached", () => {
+  const failed = espnInjuryCachePolicy(true);
+  const healthy = espnInjuryCachePolicy(false);
+  assert.deepEqual(failed, { ttlMs: 60_000, cacheControl: "no-store" });
+  assert.deepEqual(healthy, { ttlMs: 600_000, cacheControl: "public, max-age=300" });
+  assert.ok(59_999 < failed.ttlMs);
+  assert.ok(!(60_000 < failed.ttlMs), "degraded fetch is retried at the one-minute boundary");
+  assert.ok(60_000 < healthy.ttlMs, "healthy data keeps the existing ten-minute isolate TTL");
+  const route = readFileSync(new URL("../app/api/injuries/route.ts", import.meta.url), "utf8");
+  assert.match(route, /nowMs - cache.at < espnInjuryCachePolicy\(cache.feed.degraded\).ttlMs/);
+  assert.equal(route.match(/return injuryResponse\(feed\);/g)?.length, 2, "cache-hit and fresh/fallback responses share the same policy");
+  assert.match(route, /"Cache-Control": espnInjuryCachePolicy\(feed.degraded\).cacheControl/);
 });

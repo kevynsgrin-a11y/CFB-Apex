@@ -314,3 +314,15 @@ test("official availability containment renders literal designations and histori
   assert.match(player, /This Week 1 note retains its original date/);
   assert.match(player, /UCLA vs Oregon: Out|Oregon vs UCLA: Out/);
 });
+
+
+test("Available Jake Maikkula keeps explicitly dated ledger history without a current OUT row", async () => {
+  const html = (await (await fetchRoute("/injuries")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  const tableRows = [...html.matchAll(/<tr[\s\S]*?<\/tr>/g)].map((match) => match[0]);
+  const jakeRows = tableRows.filter((row) => row.includes("Jake Maikkula"));
+  assert.equal(jakeRows.length, 1, "Available removes the current long-term absence row");
+  const text = jakeRows[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  assert.match(text, /Available/);
+  assert.match(text, /Historical editorial note \(2026-10-05\): Knee\. Expected to miss multiple consecutive weeks/);
+  assert.doesNotMatch(jakeRows[0], /inj-pill--out/);
+});

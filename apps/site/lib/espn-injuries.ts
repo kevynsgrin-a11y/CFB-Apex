@@ -43,3 +43,10 @@ export function mergeValidatedEspnInjuries(previous: readonly EspnInjuryEntry[],
   }
   return [...rows.values()];
 }
+
+/** Failed or incomplete fetches recover quickly without browser-sticky fallback. */
+export function espnInjuryCachePolicy(degraded: boolean): { ttlMs: number; cacheControl: string } {
+  return degraded
+    ? { ttlMs: 60_000, cacheControl: "no-store" }
+    : { ttlMs: 10 * 60_000, cacheControl: "public, max-age=300" };
+}
