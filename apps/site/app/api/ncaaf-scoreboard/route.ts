@@ -14,6 +14,7 @@ const canonical: NcaafGameEvent[] = games.filter((game) => game.week === verifie
   awayScore: game.awayScore ?? null, state: game.status === "final" ? "final" : "scheduled",
   statusLabel: game.status === "final" ? game.statusDetail : null, venue: game.venue,
 }));
+/** Fallback snapshot payload (no events) stamped with the verified refresh's own schedule/finals timestamps. */
 function envelope(nowMs: number): NcaafScoreboardPayload {
   return { events: [], asOf: null, fetchedAt: new Date(nowMs).toISOString(), upstreamFetchedAt: [],
     canonicalAsOf: verifiedRefresh?.schedule_verified_at ?? verifiedRefresh?.retrieved_at ?? null,

@@ -9,6 +9,7 @@ const offsetFormatter = new Intl.DateTimeFormat("en-US", {
 });
 const dateCache = new Map<string, string>();
 
+/** Civil date (YYYY-MM-DD) of a value in the America/New_York zone; passes already-civil dates through. */
 export function easternDate(value: string): string {
   if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
   const cached = dateCache.get(value);
@@ -24,6 +25,7 @@ export function easternDate(value: string): string {
   return result;
 }
 
+/** Monday (UTC-anchored) that starts the Eastern-calendar week containing the given value. */
 export function weekStart(value: string): string {
   const date = easternDate(value);
   if (!date) return "";
@@ -32,6 +34,7 @@ export function weekStart(value: string): string {
   return start.toISOString().slice(0, 10);
 }
 
+/** 1-indexed season week number for a value, counted from the season's opening week start. */
 export function seasonWeek(value: string): number {
   const start = weekStart(value);
   // Week 1 spans the opening holiday weekend; Week 2 starts Sept. 7.
@@ -42,6 +45,7 @@ export function seasonWeek(value: string): number {
   );
 }
 
+/** Dedupe/lookup key for a matchup: the Eastern civil date plus the sorted team pair. */
 export function gameKey(date: string, away: string, home: string): string {
   return `${easternDate(date)}:${[away, home].sort().join(":")}`;
 }

@@ -450,6 +450,7 @@ export const teams: Team[] = datasetTeams.map((team) => {
 
 /* ---------------------------------------------------------------- games */
 
+/** "Day · date" label for a scheduled game built from its civil date (no kickoff time published yet). */
 function kickoffLabel(date: string) {
   const parsed = new Date(`${date}T17:00:00Z`);
   const day = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "UTC" }).format(parsed);

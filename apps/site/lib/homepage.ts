@@ -88,6 +88,7 @@ export function kickoffTime(game: BroadcastGame): string {
   );
 }
 
+/** Weekday/month/day label for a date; date-only values render in UTC (civil date), instants in Eastern time. */
 export function dateLabel(
   date: string,
   weekday: "short" | "long" = "short",
@@ -102,6 +103,7 @@ export function dateLabel(
   }).format(value);
 }
 
+/** Games whose Eastern civil date falls within the 7-day week starting at `referenceDate`'s week start. */
 export function weekGames(
   games: readonly BroadcastGame[],
   referenceDate: string,

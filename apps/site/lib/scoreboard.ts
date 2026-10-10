@@ -26,6 +26,7 @@ export function continuousWeeks(publishedWeeks: readonly number[]) {
   return Array.from({ length: last - first + 1 }, (_, index) => first + index);
 }
 
+/** Week to show by default: the week holding the next unplayed Saturday on/after `asOf`, else the latest published week. */
 export function defaultScoreboardWeek(
   source: readonly Game[],
   asOf: string | null,
@@ -83,6 +84,7 @@ export function filterScoreboardGames({
   });
 }
 
+/** Buckets games by their Eastern civil date, sorted ascending by date. */
 export function groupGamesByDate(source: readonly Game[]) {
   const groups = new Map<string, Game[]>();
   for (const game of source) {
@@ -128,6 +130,7 @@ export function appointmentGames(
     .slice(0, Math.max(0, limit));
 }
 
+/** Formats a civil date string (weekday/month/day) in UTC since the value is already a civil date, not an instant. */
 export function scoreboardDateLabel(date: string, long = false) {
   const parsed = new Date(`${date.slice(0, 10)}T12:00:00Z`);
   if (Number.isNaN(parsed.getTime())) return "Date not published";
@@ -139,10 +142,12 @@ export function scoreboardDateLabel(date: string, long = false) {
   }).format(parsed);
 }
 
+/** Published "h:mm AM/PM ET" kickoff time parsed from the game's label, or "TBD". */
 export function kickoffTimeLabel(game: Game) {
   return game.kickoffLabel.match(/\d{1,2}:\d{2} (?:AM|PM) ET/)?.[0] ?? "TBD";
 }
 
+/** Game's broadcast network, or a fallback label when none is assigned. */
 export function broadcastLabel(game: Game) {
   return game.broadcast ?? "Network not assigned";
 }
