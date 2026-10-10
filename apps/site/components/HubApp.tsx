@@ -3,7 +3,7 @@
 import { easternDate } from "@/lib/game-calendar";
 
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
-import { ChevronLeft, ChevronRight, CircleOff, RefreshCw } from "lucide-react";
+import { ChevronLeft, ChevronRight, CircleOff } from "lucide-react";
 import {
   broadcastAsOf,
   broadcastEventForGame,
@@ -48,6 +48,7 @@ import {
   defaultScoreboardWeek,
   gamesForWeek,
   scoreboardSourceLabel,
+  scoreboardSwipeDirection,
 } from "@/lib/scoreboard";
 import { normalizeForcedOutcomes, runPlayoffSimulation, type ForcedOutcomes } from "@/lib/simulation";
 import { getTeamHubData } from "@/lib/team-hub";
@@ -355,8 +356,6 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
   const [week, setWeek] = useState(() => defaultScoreboardWeek(games, broadcastAsOf));
   const [filter, setFilter] = useState<ScoreFilter>("All");
   const [isPending, startTransition] = useTransition();
-  const [pullDistance, setPullDistance] = useState(0);
-  const [refreshMessage, setRefreshMessage] = useState("");
   const weekRail = useRef<HTMLFieldSetElement>(null);
   const gesture = useRef({ active: false, x: 0, y: 0 });
   const weekGames = gamesForWeek(games, week);
@@ -390,26 +389,13 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
     gesture.current = { active: true, x: event.clientX, y: event.clientY };
   };
 
-  const onPointerMove = (event: React.PointerEvent<HTMLElement>) => {
-    if (!gesture.current.active) return;
-    const deltaX = event.clientX - gesture.current.x;
-    const deltaY = event.clientY - gesture.current.y;
-    if (window.scrollY <= 1 && deltaY > 0 && Math.abs(deltaY) > Math.abs(deltaX)) {
-      setPullDistance(Math.min(64, deltaY * 0.45));
-    }
-  };
-
   const finishGesture = (event: React.PointerEvent<HTMLElement>) => {
     if (!gesture.current.active) return;
     const deltaX = event.clientX - gesture.current.x;
     const deltaY = event.clientY - gesture.current.y;
     gesture.current.active = false;
-    if (pullDistance >= 46) {
-      setRefreshMessage(`Week ${week} is shown from the published snapshot. Reload for a newer release.`);
-    } else if (Math.abs(deltaX) > 62 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25) {
-      updateWeek(deltaX < 0 ? nextWeek : previousWeek);
-    }
-    setPullDistance(0);
+    const direction = scoreboardSwipeDirection(deltaX, deltaY);
+    if (direction) updateWeek(direction === "next" ? nextWeek : previousWeek);
   };
 
   return (
@@ -478,24 +464,13 @@ function ScoresPage({ mode, favorites, onFavorite }: HomeProps) {
         className="content-section scoreboard-touch-zone"
         aria-busy={isPending}
         onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
         onPointerUp={finishGesture}
         onPointerCancel={() => {
           gesture.current.active = false;
-          setPullDistance(0);
         }}
       >
-        <div
-          className="scoreboard-pull-cue"
-          data-ready={pullDistance >= 46 || undefined}
-          style={{ "--pull-distance": `${pullDistance}px` } as React.CSSProperties}
-          aria-hidden="true"
-        >
-          <RefreshCw />
-          <span>{pullDistance >= 46 ? "Release to check" : "Pull to refresh"}</span>
-        </div>
         <span className="sr-only" aria-live="polite" aria-atomic="true">
-          {refreshMessage || `Week ${week}. ${filtered.length} games shown${filter === "All" ? "" : ` for ${filter}`}.`}
+          {`Week ${week}. ${filtered.length} games shown${filter === "All" ? "" : ` for ${filter}`}.`}
         </span>
         <div className="scoreboard-summary">
           <div><span>{weekGames.length}</span><small>WEEK {week} GAMES</small></div>

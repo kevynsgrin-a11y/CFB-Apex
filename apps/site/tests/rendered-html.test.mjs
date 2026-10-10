@@ -349,3 +349,13 @@ test("injury search metadata states limited tracked-player coverage", async () =
   assert.match(html, /name="description" content="Dated official game-availability snapshots for tracked players on selected teams, plus sourced historical injury context\. Coverage is limited\."/);
   assert.doesNotMatch(html, /availability watch across every FBS team/);
 });
+
+test("scoreboard keeps week navigation without a pretend refresh affordance", async () => {
+  const html = (await (await fetchRoute("/scores")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  assert.doesNotMatch(html, /Pull to refresh|Release to check|scoreboard-pull-cue/);
+  assert.match(html, /Select scoreboard week/);
+  assert.match(html, /aria-label="View week 5"/);
+  assert.match(html, /aria-label="View week 7"/);
+  assert.match(html, /Week 6\. 58 games shown\./);
+  assert.match(html, /Status changes require a newer verified release/);
+});

@@ -21,6 +21,7 @@ import {
   kickoffTimeLabel,
   scoreboardDateLabel,
   scoreboardSourceLabel,
+  scoreboardSwipeDirection,
   type ScoreboardFilter,
 } from "../lib/scoreboard.ts";
 import { stadiumPageTitle, staticRootTitle, STATIC_ROOT_TITLES, teamPageTitle } from "../lib/seo-titles.ts";
@@ -405,4 +406,14 @@ test("civil verification dates agree across server and browser time zones", () =
   }
   assert.equal(sourceDateLabel("2026-02-30"), "Not published");
   assert.equal(sourceDateLabel("bad date"), "Not published");
+});
+
+test("scoreboard gestures navigate horizontally and ignore vertical pulls", () => {
+  assert.equal(scoreboardSwipeDirection(-63, 0), "next");
+  assert.equal(scoreboardSwipeDirection(63, 0), "previous");
+  assert.equal(scoreboardSwipeDirection(-100, 50), "next");
+  assert.equal(scoreboardSwipeDirection(100, -50), "previous");
+  for (const [x, y] of [[0, 150], [0, -150], [20, 150], [-20, 150], [62, 0], [-62, 0], [100, 80], [-100, -80]]) {
+    assert.equal(scoreboardSwipeDirection(x, y), null, `ignored gesture ${x},${y}`);
+  }
 });

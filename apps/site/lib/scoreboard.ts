@@ -147,6 +147,12 @@ export function broadcastLabel(game: Game) {
   return game.broadcast ?? "Network not assigned";
 }
 
+/** Only deliberate horizontal swipes navigate weeks; vertical pulls do nothing. */
+export function scoreboardSwipeDirection(deltaX: number, deltaY: number): "next" | "previous" | null {
+  if (Math.abs(deltaX) <= 62 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.25) return null;
+  return deltaX < 0 ? "next" : "previous";
+}
+
 
 /** A week-scoped source label; a fresh release never restamps other weeks. */
 export function scoreboardSourceLabel(week: number, snapshot: {

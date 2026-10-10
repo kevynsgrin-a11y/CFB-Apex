@@ -4182,28 +4182,6 @@ body {
   touch-action: pan-y pinch-zoom;
 }
 
-.scoreboard-pull-cue {
-  align-items: center;
-  color: var(--muted);
-  display: flex;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 14px;
-  gap: 8px;
-  height: var(--pull-distance, 0);
-  justify-content: center;
-  overflow: hidden;
-  transition: height var(--duration-fast) ease-out;
-}
-
-.scoreboard-pull-cue[data-ready="true"] {
-  color: var(--gold);
-}
-
-.scoreboard-pull-cue svg {
-  height: 17px;
-  width: 17px;
-}
-
 .scoreboard-results {
   animation: route-frame-in var(--duration-fast) ease-out both;
 }
@@ -4385,7 +4363,6 @@ body {
     background: var(--surface-2);
   }
 
-  .scoreboard-pull-cue,
   .polish-sheet,
   .mobile-data-card,
   .mobile-data-card * {
