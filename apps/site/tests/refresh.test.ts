@@ -34,19 +34,19 @@ test("Eastern dates keep Friday finals and late Saturday games on the correct da
 
 test("the weekly board and ticker share the verified Week 6 snapshot", () => {
   const slate = weekGames(games, homepageData.referenceDate);
-  // 58 FBS-vs-FBS games: the 7 Tue-Thu games are final (Oct 9 refresh), 51 remain.
+  // 58 FBS-vs-FBS games: 12 Tue–Fri finals and 46 Saturday games.
   assert.equal(slate.length, 58);
-  assert.equal(slate.filter((game) => game.status === "final").length, 7);
-  assert.equal(slate.filter((game) => game.status === "scheduled").length, 51);
+  assert.equal(slate.filter((game) => game.status === "final").length, 12);
+  assert.equal(slate.filter((game) => game.status === "scheduled").length, 46);
   assert.equal(
     new Set(
       slate.map((game) => gameKey(game.date, game.awayTeamId, game.homeTeamId)),
     ).size,
     slate.length,
   );
-  assert.equal(tickerGames.filter((game) => game.status === "final").length, 7);
+  assert.equal(tickerGames.filter((game) => game.status === "final").length, 8);
   assert.ok(
-    tickerGames.some((game) => game.awayTeamId === "southern-miss" && game.status === "final"),
+    tickerGames.some((game) => game.awayTeamId === "iowa-state" && game.status === "final"),
   );
   assert.ok(slate.every((game) => games.find((row) => row.id === game.id)?.week === 6));
   assert.ok(
@@ -336,4 +336,50 @@ test("freshness stays per source: polls and stats keep their own cutoffs", () =>
   const recap = verifiedRefresh?.storylines?.find((row) => row.id === "week6-thursday-finals");
   assert.ok(recap && recap.sources.length >= 4, "recap is sourced");
   assert.deepEqual([...(recap?.result_provider_ids ?? [])].sort(), MIDWEEK_FINALS.map((row) => row.provider).sort());
+});
+
+const FRIDAY_FINALS = [
+  { id: "2026-10-09-florida-state-at-louisville", away: "florida-state", home: "louisville", a: 20, h: 44 },
+  { id: "2026-10-09-iowa-at-washington", away: "iowa", home: "washington", a: 41, h: 24 },
+  { id: "2026-10-09-washington-state-at-utah-state", away: "washington-state", home: "utah-state", a: 16, h: 17 },
+  { id: "2026-10-09-wyoming-at-san-jose-state", away: "wyoming", home: "san-jose-state", a: 16, h: 13 },
+  { id: "2026-10-09-iowa-state-at-byu", away: "iowa-state", home: "byu", a: 10, h: 24 },
+] as const;
+
+test("October 10 refresh removes every Friday game from upcoming and preserves Eastern ids", () => {
+  for (const want of FRIDAY_FINALS) {
+    const rows = games.filter(g => g.week === 6 && g.awayTeamId === want.away && g.homeTeamId === want.home);
+    assert.equal(rows.length, 1);
+    const [game] = rows;
+    assert.equal(game.id, want.id);
+    assert.equal(game.status, "final");
+    assert.equal(game.awayScore, want.a);
+    assert.equal(game.homeScore, want.h);
+    assert.equal(easternDate(game.date), "2026-10-09");
+    assert.ok(!verifiedRefresh?.scheduledGames.some(g => g.away === want.away && g.home === want.home));
+    for (const slug of [want.home, want.away]) {
+      const schedule = getTeamSchedule(slug)?.find(g => g.date === "2026-10-09");
+      assert.equal(schedule?.href, `/games/${want.id}`);
+      assert.ok(schedule?.result);
+    }
+  }
+  assert.equal(games.find(g => g.id === "2026-10-09-iowa-state-at-byu")?.date, "2026-10-10T02:30Z");
+  assert.equal(games.find(g => g.id === "2026-10-09-iowa-at-washington")?.broadcast, "FOX");
+  assert.match(games.find(g => g.id === "2026-10-09-wyoming-at-san-jose-state")?.statusDetail ?? "", /OT/);
+});
+
+test("weather-related kickoff changes propagate to games, team schedules and broadcast labels", () => {
+  const rice = games.find(g => g.id === "2026-10-10-rice-at-east-carolina")!;
+  const utah = games.find(g => g.id === "2026-10-10-kansas-at-utah")!;
+  assert.equal(rice.date, "2026-10-10T17:00Z");
+  assert.equal(rice.broadcast, "ESPN+");
+  assert.equal(utah.date, "2026-10-11T00:00Z");
+  assert.equal(easternDate(utah.date), "2026-10-10");
+  assert.equal(utah.broadcast, "ESPN App · linear network TBD");
+  assert.equal(getTeamSchedule("utah")?.find(g => g.date === "2026-10-10")?.href, "/games/2026-10-10-kansas-at-utah");
+  assert.ok(verifiedRefresh?.scheduledGames.every(g => g.verified_at?.startsWith("2026-10-10")));
+  assert.ok(verifiedRefresh?.schedule_verified_at?.startsWith("2026-10-10"));
+  assert.match(verifiedRefresh?.availability_review?.note ?? "", /not.*fully retrieved/);
+  assert.equal(verifiedRefresh?.retrieved_at, "2026-10-05T07:24:21.400874Z");
+  assert.equal(verifiedRefresh?.polls?.[0].release_date, "2026-10-04");
 });

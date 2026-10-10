@@ -152,8 +152,9 @@ export default function GamedayPlannerCard({
   ticketUrl,
 }: GamedayPlannerCardProps) {
   const formatDate = (dateStr: string) => {
-    const d = new Date(dateStr);
+    const d = new Date(`${dateStr}T12:00:00Z`);
     return d.toLocaleDateString("en-US", {
+      timeZone: "UTC",
       weekday: "short",
       month: "short",
       day: "numeric",

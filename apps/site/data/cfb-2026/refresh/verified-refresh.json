@@ -10401,12 +10401,11 @@
      ]
     }
    }
-  }
- ],
- "scheduledGames": [
+  },
   {
    "provider_id": "401858254",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401858254",
+   "game_id": "2026-10-09-florida-state-at-louisville",
    "date": "2026-10-09",
    "kickoff_utc": "2026-10-09T23:00Z",
    "week": 6,
@@ -10415,52 +10414,149 @@
    "site": "L&N Federal Credit Union Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.262Z",
-   "away": "florida-state",
-   "home": "louisville",
-   "time_et": "19:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-10T09:07:35.275Z",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "louisville",
+     "name": "Louisville",
+     "points": 44
+    },
+    {
+     "slug": "florida-state",
+     "name": "Florida State",
+     "points": 20
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-10",
+    "sources": [
+     "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858254",
+     "https://gocards.com/news/2026/10/9/football-cards-dominate-florida-state-44-20-on-friday-night",
+     "https://seminoles.com/game-center/16678"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "louisville": [
+      0,
+      14,
+      14,
+      16
+     ],
+     "florida-state": [
+      14,
+      0,
+      0,
+      6
+     ]
+    }
+   }
   },
   {
    "provider_id": "401858487",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401858487",
+   "game_id": "2026-10-09-iowa-at-washington",
    "date": "2026-10-09",
    "kickoff_utc": "2026-10-10T01:00Z",
    "week": 6,
    "home_slug": "washington",
    "away_slug": "iowa",
    "site": "Husky Stadium",
-   "tv": null,
+   "tv": "FOX",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.262Z",
-   "away": "iowa",
-   "home": "washington",
-   "time_et": "21:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-10T09:07:34.952Z",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "washington",
+     "name": "Washington",
+     "points": 24
+    },
+    {
+     "slug": "iowa",
+     "name": "Iowa",
+     "points": 41
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-10",
+    "sources": [
+     "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858487",
+     "https://gohuskies.com/sports/football/stats/2026/iowa/boxscore/25203"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "washington": [
+      0,
+      3,
+      15,
+      6
+     ],
+     "iowa": [
+      13,
+      14,
+      7,
+      7
+     ]
+    }
+   }
   },
   {
-   "provider_id": "401860922",
-   "source_url": "https://www.espn.com/college-football/game/_/gameId/401860922",
+   "provider_id": "401856826",
+   "source_url": "https://www.espn.com/college-football/game/_/gameId/401856826",
+   "game_id": "2026-10-09-iowa-state-at-byu",
    "date": "2026-10-09",
-   "kickoff_utc": "2026-10-10T01:00Z",
+   "kickoff_utc": "2026-10-10T02:30Z",
    "week": 6,
-   "home_slug": "utah-state",
-   "away_slug": "washington-state",
-   "site": "Maverik Stadium",
-   "tv": "CW",
+   "home_slug": "byu",
+   "away_slug": "iowa-state",
+   "site": "LaVell Edwards Stadium",
+   "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.262Z",
-   "away": "washington-state",
-   "home": "utah-state",
-   "time_et": "21:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-10T09:07:35.312Z",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "byu",
+     "name": "BYU",
+     "points": 24
+    },
+    {
+     "slug": "iowa-state",
+     "name": "Iowa State",
+     "points": 10
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-10",
+    "sources": [
+     "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856826",
+     "https://cyclones.com/news/2026/10/10/football-iowa-state-falls-at-no-8-byu-24-10",
+     "https://byucougars.com/sports/football/schedule"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "byu": [
+      7,
+      7,
+      7,
+      3
+     ],
+     "iowa-state": [
+      0,
+      3,
+      0,
+      7
+     ]
+    },
+    "originally_scheduled_kickoff_utc": "2026-10-10T02:15Z",
+    "kickoff_note": "ESPN game summary and scoreboard list the actual start; stable Eastern game id retained."
+   }
   },
   {
    "provider_id": "401864519",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401864519",
+   "game_id": "2026-10-09-wyoming-at-san-jose-state",
    "date": "2026-10-09",
    "kickoff_utc": "2026-10-10T01:00Z",
    "week": 6,
@@ -10469,31 +10565,98 @@
    "site": "CEFCU Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.262Z",
-   "away": "wyoming",
-   "home": "san-jose-state",
-   "time_et": "21:00",
-   "status": "announced",
-   "game_status": "scheduled"
+   "verified_at": "2026-10-10T09:07:35.943Z",
+   "title": "Final/OT",
+   "teams": [
+    {
+     "slug": "san-jose-state",
+     "name": "San José State",
+     "points": 13
+    },
+    {
+     "slug": "wyoming",
+     "name": "Wyoming",
+     "points": 16
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-10",
+    "sources": [
+     "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864519",
+     "https://sjsuspartans.com/news/2026/10/10/spartans-fall-in-overtime-against-wyoming-presented-by-rotten-robbie"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "san-jose-state": [
+      0,
+      7,
+      6,
+      0,
+      0
+     ],
+     "wyoming": [
+      3,
+      3,
+      0,
+      7,
+      3
+     ]
+    }
+   }
   },
   {
-   "provider_id": "401856826",
-   "source_url": "https://www.espn.com/college-football/game/_/gameId/401856826",
+   "provider_id": "401860922",
+   "source_url": "https://www.espn.com/college-football/game/_/gameId/401860922",
+   "game_id": "2026-10-09-washington-state-at-utah-state",
    "date": "2026-10-09",
-   "kickoff_utc": "2026-10-10T02:15Z",
+   "kickoff_utc": "2026-10-10T01:00Z",
    "week": 6,
-   "home_slug": "byu",
-   "away_slug": "iowa-state",
-   "site": "LaVell Edwards Stadium",
-   "tv": "ESPN",
+   "home_slug": "utah-state",
+   "away_slug": "washington-state",
+   "site": "Maverik Stadium",
+   "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.262Z",
-   "away": "iowa-state",
-   "home": "byu",
-   "time_et": "22:15",
-   "status": "announced",
-   "game_status": "scheduled"
-  },
+   "verified_at": "2026-10-10T09:07:35.096Z",
+   "title": "Final",
+   "teams": [
+    {
+     "slug": "utah-state",
+     "name": "Utah State",
+     "points": 17
+    },
+    {
+     "slug": "washington-state",
+     "name": "Washington State",
+     "points": 16
+    }
+   ],
+   "meta": {
+    "as_of": "2026-10-10",
+    "sources": [
+     "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860922",
+     "https://wsucougars.com/sports/football/schedule",
+     "https://utahstateaggies.com/sports/football/stats/2026/washington-state/boxscore/16758",
+     "https://apnews.com/article/washington-state-utah-state-score-3699b3f7ed59d2fd2dd252d7447c0c3f"
+    ],
+    "conference_game": true,
+    "line_score": {
+     "utah-state": [
+      0,
+      3,
+      7,
+      7
+     ],
+     "washington-state": [
+      6,
+      10,
+      0,
+      0
+     ]
+    }
+   }
+  }
+ ],
+ "scheduledGames": [
   {
    "provider_id": "401858481",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401858481",
@@ -10505,7 +10668,7 @@
    "site": "Memorial Stadium (Lincoln, NE)",
    "tv": "FOX",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "indiana",
    "home": "nebraska",
    "time_et": "12:00",
@@ -10523,7 +10686,7 @@
    "site": "Memorial Stadium",
    "tv": "ABC",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "texas-am",
    "home": "missouri",
    "time_et": "12:00",
@@ -10541,7 +10704,7 @@
    "site": "Boone Pickens Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "ucf",
    "home": "oklahoma-state",
    "time_et": "12:00",
@@ -10559,7 +10722,7 @@
    "site": "Acrisure Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "north-carolina",
    "home": "pittsburgh",
    "time_et": "12:00",
@@ -10577,7 +10740,7 @@
    "site": "Milan Puskar Stadium",
    "tv": "TNT",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "arizona",
    "home": "west-virginia",
    "time_et": "12:00",
@@ -10595,7 +10758,7 @@
    "site": "Carter-Finley Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "wake-forest",
    "home": "nc-state",
    "time_et": "12:00",
@@ -10613,7 +10776,7 @@
    "site": "Michie Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "tulane",
    "home": "army",
    "time_et": "12:00",
@@ -10631,7 +10794,7 @@
    "site": "Doyt L. Perry Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "sacramento-state",
    "home": "bowling-green",
    "time_et": "12:00",
@@ -10649,7 +10812,7 @@
    "site": "Ryan Field",
    "tv": "BTN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "ball-state",
    "home": "northwestern",
    "time_et": "12:30",
@@ -10667,7 +10830,7 @@
    "site": "Ben Hill Griffin Stadium",
    "tv": "SEC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "south-carolina",
    "home": "florida",
    "time_et": "12:45",
@@ -10685,13 +10848,36 @@
    "site": "Kidd Brewer Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "old-dominion",
    "home": "appalachian-state",
    "time_et": "13:00",
    "status": "announced",
    "game_status": "scheduled",
    "correction": "Restored from excludedGames: the Oct 5 snapshot tagged Old Dominion Monarchs at App State Mountaineers as FBS–FCS, but ESPN lists both schools in FBS conferences (ids 37/37)."
+  },
+  {
+   "provider_id": "401862797",
+   "source_url": "https://www.espn.com/college-football/game/_/gameId/401862797",
+   "date": "2026-10-10",
+   "kickoff_utc": "2026-10-10T17:00Z",
+   "week": 6,
+   "home_slug": "east-carolina",
+   "away_slug": "rice",
+   "site": "Dowdy-Ficklen Stadium",
+   "tv": "ESPN+",
+   "neutral_site": false,
+   "verified_at": "2026-10-10T09:07:35.372Z",
+   "away": "rice",
+   "home": "east-carolina",
+   "time_et": "13:00",
+   "status": "announced",
+   "game_status": "scheduled",
+   "correction": "Moved to 1 PM ET due to weather; ESPN+ unchanged.",
+   "correction_sources": [
+    "https://ecupirates.com/news/2026/10/9/football-ecu-opens-american-conference-play-hosting-rice-at-1-pm",
+    "https://riceowls.com/news/2026/10/9/football-owls-look-to-even-conference-mark-against-pirates"
+   ]
   },
   {
    "provider_id": "401866440",
@@ -10704,7 +10890,7 @@
    "site": "Warren McGuirk Alumni Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "miami-oh",
    "home": "umass",
    "time_et": "14:00",
@@ -10722,7 +10908,7 @@
    "site": "Cotton Bowl",
    "tv": "ABC",
    "neutral_site": true,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "texas",
    "home": "oklahoma",
    "time_et": "15:30",
@@ -10740,7 +10926,7 @@
    "site": "Notre Dame Stadium",
    "tv": "NBC",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "stanford",
    "home": "notre-dame",
    "time_et": "15:30",
@@ -10758,7 +10944,7 @@
    "site": "FirstBank Stadium",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "ole-miss",
    "home": "vanderbilt",
    "time_et": "15:30",
@@ -10776,7 +10962,7 @@
    "site": "Autzen Stadium",
    "tv": "CBS",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "ucla",
    "home": "oregon",
    "time_et": "15:30",
@@ -10794,7 +10980,7 @@
    "site": "Bill Snyder Family Stadium",
    "tv": "FOX",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "houston",
    "home": "kansas-state",
    "time_et": "15:30",
@@ -10812,7 +10998,7 @@
    "site": "Bobby Dodd Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "duke",
    "home": "georgia-tech",
    "time_et": "15:30",
@@ -10830,7 +11016,7 @@
    "site": "California Memorial Stadium",
    "tv": "ACC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "virginia-tech",
    "home": "california",
    "time_et": "15:30",
@@ -10848,7 +11034,7 @@
    "site": "Spartan Stadium",
    "tv": "FS1",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "illinois",
    "home": "michigan-state",
    "time_et": "15:30",
@@ -10866,7 +11052,7 @@
    "site": "DATCU Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "charlotte",
    "home": "north-texas",
    "time_et": "15:30",
@@ -10884,7 +11070,7 @@
    "site": "Navy-Marine Corps Memorial Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "tulsa",
    "home": "navy",
    "time_et": "15:30",
@@ -10902,7 +11088,7 @@
    "site": "InfoCision Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "eastern-michigan",
    "home": "akron",
    "time_et": "15:30",
@@ -10920,7 +11106,7 @@
    "site": "Glass Bowl",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "buffalo",
    "home": "toledo",
    "time_et": "15:30",
@@ -10938,7 +11124,7 @@
    "site": "Peden Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "central-michigan",
    "home": "ohio",
    "time_et": "15:30",
@@ -10956,7 +11142,7 @@
    "site": "Waldo Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "kent-state",
    "home": "western-michigan",
    "time_et": "15:30",
@@ -10974,28 +11160,10 @@
    "site": "Lincoln Financial Field",
    "tv": "ESPNU",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "uconn",
    "home": "temple",
    "time_et": "15:45",
-   "status": "announced",
-   "game_status": "scheduled"
-  },
-  {
-   "provider_id": "401862797",
-   "source_url": "https://www.espn.com/college-football/game/_/gameId/401862797",
-   "date": "2026-10-10",
-   "kickoff_utc": "2026-10-10T20:00Z",
-   "week": 6,
-   "home_slug": "east-carolina",
-   "away_slug": "rice",
-   "site": "Dowdy-Ficklen Stadium",
-   "tv": "ESPN+",
-   "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
-   "away": "rice",
-   "home": "east-carolina",
-   "time_et": "16:00",
    "status": "announced",
    "game_status": "scheduled"
   },
@@ -11010,7 +11178,7 @@
    "site": "Ohio Stadium",
    "tv": "BTN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "maryland",
    "home": "ohio-state",
    "time_et": "16:15",
@@ -11028,7 +11196,7 @@
    "site": "Donald W. Reynolds Razorback Stadium",
    "tv": "SEC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "tennessee",
    "home": "arkansas",
    "time_et": "16:15",
@@ -11046,7 +11214,7 @@
    "site": "Reser Stadium",
    "tv": "USA Net",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "san-diego-state",
    "home": "oregon-state",
    "time_et": "18:00",
@@ -11064,7 +11232,7 @@
    "site": "Kroger Field",
    "tv": "ESPN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "lsu",
    "home": "kentucky",
    "time_et": "19:00",
@@ -11082,7 +11250,7 @@
    "site": "Simmons Bank Liberty Stadium",
    "tv": "ESPN2",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "uab",
    "home": "memphis",
    "time_et": "19:00",
@@ -11100,7 +11268,7 @@
    "site": "Sun Bowl",
    "tv": "FS1",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "nevada",
    "home": "utep",
    "time_et": "19:00",
@@ -11118,7 +11286,7 @@
    "site": "Allegiant Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "north-dakota-state",
    "home": "unlv",
    "time_et": "19:00",
@@ -11136,7 +11304,7 @@
    "site": "Joan C. Edwards Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "coastal-carolina",
    "home": "marshall",
    "time_et": "19:00",
@@ -11154,7 +11322,7 @@
    "site": "Bryant-Denny Stadium",
    "tv": "ABC",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "georgia",
    "home": "alabama",
    "time_et": "19:30",
@@ -11172,7 +11340,7 @@
    "site": "Beaver Stadium",
    "tv": "NBC",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "usc",
    "home": "penn-state",
    "time_et": "19:30",
@@ -11190,7 +11358,7 @@
    "site": "Scott Stadium",
    "tv": "ACC Network",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "syracuse",
    "home": "virginia",
    "time_et": "19:30",
@@ -11208,7 +11376,7 @@
    "site": "Huskie Stadium",
    "tv": "CBSSN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "air-force",
    "home": "northern-illinois",
    "time_et": "19:30",
@@ -11226,7 +11394,7 @@
    "site": "Allen E. Paulson Stadium",
    "tv": "ESPNU",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "james-madison",
    "home": "georgia-southern",
    "time_et": "19:30",
@@ -11244,7 +11412,7 @@
    "site": "Joe Aillet Stadium",
    "tv": "ESPN+",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "louisiana",
    "home": "louisiana-tech",
    "time_et": "19:30",
@@ -11262,7 +11430,7 @@
    "site": "Ross-Ade Stadium",
    "tv": "BTN",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "minnesota",
    "home": "purdue",
    "time_et": "20:00",
@@ -11273,19 +11441,24 @@
    "provider_id": "401856827",
    "source_url": "https://www.espn.com/college-football/game/_/gameId/401856827",
    "date": "2026-10-10",
-   "kickoff_utc": "2026-10-11T02:15Z",
+   "kickoff_utc": "2026-10-11T00:00Z",
    "week": 6,
    "home_slug": "utah",
    "away_slug": "kansas",
    "site": "Rice-Eccles Stadium",
-   "tv": "ESPN",
+   "tv": "ESPN App · linear network TBD",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "kansas",
    "home": "utah",
-   "time_et": "22:15",
+   "time_et": "20:00",
    "status": "announced",
-   "game_status": "scheduled"
+   "game_status": "scheduled",
+   "correction": "Moved to 6 PM MDT (8 PM ET); ESPN App confirmed, linear ESPN network to be announced.",
+   "correction_sources": [
+    "https://utahutes.com/news/2026/10/9/saturdays-utah-football-game-vs-kansas-moved-to-6-pm",
+    "https://big12sports.com/news/2026/10/10/big-12-update-on-kansas-utah-football-game.aspx"
+   ]
   },
   {
    "provider_id": "401856808",
@@ -11298,7 +11471,7 @@
    "site": "Mountain America Stadium",
    "tv": "FS1",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "hawaii",
    "home": "arizona-state",
    "time_et": "22:30",
@@ -11321,7 +11494,7 @@
    "site": "Valley Children's Stadium",
    "tv": "CW",
    "neutral_site": false,
-   "verified_at": "2026-10-09T11:07:59.329Z",
+   "verified_at": "2026-10-10T09:07:35.372Z",
    "away": "boise-state",
    "home": "fresno-state",
    "time_et": "22:30",
@@ -11410,18 +11583,18 @@
   "wake-forest": "4-1",
   "virginia-tech": "4-1",
   "clemson": "3-2",
-  "florida-state": "3-2",
+  "florida-state": "3-3",
   "virginia": "3-2",
   "nc-state": "3-2",
   "north-carolina": "2-2",
   "syracuse": "2-2",
   "california": "2-3",
-  "louisville": "2-3",
+  "louisville": "3-3",
   "stanford": "2-3",
   "boston-college": "2-3",
   "georgia-tech": "1-3",
   "texas-tech": "5-0",
-  "byu": "4-0",
+  "byu": "5-0",
   "utah": "4-0",
   "baylor": "4-1",
   "arizona": "4-1",
@@ -11429,7 +11602,7 @@
   "cincinnati": "4-1",
   "oklahoma-state": "3-1",
   "kansas-state": "3-1",
-  "iowa-state": "3-2",
+  "iowa-state": "3-3",
   "ucf": "3-2",
   "west-virginia": "3-2",
   "arizona-state": "2-2",
@@ -11443,12 +11616,12 @@
   "minnesota": "4-1",
   "ohio-state": "4-1",
   "wisconsin": "4-1",
-  "iowa": "4-1",
+  "iowa": "5-1",
   "oregon": "3-1",
   "northwestern": "3-1",
   "michigan": "3-2",
   "penn-state": "3-2",
-  "washington": "3-2",
+  "washington": "3-3",
   "purdue": "2-3",
   "illinois": "2-3",
   "maryland": "2-3",
@@ -11481,9 +11654,9 @@
   "north-dakota-state": "5-0",
   "new-mexico": "4-1",
   "air-force": "3-1",
-  "san-jose-state": "3-2",
+  "san-jose-state": "3-3",
   "unlv": "3-2",
-  "wyoming": "2-3",
+  "wyoming": "3-3",
   "nevada": "1-3",
   "utep": "1-4",
   "hawaii": "1-4",
@@ -11494,8 +11667,8 @@
   "san-diego-state": "2-3",
   "colorado-state": "2-3",
   "texas-state": "2-3",
-  "utah-state": "1-4",
-  "washington-state": "1-4",
+  "utah-state": "2-4",
+  "washington-state": "1-5",
   "alabama": "5-0",
   "georgia": "5-0",
   "texas": "4-0",
@@ -11655,13 +11828,36 @@
   "https://www.espn.com/college-football/game/_/gameId/401870766",
   "https://www.espn.com/college-football/game/_/gameId/401871052",
   "https://www.espn.com/college-football/game/_/gameId/401862794",
-  "https://www.espn.com/college-football/game/_/gameId/401869933"
+  "https://www.espn.com/college-football/game/_/gameId/401869933",
+  "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858254",
+  "https://gocards.com/news/2026/10/9/football-cards-dominate-florida-state-44-20-on-friday-night",
+  "https://seminoles.com/game-center/16678",
+  "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401858487",
+  "https://gohuskies.com/sports/football/stats/2026/iowa/boxscore/25203",
+  "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401856826",
+  "https://cyclones.com/news/2026/10/10/football-iowa-state-falls-at-no-8-byu-24-10",
+  "https://byucougars.com/sports/football/schedule",
+  "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401864519",
+  "https://sjsuspartans.com/news/2026/10/10/spartans-fall-in-overtime-against-wyoming-presented-by-rotten-robbie",
+  "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary?event=401860922",
+  "https://wsucougars.com/sports/football/schedule",
+  "https://utahstateaggies.com/sports/football/stats/2026/washington-state/boxscore/16758",
+  "https://apnews.com/article/washington-state-utah-state-score-3699b3f7ed59d2fd2dd252d7447c0c3f",
+  "https://utahutes.com/news/2026/10/9/saturdays-utah-football-game-vs-kansas-moved-to-6-pm",
+  "https://big12sports.com/news/2026/10/10/big-12-update-on-kansas-utah-football-game.aspx",
+  "https://ecupirates.com/news/2026/10/9/football-ecu-opens-american-conference-play-hosting-rice-at-1-pm",
+  "https://riceowls.com/news/2026/10/9/football-owls-look-to-even-conference-mark-against-pirates",
+  "https://ramblinwreck.com/weather",
+  "https://site.web.api.espn.com/apis/v2/sports/football/college-football/standings",
+  "https://rolltide.com/news/2026/10/8/football-espn-college-gameday-to-broadcast-from-coleman-coliseum-on-saturday",
+  "https://espnpressroom.com/press-release/record-ratings-record-matchup-college-gameday-takes-a-historic-trip-to-tuscaloosa/",
+  "https://apnews.com/article/dante-moore-dylan-raiola-5d7a6ffbbb9eb92e5c09268b2232b6c2"
  ],
  "holds": [
   "Week 6 SP+ not independently verified; retained ratings show their own Sep 27 cutoff. FPI verified Oct 4, 2026 (The Big Lead).",
   "Same-book minute-timestamped odds and line movement not verified: the content lane carries VegasInsider/Action Network lines as of Oct 4-5 (content/research/P1-lines.md) and the gated odds mode stays closed until a timestamped book feed is wired.",
-  "Week 6 injury report published Oct 5 (Gemini research pass): 6 ledger + 33 watch rows sourced. Conference availability filings due Oct 7-9 were not re-verified in the Oct 9 refresh (BigTen.org report pages unreachable from the verification environment); injury rows keep their Oct 5 cutoff.",
-  "No live in-season scores feed is wired: games move to final only through a verified snapshot refresh. The Oct 6-8 midweek finals were added Oct 9; Friday Oct 9 and Saturday Oct 10 games stay scheduled until the next verified refresh."
+  "No live in-season scores feed is wired. All 12 completed Week 6 FBS-vs-FBS games through Friday October 9 were verified October 10; the remaining 46 Saturday assignments were rechecked. Status changes after this snapshot require another verified refresh.",
+  "Weekly injury research remains dated October 5, with a partial Dante Moore follow-up checked October 10. Official SEC and Big Ten availability filings were not fully retrievable; no empty report or all-clear is inferred."
  ],
  "retainedBaseline": {
   "conferenceStandings": [
@@ -11867,15 +12063,6 @@
       "overall": "3-2"
      },
      {
-      "team": "Florida State",
-      "team_slug": "florida-state",
-      "w": "1",
-      "l": "1",
-      "t": "0",
-      "pct": "0.500",
-      "overall": "3-2"
-     },
-     {
       "team": "Virginia",
       "team_slug": "virginia",
       "w": "1",
@@ -11892,6 +12079,24 @@
       "t": "0",
       "pct": "0.500",
       "overall": "3-2"
+     },
+     {
+      "team": "Louisville",
+      "team_slug": "louisville",
+      "w": "2",
+      "l": "2",
+      "t": "0",
+      "pct": "0.500",
+      "overall": "3-3"
+     },
+     {
+      "team": "Florida State",
+      "team_slug": "florida-state",
+      "w": "1",
+      "l": "2",
+      "t": "0",
+      "pct": "0.333",
+      "overall": "3-3"
      },
      {
       "team": "North Carolina",
@@ -11918,15 +12123,6 @@
       "l": "1",
       "t": "0",
       "pct": "0.500",
-      "overall": "2-3"
-     },
-     {
-      "team": "Louisville",
-      "team_slug": "louisville",
-      "w": "1",
-      "l": "2",
-      "t": "0",
-      "pct": "0.333",
       "overall": "2-3"
      },
      {
@@ -11964,6 +12160,15 @@
     "short": "B12",
     "rows": [
      {
+      "team": "BYU",
+      "team_slug": "byu",
+      "w": "3",
+      "l": "0",
+      "t": "0",
+      "pct": "1.000",
+      "overall": "5-0"
+     },
+     {
       "team": "Texas Tech",
       "team_slug": "texas-tech",
       "w": "2",
@@ -11971,15 +12176,6 @@
       "t": "0",
       "pct": "1.000",
       "overall": "5-0"
-     },
-     {
-      "team": "BYU",
-      "team_slug": "byu",
-      "w": "2",
-      "l": "0",
-      "t": "0",
-      "pct": "1.000",
-      "overall": "4-0"
      },
      {
       "team": "Utah",
@@ -12045,15 +12241,6 @@
       "overall": "3-1"
      },
      {
-      "team": "Iowa State",
-      "team_slug": "iowa-state",
-      "w": "1",
-      "l": "1",
-      "t": "0",
-      "pct": "0.500",
-      "overall": "3-2"
-     },
-     {
       "team": "UCF",
       "team_slug": "ucf",
       "w": "1",
@@ -12079,6 +12266,15 @@
       "t": "0",
       "pct": "0.500",
       "overall": "2-2"
+     },
+     {
+      "team": "Iowa State",
+      "team_slug": "iowa-state",
+      "w": "1",
+      "l": "2",
+      "t": "0",
+      "pct": "0.333",
+      "overall": "3-3"
      },
      {
       "team": "Kansas",
@@ -12142,6 +12338,15 @@
       "overall": "4-0"
      },
      {
+      "team": "Iowa",
+      "team_slug": "iowa",
+      "w": "2",
+      "l": "1",
+      "t": "0",
+      "pct": "0.667",
+      "overall": "5-1"
+     },
+     {
       "team": "USC",
       "team_slug": "usc",
       "w": "2",
@@ -12175,15 +12380,6 @@
       "l": "0",
       "t": "0",
       "pct": "1.000",
-      "overall": "4-1"
-     },
-     {
-      "team": "Iowa",
-      "team_slug": "iowa",
-      "w": "1",
-      "l": "1",
-      "t": "0",
-      "pct": "0.500",
       "overall": "4-1"
      },
      {
@@ -12226,10 +12422,10 @@
       "team": "Washington",
       "team_slug": "washington",
       "w": "0",
-      "l": "2",
+      "l": "3",
       "t": "0",
       "pct": "0.000",
-      "overall": "3-2"
+      "overall": "3-3"
      },
      {
       "team": "Purdue",
@@ -12557,15 +12753,6 @@
       "overall": "3-1"
      },
      {
-      "team": "San José State",
-      "team_slug": "san-jose-state",
-      "w": "1",
-      "l": "0",
-      "t": "0",
-      "pct": "1.000",
-      "overall": "3-2"
-     },
-     {
       "team": "UNLV",
       "team_slug": "unlv",
       "w": "1",
@@ -12577,11 +12764,20 @@
      {
       "team": "Wyoming",
       "team_slug": "wyoming",
+      "w": "2",
+      "l": "1",
+      "t": "0",
+      "pct": "0.667",
+      "overall": "3-3"
+     },
+     {
+      "team": "San José State",
+      "team_slug": "san-jose-state",
       "w": "1",
       "l": "1",
       "t": "0",
       "pct": "0.500",
-      "overall": "2-3"
+      "overall": "3-3"
      },
      {
       "team": "Nevada",
@@ -12683,20 +12879,20 @@
      {
       "team": "Utah State",
       "team_slug": "utah-state",
-      "w": "0",
+      "w": "1",
       "l": "1",
       "t": "0",
-      "pct": "0.000",
-      "overall": "1-4"
+      "pct": "0.500",
+      "overall": "2-4"
      },
      {
       "team": "Washington State",
       "team_slug": "washington-state",
       "w": "0",
-      "l": "1",
+      "l": "2",
       "t": "0",
       "pct": "0.000",
-      "overall": "1-4"
+      "overall": "1-5"
      }
     ]
    },
@@ -12998,9 +13194,9 @@
     }
    ]
   },
-  "as_of": "2026-10-09",
-  "note": "Conference standings re-read from ESPN at 2026-10-09T11:07:58.991Z using each team's conference split (W/L/T) and league win percentage; overall records match teamRecords. Replaces the 2026-10-05 pull, which carried overall wins in the W column and 0 in L. ESPN injury base retained at its previous 2026-09-29 cutoff.",
-  "verified_at": "2026-10-09T11:07:58.991Z"
+  "as_of": "2026-10-10",
+  "note": "Conference and overall standings rechecked October 10 against ESPN after all five Friday finals; all 138 overall records reconcile. Injury base retains its own prior cutoff.",
+  "verified_at": "2026-10-10T09:07:36.058Z"
  },
  "poll_notes": {
   "as_of": "2026-10-04",
@@ -13283,19 +13479,58 @@
   {
    "type": "college-gameday",
    "game_provider_id": "401856712",
-   "site": "Tuscaloosa, Ala.",
+   "site": "Coleman Coliseum, Tuscaloosa, Ala.",
    "date": "2026-10-10",
-   "network": "ESPN",
-   "announced": "2026-10-03",
+   "network": "ESPN / ESPNU / Disney+ / ESPN App",
+   "announced": "2026-10-08",
    "badge": "College GameDay · Tuscaloosa · Sat Oct 10 · ESPN",
-   "note": "Announced by the show's official account Oct 3. Air time not printed until ESPN's schedule page confirms it; guest picker lists not carried.",
+   "note": "Official October 8 update: indoors at Coleman Coliseum, 8–11 AM CDT (9 AM–noon ET); Bryce Young is guest picker. Scavenger hunt and First-in-Line giveaway canceled. Checked October 10.",
    "sources": [
-    "https://en.wikipedia.org/wiki/List_of_College_GameDay_(football_TV_program)_locations",
-    "https://www.on3.com/news/college-gameday-location-week-6/"
+    "https://rolltide.com/news/2026/10/8/football-espn-college-gameday-to-broadcast-from-coleman-coliseum-on-saturday",
+    "https://espnpressroom.com/press-release/record-ratings-record-matchup-college-gameday-takes-a-historic-trip-to-tuscaloosa/"
    ]
   }
  ],
  "storylines": [
+  {
+   "id": "oct10-kickoff-weather-updates",
+   "headline": "Saturday changes: Rice–ECU at 1 PM ET; Kansas–Utah at 8 PM ET",
+   "body": "Rice at East Carolina moved to 1 PM ET on ESPN+ because of weather. Kansas at Utah moved to 6 PM MDT / 8 PM ET, with ESPN App coverage and the linear ESPN network still to be announced. Georgia Tech says its 3:30 PM ET game remains scheduled; weather has canceled several campus festivities. Follow the schools’ current advisories before traveling.",
+   "game_provider_id": null,
+   "as_of": "2026-10-10",
+   "sources": [
+    "https://utahutes.com/news/2026/10/9/saturdays-utah-football-game-vs-kansas-moved-to-6-pm",
+    "https://big12sports.com/news/2026/10/10/big-12-update-on-kansas-utah-football-game.aspx",
+    "https://ecupirates.com/news/2026/10/9/football-ecu-opens-american-conference-play-hosting-rice-at-1-pm",
+    "https://riceowls.com/news/2026/10/9/football-owls-look-to-even-conference-mark-against-pirates",
+    "https://ramblinwreck.com/weather"
+   ]
+  },
+  {
+   "id": "week6-friday-finals",
+   "headline": "Friday finals: Louisville, Iowa, Utah State, Wyoming and BYU win",
+   "body": "October 9 results: Louisville 44–20 Florida State; Iowa 41–24 Washington; Utah State 17–16 Washington State; Wyoming 16–13 San José State (OT); BYU 24–10 Iowa State. Verified October 10 against ESPN completed-game summaries, quarter scores and official school reports. The Saturday slate has 46 FBS-vs-FBS games.",
+   "game_provider_id": null,
+   "result_provider_ids": [
+    "401858254",
+    "401858487",
+    "401856826",
+    "401864519",
+    "401860922"
+   ],
+   "as_of": "2026-10-10",
+   "sources": [
+    "https://gocards.com/news/2026/10/9/football-cards-dominate-florida-state-44-20-on-friday-night",
+    "https://seminoles.com/game-center/16678",
+    "https://gohuskies.com/sports/football/stats/2026/iowa/boxscore/25203",
+    "https://cyclones.com/news/2026/10/10/football-iowa-state-falls-at-no-8-byu-24-10",
+    "https://byucougars.com/sports/football/schedule",
+    "https://sjsuspartans.com/news/2026/10/10/spartans-fall-in-overtime-against-wyoming-presented-by-rotten-robbie",
+    "https://wsucougars.com/sports/football/schedule",
+    "https://utahstateaggies.com/sports/football/stats/2026/washington-state/boxscore/16758",
+    "https://apnews.com/article/washington-state-utah-state-score-3699b3f7ed59d2fd2dd252d7447c0c3f"
+   ]
+  },
   {
    "id": "week6-thursday-finals",
    "headline": "Thursday finals: Liberty, Western Kentucky, UTSA and South Alabama win",
@@ -13336,7 +13571,7 @@
  ],
  "audit_applied_at": "2026-10-05T10:01:57.669Z",
  "research_ingested_at": "2026-10-05T11:55:00Z",
- "results_verified_at": "2026-10-09T11:07:58.049Z",
+ "results_verified_at": "2026-10-10T09:09:11.286Z",
  "refresh_log": [
   {
    "applied_at": "2026-10-09T11:07:58.049Z",
@@ -13679,6 +13914,69 @@
     }
    ],
    "overall_record_disagreements_outside_scope": []
+  },
+  {
+   "applied_at": "2026-10-10T09:09:11.286Z",
+   "script": "scripts/apply-oct10-pregame.mjs",
+   "scope": "October 10 pregame refresh: recheck all 58 Week 6 FBS-vs-FBS games; five Friday finals and 46 Saturday assignments",
+   "evidence": "data/cfb-2026/refresh/evidence/2026-10-10-pregame.json",
+   "finals_added": [
+    "401858254",
+    "401858487",
+    "401856826",
+    "401864519",
+    "401860922"
+   ],
+   "previous_finals_rechecked": 7,
+   "remaining_rechecked": 46,
+   "schedule_changes": [
+    {
+     "provider_id": "401862797",
+     "before": {
+      "kickoff_utc": "2026-10-10T20:00Z",
+      "tv": "ESPN+"
+     },
+     "after": {
+      "kickoff_utc": "2026-10-10T17:00Z",
+      "tv": "ESPN+"
+     },
+     "sources": [
+      "https://ecupirates.com/news/2026/10/9/football-ecu-opens-american-conference-play-hosting-rice-at-1-pm",
+      "https://riceowls.com/news/2026/10/9/football-owls-look-to-even-conference-mark-against-pirates"
+     ]
+    },
+    {
+     "provider_id": "401856827",
+     "before": {
+      "kickoff_utc": "2026-10-11T02:15Z",
+      "tv": "ESPN"
+     },
+     "after": {
+      "kickoff_utc": "2026-10-11T00:00Z",
+      "tv": "ESPN App · linear network TBD"
+     },
+     "sources": [
+      "https://utahutes.com/news/2026/10/9/saturdays-utah-football-game-vs-kansas-moved-to-6-pm",
+      "https://big12sports.com/news/2026/10/10/big-12-update-on-kansas-utah-football-game.aspx"
+     ]
+    }
+   ],
+   "untouched_cutoffs": {
+    "base_snapshot_retrieved_at": "2026-10-05T07:24:21.400874Z",
+    "polls_released": [
+     "ap 2026-10-04",
+     "coaches 2026-10-04",
+     "composite 2026-10-04"
+    ],
+    "metrics_through_games": "2026-10-03",
+    "injuries_as_of": "2026-09-29"
+   }
   }
- ]
+ ],
+ "schedule_verified_at": "2026-10-10T09:09:11.286Z",
+ "availability_review": {
+  "checked_at": "2026-10-10T09:08:00Z",
+  "scope": "Partial follow-up only",
+  "note": "Dante Moore is reported out and Dylan Raiola the reported starter against UCLA (AP, October 8; checked October 10). Official SEC and Big Ten availability filings could not be fully retrieved. Other injury rows retain their own earlier cutoffs; no all-clear or full Saturday injury refresh is implied."
+ }
 }

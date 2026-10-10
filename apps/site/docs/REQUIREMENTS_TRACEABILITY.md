@@ -45,3 +45,12 @@
 | No stale copy on production pages | forbidden-strings test | `tests/rendered-html.test.mjs` audit test across 6 routes |
 | Verified additions render | GameDay badge, storyline, byes names, neutral label | rendered assertions on `/`, game page, `/rankings` |
 | Post-deploy multi-surface freshness | `deploy-site.yml` check across home, /rankings, game page | workflow step "Check production Week 6 snapshot across surfaces" |
+
+## October 10 pregame refresh
+
+| Requirement | Implementation | Evidence |
+|---|---|---|
+| No Friday finals left upcoming | reviewed pregame snapshot + deterministic apply script | refresh tests: five finals, scores, stable Eastern ids, team links |
+| Official kickoff changes appear across surfaces | schedule and broadcast snapshot overrides | Rice–ECU 17:00Z; Kansas–Utah 00:00Z next UTC day; rendered game tests |
+| Do not imply full data freshness | distinct results/schedule timestamps, retained poll/stat/research cutoffs | source-date tests and visible partial injury-review banner |
+| Complete week coverage | all 58 provider ids reviewed, 138 records reconcile | normalized evidence + apply assertions + existing live coverage build check |
