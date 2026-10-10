@@ -97,7 +97,7 @@ function initialWeek(
 	asOf: string | null,
 ) {
 	const nextGame = asOf
-		? rows.find((row) => row.date > asOf.slice(0, 10))
+		? rows.find((row) => row.date >= asOf.slice(0, 10))
 		: undefined;
 	return nextGame?.week ?? weeks.at(-1) ?? 1;
 }

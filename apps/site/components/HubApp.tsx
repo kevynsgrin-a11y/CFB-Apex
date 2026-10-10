@@ -1,5 +1,7 @@
 "use client";
 
+import { easternDate } from "@/lib/game-calendar";
+
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { ChevronLeft, ChevronRight, CircleOff, RefreshCw } from "lucide-react";
 import {
@@ -607,7 +609,7 @@ function GamePage({ gameId, mode, favorites, onFavorite }: HomeProps & { gameId:
           game={{
             awayTeam: { name: away.name, abbreviation: away.abbreviation, color: away.color, logo: away.logo },
             homeTeam: { name: home.name, abbreviation: home.abbreviation, color: home.color, logo: home.logo },
-            date: game.date.slice(0, 10),
+            date: easternDate(game.date),
             kickoffLabel: game.kickoffLabel,
             broadcast: game.broadcast ? { network: game.broadcast, kickoffTime: game.kickoffLabel } : undefined,
             venue: game.venue,
@@ -1355,6 +1357,8 @@ function DataSourcesPage() {
           <p className="panel-note">
             Snapshot retrieved {verifiedRefresh.retrieved_at.replace("T", " ").replace(/\.\d+Z$/, " UTC")}
             {verifiedRefresh.audit_applied_at ? `, audit corrections applied ${verifiedRefresh.audit_applied_at.replace("T", " ").replace(/\.\d+Z$/, " UTC")}` : ""}.
+            {verifiedRefresh.results_verified_at ? ` Results rechecked ${verifiedRefresh.results_verified_at}.` : ""}
+            {verifiedRefresh.schedule_verified_at ? ` Schedule rechecked ${verifiedRefresh.schedule_verified_at}.` : ""}
             {verifiedRefresh.scheduledGames?.length ?? 0} scheduled FBS-vs-FBS games and{" "}
             {verifiedRefresh.playedGames?.length ?? 0} played results are on the board.
           </p>

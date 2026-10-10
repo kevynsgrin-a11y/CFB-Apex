@@ -40,3 +40,10 @@
 - Iowa at Washington stays without a TV designation: Washington's schedule shows "FOX or FS1", which is not an assignment.
 - Big Ten availability report pages could not be retrieved from the verification environment. No player designation was changed; the panel topic on Dante Moore's status remains a pre-report framing dated Oct 5.
 - No other FBS games were played between the Oct 5 snapshot and the Oct 9 refresh, so the re-read standings equal the Oct 5 state plus the seven midweek results (all 138 overall records match teamRecords).
+
+## October 10 pregame refresh
+
+- Advertised kickoff times are used consistently; minor field-ceremony times in school previews do not replace broadcast slots. Rice–ECU and Kansas–Utah have explicit official changes.
+- ESPN's complete-game statuses, line scores and school reports corroborate Friday results; all conference and overall records reconcile. Poll records remain historical publication-time records.
+- The AP October 8 Moore/Raiola report is labeled reported, not an independently retrieved official conference filing. Other availability entries were not fully reverified and keep prior dates.
+- Saturday weather advisories do not establish live conditions or a blanket all-clear. GameDay's indoor relocation and Georgia Tech's canceled festivities are explicitly sourced.

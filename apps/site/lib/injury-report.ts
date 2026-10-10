@@ -22,7 +22,7 @@ import type { Team } from "./types";
 
 export type InjuryStatus = "IR" | "OUT" | "QUESTIONABLE" | "DOUBTFUL" | "SUSPENSION" | "ACTIVE";
 export type PracticeStatus = "DNP" | "LP" | "FP";
-export type Likelihood = "likely" | "questionable" | "doubtful" | "unlikely";
+export type Likelihood = "likely" | "questionable" | "doubtful" | "unlikely" | "out";
 export type Confidence = "high" | "medium" | "low";
 
 /** One player's injury as ESPN publishes it (build snapshot). */

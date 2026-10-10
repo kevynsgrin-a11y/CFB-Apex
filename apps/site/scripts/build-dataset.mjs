@@ -903,16 +903,42 @@ if (refreshSnapshot) {
   payload.espnInjuries = refreshSnapshot.retainedBaseline.espnInjuries;
   const rows = [...payload.broadcasts.rows];
   const byPair = { ...payload.broadcasts.byPair };
-  for (const row of refreshSnapshot.scheduledGames) {
-    const key = `${row.date}:${[row.away, row.home].sort().join(":")}`;
-    byPair[key] = { tv: row.tv, time_et: row.time_et, status: row.status, week: row.week };
-    const index = rows.findIndex((existing) => existing.date === row.date && existing.away === row.away && existing.home === row.home);
-    if (index >= 0) rows[index] = row;
-    else rows.push(row);
+  const weekStart = Date.parse(`${refreshSnapshot.week_start}T00:00:00Z`);
+  const inRefreshWeek = (date) => {
+    const instant = Date.parse(`${date}T00:00:00Z`);
+    return instant >= weekStart && instant < weekStart + 7 * 86400000;
+  };
+  const timeEt = (instant) => new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(instant));
+  const reviewedRows = [
+    ...refreshSnapshot.playedGames.filter((game) => game.week === refreshSnapshot.week && game.verified_at).map((game) => ({ ...game, away: game.away_slug, home: game.home_slug, time_et: timeEt(game.kickoff_utc), status: "final" })),
+    ...refreshSnapshot.scheduledGames,
+  ];
+  for (const row of reviewedRows) {
+    const pair = [row.away, row.home].sort().join(":");
+    // Retire the original date for this pair inside the same week. A Friday
+    // final can supersede a preseason Saturday row without creating duplicates.
+    for (let i = rows.length - 1; i >= 0; i--) {
+      const prior = rows[i];
+      if (inRefreshWeek(prior.date) && [prior.away, prior.home].sort().join(":") === pair) rows.splice(i, 1);
+    }
+    for (const key of Object.keys(byPair)) {
+      if (inRefreshWeek(key.slice(0, 10)) && key.slice(11) === pair) delete byPair[key];
+    }
+    byPair[`${row.date}:${pair}`] = { tv: row.tv, time_et: row.time_et, status: row.status, week: row.week };
+    rows.push(row);
+    for (const [slug, opponent] of [[row.home, row.away], [row.away, row.home]]) {
+      for (const entry of payload.schedules[slug] ?? []) {
+        if (entry.opponent_slug !== opponent || !inRefreshWeek(entry.date)) continue;
+        entry.date = row.date;
+        entry.week = row.week;
+        entry.site = row.site;
+      }
+    }
   }
+  rows.sort((a, b) => a.date.localeCompare(b.date) || (a.time_et ?? "").localeCompare(b.time_et ?? ""));
   payload.broadcasts = { ...payload.broadcasts, rows, byPair, games: rows.length,
-    asOf: refreshSnapshot.reference_date,
-    note: `Week ${refreshSnapshot.week} verified ${refreshSnapshot.retrieved_at}; other weeks retain their original assignment dates. FBS vs FBS display coverage.`,
+    asOf: refreshSnapshot.schedule_verified_at?.slice(0, 10) ?? refreshSnapshot.reference_date,
+    note: `Week ${refreshSnapshot.week} schedule checked ${refreshSnapshot.schedule_verified_at ?? refreshSnapshot.retrieved_at}; base snapshot ${refreshSnapshot.retrieved_at}. Other weeks retain their original assignment dates. FBS vs FBS display coverage.`,
   };
   payload.refreshData = refreshSnapshot;
 

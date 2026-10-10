@@ -221,7 +221,7 @@ test("audit week 6: forbidden stale strings never ship; verified additions rende
   assert.match(byPath.get("/") ?? "", /College GameDay · Tuscaloosa · Sat Oct 10 · ESPN/);
   assert.match(byPath.get("/") ?? "", /WEEK 6 · OCT 6–10 · AS OF 2026-10-05/);
   assert.match(byPath.get("/") ?? "", /SNAPSHOT 2026-10-05 07:24 UTC/);
-  assert.match(byPath.get("/") ?? "", /FINALS VERIFIED 2026-10-09 \d\d:\d\d UTC/);
+  assert.match(byPath.get("/") ?? "", /FINALS VERIFIED 2026-10-10 \d\d:\d\d UTC/);
   assert.match(byPath.get("/") ?? "", /Thursday finals: Liberty, Western Kentucky, UTSA and South Alabama win/);
   assert.match(byPath.get("/") ?? "", /games? played since then (is|are) not yet included/);
   assert.doesNotMatch(byPath.get("/") ?? "", /These are season totals, updated after completed games/);
@@ -264,7 +264,33 @@ test("Oct 9 refresh: midweek finals render as finals, not as upcoming games", as
   const troy = await visible("/teams/troy");
   assert.match(troy, /Oct 6 vs Southern Miss[\s\S]{0,80}W 55–34 FINAL/);
   const rankings = await visible("/rankings");
-  assert.match(rankings, /as of 2026-10-09/);
+  assert.match(rankings, /as of 2026-10-10/);
   assert.match(rankings, /UTSA 2 0 0 1\.000 5-1/);
   assert.match(rankings, /South Florida 1 2 0 0\.333 4-2/);
+});
+
+test("October 10 pregame corrections and partial availability caveat render", async () => {
+  const visible = async (path) => (await (await fetchRoute(path)).text()).replace(/<!--[\s\S]*?-->/g, "").replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  const home = await visible("/");
+  assert.match(home, /SCHEDULE CHECKED 2026-10-10/);
+  assert.match(home, /Friday finals: Louisville, Iowa, Utah State, Wyoming and BYU win/);
+  assert.match(home, /Rice–ECU at 1 PM ET/);
+  const utah = await visible("/games/2026-10-10-kansas-at-utah");
+  assert.match(utah, /8:00 PM ET/);
+  assert.match(utah, /Sat, Oct 10/);
+  assert.doesNotMatch(utah, /Sun, Oct 11/);
+  assert.match(utah, /ESPN App · linear network TBD/);
+  const byu = await visible("/games/2026-10-09-iowa-state-at-byu");
+  assert.match(byu, /Iowa State Cyclones at BYU Cougars final/);
+  assert.match(byu, /Fri · 2026-10-09 · 10:30 PM ET/);
+  assert.match(byu, /Fri, Oct 9/);
+  const watchHtml = (await (await fetchRoute("/watch")).text()).replace(/<!--[\s\S]*?-->/g, "");
+  assert.match(watchHtml, /aria-pressed="true">W(?:eek|K|k) ?6<\/button>/);
+  const watch = await visible("/watch");
+  assert.match(watch, /ESPN App · linear network TBD/);
+  assert.match(watch, /Iowa[\s\S]{0,80}Washington/);
+  const injuries = await visible("/injuries");
+  assert.match(injuries, /Partial follow-up only · 2026-10-10/);
+  assert.match(injuries, /AP reported October 8 that Dante Moore is out/);
+  assert.match(injuries, /Research as of 2026-10-05/);
 });

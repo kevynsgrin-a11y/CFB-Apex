@@ -200,6 +200,13 @@ export function InjuryReportPage({ teams }: { teams: readonly BroadcastTeam[] })
         ]}
       />
 
+      {verifiedRefresh?.availability_review ? (
+        <div className="apex-container inj-stale-banner" role="status">
+          <strong>{verifiedRefresh.availability_review.scope} · {verifiedRefresh.availability_review.checked_at.slice(0, 10)}.</strong>{" "}
+          {verifiedRefresh.availability_review.note}
+        </div>
+      ) : null}
+
       {researchStale ? (
         <div className="apex-container inj-stale-banner" role="status">
           <strong>

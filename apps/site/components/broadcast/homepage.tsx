@@ -43,6 +43,9 @@ export function BroadcastHomepage({
         ...(verifiedRefresh.results_verified_at
           ? [`FINALS VERIFIED ${verifiedRefresh.results_verified_at.slice(0, 10)} ${verifiedRefresh.results_verified_at.slice(11, 16)} UTC`]
           : []),
+        ...(verifiedRefresh.schedule_verified_at
+          ? [`SCHEDULE CHECKED ${verifiedRefresh.schedule_verified_at.slice(0, 10)} ${verifiedRefresh.schedule_verified_at.slice(11, 16)} UTC`]
+          : []),
         `POLLS RELEASED ${verifiedRefresh.polls?.[0]?.release_date ?? "—"}`,
       ]
     : [];

@@ -74,6 +74,8 @@ interface VerifiedRefresh {
   audit_applied_at?: string;
   /** When the latest incremental results refresh verified finals (not the base snapshot time). */
   results_verified_at?: string;
+  schedule_verified_at?: string;
+  availability_review?: { checked_at: string; scope: string; note: string };
   refresh_log?: Array<{ applied_at: string; script: string; scope: string }>;
   broadcast_events?: BroadcastEventRow[];
   storylines?: StorylineRow[];
